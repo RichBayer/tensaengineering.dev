@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="NeuroCore is a local-first cognitive runtime platform for persistent AI continuity, controlled tool interaction, and real-system awareness."
+  />
+  <title>NeuroCore | TENSA Engineering</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html">TENSA Engineering</a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="./index.html">Projects</a>
+      <a href="../index.html#knowledge">Knowledge Base</a>
+      <a href="../index.html#story">Story</a>
+      <a href="../index.html#proof">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-hero">
+      <p class="eyebrow">NeuroCore</p>
+
+      <h1>The local-first cognitive runtime platform.</h1>
+
+      <p class="subtitle">
+        NeuroCore is designed to preserve continuity, understand real environments,
+        govern tool interaction, and keep AI reasoning connected to real systems
+        through controlled, observable execution paths.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/RichBayer/neurocore" class="button primary" target="_blank" rel="noopener noreferrer">
+          View NeuroCore on GitHub
+        </a>
+        <a href="./index.html" class="button secondary">
+          Back to projects
+        </a>
+      </div>
+    </section>
+
+    <section class="intro-card">
+      <p class="eyebrow">The problem</p>
+      <h2>Intelligence without continuity is fragile.</h2>
+      <p>
+        Most AI tools reset the relationship every time the context disappears.
+        You explain the system, paste the logs, describe the project, and rebuild
+        the same background over and over. NeuroCore began with a different idea:
+        what if the system already understood the environment, remembered the work,
+        and stayed aligned with the project over time?
+      </p>
+    </section>
+
+    <section class="split-section">
+      <div>
+        <p class="eyebrow">What it is</p>
+        <h2>NeuroCore is the system around the model.</h2>
+      </div>
+
+      <p>
+        NeuroCore is not just a chatbot, shell wrapper, or AI model running loose on
+        a machine. It is the runtime layer that gives AI memory direction, structure,
+        system awareness, controlled tool access, policy boundaries, and traceable
+        interaction with real environments.
+      </p>
+    </section>
+
+    <section class="knowledge-section">
+      <div class="section-heading">
+        <p class="eyebrow">Core capabilities</p>
+        <h2>What NeuroCore is built to provide.</h2>
+        <p>
+          NeuroCore exists to make AI more useful for long-running work and real
+          infrastructure by grounding intelligence in context, system data, and
+          controlled execution paths.
+        </p>
+      </div>
+
+      <div class="topic-grid">
+        <article>
+          <h3>Persistent context</h3>
+          <p>Preserves project and environment understanding so users do not have to rebuild context from scratch every session.</p>
+        </article>
+
+        <article>
+          <h3>Local-first operation</h3>
+          <p>Runs on user-controlled hardware so system details, logs, and operational context can remain under local control.</p>
+        </article>
+
+        <article>
+          <h3>Controlled execution</h3>
+          <p>Routes requests through a governed runtime instead of allowing direct model-driven command execution.</p>
+        </article>
+
+        <article>
+          <h3>Traceable behavior</h3>
+          <p>Uses structured execution paths and observability so actions, tools, routing decisions, and results can be inspected.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="intro-card">
+      <p class="eyebrow">Runtime architecture</p>
+      <h2>Every request passes through a controlled path.</h2>
+      <p>
+        NeuroCore follows a layered architecture built around a persistent daemon,
+        runtime manager, control plane, execution engine, tool registry, system tools,
+        Argus tools, knowledge systems, and model reasoning. The important rule is
+        simple: all system behavior must pass through the runtime manager and control plane.
+      </p>
+    </section>
+
+    <section class="principles">
+      <div>
+        <h3>Daemon</h3>
+        <p>The persistent entry point that receives requests, preserves trace context, and routes work into the runtime.</p>
+      </div>
+
+      <div>
+        <h3>Runtime Manager</h3>
+        <p>The orchestration layer that manages request lifecycle, routing, execution flow, and response handling.</p>
+      </div>
+
+      <div>
+        <h3>Control Plane</h3>
+        <p>The authority layer that classifies requests, assigns capabilities, enforces policy, and gates execution.</p>
+      </div>
+    </section>
+
+    <section class="split-section">
+      <div>
+        <p class="eyebrow">Authority boundary</p>
+        <h2>AI can reason, but authority must be governed.</h2>
+      </div>
+
+      <p>
+        NeuroCore separates intelligence from authority. The model can help reason,
+        interpret, and explain, but it does not freely control the machine. Requests
+        are classified, capabilities are limited, policies are enforced, and execution
+        is routed through approved tools instead of uncontrolled command paths.
+      </p>
+    </section>
+
+    <section class="knowledge-section">
+      <div class="section-heading">
+        <p class="eyebrow">Tool architecture</p>
+        <h2>System tools collect. Argus tools interpret.</h2>
+        <p>
+          NeuroCore separates raw system interaction from diagnostic interpretation.
+          This keeps real system access narrow, structured, and auditable while still
+          allowing higher-level tools to produce useful findings.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="card-label">System Tool Layer</span>
+          <h3>Collect raw signals</h3>
+          <p>
+            System tools interact with the operating system through the CommandRunner.
+            They perform focused inspection, collect raw signals, preserve command
+            evidence, and return structured data.
+          </p>
+        </article>
+
+        <article class="project-card featured-card">
+          <span class="card-label">Execution Boundary</span>
+          <h3>CommandRunner</h3>
+          <p>
+            CommandRunner is the controlled boundary to the operating system. It is
+            isolated beneath system tools and is not called directly by the model,
+            router, CLI, or Argus interpretation layer.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <span class="card-label">Argus Tool Layer</span>
+          <h3>Interpret system state</h3>
+          <p>
+            Argus tools compose system tools, aggregate signals, classify severity,
+            produce findings and recommendations, and preserve raw evidence for
+            verification.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-card">
+      <p class="eyebrow">Current status</p>
+      <h2>NeuroCore is in active Phase 6 distribution-layer work.</h2>
+      <p>
+        Current capabilities include persistent daemon architecture, controlled execution
+        flow, structured system tools, an Argus diagnostic layer, multi-signal system
+        analysis, raw evidence preservation, concise CLI diagnostic output, and raw,
+        summary, JSON, severity, and signal output controls.
+      </p>
+      <p>
+        The current development focus is refining Argus ACLI as the first practical
+        product distribution while keeping NeuroCore’s platform boundaries intact.
+      </p>
+    </section>
+
+    <section class="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Built on NeuroCore</p>
+        <h2>NeuroCore is the platform beneath the ecosystem.</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured-card">
+          <span class="card-label">Product / Distribution</span>
+          <h3>Argus ACLI</h3>
+          <p>
+            Argus ACLI applies NeuroCore’s controlled system-awareness architecture
+            to read-only Linux diagnostics, producing structured findings,
+            recommendations, severity, and raw evidence.
+          </p>
+          <a href="./index.html">View project overview →</a>
+        </article>
+
+        <article class="project-card">
+          <span class="card-label">Future validation environment</span>
+          <h3>Argus Lab</h3>
+          <p>
+            Argus Lab is planned as a real-Linux troubleshooting and validation
+            environment where controlled failures can train users and test diagnostic
+            behavior against known system states.
+          </p>
+          <a href="https://github.com/RichBayer/argus-lab" target="_blank" rel="noopener noreferrer">
+            Open Argus Lab on GitHub →
+          </a>
+        </article>
+
+        <article class="project-card">
+          <span class="card-label">Source of truth</span>
+          <h3>GitHub repository</h3>
+          <p>
+            The NeuroCore repository preserves the implementation, architecture docs,
+            build logs, source code, and technical history behind the public explanation
+            on this site.
+          </p>
+          <a href="https://github.com/RichBayer/neurocore" target="_blank" rel="noopener noreferrer">
+            Open NeuroCore on GitHub →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="footer-card">
+      <p class="eyebrow">Source-backed public explanation</p>
+      <h2>This page is the front door, not the full technical manual.</h2>
+      <p>
+        The purpose of this page is to explain NeuroCore clearly for public readers.
+        The full technical architecture, implementation history, and source-of-truth
+        documentation remain in the NeuroCore repository.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/RichBayer/neurocore" class="button primary" target="_blank" rel="noopener noreferrer">
+          View the repository
+        </a>
+        <a href="./index.html" class="button secondary">
+          Back to projects
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+  </footer>
+</body>
+</html>
