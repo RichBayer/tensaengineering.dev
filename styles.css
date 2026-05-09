@@ -124,7 +124,7 @@ h1 {
 }
 
 .article-actions {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
 .button {
@@ -165,11 +165,11 @@ h1 {
     rgba(2, 8, 18, 0.82);
   border: 1px solid rgba(57, 255, 136, 0.18);
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.34);
-  margin-bottom: 72px;
+  margin-bottom: 56px;
 }
 
 .article-card {
-  max-width: 920px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -183,7 +183,7 @@ h1 {
   font-size: clamp(34px, 4vw, 54px);
   line-height: 1;
   letter-spacing: -0.045em;
-  margin: 0 0 18px;
+  margin: 0 0 24px;
 }
 
 .article-card h2 {
@@ -203,7 +203,13 @@ h1 {
 }
 
 .article-card p {
-  max-width: 780px;
+  max-width: 800px;
+  line-height: 1.78;
+  margin: 0 0 22px;
+}
+
+.article-card p:last-child {
+  margin-bottom: 0;
 }
 
 .article-card strong {
@@ -214,7 +220,8 @@ h1 {
   color: #ffffff !important;
   font-size: 22px !important;
   font-weight: 900;
-  line-height: 1.35 !important;
+  line-height: 1.38 !important;
+  margin: 28px 0 !important;
 }
 
 .code-line {
