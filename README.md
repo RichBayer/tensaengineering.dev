@@ -137,9 +137,13 @@ Current DNS provider:
 
     Cloudflare
 
-Current intended deployment:
+Current deployment:
 
     GitHub Pages
+
+HTTPS:
+
+    enabled
 
 ---
 
@@ -307,7 +311,7 @@ Use that file when starting a fresh AI thread for TENSA website planning or deve
 
 Current phase:
 
-    public website foundation and information architecture planning
+    live public website foundation and information architecture planning
 
 Current goal:
 
@@ -323,17 +327,14 @@ The next major planning task is information architecture.
 
 Near-term next steps:
 
-1. Confirm GitHub Pages deployment.
-2. Confirm Cloudflare DNS configuration.
-3. Verify https://tensaengineering.dev resolves correctly.
-4. Plan the full website information architecture.
-5. Decide top-level navigation.
-6. Decide knowledge base categories.
-7. Decide what content belongs on TENSA versus GitHub.
-8. Decide what content belongs on TENSA versus argusacli.dev.
-9. Identify which NeuroCore, Argus ACLI, and Argus Lab docs are needed for deeper planning.
-10. Create a website state document.
-11. Create a content roadmap.
+1. Plan the full website information architecture.
+2. Decide top-level navigation.
+3. Decide knowledge base categories.
+4. Decide what content belongs on TENSA versus GitHub.
+5. Decide what content belongs on TENSA versus argusacli.dev.
+6. Identify which NeuroCore, Argus ACLI, and Argus Lab docs are needed for deeper planning.
+7. Create a content roadmap.
+8. Plan the first multi-page expansion.
 
 ---
 

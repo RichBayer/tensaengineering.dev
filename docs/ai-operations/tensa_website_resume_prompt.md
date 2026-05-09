@@ -18,9 +18,13 @@ Domain registrar / DNS:
 
 Cloudflare
 
-Current deployment target:
+Current deployment:
 
 GitHub Pages
+
+HTTPS:
+
+Enabled
 
 Current repo files:
 
@@ -32,7 +36,7 @@ Current repo files:
 
 Current status:
 
-The first static TENSA Engineering landing page has been created locally.
+The first static TENSA Engineering landing page is live at https://tensaengineering.dev.
 
 The current homepage introduces TENSA Engineering as the public home for:
 
@@ -294,12 +298,15 @@ Completed so far:
 - CNAME created with tensaengineering.dev
 - Basic homepage content created
 - Basic project routing included
-- Domain already owned through Cloudflare
+- Domain owned through Cloudflare
+- GitHub Pages enabled
+- Cloudflare DNS configured
+- DNS check completed successfully
+- HTTPS enabled
+- Website is live at https://tensaengineering.dev
 
 Not yet completed:
 
-- GitHub Pages setup confirmation
-- Cloudflare DNS final configuration confirmation
 - full website information architecture
 - SEO page strategy
 - knowledge base structure

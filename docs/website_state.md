@@ -4,13 +4,13 @@
 
 ## Current Status
 
-TENSA Engineering website foundation has been started.
+TENSA Engineering website foundation is live.
 
 The site currently exists as a simple static website, but the long-term vision is a larger public knowledge hub and ecosystem portal.
 
 Current phase:
 
-    public website foundation and information architecture planning
+    live public website foundation and information architecture planning
 
 ---
 
@@ -24,9 +24,13 @@ Domain provider / DNS:
 
     Cloudflare
 
-Deployment target:
+Deployment:
 
     GitHub Pages
+
+HTTPS:
+
+    enabled
 
 ---
 
@@ -108,6 +112,11 @@ Argus Lab:
 - stylesheet created
 - CNAME file created
 - domain name acquired through Cloudflare
+- GitHub Pages enabled
+- Cloudflare DNS configured
+- DNS check completed successfully
+- HTTPS enabled
+- tensaengineering.dev is live
 - README expanded to capture long-term website vision
 - AI resume prompt created for future planning continuity
 
@@ -115,8 +124,6 @@ Argus Lab:
 
 ## Not Yet Completed
 
-- GitHub Pages deployment confirmation
-- Cloudflare DNS final confirmation
 - full website information architecture
 - SEO strategy
 - navigation model
@@ -130,13 +137,13 @@ Argus Lab:
 
 ## Next Steps
 
-1. Commit initial website foundation.
-2. Enable GitHub Pages.
-3. Configure Cloudflare DNS.
-4. Confirm the site resolves at tensaengineering.dev.
-5. Plan the full information architecture.
-6. Create a content roadmap.
-7. Decide which NeuroCore, Argus ACLI, and Argus Lab docs are needed for deeper website planning.
+1. Plan the full information architecture.
+2. Create a content roadmap.
+3. Decide top-level navigation.
+4. Decide knowledge base categories.
+5. Decide which NeuroCore, Argus ACLI, and Argus Lab docs are needed for deeper website planning.
+6. Decide what content belongs on TENSA versus GitHub.
+7. Decide what content belongs on TENSA versus argusacli.dev.
 
 ---
 
