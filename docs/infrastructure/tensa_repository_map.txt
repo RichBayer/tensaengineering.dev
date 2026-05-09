@@ -1,0 +1,601 @@
+# TENSA Engineering Repository Map
+
+---
+
+## Purpose
+
+This document maps the current TENSA Engineering website repository.
+
+It is used as an AI-operations reference so future website build sessions can quickly understand the live repository structure, current public pages, planning documents, and website continuity files.
+
+This repository is currently small, but it is expected to grow into a larger public website and knowledge hub.
+
+---
+
+## Repository Root
+
+Local path:
+
+    /mnt/g/ai/projects/tensaengineering.dev
+
+Public website:
+
+    https://tensaengineering.dev
+
+Deployment:
+
+    GitHub Pages
+
+DNS / domain provider:
+
+    Cloudflare
+
+---
+
+## Current Tree
+
+    .
+    ├── CNAME
+    ├── README.md
+    ├── docs
+    │   ├── ai-operations
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
+    ├── index.html
+    ├── projects
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
+    └── styles.css
+
+Current size:
+
+    6 directories, 13 files
+
+---
+
+## Root Files
+
+### CNAME
+
+Purpose:
+
+    Defines the custom domain for GitHub Pages.
+
+Current domain:
+
+    tensaengineering.dev
+
+---
+
+### README.md
+
+Purpose:
+
+    Repository-level explanation for the TENSA Engineering website.
+
+This file should explain what the website is, what it is intended to become, and how it relates to NeuroCore, Argus ACLI, Argus Lab, and the GitHub source-of-truth repositories.
+
+---
+
+### index.html
+
+Purpose:
+
+    Public homepage for TENSA Engineering.
+
+Current role:
+
+    Front door for the ecosystem.
+
+The homepage introduces:
+
+- TENSA Engineering
+- controlled AI systems positioning
+- NeuroCore
+- Argus ACLI
+- Argus Lab
+- knowledge base direction
+- origin story preview
+- GitHub proof
+
+The homepage should remain concise.
+
+It should not become the full knowledge base or a giant explanation page.
+
+---
+
+### styles.css
+
+Purpose:
+
+    Shared stylesheet for the static website.
+
+Currently controls:
+
+- global layout
+- background styling
+- header/nav styling
+- hero sections
+- project cards
+- article cards
+- long-form story formatting
+- buttons
+- responsive layout
+
+All current public pages use this stylesheet.
+
+---
+
+## docs/
+
+Purpose:
+
+    Internal planning, AI-operations, and website continuity documentation.
+
+This directory is not the public knowledge base.
+
+It supports site development and AI-assisted continuity.
+
+---
+
+## docs/ai-operations/
+
+Purpose:
+
+    AI-session continuity documents.
+
+These files help resume work in fresh AI threads without losing project context.
+
+---
+
+### docs/ai-operations/tensa_website_resume_prompt.md
+
+Purpose:
+
+    Main resume prompt for starting or continuing TENSA Engineering website work in a fresh AI session.
+
+Use this document when beginning a new session.
+
+It should summarize:
+
+- current website status
+- repo path
+- public URL
+- current pages
+- completed work
+- next recommended work
+- working rules
+- tone and writing guidance
+- required source-doc behavior
+
+This is one of the core anti-drift files.
+
+---
+
+## docs/infrastructure/
+
+Purpose:
+
+    Infrastructure and repository mapping documents.
+
+These files help future AI sessions understand the current repository structure accurately.
+
+---
+
+### docs/infrastructure/tensa_repository_map.txt
+
+Purpose:
+
+    Current repository map for the TENSA Engineering website.
+
+This file should be updated when:
+
+- new public directories are added
+- new internal docs directories are added
+- major files are added or moved
+- the repo structure changes enough that future sessions may drift
+
+Recommended command to refresh the tree:
+
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+
+---
+
+## docs/planning/
+
+Purpose:
+
+    Website planning and information architecture documents.
+
+These files define how the site should grow.
+
+---
+
+### docs/planning/website_information_architecture.md
+
+Purpose:
+
+    Defines the long-term structure and information architecture for the TENSA Engineering website.
+
+This document explains:
+
+- website purpose
+- ecosystem model
+- content pillars
+- top-level navigation
+- project page strategy
+- knowledge base strategy
+- story/philosophy strategy
+- repository boundary rules
+- product funnel strategy
+- Argus ACLI site retirement strategy
+- phase-based expansion plan
+
+This is a planning document, not necessarily the live-current-state record.
+
+The live-current-state record is:
+
+    docs/website_state.md
+
+---
+
+### docs/planning/content_source_map.md
+
+Purpose:
+
+    Maps website pages to the source documents required before writing, rewriting, or expanding them.
+
+This document exists to prevent drift.
+
+It should answer:
+
+- what source docs are needed before editing the homepage
+- what source docs are needed before editing the Projects page
+- what source docs are needed before editing the NeuroCore page
+- what source docs are needed before writing the Argus ACLI page
+- what source docs are needed before writing the Argus Lab page
+- what source docs are needed before creating Knowledge Base, Story, Build Notes, Resources, or About pages
+
+This is one of the core anti-drift files.
+
+Before writing factual project pages, check this file.
+
+---
+
+## docs/website_state.md
+
+Purpose:
+
+    Current state document for the live TENSA Engineering website.
+
+This file should be kept updated at the end of major website build sessions.
+
+It should reflect:
+
+- current public pages
+- current repo structure
+- what is completed
+- what is not completed
+- current page status
+- next recommended steps
+- working rules
+- source-doc expectations
+- known placeholders
+- phase status
+
+This is one of the core anti-drift files.
+
+---
+
+## projects/
+
+Purpose:
+
+    Public project pages for the TENSA Engineering ecosystem.
+
+Current project model:
+
+    NeuroCore = platform
+    Argus ACLI = first product / distribution
+    Argus Lab = future training and validation environment
+
+---
+
+### projects/index.html
+
+Purpose:
+
+    Projects overview page.
+
+Current role:
+
+    Explains the ecosystem structure and routes visitors to individual project pages.
+
+Current links:
+
+- NeuroCore page
+- Argus ACLI placeholder page
+- Argus Lab placeholder page
+
+---
+
+### projects/neurocore.html
+
+Purpose:
+
+    Public NeuroCore project page.
+
+Current status:
+
+    Live story-first explainer page.
+
+Current role:
+
+    Explains NeuroCore through its origin story and development path before introducing technical architecture.
+
+Current themes:
+
+- personal AI assistant origin
+- Linux learning and lab-building origin
+- AI context loss
+- continuity
+- local AI runtime
+- local knowledge
+- RAG
+- persistent daemon
+- control plane
+- controlled tool execution
+- observability
+- current Linux focus
+- Argus ACLI as first practical proof
+- Argus Lab as future training and validation environment
+
+This page should remain story-first.
+
+Do not turn it into a dry technical architecture reference.
+
+Deeper technical explanations should eventually branch into Knowledge Base pages.
+
+---
+
+### projects/argus-acli.html
+
+Purpose:
+
+    Public Argus ACLI project page.
+
+Current status:
+
+    Placeholder page.
+
+Future role:
+
+    Explain Argus ACLI as the first practical product / distribution built on NeuroCore.
+
+Future page should cover:
+
+- read-only Linux diagnostics
+- local-first diagnostic workflow
+- real telemetry
+- structured findings
+- severity classification
+- recommendations
+- raw evidence
+- how Argus uses NeuroCore
+- what exists now
+- what is future-phase
+
+Do not write the full page without source docs.
+
+---
+
+### projects/argus-lab.html
+
+Purpose:
+
+    Public Argus Lab project page.
+
+Current status:
+
+    Placeholder page.
+
+Future role:
+
+    Explain Argus Lab as the planned real-Linux troubleshooting, training, and validation environment.
+
+Future page should cover:
+
+- personal Linux troubleshooting practice origin
+- controlled failure scenarios
+- resettable lab sessions
+- training role
+- validation role
+- mentor-style AI guidance
+- adaptive difficulty
+- future tracked troubleshooting progress
+- demonstrated ability / proficiency direction
+
+Do not write the full page without source docs.
+
+---
+
+## Current Public Pages
+
+Current public routes:
+
+    /
+    /projects/
+    /projects/neurocore.html
+    /projects/argus-acli.html
+    /projects/argus-lab.html
+
+---
+
+## Current Internal Planning / Continuity Docs
+
+Current internal docs:
+
+    docs/ai-operations/tensa_website_resume_prompt.md
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/content_source_map.md
+    docs/planning/website_information_architecture.md
+    docs/website_state.md
+
+---
+
+## Missing / Planned Directories
+
+These directories do not exist yet but are likely future additions:
+
+    knowledge-base/
+    story/
+    resources/
+    build-notes/
+
+These files do not exist yet but are likely future additions:
+
+    about.html
+    docs/planning/page_inventory.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/seo_topic_map.md
+    docs/planning/old_site_migration_plan.md
+
+---
+
+## Recommended Future Structure
+
+Likely future public structure:
+
+    /
+    ├── index.html
+    ├── projects/
+    │   ├── index.html
+    │   ├── neurocore.html
+    │   ├── argus-acli.html
+    │   └── argus-lab.html
+    ├── knowledge-base/
+    │   ├── index.html
+    │   ├── controlled-ai-systems/
+    │   ├── ai-operations/
+    │   ├── persistent-ai-memory/
+    │   ├── local-first-ai/
+    │   ├── safe-tool-interaction/
+    │   ├── linux-diagnostics/
+    │   └── troubleshooting-training/
+    ├── story/
+    │   ├── index.html
+    │   └── the-day-the-ai-forgot-everything.html
+    ├── build-notes/
+    │   └── index.html
+    ├── resources/
+    │   └── index.html
+    └── about.html
+
+Likely future docs structure:
+
+    docs/
+    ├── ai-operations/
+    │   └── tensa_website_resume_prompt.md
+    ├── infrastructure/
+    │   └── tensa_repository_map.txt
+    ├── planning/
+    │   ├── website_information_architecture.md
+    │   ├── content_source_map.md
+    │   ├── page_inventory.md
+    │   ├── content_style_guide.md
+    │   └── internal_linking_strategy.md
+    └── website_state.md
+
+---
+
+## Source-of-Truth Rule
+
+The TENSA website explains and teaches.
+
+The GitHub repositories prove.
+
+Do not treat TENSA website pages as the engineering source of truth.
+
+Source-of-truth locations:
+
+    NeuroCore repository
+    Argus Lab repository
+    future Argus ACLI source docs
+    build logs
+    architecture docs
+    vision docs
+    implementation docs
+
+Website pages should translate, explain, organize, and route readers to deeper proof.
+
+---
+
+## Working Rules
+
+Use full file replacements only.
+
+Do not provide snippets unless explicitly requested.
+
+Do not make hidden changes.
+
+No changes the user does not know about.
+
+Before replacing a file, inspect or request the current full file contents unless the file was generated in the same session and not changed afterward.
+
+Do not guess.
+
+If more context is needed, ask for the exact file or doc.
+
+Use source docs before writing factual project pages.
+
+Build one page at a time.
+
+Keep the homepage as a front door.
+
+Use project pages for major ecosystem explanations.
+
+Use Knowledge Base pages for focused teaching articles.
+
+Use Build Notes pages for readable development history.
+
+GitHub remains the source of truth.
+
+---
+
+## Last Known Tree Command
+
+Command used:
+
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+
+Last known output:
+
+    .
+    ├── CNAME
+    ├── README.md
+    ├── docs
+    │   ├── ai-operations
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
+    ├── index.html
+    ├── projects
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
+    └── styles.css
+
+    6 directories, 13 files
