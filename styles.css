@@ -87,6 +87,10 @@ main {
   padding: 42px 0 72px;
 }
 
+.page-hero {
+  padding-bottom: 56px;
+}
+
 .eyebrow {
   margin: 0 0 16px;
   color: #39ff88;
@@ -112,10 +116,15 @@ h1 {
   margin: 0 0 30px;
 }
 
-.hero-actions {
+.hero-actions,
+.article-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.article-actions {
+  margin-top: 28px;
 }
 
 .button {
@@ -147,7 +156,8 @@ h1 {
 
 .intro-card,
 .story-card,
-.footer-card {
+.footer-card,
+.article-card {
   padding: 42px;
   border-radius: 28px;
   background:
@@ -158,9 +168,16 @@ h1 {
   margin-bottom: 72px;
 }
 
+.article-card {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .intro-card h2,
 .story-card h2,
 .footer-card h2,
+.article-card h2,
 .section-heading h2,
 .split-section h2 {
   font-size: clamp(34px, 4vw, 54px);
@@ -169,15 +186,47 @@ h1 {
   margin: 0 0 18px;
 }
 
+.article-card h2 {
+  max-width: 820px;
+}
+
 .intro-card p,
 .story-card p,
 .footer-card p,
 .section-heading p,
-.split-section p {
+.split-section p,
+.article-card p {
   max-width: 880px;
   color: #c7d2df;
   font-size: 18px;
   line-height: 1.65;
+}
+
+.article-card p {
+  max-width: 780px;
+}
+
+.article-card strong {
+  color: #ffffff;
+}
+
+.callout-line {
+  color: #ffffff !important;
+  font-size: 22px !important;
+  font-weight: 900;
+  line-height: 1.35 !important;
+}
+
+.code-line {
+  display: inline-flex;
+  width: auto;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 16px !important;
 }
 
 .split-section {
@@ -301,7 +350,8 @@ h1 {
 
   .intro-card,
   .story-card,
-  .footer-card {
+  .footer-card,
+  .article-card {
     padding: 30px;
   }
 }
@@ -334,5 +384,13 @@ h1 {
 
   .topic-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-card p {
+    font-size: 17px;
+  }
+
+  .callout-line {
+    font-size: 20px !important;
   }
 }
