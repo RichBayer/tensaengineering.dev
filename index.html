@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TENSA Engineering</title>
+  <meta
+    name="description"
+    content="TENSA Engineering builds controlled AI systems for real environments, including NeuroCore, Argus ACLI, and Argus Lab."
+  />
+  <title>TENSA Engineering | Controlled AI Systems for Real Environments</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="site-bg"></div>
 
-  <main>
+  <header class="site-header">
+    <a class="brand" href="#top">TENSA Engineering</a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#ecosystem">Projects</a>
+      <a href="#knowledge">Knowledge Base</a>
+      <a href="#story">Story</a>
+      <a href="#proof">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
     <section class="hero">
       <p class="eyebrow">TENSA Engineering</p>
 
@@ -17,64 +33,133 @@
 
       <p class="subtitle">
         TENSA Engineering is the public home for NeuroCore, Argus ACLI, and Argus Lab —
-        a growing ecosystem focused on local-first AI, grounded system intelligence,
-        controlled interaction, and real Linux troubleshooting.
+        a local-first ecosystem focused on persistent AI continuity, governed tool interaction,
+        real system awareness, and practical Linux diagnostics.
       </p>
 
       <div class="hero-actions">
-        <a href="https://github.com/RichBayer/neurocore" class="button primary" target="_blank" rel="noopener noreferrer">
-          View NeuroCore
-        </a>
-        <a href="https://argusacli.dev" class="button secondary" target="_blank" rel="noopener noreferrer">
-          Visit Argus ACLI
+        <a href="#ecosystem" class="button primary">Explore the ecosystem</a>
+        <a href="https://github.com/RichBayer/neurocore" class="button secondary" target="_blank" rel="noopener noreferrer">
+          View the engineering proof
         </a>
       </div>
     </section>
 
     <section class="intro-card">
-      <p class="eyebrow">The idea</p>
-      <h2>AI can reason, but authority must be governed.</h2>
+      <p class="eyebrow">Core philosophy</p>
+      <h2>Intelligence without continuity is fragile.</h2>
       <p>
-        TENSA Engineering is focused on building AI systems that understand real environments
-        without giving intelligence uncontrolled authority. The goal is simple: less guessing,
-        more signal, and AI output grounded in real system state.
+        NeuroCore began with a simple failure: an AI forgot the project it was helping build.
+        That exposed the deeper problem behind long-running AI-assisted work. Intelligence is not enough.
+        Continuity, context, memory, and authority boundaries have to be engineered.
       </p>
     </section>
 
-    <section class="projects">
+    <section class="split-section">
+      <div>
+        <p class="eyebrow">The principle</p>
+        <h2>AI can reason, but authority must be governed.</h2>
+      </div>
+
+      <p>
+        TENSA Engineering is focused on systems that let AI understand real environments
+        without giving models uncontrolled power over those environments. The goal is
+        less guessing, more signal, and AI output grounded in real system state.
+      </p>
+    </section>
+
+    <section id="ecosystem" class="projects">
       <div class="section-heading">
         <p class="eyebrow">Projects</p>
         <h2>The ecosystem</h2>
+        <p>
+          TENSA Engineering organizes the public-facing explanation of the ecosystem.
+          GitHub remains the source of truth for implementation, build history, and technical proof.
+        </p>
       </div>
 
       <div class="project-grid">
-        <article class="project-card">
+        <article class="project-card featured-card">
+          <span class="card-label">Platform</span>
           <h3>NeuroCore</h3>
           <p>
-            A local AI platform designed to preserve continuity, understand real environments,
-            and provide controlled interaction between AI, tools, memory, and system data.
+            A local-first AI platform designed for persistent understanding, controlled tool access,
+            structured reasoning, real system awareness, and governed execution.
           </p>
-          <a href="https://github.com/RichBayer/neurocore" target="_blank" rel="noopener noreferrer">Open NeuroCore →</a>
+          <a href="https://github.com/RichBayer/neurocore" target="_blank" rel="noopener noreferrer">
+            Open NeuroCore on GitHub →
+          </a>
         </article>
 
         <article class="project-card">
+          <span class="card-label">Product / Distribution</span>
           <h3>Argus ACLI</h3>
           <p>
-            The first product built on NeuroCore: a read-only Linux diagnostic assistant that
-            turns real system telemetry into clear, evidence-backed findings.
+            The first practical proof built on NeuroCore: a read-only Linux system intelligence tool
+            that turns real telemetry into clear findings, severity, recommendations, and raw evidence.
           </p>
-          <a href="https://argusacli.dev" target="_blank" rel="noopener noreferrer">Open Argus ACLI →</a>
+          <a href="#proof">See how it fits →</a>
         </article>
 
         <article class="project-card">
+          <span class="card-label">Future training + validation</span>
           <h3>Argus Lab</h3>
           <p>
-            A future real-Linux troubleshooting and validation environment for training users,
-            testing Argus diagnostics, and evaluating model-guided troubleshooting.
+            A planned real-Linux troubleshooting and validation environment built around controlled
+            failures, resettable scenarios, adaptive difficulty, and mentor-style AI guidance.
           </p>
-          <a href="https://github.com/RichBayer/argus-lab" target="_blank" rel="noopener noreferrer">Open Argus Lab →</a>
+          <a href="https://github.com/RichBayer/argus-lab" target="_blank" rel="noopener noreferrer">
+            Open Argus Lab on GitHub →
+          </a>
         </article>
       </div>
+    </section>
+
+    <section id="knowledge" class="knowledge-section">
+      <div class="section-heading">
+        <p class="eyebrow">Knowledge Base Direction</p>
+        <h2>Teaching the ideas behind the systems.</h2>
+        <p>
+          TENSA Engineering will grow into a public knowledge hub for controlled AI systems,
+          AI operations, local-first tooling, persistent memory, and real-system diagnostics.
+        </p>
+      </div>
+
+      <div class="topic-grid">
+        <article>
+          <h3>Controlled AI Systems</h3>
+          <p>Why intelligence and authority should be separated when AI interacts with real environments.</p>
+        </article>
+
+        <article>
+          <h3>AI Operations</h3>
+          <p>Structured workflows, documentation systems, resume prompts, and anti-drift practices for long AI-assisted projects.</p>
+        </article>
+
+        <article>
+          <h3>Persistent AI Memory</h3>
+          <p>How continuity can be engineered instead of hoping a model remembers what matters.</p>
+        </article>
+
+        <article>
+          <h3>Linux Diagnostics</h3>
+          <p>Turning noisy logs, command output, and system telemetry into clear operational signal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="story-card">
+      <p class="eyebrow">Origin Story</p>
+      <h2>The day the AI forgot everything.</h2>
+      <p>
+        The philosophical starting point for NeuroCore was not automation. It was continuity.
+        Early in the Linux learning and lab-building process, an AI lost the project context,
+        system details, networking direction, and architecture thread it had been helping maintain.
+      </p>
+      <p>
+        That moment made the problem clear: AI should not be trusted to simply remember.
+        Continuity must be designed, documented, restored, and protected.
+      </p>
     </section>
 
     <section class="principles">
@@ -94,14 +179,27 @@
       </div>
     </section>
 
-    <section class="footer-card">
+    <section id="proof" class="footer-card">
       <p class="eyebrow">Built in public</p>
-      <h2>Follow the build.</h2>
+      <h2>The repositories prove the work.</h2>
       <p>
-        TENSA Engineering is early. NeuroCore and Argus ACLI are being built in public,
-        with Argus Lab planned as the future testing and training environment.
+        TENSA Engineering is the public explanation layer. The repositories preserve the engineering source of truth:
+        architecture docs, build logs, implementation history, and the actual system as it evolves.
       </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/RichBayer/neurocore" class="button primary" target="_blank" rel="noopener noreferrer">
+          NeuroCore GitHub
+        </a>
+        <a href="https://github.com/RichBayer/argus-lab" class="button secondary" target="_blank" rel="noopener noreferrer">
+          Argus Lab GitHub
+        </a>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+  </footer>
 </body>
 </html>
