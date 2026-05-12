@@ -6,9 +6,9 @@
 
 This document maps the current TENSA Engineering website repository.
 
-It is used as an AI-operations reference so future website build sessions can quickly understand the live repository structure, current public pages, planning documents, and website continuity files.
+It is used as an AI-operations reference so future website build sessions can quickly understand the live repository structure, current public pages, planning documents, branding assets, and website continuity files.
 
-This repository is currently small, but it is expected to grow into a larger public website and knowledge hub.
+This repository is growing from a small static website into the public ecosystem portal, knowledge hub, and public explanation layer for TENSA Engineering, NeuroCore, Argus ACLI, and Argus Lab.
 
 ---
 
@@ -37,16 +37,53 @@ DNS / domain provider:
     .
     ├── CNAME
     ├── README.md
+    ├── assets
+    │   └── images
+    │       └── branding
+    │           ├── argus-acli
+    │           │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │           │   ├── argus-acli-neurocore-horizontal.png
+    │           │   ├── argus-acli-neurocore-stacked-transparent.png
+    │           │   ├── argus-acli-neurocore-stacked.png
+    │           │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │           │   ├── argus-acli-system-intelligence-horizontal.png
+    │           │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │           │   └── argus-acli-system-intelligence-stacked.png
+    │           ├── argus-lab
+    │           │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │           │   ├── argus-lab-interactive-analysis-horizontal.png
+    │           │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │           │   ├── argus-lab-interactive-analysis-stacked.png
+    │           │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │           │   ├── argus-lab-neurocore-horizontal.png
+    │           │   ├── argus-lab-neurocore-stacked-transparent.png
+    │           │   └── argus-lab-neurocore-stacked.png
+    │           ├── neurocore
+    │           │   ├── neurocore-horizontal-transparent.png
+    │           │   ├── neurocore-horizontal.png
+    │           │   ├── neurocore-stacked-transparent.png
+    │           │   └── neurocore-stacked.png
+    │           └── tensa
+    │               ├── tensa-horizontal-header-transparent.png
+    │               ├── tensa-horizontal-logo-transparent.png
+    │               ├── tensa-horizontal-logo.png
+    │               ├── tensa-stacked-logo-transparent.png
+    │               └── tensa-stacked-logo.png
     ├── docs
     │   ├── ai-operations
+    │   │   ├── documentation_closeout_protocol.md
     │   │   └── tensa_website_resume_prompt.md
     │   ├── infrastructure
     │   │   └── tensa_repository_map.txt
     │   ├── planning
     │   │   ├── content_source_map.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── page_inventory.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
     ├── index.html
+    ├── knowledge-base
+    │   └── index.html
     ├── projects
     │   ├── argus-acli.html
     │   ├── argus-lab.html
@@ -56,7 +93,7 @@ DNS / domain provider:
 
 Current size:
 
-    6 directories, 13 files
+    14 directories, 42 files
 
 ---
 
@@ -105,9 +142,22 @@ The homepage introduces:
 - origin story preview
 - GitHub proof
 
+Current branding status:
+
+- Header uses `assets/images/branding/tensa/tensa-horizontal-header-transparent.png`.
+- Hero uses `assets/images/branding/tensa/tensa-stacked-logo-transparent.png`.
+- Project cards use transparent NeuroCore, Argus ACLI, and Argus Lab logo assets.
+
+Current navigation:
+
+- Projects links to `/projects/`.
+- Knowledge Base links to `/knowledge-base/`.
+- Story currently links to the homepage story section.
+- GitHub currently links to the homepage proof section.
+
 The homepage should remain concise.
 
-It should not become the full knowledge base or a giant explanation page.
+It should function as an ecosystem introduction and navigation layer, not a giant explanation page.
 
 ---
 
@@ -122,14 +172,157 @@ Currently controls:
 - global layout
 - background styling
 - header/nav styling
-- hero sections
+- TENSA header logo sizing
+- branded homepage hero layout
+- branded page hero layout
+- hero brand card styling
+- project logo card styling
 - project cards
+- topic cards
 - article cards
 - long-form story formatting
 - buttons
 - responsive layout
 
 All current public pages use this stylesheet.
+
+---
+
+## assets/
+
+Purpose:
+
+    Public website assets.
+
+This directory is the long-term home for branding images, project logos, and future public visual assets.
+
+---
+
+## assets/images/branding/
+
+Purpose:
+
+    Shared ecosystem branding asset hierarchy.
+
+Current structure:
+
+    assets/images/branding/tensa/
+    assets/images/branding/neurocore/
+    assets/images/branding/argus-acli/
+    assets/images/branding/argus-lab/
+
+Rules:
+
+- Keep branding assets organized by project.
+- Avoid random PNG placement in the repo root.
+- Preserve original logo files where useful.
+- Use transparent PNG versions for website rendering when black baked backgrounds are visible.
+- Use header-optimized TENSA logo for navigation headers.
+- Do not rename inherited assets unless there is a clear reason.
+
+---
+
+### assets/images/branding/tensa/
+
+Current files:
+
+    tensa-horizontal-logo.png
+    tensa-horizontal-logo-transparent.png
+    tensa-horizontal-header-transparent.png
+    tensa-stacked-logo.png
+    tensa-stacked-logo-transparent.png
+
+Purpose:
+
+    TENSA Engineering primary website branding.
+
+Current usage:
+
+- `tensa-horizontal-header-transparent.png` is used in page headers.
+- `tensa-stacked-logo-transparent.png` is used in homepage and section hero branding.
+
+Notes:
+
+- The header logo removes the tiny bottom subtitle text so it remains readable at navigation size.
+- The full horizontal and stacked logo versions are preserved for larger or future uses.
+
+---
+
+### assets/images/branding/neurocore/
+
+Current files:
+
+    neurocore-horizontal.png
+    neurocore-horizontal-transparent.png
+    neurocore-stacked.png
+    neurocore-stacked-transparent.png
+
+Purpose:
+
+    NeuroCore project branding.
+
+Current usage:
+
+- `neurocore-horizontal-transparent.png` is used in homepage and Projects page project cards.
+- `neurocore-stacked-transparent.png` is used in the NeuroCore project-page hero.
+
+---
+
+### assets/images/branding/argus-acli/
+
+Current files:
+
+    argus-acli-neurocore-horizontal.png
+    argus-acli-neurocore-horizontal-transparent.png
+    argus-acli-neurocore-stacked.png
+    argus-acli-neurocore-stacked-transparent.png
+    argus-acli-system-intelligence-horizontal.png
+    argus-acli-system-intelligence-horizontal-transparent.png
+    argus-acli-system-intelligence-stacked.png
+    argus-acli-system-intelligence-stacked-transparent.png
+
+Purpose:
+
+    Argus ACLI project branding.
+
+Current usage:
+
+- `argus-acli-system-intelligence-horizontal-transparent.png` is used in homepage and Projects page project cards.
+- `argus-acli-system-intelligence-stacked-transparent.png` is used in the Argus ACLI placeholder page hero.
+
+Notes:
+
+- The `neurocore` variants communicate that Argus ACLI is built on NeuroCore.
+- The `system-intelligence` variants communicate the product role.
+
+---
+
+### assets/images/branding/argus-lab/
+
+Current files:
+
+    argus-lab-interactive-analysis-horizontal.png
+    argus-lab-interactive-analysis-horizontal-transparent.png
+    argus-lab-interactive-analysis-stacked.png
+    argus-lab-interactive-analysis-stacked-transparent.png
+    argus-lab-neurocore-horizontal.png
+    argus-lab-neurocore-horizontal-transparent.png
+    argus-lab-neurocore-stacked.png
+    argus-lab-neurocore-stacked-transparent.png
+
+Purpose:
+
+    Argus Lab project branding.
+
+Current usage:
+
+- `argus-lab-interactive-analysis-horizontal-transparent.png` is used in homepage and Projects page project cards.
+- `argus-lab-interactive-analysis-stacked-transparent.png` is used in the Argus Lab placeholder page hero.
+
+Notes:
+
+- The `neurocore` variants communicate that Argus Lab belongs to the NeuroCore ecosystem.
+- The `interactive-analysis` variants communicate the training and analysis direction.
 
 ---
 
@@ -155,6 +348,16 @@ These files help resume work in fresh AI threads without losing project context.
 
 ---
 
+### docs/ai-operations/documentation_closeout_protocol.md
+
+Purpose:
+
+    Defines the required documentation closeout workflow for TENSA Engineering website build sessions.
+
+This file should be used before commit/push after serious website build sessions to keep repository maps, page inventory, link strategy, website state, and resume prompts aligned with reality.
+
+---
+
 ### docs/ai-operations/tensa_website_resume_prompt.md
 
 Purpose:
@@ -169,11 +372,13 @@ It should summarize:
 - repo path
 - public URL
 - current pages
+- branding asset structure
 - completed work
 - next recommended work
 - working rules
 - tone and writing guidance
 - required source-doc behavior
+- build-start checks
 
 This is one of the core anti-drift files.
 
@@ -199,6 +404,7 @@ This file should be updated when:
 
 - new public directories are added
 - new internal docs directories are added
+- branding assets are added
 - major files are added or moved
 - the repo structure changes enough that future sessions may drift
 
@@ -214,7 +420,7 @@ Purpose:
 
     Website planning and information architecture documents.
 
-These files define how the site should grow.
+These files define how the site should grow and how it should stay organized.
 
 ---
 
@@ -252,20 +458,33 @@ Purpose:
 
     Maps website pages to the source documents required before writing, rewriting, or expanding them.
 
-This document exists to prevent drift.
-
-It should answer:
-
-- what source docs are needed before editing the homepage
-- what source docs are needed before editing the Projects page
-- what source docs are needed before editing the NeuroCore page
-- what source docs are needed before writing the Argus ACLI page
-- what source docs are needed before writing the Argus Lab page
-- what source docs are needed before creating Knowledge Base, Story, Build Notes, Resources, or About pages
-
-This is one of the core anti-drift files.
+This document exists to prevent factual drift.
 
 Before writing factual project pages, check this file.
+
+---
+
+### docs/planning/page_inventory.md
+
+Purpose:
+
+    Tracks what public pages and important internal planning docs exist, what state they are in, and what should happen next.
+
+This document exists to prevent the site from growing faster than the documentation system that tracks it.
+
+Use this document before creating, renaming, retiring, or significantly changing pages.
+
+---
+
+### docs/planning/internal_linking_strategy.md
+
+Purpose:
+
+    Tracks logical page-to-page relationships, preferred topic destinations, temporary links, planned link upgrades, and link-audit expectations.
+
+This document exists to prevent link drift, duplicate explanations, orphaned pages, and confusing visitor paths.
+
+Use this document before adding new public pages or changing navigation.
 
 ---
 
@@ -281,6 +500,8 @@ It should reflect:
 
 - current public pages
 - current repo structure
+- branding asset hierarchy
+- current navigation state
 - what is completed
 - what is not completed
 - current page status
@@ -291,6 +512,54 @@ It should reflect:
 - phase status
 
 This is one of the core anti-drift files.
+
+---
+
+## knowledge-base/
+
+Purpose:
+
+    Public Knowledge Base section.
+
+This directory is the beginning of the public teaching layer for the TENSA Engineering ecosystem.
+
+It should eventually contain focused educational pages about:
+
+- controlled AI systems
+- AI operations
+- persistent AI memory
+- local-first AI
+- safe tool interaction
+- Linux diagnostics
+- troubleshooting training
+- NeuroCore architecture
+
+---
+
+### knowledge-base/index.html
+
+Purpose:
+
+    Public Knowledge Base index page.
+
+Current status:
+
+    Structure-only public index page.
+
+Current role:
+
+    Establishes the Knowledge Base as a major site section and public teaching layer.
+
+Current content:
+
+- explains the purpose of the Knowledge Base
+- introduces core topic categories
+- explains how readers can move from concepts to systems
+- links back to Projects and GitHub proof
+
+Future role:
+
+    Route visitors into category pages and focused public explainers.
 
 ---
 
@@ -314,6 +583,10 @@ Purpose:
 
     Projects overview page.
 
+Current status:
+
+    Live.
+
 Current role:
 
     Explains the ecosystem structure and routes visitors to individual project pages.
@@ -323,6 +596,7 @@ Current links:
 - NeuroCore page
 - Argus ACLI placeholder page
 - Argus Lab placeholder page
+- Knowledge Base via header navigation
 
 ---
 
@@ -339,6 +613,11 @@ Current status:
 Current role:
 
     Explains NeuroCore through its origin story and development path before introducing technical architecture.
+
+Current branding:
+
+- TENSA header logo
+- NeuroCore stacked logo in hero
 
 Current themes:
 
@@ -373,11 +652,16 @@ Purpose:
 
 Current status:
 
-    Placeholder page.
+    Branded placeholder page.
 
-Future role:
+Current role:
 
-    Explain Argus ACLI as the first practical product / distribution built on NeuroCore.
+    Provides a public destination for Argus ACLI as the first practical product / distribution built on NeuroCore.
+
+Current branding:
+
+- TENSA header logo
+- Argus ACLI stacked logo in hero
 
 Future page should cover:
 
@@ -404,11 +688,16 @@ Purpose:
 
 Current status:
 
-    Placeholder page.
+    Branded placeholder page.
 
-Future role:
+Current role:
 
-    Explain Argus Lab as the planned real-Linux troubleshooting, training, and validation environment.
+    Provides a public destination for Argus Lab as the planned real-Linux troubleshooting, training, and validation environment.
+
+Current branding:
+
+- TENSA header logo
+- Argus Lab stacked logo in hero
 
 Future page should cover:
 
@@ -435,6 +724,7 @@ Current public routes:
     /projects/neurocore.html
     /projects/argus-acli.html
     /projects/argus-lab.html
+    /knowledge-base/
 
 ---
 
@@ -442,9 +732,12 @@ Current public routes:
 
 Current internal docs:
 
+    docs/ai-operations/documentation_closeout_protocol.md
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
     docs/planning/website_information_architecture.md
     docs/website_state.md
 
@@ -454,19 +747,19 @@ Current internal docs:
 
 These directories do not exist yet but are likely future additions:
 
-    knowledge-base/
     story/
     resources/
     build-notes/
+    scripts/
 
 These files do not exist yet but are likely future additions:
 
     about.html
-    docs/planning/page_inventory.md
+    scripts/check_internal_links.py
     docs/planning/content_style_guide.md
-    docs/planning/internal_linking_strategy.md
     docs/planning/seo_topic_map.md
     docs/planning/old_site_migration_plan.md
+    docs/planning/documentation_strategy.md
 
 ---
 
@@ -476,6 +769,13 @@ Likely future public structure:
 
     /
     ├── index.html
+    ├── assets/
+    │   └── images/
+    │       └── branding/
+    │           ├── tensa/
+    │           ├── neurocore/
+    │           ├── argus-acli/
+    │           └── argus-lab/
     ├── projects/
     │   ├── index.html
     │   ├── neurocore.html
@@ -489,7 +789,8 @@ Likely future public structure:
     │   ├── local-first-ai/
     │   ├── safe-tool-interaction/
     │   ├── linux-diagnostics/
-    │   └── troubleshooting-training/
+    │   ├── troubleshooting-training/
+    │   └── neurocore-architecture/
     ├── story/
     │   ├── index.html
     │   └── the-day-the-ai-forgot-everything.html
@@ -497,6 +798,8 @@ Likely future public structure:
     │   └── index.html
     ├── resources/
     │   └── index.html
+    ├── scripts/
+    │   └── check_internal_links.py
     └── about.html
 
 Likely future docs structure:
@@ -510,8 +813,11 @@ Likely future docs structure:
     │   ├── website_information_architecture.md
     │   ├── content_source_map.md
     │   ├── page_inventory.md
+    │   ├── internal_linking_strategy.md
     │   ├── content_style_guide.md
-    │   └── internal_linking_strategy.md
+    │   ├── seo_topic_map.md
+    │   ├── old_site_migration_plan.md
+    │   └── documentation_strategy.md
     └── website_state.md
 
 ---
@@ -570,6 +876,30 @@ GitHub remains the source of truth.
 
 ---
 
+## Build-Start Checks
+
+At the beginning of serious website build sessions, run:
+
+    git status --short
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    find . -maxdepth 3 -name "*.html" -print
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+
+Future recommended replacement for manual link grep:
+
+    scripts/check_internal_links.py
+
+Purpose:
+
+- confirm repository state
+- confirm current tree
+- confirm public page inventory
+- confirm current links
+- detect old navigation targets
+- prevent broken links and drift
+
+---
+
 ## Last Known Tree Command
 
 Command used:
@@ -581,16 +911,53 @@ Last known output:
     .
     ├── CNAME
     ├── README.md
+    ├── assets
+    │   └── images
+    │       └── branding
+    │           ├── argus-acli
+    │           │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │           │   ├── argus-acli-neurocore-horizontal.png
+    │           │   ├── argus-acli-neurocore-stacked-transparent.png
+    │           │   ├── argus-acli-neurocore-stacked.png
+    │           │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │           │   ├── argus-acli-system-intelligence-horizontal.png
+    │           │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │           │   └── argus-acli-system-intelligence-stacked.png
+    │           ├── argus-lab
+    │           │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │           │   ├── argus-lab-interactive-analysis-horizontal.png
+    │           │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │           │   ├── argus-lab-interactive-analysis-stacked.png
+    │           │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │           │   ├── argus-lab-neurocore-horizontal.png
+    │           │   ├── argus-lab-neurocore-stacked-transparent.png
+    │           │   └── argus-lab-neurocore-stacked.png
+    │           ├── neurocore
+    │           │   ├── neurocore-horizontal-transparent.png
+    │           │   ├── neurocore-horizontal.png
+    │           │   ├── neurocore-stacked-transparent.png
+    │           │   └── neurocore-stacked.png
+    │           └── tensa
+    │               ├── tensa-horizontal-header-transparent.png
+    │               ├── tensa-horizontal-logo-transparent.png
+    │               ├── tensa-horizontal-logo.png
+    │               ├── tensa-stacked-logo-transparent.png
+    │               └── tensa-stacked-logo.png
     ├── docs
     │   ├── ai-operations
+    │   │   ├── documentation_closeout_protocol.md
     │   │   └── tensa_website_resume_prompt.md
     │   ├── infrastructure
     │   │   └── tensa_repository_map.txt
     │   ├── planning
     │   │   ├── content_source_map.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── page_inventory.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
     ├── index.html
+    ├── knowledge-base
+    │   └── index.html
     ├── projects
     │   ├── argus-acli.html
     │   ├── argus-lab.html
@@ -598,4 +965,4 @@ Last known output:
     │   └── neurocore.html
     └── styles.css
 
-    6 directories, 13 files
+    14 directories, 42 files

@@ -15,33 +15,49 @@
   <div class="site-bg"></div>
 
   <header class="site-header">
-    <a class="brand" href="#top">TENSA Engineering</a>
+    <a class="brand" href="#top" aria-label="TENSA Engineering home">
+      <img
+        src="assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
+        alt="TENSA Engineering"
+        class="brand-logo"
+      />
+    </a>
 
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="projects/">Projects</a>
-      <a href="#knowledge">Knowledge Base</a>
+      <a href="knowledge-base/">Knowledge Base</a>
       <a href="#story">Story</a>
       <a href="#proof">GitHub</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <p class="eyebrow">TENSA Engineering</p>
+    <section class="hero branded-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TENSA Engineering</p>
 
-      <h1>Controlled AI systems for real environments.</h1>
+        <h1>Controlled AI systems for real environments.</h1>
 
-      <p class="subtitle">
-        TENSA Engineering is the public home for NeuroCore, Argus ACLI, and Argus Lab —
-        a local-first ecosystem focused on persistent AI continuity, governed tool interaction,
-        real system awareness, and practical Linux diagnostics.
-      </p>
+        <p class="subtitle">
+          TENSA Engineering is the public home for NeuroCore, Argus ACLI, and Argus Lab —
+          a local-first ecosystem focused on persistent AI continuity, governed tool interaction,
+          real system awareness, and practical Linux diagnostics.
+        </p>
 
-      <div class="hero-actions">
-        <a href="projects/" class="button primary">Explore the ecosystem</a>
-        <a href="https://github.com/RichBayer/neurocore" class="button secondary" target="_blank" rel="noopener noreferrer">
-          View the engineering proof
-        </a>
+        <div class="hero-actions">
+          <a href="projects/" class="button primary">Explore the ecosystem</a>
+          <a href="https://github.com/RichBayer/neurocore" class="button secondary" target="_blank" rel="noopener noreferrer">
+            View the engineering proof
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-brand-card" aria-label="TENSA Engineering branding">
+        <img
+          src="assets/images/branding/tensa/tensa-stacked-logo-transparent.png"
+          alt="TENSA Engineering stacked logo"
+          class="hero-brand-logo"
+        />
       </div>
     </section>
 
@@ -80,37 +96,54 @@
 
       <div class="project-grid">
         <article class="project-card featured-card">
+          <div class="project-logo-wrap">
+            <img
+              src="assets/images/branding/neurocore/neurocore-horizontal-transparent.png"
+              alt="NeuroCore logo"
+              class="project-logo"
+            />
+          </div>
           <span class="card-label">Platform</span>
           <h3>NeuroCore</h3>
           <p>
             A local-first AI platform designed for persistent understanding, controlled tool access,
             structured reasoning, real system awareness, and governed execution.
           </p>
-          <a href="https://github.com/RichBayer/neurocore" target="_blank" rel="noopener noreferrer">
-            Open NeuroCore on GitHub →
-          </a>
+          <a href="projects/neurocore.html">Explore NeuroCore →</a>
         </article>
 
         <article class="project-card">
+          <div class="project-logo-wrap">
+            <img
+              src="assets/images/branding/argus-acli/argus-acli-system-intelligence-horizontal-transparent.png"
+              alt="Argus ACLI logo"
+              class="project-logo"
+            />
+          </div>
           <span class="card-label">Product / Distribution</span>
           <h3>Argus ACLI</h3>
           <p>
             The first practical proof built on NeuroCore: a read-only Linux system intelligence tool
             that turns real telemetry into clear findings, severity, recommendations, and raw evidence.
           </p>
-          <a href="projects/">Explore the ecosystem →</a>
+          <a href="projects/argus-acli.html">Explore Argus ACLI →</a>
         </article>
 
         <article class="project-card">
+          <div class="project-logo-wrap">
+            <img
+              src="assets/images/branding/argus-lab/argus-lab-interactive-analysis-horizontal-transparent.png"
+              alt="Argus Lab logo"
+              class="project-logo"
+            />
+          </div>
           <span class="card-label">Future training + validation</span>
           <h3>Argus Lab</h3>
           <p>
             A planned real-Linux troubleshooting and validation environment built around controlled
             failures, resettable scenarios, adaptive difficulty, and mentor-style AI guidance.
           </p>
-          <a href="https://github.com/RichBayer/argus-lab" target="_blank" rel="noopener noreferrer">
-            Open Argus Lab on GitHub →
-          </a>
+          <a href="projects/argus-lab.html">Explore Argus Lab →</a>
         </article>
       </div>
     </section>

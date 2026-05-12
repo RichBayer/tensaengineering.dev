@@ -6,7 +6,7 @@
 
 TENSA Engineering website foundation is live.
 
-The site currently exists as a static GitHub Pages website, but the long-term direction is a larger public knowledge hub, ecosystem portal, educational resource, and future product funnel.
+The site is transitioning from a small static landing page into a modular ecosystem knowledge platform.
 
 Current phase:
 
@@ -16,8 +16,18 @@ Current phase:
     initial Projects section created
     NeuroCore project page rewritten as story-first explainer
     Argus ACLI and Argus Lab placeholder pages created
-    repository map created
-    content source map created
+    branding asset hierarchy established
+    consistent branding added across current public pages
+    Knowledge Base index created
+    page inventory created
+    internal linking strategy created
+    repository map updated
+
+The site now functions more like an ecosystem portal than a single landing page.
+
+The homepage remains the front door.
+
+Deeper explanations are beginning to move into dedicated pages.
 
 ---
 
@@ -53,15 +63,27 @@ Current key files:
 - styles.css
 - README.md
 - CNAME
+- assets/images/branding/tensa/
+- assets/images/branding/neurocore/
+- assets/images/branding/argus-acli/
+- assets/images/branding/argus-lab/
 - projects/index.html
 - projects/neurocore.html
 - projects/argus-acli.html
 - projects/argus-lab.html
+- knowledge-base/index.html
+- docs/ai-operations/documentation_closeout_protocol.md
 - docs/ai-operations/tensa_website_resume_prompt.md
 - docs/infrastructure/tensa_repository_map.txt
 - docs/planning/content_source_map.md
+- docs/planning/internal_linking_strategy.md
+- docs/planning/page_inventory.md
 - docs/planning/website_information_architecture.md
 - docs/website_state.md
+
+Current repository size:
+
+    14 directories, 42 files
 
 ---
 
@@ -74,39 +96,144 @@ Current public pages:
     /projects/neurocore.html
     /projects/argus-acli.html
     /projects/argus-lab.html
+    /knowledge-base/
 
 Current internal planning / continuity docs:
 
+    docs/ai-operations/documentation_closeout_protocol.md
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
     docs/planning/website_information_architecture.md
     docs/website_state.md
 
 ---
 
+## Current Branding System
+
+A formal branding asset hierarchy has been established.
+
+Current asset structure:
+
+    assets/images/branding/tensa/
+    assets/images/branding/neurocore/
+    assets/images/branding/argus-acli/
+    assets/images/branding/argus-lab/
+
+Current TENSA branding assets:
+
+    tensa-horizontal-logo.png
+    tensa-horizontal-logo-transparent.png
+    tensa-horizontal-header-transparent.png
+    tensa-stacked-logo.png
+    tensa-stacked-logo-transparent.png
+
+Current NeuroCore branding assets:
+
+    neurocore-horizontal.png
+    neurocore-horizontal-transparent.png
+    neurocore-stacked.png
+    neurocore-stacked-transparent.png
+
+Current Argus ACLI branding assets:
+
+    argus-acli-neurocore-horizontal.png
+    argus-acli-neurocore-horizontal-transparent.png
+    argus-acli-neurocore-stacked.png
+    argus-acli-neurocore-stacked-transparent.png
+    argus-acli-system-intelligence-horizontal.png
+    argus-acli-system-intelligence-horizontal-transparent.png
+    argus-acli-system-intelligence-stacked.png
+    argus-acli-system-intelligence-stacked-transparent.png
+
+Current Argus Lab branding assets:
+
+    argus-lab-interactive-analysis-horizontal.png
+    argus-lab-interactive-analysis-horizontal-transparent.png
+    argus-lab-interactive-analysis-stacked.png
+    argus-lab-interactive-analysis-stacked-transparent.png
+    argus-lab-neurocore-horizontal.png
+    argus-lab-neurocore-horizontal-transparent.png
+    argus-lab-neurocore-stacked.png
+    argus-lab-neurocore-stacked-transparent.png
+
+Current branding behavior:
+
+- all current public pages use the TENSA header logo
+- homepage hero uses the TENSA stacked logo
+- Projects page hero uses the TENSA stacked logo
+- NeuroCore page hero uses the NeuroCore stacked logo
+- Argus ACLI placeholder hero uses the Argus ACLI stacked logo
+- Argus Lab placeholder hero uses the Argus Lab stacked logo
+- homepage and Projects project cards use horizontal project logos
+- transparent PNG variants are used to avoid baked black logo backgrounds
+- the header uses a header-optimized TENSA logo without the tiny unreadable subtitle line
+
+---
+
+## Current Navigation State
+
+Current primary navigation:
+
+    Home
+    Projects
+    Knowledge Base
+    Story
+    GitHub
+
+Current navigation targets:
+
+    Home → /index.html
+    Projects → /projects/
+    Knowledge Base → /knowledge-base/
+    Story → /index.html#story
+    GitHub → /index.html#proof
+
+Important note:
+
+    Knowledge Base now points to the real /knowledge-base/ page.
+
+Story and GitHub still point to homepage sections until dedicated pages exist.
+
+When /story/ is created, update Story navigation across all public pages.
+
+When /resources/ or a GitHub/resources page is created, decide whether GitHub remains a homepage proof anchor or moves into Resources.
+
+---
+
 ## Current Homepage
+
+Current path:
+
+    index.html
+
+Current status:
+
+    Live
 
 The current homepage includes:
 
-- TENSA Engineering hero section
+- TENSA Engineering branded header
+- TENSA branded hero section
 - controlled AI systems positioning
 - core philosophy section
 - ecosystem overview
-- NeuroCore project card
-- Argus ACLI project card
-- Argus Lab project card
+- NeuroCore project card with logo
+- Argus ACLI project card with logo
+- Argus Lab project card with logo
 - Knowledge Base direction preview
 - origin story preview
 - GitHub proof section
 - links to NeuroCore and Argus Lab GitHub repos
-- navigation to the Projects overview page
+- navigation to Projects and Knowledge Base
 
-The homepage now treats TENSA Engineering as the single public hub for the ecosystem.
+The homepage treats TENSA Engineering as the single public hub for the ecosystem.
 
-The homepage is still intentionally concise.
+The homepage should remain concise.
 
-It should remain a front door, not become a mile-long explanation page.
+It should stay a front door and navigation layer, not become a giant explanation page.
 
 ---
 
@@ -116,6 +243,10 @@ Current path:
 
     projects/index.html
 
+Current status:
+
+    Live
+
 Current purpose:
 
 - explain the TENSA ecosystem
@@ -123,12 +254,19 @@ Current purpose:
 - provide a clean internal route from the homepage
 - link to the NeuroCore detail page
 - link to placeholder Argus ACLI and Argus Lab pages
+- reinforce the platform / product / lab model
 
 Current project model:
 
     NeuroCore = platform
     Argus ACLI = first product / distribution
     Argus Lab = future training and validation environment
+
+Current branding:
+
+- TENSA header logo
+- TENSA stacked logo in hero
+- project logos in project cards
 
 ---
 
@@ -140,41 +278,36 @@ Current path:
 
 Current status:
 
-- story-first page implemented
-- opening language revised for normal readers
-- origin story included
-- context explained in plain English
-- continuity introduced after the problem is explained
-- Linux project origin included
-- local AI runtime path explained
-- knowledge layer explained
-- RAG explained
-- daemon/persistent system shift explained
-- control plane explained
-- hallucination explained
-- tool execution explained
-- observability explained
-- current Linux/Ubuntu focus included near the end
-- Argus ACLI and Argus Lab sections link to their placeholder pages
+    Live
 
-Current hero:
+Current purpose:
 
-    NeuroCore started as an AI assistant that would not forget.
+    Story-first public NeuroCore explainer.
 
-Current core positioning:
+Current branding:
 
-    What began as a personal Linux learning project grew into a local-first system
-    for persistent AI memory, controlled tool access, and grounded assistance in
-    real Linux environments.
+- TENSA header logo
+- NeuroCore stacked logo in hero
 
-Current page style:
+Current content includes:
 
-- long-form article-style sections
-- fewer choppy one-sentence paragraphs
-- clearer prose formatting
-- article-card styling added
-- callout-line styling added
-- code-line styling added
+- story-first opening
+- origin story
+- context explanation
+- continuity explanation
+- Linux project origin
+- local runtime path
+- knowledge layer explanation
+- RAG explanation
+- daemon / persistent system explanation
+- control plane explanation
+- hallucination explanation
+- controlled tool execution explanation
+- observability explanation
+- current Linux/Ubuntu focus
+- Argus ACLI section
+- Argus Lab section
+- GitHub link
 
 Important note:
 
@@ -194,15 +327,19 @@ Current path:
 
 Current status:
 
-- placeholder page created
-- links work
-- full content not written yet
+    Branded placeholder
 
 Current purpose:
 
-- provide a clean destination for NeuroCore and Projects page links
+- provide a clean public destination for Argus ACLI
 - prevent dead links
-- reserve page structure for future Argus ACLI explanation
+- reserve page structure for future full Argus ACLI explanation
+- keep current public navigation consistent
+
+Current branding:
+
+- TENSA header logo
+- Argus ACLI stacked logo in hero
 
 Future page should explain:
 
@@ -215,6 +352,7 @@ Future page should explain:
 - severity
 - recommendations
 - raw evidence
+- output controls
 - current Linux/Ubuntu focus
 - current V1 status
 - future install/download guidance when ready
@@ -235,14 +373,18 @@ Current path:
 
 Current status:
 
-- placeholder page created
-- links work
-- full content not written yet
+    Branded placeholder
 
 Current purpose:
 
-- provide a clean destination for NeuroCore and Projects page links
-- reserve page structure for future Argus Lab explanation
+- provide a clean public destination for Argus Lab
+- reserve page structure for future full Argus Lab explanation
+- keep current public navigation consistent
+
+Current branding:
+
+- TENSA header logo
+- Argus Lab stacked logo in hero
 
 Future page should explain:
 
@@ -266,6 +408,53 @@ Before writing the full Argus Lab page, check:
 
 ---
 
+## Current Knowledge Base Page
+
+Current path:
+
+    knowledge-base/index.html
+
+Current status:
+
+    Structure-only public index
+
+Current purpose:
+
+- establish the Knowledge Base as a top-level public site section
+- move TENSA away from pure landing-page structure
+- introduce major educational topic areas
+- prepare for future modular knowledge-base articles
+
+Current branding:
+
+- TENSA header logo
+- TENSA stacked logo in hero
+
+Current topic areas introduced:
+
+- Controlled AI Systems
+- AI Operations
+- Persistent AI Memory
+- Local-First AI
+- Safe Tool Interaction
+- Linux Diagnostics
+- Troubleshooting Training
+- NeuroCore Architecture
+
+Important note:
+
+The Knowledge Base index is public-facing.
+
+It should not read like an internal writing guide.
+
+Future article/category pages should be created deliberately and tracked in:
+
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/content_source_map.md
+
+---
+
 ## Long-Term Website Direction
 
 TENSA Engineering is intended to become:
@@ -281,7 +470,7 @@ TENSA Engineering is intended to become:
 - educational resource for AI operations
 - future product funnel for Argus ACLI and later offerings
 
-The site should eventually expand into many categorized pages.
+The site should expand into many categorized pages over time.
 
 It should not become one massive homepage.
 
@@ -311,6 +500,7 @@ TENSA Engineering:
 - brand home
 - knowledge base
 - public explanation layer
+- ecosystem portal
 - future product funnel
 
 NeuroCore:
@@ -384,6 +574,22 @@ Social content:
 - project links updated so pages route internally
 - TENSA repository map created
 - content source map created
+- branding asset hierarchy created
+- TENSA horizontal and stacked logos added
+- NeuroCore, Argus ACLI, and Argus Lab logos copied from NeuroCore repo
+- transparent logo variants created
+- header-optimized TENSA logo created
+- homepage branding integrated
+- project card logo treatment added
+- Projects page branding updated
+- NeuroCore page branding updated
+- Argus ACLI placeholder branding updated
+- Argus Lab placeholder branding updated
+- Knowledge Base index page created
+- Knowledge Base navigation updated across current public pages
+- page inventory planning doc created
+- internal linking strategy planning doc created
+- TENSA website documentation closeout protocol created
 
 ---
 
@@ -391,7 +597,6 @@ Social content:
 
 - full Argus ACLI page
 - full Argus Lab page
-- Knowledge Base index page
 - Story index page
 - Resources page
 - About page
@@ -403,11 +608,13 @@ Social content:
 - migration plan from old Argus ACLI landing page
 - install/download guidance for Argus ACLI
 - article templates
-- internal link strategy for technology explanations
-- page inventory
 - content style guide
 - SEO topic map
 - old-site migration plan
+- documentation strategy doc for the TENSA website
+- internal link checker script
+- Knowledge Base category pages
+- Knowledge Base article pages
 
 ---
 
@@ -420,11 +627,16 @@ Use these docs at the start of future serious website sessions:
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
 
 Purpose of each:
 
     tensa_website_resume_prompt.md
         fresh-thread startup context
+
+    documentation_closeout_protocol.md
+        end-of-session documentation closeout workflow
 
     website_state.md
         live-current-state record
@@ -438,37 +650,67 @@ Purpose of each:
     content_source_map.md
         required source docs before writing factual pages
 
+    page_inventory.md
+        page existence, status, purpose, and next-action tracker
+
+    internal_linking_strategy.md
+        logical linking map, preferred destinations, temporary links, and link-audit expectations
+
+---
+
+## Build-Start Checks
+
+At the beginning of serious website build sessions, run:
+
+    git status --short
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    find . -maxdepth 3 -name "*.html" -print
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+
+Future recommended replacement for manual link grep:
+
+    scripts/check_internal_links.py
+
+Purpose:
+
+- confirm repository state
+- confirm current tree
+- confirm public page inventory
+- confirm current links
+- detect old navigation targets
+- prevent broken links and drift
+
 ---
 
 ## Next Recommended Steps
 
 Recommended next session:
 
-1. Run git status.
-2. Confirm the repo is clean.
-3. Review the live site quickly.
-4. Decide whether to build the Argus ACLI page or Argus Lab page next.
-5. Check docs/planning/content_source_map.md for required source docs.
-6. Upload the required source docs.
-7. Build one full page at a time using full-file replacements.
+1. Run build-start checks.
+2. Confirm repo is clean.
+3. Review `docs/planning/page_inventory.md`.
+4. Review `docs/planning/internal_linking_strategy.md`.
+5. Decide whether to continue public site build or do documentation strategy planning.
+6. Before writing factual pages, check `docs/planning/content_source_map.md`.
 
-Recommended next page options:
+Recommended next planning move:
+
+    Create a TENSA website documentation strategy doc.
+
+Recommended next public-page options:
 
     projects/argus-acli.html
     projects/argus-lab.html
-    knowledge-base/index.html
+    story/index.html
+    resources/index.html
+    about.html
 
-Recommended order:
+Recommended next Knowledge Base options:
 
-1. Argus ACLI page
-2. Argus Lab page
-3. Knowledge Base index
-4. Story index
-5. About / Resources pages
-
-Reason:
-
-Argus ACLI and Argus Lab already have placeholders and are linked from the NeuroCore page.
+    knowledge-base/controlled-ai-systems/
+    knowledge-base/persistent-ai-memory/
+    knowledge-base/ai-operations/
+    knowledge-base/linux-diagnostics/
 
 ---
 
@@ -490,6 +732,17 @@ Recent NeuroCore page work used context from:
 - build log 017 execution layer and control integration
 - build log 018 observability and tracing
 - Argus Lab README / vision material
+
+Recent site structure work used:
+
+- TENSA website resume prompt
+- TENSA website state
+- TENSA website information architecture
+- TENSA repository map
+- TENSA content source map
+- TENSA Website Session Additions – Tonight
+- NeuroCore / Argus / Argus Lab deep context loading pack
+- NeuroCore repository map
 
 Important:
 
@@ -520,6 +773,14 @@ Use source docs before writing factual project pages.
 Check the content source map before writing or significantly rewriting factual project pages:
 
     docs/planning/content_source_map.md
+
+Check page inventory before creating or changing public pages:
+
+    docs/planning/page_inventory.md
+
+Check internal linking strategy before adding or changing major links:
+
+    docs/planning/internal_linking_strategy.md
 
 Keep the information architecture top-down and coherent.
 
@@ -578,3 +839,5 @@ Knowledge Base pages teach individual concepts.
 Build Notes explain how the system evolved.
 
 GitHub remains the source of truth.
+
+The site should never grow faster than the documentation system that keeps it organized.

@@ -49,12 +49,15 @@ body {
 }
 
 .brand {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.brand-logo {
+  display: block;
+  width: min(260px, 58vw);
+  height: auto;
 }
 
 .site-nav {
@@ -85,6 +88,79 @@ main {
 .hero {
   max-width: 1020px;
   padding: 42px 0 72px;
+}
+
+.branded-hero {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 46px;
+  align-items: center;
+}
+
+.branded-page-hero {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 46px;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-brand-card,
+.ecosystem-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 34px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(57, 255, 136, 0.15), transparent 44%),
+    linear-gradient(135deg, rgba(57, 255, 136, 0.075), rgba(255, 255, 255, 0.032)),
+    rgba(2, 8, 18, 0.76);
+  border: 1px solid rgba(57, 255, 136, 0.18);
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.42),
+    inset 0 0 80px rgba(57, 255, 136, 0.04);
+  overflow: hidden;
+}
+
+.hero-brand-card {
+  min-height: 360px;
+}
+
+.ecosystem-mark {
+  min-height: 360px;
+}
+
+.hero-brand-card::before,
+.ecosystem-mark::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(57, 255, 136, 0.1);
+  background-image:
+    linear-gradient(rgba(57, 255, 136, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 136, 0.05) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.45;
+}
+
+.hero-brand-logo,
+.ecosystem-logo-main {
+  position: relative;
+  z-index: 1;
+  width: min(360px, 100%);
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(57, 255, 136, 0.22));
+}
+
+.ecosystem-logo-main {
+  width: min(330px, 100%);
 }
 
 .page-hero {
@@ -161,7 +237,7 @@ h1 {
   padding: 42px;
   border-radius: 28px;
   background:
-    linear-gradient(135deg, rgba(57, 255, 136, 0.11), rgba(255, 255, 255, 0.035)),
+    linear-gradient(135deg, rgba(57, 255, 136, 0.1), rgba(255, 255, 255, 0.035)),
     rgba(2, 8, 18, 0.82);
   border: 1px solid rgba(57, 255, 136, 0.18);
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.34);
@@ -265,16 +341,45 @@ h1 {
 .topic-grid article {
   padding: 28px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(135deg, rgba(57, 255, 136, 0.055), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.105);
   box-shadow: 0 18px 70px rgba(0, 0, 0, 0.24);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .featured-card {
   background:
-    linear-gradient(135deg, rgba(57, 255, 136, 0.13), rgba(255, 255, 255, 0.055)),
-    rgba(255, 255, 255, 0.055);
-  border-color: rgba(57, 255, 136, 0.24);
+    linear-gradient(135deg, rgba(57, 255, 136, 0.08), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.048);
+  border-color: rgba(57, 255, 136, 0.18);
+}
+
+.project-logo-wrap {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 18px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(57, 255, 136, 0.11), transparent 38%),
+    rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-logo {
+  display: block;
+  width: 100%;
+  max-height: 64px;
+  object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 0 16px rgba(57, 255, 136, 0.14));
 }
 
 .card-label {
@@ -306,6 +411,7 @@ h1 {
   color: #39ff88;
   font-weight: 800;
   text-decoration: none;
+  margin-top: auto;
 }
 
 .project-card a:hover {
@@ -332,6 +438,18 @@ h1 {
   padding: 0 0 36px;
   color: #7f8ea3;
   font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  .branded-hero,
+  .branded-page-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-brand-card,
+  .ecosystem-mark {
+    min-height: 300px;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -372,6 +490,10 @@ h1 {
   .site-nav {
     gap: 12px;
   }
+
+  .brand-logo {
+    width: min(230px, 78vw);
+  }
 }
 
 @media (max-width: 620px) {
@@ -399,5 +521,11 @@ h1 {
 
   .callout-line {
     font-size: 20px !important;
+  }
+
+  .hero-brand-card,
+  .ecosystem-mark {
+    min-height: 240px;
+    padding: 24px;
   }
 }
