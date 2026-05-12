@@ -63,10 +63,13 @@ Current key files:
 - styles.css
 - README.md
 - CNAME
+- robots.txt
+- sitemap.xml
 - assets/images/branding/tensa/
 - assets/images/branding/neurocore/
 - assets/images/branding/argus-acli/
 - assets/images/branding/argus-lab/
+- assets/images/social/tensa-og-image.png
 - projects/index.html
 - projects/neurocore.html
 - projects/argus-acli.html
@@ -76,14 +79,16 @@ Current key files:
 - docs/ai-operations/tensa_website_resume_prompt.md
 - docs/infrastructure/tensa_repository_map.txt
 - docs/planning/content_source_map.md
+- docs/planning/documentation_strategy.md
 - docs/planning/internal_linking_strategy.md
 - docs/planning/page_inventory.md
+- docs/planning/search_indexing_strategy.md
 - docs/planning/website_information_architecture.md
 - docs/website_state.md
 
 Current repository size:
 
-    14 directories, 42 files
+    15 directories, 47 files
 
 ---
 
@@ -104,8 +109,10 @@ Current internal planning / continuity docs:
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/documentation_strategy.md
     docs/planning/internal_linking_strategy.md
     docs/planning/page_inventory.md
+    docs/planning/search_indexing_strategy.md
     docs/planning/website_information_architecture.md
     docs/website_state.md
 
@@ -159,6 +166,16 @@ Current Argus Lab branding assets:
     argus-lab-neurocore-stacked.png
     argus-lab-neurocore-stacked-transparent.png
 
+Current social preview asset:
+
+    assets/images/social/tensa-og-image.png
+
+Current social preview behavior:
+
+- all current public HTML pages use the dedicated TENSA social preview image for Open Graph and Twitter card metadata
+- the social preview image is 1200 x 630
+- the image is used as the default site-wide preview image for link sharing
+
 Current branding behavior:
 
 - all current public pages use the TENSA header logo
@@ -200,6 +217,54 @@ Story and GitHub still point to homepage sections until dedicated pages exist.
 When /story/ is created, update Story navigation across all public pages.
 
 When /resources/ or a GitHub/resources page is created, decide whether GitHub remains a homepage proof anchor or moves into Resources.
+
+---
+
+## Current Search / SEO Foundation
+
+Current search support files:
+
+    robots.txt
+    sitemap.xml
+
+Current sitemap URL:
+
+    https://tensaengineering.dev/sitemap.xml
+
+Current robots URL:
+
+    https://tensaengineering.dev/robots.txt
+
+Current sitemap contents:
+
+- https://tensaengineering.dev/
+- https://tensaengineering.dev/projects/
+- https://tensaengineering.dev/projects/neurocore.html
+- https://tensaengineering.dev/projects/argus-acli.html
+- https://tensaengineering.dev/projects/argus-lab.html
+- https://tensaengineering.dev/knowledge-base/
+
+Current public HTML metadata support:
+
+- canonical URLs
+- meta descriptions
+- Open Graph metadata
+- Twitter large-image card metadata
+- dedicated 1200 x 630 social preview image
+- JSON-LD structured data
+
+Current indexing status:
+
+    sitemap.xml created
+    robots.txt created
+    Google Search Console not yet configured
+    Bing Webmaster Tools not yet configured
+    sitemap not yet submitted to Google
+    sitemap not yet submitted to Bing
+
+Important note:
+
+    Search indexing files exist locally but must be committed, pushed, deployed, and verified live before Google/Bing registration.
 
 ---
 
@@ -590,6 +655,16 @@ Social content:
 - page inventory planning doc created
 - internal linking strategy planning doc created
 - TENSA website documentation closeout protocol created
+- TENSA website documentation strategy created
+- TENSA search indexing strategy created
+- root sitemap.xml created
+- root robots.txt created
+- dedicated TENSA social preview image created
+- canonical URLs added to all current public HTML pages
+- Open Graph metadata added to all current public HTML pages
+- Twitter large-image card metadata added to all current public HTML pages
+- JSON-LD structured data added to all current public HTML pages
+- SEO titles and meta descriptions tuned across current public pages
 
 ---
 
@@ -601,8 +676,12 @@ Social content:
 - Resources page
 - About page
 - Build Notes section
-- SEO strategy
-- analytics/search indexing decisions
+- full SEO topic map
+- analytics decisions
+- Google Search Console verification
+- Bing Webmaster Tools verification
+- sitemap submission to Google
+- sitemap submission to Bing
 - content roadmap
 - visual brand refinement beyond current static style
 - migration plan from old Argus ACLI landing page
@@ -611,7 +690,6 @@ Social content:
 - content style guide
 - SEO topic map
 - old-site migration plan
-- documentation strategy doc for the TENSA website
 - internal link checker script
 - Knowledge Base category pages
 - Knowledge Base article pages
@@ -627,8 +705,10 @@ Use these docs at the start of future serious website sessions:
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/documentation_strategy.md
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
+    docs/planning/search_indexing_strategy.md
 
 Purpose of each:
 
@@ -650,11 +730,17 @@ Purpose of each:
     content_source_map.md
         required source docs before writing factual pages
 
+    documentation_strategy.md
+        documentation ownership, update triggers, and overlap boundaries
+
     page_inventory.md
         page existence, status, purpose, and next-action tracker
 
     internal_linking_strategy.md
         logical linking map, preferred destinations, temporary links, and link-audit expectations
+
+    search_indexing_strategy.md
+        sitemap, robots.txt, search engine registration, and indexing workflow
 
 ---
 
@@ -690,12 +776,13 @@ Recommended next session:
 2. Confirm repo is clean.
 3. Review `docs/planning/page_inventory.md`.
 4. Review `docs/planning/internal_linking_strategy.md`.
-5. Decide whether to continue public site build or do documentation strategy planning.
-6. Before writing factual pages, check `docs/planning/content_source_map.md`.
+5. Review `docs/planning/search_indexing_strategy.md` if doing search/indexing work.
+6. Decide whether to continue public site build, search registration, or content planning.
+7. Before writing factual pages, check `docs/planning/content_source_map.md`.
 
-Recommended next planning move:
+Recommended next search/indexing move:
 
-    Create a TENSA website documentation strategy doc.
+    After commit, push, and GitHub Pages deployment, verify sitemap.xml and robots.txt live, then configure Google Search Console and Bing Webmaster Tools.
 
 Recommended next public-page options:
 
@@ -704,6 +791,10 @@ Recommended next public-page options:
     story/index.html
     resources/index.html
     about.html
+
+Recommended next planning move:
+
+    Create a public content style guide or SEO topic map when content expansion begins.
 
 Recommended next Knowledge Base options:
 

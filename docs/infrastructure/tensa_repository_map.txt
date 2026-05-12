@@ -39,36 +39,38 @@ DNS / domain provider:
     ├── README.md
     ├── assets
     │   └── images
-    │       └── branding
-    │           ├── argus-acli
-    │           │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │           │   ├── argus-acli-neurocore-horizontal.png
-    │           │   ├── argus-acli-neurocore-stacked-transparent.png
-    │           │   ├── argus-acli-neurocore-stacked.png
-    │           │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │           │   ├── argus-acli-system-intelligence-horizontal.png
-    │           │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │           │   └── argus-acli-system-intelligence-stacked.png
-    │           ├── argus-lab
-    │           │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │           │   ├── argus-lab-interactive-analysis-horizontal.png
-    │           │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │           │   ├── argus-lab-interactive-analysis-stacked.png
-    │           │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │           │   ├── argus-lab-neurocore-horizontal.png
-    │           │   ├── argus-lab-neurocore-stacked-transparent.png
-    │           │   └── argus-lab-neurocore-stacked.png
-    │           ├── neurocore
-    │           │   ├── neurocore-horizontal-transparent.png
-    │           │   ├── neurocore-horizontal.png
-    │           │   ├── neurocore-stacked-transparent.png
-    │           │   └── neurocore-stacked.png
-    │           └── tensa
-    │               ├── tensa-horizontal-header-transparent.png
-    │               ├── tensa-horizontal-logo-transparent.png
-    │               ├── tensa-horizontal-logo.png
-    │               ├── tensa-stacked-logo-transparent.png
-    │               └── tensa-stacked-logo.png
+    │       ├── branding
+    │       │   ├── argus-acli
+    │       │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │       │   │   ├── argus-acli-neurocore-horizontal.png
+    │       │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │       │   │   ├── argus-acli-neurocore-stacked.png
+    │       │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │       │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │       │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │       │   │   └── argus-acli-system-intelligence-stacked.png
+    │       │   ├── argus-lab
+    │       │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │       │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │       │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │       │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │       │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │       │   │   ├── argus-lab-neurocore-horizontal.png
+    │       │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │       │   │   └── argus-lab-neurocore-stacked.png
+    │       │   ├── neurocore
+    │       │   │   ├── neurocore-horizontal-transparent.png
+    │       │   │   ├── neurocore-horizontal.png
+    │       │   │   ├── neurocore-stacked-transparent.png
+    │       │   │   └── neurocore-stacked.png
+    │       │   └── tensa
+    │       │       ├── tensa-horizontal-header-transparent.png
+    │       │       ├── tensa-horizontal-logo-transparent.png
+    │       │       ├── tensa-horizontal-logo.png
+    │       │       ├── tensa-stacked-logo-transparent.png
+    │       │       └── tensa-stacked-logo.png
+    │       └── social
+    │           └── tensa-og-image.png
     ├── docs
     │   ├── ai-operations
     │   │   ├── documentation_closeout_protocol.md
@@ -77,8 +79,10 @@ DNS / domain provider:
     │   │   └── tensa_repository_map.txt
     │   ├── planning
     │   │   ├── content_source_map.md
+    │   │   ├── documentation_strategy.md
     │   │   ├── internal_linking_strategy.md
     │   │   ├── page_inventory.md
+    │   │   ├── search_indexing_strategy.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
     ├── index.html
@@ -89,11 +93,13 @@ DNS / domain provider:
     │   ├── argus-lab.html
     │   ├── index.html
     │   └── neurocore.html
+    ├── robots.txt
+    ├── sitemap.xml
     └── styles.css
 
 Current size:
 
-    14 directories, 42 files
+    15 directories, 47 files
 
 ---
 
@@ -161,6 +167,36 @@ It should function as an ecosystem introduction and navigation layer, not a gian
 
 ---
 
+### robots.txt
+
+Purpose:
+
+    Root-level crawler guidance file for search engines.
+
+Current role:
+
+    Allows normal crawling and points search engines to the sitemap.
+
+Current sitemap reference:
+
+    https://tensaengineering.dev/sitemap.xml
+
+---
+
+### sitemap.xml
+
+Purpose:
+
+    Root-level sitemap listing the current real public website URLs for search engine discovery.
+
+Current role:
+
+    Supports Google Search Console and Bing Webmaster Tools sitemap submission.
+
+Current sitemap includes only real public pages.
+
+---
+
 ### styles.css
 
 Purpose:
@@ -194,7 +230,7 @@ Purpose:
 
     Public website assets.
 
-This directory is the long-term home for branding images, project logos, and future public visual assets.
+This directory is the long-term home for branding images, project logos, social preview images, and future public visual assets.
 
 ---
 
@@ -418,7 +454,7 @@ Recommended command to refresh the tree:
 
 Purpose:
 
-    Website planning and information architecture documents.
+    Website planning, documentation strategy, search indexing, and information architecture documents.
 
 These files define how the site should grow and how it should stay organized.
 
@@ -464,6 +500,16 @@ Before writing factual project pages, check this file.
 
 ---
 
+### docs/planning/documentation_strategy.md
+
+Purpose:
+
+    Defines internal documentation ownership, scaling rules, update triggers, and overlap boundaries for TENSA website planning docs.
+
+This document should be updated when documentation responsibilities change or new internal planning docs become part of the core workflow.
+
+---
+
 ### docs/planning/page_inventory.md
 
 Purpose:
@@ -485,6 +531,18 @@ Purpose:
 This document exists to prevent link drift, duplicate explanations, orphaned pages, and confusing visitor paths.
 
 Use this document before adding new public pages or changing navigation.
+
+---
+
+### docs/planning/search_indexing_strategy.md
+
+Purpose:
+
+    Defines sitemap, robots.txt, canonical URL, Google Search Console, Bing Webmaster Tools, and search-discovery maintenance workflow.
+
+This document owns technical search discoverability.
+
+It does not replace future SEO topic planning.
 
 ---
 
@@ -736,8 +794,10 @@ Current internal docs:
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/documentation_strategy.md
     docs/planning/internal_linking_strategy.md
     docs/planning/page_inventory.md
+    docs/planning/search_indexing_strategy.md
     docs/planning/website_information_architecture.md
     docs/website_state.md
 
@@ -759,7 +819,6 @@ These files do not exist yet but are likely future additions:
     docs/planning/content_style_guide.md
     docs/planning/seo_topic_map.md
     docs/planning/old_site_migration_plan.md
-    docs/planning/documentation_strategy.md
 
 ---
 
@@ -771,11 +830,12 @@ Likely future public structure:
     ├── index.html
     ├── assets/
     │   └── images/
-    │       └── branding/
-    │           ├── tensa/
-    │           ├── neurocore/
-    │           ├── argus-acli/
-    │           └── argus-lab/
+    │       ├── branding/
+    │       │   ├── tensa/
+    │       │   ├── neurocore/
+    │       │   ├── argus-acli/
+    │       │   └── argus-lab/
+    │       └── social/
     ├── projects/
     │   ├── index.html
     │   ├── neurocore.html
@@ -913,36 +973,38 @@ Last known output:
     ├── README.md
     ├── assets
     │   └── images
-    │       └── branding
-    │           ├── argus-acli
-    │           │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │           │   ├── argus-acli-neurocore-horizontal.png
-    │           │   ├── argus-acli-neurocore-stacked-transparent.png
-    │           │   ├── argus-acli-neurocore-stacked.png
-    │           │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │           │   ├── argus-acli-system-intelligence-horizontal.png
-    │           │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │           │   └── argus-acli-system-intelligence-stacked.png
-    │           ├── argus-lab
-    │           │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │           │   ├── argus-lab-interactive-analysis-horizontal.png
-    │           │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │           │   ├── argus-lab-interactive-analysis-stacked.png
-    │           │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │           │   ├── argus-lab-neurocore-horizontal.png
-    │           │   ├── argus-lab-neurocore-stacked-transparent.png
-    │           │   └── argus-lab-neurocore-stacked.png
-    │           ├── neurocore
-    │           │   ├── neurocore-horizontal-transparent.png
-    │           │   ├── neurocore-horizontal.png
-    │           │   ├── neurocore-stacked-transparent.png
-    │           │   └── neurocore-stacked.png
-    │           └── tensa
-    │               ├── tensa-horizontal-header-transparent.png
-    │               ├── tensa-horizontal-logo-transparent.png
-    │               ├── tensa-horizontal-logo.png
-    │               ├── tensa-stacked-logo-transparent.png
-    │               └── tensa-stacked-logo.png
+    │       ├── branding
+    │       │   ├── argus-acli
+    │       │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │       │   │   ├── argus-acli-neurocore-horizontal.png
+    │       │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │       │   │   ├── argus-acli-neurocore-stacked.png
+    │       │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │       │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │       │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │       │   │   └── argus-acli-system-intelligence-stacked.png
+    │       │   ├── argus-lab
+    │       │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │       │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │       │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │       │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │       │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │       │   │   ├── argus-lab-neurocore-horizontal.png
+    │       │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │       │   │   └── argus-lab-neurocore-stacked.png
+    │       │   ├── neurocore
+    │       │   │   ├── neurocore-horizontal-transparent.png
+    │       │   │   ├── neurocore-horizontal.png
+    │       │   │   ├── neurocore-stacked-transparent.png
+    │       │   │   └── neurocore-stacked.png
+    │       │   └── tensa
+    │       │       ├── tensa-horizontal-header-transparent.png
+    │       │       ├── tensa-horizontal-logo-transparent.png
+    │       │       ├── tensa-horizontal-logo.png
+    │       │       ├── tensa-stacked-logo-transparent.png
+    │       │       └── tensa-stacked-logo.png
+    │       └── social
+    │           └── tensa-og-image.png
     ├── docs
     │   ├── ai-operations
     │   │   ├── documentation_closeout_protocol.md
@@ -951,8 +1013,10 @@ Last known output:
     │   │   └── tensa_repository_map.txt
     │   ├── planning
     │   │   ├── content_source_map.md
+    │   │   ├── documentation_strategy.md
     │   │   ├── internal_linking_strategy.md
     │   │   ├── page_inventory.md
+    │   │   ├── search_indexing_strategy.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
     ├── index.html
@@ -963,6 +1027,8 @@ Last known output:
     │   ├── argus-lab.html
     │   ├── index.html
     │   └── neurocore.html
+    ├── robots.txt
+    ├── sitemap.xml
     └── styles.css
 
-    14 directories, 42 files
+    15 directories, 47 files

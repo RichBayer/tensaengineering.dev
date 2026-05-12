@@ -18,7 +18,7 @@ DNS / domain:
 
 Current repository size:
 
-    14 directories, 42 files
+    15 directories, 47 files
 
 ---
 
@@ -70,8 +70,10 @@ Request or load these docs at the start of serious website sessions:
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/documentation_strategy.md
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
+    docs/planning/search_indexing_strategy.md
 
 Purpose:
 
@@ -93,11 +95,17 @@ Purpose:
     content_source_map.md
         source-doc requirements before writing factual pages
 
+    documentation_strategy.md
+        documentation ownership, update triggers, and overlap boundaries
+
     page_inventory.md
         page existence, status, purpose, navigation state, and next actions
 
     internal_linking_strategy.md
         logical link flow, preferred destinations, temporary links, and link-audit expectations
+
+    search_indexing_strategy.md
+        sitemap, robots.txt, Google Search Console, Bing Webmaster Tools, and indexing workflow
 
 ---
 
@@ -151,9 +159,48 @@ Current public page status:
     /                           Live homepage / ecosystem front door
     /projects/                  Live ecosystem project index
     /projects/neurocore.html    Live story-first NeuroCore explainer
-    /projects/argus-acli.html   Branded placeholder
-    /projects/argus-lab.html    Branded placeholder
+    /projects/argus-acli.html   Branded placeholder with SEO-tuned read-only Linux diagnostics positioning
+    /projects/argus-lab.html    Branded placeholder with SEO-tuned troubleshooting training / diagnostic validation positioning
     /knowledge-base/            Structure-only Knowledge Base index
+
+---
+
+# CURRENT SEARCH / SEO STATE
+
+Current root search files:
+
+    robots.txt
+    sitemap.xml
+
+Current sitemap URL after deployment:
+
+    https://tensaengineering.dev/sitemap.xml
+
+Current robots URL after deployment:
+
+    https://tensaengineering.dev/robots.txt
+
+Current SEO/social metadata:
+
+- all current public HTML pages have canonical URLs
+- all current public HTML pages have tuned meta descriptions
+- all current public HTML pages have Open Graph metadata
+- all current public HTML pages have Twitter large-image card metadata
+- all current public HTML pages use a dedicated 1200 x 630 TENSA social preview image
+- all current public HTML pages have valid JSON-LD structured data
+
+Current social preview asset:
+
+    assets/images/social/tensa-og-image.png
+
+Current search registration status:
+
+    Google Search Console not yet configured
+    Bing Webmaster Tools not yet configured
+    sitemap not yet submitted to Google
+    sitemap not yet submitted to Bing
+
+Search registration should happen only after commit, push, GitHub Pages deployment, and live verification that sitemap.xml and robots.txt load at the public domain.
 
 ---
 
@@ -342,6 +389,16 @@ Completed so far:
 - page inventory created
 - internal linking strategy created
 - documentation closeout protocol created
+- documentation strategy created
+- search indexing strategy created
+- root sitemap.xml created
+- root robots.txt created
+- dedicated 1200 x 630 TENSA social preview image created
+- canonical URLs added across current public HTML pages
+- Open Graph metadata added across current public HTML pages
+- Twitter large-image card metadata added across current public HTML pages
+- JSON-LD structured data added across current public HTML pages
+- SEO titles and meta descriptions tuned across current public pages
 
 ---
 
@@ -360,9 +417,12 @@ Not yet completed:
 - content style guide
 - SEO topic map
 - old-site migration plan
-- TENSA website documentation strategy doc
 - internal link checker script
-- analytics/search indexing decisions
+- analytics decisions
+- Google Search Console verification
+- Bing Webmaster Tools verification
+- sitemap submission to Google
+- sitemap submission to Bing
 - future install/download guidance for Argus ACLI
 
 ---
@@ -461,27 +521,25 @@ Update only the docs actually impacted by the session.
 
 Recommended next move:
 
-    Create docs/planning/documentation_strategy.md
+    Commit and push the current SEO/search-indexing foundation, wait for GitHub Pages deployment, then verify live sitemap.xml and robots.txt before registering the site with Google Search Console and Bing Webmaster Tools.
 
 Reason:
 
-The site is beginning to grow into a public knowledge platform. Before expanding too far, the documentation system should be planned intentionally so it can keep the site organized, accurate, scalable, and useful.
+The site now has the technical search foundation in place locally. Search registration should happen only after the files are live and reachable at the public domain.
 
-The documentation strategy should adapt relevant NeuroCore documentation discipline to the TENSA website build, but not blindly copy NeuroCore runtime/development rules.
+Recommended immediate verification targets after push:
 
-Recommended documentation planning topics:
+    https://tensaengineering.dev/sitemap.xml
+    https://tensaengineering.dev/robots.txt
 
-- which docs must exist long term
-- what each doc is responsible for
-- what gets updated during build closeout
-- what gets updated only when strategy changes
-- how to prevent docs from overlapping
-- how to track page status
-- how to track links
-- how to track source requirements
-- how to track SEO/content plans
-- how to track old-site migration
-- how to keep public pages distinct from internal planning docs
+Then configure:
+
+    Google Search Console
+    Bing Webmaster Tools
+
+Next content-planning move after registration:
+
+    Create docs/planning/content_style_guide.md or docs/planning/seo_topic_map.md when content expansion begins.
 
 ---
 

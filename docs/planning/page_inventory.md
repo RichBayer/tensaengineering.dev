@@ -75,10 +75,21 @@ Definitions:
 | `docs/infrastructure/tensa_repository_map.txt` | Repository map | Live | Maps current repository structure and file roles. | Update after directories, assets, pages, or major files are added/removed/moved. |
 | `docs/planning/website_information_architecture.md` | Planning / information architecture | Live | Defines long-term website structure, pillars, navigation, page strategy, and expansion plan. | Update only when the long-term architecture changes. |
 | `docs/planning/content_source_map.md` | Source-doc map | Live | Defines required source docs before writing factual pages. | Update when new page types are added or source requirements change. |
+| `docs/planning/documentation_strategy.md` | Documentation strategy | Live | Defines ownership boundaries, scaling rules, update triggers, and overlap prevention for internal website documentation. | Update when internal documentation responsibilities change or new planning docs become part of the core workflow. |
 | `docs/planning/page_inventory.md` | Page inventory | Live | Tracks what pages exist, what state they are in, and what needs to happen next. | Update whenever pages are created, renamed, retired, or change status. |
 | `docs/planning/internal_linking_strategy.md` | Internal link strategy | Live | Tracks logical page-to-page relationships and preferred link destinations. | Update whenever major topic pages, project pages, story pages, or knowledge-base pages are added. |
+| `docs/planning/search_indexing_strategy.md` | Search indexing strategy | Live | Tracks sitemap, robots.txt, canonical URL rules, Google Search Console, Bing Webmaster Tools, and search-discovery workflow. | Update when sitemap, robots.txt, indexing setup, or search-discovery workflow changes. |
 
 ---
+
+## Root Search / Indexing Support Files
+
+| Path | Type | Status | Purpose | Update Trigger |
+|---|---|---|---|---|
+| `/sitemap.xml` | Search indexing support | Live | Lists the current real public website URLs for search engine discovery and sitemap submission. | Update whenever public pages are created, removed, renamed, or public routes change. |
+| `/robots.txt` | Search indexing support | Live | Allows normal crawling and points search engines to the root sitemap. | Update when sitemap location, crawl guidance, or search indexing policy changes. |
+
+Current public HTML pages also include canonical URLs, Open Graph metadata, Twitter large-image card metadata, and JSON-LD structured data.
 
 ## Planned Public Pages
 
