@@ -57,10 +57,10 @@ Current search-indexing status:
     Twitter large-image card metadata added to all current public HTML pages
     dedicated 1200 x 630 social preview image created
     JSON-LD structured data added to all current public HTML pages
-    Google Search Console not yet configured
-    Bing Webmaster Tools not yet configured
-    sitemap not yet submitted to Google
-    sitemap not yet submitted to Bing
+    Google Search Console verified
+    sitemap submitted successfully to Google
+    Bing Webmaster Tools imported from Google Search Console
+    sitemap submitted to Bing and processing
 
 ---
 
@@ -615,9 +615,11 @@ Immediate next steps:
 
 8. Register with Google Search Console.
 
-9. Register with Bing Webmaster Tools.
+9. Submit sitemap to Google.
 
-10. Submit sitemap to both.
+10. Register with or import into Bing Webmaster Tools.
+
+11. Submit sitemap to Bing.
 
 ---
 

@@ -195,12 +195,12 @@ Current social preview asset:
 
 Current search registration status:
 
-    Google Search Console not yet configured
-    Bing Webmaster Tools not yet configured
-    sitemap not yet submitted to Google
-    sitemap not yet submitted to Bing
+    Google Search Console verified
+    sitemap submitted successfully to Google
+    Bing Webmaster Tools imported from Google Search Console
+    sitemap submitted to Bing and processing
 
-Search registration should happen only after commit, push, GitHub Pages deployment, and live verification that sitemap.xml and robots.txt load at the public domain.
+Search registration has been completed. Future sessions should monitor Google Search Console and Bing Webmaster Tools for sitemap processing, indexing status, discovered URLs, and crawl issues.
 
 ---
 
@@ -521,21 +521,23 @@ Update only the docs actually impacted by the session.
 
 Recommended next move:
 
-    Commit and push the current SEO/search-indexing foundation, wait for GitHub Pages deployment, then verify live sitemap.xml and robots.txt before registering the site with Google Search Console and Bing Webmaster Tools.
+    Monitor Google Search Console and Bing Webmaster Tools after sitemap processing begins. Review indexing status, crawl issues, and discovered URLs after search engines have had time to process the submitted sitemap.
 
 Reason:
 
-The site now has the technical search foundation in place locally. Search registration should happen only after the files are live and reachable at the public domain.
+The technical search foundation is live, Google Search Console is verified, and Bing Webmaster Tools has imported the site. The next search-related work is monitoring results and expanding useful public content.
 
 Recommended immediate verification targets after push:
 
     https://tensaengineering.dev/sitemap.xml
     https://tensaengineering.dev/robots.txt
 
-Then configure:
+Search registration completed:
 
-    Google Search Console
-    Bing Webmaster Tools
+    Google Search Console verified
+    sitemap submitted successfully to Google
+    Bing Webmaster Tools imported from Google Search Console
+    sitemap submitted to Bing and processing
 
 Next content-planning move after registration:
 

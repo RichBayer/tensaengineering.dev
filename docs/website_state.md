@@ -257,10 +257,10 @@ Current indexing status:
 
     sitemap.xml created
     robots.txt created
-    Google Search Console not yet configured
-    Bing Webmaster Tools not yet configured
-    sitemap not yet submitted to Google
-    sitemap not yet submitted to Bing
+    Google Search Console verified
+    sitemap submitted successfully to Google
+    Bing Webmaster Tools imported from Google Search Console
+    sitemap submitted to Bing and processing
 
 Important note:
 
@@ -678,10 +678,10 @@ Social content:
 - Build Notes section
 - full SEO topic map
 - analytics decisions
-- Google Search Console verification
-- Bing Webmaster Tools verification
-- sitemap submission to Google
-- sitemap submission to Bing
+- Google Search Console indexing data review after processing
+- Bing Webmaster Tools indexing data review after processing
+- future SEO topic map
+- analytics decision
 - content roadmap
 - visual brand refinement beyond current static style
 - migration plan from old Argus ACLI landing page
@@ -782,7 +782,7 @@ Recommended next session:
 
 Recommended next search/indexing move:
 
-    After commit, push, and GitHub Pages deployment, verify sitemap.xml and robots.txt live, then configure Google Search Console and Bing Webmaster Tools.
+    Monitor Google Search Console and Bing Webmaster Tools after sitemap processing begins. Review indexing status, crawl issues, and discovered URLs after search engines have had time to process the submitted sitemap.
 
 Recommended next public-page options:
 
