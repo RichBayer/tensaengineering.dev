@@ -58,8 +58,8 @@ Definitions:
 |---|---|---|---|---|---|---|---|
 | `/index.html` | TENSA Engineering | Homepage | Live | Introduces TENSA Engineering, the ecosystem, core philosophy, project cards, knowledge-base direction, origin story preview, and GitHub proof. | Website state, website information architecture, resume prompt, repository map. Project source docs only if factual project claims change. | Linked as Home from all current public pages. Header links to `/projects/`, `/knowledge-base/`, `#story`, and `#proof`. | Keep concise as front door. Do not turn into full knowledge base. |
 | `/projects/index.html` | Projects | Public index page | Live | Explains the ecosystem structure and routes visitors to NeuroCore, Argus ACLI, and Argus Lab. | Website state, website information architecture, resume prompt, repository map. Project source docs if descriptions are expanded. | Linked from homepage and all current public headers. | Keep as ecosystem router. Expand only if needed for clarity. |
-| `/projects/neurocore.html` | NeuroCore | Project detail page | Live | Story-first public explanation of NeuroCore’s origin, continuity problem, local-first direction, knowledge layer, daemon, control plane, tool execution, observability, Argus ACLI, and Argus Lab relationship. | NeuroCore README, NeuroCore vision, architecture docs, relevant build logs, Argus Lab context if Argus Lab section changes. | Linked from homepage project card, Projects page, Argus ACLI page, Argus Lab page, and footer calls to action. | Preserve story-first style. Move deeper architecture detail into Knowledge Base or Build Notes later. |
-| `/projects/argus-acli.html` | Argus ACLI | Project detail page | Placeholder | Public destination for Argus ACLI as the first product/distribution built on NeuroCore. Currently a branded placeholder. | Required before full page: Argus ACLI vision, How Argus Works, Argus output/tool contract, ACLI spec, Argus deployment docs, Argus V1 blueprint, UX layer docs, tool layer docs, Phase 5J/6 docs, relevant build logs. | Linked from homepage project card, Projects page, NeuroCore page, and Argus Lab page. | Build full Argus ACLI page from source docs. Do not overstate product maturity. |
+| `/projects/neurocore.html` | NeuroCore | Project detail page | Live | Public NeuroCore platform page explaining local-first governed AI runtime, continuity, current RAG/retrieval foundation, future memory direction, control plane architecture, Argus diagnostics flow, model explanation, and near-term Kernel-Up / Service Intelligence expansion. | NeuroCore vision, platform ecosystem, system architecture, system state, control plane, tool execution, security/policy docs, memory/context docs, service intelligence docs, and relevant build logs if factual claims change. | Linked from homepage project card, Projects page, Argus ACLI page, Argus Lab page, and footer / CTA links. | Preserve public-facing platform explanation. Move deeper architecture details into Knowledge Base or Build Notes later. |
+| `/projects/argus-acli.html` | Argus ACLI | Project detail page | Live | Full public product page for Argus ACLI as the first product/distribution built on NeuroCore. Explains local-first read-only Linux diagnostics, structured findings, severity, recommendations, raw evidence, and AI explanation grounded in system evidence. | Argus ACLI vision, How Argus Works, Argus output/tool contract, ACLI spec, Argus deployment docs, Argus V1 blueprint, UX layer docs, tool layer docs, Phase 5J/6 docs, relevant build logs. | Linked from homepage project card, Projects page, NeuroCore page, and Argus Lab page. | Keep product maturity honest. Add install/download guidance only when packaging exists. |
 | `/projects/argus-lab.html` | Argus Lab | Project detail page | Placeholder | Public destination for Argus Lab as planned real-Linux troubleshooting, training, and validation environment. Currently a branded placeholder. | Required before full page: Argus Lab README and Argus Lab vision doc. Later: architecture, scenario planning, validation strategy, training flow, mentor-mode docs. | Linked from homepage project card, Projects page, NeuroCore page, and Argus ACLI page. | Build full Argus Lab page from source docs. Keep future-phase status clear. |
 | `/knowledge-base/index.html` | Knowledge Base | Public index page | Structure-only | Establishes the Knowledge Base as the public teaching layer for controlled AI systems, AI operations, persistent AI memory, local-first AI, safe tool interaction, Linux diagnostics, troubleshooting training, and NeuroCore architecture. | Website information architecture, website state, resume prompt, repository map. Specific article source docs required when factual articles are created. | Linked from all current public headers. | Create first topic/category pages after internal linking strategy is defined. |
 
@@ -68,28 +68,36 @@ Definitions:
 ## Internal Planning / Continuity Docs
 
 | Path | Type | Status | Purpose | Update Trigger |
-|---|---|---|---|---|
+|---|---|---|---|
 | `docs/ai-operations/documentation_closeout_protocol.md` | AI operations / closeout protocol | Live | Defines the required documentation closeout workflow for serious website build sessions. | Update when closeout workflow rules change. |
 | `docs/ai-operations/tensa_website_resume_prompt.md` | AI operations / resume prompt | Live | Fresh-thread startup context for website build sessions. | Update after major site structure, page, workflow, or direction changes. |
 | `docs/website_state.md` | State record | Live | Current live-state record for pages, completed work, incomplete work, and next steps. | Update at closeout after major build sessions. |
 | `docs/infrastructure/tensa_repository_map.txt` | Repository map | Live | Maps current repository structure and file roles. | Update after directories, assets, pages, or major files are added/removed/moved. |
 | `docs/planning/website_information_architecture.md` | Planning / information architecture | Live | Defines long-term website structure, pillars, navigation, page strategy, and expansion plan. | Update only when the long-term architecture changes. |
 | `docs/planning/content_source_map.md` | Source-doc map | Live | Defines required source docs before writing factual pages. | Update when new page types are added or source requirements change. |
+| `docs/planning/content_style_guide.md` | Planning / content style | Live | Defines public writing voice, tone, formatting, copy standards, and style direction for website content. | Update when public writing standards or page-copy conventions change. |
 | `docs/planning/documentation_strategy.md` | Documentation strategy | Live | Defines ownership boundaries, scaling rules, update triggers, and overlap prevention for internal website documentation. | Update when internal documentation responsibilities change or new planning docs become part of the core workflow. |
 | `docs/planning/page_inventory.md` | Page inventory | Live | Tracks what pages exist, what state they are in, and what needs to happen next. | Update whenever pages are created, renamed, retired, or change status. |
 | `docs/planning/internal_linking_strategy.md` | Internal link strategy | Live | Tracks logical page-to-page relationships and preferred link destinations. | Update whenever major topic pages, project pages, story pages, or knowledge-base pages are added. |
 | `docs/planning/search_indexing_strategy.md` | Search indexing strategy | Live | Tracks sitemap, robots.txt, canonical URL rules, Google Search Console, Bing Webmaster Tools, and search-discovery workflow. | Update when sitemap, robots.txt, indexing setup, or search-discovery workflow changes. |
+| `docs/planning/seo_topic_map.md` | Planning / SEO topic map | Live | Tracks future SEO topic strategy and Knowledge Base topic planning. | Update when SEO content strategy, search targets, or planned Knowledge Base topics change. |
 
 ---
 
 ## Root Search / Indexing Support Files
 
 | Path | Type | Status | Purpose | Update Trigger |
-|---|---|---|---|---|
+|---|---|---|---|
 | `/sitemap.xml` | Search indexing support | Live | Lists the current real public website URLs for search engine discovery and sitemap submission. | Update whenever public pages are created, removed, renamed, or public routes change. |
 | `/robots.txt` | Search indexing support | Live | Allows normal crawling and points search engines to the root sitemap. | Update when sitemap location, crawl guidance, or search indexing policy changes. |
 
-Current public HTML pages also include canonical URLs, Open Graph metadata, Twitter large-image card metadata, and JSON-LD structured data.
+Current public HTML pages include canonical URLs.
+
+Open Graph metadata, Twitter large-image card metadata, and JSON-LD structured data are present where currently implemented.
+
+A future metadata pass should verify the expanded NeuroCore page after the latest content changes.
+
+---
 
 ## Planned Public Pages
 
@@ -109,7 +117,7 @@ Current public HTML pages also include canonical URLs, Open Graph metadata, Twit
 |---|---|---|---|
 | `/knowledge-base/controlled-ai-systems/` | Controlled AI Systems | Teach intelligence vs authority, control planes, execution governance, and safe AI-system interaction. | Planned |
 | `/knowledge-base/ai-operations/` | AI Operations | Teach structured AI workflows, documentation as memory, context loading, resume prompts, and anti-drift safeguards. | Planned |
-| `/knowledge-base/persistent-ai-memory/` | Persistent AI Memory | Teach AI forgetting, continuity loss, engineered continuity, and repository-grounded restoration. | Planned |
+| `/knowledge-base/persistent-ai-memory/` | Persistent AI Memory | Teach AI forgetting, continuity loss, engineered continuity, RAG, structured knowledge, context-aware memory, and repository-grounded restoration. | Planned |
 | `/knowledge-base/local-first-ai/` | Local-First AI | Teach local inference, data control, system awareness, privacy, and tradeoffs. | Planned |
 | `/knowledge-base/safe-tool-interaction/` | Safe Tool Interaction | Teach tool registries, command boundaries, structured outputs, risk classification, and approval workflows. | Planned |
 | `/knowledge-base/linux-diagnostics/` | Linux Diagnostics | Teach raw evidence, telemetry, logs, severity, recommendations, and diagnostic workflows. | Planned |
@@ -126,7 +134,7 @@ Current primary navigation should point to:
     Projects → /projects/
     Knowledge Base → /knowledge-base/
     Story → /index.html#story until /story/ exists
-    GitHub → /index.html#proof until a resources/github page exists
+    GitHub → /index.html#proof or direct GitHub repo depending on page context
 
 When `/story/` is created:
 
@@ -134,7 +142,7 @@ When `/story/` is created:
 
 When `/resources/` or a GitHub/resources page is created:
 
-    GitHub may remain #proof on homepage or become Resources depending on site strategy.
+    GitHub may remain #proof on homepage, link directly to GitHub, or become Resources depending on site strategy.
 
 Do not leave navigation pointing to old anchors once real top-level pages exist.
 
@@ -161,7 +169,7 @@ Current Story nav target:
 
 Current GitHub nav target:
 
-    /index.html#proof
+    Mostly /index.html#proof; NeuroCore page currently links directly to the NeuroCore GitHub repo.
 
 ---
 
@@ -179,6 +187,30 @@ Before creating a new public page:
 8. Update this page inventory.
 9. Update repository map if new files/directories were added.
 10. Update website state at closeout.
+
+---
+
+## Current Next Public Page Priority
+
+Recommended next public page:
+
+    /projects/argus-lab.html
+
+Reason:
+
+NeuroCore and Argus ACLI now have strong public pages. Argus Lab is the remaining major project page needed to complete the first coherent ecosystem story.
+
+Required direction:
+
+- Keep the page honest about future-phase status.
+- Explain real Linux troubleshooting practice.
+- Explain controlled fault injection.
+- Explain resettable lab environments.
+- Explain mentor-style AI guidance.
+- Explain training and validation roles.
+- Explain the relationship to NeuroCore and Argus ACLI.
+
+Do not build the full Argus Lab page without required source docs.
 
 ---
 

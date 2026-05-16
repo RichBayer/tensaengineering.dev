@@ -13,21 +13,24 @@ Current phase:
     live public website foundation
     information architecture complete
     homepage refined
-    initial Projects section created
-    NeuroCore project page rewritten as story-first explainer
-    Argus ACLI and Argus Lab placeholder pages created
+    Projects section created
+    NeuroCore project page expanded into a stronger public platform page
+    Argus ACLI project page upgraded into a full public product page
+    Argus Lab placeholder page created
     branding asset hierarchy established
     consistent branding added across current public pages
     Knowledge Base index created
     page inventory created
     internal linking strategy created
     repository map updated
+    content style guide created
+    SEO topic map created
 
 The site now functions more like an ecosystem portal than a single landing page.
 
 The homepage remains the front door.
 
-Deeper explanations are beginning to move into dedicated pages.
+Deeper explanations are moving into dedicated pages.
 
 ---
 
@@ -79,16 +82,25 @@ Current key files:
 - docs/ai-operations/tensa_website_resume_prompt.md
 - docs/infrastructure/tensa_repository_map.txt
 - docs/planning/content_source_map.md
+- docs/planning/content_style_guide.md
 - docs/planning/documentation_strategy.md
 - docs/planning/internal_linking_strategy.md
 - docs/planning/page_inventory.md
 - docs/planning/search_indexing_strategy.md
+- docs/planning/seo_topic_map.md
 - docs/planning/website_information_architecture.md
 - docs/website_state.md
 
 Current repository size:
 
-    15 directories, 47 files
+    15 directories, 49 files
+
+Last verified by user-provided output during closeout:
+
+    git status --short
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    find . -maxdepth 3 -name "*.html" -print
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
 
 ---
 
@@ -109,10 +121,12 @@ Current internal planning / continuity docs:
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
     docs/planning/internal_linking_strategy.md
     docs/planning/page_inventory.md
     docs/planning/search_indexing_strategy.md
+    docs/planning/seo_topic_map.md
     docs/planning/website_information_architecture.md
     docs/website_state.md
 
@@ -170,23 +184,28 @@ Current social preview asset:
 
     assets/images/social/tensa-og-image.png
 
-Current social preview behavior:
-
-- all current public HTML pages use the dedicated TENSA social preview image for Open Graph and Twitter card metadata
-- the social preview image is 1200 x 630
-- the image is used as the default site-wide preview image for link sharing
-
 Current branding behavior:
 
 - all current public pages use the TENSA header logo
 - homepage hero uses the TENSA stacked logo
 - Projects page hero uses the TENSA stacked logo
 - NeuroCore page hero uses the NeuroCore stacked logo
-- Argus ACLI placeholder hero uses the Argus ACLI stacked logo
+- Argus ACLI page hero uses the Argus ACLI stacked logo
 - Argus Lab placeholder hero uses the Argus Lab stacked logo
 - homepage and Projects project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - the header uses a header-optimized TENSA logo without the tiny unreadable subtitle line
+
+Current visual direction:
+
+- black backgrounds
+- neon green signal/circuit motif
+- blue/purple accents for architecture and model explanation sections
+- hexagonal / system geometry
+- modern technical typography
+- consistent ecosystem branding
+- full-width showcase sections for complex architecture
+- styled content lists instead of default browser bullets
 
 ---
 
@@ -206,17 +225,19 @@ Current navigation targets:
     Projects → /projects/
     Knowledge Base → /knowledge-base/
     Story → /index.html#story
-    GitHub → /index.html#proof
+    GitHub → mixed current behavior:
+        homepage and most pages use /index.html#proof
+        NeuroCore page header links directly to the NeuroCore GitHub repo
 
 Important note:
 
-    Knowledge Base now points to the real /knowledge-base/ page.
+    Knowledge Base points to the real /knowledge-base/ page.
 
-Story and GitHub still point to homepage sections until dedicated pages exist.
+Story still points to the homepage story section until a dedicated Story page exists.
 
 When /story/ is created, update Story navigation across all public pages.
 
-When /resources/ or a GitHub/resources page is created, decide whether GitHub remains a homepage proof anchor or moves into Resources.
+When /resources/ or a GitHub/resources page is created, decide whether GitHub remains a homepage proof anchor, links directly to GitHub, or moves into Resources.
 
 ---
 
@@ -246,12 +267,12 @@ Current sitemap contents:
 
 Current public HTML metadata support:
 
-- canonical URLs
-- meta descriptions
-- Open Graph metadata
-- Twitter large-image card metadata
-- dedicated 1200 x 630 social preview image
-- JSON-LD structured data
+- canonical URLs are present on current public pages
+- meta descriptions are present on current public pages
+- Open Graph metadata is present where currently implemented
+- Twitter large-image card metadata is present where currently implemented
+- the dedicated TENSA social preview image is used where currently implemented
+- JSON-LD structured data is present where currently implemented
 
 Current indexing status:
 
@@ -262,9 +283,21 @@ Current indexing status:
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
 
-Important note:
+Known Search Console note:
 
-    Search indexing files exist locally but must be committed, pushed, deployed, and verified live before Google/Bing registration.
+    Google reported "Page with redirect" for alternate redirect versions:
+        http://tensaengineering.dev/
+        https://www.tensaengineering.dev/
+
+This is expected and harmless because the intended canonical indexed URL is:
+
+    https://tensaengineering.dev/
+
+Future SEO work:
+
+- Add or verify richer Open Graph / Twitter / JSON-LD metadata on the updated NeuroCore page.
+- Optionally add sitemap lastmod dates.
+- Focus future search growth on Knowledge Base pages, not metadata alone.
 
 ---
 
@@ -318,7 +351,8 @@ Current purpose:
 - separate NeuroCore, Argus ACLI, and Argus Lab
 - provide a clean internal route from the homepage
 - link to the NeuroCore detail page
-- link to placeholder Argus ACLI and Argus Lab pages
+- link to the Argus ACLI page
+- link to the Argus Lab page
 - reinforce the platform / product / lab model
 
 Current project model:
@@ -343,11 +377,11 @@ Current path:
 
 Current status:
 
-    Live
+    Live expanded platform page
 
 Current purpose:
 
-    Story-first public NeuroCore explainer.
+    Public NeuroCore platform explainer.
 
 Current branding:
 
@@ -356,27 +390,32 @@ Current branding:
 
 Current content includes:
 
-- story-first opening
-- origin story
-- context explanation
-- continuity explanation
-- Linux project origin
-- local runtime path
-- knowledge layer explanation
-- RAG explanation
-- daemon / persistent system explanation
-- control plane explanation
-- hallucination explanation
-- controlled tool execution explanation
-- observability explanation
-- current Linux/Ubuntu focus
-- Argus ACLI section
-- Argus Lab section
-- GitHub link
+- local-first governed AI runtime positioning
+- continuity / stateless AI problem
+- privacy and business-safety framing
+- current local retrieval / RAG foundation
+- planned Karpathy-style structured knowledge base direction
+- planned context-aware memory / CAG-style context assembly direction
+- control plane and governed authority explanation
+- visual architecture showcase
+- daemon / runtime manager
+- control plane
+- execution engine
+- Argus tool layer
+- system tool layer
+- CommandRunner and Linux boundary
+- structured telemetry and raw evidence return path
+- model explanation layer
+- ACLI output layer
+- near-term Kernel-Up / Service Intelligence expansion
+- production-environment value proposition
+- Argus ACLI as first distribution
+- Argus Lab as future training and validation environment
+- cleaned bottom CTA flow
 
 Important note:
 
-The NeuroCore page should stay story-first.
+The NeuroCore page should stay public-facing and business-readable.
 
 Do not turn it into a dry architecture reference page.
 
@@ -392,41 +431,40 @@ Current path:
 
 Current status:
 
-    Branded placeholder
+    Live full public product page
 
 Current purpose:
 
-- provide a clean public destination for Argus ACLI
-- prevent dead links
-- reserve page structure for future full Argus ACLI explanation
-- keep current public navigation consistent
+- explain Argus ACLI as the first practical product / distribution built on NeuroCore
+- explain local-first read-only Linux diagnostics
+- explain why users should not have to paste sensitive logs and system data into cloud chatbots
+- explain raw evidence, structured findings, severity, recommendations, and model explanation
+- route readers back to NeuroCore and forward to Argus Lab
 
 Current branding:
 
 - TENSA header logo
 - Argus ACLI stacked logo in hero
 
-Future page should explain:
+Current content includes:
 
-- what Argus ACLI is
-- why read-only diagnostics matter
-- how Argus uses NeuroCore
-- system tools vs Argus tools
-- structured telemetry
-- findings
-- severity
-- recommendations
-- raw evidence
-- output controls
-- current Linux/Ubuntu focus
-- current V1 status
-- future install/download guidance when ready
+- local-first Linux system intelligence positioning
+- under-active-development status
+- Linux troubleshooting problem statement
+- read-only / evidence-backed / local-first principles
+- NeuroCore origin connection
+- example diagnostic output
+- AI explanation grounded by deterministic evidence
+- NeuroCore foundation
+- command-line experience
+- intended audience
+- ecosystem role
 
-Do not write the full Argus ACLI page without source docs.
+Important note:
 
-Before writing the full Argus ACLI page, check:
+Argus ACLI should remain honest about current product maturity.
 
-    docs/planning/content_source_map.md
+Do not imply install/download readiness until product packaging exists.
 
 ---
 
@@ -570,23 +608,28 @@ TENSA Engineering:
 
 NeuroCore:
 
-- local-first AI platform
-- persistent understanding
-- memory direction
+- local-first governed AI runtime platform
+- persistent daemon-based architecture
+- continuity and memory direction
+- current local retrieval / RAG foundation
+- future structured knowledge base direction
+- future context-aware memory / CAG-style context assembly direction
 - controlled tool interaction
 - real Linux system awareness
 - governed execution
 - operational continuity
+- near-term Kernel-Up / Service Intelligence expansion
 
 Argus ACLI:
 
 - first product / distribution built on NeuroCore
-- read-only Linux diagnostics
+- local-first read-only Linux diagnostics
 - real telemetry
 - structured findings
 - severity classification
 - recommendations
 - raw evidence
+- AI explanation grounded in structured evidence
 
 Argus Lab:
 
@@ -632,8 +675,9 @@ Social content:
 - homepage refined around TENSA as the single public hub
 - Projects overview page created
 - NeuroCore project page created
-- NeuroCore page rewritten as a story-first explainer
+- NeuroCore page expanded into a stronger public platform page
 - Argus ACLI placeholder page created
+- Argus ACLI full public product page created
 - Argus Lab placeholder page created
 - long-form article styling added
 - project links updated so pages route internally
@@ -648,7 +692,7 @@ Social content:
 - project card logo treatment added
 - Projects page branding updated
 - NeuroCore page branding updated
-- Argus ACLI placeholder branding updated
+- Argus ACLI page branding updated
 - Argus Lab placeholder branding updated
 - Knowledge Base index page created
 - Knowledge Base navigation updated across current public pages
@@ -657,42 +701,41 @@ Social content:
 - TENSA website documentation closeout protocol created
 - TENSA website documentation strategy created
 - TENSA search indexing strategy created
+- content style guide created
+- SEO topic map created
 - root sitemap.xml created
 - root robots.txt created
 - dedicated TENSA social preview image created
-- canonical URLs added to all current public HTML pages
-- Open Graph metadata added to all current public HTML pages
-- Twitter large-image card metadata added to all current public HTML pages
-- JSON-LD structured data added to all current public HTML pages
+- canonical URLs added across current public HTML pages
+- Open Graph metadata added where currently implemented
+- Twitter large-image card metadata added where currently implemented
 - SEO titles and meta descriptions tuned across current public pages
+- Google Search Console verified
+- sitemap submitted successfully to Google
+- Bing Webmaster Tools imported from Google Search Console
+- sitemap submitted to Bing and processing
+- Search Console redirect warning reviewed and confirmed as expected redirect behavior
 
 ---
 
 ## Not Yet Completed
 
-- full Argus ACLI page
 - full Argus Lab page
 - Story index page
 - Resources page
 - About page
 - Build Notes section
-- full SEO topic map
 - analytics decisions
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- future SEO topic map
-- analytics decision
-- content roadmap
-- visual brand refinement beyond current static style
-- migration plan from old Argus ACLI landing page
-- install/download guidance for Argus ACLI
-- article templates
-- content style guide
-- SEO topic map
 - old-site migration plan
 - internal link checker script
 - Knowledge Base category pages
 - Knowledge Base article pages
+- article templates
+- future install/download guidance for Argus ACLI
+- deeper NeuroCore metadata / SEO pass after latest page expansion
+- optional sitemap lastmod dates
 
 ---
 
@@ -701,14 +744,17 @@ Social content:
 Use these docs at the start of future serious website sessions:
 
     docs/ai-operations/tensa_website_resume_prompt.md
+    docs/ai-operations/documentation_closeout_protocol.md
     docs/website_state.md
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/search_indexing_strategy.md
+    docs/planning/seo_topic_map.md
 
 Purpose of each:
 
@@ -730,6 +776,9 @@ Purpose of each:
     content_source_map.md
         required source docs before writing factual pages
 
+    content_style_guide.md
+        public writing voice, tone, formatting, and page-copy standards
+
     documentation_strategy.md
         documentation ownership, update triggers, and overlap boundaries
 
@@ -741,6 +790,9 @@ Purpose of each:
 
     search_indexing_strategy.md
         sitemap, robots.txt, search engine registration, and indexing workflow
+
+    seo_topic_map.md
+        future SEO topic planning and Knowledge Base search strategy
 
 ---
 
@@ -770,74 +822,81 @@ Purpose:
 
 ## Next Recommended Steps
 
-Recommended next session:
+Recommended next website session:
 
 1. Run build-start checks.
 2. Confirm repo is clean.
 3. Review `docs/planning/page_inventory.md`.
 4. Review `docs/planning/internal_linking_strategy.md`.
-5. Review `docs/planning/search_indexing_strategy.md` if doing search/indexing work.
-6. Decide whether to continue public site build, search registration, or content planning.
-7. Before writing factual pages, check `docs/planning/content_source_map.md`.
+5. Review `docs/planning/content_source_map.md`.
+6. Load required Argus Lab source docs.
+7. Build the full Argus Lab landing page.
 
-Recommended next search/indexing move:
+Recommended next public-page work:
 
-    Monitor Google Search Console and Bing Webmaster Tools after sitemap processing begins. Review indexing status, crawl issues, and discovered URLs after search engines have had time to process the submitted sitemap.
-
-Recommended next public-page options:
-
-    projects/argus-acli.html
     projects/argus-lab.html
-    story/index.html
-    resources/index.html
-    about.html
 
-Recommended next planning move:
+Reason:
 
-    Create a public content style guide or SEO topic map when content expansion begins.
+NeuroCore and Argus ACLI now have strong public pages. Argus Lab is the remaining major project page needed to complete the first coherent ecosystem story.
 
-Recommended next Knowledge Base options:
+Argus Lab page should explain:
 
-    knowledge-base/controlled-ai-systems/
-    knowledge-base/persistent-ai-memory/
-    knowledge-base/ai-operations/
-    knowledge-base/linux-diagnostics/
+- real Linux troubleshooting practice
+- controlled fault injection
+- resettable lab environments
+- mentor-style AI guidance
+- training modes
+- validation/tuning environment for Argus ACLI
+- diagnostic regression testing
+- relationship to NeuroCore and Argus ACLI
+
+Do not build it without required source docs.
+
+Likely source docs needed:
+
+    docs/vision/argus_lab_vision.md
+    docs/architecture/platform_ecosystem.md
+    docs/planning/content_source_map.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    current projects/argus-lab.html
+    current styles.css
+
+Optional supporting docs:
+
+    docs/architecture/neurocore_vision.md
+    docs/distributions/argus/argus_distribution_and_deployment.md
+    docs/architecture/system_architecture.md
+    docs/ideas/platform/service_intelligence_layer.md or equivalent if Argus Lab validation scope is discussed
 
 ---
 
 ## Source Docs Used Recently
 
-Recent NeuroCore page work used context from:
+Recent NeuroCore and Argus ACLI page work used context from:
 
 - NeuroCore Vision
-- NeuroCore README
+- Platform Ecosystem
 - System Architecture
+- System State
 - Control Plane Architecture
 - Tool Execution Architecture
 - Security & Policy Architecture
-- Observability & Tracing
-- NeuroCore Master Blueprint
-- early build logs 000 through 006
-- build log 009 daemon foundation
-- build log 016 runtime control plane enforcement
-- build log 017 execution layer and control integration
-- build log 018 observability and tracing
-- Argus Lab README / vision material
-
-Recent site structure work used:
-
-- TENSA website resume prompt
-- TENSA website state
-- TENSA website information architecture
-- TENSA repository map
-- TENSA content source map
-- TENSA Website Session Additions – Tonight
-- NeuroCore / Argus / Argus Lab deep context loading pack
-- NeuroCore repository map
+- Argus ACLI specification
+- Argus ACLI vision
+- Argus System Summary design
+- Phase 5J Argus Core Tool Expansion
+- Service Intelligence Layer / Kernel-Up Service Intelligence design
+- Context-Aware Memory Architecture
+- Karpathy-Style Knowledge Base Layer
+- NeuroCore / Argus platform context pack
+- current website pages
+- current `styles.css`
 
 Important:
 
-Old build logs still contain the former project name “Jarvis.”
+Old build logs may contain former project names.
 
 Public website copy should use NeuroCore unless explicitly discussing historical renaming.
 

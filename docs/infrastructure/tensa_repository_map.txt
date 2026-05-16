@@ -79,10 +79,12 @@ DNS / domain provider:
     │   │   └── tensa_repository_map.txt
     │   ├── planning
     │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
     │   │   ├── documentation_strategy.md
     │   │   ├── internal_linking_strategy.md
     │   │   ├── page_inventory.md
     │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
     ├── index.html
@@ -99,7 +101,7 @@ DNS / domain provider:
 
 Current size:
 
-    15 directories, 47 files
+    15 directories, 49 files
 
 ---
 
@@ -195,6 +197,15 @@ Current role:
 
 Current sitemap includes only real public pages.
 
+Current sitemap URLs:
+
+    https://tensaengineering.dev/
+    https://tensaengineering.dev/projects/
+    https://tensaengineering.dev/projects/neurocore.html
+    https://tensaengineering.dev/projects/argus-acli.html
+    https://tensaengineering.dev/projects/argus-lab.html
+    https://tensaengineering.dev/knowledge-base/
+
 ---
 
 ### styles.css
@@ -219,6 +230,8 @@ Currently controls:
 - long-form story formatting
 - buttons
 - responsive layout
+- NeuroCore architecture showcase
+- styled list treatment for public content cards
 
 All current public pages use this stylesheet.
 
@@ -324,7 +337,7 @@ Purpose:
 Current usage:
 
 - `argus-acli-system-intelligence-horizontal-transparent.png` is used in homepage and Projects page project cards.
-- `argus-acli-system-intelligence-stacked-transparent.png` is used in the Argus ACLI placeholder page hero.
+- `argus-acli-system-intelligence-stacked-transparent.png` is used in the Argus ACLI page hero.
 
 Notes:
 
@@ -454,7 +467,7 @@ Recommended command to refresh the tree:
 
 Purpose:
 
-    Website planning, documentation strategy, search indexing, and information architecture documents.
+    Website planning, documentation strategy, search indexing, SEO topic planning, writing style, and information architecture documents.
 
 These files define how the site should grow and how it should stay organized.
 
@@ -497,6 +510,16 @@ Purpose:
 This document exists to prevent factual drift.
 
 Before writing factual project pages, check this file.
+
+---
+
+### docs/planning/content_style_guide.md
+
+Purpose:
+
+    Defines public writing voice, tone, formatting, copy standards, and style direction for website content.
+
+This document should be used when writing or reviewing public-facing TENSA website copy.
 
 ---
 
@@ -543,6 +566,16 @@ Purpose:
 This document owns technical search discoverability.
 
 It does not replace future SEO topic planning.
+
+---
+
+### docs/planning/seo_topic_map.md
+
+Purpose:
+
+    Tracks future SEO topic strategy and Knowledge Base topic planning.
+
+This document supports future public content expansion and search-focused educational pages.
 
 ---
 
@@ -652,8 +685,8 @@ Current role:
 Current links:
 
 - NeuroCore page
-- Argus ACLI placeholder page
-- Argus Lab placeholder page
+- Argus ACLI page
+- Argus Lab page
 - Knowledge Base via header navigation
 
 ---
@@ -666,11 +699,11 @@ Purpose:
 
 Current status:
 
-    Live story-first explainer page.
+    Live expanded platform page.
 
 Current role:
 
-    Explains NeuroCore through its origin story and development path before introducing technical architecture.
+    Explains NeuroCore as a local-first governed AI runtime platform with continuity, controlled tool execution, grounded system awareness, model explanation, and future memory/context direction.
 
 Current branding:
 
@@ -679,22 +712,28 @@ Current branding:
 
 Current themes:
 
-- personal AI assistant origin
-- Linux learning and lab-building origin
-- AI context loss
+- stateless AI risk
+- local-first AI
+- business-safe AI
 - continuity
-- local AI runtime
-- local knowledge
-- RAG
+- current local retrieval / RAG foundation
+- future structured knowledge base direction
+- future context-aware memory / CAG-style context assembly
 - persistent daemon
+- runtime manager
 - control plane
-- controlled tool execution
-- observability
-- current Linux focus
-- Argus ACLI as first practical proof
+- execution engine
+- Argus diagnostic layer
+- system tool layer
+- CommandRunner and Linux boundary
+- structured telemetry and raw evidence
+- model explanation layer
+- ACLI output
+- near-term Kernel-Up / Service Intelligence expansion
+- Argus ACLI as first distribution
 - Argus Lab as future training and validation environment
 
-This page should remain story-first.
+This page should remain public-facing and business-readable.
 
 Do not turn it into a dry technical architecture reference.
 
@@ -710,31 +749,33 @@ Purpose:
 
 Current status:
 
-    Branded placeholder page.
+    Live full public product page.
 
 Current role:
 
-    Provides a public destination for Argus ACLI as the first practical product / distribution built on NeuroCore.
+    Explains Argus ACLI as the first practical product / distribution built on NeuroCore.
 
 Current branding:
 
 - TENSA header logo
 - Argus ACLI stacked logo in hero
 
-Future page should cover:
+Current themes:
 
-- read-only Linux diagnostics
-- local-first diagnostic workflow
-- real telemetry
+- local-first Linux system intelligence
+- no pasting sensitive logs into cloud chatbots
+- read-only diagnostics
+- real Linux telemetry
 - structured findings
 - severity classification
 - recommendations
 - raw evidence
-- how Argus uses NeuroCore
-- what exists now
-- what is future-phase
+- AI explanation grounded in system evidence
+- NeuroCore as controlled runtime
+- command-line experience
+- current product maturity and future direction
 
-Do not write the full page without source docs.
+Do not imply install/download readiness until product packaging exists.
 
 ---
 
@@ -794,10 +835,12 @@ Current internal docs:
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
     docs/planning/internal_linking_strategy.md
     docs/planning/page_inventory.md
     docs/planning/search_indexing_strategy.md
+    docs/planning/seo_topic_map.md
     docs/planning/website_information_architecture.md
     docs/website_state.md
 
@@ -816,8 +859,6 @@ These files do not exist yet but are likely future additions:
 
     about.html
     scripts/check_internal_links.py
-    docs/planning/content_style_guide.md
-    docs/planning/seo_topic_map.md
     docs/planning/old_site_migration_plan.md
 
 ---
@@ -866,15 +907,18 @@ Likely future docs structure:
 
     docs/
     ├── ai-operations/
+    │   ├── documentation_closeout_protocol.md
     │   └── tensa_website_resume_prompt.md
     ├── infrastructure/
     │   └── tensa_repository_map.txt
     ├── planning/
     │   ├── website_information_architecture.md
     │   ├── content_source_map.md
+    │   ├── content_style_guide.md
+    │   ├── documentation_strategy.md
     │   ├── page_inventory.md
     │   ├── internal_linking_strategy.md
-    │   ├── content_style_guide.md
+    │   ├── search_indexing_strategy.md
     │   ├── seo_topic_map.md
     │   ├── old_site_migration_plan.md
     │   └── documentation_strategy.md
@@ -1013,10 +1057,12 @@ Last known output:
     │   │   └── tensa_repository_map.txt
     │   ├── planning
     │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
     │   │   ├── documentation_strategy.md
     │   │   ├── internal_linking_strategy.md
     │   │   ├── page_inventory.md
     │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
     ├── index.html
@@ -1031,4 +1077,4 @@ Last known output:
     ├── sitemap.xml
     └── styles.css
 
-    15 directories, 47 files
+    15 directories, 49 files
