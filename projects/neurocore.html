@@ -1,662 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="NeuroCore is a local-first AI platform for persistent understanding, controlled tool interaction, and grounded system awareness in real Linux environments."
-  />
-  <link rel="canonical" href="https://tensaengineering.dev/projects/neurocore.html" />
-  <meta property="og:site_name" content="TENSA Engineering" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="NeuroCore | Local-First AI Platform for System Awareness" />
-  <meta property="og:description" content="NeuroCore is a local-first AI platform for persistent understanding, controlled tool interaction, and grounded system awareness in real Linux environments." />
-  <meta property="og:url" content="https://tensaengineering.dev/projects/neurocore.html" />
-  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
-  <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
-  <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
-  <meta name="twitter:title" content="NeuroCore | Local-First AI Platform for System Awareness" />
-  <meta name="twitter:description" content="NeuroCore is a local-first AI platform for persistent understanding, controlled tool interaction, and grounded system awareness in real Linux environments." />
-  <title>NeuroCore | Local-First AI Platform for System Awareness</title>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://tensaengineering.dev/projects/neurocore.html#webpage",
-  "url": "https://tensaengineering.dev/projects/neurocore.html",
-  "name": "NeuroCore | Local-First AI Platform for System Awareness",
-  "description": "NeuroCore is a local-first AI platform for persistent understanding, controlled tool interaction, and grounded system awareness in real Linux environments.",
-  "isPartOf": {
-    "@type": "WebSite",
-    "@id": "https://tensaengineering.dev/#website",
-    "name": "TENSA Engineering",
-    "url": "https://tensaengineering.dev/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://tensaengineering.dev/#organization",
-    "name": "TENSA Engineering",
-    "url": "https://tensaengineering.dev/"
-  },
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
-  },
-  "inLanguage": "en-US"
-}
-  </script>
-  <link rel="stylesheet" href="../styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuroCore — local-first governed AI runtime platform in active development. Persistent continuity, strict control plane, and privacy by design. Intelligence without continuity is fragile.">
+    <meta name="keywords" content="NeuroCore, local-first AI, governed AI, control plane, persistent AI, Argus ACLI, TENSA Engineering">
+    <title>NeuroCore | Local-First Governed AI Runtime Platform</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="canonical" href="https://tensaengineering.dev/projects/neurocore.html">
 </head>
 
 <body>
-  <div class="site-bg"></div>
+    <div class="site-bg"></div>
 
-  <header class="site-header">
-    <a class="brand" href="../index.html" aria-label="TENSA Engineering home">
-      <img
-        src="../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
-        alt="TENSA Engineering"
-        class="brand-logo"
-      />
-    </a>
+    <!-- Site Header (exact match) -->
+    <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="TENSA Engineering home">
+            <img src="../assets/images/branding/tensa/tensa-horizontal-header-transparent.png" alt="TENSA Engineering" class="brand-logo">
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="../index.html">Home</a>
+            <a href="./index.html" class="active">Projects</a>
+            <a href="../knowledge-base/">Knowledge Base</a>
+            <a href="../index.html#story">Story</a>
+            <a href="https://github.com/RichBayer/neurocore" target="_blank">GitHub</a>
+        </nav>
+    </header>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
-      <a href="./index.html">Projects</a>
-      <a href="../knowledge-base/">Knowledge Base</a>
-      <a href="../index.html#story">Story</a>
-      <a href="../index.html#proof">GitHub</a>
-    </nav>
-  </header>
+    <main>
 
-  <main>
-    <section class="hero page-hero branded-page-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">NeuroCore</p>
+        <!-- Branded Hero -->
+        <section class="hero page-hero branded-page-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">NeuroCore Platform • Phase 6</p>
+                <h1>Intelligence without continuity is fragile.</h1>
+                <p class="subtitle">NeuroCore is a <strong>local-first cognitive runtime platform</strong> — meaning it runs entirely on your own hardware as a persistent background service (daemon). It remembers your systems over time, keeps all your data private, and enforces strict rules before any action happens.</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/RichBayer/neurocore" target="_blank" class="button primary">Star NeuroCore on GitHub</a>
+                    <a href="#architecture" class="button secondary">See how it works →</a>
+                </div>
+            </div>
 
-        <h1>NeuroCore started as an AI assistant that would not forget.</h1>
+            <div class="ecosystem-mark">
+                <img src="../assets/images/branding/neurocore/neurocore-stacked-transparent.png" alt="NeuroCore" class="ecosystem-logo-main">
+            </div>
+        </section>
 
-        <p class="subtitle">
-          What began as a personal Linux learning project grew into a local-first system
-          for persistent AI memory, controlled tool access, and grounded assistance in
-          real Linux environments.
+        <!-- Problem for Businesses -->
+        <section class="article-card">
+            <h2>The real cost of stateless AI in production environments</h2>
+            <p>Most AI tools reset every session. They forget your infrastructure, force you to send sensitive data to the cloud, and have no built-in rules about what they are allowed to do. For businesses that need privacy, accuracy, and safety, this creates real risk.</p>
+            <p class="callout-line">NeuroCore was built to solve exactly that problem.</p>
+        </section>
+
+        <!-- What NeuroCore Is -->
+        <section class="article-card">
+            <h2>What NeuroCore actually is</h2>
+            <p>NeuroCore is not a chatbot wrapper or an uncontrolled agent. It is a persistent, local-first cognitive runtime platform designed to run as a daemon inside your own systems.</p>
+            <p>It gives AI three things it normally lacks:</p>
+            <ul>
+                <li><strong>Continuity</strong> — the system remembers your environment and history across sessions</li>
+                <li><strong>Governed authority</strong> — every action is checked by a control plane (the central authority layer that decides what is allowed)</li>
+                <li><strong>Privacy by design</strong> — everything stays on your hardware; nothing is sent to external services</li>
+            </ul>
+            <p class="callout-line">AI can reason. NeuroCore decides what is allowed.</p>
+        </section>
+
+        <!-- Memory and Continuity -->
+        <section class="article-card">
+            <h2>How NeuroCore will build continuity over time</h2>
+            <p>Continuity is the future heart of NeuroCore. The current system already has a local retrieval foundation: project documents can be indexed and retrieved so the model can answer from local context instead of relying only on chat history or general model knowledge.</p>
+            <p>That current retrieval-augmented generation setup is only the starting point. After Argus ACLI distribution work stabilizes, deeper NeuroCore development will move toward a more structured memory and context architecture.</p>
+            <p>The planned direction includes a Karpathy-style knowledge base layer: atomic, linked knowledge pages that organize important system concepts, components, workflows, and relationships. RAG helps NeuroCore find information. The structured knowledge base will help NeuroCore understand how that information fits together.</p>
+            <p>Beyond that, NeuroCore is planned to move toward a context-aware memory system inspired by CAG-style thinking. Instead of rebuilding context from scratch every session, NeuroCore will eventually assemble governed context packs from source-of-truth docs, structured knowledge, current repo state, runtime state, snapshots, incident memory, service profiles, and user-approved memory.</p>
+            <p>This is not hidden memory and it is not the model deciding what is true. The goal is explicit, inspectable, local-first continuity: what is stable truth, what is current state, what changed, what matters now, and what source proves it.</p>
+            <p>The full details of RAG, structured knowledge, CAG-style context assembly, snapshots, incident memory, and service profiles will be explained in the TENSA Engineering Knowledge Base as the architecture matures.</p>
+        </section>
+
+        <!-- Architecture & Control Plane -->
+        <section id="architecture" class="architecture-showcase">
+            <div class="section-heading architecture-heading">
+                <p class="eyebrow">Architecture: Control plane first</p>
+                <h2>How NeuroCore connects AI intelligence to real systems.</h2>
+                <p>
+                    The diagram below shows how NeuroCore connects AI intelligence to real Linux systems without
+                    letting the model directly control the machine. The runtime gathers structured evidence first,
+                    Argus turns that evidence into diagnostics, and the model helps explain the result in a way a
+                    human can act on.
+                </p>
+            </div>
+
+            <div class="architecture-stage" aria-label="NeuroCore controlled runtime architecture diagram">
+                <div class="runtime-rail">
+                    <span>Local NeuroCore Runtime</span>
+                </div>
+
+                <div class="architecture-flow">
+                    <article class="flow-card interface-card">
+                        <div class="flow-number">01</div>
+                        <p class="flow-label">Interface</p>
+                        <h3>CLI / ACLI</h3>
+                        <p>
+                            The user asks a question or runs a diagnostic command such as
+                            <code>acli system</code>.
+                        </p>
+                    </article>
+
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+                    <article class="flow-card runtime-card">
+                        <div class="flow-number">02</div>
+                        <p class="flow-label">Runtime entry</p>
+                        <h3>Daemon + Runtime Manager</h3>
+                        <ul>
+                            <li>Receives the request</li>
+                            <li>Maintains persistent local runtime behavior</li>
+                            <li>Preserves request lifecycle and trace context</li>
+                            <li>Routes the request toward controlled handling</li>
+                        </ul>
+                    </article>
+
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+                    <article class="flow-card control-card">
+                        <div class="flow-number">03</div>
+                        <p class="flow-label">Authority layer</p>
+                        <h3>Control Plane</h3>
+                        <ul>
+                            <li>Classifies the request</li>
+                            <li>Detects execution intent</li>
+                            <li>Assigns allowed capabilities</li>
+                            <li>Enforces policy and confirmation rules</li>
+                            <li>Blocks unsafe or unsupported paths</li>
+                            <li>Keeps decisions observable and traceable</li>
+                        </ul>
+                    </article>
+
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+                    <article class="flow-card execution-card">
+                        <div class="flow-number">04</div>
+                        <p class="flow-label">Controlled execution</p>
+                        <h3>Execution Engine</h3>
+                        <ul>
+                            <li>Receives only authorized requests</li>
+                            <li>Resolves approved tools from the registry</li>
+                            <li>Validates tool input</li>
+                            <li>Invokes the correct tool layer</li>
+                            <li>Propagates trace context through the stack</li>
+                        </ul>
+                    </article>
+
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+                    <div class="tool-stack">
+                        <article class="flow-card argus-card">
+                            <div class="flow-number">05</div>
+                            <p class="flow-label">Diagnostic intelligence</p>
+                            <h3>Argus Tool Layer</h3>
+                            <ul>
+                                <li>Composes system tools</li>
+                                <li>Aggregates system signals</li>
+                                <li>Interprets structured data</li>
+                                <li>Assigns severity</li>
+                                <li>Creates findings and recommendations</li>
+                                <li>Preserves raw evidence for verification</li>
+                            </ul>
+                        </article>
+
+                        <article class="flow-card system-card">
+                            <div class="flow-number">06</div>
+                            <p class="flow-label">System telemetry</p>
+                            <h3>System Tool Layer</h3>
+                            <ul>
+                                <li>Collects disk, memory, process, network, log, and service data</li>
+                                <li>Returns structured system state</li>
+                                <li>Preserves raw command output</li>
+                                <li>Does not interpret or aggregate results</li>
+                            </ul>
+                        </article>
+
+                        <article class="flow-card command-card">
+                            <div class="flow-number">07</div>
+                            <p class="flow-label">OS boundary</p>
+                            <h3>CommandRunner + Linux</h3>
+                            <ul>
+                                <li>Isolated subprocess boundary</li>
+                                <li>Timeout enforcement</li>
+                                <li>stdout, stderr, and return-code capture</li>
+                                <li>Read-only system inspection for Argus V1</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="return-path">
+                        <span>Structured telemetry + raw evidence return upward</span>
+                    </div>
+
+                    <article class="flow-card diagnostic-card">
+                        <div class="flow-number">08</div>
+                        <p class="flow-label">Structured diagnostic result</p>
+                        <h3>Argus builds the system picture</h3>
+                        <div class="diagnostic-grid">
+                            <span>Findings</span>
+                            <span>Severity</span>
+                            <span>Recommendations</span>
+                            <span>Raw evidence</span>
+                            <span>System area</span>
+                            <span>Trace context</span>
+                        </div>
+                    </article>
+
+                    <div class="intelligence-bridge">
+                        <div>
+                            <p class="eyebrow">AI intelligence layer</p>
+                            <h3>The model explains from grounded evidence.</h3>
+                            <p>
+                                The model is not minimized here. It is the reasoning and explanation layer
+                                that makes the system useful to humans. NeuroCore gives it structured,
+                                local, evidence-backed context instead of asking it to guess from raw noise.
+                            </p>
+                        </div>
+                    </div>
+
+                    <article class="flow-card model-card">
+                        <div class="flow-number">09</div>
+                        <p class="flow-label">Model explanation</p>
+                        <h3>Reasoning over structured context</h3>
+                        <ul>
+                            <li>Explains findings in plain English</li>
+                            <li>Answers follow-up questions</li>
+                            <li>Helps reason through next steps</li>
+                            <li>Stays grounded in Argus evidence</li>
+                            <li>Does not directly control the operating system</li>
+                        </ul>
+                    </article>
+
+                    <div class="flow-arrow" aria-hidden="true">↓</div>
+
+                    <article class="flow-card output-card">
+                        <div class="flow-number">10</div>
+                        <p class="flow-label">User-facing output</p>
+                        <h3>ACLI renders the result</h3>
+                        <ul>
+                            <li>Concise default diagnostics</li>
+                            <li>Raw evidence on demand</li>
+                            <li>Summary and JSON modes</li>
+                            <li>Severity and signal filtering</li>
+                            <li>Human-readable model explanation when enabled</li>
+                        </ul>
+                    </article>
+
+                    <div class="intelligence-bridge">
+                        <div>
+                            <p class="eyebrow">Currently being added</p>
+                            <h3>Kernel-Up Service Intelligence will extend the same controlled path.</h3>
+                            <p>
+                                The next service-diagnostics lane is being designed to help Argus look beyond
+                                shallow service status and inspect the layers underneath a failure: systemd state,
+                                dependencies, processes, ports, logs, permissions, mounts, filesystems, resource
+                                pressure, security denials, and kernel-level signals.
+                            </p>
+                            <p>
+                                These tools are not a separate runtime and they are not an automation shortcut.
+                                They will run through the same control plane, execution engine, system tools,
+                                raw-evidence contract, and model explanation boundary shown above.
+                            </p>
+                        </div>
+                    </div>
+
+                    <article class="flow-card diagnostic-card">
+                        <div class="flow-number">11</div>
+                        <p class="flow-label">Near-term expansion</p>
+                        <h3>Kernel-Up / Service Intelligence tools</h3>
+                        <ul>
+                            <li>Discover and inspect systemd services</li>
+                            <li>Collect service state, unit files, dependencies, logs, processes, ports, and package evidence</li>
+                            <li>Correlate service failures with lower-level Linux causes</li>
+                            <li>Separate observed facts from inferred hypotheses</li>
+                            <li>Include confidence levels and raw evidence</li>
+                            <li>Keep the user as the authority for any next action</li>
+                        </ul>
+                    </article>
+
+                    <div class="tool-stack">
+                        <article class="flow-card system-card">
+                            <div class="flow-number">12</div>
+                            <p class="flow-label">Possible system tools</p>
+                            <h3>Read-only evidence collectors</h3>
+                            <ul>
+                                <li>service logs and systemd unit inspection</li>
+                                <li>process, package, and file metadata</li>
+                                <li>kernel messages and mount state</li>
+                                <li>permissions, DNS, and security policy status</li>
+                            </ul>
+                        </article>
+
+                        <article class="flow-card argus-card">
+                            <div class="flow-number">13</div>
+                            <p class="flow-label">Possible Argus tools</p>
+                            <h3>Evidence correlation</h3>
+                            <ul>
+                                <li>service analysis</li>
+                                <li>kernel analysis</li>
+                                <li>permission analysis</li>
+                                <li>mount, DNS, and security policy analysis</li>
+                            </ul>
+                        </article>
+
+                        <article class="flow-card model-card">
+                            <div class="flow-number">14</div>
+                            <p class="flow-label">Model role</p>
+                            <h3>Explain the diagnosis</h3>
+                            <ul>
+                                <li>Explain findings in plain English</li>
+                                <li>Help users understand evidence</li>
+                                <li>Suggest safe next investigation steps</li>
+                                <li>Never invent evidence or execute fixes directly</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="architecture-proof-grid">
+                <article>
+                    <h3>Runtime control</h3>
+                    <p>
+                        The model does not freely touch the machine. Requests pass through the daemon,
+                        runtime manager, control plane, execution engine, and approved tools.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Grounded intelligence</h3>
+                    <p>
+                        Argus turns real Linux telemetry into findings, severity, recommendations,
+                        and evidence before the model explains the result.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Business-safe AI</h3>
+                    <p>
+                        The intelligence is local-first, evidence-backed, traceable, and governed
+                        before it reaches real infrastructure.
+                    </p>
+                </article>
+            </div>
+
+            <p class="callout-line">
+                AI intelligence plus runtime control: that is the NeuroCore difference.
+            </p>
+        </section>
+
+        <!-- Revolution in Production Environments -->
+        <section class="article-card">
+            <h2>How this changes AI in production environments</h2>
+            <p>Traditional AI is stateless and external. NeuroCore turns it into durable, trustworthy operational intelligence that:</p>
+            <ul>
+                <li>Keeps all your data private (local-first)</li>
+                <li>Remembers your systems (continuity)</li>
+                <li>Enforces strict rules before any action (governed authority)</li>
+                <li>Preserves raw evidence for every diagnosis (full auditability)</li>
+            </ul>
+            <p class="callout-line">The result is AI that actually knows your environment and can help safely — without the fragility or risk of cloud-based stateless tools.</p>
+        </section>
+
+        <!-- Business Safety & Power -->
+        <section class="article-card">
+            <h2>Built for business trust and safety</h2>
+            <p>For teams running real infrastructure, NeuroCore provides:</p>
+            <ul>
+                <li>Zero data exfiltration — everything stays inside your security boundary</li>
+                <li>Controlled execution — the platform enforces boundaries so AI reasoning cannot become destructive action</li>
+                <li>Observable and auditable — every step is traceable</li>
+            </ul>
+            <p>This level of control turns AI from a risky external dependency into a safe, internal partner.</p>
+        </section>
+
+        <!-- Argus ACLI & Lab -->
+        <section class="article-card">
+            <h2>Argus ACLI — the first distribution (in active development)</h2>
+            <p>Argus ACLI is the first real-world product being built on top of NeuroCore. It delivers read-only Linux system intelligence: structured diagnostics, severity classification, evidence-backed findings, and raw evidence visibility. It runs entirely through NeuroCore’s control plane and is the focus of current Phase 6 work.</p>
+            
+            <p><strong>Argus Lab</strong> is the future training and validation environment. It will use real Linux server VMs with real networking, logs, and data. We will intentionally inject faults into these environments to test how Argus tools, the structured data flow, and the model work together to diagnose and explain real problems.</p>
+            
+            <p class="callout-line">Core NeuroCore runtime is already stable. Argus ACLI is the first distribution being actively refined on top of it.</p>
+        </section>
+
+        <!-- Ecosystem -->
+        <section class="article-card">
+            <h2>The NeuroCore ecosystem</h2>
+            <p><strong>NeuroCore</strong> — the governed runtime platform (core is built and working)<br>
+            <strong>Argus ACLI</strong> — first distribution, currently in active development<br>
+            <strong>Argus Lab</strong> — future validation environment with real fault injection</p>
+            <p>All three share the same principles: local-first, governed authority, persistent continuity.</p>
+        </section>
+
+        <!-- Strong CTAs -->
+        <section class="article-card cta-section">
+            <h2>Ready to explore governed, persistent AI for your systems?</h2>
+            <div class="hero-actions">
+                <a href="https://github.com/RichBayer/neurocore" target="_blank" class="button primary">View NeuroCore on GitHub</a>
+                <a href="./argus-acli.html" class="button secondary">Explore Argus ACLI</a>
+                <a href="./argus-lab.html" class="button secondary">Explore Argus Lab</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (exact match) -->
+    <footer class="site-footer">
+        <p>© TENSA Engineering • Built with governed authority and persistent memory</p>
+        <p class="footer-links">
+            <a href="https://github.com/RichBayer/neurocore">GitHub</a> • 
+            <a href="../index.html">TENSA Engineering</a>
         </p>
+    </footer>
 
-        <div class="hero-actions">
-          <a href="https://github.com/RichBayer/neurocore" class="button primary" target="_blank" rel="noopener noreferrer">
-            View NeuroCore on GitHub
-          </a>
-          <a href="./index.html" class="button secondary">
-            Back to projects
-          </a>
-        </div>
-      </div>
-
-      <div class="ecosystem-mark" aria-label="NeuroCore branding">
-        <img
-          src="../assets/images/branding/neurocore/neurocore-stacked-transparent.png"
-          alt="NeuroCore logo"
-          class="ecosystem-logo-main"
-        />
-      </div>
-    </section>
-
-    <section class="article-card">
-      <h2>NeuroCore started as a Linux project to build a personal AI assistant that would remember everything.</h2>
-
-      <p>
-        The original idea was not to build a product. I was learning Linux, building lab environments, experimenting with servers, and using AI as a learning partner. It helped me understand commands, troubleshoot problems, think through networking, and keep track of what I was building.
-      </p>
-
-      <p>
-        For a while, it felt like magic. The AI seemed to remember the project. It knew the machines I was working on, understood the lab setup, followed the networking decisions, and seemed to understand the direction I was heading.
-      </p>
-
-      <p>
-        So I started relying on it, not just for answers, but as a kind of external working memory.
-      </p>
-
-      <p>
-        Then one day, it forgot everything.
-      </p>
-
-      <p>
-        The project, the systems, the networking, the lab design, the direction, the decisions we had already made — all of it was gone from the AI’s perspective. That was not just annoying.
-      </p>
-
-      <p>
-        It meant hours and days of work had effectively disappeared from the tool I was depending on to help me continue. I could still see pieces of the project myself, but the shared context was gone. The AI no longer knew what mattered, what had already been solved, or why certain decisions had been made.
-      </p>
-
-      <p>
-        I was back to explaining everything from scratch.
-      </p>
-
-      <p>
-        In AI terms, that missing background is called <strong>context</strong>. Context is the information the AI needs in order to understand what you are asking about. It can include the project goal, previous decisions, system details, files, commands, errors, architecture notes, and anything else that helps the AI understand the situation.
-      </p>
-
-      <p>
-        When the context disappears, the AI may still sound confident, but it is no longer grounded in the real project.
-      </p>
-
-      <p>
-        That moment exposed the real problem:
-      </p>
-
-      <p class="callout-line">
-        AI can be smart in the moment and still be terrible at long-running work.
-      </p>
-
-      <p>
-        The technical word for what I was missing is <strong>continuity</strong>. Continuity means the system keeps the thread. It understands what came before. It remembers what you are building, what changed, what broke, what worked, and what direction the project is moving.
-      </p>
-
-      <p>
-        That is what I wanted. I wanted an AI assistant that knew my environment, remembered the work, understood the systems I was building, and did not require me to constantly upload context just to get back to where we already were.
-      </p>
-
-      <p>
-        That was the original seed of NeuroCore.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>The first goal was simple: build an assistant that could remember everything and never forget anything.</h2>
-
-      <p>
-        At first, the goal was not architecture. It was not a control plane. It was not a product line. It was much simpler than that: I wanted a local AI assistant that could remember my systems, follow my projects over time, and help me work without forcing me to rebuild context every time I opened a new conversation.
-      </p>
-
-      <p>
-        But the more I worked with AI, the more obvious it became that memory alone was not enough. If an assistant is going to understand real systems, it needs more than chat history. It needs organized information. It needs source-of-truth documents. It needs to know where the real project state lives. It needs a way to restore context without guessing.
-      </p>
-
-      <p>
-        That is why documentation became such a major part of the process. Build logs, architecture maps, repository maps, system state documents, resume prompts, and closeout notes were not just paperwork. They became the memory structure around the project.
-      </p>
-
-      <p>
-        They were how the AI could come back into the work without making things up.
-      </p>
-
-      <p>
-        That was the next realization:
-      </p>
-
-      <p class="callout-line">
-        AI does not just need better prompts. It needs structure.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>The first technical step was getting AI running locally.</h2>
-
-      <p>
-        The early build started with the basics. Before NeuroCore could become anything larger, I needed a local AI runtime — a way to run a model on my own machine instead of depending entirely on an outside service.
-      </p>
-
-      <p>
-        That started with WSL2 Ubuntu on Windows, an AI workspace on the NVMe drive, and a local runtime stack built around Ollama and a local Llama model. The first milestone was simple but important: prove that a local model could run successfully on the workstation.
-      </p>
-
-      <p>
-        That mattered because NeuroCore was always moving toward a local-first idea. Local-first means the system is designed to run on hardware you control, using data from your real environment.
-      </p>
-
-      <p>
-        The point is control. If the AI is going to understand real systems, especially systems that may contain sensitive information, the starting point should not be pasting everything into a cloud chat box. The system understanding should begin where the system actually lives.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Then came ways to interact with it.</h2>
-
-      <p>
-        Once the local model was running, the next step was making it usable. The early system had both command-line access and a browser interface through Open WebUI connected to Ollama. That made it possible to interact with the same local model from different interfaces instead of only testing it from the terminal.
-      </p>
-
-      <p>
-        This was still early. It was not yet NeuroCore as it exists now. But it established an important direction: NeuroCore should not be trapped inside one interface.
-      </p>
-
-      <p>
-        The assistant should eventually be reachable from whatever interface makes sense — command line, browser, voice, local devices, or future interaction points. The interface may change. The underlying system should remain the same.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Then came local knowledge.</h2>
-
-      <p>
-        Running a local model was not enough. A model can generate answers, but by itself it does not automatically know your project, your files, your lab, your decisions, or your current work.
-      </p>
-
-      <p>
-        So the next major step was building a knowledge layer. The early knowledge system stored local documents, converted them into embeddings, and placed them into a vector database using Chroma, LlamaIndex, and a local sentence-transformer embedding model.
-      </p>
-
-      <p>
-        In plain English, documents were broken into searchable pieces. Those pieces were converted into mathematical representations of meaning. Then the system could search for information based on what a question meant, not just exact keyword matches.
-      </p>
-
-      <p>
-        That was the beginning of local memory. Not perfect memory. Not human memory. But structured, searchable project knowledge that lived locally and could be used by the AI.
-      </p>
-
-      <p>
-        This mattered because the assistant could finally start looking at my own information instead of relying only on whatever the model already knew.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Retrieval was useful, but it still was not enough.</h2>
-
-      <p>
-        At first, the system could search the local knowledge base and return relevant document chunks. That was useful, but it was still mostly a search system.
-      </p>
-
-      <p>
-        The next step was connecting retrieval to reasoning. That is where RAG came in.
-      </p>
-
-      <p>
-        RAG means <strong>retrieval augmented generation</strong>. That sounds more complicated than it is. It means the system first retrieves relevant information from local documents, then gives that information to the model so the model can answer using grounded context.
-      </p>
-
-      <p>
-        Instead of asking the model to guess, NeuroCore could retrieve local project knowledge first, assemble that context, and then ask the model to reason over it. Build Log 006 marked this transition from semantic search into a local AI assistant that could answer questions using indexed knowledge.
-      </p>
-
-      <p>
-        That was a major step. The system was no longer only finding information. It was beginning to reason over local information.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Then NeuroCore needed to stop acting like a collection of scripts.</h2>
-
-      <p>
-        The early system worked, but it still behaved like a set of scripts. A request would start a Python process, initialize what it needed, complete the task, and exit.
-      </p>
-
-      <p>
-        That was fine for testing. But it was not enough for the assistant I actually wanted. An assistant that remembers everything and keeps track of real systems needs to feel like a running system, not a tool that wakes up from scratch every time.
-      </p>
-
-      <p>
-        That is why the daemon was introduced. A daemon is a background process that keeps running and listens for requests.
-      </p>
-
-      <p>
-        In NeuroCore, the daemon became the central entry point for system interaction. It created a local UNIX socket, received structured requests, and returned structured responses. This moved NeuroCore from stateless script execution into persistent system infrastructure.
-      </p>
-
-      <p>
-        In plain English, NeuroCore stopped being something that only ran when called. It became something that could stay alive. That was a major shift. A persistent assistant needs persistent infrastructure.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Then came the realization that the model could not be in control.</h2>
-
-      <p>
-        As NeuroCore became more capable, a new problem appeared. The model was useful, but it was still too easy for context to drift.
-      </p>
-
-      <p>
-        One test made this obvious. A command like:
-      </p>
-
-      <p class="code-line">df -h | ai</p>
-
-      <p>
-        would correctly analyze disk usage. But a follow-up like:
-      </p>
-
-      <p class="code-line">ai "what does that mean?"</p>
-
-      <p>
-        could sometimes interpret the question correctly and sometimes drift into an unrelated explanation.
-      </p>
-
-      <p>
-        That revealed the real issue: the system was not fully controlling context. The model was.
-      </p>
-
-      <p>
-        That was a problem. For casual questions, that kind of drift is annoying. For real systems, it is dangerous.
-      </p>
-
-      <p>
-        The fix was not to prompt the model harder. The fix was to move authority out of the model and into the system.
-      </p>
-
-      <p>
-        That is where the control plane became necessary. A control plane is the authority layer. In plain English, it is the part of NeuroCore that decides what kind of request this is, what it is allowed to do, what tools may be used, and whether anything should be blocked before the model or tools get involved.
-      </p>
-
-      <p>
-        This became one of the core principles of the project:
-      </p>
-
-      <p class="callout-line">
-        AI can reason, but authority must be governed.
-      </p>
-
-      <p>
-        The control plane was the moment NeuroCore stopped acting like a loose AI wrapper and started acting like a controlled system.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Control was not the original idea. It became necessary.</h2>
-
-      <p>
-        This part matters. NeuroCore did not begin as “an AI governance platform.” It began as a need for an assistant that would remember everything and never forget anything.
-      </p>
-
-      <p>
-        But once the assistant could remember project context, inspect real system information, use tools, and reason about infrastructure, memory alone was not enough. The system needed boundaries.
-      </p>
-
-      <p>
-        It needed to know what the AI was allowed to access. It needed to know which actions were safe. It needed to prevent ambiguous requests from turning into hallucinations.
-      </p>
-
-      <p>
-        In AI terms, a hallucination is when the model gives an answer that sounds confident but is not actually grounded in the right facts, context, or system state.
-      </p>
-
-      <p>
-        It needed to stop any model from directly controlling a machine.
-      </p>
-
-      <p>
-        So control became part of the architecture. Not because control was the original dream. Because the original dream required it.
-      </p>
-
-      <p>
-        An assistant that understands real systems has to be trustworthy. And trust requires structure.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Then came controlled tool execution.</h2>
-
-      <p>
-        Once NeuroCore had a control plane, the next step was giving it a safe way to use tools.
-      </p>
-
-      <p>
-        Before this point, NeuroCore could explain and advise, but it could not safely execute controlled actions. The tool execution layer introduced a structured tool system, including a BaseTool contract, tool registry, execution engine, and confirmation-based safety model.
-      </p>
-
-      <p>
-        That sounds technical, so here is the plain version: tools give NeuroCore specific abilities.
-      </p>
-
-      <p>
-        One tool might inspect disk usage. Another might check memory. Another might inspect network connections. But those tools are not supposed to be called randomly by the model.
-      </p>
-
-      <p>
-        They are registered, validated, routed, and controlled.
-      </p>
-
-      <p>
-        That separation matters. The model can help decide what information is useful, but NeuroCore controls whether a tool can actually be used and how the result comes back.
-      </p>
-
-      <p>
-        That is the difference between an AI assistant and an uncontrolled AI agent.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Then came observability: the system had to show its work.</h2>
-
-      <p>
-        Once NeuroCore had routing, control, and tools, another requirement became obvious. It was not enough for the system to work. I needed to see how it worked.
-      </p>
-
-      <p>
-        When a request came in, I needed to know where it went, what decisions were made, what tool was used, and where something broke if the answer was wrong.
-      </p>
-
-      <p>
-        That is observability. Observability means the system is not a black box.
-      </p>
-
-      <p>
-        In NeuroCore, that meant adding trace IDs, structured trace events, and end-to-end visibility across the CLI, runtime manager, control plane, execution engine, and tools. Build Log 018 turned NeuroCore into a system where every request could be followed through the stack under a shared request ID.
-      </p>
-
-      <p>
-        In plain English, NeuroCore had to be able to explain its own path.
-      </p>
-
-      <p>
-        If the system is going to be trusted around real infrastructure, “it probably worked” is not good enough. You need evidence.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>What NeuroCore became</h2>
-
-      <p>
-        The technical way to describe NeuroCore today is:
-      </p>
-
-      <p class="callout-line">
-        a local-first cognitive runtime platform.
-      </p>
-
-      <p>
-        That phrase sounds heavy, so here is what it means.
-      </p>
-
-      <p>
-        <strong>Local-first</strong> means it is designed to run on your actual hardware, with access to your real files, logs, system data, and project context instead of depending on a cloud chat window.
-      </p>
-
-      <p>
-        <strong>Cognitive</strong> means it supports AI reasoning, context, memory, and interpretation. In plain English, it helps the AI understand what it is looking at instead of only generating text.
-      </p>
-
-      <p>
-        <strong>Runtime</strong> means it is the system around the model — the part that receives requests, routes them, applies rules, gathers data, manages tools, and returns structured results.
-      </p>
-
-      <p>
-        <strong>Platform</strong> means other tools and products can be built on top of it without bypassing the same core structure.
-      </p>
-
-      <p>
-        In simpler terms:
-      </p>
-
-      <p class="callout-line">
-        The model thinks. NeuroCore manages how that thinking connects to the real world.
-      </p>
-
-      <p>
-        That is the heart of the project.
-      </p>
-
-      <p>
-        NeuroCore is not just the AI model. It is not just a chatbot. It is not just a script collection. It is the structure around the model that makes long-running, local, real-system AI work possible.
-      </p>
-    </section>
-
-    <section class="article-card">
-      <h2>Where Argus fits</h2>
-
-      <p>
-        Argus ACLI is the first practical proof of NeuroCore.
-      </p>
-
-      <p>
-        NeuroCore provides the platform: the runtime, control plane, tool system, structured data flow, and safety boundaries. Argus applies that platform to Linux diagnostics.
-      </p>
-
-      <p>
-        It uses controlled, read-only Linux system tools to collect real telemetry, then turns that data into findings, severity, recommendations, and raw evidence.
-      </p>
-
-      <p>
-        That makes Argus useful in a very practical way: it helps a user understand what is happening on a Linux system without pasting sensitive logs into an outside service and without giving an AI model uncontrolled authority over the machine.
-      </p>
-
-      <p>
-        Argus is where NeuroCore starts becoming visible as a real Linux tool.
-      </p>
-
-      <p>
-        As the site grows, the Argus ACLI page will explain the diagnostic workflow in more detail.
-      </p>
-
-      <div class="article-actions">
-        <a href="./argus-acli.html" class="button secondary">Explore Argus ACLI</a>
-      </div>
-    </section>
-
-    <section class="article-card">
-      <h2>Where Argus Lab fits</h2>
-
-      <p>
-        Argus Lab is the future training and validation environment for the ecosystem.
-      </p>
-
-      <p>
-        It began as a personal Linux troubleshooting practice idea. I did not want to only study commands, read exam material, or follow clean step-by-step labs. I wanted a real environment where Linux systems could break in realistic ways and I could practice diagnosing and fixing them safely.
-      </p>
-
-      <p>
-        That idea grew into Argus Lab.
-      </p>
-
-      <p>
-        Argus Lab is planned as a real-Linux troubleshooting environment built around controlled failures. A scenario might start like a real support ticket:
-      </p>
-
-      <p>
-        The web service is unreachable.
-      </p>
-
-      <p>
-        Users cannot access a shared directory.
-      </p>
-
-      <p>
-        The system is slow and nobody knows why.
-      </p>
-
-      <p>
-        From there, the user has to investigate. They may need to check services, read logs, inspect permissions, look at networking, review disk and memory state, determine root cause, apply a fix, and verify that the system recovered.
-      </p>
-
-      <p>
-        The point is not to memorize answers. The point is to build real troubleshooting judgment through practice.
-      </p>
-
-      <p>
-        Argus Lab also has a second role: validation. If controlled failures can help a person learn troubleshooting, they can also test whether Argus correctly understands system state. Known failure scenarios make it possible to check whether Argus identifies the right symptoms, assigns useful severity, gives reasonable recommendations, and preserves raw evidence that supports its findings.
-      </p>
-
-      <p>
-        That makes Argus Lab both a training environment for people and a proving ground for NeuroCore, Argus ACLI, and model-guided Linux troubleshooting.
-      </p>
-
-      <p>
-        Long term, Argus Lab may support resettable lab sessions, adaptive difficulty, mentor-style AI guidance, tracked troubleshooting history, and proficiency levels based on demonstrated ability instead of memorization.
-      </p>
-
-      <p>
-        As the site grows, the Argus Lab page will explain the training and validation model in more detail.
-      </p>
-
-      <div class="article-actions">
-        <a href="./argus-lab.html" class="button secondary">Explore Argus Lab</a>
-      </div>
-    </section>
-
-    <section class="article-card">
-      <h2>Current platform focus</h2>
-
-      <p>
-        NeuroCore grew out of Linux learning, Linux troubleshooting, and real Linux lab environments.
-      </p>
-
-      <p>
-        That matters because the current system is being built and tested around Linux concepts first: logs, services, processes, disk usage, memory usage, networking, permissions, command output, and system diagnostics.
-      </p>
-
-      <p>
-        The current Argus ACLI path is especially Linux-focused, with Ubuntu as the first target environment.
-      </p>
-
-      <p>
-        That does not mean the larger NeuroCore idea is limited to Linux forever. Long term, the same principles could apply to other environments, including Windows. But the current implementation and first practical product path are focused on Linux systems.
-      </p>
-
-      <p>
-        That distinction matters.
-      </p>
-
-      <p>
-        If someone is looking for a Windows-ready tool today, NeuroCore is not there yet.
-      </p>
-
-      <p>
-        If someone wants to understand how local AI can preserve context, inspect real systems, and support controlled Linux diagnostics, they are in the right place.
-      </p>
-    </section>
-
-    <section class="footer-card">
-      <p class="eyebrow">The simplest way to understand NeuroCore</p>
-      <h2>NeuroCore is what the assistant idea became.</h2>
-
-      <p>
-        NeuroCore started because I needed an AI assistant that could remember everything I was working on and never forget the systems I was building.
-      </p>
-
-      <p>
-        It grew because remembering everything required more than memory.
-      </p>
-
-      <p>
-        It needed local knowledge. It needed structure. It needed a persistent runtime. It needed controlled tools. It needed authority boundaries. It needed tracing.
-      </p>
-
-      <p>
-        It needed a way to connect AI reasoning to real Linux systems without letting the model run loose.
-      </p>
-
-      <p>
-        That is what NeuroCore is becoming:
-      </p>
-
-      <p class="callout-line">
-        a local-first system for persistent understanding, controlled interaction, and grounded AI assistance in real Linux environments.
-      </p>
-
-      <div class="hero-actions">
-        <a href="https://github.com/RichBayer/neurocore" class="button primary" target="_blank" rel="noopener noreferrer">
-          View NeuroCore GitHub
-        </a>
-        <a href="./index.html" class="button secondary">
-          Back to projects
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
-  </footer>
 </body>
 </html>
