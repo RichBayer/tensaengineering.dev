@@ -60,7 +60,7 @@ Definitions:
 | `/projects/index.html` | Projects | Public index page | Live | Explains the ecosystem structure and routes visitors to NeuroCore, Argus ACLI, and Argus Lab. | Website state, website information architecture, resume prompt, repository map. Project source docs if descriptions are expanded. | Linked from homepage and all current public headers. | Keep as ecosystem router. Expand only if needed for clarity. |
 | `/projects/neurocore.html` | NeuroCore | Project detail page | Live | Public NeuroCore platform page explaining local-first governed AI runtime, continuity, current RAG/retrieval foundation, future memory direction, control plane architecture, Argus diagnostics flow, model explanation, and near-term Kernel-Up / Service Intelligence expansion. | NeuroCore vision, platform ecosystem, system architecture, system state, control plane, tool execution, security/policy docs, memory/context docs, service intelligence docs, and relevant build logs if factual claims change. | Linked from homepage project card, Projects page, Argus ACLI page, Argus Lab page, and footer / CTA links. | Preserve public-facing platform explanation. Move deeper architecture details into Knowledge Base or Build Notes later. |
 | `/projects/argus-acli.html` | Argus ACLI | Project detail page | Live | Full public product page for Argus ACLI as the first product/distribution built on NeuroCore. Explains local-first read-only Linux diagnostics, structured findings, severity, recommendations, raw evidence, and AI explanation grounded in system evidence. | Argus ACLI vision, How Argus Works, Argus output/tool contract, ACLI spec, Argus deployment docs, Argus V1 blueprint, UX layer docs, tool layer docs, Phase 5J/6 docs, relevant build logs. | Linked from homepage project card, Projects page, NeuroCore page, and Argus Lab page. | Keep product maturity honest. Add install/download guidance only when packaging exists. |
-| `/projects/argus-lab.html` | Argus Lab | Project detail page | Placeholder | Public destination for Argus Lab as planned real-Linux troubleshooting, training, and validation environment. Currently a branded placeholder. | Required before full page: Argus Lab README and Argus Lab vision doc. Later: architecture, scenario planning, validation strategy, training flow, mentor-mode docs. | Linked from homepage project card, Projects page, NeuroCore page, and Argus ACLI page. | Build full Argus Lab page from source docs. Keep future-phase status clear. |
+| `/projects/argus-lab.html` | Argus Lab | Project detail page | Live | Full public landing page for Argus Lab as a planned real-Linux troubleshooting, training, and validation environment. Explains controlled failures, resettable lab sessions, mentor-style AI guidance, validation role, future-phase status, and relationship to NeuroCore and Argus ACLI. | Argus Lab README and Argus Lab vision doc used for current full page. Later architecture, scenario planning, validation strategy, training flow, and mentor-mode docs required if those details are expanded. | Linked from homepage project card, Projects page, NeuroCore page, and Argus ACLI page. | Keep future-phase status clear. Do not imply availability until implementation begins. |
 | `/knowledge-base/index.html` | Knowledge Base | Public index page | Structure-only | Establishes the Knowledge Base as the public teaching layer for controlled AI systems, AI operations, persistent AI memory, local-first AI, safe tool interaction, Linux diagnostics, troubleshooting training, and NeuroCore architecture. | Website information architecture, website state, resume prompt, repository map. Specific article source docs required when factual articles are created. | Linked from all current public headers. | Create first topic/category pages after internal linking strategy is defined. |
 
 ---
@@ -192,25 +192,23 @@ Before creating a new public page:
 
 ## Current Next Public Page Priority
 
-Recommended next public page:
+Recommended next public-page options:
 
-    /projects/argus-lab.html
+    /story/index.html
+    /resources/index.html
+    /about.html
+    first Knowledge Base category pages
 
 Reason:
 
-NeuroCore and Argus ACLI now have strong public pages. Argus Lab is the remaining major project page needed to complete the first coherent ecosystem story.
+NeuroCore, Argus ACLI, and Argus Lab now all have full public project pages. The next major website step should expand the surrounding public structure instead of overloading project pages.
 
-Required direction:
+Likely next direction:
 
-- Keep the page honest about future-phase status.
-- Explain real Linux troubleshooting practice.
-- Explain controlled fault injection.
-- Explain resettable lab environments.
-- Explain mentor-style AI guidance.
-- Explain training and validation roles.
-- Explain the relationship to NeuroCore and Argus ACLI.
-
-Do not build the full Argus Lab page without required source docs.
+- create the Story section if preserving the origin/philosophy is the priority
+- create Resources if organizing GitHub, future videos, downloads, and public links is the priority
+- create About if a concise TENSA mission/builder page is needed
+- create Knowledge Base categories if the teaching layer becomes the next focus
 
 ---
 

@@ -293,13 +293,13 @@ Path:
 
 Current status:
 
-    Placeholder
+    Live
 
 Current role:
 
-The Argus Lab page should explain Argus Lab as the future real-Linux troubleshooting, training, and validation environment.
+The Argus Lab page explains Argus Lab as a planned future real-Linux troubleshooting, training, and validation environment.
 
-It should explain:
+It explains:
 
 - original personal Linux troubleshooting practice goal
 - portfolio origin
@@ -308,21 +308,26 @@ It should explain:
 - resettable lab sessions
 - realistic support-ticket-style scenarios
 - mentor-style AI guidance
-- adaptive difficulty
 - validation role for NeuroCore and Argus ACLI
-- tracked troubleshooting progress
-- demonstrated ability / proficiency direction
+- future-phase status
+- what Argus Lab is not
+
+Important:
+
+Argus Lab remains future-phase.
+
+Do not imply it is currently available, downloadable, or a finished training product.
 
 ---
 
-### Required Source Docs
+### Source Docs Used For Current Full Page
 
-Use these before writing the full Argus Lab page:
+Current full page was written from:
 
     Argus Lab README.md
     Argus Lab docs/vision/argus_lab_vision.md
 
-If available later, also use:
+If expanding deeper implementation details later, also use:
 
     Argus Lab architecture docs
     Argus Lab scenario planning docs

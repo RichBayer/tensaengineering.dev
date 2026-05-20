@@ -16,7 +16,7 @@ Current phase:
     Projects section created
     NeuroCore project page expanded into a stronger public platform page
     Argus ACLI project page upgraded into a full public product page
-    Argus Lab placeholder page created
+    Argus Lab full public landing page created
     branding asset hierarchy established
     consistent branding added across current public pages
     Knowledge Base index created
@@ -191,7 +191,7 @@ Current branding behavior:
 - Projects page hero uses the TENSA stacked logo
 - NeuroCore page hero uses the NeuroCore stacked logo
 - Argus ACLI page hero uses the Argus ACLI stacked logo
-- Argus Lab placeholder hero uses the Argus Lab stacked logo
+- Argus Lab page hero uses the Argus Lab stacked logo
 - homepage and Projects project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - the header uses a header-optimized TENSA logo without the tiny unreadable subtitle line
@@ -476,38 +476,43 @@ Current path:
 
 Current status:
 
-    Branded placeholder
+    Live full public landing page
 
 Current purpose:
 
-- provide a clean public destination for Argus Lab
-- reserve page structure for future full Argus Lab explanation
-- keep current public navigation consistent
+- explain Argus Lab as a planned real-Linux troubleshooting, training, and validation environment
+- explain its origin as a personal Linux troubleshooting practice and portfolio project
+- explain controlled failure scenarios and resettable lab sessions
+- explain mentor-style AI guidance without implying the model gives away answers
+- explain the validation role for NeuroCore, Argus ACLI, and model-guided troubleshooting
+- keep future-phase status clear and honest
+- route readers to Argus ACLI, NeuroCore, and the Projects page
 
 Current branding:
 
 - TENSA header logo
 - Argus Lab stacked logo in hero
 
-Future page should explain:
+Current content includes:
 
-- Argus Lab origin
-- personal Linux troubleshooting practice goal
-- real Linux failure scenarios
-- controlled faults
-- resettable sessions
-- training role
-- validation role
-- mentor-style AI guidance
-- adaptive difficulty
-- future tracked troubleshooting sessions
-- demonstrated proficiency direction
+- planned training and validation environment positioning
+- real troubleshooting skill through experience, not memorization
+- real systems, controlled failures, and guided growth principles
+- support-ticket-style troubleshooting scenarios
+- safe repeatable training loop
+- NeuroCore, Argus ACLI, and model guidance relationship
+- independent, assisted, and guided resolution modes
+- validation and regression-testing role
+- planned small-business-style Linux environment shape
+- future-phase status / not currently available
+- learner, diagnostics, and growth audiences
+- clear explanation of what Argus Lab is not
 
-Do not write the full Argus Lab page without source docs.
+Important note:
 
-Before writing the full Argus Lab page, check:
+Argus Lab should remain clearly future-phase until implementation status changes.
 
-    docs/planning/content_source_map.md
+Do not imply it is currently available, downloadable, or a finished training product.
 
 ---
 
@@ -678,7 +683,7 @@ Social content:
 - NeuroCore page expanded into a stronger public platform page
 - Argus ACLI placeholder page created
 - Argus ACLI full public product page created
-- Argus Lab placeholder page created
+- Argus Lab full public landing page created
 - long-form article styling added
 - project links updated so pages route internally
 - TENSA repository map created
@@ -693,7 +698,7 @@ Social content:
 - Projects page branding updated
 - NeuroCore page branding updated
 - Argus ACLI page branding updated
-- Argus Lab placeholder branding updated
+- Argus Lab full public landing page created and branded
 - Knowledge Base index page created
 - Knowledge Base navigation updated across current public pages
 - page inventory planning doc created
@@ -720,7 +725,6 @@ Social content:
 
 ## Not Yet Completed
 
-- full Argus Lab page
 - Story index page
 - Resources page
 - About page
@@ -829,46 +833,15 @@ Recommended next website session:
 3. Review `docs/planning/page_inventory.md`.
 4. Review `docs/planning/internal_linking_strategy.md`.
 5. Review `docs/planning/content_source_map.md`.
-6. Load required Argus Lab source docs.
-7. Build the full Argus Lab landing page.
+6. Choose the next page or section deliberately before editing.
 
 Recommended next public-page work:
 
-    projects/argus-lab.html
+    Story index page, Resources page, About page, or first Knowledge Base category pages
 
 Reason:
 
-NeuroCore and Argus ACLI now have strong public pages. Argus Lab is the remaining major project page needed to complete the first coherent ecosystem story.
-
-Argus Lab page should explain:
-
-- real Linux troubleshooting practice
-- controlled fault injection
-- resettable lab environments
-- mentor-style AI guidance
-- training modes
-- validation/tuning environment for Argus ACLI
-- diagnostic regression testing
-- relationship to NeuroCore and Argus ACLI
-
-Do not build it without required source docs.
-
-Likely source docs needed:
-
-    docs/vision/argus_lab_vision.md
-    docs/architecture/platform_ecosystem.md
-    docs/planning/content_source_map.md
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    current projects/argus-lab.html
-    current styles.css
-
-Optional supporting docs:
-
-    docs/architecture/neurocore_vision.md
-    docs/distributions/argus/argus_distribution_and_deployment.md
-    docs/architecture/system_architecture.md
-    docs/ideas/platform/service_intelligence_layer.md or equivalent if Argus Lab validation scope is discussed
+NeuroCore, Argus ACLI, and Argus Lab now all have full public project pages. The next major website step should expand the surrounding public structure rather than continuing to overload the project pages.
 
 ---
 

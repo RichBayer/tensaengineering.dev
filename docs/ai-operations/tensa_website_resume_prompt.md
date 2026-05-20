@@ -8,6 +8,11 @@ Repository path:
 
     /mnt/g/ai/projects/tensaengineering.dev
 
+Default working assumption:
+
+    The user is usually in VS Code at the repository root with an integrated terminal open.
+    Provide commands that can be copied and run from the repo root unless told otherwise.
+
 Deployment:
 
     GitHub Pages
@@ -130,6 +135,11 @@ At the beginning of serious website build sessions, run:
     find . -maxdepth 3 -name "*.html" -print
     grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
 
+For diff checks, prefer no-pager output to avoid clipped terminal pager output:
+
+    git --no-pager diff -- <path>
+    git --no-pager diff --stat
+
 Purpose:
 
 - confirm repository state
@@ -177,7 +187,7 @@ Current public page status:
     /projects/                  Live ecosystem project index
     /projects/neurocore.html    Live expanded NeuroCore platform page
     /projects/argus-acli.html   Live full Argus ACLI public product page
-    /projects/argus-lab.html    Branded placeholder with SEO-tuned troubleshooting training / diagnostic validation positioning
+    /projects/argus-lab.html    Live full Argus Lab public landing page
     /knowledge-base/            Structure-only Knowledge Base index
 
 ---
@@ -358,7 +368,7 @@ Current branding behavior:
 - Projects page hero uses the TENSA stacked logo
 - NeuroCore page hero uses the NeuroCore stacked logo
 - Argus ACLI page hero uses the Argus ACLI stacked logo
-- Argus Lab placeholder hero uses the Argus Lab stacked logo
+- Argus Lab page hero uses the Argus Lab stacked logo
 - homepage and Projects page project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - header logo removes the tiny unreadable subtitle line
@@ -423,7 +433,7 @@ Completed so far:
 - Projects overview page created
 - NeuroCore page created and expanded
 - Argus ACLI full public page created
-- Argus Lab placeholder created
+- Argus Lab full public landing page created
 - Knowledge Base index created
 - branding asset hierarchy created
 - TENSA, NeuroCore, Argus ACLI, and Argus Lab logos added
@@ -498,7 +508,6 @@ Recent completed website work:
 
 Not yet completed:
 
-- full Argus Lab page
 - Story index page
 - Resources page
 - About page
@@ -608,41 +617,25 @@ Update only the docs actually impacted by the session.
 
 Recommended next website move:
 
-    Build the full Argus Lab landing page.
+    Choose the next public structure deliberately.
+
+Recommended next public-page options:
+
+    /story/index.html
+    /resources/index.html
+    /about.html
+    first Knowledge Base category pages
 
 Reason:
 
-Argus Lab is still the remaining project placeholder page. It is already part of the public ecosystem flow and should become the next full project page after NeuroCore and Argus ACLI.
+NeuroCore, Argus ACLI, and Argus Lab now all have full public project pages. The next major website step should expand the surrounding public structure rather than continuing to overload project pages.
 
-Argus Lab page should explain:
+Likely next direction:
 
-- real Linux troubleshooting practice
-- controlled fault injection
-- resettable lab environments
-- mentor-style AI guidance
-- training modes
-- validation/tuning environment for Argus ACLI
-- diagnostic regression testing
-- relationship to NeuroCore and Argus ACLI
-
-Do not build it without required source docs.
-
-Likely source docs needed:
-
-    docs/vision/argus_lab_vision.md
-    docs/architecture/platform_ecosystem.md
-    docs/planning/content_source_map.md
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    current projects/argus-lab.html
-    current styles.css
-
-Optional supporting docs:
-
-    docs/architecture/neurocore_vision.md
-    docs/distributions/argus/argus_distribution_and_deployment.md
-    docs/architecture/system_architecture.md
-    docs/ideas/platform/service_intelligence_layer.md or equivalent if Argus Lab validation scope is discussed
+- create the Story section if preserving the origin/philosophy is the priority
+- create Resources if organizing GitHub, future videos, downloads, and public links is the priority
+- create About if a concise TENSA mission/builder page is needed
+- create Knowledge Base categories if the teaching layer becomes the next focus
 
 ---
 
@@ -650,24 +643,21 @@ Optional supporting docs:
 
 Possible next public work:
 
-1. Build full Argus Lab page from source docs.
-2. Create `/story/index.html`.
-3. Create `/resources/index.html`.
-4. Create `/about.html`.
-5. Create first Knowledge Base category pages.
-6. Add deeper SEO/metadata pass for updated NeuroCore page.
-7. Add sitemap lastmod dates.
-8. Create internal link checker script.
+1. Create `/story/index.html`.
+2. Create `/resources/index.html`.
+3. Create `/about.html`.
+4. Create first Knowledge Base category pages.
+5. Add deeper SEO/metadata pass for updated NeuroCore page.
+6. Add sitemap lastmod dates.
+7. Create internal link checker script.
 
-Recommended next full project page:
+Recommended next direction:
 
-    /projects/argus-lab.html
+    Expand the site structure around the completed project pages.
 
 Reason:
 
-NeuroCore and Argus ACLI now have strong public pages. Argus Lab is the remaining major project page needed to complete the first coherent ecosystem story.
-
-Do not build it without required source docs.
+The core project pages now exist for NeuroCore, Argus ACLI, and Argus Lab. Future work should add supporting public sections, teaching pages, resource organization, and story/mission context.
 
 ---
 

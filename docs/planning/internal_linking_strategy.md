@@ -83,7 +83,7 @@ Use these preferred destinations when topics appear in public pages.
 | Ecosystem | `/projects/` | `/projects/` | Projects page explains platform/product/lab structure. |
 | NeuroCore | `/projects/neurocore.html` | Same | Main public NeuroCore platform explainer. |
 | Argus ACLI | `/projects/argus-acli.html` | Same | Full public product page for local-first read-only Linux diagnostics. |
-| Argus Lab | `/projects/argus-lab.html` | Same | Placeholder now; full page is next recommended build. |
+| Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the planned real-Linux troubleshooting, training, and validation environment. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
 | Origin story | `/index.html#story` | `/story/the-day-the-ai-forgot-everything.html` | Use homepage section until Story pages exist. |
 | GitHub proof | `/index.html#proof` or direct GitHub repo | `/resources/github.html` or `/resources/` | Keep mixed current behavior until Resources strategy is created. |
@@ -201,7 +201,7 @@ These are intentional temporary or mixed targets.
 | GitHub | `/index.html#proof` or direct NeuroCore GitHub repo | Possibly `/resources/` or `/resources/github.html` |
 | Homepage Knowledge Base preview | `/knowledge-base/` | `/knowledge-base/` |
 | Homepage origin story preview | `/story/` after created | `/story/` |
-| Argus Lab project page | `/projects/argus-lab.html` placeholder | Full Argus Lab landing page |
+| Argus Lab project page | `/projects/argus-lab.html` | Full public landing page now active |
 
 ---
 
@@ -301,7 +301,7 @@ The Argus Lab page should link to:
 
 The Argus Lab page should clearly remain future-phase until implementation status changes.
 
-The next recommended website build is to convert this page from placeholder to a full public landing page using required source docs.
+The page is now a full public landing page. Keep future-phase status clear until implementation status changes.
 
 ---
 
@@ -325,7 +325,7 @@ When these pages are created, update links across the site.
 
 | New Page Created | Update These Existing Pages |
 |---|---|
-| Full `/projects/argus-lab.html` page | Homepage if copy changes, Projects page if project-card description changes, NeuroCore page CTAs if needed, Argus ACLI ecosystem section if needed, this document, page inventory, website state |
+| Full `/projects/argus-lab.html` page | Completed. Keep related links current if homepage, Projects page, NeuroCore page, or Argus ACLI page copy changes later. |
 | `/story/index.html` | Homepage nav, Projects nav, NeuroCore nav, Argus ACLI nav, Argus Lab nav, Knowledge Base nav |
 | `/knowledge-base/controlled-ai-systems/` | Homepage Knowledge Base section, Knowledge Base index, NeuroCore page |
 | `/knowledge-base/persistent-ai-memory/` | Homepage Knowledge Base section, Knowledge Base index, NeuroCore page, Story page |
@@ -387,7 +387,7 @@ Current notable link state:
 - The NeuroCore page currently links directly to the NeuroCore GitHub repo in the header and CTA areas.
 - Argus ACLI links to NeuroCore and Argus Lab.
 - NeuroCore links to Argus ACLI and Argus Lab.
-- Argus Lab still has placeholder-oriented wording in at least one CTA and should be cleaned up when the full page is built.
+- Argus Lab now links to Argus ACLI, NeuroCore, and the Projects page from the full public landing page.
 
 ---
 

@@ -366,7 +366,7 @@ Purpose:
 Current usage:
 
 - `argus-lab-interactive-analysis-horizontal-transparent.png` is used in homepage and Projects page project cards.
-- `argus-lab-interactive-analysis-stacked-transparent.png` is used in the Argus Lab placeholder page hero.
+- `argus-lab-interactive-analysis-stacked-transparent.png` is used in the Argus Lab page hero.
 
 Notes:
 
@@ -787,30 +787,32 @@ Purpose:
 
 Current status:
 
-    Branded placeholder page.
+    Live full public landing page.
 
 Current role:
 
-    Provides a public destination for Argus Lab as the planned real-Linux troubleshooting, training, and validation environment.
+    Explains Argus Lab as the planned real-Linux troubleshooting, training, and validation environment.
 
 Current branding:
 
 - TENSA header logo
 - Argus Lab stacked logo in hero
 
-Future page should cover:
+Current content covers:
 
 - personal Linux troubleshooting practice origin
+- real Linux troubleshooting practice
 - controlled failure scenarios
 - resettable lab sessions
-- training role
-- validation role
+- support-ticket-style scenarios
 - mentor-style AI guidance
-- adaptive difficulty
-- future tracked troubleshooting progress
-- demonstrated ability / proficiency direction
+- training role
+- validation role for NeuroCore and Argus ACLI
+- planned environment shape
+- future-phase status
+- what Argus Lab is not
 
-Do not write the full page without source docs.
+Do not expand implementation-specific Argus Lab details without updated source docs.
 
 ---
 
