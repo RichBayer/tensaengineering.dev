@@ -51,10 +51,10 @@ Current active public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/index.html
+    /story/index.html
 
 Current active public sections:
 
-    /index.html#story
     /index.html#proof
 
 ---
@@ -68,7 +68,7 @@ Current header navigation should use:
 | Home | `/index.html` | Active | Use relative path appropriate to page depth. |
 | Projects | `/projects/` | Active | Main ecosystem project index. |
 | Knowledge Base | `/knowledge-base/` | Active | Main teaching layer index. |
-| Story | `/index.html#story` | Temporary | Should become `/story/` after story section exists. |
+| Story | `/story/` | Active | Full public origin story page. |
 | GitHub | `/index.html#proof` or direct GitHub repo | Temporary / mixed | Most pages use the homepage proof anchor. NeuroCore currently links directly to the NeuroCore GitHub repo. Decide final Resources/GitHub strategy later. |
 
 ---
@@ -85,10 +85,10 @@ Use these preferred destinations when topics appear in public pages.
 | Argus ACLI | `/projects/argus-acli.html` | Same | Full public product page for local-first read-only Linux diagnostics. |
 | Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the planned real-Linux troubleshooting, training, and validation environment. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
-| Origin story | `/index.html#story` | `/story/the-day-the-ai-forgot-everything.html` | Use homepage section until Story pages exist. |
+| Origin story | `/story/` | Same, or future deeper story article if needed | Story index now owns the full public origin narrative. |
 | GitHub proof | `/index.html#proof` or direct GitHub repo | `/resources/github.html` or `/resources/` | Keep mixed current behavior until Resources strategy is created. |
 | Persistent AI memory | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` | NeuroCore currently explains continuity/memory direction best. |
-| Continuity | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` or story article | NeuroCore page currently explains continuity best. |
+| Continuity | `/story/` or `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` or story article | Story explains the human origin; NeuroCore explains the platform direction. |
 | Context | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/context-and-continuity.html` | Future article likely needed. |
 | RAG / retrieval augmented generation | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/rag-and-local-knowledge.html` | NeuroCore page currently explains the local retrieval/RAG foundation. |
 | Structured knowledge base | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/structured-knowledge-base.html` | Future Knowledge Base explainer. |
@@ -100,8 +100,8 @@ Use these preferred destinations when topics appear in public pages.
 | Tool execution | `/projects/neurocore.html` | `/knowledge-base/safe-tool-interaction/controlled-tool-execution.html` | Future public explainer. |
 | Observability | `/projects/neurocore.html` | `/knowledge-base/neurocore-architecture/observability.html` | Future public explainer. |
 | Local-first AI | `/projects/neurocore.html` | `/knowledge-base/local-first-ai/` | NeuroCore and Argus ACLI currently explain the concept practically. |
-| AI Operations | `/knowledge-base/` | `/knowledge-base/ai-operations/` | Category not created yet. |
-| Documentation as memory | `/knowledge-base/` | `/knowledge-base/ai-operations/documentation-as-operational-memory.html` | Future story/knowledge bridge article. |
+| AI Operations | `/story/` or `/knowledge-base/` | `/knowledge-base/ai-operations/` | Story explains the origin; Knowledge Base category not created yet. |
+| Documentation as memory | `/story/` | `/knowledge-base/ai-operations/documentation-as-operational-memory.html` | Future story/knowledge bridge article. |
 | Linux diagnostics | `/projects/argus-acli.html` | `/knowledge-base/linux-diagnostics/` | Argus ACLI page is current practical destination. |
 | Raw evidence | `/projects/argus-acli.html` | `/knowledge-base/linux-diagnostics/raw-evidence.html` | Future explainer. |
 | Severity / findings / recommendations | `/projects/argus-acli.html` | `/knowledge-base/linux-diagnostics/structured-diagnostics.html` | Future explainer. |
@@ -197,10 +197,9 @@ These are intentional temporary or mixed targets.
 
 | Current Link | Temporary Target | Final Target |
 |---|---|---|
-| Story | `/index.html#story` | `/story/` |
 | GitHub | `/index.html#proof` or direct NeuroCore GitHub repo | Possibly `/resources/` or `/resources/github.html` |
 | Homepage Knowledge Base preview | `/knowledge-base/` | `/knowledge-base/` |
-| Homepage origin story preview | `/story/` after created | `/story/` |
+| Homepage origin story preview | `/story/` | `/story/` |
 | Argus Lab project page | `/projects/argus-lab.html` | Full public landing page now active |
 
 ---
@@ -232,11 +231,11 @@ The homepage should link to:
 
 - `/projects/`
 - `/knowledge-base/`
+- `/story/`
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - GitHub proof links
-- future `/story/` once created
 
 The homepage should not become a link dump.
 
@@ -250,6 +249,7 @@ The Projects page should link to:
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/` where helpful
+- `/story/` through header navigation
 - future related knowledge-base articles after they exist
 
 The Projects page should remain an ecosystem router.
@@ -260,6 +260,7 @@ The Projects page should remain an ecosystem router.
 
 The NeuroCore page should link to:
 
+- `/story/` through header navigation
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/`
@@ -279,6 +280,7 @@ It should not become the full architecture manual.
 
 The Argus ACLI page should link to:
 
+- `/story/` through header navigation
 - `/projects/neurocore.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/linux-diagnostics/` after created
@@ -293,6 +295,7 @@ The Argus ACLI page should clearly distinguish current product state from future
 
 The Argus Lab page should link to:
 
+- `/story/` through header navigation
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
 - `/knowledge-base/troubleshooting-training/` after created
@@ -309,6 +312,7 @@ The page is now a full public landing page. Keep future-phase status clear until
 
 The Knowledge Base index should link to:
 
+- `/story/` through header navigation
 - category pages once they exist
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
@@ -319,6 +323,31 @@ Until category pages exist, topic cards should not be fake links.
 
 ---
 
+### Story Page
+
+The Story page should link to:
+
+- `/projects/`
+- `/projects/neurocore.html`
+- `/projects/argus-acli.html`
+- `/projects/argus-lab.html`
+- `/knowledge-base/` through header navigation
+- GitHub proof through the homepage proof anchor until Resources exists
+
+The Story page should remain the origin and philosophy page.
+
+It should not become:
+
+- a technical architecture manual
+- a Knowledge Base article
+- a roadmap dump
+- an internal planning document
+- a replacement for the project pages
+
+Deeper definitions should branch into the Knowledge Base later.
+
+---
+
 ## Planned Link Upgrades
 
 When these pages are created, update links across the site.
@@ -326,7 +355,7 @@ When these pages are created, update links across the site.
 | New Page Created | Update These Existing Pages |
 |---|---|
 | Full `/projects/argus-lab.html` page | Completed. Keep related links current if homepage, Projects page, NeuroCore page, or Argus ACLI page copy changes later. |
-| `/story/index.html` | Homepage nav, Projects nav, NeuroCore nav, Argus ACLI nav, Argus Lab nav, Knowledge Base nav |
+| `/story/index.html` | Completed. Header navigation now points to `/story/`. Keep story-related links current if deeper Story articles are added later. |
 | `/knowledge-base/controlled-ai-systems/` | Homepage Knowledge Base section, Knowledge Base index, NeuroCore page |
 | `/knowledge-base/persistent-ai-memory/` | Homepage Knowledge Base section, Knowledge Base index, NeuroCore page, Story page |
 | `/knowledge-base/ai-operations/` | Homepage Knowledge Base section, Knowledge Base index, Story page |
@@ -343,7 +372,7 @@ Before closeout, run a link-oriented check manually or with a future script.
 
 Current manual checks:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
     find . -maxdepth 3 -name "*.html" -print
 
 Future recommended script:
@@ -363,11 +392,32 @@ Do not rely on manual clicking forever.
 
 ---
 
+## Replacement Verification Rule
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm the intended change actually landed and that the old/stale text or link was removed when applicable.
+
+Examples:
+
+    grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
+    grep -n "17 directories, 51 files\|story/index.html" docs/infrastructure/tensa_repository_map.txt
+
+This rule exists to catch:
+
+- paste mistakes
+- missed saves
+- wrong-file edits
+- stale snippets
+- unintended partial replacements
+
+---
+
 ## Current Verified Link Snapshot
 
 Last verified command:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
 Current verified public HTML files:
 
@@ -377,17 +427,19 @@ Current verified public HTML files:
     ./projects/argus-lab.html
     ./projects/index.html
     ./projects/neurocore.html
+    ./story/index.html
 
 Current notable link state:
 
 - Home, Projects, Knowledge Base, Story, and GitHub navigation exists across current public pages.
 - Knowledge Base links point to the real `/knowledge-base/` page.
-- Story links still point to the homepage `#story` section.
+- Story links point to the real `/story/` page.
 - Most GitHub navigation links point to homepage `#proof`.
 - The NeuroCore page currently links directly to the NeuroCore GitHub repo in the header and CTA areas.
 - Argus ACLI links to NeuroCore and Argus Lab.
 - NeuroCore links to Argus ACLI and Argus Lab.
-- Argus Lab now links to Argus ACLI, NeuroCore, and the Projects page from the full public landing page.
+- Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.
+- Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and GitHub proof via current navigation and CTA structure.
 
 ---
 

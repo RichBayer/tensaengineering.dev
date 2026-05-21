@@ -73,6 +73,8 @@ DNS / domain provider:
     │           └── tensa-og-image.png
     ├── docs
     │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
     │   │   ├── documentation_closeout_protocol.md
     │   │   └── tensa_website_resume_prompt.md
     │   ├── infrastructure
@@ -97,11 +99,13 @@ DNS / domain provider:
     │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
+    ├── story
+    │   └── index.html
     └── styles.css
 
 Current size:
 
-    15 directories, 49 files
+    17 directories, 51 files
 
 ---
 
@@ -160,7 +164,7 @@ Current navigation:
 
 - Projects links to `/projects/`.
 - Knowledge Base links to `/knowledge-base/`.
-- Story currently links to the homepage story section.
+- Story links to `/story/`.
 - GitHub currently links to the homepage proof section.
 
 The homepage should remain concise.
@@ -205,6 +209,7 @@ Current sitemap URLs:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/story/
 
 ---
 
@@ -394,6 +399,43 @@ Purpose:
     AI-session continuity documents.
 
 These files help resume work in fresh AI threads without losing project context.
+
+---
+
+### docs/ai-operations/claude/
+
+Purpose:
+
+    Claude-specific AI-operations prompts and guardrails for TENSA website writing workflows.
+
+This directory keeps Claude’s role narrow: prose polish, tone, cadence, and readability while preserving factual boundaries, source-grounded content, HTML structure, metadata, links, and current-vs-future status.
+
+---
+
+### docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+
+Purpose:
+
+    Reusable Claude handoff prompt for polishing TENSA Engineering public website pages.
+
+Current role:
+
+    Defines Claude as the prose polish layer, not the source of truth or project architect.
+
+It includes:
+
+- TENSA ecosystem context
+- Claude role boundaries
+- tone and cadence rules
+- page-type style modifiers
+- factual boundary rules
+- current-vs-future safety rules
+- HTML preservation rules
+- standard Claude prompt
+- optional add-ons for Story, Knowledge Base, Project, Resources, About, Build Notes, and Internal Docs pages
+- required handoff back to ChatGPT for factual proofing
+
+This file was added to preserve consistent tone across the website and reduce style drift when using Claude for public-writing polish.
 
 ---
 
@@ -688,6 +730,7 @@ Current links:
 - Argus ACLI page
 - Argus Lab page
 - Knowledge Base via header navigation
+- Story via header navigation
 
 ---
 
@@ -816,6 +859,68 @@ Do not expand implementation-specific Argus Lab details without updated source d
 
 ---
 
+## story/
+
+Purpose:
+
+    Public Story section for TENSA Engineering ecosystem origin and philosophy.
+
+This directory is the public home for narrative and philosophy pages that explain why TENSA Engineering, NeuroCore, Argus ACLI, Argus Lab, and AI Operations exist.
+
+Story pages should be human, grounded, clear, and public-facing.
+
+They should explain origin and philosophy without becoming hype, internal planning notes, or technical architecture manuals.
+
+---
+
+### story/index.html
+
+Purpose:
+
+    Public origin story page.
+
+Current status:
+
+    Live full public Story page.
+
+Current role:
+
+    Tells the origin story behind NeuroCore and TENSA Engineering through the continuity failure that exposed the lesson:
+
+    Intelligence without continuity is fragile.
+
+Current content covers:
+
+- the day the AI forgot everything
+- early Linux learning and lab-building context
+- reliance on AI as the memory layer
+- documentation becoming project memory
+- workflow discipline beginning to mirror architecture discipline
+- local AI changing the direction
+- real systems requiring control
+- NeuroCore as the platform
+- Argus ACLI as the first practical proof
+- Argus Lab as the future training and validation environment
+- AI Operations as the disciplined way of working that made the system possible
+
+Current branding:
+
+- TENSA header logo
+- TENSA stacked logo in hero
+
+Source basis:
+
+- NeuroCore origin story source material
+- current public project pages
+- AI Operations methodology split source material
+- TENSA content style and page-type rules
+
+Do not turn this page into a technical architecture reference.
+
+Deeper technical definitions belong in the Knowledge Base.
+
+---
+
 ## Current Public Pages
 
 Current public routes:
@@ -826,6 +931,7 @@ Current public routes:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /story/
 
 ---
 
@@ -833,6 +939,7 @@ Current public routes:
 
 Current internal docs:
 
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
@@ -852,7 +959,6 @@ Current internal docs:
 
 These directories do not exist yet but are likely future additions:
 
-    story/
     resources/
     build-notes/
     scripts/
@@ -895,8 +1001,7 @@ Likely future public structure:
     │   ├── troubleshooting-training/
     │   └── neurocore-architecture/
     ├── story/
-    │   ├── index.html
-    │   └── the-day-the-ai-forgot-everything.html
+    │   └── index.html
     ├── build-notes/
     │   └── index.html
     ├── resources/
@@ -909,6 +1014,8 @@ Likely future docs structure:
 
     docs/
     ├── ai-operations/
+    │   ├── claude/
+    │   │   └── claude_website_polish_resume_prompt.md
     │   ├── documentation_closeout_protocol.md
     │   └── tensa_website_resume_prompt.md
     ├── infrastructure/
@@ -956,6 +1063,8 @@ Use full file replacements only.
 
 Do not provide snippets unless explicitly requested.
 
+After each full-file replacement, run a targeted verification check before moving to the next file.
+
 Do not make hidden changes.
 
 No changes the user does not know about.
@@ -976,6 +1085,8 @@ Use project pages for major ecosystem explanations.
 
 Use Knowledge Base pages for focused teaching articles.
 
+Use Story pages for origin, philosophy, and ecosystem narrative.
+
 Use Build Notes pages for readable development history.
 
 GitHub remains the source of truth.
@@ -989,7 +1100,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
 Future recommended replacement for manual link grep:
 
@@ -1053,6 +1164,8 @@ Last known output:
     │           └── tensa-og-image.png
     ├── docs
     │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
     │   │   ├── documentation_closeout_protocol.md
     │   │   └── tensa_website_resume_prompt.md
     │   ├── infrastructure
@@ -1077,6 +1190,8 @@ Last known output:
     │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
+    ├── story
+    │   └── index.html
     └── styles.css
 
-    15 directories, 49 files
+    17 directories, 51 files

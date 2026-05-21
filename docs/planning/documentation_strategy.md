@@ -19,6 +19,8 @@ As the site grows, its internal documentation must stay organized enough to prev
 - strategy documents turning into state documents
 - state documents turning into planning documents
 - AI-assisted build sessions drifting from the real repository
+- AI polish workflows changing tone or facts without review
+- copy/paste replacement mistakes going undetected
 
 The goal of this document is to define what each internal documentation file is responsible for, when it should be updated, and how the documentation system should scale as the public site grows.
 
@@ -36,7 +38,7 @@ The public website explains the ecosystem.
 
 The repositories prove the engineering.
 
-The internal TENSA website docs keep the public site aligned with real project state, real source documents, real page inventory, and real navigation.
+The internal TENSA website docs keep the public site aligned with real project state, real source documents, real page inventory, real navigation, and real workflow rules.
 
 If the documentation system becomes confusing, stale, or overlapping, the website will eventually drift.
 
@@ -62,6 +64,7 @@ The internal documentation system should be organized around these responsibilit
 - documentation closeout
 - search indexing
 - public content style
+- Claude polish workflow
 - SEO planning
 - old-site migration
 - future scripts and validation
@@ -74,6 +77,7 @@ The current core documentation set is:
 
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
     docs/website_state.md
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
@@ -81,7 +85,9 @@ The current core documentation set is:
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/documentation_strategy.md
+    docs/planning/content_style_guide.md
     docs/planning/search_indexing_strategy.md
+    docs/planning/seo_topic_map.md
 
 These docs form the anti-drift system for website build sessions.
 
@@ -146,6 +152,7 @@ It should include:
 - completion gates
 - commit gates
 - full-file replacement rules
+- targeted verification after full-file replacements
 - public vs internal language rules
 
 It should not become:
@@ -163,8 +170,56 @@ Update when:
 - documentation update rules change
 - completion gates change
 - commit/review workflow changes
+- full-file replacement or verification rules change
 
 Do not update it just because a public page was added unless the closeout workflow itself changed.
+
+---
+
+### docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+
+Primary role:
+
+    Claude prose-polish handoff workflow.
+
+This document defines how Claude should be used as a limited website prose-polish layer.
+
+It should include:
+
+- Claude’s role boundaries
+- TENSA ecosystem context
+- base voice and tone rules
+- page-type style modifiers
+- factual boundary rules
+- current-vs-future rules
+- HTML and Markdown preservation rules
+- standard Claude handoff prompt
+- optional add-ons for page types
+- required handoff back to ChatGPT for factual proofing
+
+It should not become:
+
+- the TENSA source of truth
+- a project architecture document
+- a public content style guide replacement
+- a website state document
+- a page inventory
+- a place for unverified project claims
+
+Update when:
+
+- Claude workflow changes
+- page-type modifier rules change
+- public tone/cadence polish rules change
+- factual drift problems are discovered in Claude output
+- HTML/Markdown preservation rules need refinement
+- new page types require Claude-specific add-ons
+
+Claude improves readability.
+
+ChatGPT verifies alignment.
+
+Richard performs final local review and publishes.
 
 ---
 
@@ -208,6 +263,7 @@ Update when:
 - page statuses change
 - major planning docs are added
 - next recommended steps change
+- workflow rules change in a way future sessions need to know
 
 The website state document should reflect reality, not intention.
 
@@ -464,6 +520,50 @@ This document should change rarely but should remain authoritative.
 
 ---
 
+### docs/planning/content_style_guide.md
+
+Primary role:
+
+    Public writing voice, tone, and formatting rules.
+
+This document defines how public-facing TENSA pages should sound and read.
+
+It should include:
+
+- public voice
+- tone
+- page structure patterns
+- current-vs-future wording rules
+- hype avoidance
+- plain-English technical explanation rules
+- story-page style guidance
+- project-page style guidance
+- Knowledge Base style guidance
+- product maturity wording rules
+
+It should not become:
+
+- a source-doc map
+- a page inventory
+- a link strategy
+- a current website state document
+
+Update when:
+
+- public writing standards change
+- page-copy conventions change
+- recurring tone/cadence problems are found
+- public page types need clearer writing rules
+- Claude/ChatGPT polish workflows reveal a style gap
+
+This is the general TENSA public writing standard.
+
+Claude-specific handoff behavior belongs in:
+
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+
+---
+
 ### docs/planning/search_indexing_strategy.md
 
 Primary role:
@@ -510,62 +610,15 @@ Future SEO content strategy belongs in:
 
 ---
 
-## Future Planning Docs
-
-The following docs are recommended future additions.
-
-They should not be created randomly.
-
-Create them when the site has enough real need.
-
----
-
-### docs/planning/content_style_guide.md
-
-Purpose:
-
-    Public writing voice, tone, and formatting rules.
-
-Create when:
-
-- multiple public pages are being written
-- Knowledge Base articles begin expanding
-- tone consistency becomes important
-- more public contributors or AI sessions need writing guidance
-
-Should define:
-
-- public voice
-- tone
-- page structure patterns
-- current-vs-future wording rules
-- how to avoid hype
-- how to explain technical ideas plainly
-- how to handle story content
-- how to handle product maturity claims
-
-Should not duplicate:
-
-- source-doc requirements
-- page inventory
-- link strategy
-
----
-
 ### docs/planning/seo_topic_map.md
 
-Purpose:
+Primary role:
 
     SEO topic planning and article cluster strategy.
 
-Create when:
+This document supports future public content expansion and search-focused educational pages.
 
-- Knowledge Base article planning begins seriously
-- search indexing strategy becomes active
-- topic clusters need organization
-- article priorities need tracking
-
-Should define:
+It should include:
 
 - topic clusters
 - target reader intent
@@ -575,11 +628,34 @@ Should define:
 - relationship to social content
 - priority order
 
-Should not become:
+It should not become:
 
 - a keyword-stuffing document
 - a public copy draft
 - a page inventory replacement
+- a search-indexing operations document
+
+Update when:
+
+- SEO content strategy changes
+- search targets change
+- planned Knowledge Base topics change
+- content cluster priorities change
+- future public article plans change
+
+Technical search discoverability belongs in:
+
+    docs/planning/search_indexing_strategy.md
+
+---
+
+## Future Planning Docs
+
+The following docs are recommended future additions.
+
+They should not be created randomly.
+
+Create them when the site has enough real need.
 
 ---
 
@@ -713,10 +789,16 @@ Update the resume prompt if the branding change affects future session continuit
 
 ### Workflow changes
 
-If build-start, closeout, full-file replacement, or AI-session operating rules change, update:
+If build-start, closeout, full-file replacement, replacement verification, Claude polish workflow, or AI-session operating rules change, update:
 
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
+
+Also update:
+
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+
+if the workflow change affects Claude handoff, prose polish rules, page-type modifiers, or factual proofing.
 
 Also update:
 
@@ -737,6 +819,35 @@ Update the resume prompt only if the change is important for fresh-session conti
 
 ---
 
+## Replacement Verification Rule
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm the intended change actually landed and that old/stale text or links were removed when applicable.
+
+This rule belongs operationally in:
+
+    docs/ai-operations/documentation_closeout_protocol.md
+
+It should also be summarized in:
+
+    docs/ai-operations/tensa_website_resume_prompt.md
+    docs/website_state.md
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/content_source_map.md
+
+The rule exists to catch:
+
+- paste mistakes
+- missed saves
+- wrong-file edits
+- stale snippets
+- unintended partial replacements
+
+---
+
 ## Overlap Prevention Rules
 
 Do not let internal docs compete for ownership.
@@ -750,6 +861,9 @@ Use these boundaries:
 - Source requirements belong in `content_source_map.md`.
 - Link destinations belong in `internal_linking_strategy.md`.
 - Search indexing belongs in `search_indexing_strategy.md`.
+- SEO topic planning belongs in `seo_topic_map.md`.
+- Public content style belongs in `content_style_guide.md`.
+- Claude prose-polish workflow belongs in `claude_website_polish_resume_prompt.md`.
 - Session restart context belongs in `tensa_website_resume_prompt.md`.
 - Closeout workflow belongs in `documentation_closeout_protocol.md`.
 - Documentation ownership belongs in `documentation_strategy.md`.
@@ -824,60 +938,57 @@ When adding a new planning doc:
 
 ## Current Recommended Documentation Roadmap
 
-Near-term:
+Current active documentation system now includes:
 
-1. Create this documentation strategy document.
-2. Add it to the repository map.
-3. Add it to page inventory as an internal planning doc.
-4. Add it to website state as a current planning doc.
-5. Add it to the resume prompt if it becomes a core context doc.
-
-Next planning docs, in likely order:
-
-1. `docs/planning/content_style_guide.md`
-2. `docs/planning/seo_topic_map.md`
-3. `docs/planning/old_site_migration_plan.md`
-
-Search indexing is now tracked in:
-
+    docs/ai-operations/tensa_website_resume_prompt.md
+    docs/ai-operations/documentation_closeout_protocol.md
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+    docs/website_state.md
+    docs/planning/website_information_architecture.md
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/content_source_map.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/documentation_strategy.md
+    docs/planning/content_style_guide.md
     docs/planning/search_indexing_strategy.md
+    docs/planning/seo_topic_map.md
 
-Next utility script:
+Next planning doc, when needed:
 
-1. `scripts/check_internal_links.py`
+    docs/planning/old_site_migration_plan.md
 
-Do not create all of these at once.
+Next utility script, when needed:
 
-Create them when the site expansion makes them useful.
+    scripts/check_internal_links.py
+
+Do not create these until there is enough real need.
 
 ---
 
 ## Immediate Impact of This Document
 
-After this file is created, the following docs should be updated during closeout:
+When this file changes, update related docs only if the documentation responsibility model, workflow rules, or current core documentation set changed.
+
+For this closeout, impacted docs include:
 
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/page_inventory.md
     docs/website_state.md
     docs/ai-operations/tensa_website_resume_prompt.md
+    docs/ai-operations/documentation_closeout_protocol.md
 
 Potentially update:
 
     docs/planning/internal_linking_strategy.md
 
-only if this document changes link strategy. It currently does not.
+only if this document changes link strategy.
 
 Potentially update:
 
     docs/planning/content_source_map.md
 
-only if this document changes source requirements. It currently does not.
-
-Potentially update:
-
-    docs/ai-operations/documentation_closeout_protocol.md
-
-only if this document changes closeout workflow. It currently does not.
+only if this document changes source requirements.
 
 ---
 

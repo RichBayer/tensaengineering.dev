@@ -37,6 +37,8 @@ Current public pages:
     projects/neurocore.html
     projects/argus-acli.html
     projects/argus-lab.html
+    knowledge-base/
+    story/
 
 ---
 
@@ -131,7 +133,7 @@ Current status:
 
 Current role:
 
-The NeuroCore page is a story-first public explainer.
+The NeuroCore page is a public platform explainer.
 
 It explains:
 
@@ -149,7 +151,7 @@ It explains:
 - what NeuroCore became
 - how Argus ACLI and Argus Lab fit
 
-The page should remain story-first.
+The page should remain public-facing.
 
 Do not turn it into a dry architecture manual.
 
@@ -214,13 +216,13 @@ Path:
 
 Current status:
 
-    Placeholder
+    Live
 
 Current role:
 
-The Argus ACLI page should eventually explain Argus as the first practical product / distribution built on NeuroCore.
+The Argus ACLI page explains Argus as the first practical product / distribution built on NeuroCore.
 
-It should explain:
+It explains:
 
 - what Argus ACLI is
 - why read-only diagnostics matter
@@ -239,7 +241,7 @@ It should explain:
 
 ### Required Source Docs
 
-Use these before writing the full Argus ACLI page:
+Use these before rewriting or significantly expanding the Argus ACLI page:
 
     NeuroCore docs/vision/argus_acli_vision.md
     NeuroCore docs/how_argus_works.md
@@ -355,38 +357,21 @@ Core idea:
 
 ## Knowledge Base Index
 
-Future path:
+Path:
 
     knowledge-base/index.html
 
 Current status:
 
-    Not created
+    Structure-only
 
-Future role:
+Current role:
 
-The Knowledge Base should become the public teaching layer for concepts that appear across the ecosystem.
+The Knowledge Base is the public teaching layer for concepts that appear across the ecosystem.
 
-It should teach the ideas behind the projects without dumping raw technical docs into public pages.
+It teaches the ideas behind the projects without dumping raw technical docs into public pages.
 
----
-
-### Required Source Docs Before Creating
-
-Use:
-
-    docs/planning/website_information_architecture.md
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-    docs/infrastructure/tensa_repository_map.txt
-
-Use source docs from the relevant project whenever a knowledge base page makes specific claims.
-
----
-
-### Initial Knowledge Base Categories
-
-Likely categories:
+Current index topics include:
 
     Controlled AI Systems
     AI Operations
@@ -399,31 +384,108 @@ Likely categories:
 
 ---
 
-## Story Index
-
-Future path:
-
-    story/index.html
-
-Current status:
-
-    Not created
-
-Future role:
-
-The Story section should explain the origin and philosophy behind TENSA Engineering, NeuroCore, Argus ACLI, and Argus Lab.
-
-It should preserve the real story without making the homepage too long.
-
----
-
-### Required Source Docs Before Creating
+### Required Source Docs Before Major Knowledge Base Index Rewrite
 
 Use:
 
     docs/planning/website_information_architecture.md
     docs/website_state.md
     docs/ai-operations/tensa_website_resume_prompt.md
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+
+Use source docs from the relevant project whenever a Knowledge Base page makes specific factual claims.
+
+---
+
+### Required Source Docs Before Creating Knowledge Base Articles
+
+For concept articles, use the relevant source documents from:
+
+    NeuroCore architecture docs
+    NeuroCore design docs
+    NeuroCore build logs
+    Argus ACLI source docs
+    Argus Lab source docs
+    TENSA AI-operations docs
+    TENSA content style guide
+    TENSA internal linking strategy
+
+Do not write factual Knowledge Base articles from memory.
+
+---
+
+## Story Page
+
+Path:
+
+    story/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+The Story page explains the origin and philosophy behind TENSA Engineering, NeuroCore, Argus ACLI, Argus Lab, and AI Operations.
+
+It preserves the real origin story without making the homepage too long.
+
+The Story page explains:
+
+- the day the AI forgot everything
+- why AI memory failed as a project continuity layer
+- why documentation became project memory
+- why workflow discipline started to mirror architecture discipline
+- how local AI changed the direction
+- why real systems required control
+- how NeuroCore emerged
+- how Argus ACLI became the first practical proof
+- how Argus Lab became the future training and validation environment
+- how AI Operations became the disciplined way of working behind the ecosystem
+
+Important:
+
+The Story page should remain human, readable, and grounded.
+
+Do not turn it into:
+
+    a technical architecture manual
+    a Knowledge Base article
+    a roadmap dump
+    an internal planning note
+    a marketing hype page
+
+Deeper technical definitions belong in the Knowledge Base.
+
+---
+
+### Source Docs Used For Current Story Page
+
+Current full page was written from:
+
+    NeuroCore origin story source material
+    The Day The AI Forgot Everything source material
+    AI Operations methodology split source material
+    Current public NeuroCore page
+    Current public Argus ACLI page
+    Current public Argus Lab page
+    docs/planning/content_style_guide.md
+    docs/planning/website_information_architecture.md
+    docs/website_state.md
+
+---
+
+### Required Source Docs Before Major Story Rewrite
+
+Use:
+
+    docs/planning/website_information_architecture.md
+    docs/website_state.md
+    docs/ai-operations/tensa_website_resume_prompt.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
 
 Use origin story material:
 
@@ -431,11 +493,18 @@ Use origin story material:
     The Day The AI Forgot Everything source material
     AI Operations / continuity workflow source material
 
+Use public project pages when changing ecosystem relationship language:
+
+    projects/neurocore.html
+    projects/argus-acli.html
+    projects/argus-lab.html
+
+Use specific NeuroCore / Argus / Argus Lab source docs if adding deeper technical claims.
+
 ---
 
-### Potential Story Pages
+### Potential Future Story / Philosophy Pages
 
-    story/the-day-the-ai-forgot-everything.html
     story/intelligence-without-continuity-is-fragile.html
     story/documentation-as-operational-memory.html
     story/ai-needs-structure-not-just-better-prompts.html
@@ -528,11 +597,15 @@ It may mention the origin story, but the deeper origin story belongs in the Stor
 
 Recommended future docs:
 
+    docs/planning/old_site_migration_plan.md
+
+Existing core docs:
+
     docs/planning/page_inventory.md
     docs/planning/content_style_guide.md
     docs/planning/internal_linking_strategy.md
     docs/planning/seo_topic_map.md
-    docs/planning/old_site_migration_plan.md
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
 
 ---
 
@@ -553,6 +626,27 @@ Public pages should:
 
 ---
 
+## Replacement Verification Rule
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm the intended change actually landed and that old/stale text or links were removed when applicable.
+
+Examples:
+
+    grep -n "story/index.html\|Knowledge Base Index\|Argus ACLI Page" docs/planning/content_source_map.md
+    grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
+
+This rule exists to catch:
+
+- paste mistakes
+- missed saves
+- wrong-file edits
+- stale snippets
+- unintended partial replacements
+
+---
+
 ## Anti-Drift Rules
 
 Always check:
@@ -566,6 +660,8 @@ Always check:
 Before major work.
 
 Use full file replacements only.
+
+After each full-file replacement, run a targeted verification check before moving to the next file.
 
 No hidden changes.
 

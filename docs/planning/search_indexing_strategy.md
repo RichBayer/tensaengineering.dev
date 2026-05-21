@@ -18,6 +18,7 @@ It exists to prevent:
 - page additions not being reflected in indexing files
 - SEO planning being mixed into unrelated website docs
 - accidental overstatement of search readiness
+- copy/paste replacement mistakes going undetected during indexing closeout
 
 This is an internal planning document.
 
@@ -47,6 +48,7 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /story/
 
 Current search-indexing status:
 
@@ -61,6 +63,7 @@ Current search-indexing status:
     sitemap submitted successfully to Google
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
+    /story/ added to sitemap locally during Story page closeout
 
 ---
 
@@ -103,11 +106,11 @@ For the live site, these should resolve as:
 
 ## Current Sitemap Plan
 
-Create a root-level sitemap file:
+The root-level sitemap file is:
 
     sitemap.xml
 
-The initial sitemap should include only the current real public pages:
+The current sitemap should include only the current real public pages:
 
     https://tensaengineering.dev/
     https://tensaengineering.dev/projects/
@@ -115,10 +118,10 @@ The initial sitemap should include only the current real public pages:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/story/
 
 Do not include:
 
-    /story/
     /resources/
     /build-notes/
     /about.html
@@ -147,6 +150,7 @@ Directory index pages should use clean directory URLs when appropriate:
 
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/story/
 
 Standalone HTML pages should use their actual paths:
 
@@ -159,14 +163,15 @@ Avoid duplicate sitemap entries such as:
     https://tensaengineering.dev/index.html
     https://tensaengineering.dev/projects/index.html
     https://tensaengineering.dev/knowledge-base/index.html
+    https://tensaengineering.dev/story/index.html
 
 when the clean directory URL is the preferred public route.
 
 ---
 
-## Initial sitemap.xml Content
+## Current sitemap.xml Content
 
-Initial root-level `sitemap.xml` should use this structure:
+Current root-level `sitemap.xml` should use this structure:
 
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -188,6 +193,9 @@ Initial root-level `sitemap.xml` should use this structure:
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/</loc>
       </url>
+      <url>
+        <loc>https://tensaengineering.dev/story/</loc>
+      </url>
     </urlset>
 
 Do not add `lastmod` until there is a reliable maintenance process.
@@ -198,18 +206,18 @@ Incorrect or stale `lastmod` values are worse than omitting them.
 
 ## Current robots.txt Plan
 
-Create a root-level robots file:
+The root-level robots file is:
 
     robots.txt
 
-Initial purpose:
+Current purpose:
 
 - allow normal crawling
 - point crawlers to the sitemap
 - avoid accidentally blocking public pages
 - establish a standard root-level crawler guidance file
 
-Initial root-level `robots.txt` should contain:
+Current root-level `robots.txt` should contain:
 
     User-agent: *
     Allow: /
@@ -250,6 +258,9 @@ Google Search Console setup steps:
 6. Inspect the homepage URL.
 7. Request indexing for the homepage if appropriate.
 8. Monitor indexing status and sitemap processing errors.
+9. After new public pages are added and deployed, confirm the updated sitemap is processed and inspect important new URLs such as:
+
+       https://tensaengineering.dev/story/
 
 Preferred verification method:
 
@@ -285,6 +296,7 @@ Bing setup steps:
 5. Confirm Bing can fetch the sitemap.
 6. Monitor sitemap processing status.
 7. Monitor crawl/indexing issues.
+8. After new public pages are added and deployed, confirm Bing can see the updated sitemap.
 
 Possible verification methods:
 
@@ -300,7 +312,7 @@ Preferred method:
 
 ## Search Engine Registration Order
 
-Recommended order:
+Recommended order for initial setup:
 
 1. Create `sitemap.xml`.
 2. Create `robots.txt`.
@@ -318,6 +330,17 @@ Recommended order:
 10. Record completion status in this document and `docs/website_state.md`.
 
 Do not submit the sitemap before it is live and reachable.
+
+For later public page additions:
+
+1. Add the real public page.
+2. Add the new public route to `sitemap.xml`.
+3. Verify the sitemap locally.
+4. Commit and push.
+5. Wait for GitHub Pages deployment.
+6. Confirm the live sitemap includes the new URL.
+7. Inspect the new page in Google Search Console if appropriate.
+8. Monitor Bing after its next sitemap fetch.
 
 ---
 
@@ -431,6 +454,8 @@ When new public pages are added, update:
     docs/planning/internal_linking_strategy.md
     docs/website_state.md
     docs/infrastructure/tensa_repository_map.txt
+    docs/planning/content_source_map.md if source requirements changed or a factual page type was added
+    docs/planning/search_indexing_strategy.md if sitemap/indexing state changed
 
 Also update this document if the indexing workflow changes.
 
@@ -544,7 +569,7 @@ For the current site size, manual sitemap maintenance is acceptable.
 
 This document is not the SEO topic map.
 
-A future SEO planning file may be created:
+SEO topic planning lives in:
 
     docs/planning/seo_topic_map.md
 
@@ -574,52 +599,57 @@ SEO topic planning is content strategy.
 
 ---
 
+## Replacement Verification Rule
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm the intended change actually landed and that old/stale text or links were removed when applicable.
+
+Examples:
+
+    grep -n "https://tensaengineering.dev/story/\|/story/ added to sitemap" docs/planning/search_indexing_strategy.md
+    grep -n "https://tensaengineering.dev/story/" sitemap.xml
+
+This rule exists to catch:
+
+- paste mistakes
+- missed saves
+- wrong-file edits
+- stale snippets
+- unintended partial replacements
+
+---
+
 ## Current Recommended Next Steps
 
 Immediate next steps:
 
-1. Create this file:
+1. Commit and push the Story page, navigation updates, sitemap update, Claude polish prompt, and closeout documentation updates.
 
-       docs/planning/search_indexing_strategy.md
+2. Wait for GitHub Pages deployment to complete.
 
-2. Confirm root-level files exist:
+3. Confirm these URLs load in the browser:
 
-       sitemap.xml
-       robots.txt
-
-3. Confirm social preview image exists:
-
-       assets/images/social/tensa-og-image.png
-
-4. Run:
-
-       git status --short
-       tree -a -I '.git|.obsidian|node_modules|__pycache__'
-       find . -maxdepth 3 -name "*.html" -print
-       grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
-
-5. Update impacted closeout docs:
-
-       docs/infrastructure/tensa_repository_map.txt
-       docs/planning/page_inventory.md
-       docs/website_state.md
-       docs/ai-operations/tensa_website_resume_prompt.md
-       docs/planning/documentation_strategy.md
-
-6. Commit and push.
-
-7. Confirm live files:
-
+       https://tensaengineering.dev/story/
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-8. Register with Google Search Console.
+4. Confirm the live sitemap includes:
 
-9. Submit sitemap to Google.
+       https://tensaengineering.dev/story/
 
-10. Register with or import into Bing Webmaster Tools.
+5. Inspect the new Story URL in Google Search Console if appropriate:
 
-11. Submit sitemap to Bing.
+       https://tensaengineering.dev/story/
+
+6. Monitor Google and Bing sitemap processing after deployment.
+
+Later next steps:
+
+- create Resources if organizing GitHub, future videos, downloads, and public links becomes the priority
+- create About if concise TENSA mission/builder identity becomes the priority
+- create Knowledge Base categories if the teaching layer becomes the priority
+- create Build Notes if public development history becomes the next content lane
 
 ---
 
@@ -646,6 +676,11 @@ Search indexing foundation is complete when:
 - repo map includes the new files
 - page inventory reflects search/indexing support files where appropriate
 - resume prompt includes search/indexing status if useful for future sessions
+
+After the Story page closeout deploys, confirm:
+
+- `https://tensaengineering.dev/story/` is reachable
+- the live sitemap includes `https://tensaengineering.dev/story/`
 
 ---
 

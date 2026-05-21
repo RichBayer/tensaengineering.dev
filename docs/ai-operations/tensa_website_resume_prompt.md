@@ -23,9 +23,11 @@ DNS / domain:
 
 Current repository size:
 
-    Verify at build start with:
+    17 directories, 51 files
 
-        tree -a -I '.git|.obsidian|node_modules|__pycache__'
+Verify at build start with:
+
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
 
 Do not rely on an old repository size count.
 
@@ -40,6 +42,7 @@ Do not rely on an old repository size count.
 - Ask for exact docs or files when context is missing.
 - Use full file replacements only.
 - Do NOT provide snippets unless explicitly requested.
+- After each full-file replacement, run a targeted verification check before moving to the next file.
 - Do NOT make hidden changes.
 - Do NOT invent public-facing claims.
 - Do NOT write factual project pages without checking source requirements.
@@ -75,6 +78,7 @@ Request or load these docs at the start of serious website sessions:
 
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
     docs/website_state.md
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
@@ -93,6 +97,9 @@ Purpose:
 
     documentation_closeout_protocol.md
         documentation closeout workflow for serious website build sessions
+
+    claude_website_polish_resume_prompt.md
+        Claude prose-polish handoff workflow and guardrails
 
     website_state.md
         current live-state record
@@ -133,7 +140,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
 For diff checks, prefer no-pager output to avoid clipped terminal pager output:
 
@@ -165,9 +172,11 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /story/
 
 Current internal planning / continuity docs:
 
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
     docs/infrastructure/tensa_repository_map.txt
@@ -189,6 +198,7 @@ Current public page status:
     /projects/argus-acli.html   Live full Argus ACLI public product page
     /projects/argus-lab.html    Live full Argus Lab public landing page
     /knowledge-base/            Structure-only Knowledge Base index
+    /story/                     Live full public Story page
 
 ---
 
@@ -215,6 +225,7 @@ Current sitemap contains canonical HTTPS non-www URLs for:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/story/
 
 Current SEO/social metadata:
 
@@ -223,6 +234,7 @@ Current SEO/social metadata:
 - public HTML pages use Open Graph metadata where currently implemented
 - public HTML pages use Twitter large-image card metadata where currently implemented
 - public HTML pages use the dedicated TENSA social preview image where currently implemented
+- public HTML pages use JSON-LD structured data where currently implemented
 
 Current social preview asset:
 
@@ -234,6 +246,7 @@ Current search registration status:
     sitemap submitted successfully to Google
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
+    /story/ added to sitemap locally during Story page closeout
 
 Known Search Console status:
 
@@ -244,6 +257,18 @@ Known Search Console status:
 This is expected and harmless because those are alternate redirect versions. The intended canonical indexed version is:
 
     https://tensaengineering.dev/
+
+Post-deploy search checks after the Story page closeout:
+
+- Confirm the live Story page loads:
+
+      https://tensaengineering.dev/story/
+
+- Confirm the live sitemap includes:
+
+      https://tensaengineering.dev/story/
+
+- Inspect the Story URL in Google Search Console if appropriate.
 
 Future SEO work:
 
@@ -281,11 +306,11 @@ Correct structure:
     Project pages
         major system explanations
 
-    Knowledge Base
-        educational concept pages
-
     Story
         origin and philosophy
+
+    Knowledge Base
+        educational concept pages
 
     Build Notes
         readable public development history
@@ -339,6 +364,23 @@ Argus Lab:
 - mentor-style AI guidance
 - validation environment for NeuroCore, Argus ACLI, and model-guided troubleshooting
 
+Story:
+
+- public origin and philosophy page
+- explains the continuity failure that started NeuroCore
+- explains why documentation became project memory
+- connects the origin story to NeuroCore, Argus ACLI, Argus Lab, and AI Operations
+
+AI Operations:
+
+- disciplined AI-assisted workflow
+- documentation as memory
+- source-grounded session continuity
+- anti-drift guardrails
+- closeout protocols
+- resume prompts
+- human review and local verification
+
 GitHub:
 
 - engineering proof
@@ -349,6 +391,37 @@ GitHub:
 Knowledge Base:
 
 - public teaching layer for philosophy, architecture, AI operations, diagnostics, training systems, memory/context systems, and long-term platform vision
+
+---
+
+# CURRENT CLAUDE POLISH WORKFLOW
+
+A Claude-specific website polish prompt now exists at:
+
+    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+
+Purpose:
+
+- preserve consistent tone and cadence across TENSA public pages
+- let Claude polish readability without becoming the source of truth
+- keep ChatGPT as the factual proofing / alignment layer
+- preserve HTML structure, metadata, links, CSS classes, and current-vs-future boundaries
+- reduce drift when using Claude for wording polish
+
+Recommended workflow:
+
+    ChatGPT prepares technically accurate public-page draft
+    Claude polishes readability and cadence using the constrained prompt
+    ChatGPT reviews Claude output for factual drift, invented claims, maturity drift, and formatting issues
+    Richard reviews locally in browser before publishing
+
+Important:
+
+Claude should not be treated as project source of truth.
+
+Claude improves readability.
+
+Source docs and ChatGPT proofing preserve accuracy.
 
 ---
 
@@ -369,6 +442,7 @@ Current branding behavior:
 - NeuroCore page hero uses the NeuroCore stacked logo
 - Argus ACLI page hero uses the Argus ACLI stacked logo
 - Argus Lab page hero uses the Argus Lab stacked logo
+- Story page hero uses the TENSA stacked logo
 - homepage and Projects page project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - header logo removes the tiny unreadable subtitle line
@@ -401,16 +475,12 @@ Current targets:
     Home → /index.html
     Projects → /projects/
     Knowledge Base → /knowledge-base/
-    Story → /index.html#story
+    Story → /story/
     GitHub → /index.html#proof or GitHub repo depending on page
 
 Knowledge Base now points to the real `/knowledge-base/` page.
 
-Story and GitHub are temporary homepage anchors until dedicated sections exist.
-
-When `/story/` is created:
-
-    update Story navigation across all public pages
+Story now points to the real `/story/` page.
 
 When `/resources/` or GitHub/resources page is created:
 
@@ -435,23 +505,28 @@ Completed so far:
 - Argus ACLI full public page created
 - Argus Lab full public landing page created
 - Knowledge Base index created
+- Story page created
 - branding asset hierarchy created
 - TENSA, NeuroCore, Argus ACLI, and Argus Lab logos added
 - transparent logo variants created
 - header-optimized TENSA logo created
 - branding integrated across all current public pages
 - Knowledge Base nav links updated across current pages
+- Story nav links updated across current pages
 - repository map created and updated
 - website state created and updated
-- content source map created
-- page inventory created
-- internal linking strategy created
-- documentation closeout protocol created
-- documentation strategy created
-- search indexing strategy created
+- content source map created and updated
+- page inventory created and updated
+- internal linking strategy created and updated
+- documentation closeout protocol created and updated
+- documentation strategy created and updated
+- search indexing strategy created and updated
 - content style guide created
 - SEO topic map created
+- Claude website polish resume prompt created
+- targeted verification rule added to closeout workflow
 - root sitemap.xml created
+- `/story/` added to sitemap.xml
 - root robots.txt created
 - dedicated 1200 x 630 TENSA social preview image created
 - canonical URLs added across current public HTML pages
@@ -464,6 +539,27 @@ Completed so far:
 - sitemap submitted to Bing and processing
 
 Recent completed website work:
+
+- `story/index.html` created as a full public Story page.
+- Story page explains:
+    - the day the AI forgot everything
+    - AI memory failure as a project continuity problem
+    - documentation becoming project memory
+    - workflow discipline beginning to mirror architecture discipline
+    - local AI changing the direction
+    - real systems requiring control
+    - NeuroCore as the platform
+    - Argus ACLI as the first practical proof
+    - Argus Lab as the future training and validation environment
+    - AI Operations as the disciplined way of working behind the ecosystem
+- Story page was drafted by ChatGPT, polished by Claude using constrained instructions, proofed by ChatGPT, and reviewed locally by Richard.
+- Primary navigation updated so Story points to `/story/`.
+- Homepage Story preview now links to `/story/`.
+- `sitemap.xml` updated to include `https://tensaengineering.dev/story/`.
+- `docs/ai-operations/claude/claude_website_polish_resume_prompt.md` created to preserve Claude polish workflow and reduce tone drift.
+- Closeout docs updated for the new Story page, Claude prompt, sitemap entry, navigation changes, and targeted verification workflow.
+
+Previous completed website work:
 
 - `projects/neurocore.html` updated with a stronger public platform story.
 - NeuroCore page architecture section replaced with a visual architecture showcase.
@@ -508,7 +604,6 @@ Recent completed website work:
 
 Not yet completed:
 
-- Story index page
 - Resources page
 - About page
 - Build Notes section
@@ -520,6 +615,8 @@ Not yet completed:
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - optional sitemap lastmod dates
+- live sitemap confirmation after Story deployment
+- Google Search Console inspection of Story URL after deployment if appropriate
 
 ---
 
@@ -541,7 +638,7 @@ Before assuming file paths or repo structure, check:
 
     docs/infrastructure/tensa_repository_map.txt
 
-Do not write full factual Argus ACLI, Argus Lab, NeuroCore, or Knowledge Base pages without the required source docs.
+Do not write full factual Argus ACLI, Argus Lab, NeuroCore, Story, or Knowledge Base pages without the required source docs.
 
 ---
 
@@ -589,6 +686,28 @@ For mechanical multi-file link corrections, command-based edits are acceptable o
 
 ---
 
+# REPLACEMENT VERIFICATION RULE
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm:
+
+- the intended new text, link, or status exists
+- stale text, links, or statuses were removed when applicable
+- the correct file was edited
+- the file was saved
+- no obvious paste truncation occurred
+
+Example checks:
+
+    grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
+    grep -n "17 directories, 51 files\|story/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "https://tensaengineering.dev/story/" sitemap.xml
+
+Do not move to the next replacement until verification passes or the mismatch is understood and corrected.
+
+---
+
 # DOCUMENTATION CLOSEOUT RULES
 
 During closeout:
@@ -600,6 +719,7 @@ During closeout:
 - Preserve unchanged sections unless modification is needed.
 - Explain what each closeout doc update is meant to capture.
 - Keep closeout docs aligned with real repo state.
+- Run targeted verification after each full-file replacement.
 
 Closeout docs usually include:
 
@@ -617,25 +737,31 @@ Update only the docs actually impacted by the session.
 
 Recommended next website move:
 
-    Choose the next public structure deliberately.
+    Complete this closeout, commit, push, and verify the live Story page and sitemap after deployment.
 
-Recommended next public-page options:
+After deployment, confirm:
 
-    /story/index.html
+    https://tensaengineering.dev/story/
+    https://tensaengineering.dev/sitemap.xml
+    https://tensaengineering.dev/robots.txt
+
+Recommended next public-page options after this closeout:
+
     /resources/index.html
     /about.html
     first Knowledge Base category pages
+    /build-notes/index.html
 
 Reason:
 
-NeuroCore, Argus ACLI, and Argus Lab now all have full public project pages. The next major website step should expand the surrounding public structure rather than continuing to overload project pages.
+NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, and Story now all have public site structure. The next major website step should either organize public resources, add concise organizational identity, or begin focused teaching articles.
 
 Likely next direction:
 
-- create the Story section if preserving the origin/philosophy is the priority
 - create Resources if organizing GitHub, future videos, downloads, and public links is the priority
 - create About if a concise TENSA mission/builder page is needed
 - create Knowledge Base categories if the teaching layer becomes the next focus
+- create Build Notes if public development history becomes the next content lane
 
 ---
 
@@ -643,21 +769,21 @@ Likely next direction:
 
 Possible next public work:
 
-1. Create `/story/index.html`.
-2. Create `/resources/index.html`.
-3. Create `/about.html`.
-4. Create first Knowledge Base category pages.
+1. Create `/resources/index.html`.
+2. Create `/about.html`.
+3. Create first Knowledge Base category pages.
+4. Create `/build-notes/index.html`.
 5. Add deeper SEO/metadata pass for updated NeuroCore page.
 6. Add sitemap lastmod dates.
 7. Create internal link checker script.
 
 Recommended next direction:
 
-    Expand the site structure around the completed project pages.
+    Expand the site structure around the completed project pages and completed Story page.
 
 Reason:
 
-The core project pages now exist for NeuroCore, Argus ACLI, and Argus Lab. Future work should add supporting public sections, teaching pages, resource organization, and story/mission context.
+The core project pages now exist for NeuroCore, Argus ACLI, and Argus Lab, and the Story page now preserves the origin/philosophy layer. Future work should add supporting public sections, teaching pages, resource organization, and public development history.
 
 ---
 

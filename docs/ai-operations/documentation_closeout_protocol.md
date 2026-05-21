@@ -16,6 +16,7 @@ It exists to prevent:
 - public pages that outgrow the documentation system
 - internal planning language leaking into public pages
 - factual claims being written without source docs
+- full-file replacement mistakes going undetected
 
 This is an AI-operations control document for website build sessions.
 
@@ -43,6 +44,10 @@ If a factual page is expanded:
 
     source requirements must be checked first
 
+If a full-file replacement is made:
+
+    verify the intended change landed before moving on
+
 ---
 
 ## When This Protocol Is Triggered
@@ -56,6 +61,7 @@ Run this protocol:
 - after adding new asset directories or branding files
 - after changing navigation
 - after creating or changing planning docs
+- when workflow rules change
 - when explicitly requested by the user
 
 This protocol should not be skipped.
@@ -95,7 +101,7 @@ Before updating closeout docs, run or request output for:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
 Purpose:
 
@@ -119,6 +125,7 @@ User:
 - confirms when the build session is ending
 - provides missing context if requested
 - reviews closeout replacements before saving
+- runs targeted verification commands after replacements
 - confirms whether optional broader cleanup should be included
 
 Assistant:
@@ -130,6 +137,7 @@ Assistant:
 - preserves verified information
 - does not invent file paths, page status, or future plans
 - keeps public-facing content separate from internal planning content
+- provides targeted verification commands after each full-file replacement
 
 The assistant is responsible for identifying documentation impact, but must not make undocumented assumptions.
 
@@ -141,14 +149,18 @@ Use this order during website closeout:
 
 1. Confirm build-end command output
 2. Identify impacted files and docs
-3. Update repository map if structure changed
-4. Update page inventory if pages were created, removed, renamed, or changed status
-5. Update internal linking strategy if navigation or major link destinations changed
-6. Update content source map if new page types or source requirements changed
-7. Update website state
-8. Update resume prompt if workflow, structure, rules, or current state changed
-9. Run final status and review diff
-10. Commit and push after user approval
+3. Update public HTML and indexing files if navigation or sitemap changed
+4. After each full-file replacement, run a targeted verification check
+5. Update repository map if structure changed
+6. Update page inventory if pages were created, removed, renamed, or changed status
+7. Update internal linking strategy if navigation or major link destinations changed
+8. Update content source map if new page types or source requirements changed
+9. Update search indexing strategy if sitemap, robots, or indexing state changed
+10. Update documentation strategy if internal doc ownership or workflow rules changed
+11. Update website state
+12. Update resume prompt if workflow, structure, rules, or current state changed
+13. Run final status and review diff
+14. Commit and push after user approval
 
 ---
 
@@ -165,6 +177,7 @@ Examples:
 - new public directory
 - new asset directory
 - new planning doc
+- new AI-operations doc directory
 - new script directory
 - renamed or removed files
 - major tree structure change
@@ -260,15 +273,37 @@ Update:
 
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
+    docs/planning/documentation_strategy.md
     docs/website_state.md if the change affects future build-start or closeout expectations
 
 Examples:
 
 - new mandatory build-start command
 - new full-file replacement rule
+- new replacement verification rule
 - new link-checking workflow
 - new source-doc rule
 - new documentation governance rule
+
+---
+
+### If search indexing changed
+
+Update:
+
+    docs/planning/search_indexing_strategy.md
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/page_inventory.md
+    docs/website_state.md
+    docs/ai-operations/tensa_website_resume_prompt.md if future sessions need to know
+
+Examples:
+
+- sitemap.xml changed
+- robots.txt changed
+- new public URL added to sitemap
+- indexing workflow changed
+- Google Search Console or Bing status changed
 
 ---
 
@@ -276,17 +311,20 @@ Examples:
 
 | Change Type | Required Docs |
 |---|---|
-| New public page | repo map, page inventory, internal linking strategy, website state |
+| New public page | repo map, page inventory, internal linking strategy, website state, sitemap if public URL should be indexed |
 | New public directory | repo map, page inventory, website state |
 | New asset directory or branding assets | repo map, website state, resume prompt if important |
 | Navigation changed | internal linking strategy, page inventory, website state, affected HTML pages |
 | Public page status changed | page inventory, website state, resume prompt if major |
 | Factual project page expanded | content source map checked, page inventory, website state, internal linking strategy |
-| Knowledge Base category added | page inventory, internal linking strategy, content source map, website state |
-| New planning doc created | repo map, website state, resume prompt if it becomes core context |
-| New workflow rule added | resume prompt, closeout protocol, website state if relevant |
+| Knowledge Base category added | page inventory, internal linking strategy, content source map, website state, sitemap |
+| Story page added | page inventory, internal linking strategy, content source map, website state, sitemap |
+| New planning doc created | repo map, page inventory if important, documentation strategy, website state, resume prompt if it becomes core context |
+| New AI-operations doc created | repo map, page inventory if important, documentation strategy, website state, resume prompt if it becomes core context |
+| New workflow rule added | resume prompt, closeout protocol, documentation strategy, website state if relevant |
 | Old-site migration decision made | old-site migration plan, website state, resume prompt if major |
 | SEO/content strategy changed | SEO topic map, website state, resume prompt if major |
+| Sitemap changed | search indexing strategy, repo map, website state, resume prompt if useful |
 
 ---
 
@@ -332,6 +370,38 @@ If multiple files need updates, handle them one at a time unless the user asks f
 For Markdown files, avoid nested triple-backtick fences inside copy blocks when possible.
 
 Use indented text blocks inside Markdown documents to avoid breaking the outer copy block.
+
+---
+
+## Replacement Verification Rule
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm that:
+
+- the intended new text, link, or status exists
+- the stale text, link, or status was removed when applicable
+- the correct file was edited
+- the file was saved
+- no obvious paste truncation occurred
+
+Examples:
+
+    grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
+    grep -n "17 directories, 51 files\|story/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "https://tensaengineering.dev/story/" sitemap.xml
+
+This rule exists to catch:
+
+- paste mistakes
+- missed saves
+- wrong-file edits
+- stale snippets
+- unintended partial replacements
+- copy/paste truncation
+- accidental edits to the wrong file
+
+Do not continue to the next replacement until the targeted verification check passes or the mismatch is understood and corrected.
 
 ---
 
@@ -418,6 +488,14 @@ Once `/knowledge-base/` exists:
 not:
 
     `#knowledge`
+
+Once `/story/` exists:
+
+    Story nav should point to `/story/`
+
+not:
+
+    `/index.html#story`
 
 ---
 
@@ -549,15 +627,16 @@ If a public page sounds like an internal planning document:
 
 Before closeout, run:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
 Confirm:
 
 - Knowledge Base points to `/knowledge-base/`
-- Story temporary links point to homepage story anchor until `/story/` exists
-- GitHub temporary links point to homepage proof anchor until Resources exists
+- Story points to `/story/` once `/story/` exists
+- GitHub temporary links point to homepage proof anchor until Resources exists, except pages intentionally linking directly to GitHub
 - project links point to real project pages
 - no stale `#knowledge` navigation remains except homepage section IDs or labels
+- no stale `/index.html#story` navigation remains once `/story/` exists
 - no dead internal paths were introduced
 
 Future recommended script:
@@ -578,10 +657,13 @@ Before declaring closeout complete, verify:
 - page inventory is updated if pages changed
 - internal linking strategy is updated if links changed
 - content source map is updated if source requirements changed
+- search indexing strategy is updated if sitemap or indexing state changed
+- documentation strategy is updated if workflow or doc ownership changed
 - website state is updated
 - resume prompt is updated if current state or workflow changed
 - public pages do not contain internal planning language
 - all changed public pages were locally previewed or user-confirmed
+- targeted verification checks passed after full-file replacements
 - final diff/status is ready for review
 
 If any required condition fails:
@@ -616,6 +698,10 @@ or:
 
     Update TENSA website continuity docs
 
+or:
+
+    Add TENSA Story page and update navigation
+
 Choose the message based on the actual work completed.
 
 ---
@@ -628,4 +714,4 @@ If documentation is wrong:
 
     the website system is wrong
 
-No serious website build session is complete until documentation, navigation, page inventory, link strategy, and repository state are aligned with reality.
+No serious website build session is complete until documentation, navigation, page inventory, link strategy, repository state, and verification checks are aligned with reality.

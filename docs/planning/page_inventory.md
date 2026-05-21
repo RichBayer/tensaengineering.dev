@@ -56,12 +56,13 @@ Definitions:
 
 | Path | Page Title | Type | Status | Purpose | Source Docs Required | Navigation Status | Next Action |
 |---|---|---|---|---|---|---|---|
-| `/index.html` | TENSA Engineering | Homepage | Live | Introduces TENSA Engineering, the ecosystem, core philosophy, project cards, knowledge-base direction, origin story preview, and GitHub proof. | Website state, website information architecture, resume prompt, repository map. Project source docs only if factual project claims change. | Linked as Home from all current public pages. Header links to `/projects/`, `/knowledge-base/`, `#story`, and `#proof`. | Keep concise as front door. Do not turn into full knowledge base. |
-| `/projects/index.html` | Projects | Public index page | Live | Explains the ecosystem structure and routes visitors to NeuroCore, Argus ACLI, and Argus Lab. | Website state, website information architecture, resume prompt, repository map. Project source docs if descriptions are expanded. | Linked from homepage and all current public headers. | Keep as ecosystem router. Expand only if needed for clarity. |
-| `/projects/neurocore.html` | NeuroCore | Project detail page | Live | Public NeuroCore platform page explaining local-first governed AI runtime, continuity, current RAG/retrieval foundation, future memory direction, control plane architecture, Argus diagnostics flow, model explanation, and near-term Kernel-Up / Service Intelligence expansion. | NeuroCore vision, platform ecosystem, system architecture, system state, control plane, tool execution, security/policy docs, memory/context docs, service intelligence docs, and relevant build logs if factual claims change. | Linked from homepage project card, Projects page, Argus ACLI page, Argus Lab page, and footer / CTA links. | Preserve public-facing platform explanation. Move deeper architecture details into Knowledge Base or Build Notes later. |
-| `/projects/argus-acli.html` | Argus ACLI | Project detail page | Live | Full public product page for Argus ACLI as the first product/distribution built on NeuroCore. Explains local-first read-only Linux diagnostics, structured findings, severity, recommendations, raw evidence, and AI explanation grounded in system evidence. | Argus ACLI vision, How Argus Works, Argus output/tool contract, ACLI spec, Argus deployment docs, Argus V1 blueprint, UX layer docs, tool layer docs, Phase 5J/6 docs, relevant build logs. | Linked from homepage project card, Projects page, NeuroCore page, and Argus Lab page. | Keep product maturity honest. Add install/download guidance only when packaging exists. |
-| `/projects/argus-lab.html` | Argus Lab | Project detail page | Live | Full public landing page for Argus Lab as a planned real-Linux troubleshooting, training, and validation environment. Explains controlled failures, resettable lab sessions, mentor-style AI guidance, validation role, future-phase status, and relationship to NeuroCore and Argus ACLI. | Argus Lab README and Argus Lab vision doc used for current full page. Later architecture, scenario planning, validation strategy, training flow, and mentor-mode docs required if those details are expanded. | Linked from homepage project card, Projects page, NeuroCore page, and Argus ACLI page. | Keep future-phase status clear. Do not imply availability until implementation begins. |
-| `/knowledge-base/index.html` | Knowledge Base | Public index page | Structure-only | Establishes the Knowledge Base as the public teaching layer for controlled AI systems, AI operations, persistent AI memory, local-first AI, safe tool interaction, Linux diagnostics, troubleshooting training, and NeuroCore architecture. | Website information architecture, website state, resume prompt, repository map. Specific article source docs required when factual articles are created. | Linked from all current public headers. | Create first topic/category pages after internal linking strategy is defined. |
+| `/index.html` | TENSA Engineering | Homepage | Live | Introduces TENSA Engineering, the ecosystem, core philosophy, project cards, knowledge-base direction, origin story preview, and GitHub proof. | Website state, website information architecture, resume prompt, repository map. Project source docs only if factual project claims change. | Linked as Home from all current public pages. Header links to `/projects/`, `/knowledge-base/`, `/story/`, and `#proof`. | Keep concise as front door. Do not turn into full knowledge base. |
+| `/projects/index.html` | Projects | Public index page | Live | Explains the ecosystem structure and routes visitors to NeuroCore, Argus ACLI, and Argus Lab. | Website state, website information architecture, resume prompt, repository map. Project source docs if descriptions are expanded. | Linked from homepage and all current public headers. Header links to `/story/`. | Keep as ecosystem router. Expand only if needed for clarity. |
+| `/projects/neurocore.html` | NeuroCore | Project detail page | Live | Public NeuroCore platform page explaining local-first governed AI runtime, continuity, current RAG/retrieval foundation, future memory direction, control plane architecture, Argus diagnostics flow, model explanation, and near-term Kernel-Up / Service Intelligence expansion. | NeuroCore vision, platform ecosystem, system architecture, system state, control plane, tool execution, security/policy docs, memory/context docs, service intelligence docs, and relevant build logs if factual claims change. | Linked from homepage project card, Projects page, Argus ACLI page, Argus Lab page, Story page, and footer / CTA links. Header links to `/story/`. | Preserve public-facing platform explanation. Move deeper architecture details into Knowledge Base or Build Notes later. |
+| `/projects/argus-acli.html` | Argus ACLI | Project detail page | Live | Full public product page for Argus ACLI as the first product/distribution built on NeuroCore. Explains local-first read-only Linux diagnostics, structured findings, severity, recommendations, raw evidence, and AI explanation grounded in system evidence. | Argus ACLI vision, How Argus Works, Argus output/tool contract, ACLI spec, Argus deployment docs, Argus V1 blueprint, UX layer docs, tool layer docs, Phase 5J/6 docs, relevant build logs. | Linked from homepage project card, Projects page, NeuroCore page, Argus Lab page, and Story page. Header links to `/story/`. | Keep product maturity honest. Add install/download guidance only when packaging exists. |
+| `/projects/argus-lab.html` | Argus Lab | Project detail page | Live | Full public landing page for Argus Lab as a planned real-Linux troubleshooting, training, and validation environment. Explains controlled failures, resettable lab sessions, mentor-style AI guidance, validation role, future-phase status, and relationship to NeuroCore and Argus ACLI. | Argus Lab README and Argus Lab vision doc used for current full page. Later architecture, scenario planning, validation strategy, training flow, and mentor-mode docs required if those details are expanded. | Linked from homepage project card, Projects page, NeuroCore page, Argus ACLI page, and Story page. Header links to `/story/`. | Keep future-phase status clear. Do not imply availability until implementation begins. |
+| `/knowledge-base/index.html` | Knowledge Base | Public index page | Structure-only | Establishes the Knowledge Base as the public teaching layer for controlled AI systems, AI operations, persistent AI memory, local-first AI, safe tool interaction, Linux diagnostics, troubleshooting training, and NeuroCore architecture. | Website information architecture, website state, resume prompt, repository map. Specific article source docs required when factual articles are created. | Linked from all current public headers. Header links to `/story/`. | Create first topic/category pages after internal linking strategy is defined. |
+| `/story/index.html` | The Day the AI Forgot Everything | Story page / public origin page | Live | Tells the origin story behind NeuroCore and TENSA Engineering: the AI continuity failure, documentation becoming project memory, local AI changing the direction, real systems requiring control, and the bridge to Argus ACLI, Argus Lab, and AI Operations. | NeuroCore origin story source material, AI Operations methodology split source material, current project pages, content style guide, and website information architecture. | Linked from all current public headers. Homepage story preview links to `/story/`. Story page links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and GitHub proof. | Keep human and readable. Do not turn into a technical architecture manual; move definitions into Knowledge Base later. |
 
 ---
 
@@ -69,6 +70,7 @@ Definitions:
 
 | Path | Type | Status | Purpose | Update Trigger |
 |---|---|---|---|
+| `docs/ai-operations/claude/claude_website_polish_resume_prompt.md` | AI operations / Claude polish prompt | Live | Defines the reusable Claude handoff workflow for polishing TENSA public website copy while preserving factual boundaries, page type, HTML structure, metadata, links, and current-vs-future status. | Update when Claude workflow, tone/cadence rules, page-type modifiers, or factual-boundary rules change. |
 | `docs/ai-operations/documentation_closeout_protocol.md` | AI operations / closeout protocol | Live | Defines the required documentation closeout workflow for serious website build sessions. | Update when closeout workflow rules change. |
 | `docs/ai-operations/tensa_website_resume_prompt.md` | AI operations / resume prompt | Live | Fresh-thread startup context for website build sessions. | Update after major site structure, page, workflow, or direction changes. |
 | `docs/website_state.md` | State record | Live | Current live-state record for pages, completed work, incomplete work, and next steps. | Update at closeout after major build sessions. |
@@ -103,8 +105,6 @@ A future metadata pass should verify the expanded NeuroCore page after the lates
 
 | Planned Path | Page Type | Purpose | Dependency | Status |
 |---|---|---|---|---|
-| `/story/index.html` | Public section index | Introduce the story/philosophy section and route readers to origin/continuity pages. | Story source material and website IA. | Planned |
-| `/story/the-day-the-ai-forgot-everything.html` | Story page | Public origin story explaining the continuity failure that led to NeuroCore. | Origin story source material. | Planned |
 | `/resources/index.html` | Public section index | Collect GitHub repos, future downloads, future videos, documentation, and public resource links. | Website IA and current public resource inventory. | Planned |
 | `/about.html` | Public standalone page | Explain TENSA Engineering, the mission, and builder context professionally and concisely. | Website IA and approved public bio/mission framing. | Planned |
 | `/build-notes/index.html` | Public section index | Public-friendly build milestone summaries that link back to GitHub proof. | Build logs and source repos. | Planned |
@@ -133,12 +133,8 @@ Current primary navigation should point to:
     Home → /index.html
     Projects → /projects/
     Knowledge Base → /knowledge-base/
-    Story → /index.html#story until /story/ exists
+    Story → /story/
     GitHub → /index.html#proof or direct GitHub repo depending on page context
-
-When `/story/` is created:
-
-    Story should point to /story/
 
 When `/resources/` or a GitHub/resources page is created:
 
@@ -158,6 +154,7 @@ Current pages with full header navigation:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/index.html
+    /story/index.html
 
 Current Knowledge Base nav target:
 
@@ -165,7 +162,7 @@ Current Knowledge Base nav target:
 
 Current Story nav target:
 
-    /index.html#story
+    /story/
 
 Current GitHub nav target:
 
@@ -190,25 +187,46 @@ Before creating a new public page:
 
 ---
 
+## Replacement Verification Rule
+
+After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+
+The verification should confirm the intended change actually landed and that the old/stale text or link was removed when applicable.
+
+Examples:
+
+    grep -n '/story/index.html\|Story → /story/\|claude_website_polish_resume_prompt.md' docs/planning/page_inventory.md
+    grep -n 'href="../story/"\|href="../index.html#story"' knowledge-base/index.html
+
+This rule exists to catch:
+
+- paste mistakes
+- missed saves
+- wrong-file edits
+- stale snippets
+- unintended partial replacements
+
+---
+
 ## Current Next Public Page Priority
 
 Recommended next public-page options:
 
-    /story/index.html
     /resources/index.html
     /about.html
     first Knowledge Base category pages
+    /build-notes/index.html
 
 Reason:
 
-NeuroCore, Argus ACLI, and Argus Lab now all have full public project pages. The next major website step should expand the surrounding public structure instead of overloading project pages.
+NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, and Story now all have public site structure. The next major website step should either organize public resources, add concise organizational identity, or begin focused teaching articles.
 
 Likely next direction:
 
-- create the Story section if preserving the origin/philosophy is the priority
 - create Resources if organizing GitHub, future videos, downloads, and public links is the priority
 - create About if a concise TENSA mission/builder page is needed
 - create Knowledge Base categories if the teaching layer becomes the next focus
+- create Build Notes if public development history becomes the next content lane
 
 ---
 
