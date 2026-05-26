@@ -28,6 +28,8 @@ Current phase:
     SEO topic map created
     Claude website polish prompt created
     closeout verification workflow improved
+    public GitHub navigation removed from current public pages
+    public repository-proof framing replaced with private-development / future-artifacts framing
 
 The site now functions more like an ecosystem portal than a single landing page.
 
@@ -225,7 +227,6 @@ Current primary navigation:
     Projects
     Knowledge Base
     Story
-    GitHub
 
 Current navigation targets:
 
@@ -233,16 +234,20 @@ Current navigation targets:
     Projects → /projects/
     Knowledge Base → /knowledge-base/
     Story → /story/
-    GitHub → mixed current behavior:
-        homepage and most pages use /index.html#proof
-        NeuroCore page header links directly to the NeuroCore GitHub repo
 
-Important note:
+Important notes:
 
     Knowledge Base points to the real /knowledge-base/ page.
     Story points to the real /story/ page.
+    Public GitHub navigation has been removed from current public pages.
+    Direct public links to private implementation repositories have been removed from current public pages.
 
-When /resources/ or a GitHub/resources page is created, decide whether GitHub remains a homepage proof anchor, links directly to GitHub, or moves into Resources.
+Current public artifact strategy:
+
+    TENSA Engineering is the public explanation layer.
+    Active implementation repositories are private during current development and product maturation.
+    Public technical artifacts may be added later when they are useful for users, builders, releases, examples, documentation, or selected open components.
+    A Resources page remains deferred until there is enough public material to organize.
 
 ---
 
@@ -333,8 +338,8 @@ The current homepage includes:
 - Knowledge Base direction preview
 - origin story preview
 - link to the full Story page
-- GitHub proof section
-- links to NeuroCore and Argus Lab GitHub repos
+- public explanation-layer closing section
+- private-development / future-public-artifacts framing
 - navigation to Projects, Knowledge Base, and Story
 
 The homepage treats TENSA Engineering as the single public hub for the ecosystem.
@@ -365,11 +370,12 @@ Current purpose:
 - link to the Argus Lab page
 - reinforce the platform / product / lab model
 - route to the Story page through primary navigation
+- explain the public website / private implementation repository boundary
 
 Current project model:
 
     NeuroCore = platform
-    Argus ACLI = first product / distribution
+    Argus ACLI = first product built on NeuroCore
     Argus Lab = future training and validation environment
 
 Current branding:
@@ -403,7 +409,7 @@ Current content includes:
 
 - local-first governed AI runtime positioning
 - continuity / stateless AI problem
-- privacy and business-safety framing
+- privacy and local-first design framing
 - current local retrieval / RAG foundation
 - planned Karpathy-style structured knowledge base direction
 - planned context-aware memory / CAG-style context assembly direction
@@ -419,8 +425,8 @@ Current content includes:
 - model explanation layer
 - ACLI output layer
 - near-term Kernel-Up / Service Intelligence expansion
-- production-environment value proposition
-- Argus ACLI as first distribution
+- controlled system awareness value proposition
+- Argus ACLI as first product built on NeuroCore
 - Argus Lab as future training and validation environment
 - cleaned bottom CTA flow
 - primary navigation to the Story page
@@ -447,7 +453,7 @@ Current status:
 
 Current purpose:
 
-- explain Argus ACLI as the first practical product / distribution built on NeuroCore
+- explain Argus ACLI as the first practical product built on NeuroCore
 - explain local-first read-only Linux diagnostics
 - explain why users should not have to paste sensitive logs and system data into cloud chatbots
 - explain raw evidence, structured findings, severity, recommendations, and model explanation
@@ -547,6 +553,7 @@ Current purpose:
 - introduce major educational topic areas
 - prepare for future modular knowledge-base articles
 - route to the Story page through primary navigation
+- frame future public artifacts without implying public implementation repositories are currently available
 
 Current branding:
 
@@ -613,7 +620,7 @@ Current content includes:
 - local-first AI direction
 - authority boundaries
 - NeuroCore as the platform
-- Argus ACLI as the first practical proof
+- Argus ACLI as the first practical product
 - Argus Lab as the future training and validation environment
 - AI Operations as the disciplined way of working that made the system possible
 
@@ -732,7 +739,7 @@ NeuroCore:
 
 Argus ACLI:
 
-- first product / distribution built on NeuroCore
+- first product built on NeuroCore
 - local-first read-only Linux diagnostics
 - real telemetry
 - structured findings
@@ -759,14 +766,14 @@ AI Operations:
 - resume prompts
 - human review and local verification
 
-GitHub repositories:
+Public technical artifacts:
 
-- engineering proof
-- implementation history
-- source-of-truth documentation
-- architecture docs
-- build logs
-- credibility layer
+- future release materials
+- future examples
+- future downloads
+- future selected documentation
+- future open technical components if appropriate
+- future credibility layer when the public materials are ready
 
 Social content:
 
@@ -841,6 +848,12 @@ Social content:
 - Bing Webmaster Tools imported from Google Search Console
 - sitemap submitted to Bing and processing
 - Search Console redirect warning reviewed and confirmed as expected redirect behavior
+- public GitHub navigation removed from current public pages
+- direct public links to private implementation repositories removed from current public pages
+- homepage repository-proof section replaced with public explanation / future public artifacts framing
+- Knowledge Base repository-proof language replaced with public artifacts language
+- NeuroCore business-safety wording softened into controlled system awareness and local-first design language
+- Argus ACLI and Story wording standardized around Argus ACLI as the first practical product built on NeuroCore
 
 ---
 
@@ -862,6 +875,8 @@ Social content:
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - optional sitemap lastmod dates
+- public technical artifact strategy
+- public repository / open-component strategy
 
 ---
 
@@ -1044,6 +1059,15 @@ Recent Story page work used context from:
 - Claude website polish workflow
 - local browser review
 
+Recent GitHub/private-repository public-page cleanup used context from:
+
+- current public HTML pages
+- Claude public-page review packet
+- ChatGPT factual alignment review
+- current website strategy discussion
+- user decision to keep implementation repositories private during active development
+- user decision to defer Resources page until useful public artifacts exist
+
 Important:
 
 Old build logs may contain former project names.
@@ -1090,7 +1114,9 @@ Avoid turning every page into an encyclopedia.
 
 TENSA site should organize the ecosystem and teach the public.
 
-NeuroCore repo proves the engineering.
+Private implementation repositories and internal source docs preserve the engineering source of truth during active development.
+
+Public technical artifacts should be added later only when they are useful and intentional.
 
 Argus ACLI page explains the product.
 
@@ -1144,6 +1170,10 @@ Knowledge Base pages teach individual concepts.
 
 Build Notes explain how the system evolved.
 
-GitHub remains the source of truth.
+Private implementation repositories and internal documentation preserve the engineering source of truth during active development.
+
+TENSA Engineering is the public explanation layer.
+
+Public technical artifacts can be added later when they are ready and useful.
 
 The site should never grow faster than the documentation system that keeps it organized.

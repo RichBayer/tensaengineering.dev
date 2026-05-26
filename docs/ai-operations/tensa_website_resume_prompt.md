@@ -40,9 +40,12 @@ Do not rely on an old repository size count.
 - Only treat uploaded docs, current file contents, repo output, and user-provided command output as truth.
 - Always reference the repository map before assuming file locations.
 - Ask for exact docs or files when context is missing.
-- Use full file replacements only.
+- Do not edit closeout or planning docs from grep snippets alone.
+- Read or request full-file context before editing closeout or planning docs.
+- Use full file replacements when the user must manually paste large code/docs.
+- Controlled Python edits are acceptable after full-file context has been reviewed and the intended changes are clear.
 - Do NOT provide snippets unless explicitly requested.
-- After each full-file replacement, run a targeted verification check before moving to the next file.
+- After each full-file replacement or controlled Python edit, run a targeted verification check before moving to the next file.
 - Do NOT make hidden changes.
 - Do NOT invent public-facing claims.
 - Do NOT write factual project pages without checking source requirements.
@@ -316,7 +319,7 @@ Correct structure:
         readable public development history
 
     Resources
-        GitHub links, future downloads, videos, docs, and public resources
+        future public technical artifacts, selected documentation, examples, release materials, downloads, videos, and public resources
 
 ---
 
@@ -346,7 +349,7 @@ NeuroCore:
 
 Argus ACLI:
 
-- first product / distribution built on NeuroCore
+- first product built on NeuroCore
 - local-first read-only Linux diagnostics
 - real telemetry
 - structured findings
@@ -381,12 +384,16 @@ AI Operations:
 - resume prompts
 - human review and local verification
 
-GitHub:
+Private implementation repositories and internal source docs:
 
-- engineering proof
-- implementation history
-- source-of-truth documentation
-- public credibility
+- preserve engineering source of truth during active development
+- preserve implementation history
+- preserve architecture docs and build logs
+- are not currently public proof links on the website
+
+Future public technical artifacts:
+
+- may include selected documentation, examples, release materials, downloads, videos, or open technical components when useful
 
 Knowledge Base:
 
@@ -468,7 +475,6 @@ Current primary navigation:
     Projects
     Knowledge Base
     Story
-    GitHub
 
 Current targets:
 
@@ -476,15 +482,18 @@ Current targets:
     Projects → /projects/
     Knowledge Base → /knowledge-base/
     Story → /story/
-    GitHub → /index.html#proof or GitHub repo depending on page
 
-Knowledge Base now points to the real `/knowledge-base/` page.
+Knowledge Base points to the real `/knowledge-base/` page.
 
-Story now points to the real `/story/` page.
+Story points to the real `/story/` page.
 
-When `/resources/` or GitHub/resources page is created:
+Public GitHub navigation has been removed from current public pages.
 
-    decide whether GitHub remains a homepage proof anchor or moves into Resources
+Direct public links to private implementation repositories have been removed from current public pages.
+
+When `/resources/` is created:
+
+    use it to organize future public technical artifacts, selected documentation, examples, release materials, downloads, videos, and any intentional public repository or open-component links
 
 ---
 
@@ -549,7 +558,7 @@ Recent completed website work:
     - local AI changing the direction
     - real systems requiring control
     - NeuroCore as the platform
-    - Argus ACLI as the first practical proof
+    - Argus ACLI as the first practical product
     - Argus Lab as the future training and validation environment
     - AI Operations as the disciplined way of working behind the ecosystem
 - Story page was drafted by ChatGPT, polished by Claude using constrained instructions, proofed by ChatGPT, and reviewed locally by Richard.
@@ -582,7 +591,7 @@ Previous completed website work:
     - planned context-aware memory / CAG-style context assembly
     - future explanation in the Knowledge Base
 - NeuroCore page bottom CTA cleaned up:
-    - View NeuroCore on GitHub
+    - Review the architecture
     - Explore Argus ACLI
     - Explore Argus Lab
 - `projects/argus-acli.html` upgraded into a full public product page.
@@ -597,6 +606,16 @@ Previous completed website work:
     - architecture showcase styling
     - improved card/list styling
     - responsive behavior for architecture sections
+
+Current public-page cleanup completed:
+
+- Public GitHub navigation removed from current public pages.
+- Direct public links to private implementation repositories removed from current public pages.
+- Homepage repository-proof section replaced with public explanation / future public artifacts framing.
+- Knowledge Base repository-proof language replaced with public artifacts language.
+- NeuroCore business-safety wording softened into controlled system awareness and local-first design language.
+- Argus ACLI and Story wording standardized around Argus ACLI as the first practical product built on NeuroCore.
+- Resources page deferred until useful public artifacts exist.
 
 ---
 
@@ -668,19 +687,23 @@ Public pages should not:
 
 ---
 
-# FULL-FILE EDITING RULE
+# EDITING RULE
 
-The user prefers full file replacements for accuracy.
+The user prefers full file replacements when manual copy/paste editing would be error-prone.
 
-Do not provide code snippets unless explicitly requested.
+Do not provide small manual find/replace snippets unless explicitly requested.
 
-For HTML, CSS, Markdown docs, or planning files:
+For code, HTML, CSS, or long Markdown replacements that the user must paste manually:
 
     provide the complete replacement file
 
-If a change is tiny but affects an existing file:
+For closeout docs and planning docs:
 
-    still provide the full file unless the user explicitly approves a command/script edit
+    do not edit from grep snippets alone
+    first review or request the full current file
+    then use the smallest safe edit
+
+Controlled Python edits are acceptable after full-file context has been reviewed and the intended changes are clear.
 
 For mechanical multi-file link corrections, command-based edits are acceptable only when the user approves the workflow.
 
@@ -758,7 +781,7 @@ NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, and Story now all have public 
 
 Likely next direction:
 
-- create Resources if organizing GitHub, future videos, downloads, and public links is the priority
+- create Resources if organizing future public technical artifacts, selected documentation, videos, downloads, examples, and public links becomes the priority
 - create About if a concise TENSA mission/builder page is needed
 - create Knowledge Base categories if the teaching layer becomes the next focus
 - create Build Notes if public development history becomes the next content lane
@@ -791,7 +814,9 @@ The core project pages now exist for NeuroCore, Argus ACLI, and Argus Lab, and t
 
 TENSA Engineering should become the public explanation layer for the ecosystem.
 
-The repositories prove the work.
+Private implementation repositories and internal source docs preserve the engineering source of truth during active development.
+
+Public technical artifacts should be added later when they are useful, intentional, and ready.
 
 The social content tells the story and teaches the lessons.
 
@@ -801,7 +826,7 @@ Long-term goal:
 
     Teach the ideas.
     Explain the systems.
-    Prove the work.
+    Preserve the work.
     Build trust.
     Convert attention into adoption.
 

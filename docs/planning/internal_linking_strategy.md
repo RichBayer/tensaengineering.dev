@@ -55,7 +55,7 @@ Current active public pages:
 
 Current active public sections:
 
-    /index.html#proof
+    None currently tracked as primary public section anchors.
 
 ---
 
@@ -69,7 +69,6 @@ Current header navigation should use:
 | Projects | `/projects/` | Active | Main ecosystem project index. |
 | Knowledge Base | `/knowledge-base/` | Active | Main teaching layer index. |
 | Story | `/story/` | Active | Full public origin story page. |
-| GitHub | `/index.html#proof` or direct GitHub repo | Temporary / mixed | Most pages use the homepage proof anchor. NeuroCore currently links directly to the NeuroCore GitHub repo. Decide final Resources/GitHub strategy later. |
 
 ---
 
@@ -86,7 +85,7 @@ Use these preferred destinations when topics appear in public pages.
 | Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the planned real-Linux troubleshooting, training, and validation environment. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
 | Origin story | `/story/` | Same, or future deeper story article if needed | Story index now owns the full public origin narrative. |
-| GitHub proof | `/index.html#proof` or direct GitHub repo | `/resources/github.html` or `/resources/` | Keep mixed current behavior until Resources strategy is created. |
+| Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
 | Persistent AI memory | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` | NeuroCore currently explains continuity/memory direction best. |
 | Continuity | `/story/` or `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` or story article | Story explains the human origin; NeuroCore explains the platform direction. |
 | Context | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/context-and-continuity.html` | Future article likely needed. |
@@ -108,7 +107,7 @@ Use these preferred destinations when topics appear in public pages.
 | Kernel-Up / Service Intelligence | `/projects/neurocore.html` | `/knowledge-base/linux-diagnostics/kernel-up-service-intelligence.html` | NeuroCore architecture showcase currently mentions this near-term expansion. |
 | Troubleshooting training | `/projects/argus-lab.html` | `/knowledge-base/troubleshooting-training/` | Argus Lab page is current practical destination. |
 | Real Linux failure scenarios | `/projects/argus-lab.html` | `/knowledge-base/troubleshooting-training/real-failure-scenarios.html` | Future explainer. |
-| Build history | `/index.html#proof` | `/build-notes/` | Build Notes not created yet. |
+| Build history | No public link yet | `/build-notes/` | Build Notes not created yet. Public build summaries should avoid exposing private implementation details. |
 | Downloads / install guidance | No public link yet | `/resources/downloads.html` or Argus ACLI page | Do not create until product readiness supports it. |
 
 ---
@@ -123,11 +122,10 @@ The website should guide readers through logical paths.
     → Projects
     → NeuroCore / Argus ACLI / Argus Lab
     → Knowledge Base
-    → GitHub proof
 
 Purpose:
 
-Help a new visitor understand what TENSA Engineering is and where the real work lives.
+Help a new visitor understand what TENSA Engineering is, how the ecosystem fits together, and where to go next.
 
 ---
 
@@ -138,11 +136,10 @@ Help a new visitor understand what TENSA Engineering is and where the real work 
     → Knowledge Base
     → Controlled AI Systems
     → Safe Tool Interaction
-    → GitHub proof
 
 Purpose:
 
-Help technical readers understand the architectural philosophy before diving into the repo.
+Help technical readers understand the architectural philosophy without requiring immediate access to implementation repositories.
 
 ---
 
@@ -153,7 +150,7 @@ Help technical readers understand the architectural philosophy before diving int
     → NeuroCore
     → Persistent AI Memory
     → AI Operations
-    → Build Notes / GitHub proof
+    → Build Notes after created
 
 Purpose:
 
@@ -193,13 +190,13 @@ Explain Argus Lab as both a future human training platform and a validation envi
 
 ## Current Navigation To Fix Later
 
-These are intentional temporary or mixed targets.
+These are intentional temporary or future targets.
 
 | Current Link | Temporary Target | Final Target |
 |---|---|---|
-| GitHub | `/index.html#proof` or direct NeuroCore GitHub repo | Possibly `/resources/` or `/resources/github.html` |
 | Homepage Knowledge Base preview | `/knowledge-base/` | `/knowledge-base/` |
 | Homepage origin story preview | `/story/` | `/story/` |
+| Public technical artifacts | No public link yet | Possibly `/resources/` after enough useful public material exists |
 | Argus Lab project page | `/projects/argus-lab.html` | Full public landing page now active |
 
 ---
@@ -235,7 +232,6 @@ The homepage should link to:
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
-- GitHub proof links
 
 The homepage should not become a link dump.
 
@@ -268,7 +264,7 @@ The NeuroCore page should link to:
 - future Controlled AI Systems pages
 - future Safe Tool Interaction pages
 - future NeuroCore Architecture pages
-- GitHub repo
+- future public technical artifacts after a Resources page or public artifact strategy exists
 
 The NeuroCore page should remain public-facing and business-readable.
 
@@ -285,7 +281,7 @@ The Argus ACLI page should link to:
 - `/projects/argus-lab.html`
 - `/knowledge-base/linux-diagnostics/` after created
 - `/knowledge-base/safe-tool-interaction/` after created
-- GitHub proof when appropriate
+- future public technical artifacts after a Resources page or public artifact strategy exists
 
 The Argus ACLI page should clearly distinguish current product state from future product direction.
 
@@ -300,7 +296,7 @@ The Argus Lab page should link to:
 - `/projects/argus-acli.html`
 - `/knowledge-base/troubleshooting-training/` after created
 - `/knowledge-base/linux-diagnostics/` after created
-- GitHub proof when appropriate
+- future public technical artifacts after a Resources page or public artifact strategy exists
 
 The Argus Lab page should clearly remain future-phase until implementation status changes.
 
@@ -332,7 +328,6 @@ The Story page should link to:
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/` through header navigation
-- GitHub proof through the homepage proof anchor until Resources exists
 
 The Story page should remain the origin and philosophy page.
 
@@ -361,8 +356,8 @@ When these pages are created, update links across the site.
 | `/knowledge-base/ai-operations/` | Homepage Knowledge Base section, Knowledge Base index, Story page |
 | `/knowledge-base/linux-diagnostics/` | Knowledge Base index, Argus ACLI page, Argus Lab page |
 | `/knowledge-base/troubleshooting-training/` | Knowledge Base index, Argus Lab page |
-| `/resources/index.html` | Header nav if Resources becomes primary, footer/proof sections |
-| `/build-notes/index.html` | Homepage proof section, Knowledge Base index, NeuroCore page |
+| `/resources/index.html` | Header nav if Resources becomes primary, footer/artifacts sections, Knowledge Base index, project pages where useful |
+| `/build-notes/index.html` | Knowledge Base index, NeuroCore page, Story page where useful |
 
 ---
 
@@ -431,15 +426,15 @@ Current verified public HTML files:
 
 Current notable link state:
 
-- Home, Projects, Knowledge Base, Story, and GitHub navigation exists across current public pages.
+- Home, Projects, Knowledge Base, and Story navigation exists across current public pages.
+- Public GitHub navigation has been removed from current public pages.
+- Direct public links to private implementation repositories have been removed from current public pages.
 - Knowledge Base links point to the real `/knowledge-base/` page.
 - Story links point to the real `/story/` page.
-- Most GitHub navigation links point to homepage `#proof`.
-- The NeuroCore page currently links directly to the NeuroCore GitHub repo in the header and CTA areas.
 - Argus ACLI links to NeuroCore and Argus Lab.
 - NeuroCore links to Argus ACLI and Argus Lab.
 - Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.
-- Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and GitHub proof via current navigation and CTA structure.
+- Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, and Knowledge Base.
 
 ---
 
