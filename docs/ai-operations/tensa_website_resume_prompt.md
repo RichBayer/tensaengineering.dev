@@ -760,31 +760,41 @@ Update only the docs actually impacted by the session.
 
 Recommended next website move:
 
-    Complete this closeout, commit, push, and verify the live Story page and sitemap after deployment.
+    Create the About page first.
 
-After deployment, confirm:
+Purpose:
 
-    https://tensaengineering.dev/story/
-    https://tensaengineering.dev/sitemap.xml
-    https://tensaengineering.dev/robots.txt
+The About page should give visitors a clear, professional, human explanation of TENSA Engineering, Richard's builder context, the mission behind the work, and how NeuroCore, Argus ACLI, Argus Lab, AI Operations, and the Knowledge Base fit together.
 
-Recommended next public-page options after this closeout:
+The About page should help visitors quickly understand:
 
-    /resources/index.html
-    /about.html
-    first Knowledge Base category pages
-    /build-notes/index.html
+- who is building TENSA Engineering
+- why the work exists
+- what problem the ecosystem is trying to solve
+- why controlled AI systems matter
+- why local-first, evidence-grounded diagnostics matter
+- why the site is worth following and learning from
+
+After the About page:
+
+    begin building the first Knowledge Base category pages.
+
+Recommended Knowledge Base direction:
+
+- Controlled AI Systems
+- AI Operations
+- Persistent AI Memory
+- Local-First AI
+- Safe Tool Interaction
+- Linux Diagnostics
+- Troubleshooting Training
+- NeuroCore Architecture
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, and Story now all have public site structure. The next major website step should either organize public resources, add concise organizational identity, or begin focused teaching articles.
+NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, and Story now all have public site structure. The next major website step should fill the site with useful, educational content so visitors can learn from TENSA Engineering, understand Argus and NeuroCore, and start treating the website as a valuable reference instead of only a project landing page.
 
-Likely next direction:
-
-- create Resources if organizing future public technical artifacts, selected documentation, videos, downloads, examples, and public links becomes the priority
-- create About if a concise TENSA mission/builder page is needed
-- create Knowledge Base categories if the teaching layer becomes the next focus
-- create Build Notes if public development history becomes the next content lane
+Resources and Build Notes can wait until there are enough public artifacts, examples, releases, videos, or public development summaries worth organizing.
 
 ---
 
