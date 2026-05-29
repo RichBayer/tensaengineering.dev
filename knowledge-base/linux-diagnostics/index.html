@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Linux diagnostics is the process of collecting system evidence, identifying signals, separating symptoms from causes, and deciding what to inspect next."
+  />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/linux-diagnostics/" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Linux Diagnostics | TENSA Engineering Knowledge Base" />
+  <meta property="og:description" content="Linux diagnostics is the process of collecting system evidence, identifying signals, separating symptoms from causes, and deciding what to inspect next." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/linux-diagnostics/" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:title" content="Linux Diagnostics | TENSA Engineering Knowledge Base" />
+  <meta name="twitter:description" content="Linux diagnostics is the process of collecting system evidence, identifying signals, separating symptoms from causes, and deciding what to inspect next." />
+  <title>Linux Diagnostics | TENSA Engineering Knowledge Base</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tensaengineering.dev/knowledge-base/linux-diagnostics/#article",
+  "url": "https://tensaengineering.dev/knowledge-base/linux-diagnostics/",
+  "headline": "Linux Diagnostics",
+  "description": "Linux diagnostics is the process of collecting system evidence, identifying signals, separating symptoms from causes, and deciding what to inspect next.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://tensaengineering.dev/#website",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tensaengineering.dev/#organization",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
+  },
+  "inLanguage": "en-US"
+}
+  </script>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img
+        src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
+        alt="TENSA Engineering"
+        class="brand-logo"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../">Knowledge Base</a>
+      <a href="../../story/">Story</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Knowledge Base</p>
+        <h1>Linux Diagnostics</h1>
+        <p class="kb-article-summary">
+          Good troubleshooting starts with evidence, not guesses.
+        </p>
+
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="../">Knowledge Base</a>
+          <span>Recommended path: 6 of 8</span>
+          <span>Evidence-first troubleshooting</span>
+        </div>
+      </header>
+
+      <article class="kb-article-body">
+        <section class="kb-section">
+          <p>
+            Good troubleshooting starts with evidence, not guesses.
+          </p>
+
+          <p>
+            Linux diagnostics is not just running commands. It is the process of
+            collecting system evidence, identifying signals, separating symptoms from
+            causes, and deciding what to inspect next.
+          </p>
+
+          <p>
+            That matters because real systems rarely announce their root cause clearly. A
+            service may fail because of a missing file, a bad configuration, a permission
+            problem, a dependency failure, a full disk, a network issue, a port conflict,
+            a package change, or something else entirely.
+          </p>
+
+          <p>
+            The visible problem is often only the symptom. Diagnostics is how you move
+            from symptom to signal.
+          </p>
+        </section>
+
+        <section class="kb-path-card">
+          <h2>Where this fits</h2>
+
+          <p>
+            This page is part of the recommended TENSA Knowledge Base path. You can read
+            each article independently, but the sequence is designed to build in order,
+            each article on the one before it.
+          </p>
+
+          <ol class="kb-path-list">
+            <li><span>1.</span> AI Operations</li>
+            <li><span>2.</span> Persistent AI Memory</li>
+            <li><span>3.</span> Controlled AI Systems</li>
+            <li><span>4.</span> Local-First AI</li>
+            <li><span>5.</span> Safe Tool Interaction</li>
+            <li><span>6.</span> Linux Diagnostics</li>
+            <li><span>7.</span> Troubleshooting Training</li>
+            <li><span>8.</span> NeuroCore Architecture</li>
+          </ol>
+
+          <p>
+            This page builds on Safe Tool Interaction by showing why approved, read-only
+            tools need to collect real Linux evidence before AI can explain anything
+            responsibly.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Linux diagnostics is not just running commands</h2>
+
+          <p>
+            A beginner often sees Linux troubleshooting as a list of commands. Check this.
+            Run that. Look here. Restart this. That approach can work sometimes, but it
+            does not scale well.
+          </p>
+
+          <p>
+            Good diagnostics is not about memorizing a magic command for every problem. It
+            is about knowing what kind of evidence matters. A command is only useful if it
+            helps answer a diagnostic question.
+          </p>
+
+          <p>For example:</p>
+
+          <ul class="kb-plain-list">
+            <li>Is the service running?</li>
+            <li>Did it fail?</li>
+            <li>When did it fail?</li>
+            <li>What changed?</li>
+            <li>Is the port open?</li>
+            <li>Is the process alive?</li>
+            <li>Is the disk full?</li>
+            <li>Is memory exhausted?</li>
+            <li>Is the system under load?</li>
+            <li>Is the network reachable?</li>
+            <li>Do logs show a clear error?</li>
+            <li>Is the failure local, service-level, dependency-level, or environment-level?</li>
+          </ul>
+
+          <p>
+            That is the difference between command collecting and troubleshooting.
+            Diagnostics gives the commands a reason.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Symptoms, signals, findings, and root cause</h2>
+
+          <p>
+            A symptom is what the user notices: the website is down, SSH is not working,
+            the server feels slow, a service will not start, or a disk warning appeared.
+          </p>
+
+          <p>
+            A signal is evidence that helps explain what might be happening. A failed
+            service status is a signal. A log error is a signal. A full filesystem is a
+            signal. A listening port is a signal. A missing process is a signal.
+          </p>
+
+          <p>
+            A finding is a structured interpretation of one or more signals. For example,
+            the SSH service is not installed, the web service failed because its
+            configuration file contains an error, the disk is critically full, the system
+            is under high memory pressure, or a required dependency is not running.
+          </p>
+
+          <p>
+            Root cause is the underlying reason the problem happened.
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>A finding is not the same thing as root cause.</p>
+        </aside>
+
+        <section class="kb-section">
+          <p>
+            A finding may point toward root cause. It may narrow the search. It may
+            identify the most likely next place to inspect. But good diagnostics should be
+            honest about what is known, what is suspected, and what still needs evidence.
+          </p>
+
+          <p>
+            A diagnostic is not a guess with better formatting. A diagnostic should point
+            back to evidence.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What Linux diagnostics looks at</h2>
+
+          <p>Linux systems expose a lot of useful evidence.</p>
+
+          <p>A good diagnostic process may inspect:</p>
+
+          <ul class="kb-plain-list">
+            <li>services</li>
+            <li>logs</li>
+            <li>processes</li>
+            <li>CPU load</li>
+            <li>memory usage</li>
+            <li>disk usage</li>
+            <li>filesystems</li>
+            <li>mounts</li>
+            <li>network interfaces</li>
+            <li>network connections</li>
+            <li>listening ports</li>
+            <li>users and sessions</li>
+            <li>recent logins</li>
+            <li>package state</li>
+            <li>permissions</li>
+            <li>ownership</li>
+            <li>configuration files</li>
+            <li>dependencies</li>
+            <li>scheduled jobs</li>
+            <li>kernel messages</li>
+            <li>security context</li>
+          </ul>
+
+          <p>
+            Not every problem requires all of that. The skill is knowing which signals
+            matter for the situation.
+          </p>
+
+          <p>
+            If a service will not start, service state and logs may matter first. If a
+            machine feels slow, load, memory, disk I/O, and process state may matter
+            first. If a web app cannot be reached, service status, listening ports,
+            firewall state, DNS, routing, and logs may matter.
+          </p>
+
+          <p>
+            Diagnostics is not random inspection. It is evidence collection guided by the
+            shape of the problem.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Raw evidence matters</h2>
+
+          <p>
+            Raw evidence is the original observed data collected from the system. That
+            might be service status, command output, log lines, disk usage, process data,
+            network state, or other system signals.
+          </p>
+
+          <p>
+            Raw evidence matters because it lets the user verify the conclusion. If an
+            AI-assisted diagnostic says a service failed, the user should be able to see
+            what proved it. If a tool says disk usage is critical, the user should be able
+            to inspect the actual usage. If a finding says a port is not listening, the
+            user should be able to see the evidence behind that claim.
+          </p>
+
+          <p>
+            Without raw evidence, the user is left trusting a summary. That is fragile.
+          </p>
+
+          <p>Good diagnostics should preserve the trail:</p>
+
+          <ul class="kb-compact-principles">
+            <li>evidence collected.</li>
+            <li>signals identified.</li>
+            <li>finding generated.</li>
+            <li>recommendation explained.</li>
+            <li>raw output available.</li>
+          </ul>
+
+          <p>That is how troubleshooting becomes inspectable.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>AI can explain evidence, but should not invent it</h2>
+
+          <p>
+            AI can be useful in diagnostics. It can summarize noisy output, explain
+            unfamiliar errors, help identify likely next checks, translate raw system
+            signals into plain language, and help beginners understand why a finding
+            matters.
+          </p>
+
+          <p>
+            But AI should not invent evidence. If the model says a service failed, that
+            claim should come from observed service state or logs. If it says memory
+            pressure is high, that claim should come from actual memory data. If it says a
+            network issue may exist, it should explain what signal suggested that.
+          </p>
+
+          <p>
+            AI should help interpret what was observed. It should not hallucinate system
+            state.
+          </p>
+
+          <p>
+            That is why Linux diagnostics connects directly to controlled AI systems,
+            local-first design, and safe tool interaction. The model is strongest when it
+            explains real evidence. It is weakest when it guesses about a machine it
+            cannot see.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Read-only diagnostics first</h2>
+
+          <p>
+            Argus ACLI starts with read-only diagnostics for a reason. Before a system
+            should be trusted to fix anything, it should prove that it can inspect the
+            system safely.
+          </p>
+
+          <p>Read-only diagnostics allow the system to:</p>
+
+          <ul class="kb-plain-list">
+            <li>collect evidence</li>
+            <li>preserve raw output</li>
+            <li>structure findings</li>
+            <li>assign severity</li>
+            <li>recommend next checks</li>
+            <li>explain what matters</li>
+            <li>avoid changing the machine</li>
+          </ul>
+
+          <p>
+            That is the right foundation. Automated remediation may be useful someday in
+            some systems, but only with much stronger controls than inspection requires —
+            the kind of policy gates, confirmation, recovery planning, and human authority
+            described in Safe Tool Interaction.
+          </p>
+
+          <p>
+            Diagnostics comes first. Action comes later, and only when properly governed.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Diagnostics are the beginning of system awareness</h2>
+
+          <p>
+            Linux diagnostics also point toward a larger NeuroCore goal: true system
+            awareness. A single diagnostic run can answer a question about the current
+            state of a machine. But repeated, structured diagnostics can become something
+            more powerful.
+          </p>
+
+          <p>
+            They can help a system understand what is normal, what changed, what failed
+            before, what evidence was collected, what findings were generated, and what
+            context matters next time.
+          </p>
+
+          <p>
+            That is where diagnostics begins to connect back to NeuroCore's broader
+            purpose. The long-term goal is not just to ask an AI about a machine. The goal
+            is to build systems that can maintain grounded awareness of the environment
+            they are helping with.
+          </p>
+
+          <p>
+            That kind of awareness could reduce the burden on humans to repeatedly reload
+            context every session. Instead of starting from zero each time, the system
+            should be able to work from preserved evidence, structured state, project
+            knowledge, environment history, and current observations.
+          </p>
+
+          <p>
+            The deeper knowledge and memory architecture behind that direction belongs in
+            its own discussion: retrieval, persistent project knowledge, environment
+            history, context-aware generation, structured memory systems, and related
+            ideas.
+          </p>
+
+          <p>
+            But Linux diagnostics are one of the foundations. Without real evidence from
+            the system, memory becomes storytelling instead of awareness.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>How NeuroCore connects</h2>
+
+          <p>
+            NeuroCore is the platform system being built by TENSA Engineering. At a high
+            level, NeuroCore provides the governed runtime direction behind this
+            diagnostic philosophy.
+          </p>
+
+          <p>
+            It is designed around controlled interaction, structured evidence, local-first
+            context, and model explanation that remains grounded in what the system
+            actually observed.
+          </p>
+
+          <p>
+            Linux diagnostics are a practical expression of that larger idea. They show
+            why AI should not simply guess from a prompt, why real system evidence
+            matters, why raw output should be preserved, why tools need boundaries, and
+            why model explanation should follow evidence collection, not replace it.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>How Argus ACLI demonstrates the pattern</h2>
+
+          <p>
+            Argus ACLI is the first product built from NeuroCore. It applies the NeuroCore
+            pattern to Linux diagnostics.
+          </p>
+
+          <p>
+            Argus ACLI is designed to collect read-only system evidence, organize
+            diagnostic signals, preserve raw output, and turn that information into
+            structured findings, severity, and recommendations.
+          </p>
+
+          <p>
+            It is not meant to be a magic "fix my server" button. It is meant to help
+            users see what is happening. That is an important difference.
+          </p>
+
+          <p>
+            The goal is not to make Linux troubleshooting look magical. The goal is to
+            make the evidence easier to see, organize, and understand.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>How Argus Lab extends the idea</h2>
+
+          <p>
+            Argus Lab is the future validation and training environment for this work.
+            First, it is planned to provide a place to validate Argus ACLI against real
+            Linux scenarios and controlled failures. Later, it becomes a platform for
+            teaching real people how to troubleshoot Linux systems through real work.
+          </p>
+
+          <p>
+            That matters because diagnostics is a skill. A user has to learn how to read
+            evidence, follow signals, avoid assumptions, and decide what to check next.
+          </p>
+
+          <p>
+            Argus Lab is where those ideas can become practice instead of theory.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What Linux diagnostics is not</h2>
+
+          <p>
+            Linux diagnostics is not just a command list. It is not guessing. It is not
+            restarting services until something works. It is not blindly copying commands
+            from the internet. It is not trusting AI output without evidence. It is not
+            jumping straight to remediation before understanding the problem.
+          </p>
+
+          <p>
+            Linux diagnostics is the disciplined process of understanding system state.
+            The better the evidence, the better the explanation. The better the
+            explanation, the better the decision.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>The TENSA approach</h2>
+
+          <p>
+            TENSA Engineering is the company behind this work, and the site explains it in
+            public. NeuroCore is the platform that provides the governed, local-first
+            runtime direction. Argus ACLI is the first product built from NeuroCore,
+            applying that direction to Linux diagnostics. Argus Lab is planned first as
+            the validation arena for Argus ACLI, and later a place to teach real Linux
+            troubleshooting through real work.
+          </p>
+
+          <p>
+            The common idea is steady: collect real evidence, preserve raw output,
+            structure the signals, explain what matters, and keep the human in control.
+          </p>
+        </section>
+
+        <section class="kb-reading-nav" aria-label="Continue reading">
+          <div class="kb-nav-card">
+            <p>Previous</p>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+          </div>
+
+          <div class="kb-nav-card">
+            <p>Next</p>
+            <a href="../troubleshooting-training/">Troubleshooting Training</a>
+          </div>
+        </section>
+
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="../controlled-ai-systems/">Controlled AI Systems</a>
+            <a href="../local-first-ai/">Local-First AI</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../../projects/neurocore.html">NeuroCore</a>
+            <a href="../../projects/argus-acli.html">Argus ACLI</a>
+            <a href="../../projects/argus-lab.html">Argus Lab</a>
+            <a href="../">Knowledge Base</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+  </footer>
+</body>
+</html>

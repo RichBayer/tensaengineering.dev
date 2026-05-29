@@ -38,6 +38,14 @@ Current public pages:
     projects/argus-acli.html
     projects/argus-lab.html
     knowledge-base/
+    knowledge-base/ai-operations/
+    knowledge-base/persistent-ai-memory/
+    knowledge-base/controlled-ai-systems/
+    knowledge-base/local-first-ai/
+    knowledge-base/safe-tool-interaction/
+    knowledge-base/linux-diagnostics/
+    knowledge-base/troubleshooting-training/
+    knowledge-base/neurocore-architecture/
     story/
 
 ---
@@ -363,19 +371,17 @@ Path:
 
 Current status:
 
-    Structure-only
+    Live
 
 Current role:
 
 The Knowledge Base is the public teaching layer for concepts that appear across the ecosystem.
 
-It teaches the ideas behind the projects without dumping raw technical docs into public pages.
+It currently introduces and routes readers through the first recommended eight-article path:
 
-Current index topics include:
-
-    Controlled AI Systems
     AI Operations
     Persistent AI Memory
+    Controlled AI Systems
     Local-First AI
     Safe Tool Interaction
     Linux Diagnostics
@@ -394,25 +400,293 @@ Use:
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/internal_linking_strategy.md
     docs/planning/page_inventory.md
+    docs/planning/content_style_guide.md
 
-Use source docs from the relevant project whenever a Knowledge Base page makes specific factual claims.
+Use source docs from the relevant project whenever the Knowledge Base index makes specific factual claims beyond routing and summary language.
 
 ---
 
-### Required Source Docs Before Creating Knowledge Base Articles
+## Knowledge Base Article Source Requirements
 
-For concept articles, use the relevant source documents from:
+These are factual public teaching articles.
 
+Do not rewrite or significantly expand them from memory.
+
+Use the article-specific requirements below, plus:
+
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+    docs/website_state.md
+    current public project pages when changing ecosystem relationship language
+
+---
+
+### AI Operations Article
+
+Path:
+
+    knowledge-base/ai-operations/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains AI Operations as the discipline of making AI-assisted work repeatable, grounded, reviewable, and continuous.
+
+Required source material before major rewrite:
+
+    TENSA AI-operations workflow docs
+    TENSA website resume prompt
+    TENSA documentation closeout protocol
+    Claude website polish workflow prompt if discussing multi-model writing workflow
+    AI Operations methodology source material
+    current Story page if changing origin/workflow bridge language
+
+Special notes:
+
+- Keep this article focused on disciplined AI-assisted work.
+- Do not turn it into a generic prompting tips article.
+- Preserve the distinction between AI productivity and governed AI operations.
+
+---
+
+### Persistent AI Memory Article
+
+Path:
+
+    knowledge-base/persistent-ai-memory/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains why AI memory is useful but not the same as continuity, and why source-grounded context matters.
+
+Required source material before major rewrite:
+
+    NeuroCore origin story source material
+    The Day The AI Forgot Everything source material
+    NeuroCore memory/context planning docs when available
+    NeuroCore RAG / retrieval docs if changing retrieval claims
+    NeuroCore architecture docs if changing platform continuity claims
+    current NeuroCore project page
+    current Story page
+
+Special notes:
+
+- Keep memory, continuity, and source-grounded context clearly separated.
+- Do not imply the future memory system is fully implemented unless source docs prove it.
+- Preserve current-vs-future distinction around advanced memory, context-aware generation, and Karpathy-style wiki ideas.
+
+---
+
+### Controlled AI Systems Article
+
+Path:
+
+    knowledge-base/controlled-ai-systems/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains the TENSA principle that AI can reason, but authority must be governed.
+
+Required source material before major rewrite:
+
+    NeuroCore control plane docs
+    NeuroCore tool execution docs
+    NeuroCore security / policy docs
+    NeuroCore observability docs
     NeuroCore architecture docs
-    NeuroCore design docs
-    NeuroCore build logs
-    Argus ACLI source docs
-    Argus Lab source docs
-    TENSA AI-operations docs
-    TENSA content style guide
-    TENSA internal linking strategy
+    current NeuroCore project page
+    current Safe Tool Interaction article if changing tool-boundary language
+    current public incident references if changing external incident examples
 
-Do not write factual Knowledge Base articles from memory.
+Special notes:
+
+- Keep incident examples cautious, sourced, and limited.
+- Do not overclaim causality from public reports.
+- Preserve the distinction between reasoning, authority, approval, and execution.
+
+---
+
+### Local-First AI Article
+
+Path:
+
+    knowledge-base/local-first-ai/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains why the default trust boundary should start close to the user, the system, and the evidence.
+
+Required source material before major rewrite:
+
+    NeuroCore local-first architecture/source docs
+    Argus ACLI local-first diagnostic source docs
+    NeuroCore project page
+    Argus ACLI project page
+    privacy / security positioning docs if available
+    current Controlled AI Systems and Safe Tool Interaction articles if changing trust-boundary language
+
+Special notes:
+
+- Keep local-first framed as a trust-boundary and system-awareness design choice.
+- Do not pretend local-first eliminates all risks.
+- Do not imply cloud models are never useful.
+- Preserve practical tradeoffs.
+
+---
+
+### Safe Tool Interaction Article
+
+Path:
+
+    knowledge-base/safe-tool-interaction/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains how AI can work near tools and systems without becoming an uncontrolled operator.
+
+Required source material before major rewrite:
+
+    NeuroCore control plane docs
+    NeuroCore tool registry docs
+    NeuroCore BaseTool / tool contract docs
+    NeuroCore command runner docs
+    NeuroCore execution engine docs
+    NeuroCore security / policy docs
+    current Controlled AI Systems article
+    current NeuroCore Architecture article
+
+Special notes:
+
+- Preserve the model-authority boundary.
+- Do not describe the model as directly executing commands.
+- Do not recommend destructive or state-changing behavior outside governed tool paths.
+- Keep public examples clear but not implementation-leaky.
+
+---
+
+### Linux Diagnostics Article
+
+Path:
+
+    knowledge-base/linux-diagnostics/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains evidence-first troubleshooting and why diagnostic systems must start from real system signals rather than guesses.
+
+Required source material before major rewrite:
+
+    Argus ACLI source docs
+    Argus output/tool contract docs
+    Argus tool layer docs
+    Argus system summary / analysis docs
+    NeuroCore tool execution docs
+    relevant service diagnostics / Kernel-Up planning docs if changing service intelligence language
+    current Argus ACLI project page
+    current Safe Tool Interaction article
+    current NeuroCore Architecture article
+
+Special notes:
+
+- Keep diagnostics grounded in raw evidence, telemetry, logs, findings, severity, and recommendations.
+- Do not imply Argus diagnoses everything.
+- Preserve current-vs-future distinction around service intelligence, Kernel-Up, and broader diagnostic coverage.
+
+---
+
+### Troubleshooting Training Article
+
+Path:
+
+    knowledge-base/troubleshooting-training/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains why diagnostic tools and AI guidance still need human judgment, practice, and structured troubleshooting skill.
+
+Required source material before major rewrite:
+
+    Argus Lab README.md
+    Argus Lab docs/vision/argus_lab_vision.md
+    Argus Lab validation / scenario docs if changing implementation details
+    Argus Lab training flow / mentor-mode docs if changing guidance behavior
+    current Argus Lab project page
+    current Linux Diagnostics article
+    current Argus ACLI project page
+
+Special notes:
+
+- Keep Argus Lab described as planned/future where appropriate.
+- Do not imply public availability before implementation exists.
+- Do not describe Argus Lab as a simple quiz or fake-terminal simulator.
+- Preserve the training-vs-diagnostics distinction.
+
+---
+
+### NeuroCore Architecture Article
+
+Path:
+
+    knowledge-base/neurocore-architecture/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Explains NeuroCore as the governed platform behind TENSA's AI systems, including runtime, control path, tool boundary, context layer, evidence layer, model explanation layer, and product foundation.
+
+Required source material before major rewrite:
+
+    NeuroCore README.md
+    NeuroCore docs/architecture/neurocore_vision.md
+    NeuroCore docs/architecture/system_state.md
+    NeuroCore docs/architecture/system_architecture.md
+    NeuroCore docs/architecture/control_plane.md
+    NeuroCore docs/architecture/tool_execution.md
+    NeuroCore docs/architecture/security_policy.md
+    NeuroCore docs/architecture/observability.md
+    NeuroCore docs/architecture/neurocore_master_blueprint.md
+    NeuroCore Argus / ACLI distribution docs if changing product-foundation language
+    current NeuroCore project page
+    current Argus ACLI project page
+    current Argus Lab project page
+
+Special notes:
+
+- Keep implemented, planned, and future-direction claims clearly separated.
+- Do not make the article more implementation-specific than public-facing site strategy allows.
+- Do not turn the public article into the private architecture manual.
+- Preserve NeuroCore as the governed platform, not a chatbot wrapper.
 
 ---
 
@@ -563,13 +837,16 @@ The Resources page should collect useful links.
 
 Potential links:
 
-- NeuroCore GitHub repo
-- Argus Lab GitHub repo
+- future public technical artifacts
+- selected public documentation
 - future Argus ACLI install/download page
 - future videos
 - future social channels
 - future docs index
 - future release notes
+- future public repository or open-component links, if deliberately approved
+
+Do not add direct public links to private implementation repositories.
 
 ---
 
@@ -634,7 +911,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "story/index.html\|Knowledge Base Index\|Argus ACLI Page" docs/planning/content_source_map.md
+    grep -n "Knowledge Base Article Source Requirements\|NeuroCore Architecture Article\|knowledge-base/neurocore-architecture/index.html" docs/planning/content_source_map.md
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
 
 This rule exists to catch:

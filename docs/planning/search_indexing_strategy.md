@@ -48,22 +48,38 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /knowledge-base/ai-operations/
+    /knowledge-base/persistent-ai-memory/
+    /knowledge-base/controlled-ai-systems/
+    /knowledge-base/local-first-ai/
+    /knowledge-base/safe-tool-interaction/
+    /knowledge-base/linux-diagnostics/
+    /knowledge-base/troubleshooting-training/
+    /knowledge-base/neurocore-architecture/
     /story/
 
 Current search-indexing status:
 
-    sitemap.xml created locally
-    robots.txt created locally
-    canonical URLs added to all current public HTML pages
-    Open Graph metadata added to all current public HTML pages
-    Twitter large-image card metadata added to all current public HTML pages
-    dedicated 1200 x 630 social preview image created
-    JSON-LD structured data added to all current public HTML pages
+    sitemap.xml exists locally
+    robots.txt exists locally
+    canonical URLs are present on current public HTML pages
+    Open Graph metadata is present on current public HTML pages
+    Twitter large-image card metadata is present on current public HTML pages
+    dedicated 1200 x 630 social preview image exists
+    JSON-LD structured data is present where currently implemented
     Google Search Console verified
     sitemap submitted successfully to Google
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
-    /story/ added to sitemap locally during Story page closeout
+    /story/ is included in sitemap.xml
+    the first eight Knowledge Base article URLs are included in sitemap.xml locally
+
+Latest local link validation:
+
+    Public HTML files checked: 15
+    Internal links checked: 210
+    External/skipped links: 15
+    Result: all checked internal links resolved successfully
 
 ---
 
@@ -118,6 +134,14 @@ The current sitemap should include only the current real public pages:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/knowledge-base/ai-operations/
+    https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
+    https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
+    https://tensaengineering.dev/knowledge-base/local-first-ai/
+    https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
+    https://tensaengineering.dev/knowledge-base/linux-diagnostics/
+    https://tensaengineering.dev/knowledge-base/troubleshooting-training/
+    https://tensaengineering.dev/knowledge-base/neurocore-architecture/
     https://tensaengineering.dev/story/
 
 Do not include:
@@ -125,14 +149,6 @@ Do not include:
     /resources/
     /build-notes/
     /about.html
-    /knowledge-base/controlled-ai-systems/
-    /knowledge-base/ai-operations/
-    /knowledge-base/persistent-ai-memory/
-    /knowledge-base/local-first-ai/
-    /knowledge-base/safe-tool-interaction/
-    /knowledge-base/linux-diagnostics/
-    /knowledge-base/troubleshooting-training/
-    /knowledge-base/neurocore-architecture/
 
 until those pages or directories actually exist.
 
@@ -150,6 +166,14 @@ Directory index pages should use clean directory URLs when appropriate:
 
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/knowledge-base/ai-operations/
+    https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
+    https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
+    https://tensaengineering.dev/knowledge-base/local-first-ai/
+    https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
+    https://tensaengineering.dev/knowledge-base/linux-diagnostics/
+    https://tensaengineering.dev/knowledge-base/troubleshooting-training/
+    https://tensaengineering.dev/knowledge-base/neurocore-architecture/
     https://tensaengineering.dev/story/
 
 Standalone HTML pages should use their actual paths:
@@ -192,6 +216,30 @@ Current root-level `sitemap.xml` should use this structure:
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/ai-operations/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/persistent-ai-memory/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/controlled-ai-systems/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/local-first-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/safe-tool-interaction/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/linux-diagnostics/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/troubleshooting-training/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/neurocore-architecture/</loc>
       </url>
       <url>
         <loc>https://tensaengineering.dev/story/</loc>
@@ -260,6 +308,9 @@ Google Search Console setup steps:
 8. Monitor indexing status and sitemap processing errors.
 9. After new public pages are added and deployed, confirm the updated sitemap is processed and inspect important new URLs such as:
 
+       https://tensaengineering.dev/knowledge-base/
+       https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
        https://tensaengineering.dev/story/
 
 Preferred verification method:
@@ -336,11 +387,12 @@ For later public page additions:
 1. Add the real public page.
 2. Add the new public route to `sitemap.xml`.
 3. Verify the sitemap locally.
-4. Commit and push.
-5. Wait for GitHub Pages deployment.
-6. Confirm the live sitemap includes the new URL.
-7. Inspect the new page in Google Search Console if appropriate.
-8. Monitor Bing after its next sitemap fetch.
+4. Validate internal links locally.
+5. Commit and push.
+6. Wait for GitHub Pages deployment.
+7. Confirm the live sitemap includes the new URL.
+8. Inspect the new page in Google Search Console if appropriate.
+9. Monitor Bing after its next sitemap fetch.
 
 ---
 
@@ -364,7 +416,7 @@ It does not replace:
 - useful project pages
 - helpful Knowledge Base content
 
-Early indexing may be limited because the site currently has only a small number of pages.
+Early indexing may be limited because the site is still young and growing.
 
 That is acceptable.
 
@@ -416,7 +468,7 @@ Update `sitemap.xml` when:
 - a public page is renamed
 - a public route changes
 - a section index is created
-- a Knowledge Base category page is created
+- a Knowledge Base article or category page is created
 - a Story, Resources, About, or Build Notes page is created
 - old public URLs are retired or redirected
 
@@ -535,11 +587,24 @@ Does not own:
 
 ---
 
+### seo_topic_map.md
+
+Owns:
+
+    target topics, article clusters, search intent, content sequencing, and internal SEO link planning.
+
+Does not own:
+
+    sitemap, robots.txt, Search Console, Bing Webmaster Tools, or technical indexing maintenance.
+
+---
+
 ## Future Automation
 
 When the site grows beyond a small number of pages, consider adding:
 
     scripts/generate_sitemap.py
+    scripts/check_internal_links.py
 
 Purpose:
 
@@ -547,9 +612,10 @@ Purpose:
 - exclude internal docs
 - generate canonical public URLs
 - write sitemap.xml automatically
-- reduce stale sitemap risk
+- validate internal href targets
+- reduce stale sitemap and broken-link risk
 
-Potential future behavior:
+Potential future sitemap behavior:
 
 - include `/` for root index
 - include clean directory URLs for section indexes
@@ -559,9 +625,18 @@ Potential future behavior:
 - exclude hidden files
 - optionally include `lastmod` based on Git metadata if reliable
 
+Potential future link-check behavior:
+
+- scan public HTML files
+- extract internal href targets
+- confirm local files exist
+- validate same-page and cross-page anchors
+- ignore external links
+- report broken links clearly
+
 Do not create automation until manual maintenance becomes annoying or error-prone.
 
-For the current site size, manual sitemap maintenance is acceptable.
+For the current site size, temporary Python validation during closeout is acceptable.
 
 ---
 
@@ -581,6 +656,7 @@ That file should own:
 - Knowledge Base content priorities
 - content sequencing
 - internal SEO links
+- future metadata refinement passes
 
 This search indexing strategy owns:
 
@@ -590,6 +666,7 @@ This search indexing strategy owns:
 - Bing Webmaster Tools
 - indexing setup
 - search-discovery maintenance workflow
+- local link validation as part of indexing hygiene
 
 Do not mix the two too heavily.
 
@@ -607,8 +684,8 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "https://tensaengineering.dev/story/\|/story/ added to sitemap" docs/planning/search_indexing_strategy.md
-    grep -n "https://tensaengineering.dev/story/" sitemap.xml
+    grep -n "knowledge-base/neurocore-architecture/\|Internal links checked: 210\|all eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
+    grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
 
@@ -624,32 +701,41 @@ This rule exists to catch:
 
 Immediate next steps:
 
-1. Commit and push the Story page, navigation updates, sitemap update, Claude polish prompt, and closeout documentation updates.
+1. Commit and push the Knowledge Base article path, sitemap update, styling update, and closeout documentation updates.
 
 2. Wait for GitHub Pages deployment to complete.
 
 3. Confirm these URLs load in the browser:
 
-       https://tensaengineering.dev/story/
+       https://tensaengineering.dev/knowledge-base/
+       https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
+       https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
+       https://tensaengineering.dev/knowledge-base/local-first-ai/
+       https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
+       https://tensaengineering.dev/knowledge-base/linux-diagnostics/
+       https://tensaengineering.dev/knowledge-base/troubleshooting-training/
+       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-4. Confirm the live sitemap includes:
+4. Confirm the live sitemap includes the eight Knowledge Base article URLs.
 
-       https://tensaengineering.dev/story/
+5. Inspect the Knowledge Base index and important new article URLs in Google Search Console if appropriate:
 
-5. Inspect the new Story URL in Google Search Console if appropriate:
-
-       https://tensaengineering.dev/story/
+       https://tensaengineering.dev/knowledge-base/
+       https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
 
 6. Monitor Google and Bing sitemap processing after deployment.
 
 Later next steps:
 
-- create Resources if organizing GitHub, future videos, downloads, and public links becomes the priority
+- run a dedicated SEO/topic-map session for the first Knowledge Base article path
+- create Resources if organizing future public technical artifacts, selected documentation, videos, downloads, examples, and public links becomes the priority
 - create About if concise TENSA mission/builder identity becomes the priority
-- create Knowledge Base categories if the teaching layer becomes the priority
 - create Build Notes if public development history becomes the next content lane
+- add additional Knowledge Base articles only after source requirements and link destinations are defined
 
 ---
 
@@ -672,15 +758,17 @@ Search indexing foundation is complete when:
 - sitemap is submitted to Google
 - Bing Webmaster Tools property is verified
 - sitemap is submitted to Bing
+- local internal-link validation passes
 - `docs/website_state.md` records indexing status
-- repo map includes the new files
+- repo map includes the new files and page routes
 - page inventory reflects search/indexing support files where appropriate
 - resume prompt includes search/indexing status if useful for future sessions
 
-After the Story page closeout deploys, confirm:
+After the Knowledge Base article-path closeout deploys, confirm:
 
-- `https://tensaengineering.dev/story/` is reachable
-- the live sitemap includes `https://tensaengineering.dev/story/`
+- `https://tensaengineering.dev/knowledge-base/` is reachable
+- all eight new Knowledge Base article URLs are reachable
+- the live sitemap includes all eight new Knowledge Base article URLs
 
 ---
 

@@ -91,7 +91,23 @@ DNS / domain provider:
     │   └── website_state.md
     ├── index.html
     ├── knowledge-base
-    │   └── index.html
+    │   ├── ai-operations
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
     │   ├── argus-acli.html
     │   ├── argus-lab.html
@@ -105,7 +121,7 @@ DNS / domain provider:
 
 Current size:
 
-    17 directories, 51 files
+    25 directories, 59 files
 
 ---
 
@@ -209,6 +225,14 @@ Current sitemap URLs:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/knowledge-base/ai-operations/
+    https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
+    https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
+    https://tensaengineering.dev/knowledge-base/local-first-ai/
+    https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
+    https://tensaengineering.dev/knowledge-base/linux-diagnostics/
+    https://tensaengineering.dev/knowledge-base/troubleshooting-training/
+    https://tensaengineering.dev/knowledge-base/neurocore-architecture/
     https://tensaengineering.dev/story/
 
 ---
@@ -237,6 +261,9 @@ Currently controls:
 - responsive layout
 - NeuroCore architecture showcase
 - styled list treatment for public content cards
+- Knowledge Base article layout and typography
+- Knowledge Base article navigation and related-link cards
+- Knowledge Base index article link styling
 
 All current public pages use this stylesheet.
 
@@ -654,18 +681,23 @@ Purpose:
 
     Public Knowledge Base section.
 
-This directory is the beginning of the public teaching layer for the TENSA Engineering ecosystem.
+This directory is the public teaching layer for the TENSA Engineering ecosystem.
 
-It should eventually contain focused educational pages about:
+Current role:
 
-- controlled AI systems
-- AI operations
-- persistent AI memory
-- local-first AI
-- safe tool interaction
-- Linux diagnostics
-- troubleshooting training
-- NeuroCore architecture
+    Provides a recommended eight-article reading path that explains the core ideas behind TENSA Engineering, NeuroCore, Argus ACLI, Argus Lab, and AI Operations.
+
+Current public pages:
+
+    /knowledge-base/
+    /knowledge-base/ai-operations/
+    /knowledge-base/persistent-ai-memory/
+    /knowledge-base/controlled-ai-systems/
+    /knowledge-base/local-first-ai/
+    /knowledge-base/safe-tool-interaction/
+    /knowledge-base/linux-diagnostics/
+    /knowledge-base/troubleshooting-training/
+    /knowledge-base/neurocore-architecture/
 
 ---
 
@@ -677,22 +709,179 @@ Purpose:
 
 Current status:
 
-    Structure-only public index page.
+    Live.
 
 Current role:
 
-    Establishes the Knowledge Base as a major site section and public teaching layer.
+    Introduces the Knowledge Base as the public teaching layer and routes readers through the recommended article path.
 
 Current content:
 
 - explains the purpose of the Knowledge Base
-- introduces core topic categories
-- explains how readers can move from concepts to systems
-- links back to Projects and GitHub proof
+- presents the recommended reading path
+- links to all eight current Knowledge Base articles
+- routes visitors back to Projects and Story
+- uses TENSA green link styling for article card titles
 
-Future role:
+---
 
-    Route visitors into category pages and focused public explainers.
+### knowledge-base/ai-operations/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining AI Operations.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains AI Operations as the discipline of making AI-assisted work repeatable, grounded, reviewable, and continuous.
+
+Recommended path position:
+
+    1 of 8
+
+---
+
+### knowledge-base/persistent-ai-memory/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining persistent AI memory.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains why AI memory is useful but not the same as continuity, and why source-grounded context matters.
+
+Recommended path position:
+
+    2 of 8
+
+---
+
+### knowledge-base/controlled-ai-systems/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining controlled AI systems.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains the TENSA principle that AI can reason, but authority must be governed.
+
+Recommended path position:
+
+    3 of 8
+
+---
+
+### knowledge-base/local-first-ai/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining local-first AI.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains why the default trust boundary should start close to the user, the system, and the evidence.
+
+Recommended path position:
+
+    4 of 8
+
+---
+
+### knowledge-base/safe-tool-interaction/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining safe tool interaction.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains how AI can work near tools and systems without becoming an uncontrolled operator.
+
+Recommended path position:
+
+    5 of 8
+
+---
+
+### knowledge-base/linux-diagnostics/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining Linux diagnostics.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains evidence-first troubleshooting and why diagnostic systems must start from real system signals rather than guesses.
+
+Recommended path position:
+
+    6 of 8
+
+---
+
+### knowledge-base/troubleshooting-training/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining troubleshooting training.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains why diagnostic tools and AI guidance still need human judgment, practice, and structured troubleshooting skill.
+
+Recommended path position:
+
+    7 of 8
+
+---
+
+### knowledge-base/neurocore-architecture/index.html
+
+Purpose:
+
+    Public Knowledge Base article explaining NeuroCore architecture.
+
+Current status:
+
+    Live.
+
+Current role:
+
+    Explains NeuroCore as the governed platform behind TENSA's AI systems, including the runtime, control path, tool boundary, context layer, evidence layer, model explanation layer, and product foundation.
+
+Recommended path position:
+
+    8 of 8
 
 ---
 
@@ -931,6 +1120,14 @@ Current public routes:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /knowledge-base/ai-operations/
+    /knowledge-base/persistent-ai-memory/
+    /knowledge-base/controlled-ai-systems/
+    /knowledge-base/local-first-ai/
+    /knowledge-base/safe-tool-interaction/
+    /knowledge-base/linux-diagnostics/
+    /knowledge-base/troubleshooting-training/
+    /knowledge-base/neurocore-architecture/
     /story/
 
 ---
@@ -992,14 +1189,22 @@ Likely future public structure:
     │   └── argus-lab.html
     ├── knowledge-base/
     │   ├── index.html
-    │   ├── controlled-ai-systems/
     │   ├── ai-operations/
+    │   │   └── index.html
     │   ├── persistent-ai-memory/
+    │   │   └── index.html
+    │   ├── controlled-ai-systems/
+    │   │   └── index.html
     │   ├── local-first-ai/
+    │   │   └── index.html
     │   ├── safe-tool-interaction/
+    │   │   └── index.html
     │   ├── linux-diagnostics/
+    │   │   └── index.html
     │   ├── troubleshooting-training/
+    │   │   └── index.html
     │   └── neurocore-architecture/
+    │       └── index.html
     ├── story/
     │   └── index.html
     ├── build-notes/
@@ -1182,7 +1387,23 @@ Last known output:
     │   └── website_state.md
     ├── index.html
     ├── knowledge-base
-    │   └── index.html
+    │   ├── ai-operations
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
     │   ├── argus-acli.html
     │   ├── argus-lab.html
@@ -1194,4 +1415,4 @@ Last known output:
     │   └── index.html
     └── styles.css
 
-    17 directories, 51 files
+    25 directories, 59 files

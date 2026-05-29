@@ -112,9 +112,23 @@ Purpose:
 - detect stale anchors or broken internal routing
 - confirm whether repo map and page inventory need updates
 
-Future recommended replacement for manual link grep:
+When public links, navigation, or routes changed, prefer a real local internal-link validation script/check over grep-only review.
+
+The link validation check should:
+
+- scan public HTML files
+- extract internal href targets
+- resolve relative paths
+- resolve directory routes to index.html
+- validate same-page and cross-page anchors
+- ignore external links
+- report broken local targets clearly
+
+Future recommended permanent script:
 
     scripts/check_internal_links.py
+
+Until that exists, a temporary Python link checker may be used during closeout.
 
 ---
 
@@ -317,7 +331,7 @@ Examples:
 | Navigation changed | internal linking strategy, page inventory, website state, affected HTML pages |
 | Public page status changed | page inventory, website state, resume prompt if major |
 | Factual project page expanded | content source map checked, page inventory, website state, internal linking strategy |
-| Knowledge Base category added | page inventory, internal linking strategy, content source map, website state, sitemap |
+| Knowledge Base category/article added | page inventory, internal linking strategy, content source map, website state, sitemap |
 | Story page added | page inventory, internal linking strategy, content source map, website state, sitemap |
 | New planning doc created | repo map, page inventory if important, documentation strategy, website state, resume prompt if it becomes core context |
 | New AI-operations doc created | repo map, page inventory if important, documentation strategy, website state, resume prompt if it becomes core context |
@@ -370,6 +384,38 @@ If multiple files need updates, handle them one at a time unless the user asks f
 For Markdown files, avoid nested triple-backtick fences inside copy blocks when possible.
 
 Use indented text blocks inside Markdown documents to avoid breaking the outer copy block.
+
+---
+
+## Python Full-File Writer Rule
+
+Python-based file writing is allowed and often preferred for closeout documentation delivery, but only under the right conditions.
+
+Use Python as a delivery mechanism when:
+
+- the current full file context has been loaded or otherwise verified
+- the complete intended replacement has been decided
+- the assistant is writing the whole file, not guessing at a hidden section
+- the command is easier and safer than manual copy/paste
+- the replacement can be verified immediately afterward
+
+Do not use Python as a shortcut to:
+
+- inspect only partial file context
+- make blind surgical patches from incomplete information
+- guess what a hidden section probably says
+- rewrite unrelated content without approval
+- bypass the user's review expectations
+
+Preferred safe pattern:
+
+    full context first
+    define intended changes
+    write the complete file
+    run targeted verification
+    wait for user output
+
+This rule exists because Python is reliable for writing files, but reliability does not replace source-of-truth context.
 
 ---
 
@@ -625,23 +671,38 @@ If a public page sounds like an internal planning document:
 
 ## Link Validation Gate
 
-Before closeout, run:
+Before closeout, run or request a real local internal-link validation check when public links, routes, or navigation changed.
+
+The preferred validation should confirm:
+
+- all public HTML files are discovered
+- internal href targets resolve to existing local files
+- relative paths resolve correctly from nested pages
+- directory routes resolve to index.html
+- same-page anchors resolve
+- cross-page anchors resolve
+- external links are skipped or separately reviewed
+- broken internal paths are reported clearly
+
+For small visual reviews, this grep remains useful:
 
     grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
-Confirm:
+But grep is not enough by itself when significant routes or article paths were added.
 
-- Knowledge Base points to `/knowledge-base/`
-- Story points to `/story/` once `/story/` exists
-- GitHub temporary links point to homepage proof anchor until Resources exists, except pages intentionally linking directly to GitHub
-- project links point to real project pages
-- no stale `#knowledge` navigation remains except homepage section IDs or labels
-- no stale `/index.html#story` navigation remains once `/story/` exists
-- no dead internal paths were introduced
+Temporary Python validation is acceptable until a permanent script exists.
 
 Future recommended script:
 
     scripts/check_internal_links.py
+
+Record significant validation results in closeout docs when useful.
+
+Example result worth recording:
+
+    Internal links checked: 210
+    External/skipped links: 15
+    Result: all checked internal links resolved successfully
 
 ---
 
@@ -652,7 +713,7 @@ Before declaring closeout complete, verify:
 - `git status --short` was reviewed
 - current tree was reviewed
 - HTML page list was reviewed
-- link output was reviewed
+- link output or local link validation was reviewed
 - repo map is updated if tree changed
 - page inventory is updated if pages changed
 - internal linking strategy is updated if links changed
@@ -664,6 +725,7 @@ Before declaring closeout complete, verify:
 - public pages do not contain internal planning language
 - all changed public pages were locally previewed or user-confirmed
 - targeted verification checks passed after full-file replacements
+- local internal-link validation passed when public links, routes, or navigation changed
 - final diff/status is ready for review
 
 If any required condition fails:
@@ -701,6 +763,10 @@ or:
 or:
 
     Add TENSA Story page and update navigation
+
+or:
+
+    Add TENSA Knowledge Base article path
 
 Choose the message based on the actual work completed.
 

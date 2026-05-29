@@ -51,6 +51,14 @@ Current active public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/index.html
+    /knowledge-base/ai-operations/index.html
+    /knowledge-base/persistent-ai-memory/index.html
+    /knowledge-base/controlled-ai-systems/index.html
+    /knowledge-base/local-first-ai/index.html
+    /knowledge-base/safe-tool-interaction/index.html
+    /knowledge-base/linux-diagnostics/index.html
+    /knowledge-base/troubleshooting-training/index.html
+    /knowledge-base/neurocore-architecture/index.html
     /story/index.html
 
 Current active public sections:
@@ -81,32 +89,33 @@ Use these preferred destinations when topics appear in public pages.
 | TENSA Engineering | `/index.html` | `/about.html` may supplement | Homepage remains public front door. |
 | Ecosystem | `/projects/` | `/projects/` | Projects page explains platform/product/lab structure. |
 | NeuroCore | `/projects/neurocore.html` | Same | Main public NeuroCore platform explainer. |
+| NeuroCore Architecture | `/knowledge-base/neurocore-architecture/` | Same, plus deeper future subtopics if needed | Public architecture article explains the governed platform behind TENSA's AI systems. |
 | Argus ACLI | `/projects/argus-acli.html` | Same | Full public product page for local-first read-only Linux diagnostics. |
 | Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the planned real-Linux troubleshooting, training, and validation environment. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
 | Origin story | `/story/` | Same, or future deeper story article if needed | Story index now owns the full public origin narrative. |
 | Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
-| Persistent AI memory | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` | NeuroCore currently explains continuity/memory direction best. |
-| Continuity | `/story/` or `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/` or story article | Story explains the human origin; NeuroCore explains the platform direction. |
-| Context | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/context-and-continuity.html` | Future article likely needed. |
-| RAG / retrieval augmented generation | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/rag-and-local-knowledge.html` | NeuroCore page currently explains the local retrieval/RAG foundation. |
-| Structured knowledge base | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/structured-knowledge-base.html` | Future Knowledge Base explainer. |
-| CAG-style context assembly | `/projects/neurocore.html` | `/knowledge-base/persistent-ai-memory/context-aware-memory.html` | Future Knowledge Base explainer. |
-| Controlled AI systems | `/knowledge-base/` | `/knowledge-base/controlled-ai-systems/` | Category not created yet. |
-| Intelligence vs authority | `/projects/neurocore.html` | `/knowledge-base/controlled-ai-systems/ai-can-reason-but-authority-must-be-governed.html` | Strong future article candidate. |
-| Control plane | `/projects/neurocore.html` | `/knowledge-base/neurocore-architecture/control-plane.html` | Current explanation lives in NeuroCore page. |
-| Safe tool interaction | `/knowledge-base/` | `/knowledge-base/safe-tool-interaction/` | Category not created yet. |
-| Tool execution | `/projects/neurocore.html` | `/knowledge-base/safe-tool-interaction/controlled-tool-execution.html` | Future public explainer. |
-| Observability | `/projects/neurocore.html` | `/knowledge-base/neurocore-architecture/observability.html` | Future public explainer. |
-| Local-first AI | `/projects/neurocore.html` | `/knowledge-base/local-first-ai/` | NeuroCore and Argus ACLI currently explain the concept practically. |
-| AI Operations | `/story/` or `/knowledge-base/` | `/knowledge-base/ai-operations/` | Story explains the origin; Knowledge Base category not created yet. |
-| Documentation as memory | `/story/` | `/knowledge-base/ai-operations/documentation-as-operational-memory.html` | Future story/knowledge bridge article. |
-| Linux diagnostics | `/projects/argus-acli.html` | `/knowledge-base/linux-diagnostics/` | Argus ACLI page is current practical destination. |
-| Raw evidence | `/projects/argus-acli.html` | `/knowledge-base/linux-diagnostics/raw-evidence.html` | Future explainer. |
-| Severity / findings / recommendations | `/projects/argus-acli.html` | `/knowledge-base/linux-diagnostics/structured-diagnostics.html` | Future explainer. |
-| Kernel-Up / Service Intelligence | `/projects/neurocore.html` | `/knowledge-base/linux-diagnostics/kernel-up-service-intelligence.html` | NeuroCore architecture showcase currently mentions this near-term expansion. |
-| Troubleshooting training | `/projects/argus-lab.html` | `/knowledge-base/troubleshooting-training/` | Argus Lab page is current practical destination. |
-| Real Linux failure scenarios | `/projects/argus-lab.html` | `/knowledge-base/troubleshooting-training/real-failure-scenarios.html` | Future explainer. |
+| AI Operations | `/knowledge-base/ai-operations/` | Same, plus deeper future subtopics if needed | Article 1 in the current recommended Knowledge Base path. |
+| Persistent AI memory | `/knowledge-base/persistent-ai-memory/` | Same, plus deeper future subtopics if needed | Article 2 in the current recommended Knowledge Base path. |
+| Continuity | `/knowledge-base/persistent-ai-memory/` or `/story/` | Same, or future deeper continuity article if needed | Use Story for origin/philosophy; use Persistent AI Memory for concept explanation. |
+| Context | `/knowledge-base/persistent-ai-memory/` | Future deeper context-and-continuity article if needed | Current article explains memory vs continuity and source-grounded context. |
+| RAG / retrieval augmented generation | `/projects/neurocore.html` | Future deeper RAG/local knowledge article if needed | NeuroCore page currently explains the local retrieval/RAG foundation at the project level. |
+| Structured knowledge base | `/knowledge-base/persistent-ai-memory/` | Future structured-knowledge-base article if needed | Current persistent memory article is the best public conceptual destination. |
+| CAG-style context assembly | `/projects/neurocore.html` | Future context-aware memory article if needed | NeuroCore page currently covers future context-aware memory direction. |
+| Controlled AI systems | `/knowledge-base/controlled-ai-systems/` | Same, plus deeper future subtopics if needed | Article 3 in the current recommended Knowledge Base path. |
+| Intelligence vs authority | `/knowledge-base/controlled-ai-systems/` | Future focused article if needed | Current article owns the “AI can reason, but authority must be governed” concept. |
+| Control plane | `/knowledge-base/neurocore-architecture/` | Future deeper control-plane article if needed | NeuroCore Architecture is the current public architecture destination. |
+| Safe tool interaction | `/knowledge-base/safe-tool-interaction/` | Same, plus deeper future subtopics if needed | Article 5 in the current recommended Knowledge Base path. |
+| Tool execution | `/knowledge-base/safe-tool-interaction/` | Future controlled-tool-execution article if needed | Current article owns the public tool-boundary explanation. |
+| Observability | `/knowledge-base/neurocore-architecture/` | Future observability article if needed | Current NeuroCore Architecture article explains evidence, tool layers, and system awareness at a public level. |
+| Local-first AI | `/knowledge-base/local-first-ai/` | Same, plus deeper future subtopics if needed | Article 4 in the current recommended Knowledge Base path. |
+| Documentation as memory | `/knowledge-base/ai-operations/` or `/story/` | Future documentation-as-operational-memory article if needed | Use AI Operations for workflow discipline; use Story for origin narrative. |
+| Linux diagnostics | `/knowledge-base/linux-diagnostics/` | Same, plus deeper future subtopics if needed | Article 6 in the current recommended Knowledge Base path. |
+| Raw evidence | `/knowledge-base/linux-diagnostics/` | Future raw-evidence article if needed | Current Linux Diagnostics article owns evidence-first diagnostic framing. |
+| Severity / findings / recommendations | `/knowledge-base/linux-diagnostics/` or `/projects/argus-acli.html` | Future structured-diagnostics article if needed | Use Argus ACLI for product behavior; use Linux Diagnostics for concept explanation. |
+| Kernel-Up / Service Intelligence | `/projects/neurocore.html` | Future Linux diagnostics / service intelligence article if needed | NeuroCore architecture showcase currently mentions this near-term expansion. |
+| Troubleshooting training | `/knowledge-base/troubleshooting-training/` | Same, plus deeper future subtopics if needed | Article 7 in the current recommended Knowledge Base path. |
+| Real Linux failure scenarios | `/knowledge-base/troubleshooting-training/` or `/projects/argus-lab.html` | Future real-failure-scenarios article if needed | Use Argus Lab for platform/lab role; use Troubleshooting Training for skill-development concept. |
 | Build history | No public link yet | `/build-notes/` | Build Notes not created yet. Public build summaries should avoid exposing private implementation details. |
 | Downloads / install guidance | No public link yet | `/resources/downloads.html` or Argus ACLI page | Do not create until product readiness supports it. |
 
@@ -132,10 +141,14 @@ Help a new visitor understand what TENSA Engineering is, how the ecosystem fits 
 ### Path 2: AI Architecture Reader
 
     Home
-    → NeuroCore
     → Knowledge Base
+    → AI Operations
+    → Persistent AI Memory
     → Controlled AI Systems
+    → Local-First AI
     → Safe Tool Interaction
+    → NeuroCore Architecture
+    → NeuroCore
 
 Purpose:
 
@@ -147,9 +160,9 @@ Help technical readers understand the architectural philosophy without requiring
 
     Home
     → Story
-    → NeuroCore
-    → Persistent AI Memory
     → AI Operations
+    → Persistent AI Memory
+    → NeuroCore
     → Build Notes after created
 
 Purpose:
@@ -163,9 +176,9 @@ Connect the origin story to continuity engineering, documentation discipline, an
     Home
     → Projects
     → Argus ACLI
-    → NeuroCore
     → Linux Diagnostics
-    → Raw Evidence / Structured Diagnostics
+    → Troubleshooting Training
+    → NeuroCore Architecture
 
 Purpose:
 
@@ -178,13 +191,31 @@ Show how Argus uses NeuroCore to turn real Linux system data into grounded diagn
     Home
     → Projects
     → Argus Lab
-    → Argus ACLI
     → Troubleshooting Training
     → Linux Diagnostics
+    → Argus ACLI
 
 Purpose:
 
 Explain Argus Lab as both a future human training platform and a validation environment for Argus ACLI.
+
+---
+
+### Path 6: Recommended Knowledge Base Path
+
+    Knowledge Base
+    → AI Operations
+    → Persistent AI Memory
+    → Controlled AI Systems
+    → Local-First AI
+    → Safe Tool Interaction
+    → Linux Diagnostics
+    → Troubleshooting Training
+    → NeuroCore Architecture
+
+Purpose:
+
+Give readers a coherent conceptual path from disciplined AI-assisted work to the governed NeuroCore platform architecture.
 
 ---
 
@@ -197,7 +228,7 @@ These are intentional temporary or future targets.
 | Homepage Knowledge Base preview | `/knowledge-base/` | `/knowledge-base/` |
 | Homepage origin story preview | `/story/` | `/story/` |
 | Public technical artifacts | No public link yet | Possibly `/resources/` after enough useful public material exists |
-| Argus Lab project page | `/projects/argus-lab.html` | Full public landing page now active |
+| Build history | No public link yet | Possibly `/build-notes/` after public-friendly build summaries are ready |
 
 ---
 
@@ -246,7 +277,7 @@ The Projects page should link to:
 - `/projects/argus-lab.html`
 - `/knowledge-base/` where helpful
 - `/story/` through header navigation
-- future related knowledge-base articles after they exist
+- relevant Knowledge Base articles after deliberate copy/link review
 
 The Projects page should remain an ecosystem router.
 
@@ -260,10 +291,10 @@ The NeuroCore page should link to:
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/`
-- future Persistent AI Memory pages
-- future Controlled AI Systems pages
-- future Safe Tool Interaction pages
-- future NeuroCore Architecture pages
+- `/knowledge-base/neurocore-architecture/` where deeper architecture explanation is useful
+- `/knowledge-base/persistent-ai-memory/` where continuity or memory explanation is useful
+- `/knowledge-base/controlled-ai-systems/` where governed authority explanation is useful
+- `/knowledge-base/safe-tool-interaction/` where tool-boundary explanation is useful
 - future public technical artifacts after a Resources page or public artifact strategy exists
 
 The NeuroCore page should remain public-facing and business-readable.
@@ -279,8 +310,9 @@ The Argus ACLI page should link to:
 - `/story/` through header navigation
 - `/projects/neurocore.html`
 - `/projects/argus-lab.html`
-- `/knowledge-base/linux-diagnostics/` after created
-- `/knowledge-base/safe-tool-interaction/` after created
+- `/knowledge-base/linux-diagnostics/` where evidence-first diagnostics explanation is useful
+- `/knowledge-base/safe-tool-interaction/` where tool-boundary explanation is useful
+- `/knowledge-base/neurocore-architecture/` where platform architecture explanation is useful
 - future public technical artifacts after a Resources page or public artifact strategy exists
 
 The Argus ACLI page should clearly distinguish current product state from future product direction.
@@ -294,8 +326,8 @@ The Argus Lab page should link to:
 - `/story/` through header navigation
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
-- `/knowledge-base/troubleshooting-training/` after created
-- `/knowledge-base/linux-diagnostics/` after created
+- `/knowledge-base/troubleshooting-training/` where troubleshooting skill explanation is useful
+- `/knowledge-base/linux-diagnostics/` where evidence-first diagnostics explanation is useful
 - future public technical artifacts after a Resources page or public artifact strategy exists
 
 The Argus Lab page should clearly remain future-phase until implementation status changes.
@@ -309,13 +341,43 @@ The page is now a full public landing page. Keep future-phase status clear until
 The Knowledge Base index should link to:
 
 - `/story/` through header navigation
-- category pages once they exist
-- `/projects/neurocore.html`
-- `/projects/argus-acli.html`
-- `/projects/argus-lab.html`
-- future Story pages where relevant
+- `/projects/` through header navigation and CTA links
+- `/knowledge-base/ai-operations/`
+- `/knowledge-base/persistent-ai-memory/`
+- `/knowledge-base/controlled-ai-systems/`
+- `/knowledge-base/local-first-ai/`
+- `/knowledge-base/safe-tool-interaction/`
+- `/knowledge-base/linux-diagnostics/`
+- `/knowledge-base/troubleshooting-training/`
+- `/knowledge-base/neurocore-architecture/`
 
-Until category pages exist, topic cards should not be fake links.
+The Knowledge Base index currently acts as the article-path router for the first eight public Knowledge Base articles.
+
+Do not add fake links for planned topics before pages exist.
+
+---
+
+### Knowledge Base Articles
+
+Current Knowledge Base articles should link through the recommended path:
+
+    AI Operations
+    → Persistent AI Memory
+    → Controlled AI Systems
+    → Local-First AI
+    → Safe Tool Interaction
+    → Linux Diagnostics
+    → Troubleshooting Training
+    → NeuroCore Architecture
+    → AI Operations
+
+Each article should:
+
+- link back to `/knowledge-base/` through article metadata or navigation
+- include header navigation to Home, Projects, Knowledge Base, and Story
+- preserve previous/next navigation where appropriate
+- include related links only to real public pages
+- avoid links to internal planning docs or private repositories
 
 ---
 
@@ -351,11 +413,14 @@ When these pages are created, update links across the site.
 |---|---|
 | Full `/projects/argus-lab.html` page | Completed. Keep related links current if homepage, Projects page, NeuroCore page, or Argus ACLI page copy changes later. |
 | `/story/index.html` | Completed. Header navigation now points to `/story/`. Keep story-related links current if deeper Story articles are added later. |
-| `/knowledge-base/controlled-ai-systems/` | Homepage Knowledge Base section, Knowledge Base index, NeuroCore page |
-| `/knowledge-base/persistent-ai-memory/` | Homepage Knowledge Base section, Knowledge Base index, NeuroCore page, Story page |
-| `/knowledge-base/ai-operations/` | Homepage Knowledge Base section, Knowledge Base index, Story page |
-| `/knowledge-base/linux-diagnostics/` | Knowledge Base index, Argus ACLI page, Argus Lab page |
-| `/knowledge-base/troubleshooting-training/` | Knowledge Base index, Argus Lab page |
+| `/knowledge-base/ai-operations/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Story/project pages later only after deliberate copy review. |
+| `/knowledge-base/persistent-ai-memory/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Story/project pages later only after deliberate copy review. |
+| `/knowledge-base/controlled-ai-systems/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
+| `/knowledge-base/local-first-ai/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
+| `/knowledge-base/safe-tool-interaction/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
+| `/knowledge-base/linux-diagnostics/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Argus ACLI or Argus Lab later only after deliberate copy review. |
+| `/knowledge-base/troubleshooting-training/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Argus Lab later only after deliberate copy review. |
+| `/knowledge-base/neurocore-architecture/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from NeuroCore or project pages later only after deliberate copy review. |
 | `/resources/index.html` | Header nav if Resources becomes primary, footer/artifacts sections, Knowledge Base index, project pages where useful |
 | `/build-notes/index.html` | Knowledge Base index, NeuroCore page, Story page where useful |
 
@@ -396,7 +461,7 @@ The verification should confirm the intended change actually landed and that the
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "17 directories, 51 files\|story/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "25 directories, 59 files\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
 
 This rule exists to catch:
 
@@ -418,6 +483,14 @@ Current verified public HTML files:
 
     ./index.html
     ./knowledge-base/index.html
+    ./knowledge-base/ai-operations/index.html
+    ./knowledge-base/persistent-ai-memory/index.html
+    ./knowledge-base/controlled-ai-systems/index.html
+    ./knowledge-base/local-first-ai/index.html
+    ./knowledge-base/safe-tool-interaction/index.html
+    ./knowledge-base/linux-diagnostics/index.html
+    ./knowledge-base/troubleshooting-training/index.html
+    ./knowledge-base/neurocore-architecture/index.html
     ./projects/argus-acli.html
     ./projects/argus-lab.html
     ./projects/index.html
@@ -431,6 +504,8 @@ Current notable link state:
 - Direct public links to private implementation repositories have been removed from current public pages.
 - Knowledge Base links point to the real `/knowledge-base/` page.
 - Story links point to the real `/story/` page.
+- The Knowledge Base index links to all eight current Knowledge Base articles.
+- The current Knowledge Base article path links from AI Operations through NeuroCore Architecture, then back to AI Operations.
 - Argus ACLI links to NeuroCore and Argus Lab.
 - NeuroCore links to Argus ACLI and Argus Lab.
 - Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.

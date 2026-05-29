@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Safe tool interaction is how AI works near real systems without becoming an uncontrolled operator."
+  />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/safe-tool-interaction/" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Safe Tool Interaction | TENSA Engineering Knowledge Base" />
+  <meta property="og:description" content="Safe tool interaction is how AI works near real systems without becoming an uncontrolled operator." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/safe-tool-interaction/" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:title" content="Safe Tool Interaction | TENSA Engineering Knowledge Base" />
+  <meta name="twitter:description" content="Safe tool interaction is how AI works near real systems without becoming an uncontrolled operator." />
+  <title>Safe Tool Interaction | TENSA Engineering Knowledge Base</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tensaengineering.dev/knowledge-base/safe-tool-interaction/#article",
+  "url": "https://tensaengineering.dev/knowledge-base/safe-tool-interaction/",
+  "headline": "Safe Tool Interaction",
+  "description": "Safe tool interaction is how AI works near real systems without becoming an uncontrolled operator.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://tensaengineering.dev/#website",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tensaengineering.dev/#organization",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
+  },
+  "inLanguage": "en-US"
+}
+  </script>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img
+        src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
+        alt="TENSA Engineering"
+        class="brand-logo"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../">Knowledge Base</a>
+      <a href="../../story/">Story</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Knowledge Base</p>
+        <h1>Safe Tool Interaction</h1>
+        <p class="kb-article-summary">
+          Safe tool interaction is how AI moves from talking about systems to working near
+          systems without becoming an uncontrolled operator.
+        </p>
+
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="../">Knowledge Base</a>
+          <span>Recommended path: 5 of 8</span>
+          <span>Tool boundaries</span>
+        </div>
+      </header>
+
+      <article class="kb-article-body">
+        <section class="kb-section">
+          <p>
+            Safe tool interaction is how AI moves from talking about systems to working
+            near systems without becoming an uncontrolled operator. That distinction
+            matters.
+          </p>
+
+          <p>
+            An AI model that only generates text can still be wrong, but the damage is
+            usually limited to bad advice, bad code, or a bad explanation. An AI model
+            connected to tools can affect files, systems, databases, APIs, infrastructure,
+            credentials, deployments, and production environments.
+          </p>
+
+          <p>
+            That changes the risk. The question becomes: what is the AI allowed to touch?
+            A safe AI system needs a better answer than whatever the model decides to do
+            next.
+          </p>
+        </section>
+
+        <section class="kb-path-card">
+          <h2>Where this fits</h2>
+
+          <p>
+            This page is part of the recommended TENSA Knowledge Base path. You can read
+            each article independently, but the sequence is designed to build in order,
+            each article on the one before it.
+          </p>
+
+          <ol class="kb-path-list">
+            <li><span>1.</span> AI Operations</li>
+            <li><span>2.</span> Persistent AI Memory</li>
+            <li><span>3.</span> Controlled AI Systems</li>
+            <li><span>4.</span> Local-First AI</li>
+            <li><span>5.</span> Safe Tool Interaction</li>
+            <li><span>6.</span> Linux Diagnostics</li>
+            <li><span>7.</span> Troubleshooting Training</li>
+            <li><span>8.</span> NeuroCore Architecture</li>
+          </ol>
+
+          <p>
+            This page builds on Local-First AI by explaining how AI should interact with
+            tools inside a trusted environment.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Why tools change the risk</h2>
+
+          <p>
+            AI becomes more powerful when it can use tools. It can inspect files, query
+            systems, analyze logs, run diagnostics, call APIs, summarize results, and help
+            users understand complicated environments.
+          </p>
+
+          <p>
+            That power is useful. It is also risky. A tool can read sensitive data, expose
+            credentials, modify files, delete data, restart services, change configuration,
+            or call an API with real production impact.
+          </p>
+
+          <p>
+            So the safety question is not only whether the model is smart. The safety
+            question is whether the tool boundary is designed well.
+          </p>
+
+          <p>
+            If the model has broad access to a shell, file system, API token, or production
+            environment, then the system is trusting the model with more authority than it
+            should have. Safe tool interaction starts by separating intelligence from
+            access.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>The model should not directly touch the OS</h2>
+
+          <p>
+            The model should not be the operating system. It should not directly hold
+            shell access, own credentials, call arbitrary APIs, or decide on its own what
+            it is allowed to execute. Controlled AI Systems makes the full case for that
+            separation; here the point is what it means once tools enter the picture.
+          </p>
+
+          <p>
+            The model can recommend a diagnostic path, explain what evidence appears to
+            show, ask for a specific approved tool to be run, or tell the user what it
+            thinks should be checked next. But the model itself should not be the thing
+            reaching into the operating system.
+          </p>
+
+          <p>
+            That separation is what makes the rest of the safety structure possible. If
+            the model directly controls the shell, then every prompt becomes a potential
+            execution path. If the model must go through approved tools, policy boundaries,
+            structured inputs, and human approval, then the system can enforce what is
+            allowed.
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>Natural language may express intent. Natural language should not become execution authority.</p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>Tools should be explicit</h2>
+
+          <p>
+            A safe AI system should know what tools exist and what each tool is allowed to
+            do. Tools should be explicit.
+          </p>
+
+          <p>That means the system should define:</p>
+
+          <ul class="kb-plain-list">
+            <li>what the tool does</li>
+            <li>what inputs it accepts</li>
+            <li>what data it can access</li>
+            <li>whether it is read-only or write-capable</li>
+            <li>what kind of output it returns</li>
+            <li>what risks are associated with using it</li>
+            <li>what approval is needed before it runs</li>
+            <li>what evidence it preserves</li>
+          </ul>
+
+          <p>
+            This is very different from handing the model a terminal and saying: figure it
+            out. Explicit tools create boundaries. They make it possible to inspect, test,
+            restrict, log, and improve system behavior.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Inputs should be validated</h2>
+
+          <p>
+            Users speak in natural language. Tools need structured input. That translation
+            layer matters.
+          </p>
+
+          <p>
+            A user might ask, "Why is my server slow?" That sentence may imply several
+            possible diagnostic paths: CPU, memory, disk, processes, logs, network, or
+            service state.
+          </p>
+
+          <p>
+            The model may help interpret the intent, but a controlled system should still
+            validate what tool is being requested and whether it is allowed. Safe tool
+            interaction means the system does not blindly convert vague language into real
+            action.
+          </p>
+
+          <p>It should ask:</p>
+
+          <ul class="kb-plain-list">
+            <li>What is the likely intent?</li>
+            <li>What tool matches that intent?</li>
+            <li>Is the tool allowed?</li>
+            <li>Is the input safe?</li>
+            <li>Is the request ambiguous?</li>
+            <li>Does the user need to confirm anything?</li>
+            <li>Is this read-only or state-changing?</li>
+          </ul>
+
+          <p>
+            If the request is unclear, the safer response may be to ask for clarification
+            or run a limited read-only diagnostic first.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Outputs should be structured</h2>
+
+          <p>
+            Tool output should not be a pile of loose text that the model has to guess its
+            way through. Loose output creates room for misunderstanding. Structured output
+            makes the system easier to reason about.
+          </p>
+
+          <p>A good tool result should clearly separate:</p>
+
+          <ul class="kb-plain-list">
+            <li>status</li>
+            <li>message</li>
+            <li>data</li>
+            <li>errors</li>
+            <li>raw evidence</li>
+            <li>interpreted findings</li>
+            <li>recommendations</li>
+            <li>severity</li>
+            <li>metadata</li>
+          </ul>
+
+          <p>
+            This matters because AI should not have to invent structure after the fact.
+            When tools return structured data, the system can format it for humans,
+            preserve it for machines, and pass it to a model for explanation without
+            losing the underlying evidence.
+          </p>
+
+          <p>
+            Structured output also makes it easier to debug the AI-assisted system itself.
+            If the model gives a strange explanation, the user can inspect the evidence
+            underneath it.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Raw evidence should be preserved</h2>
+
+          <p>
+            A safe AI system should preserve the evidence behind its conclusions. If an
+            AI-assisted diagnostic says a service failed, the user should be able to see
+            the evidence. If it says disk usage is high, the user should be able to inspect
+            the data. If it says a system looks healthy, the user should be able to
+            understand what was actually checked.
+          </p>
+
+          <p>
+            Raw evidence matters because trust should be inspectable. The user should not
+            have to accept a polished summary just because it sounds confident.
+          </p>
+
+          <p>A safer pattern is:</p>
+
+          <ul class="kb-compact-principles">
+            <li>collect evidence.</li>
+            <li>structure evidence.</li>
+            <li>interpret evidence.</li>
+            <li>preserve evidence.</li>
+            <li>explain from evidence.</li>
+          </ul>
+
+          <p>That gives the human a way to verify the system.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Read-only first</h2>
+
+          <p>
+            For systems work, read-only diagnostics should come before automated
+            remediation. That is not because fixing things is unimportant. It is because a
+            system should first prove that it can inspect, structure, explain, and preserve
+            evidence safely.
+          </p>
+
+          <p>
+            A tool that cannot reliably understand what is happening should not be trusted
+            to change what is happening. Read-only diagnostics create a safer foundation.
+            They allow the system to build trust before it gets anywhere near
+            state-changing operations.
+          </p>
+
+          <p>State-changing tools, if they exist in the future, need stronger controls:</p>
+
+          <ul class="kb-plain-list">
+            <li>explicit policy gates</li>
+            <li>confirmation requirements</li>
+            <li>scoped permissions</li>
+            <li>reversible design where possible</li>
+            <li>audit trails</li>
+            <li>backup awareness</li>
+            <li>environment separation</li>
+            <li>human approval</li>
+          </ul>
+
+          <p>
+            The order matters: evidence first, understanding second, and action only when
+            properly governed.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>How NeuroCore applies the pattern</h2>
+
+          <p>
+            NeuroCore is the platform system being built by TENSA Engineering. At a high
+            level, NeuroCore uses a tool-based architecture so system interaction happens
+            through governed tools, not through the model directly touching the operating
+            system.
+          </p>
+
+          <p>
+            The model is not the shell. The model is not the tool registry. The model is
+            not the execution authority.
+          </p>
+
+          <p>
+            System interaction is routed through controlled paths where tools can be
+            defined, validated, executed, observed, and reviewed. That design keeps the
+            model in the reasoning and explanation role while the system enforces
+            boundaries around actual tool use.
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>AI can reason, but authority must be governed.</p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>How Argus ACLI demonstrates the pattern</h2>
+
+          <p>
+            Argus ACLI is the first product built from NeuroCore. It demonstrates safe
+            tool interaction through read-only Linux diagnostics.
+          </p>
+
+          <p>
+            Argus ACLI does not exist to let an AI freely run commands on a machine. It
+            exists to collect approved system evidence, structure that evidence, classify
+            findings, preserve raw output, and explain what the user should check next.
+          </p>
+
+          <p>That means Argus ACLI can help answer questions like:</p>
+
+          <ul class="kb-plain-list">
+            <li>What looks unhealthy?</li>
+            <li>What evidence supports that?</li>
+            <li>What should I inspect next?</li>
+            <li>What is the severity?</li>
+            <li>What raw data was used?</li>
+          </ul>
+
+          <p>
+            It does not silently fix the machine. It does not restart services, modify
+            files, change configuration, or keep the system interaction boundary unclear.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What safe tool interaction is not</h2>
+
+          <p>
+            Safe tool interaction is not about making AI useless, preventing AI from
+            helping, adding ceremony for no reason, or pretending humans never make
+            mistakes. It is about making AI useful near systems where mistakes matter.
+          </p>
+
+          <p>
+            Safe tool interaction does not guarantee perfection. A tool can still be
+            designed badly. A policy can still be incomplete. A user can still approve the
+            wrong action. A model can still misunderstand evidence.
+          </p>
+
+          <p>
+            But a controlled tool boundary gives the system places to inspect, restrict,
+            test, log, and improve. That is far better than handing broad access to a model
+            and hoping the prompt is enough.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>The TENSA approach</h2>
+
+          <p>
+            TENSA Engineering is the company building these systems, and the website is
+            the public explanation layer. NeuroCore is the platform that carries the
+            governed tool-interaction pattern. Argus ACLI is the first product built from
+            NeuroCore, applying that pattern through read-only Linux diagnostics. Argus
+            Lab is planned first as the validation arena for Argus ACLI, and later a place
+            to teach real Linux troubleshooting through real work.
+          </p>
+
+          <p>
+            The idea underneath all of it stays the same: AI should help reason, tools
+            should collect evidence, systems should enforce boundaries, and humans should
+            remain authority.
+          </p>
+        </section>
+
+        <section class="kb-reading-nav" aria-label="Continue reading">
+          <div class="kb-nav-card">
+            <p>Previous</p>
+            <a href="../local-first-ai/">Local-First AI</a>
+          </div>
+
+          <div class="kb-nav-card">
+            <p>Next</p>
+            <a href="../linux-diagnostics/">Linux Diagnostics</a>
+          </div>
+        </section>
+
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="../controlled-ai-systems/">Controlled AI Systems</a>
+            <a href="../local-first-ai/">Local-First AI</a>
+            <a href="../../projects/neurocore.html">NeuroCore</a>
+            <a href="../../projects/argus-acli.html">Argus ACLI</a>
+            <a href="../">Knowledge Base</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+  </footer>
+</body>
+</html>

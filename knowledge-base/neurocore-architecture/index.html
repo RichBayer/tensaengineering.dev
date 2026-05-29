@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="NeuroCore is the governed platform behind TENSA's AI systems: the runtime, control path, tool boundary, context layer, evidence layer, and product foundation."
+  />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/neurocore-architecture/" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="NeuroCore Architecture | TENSA Engineering Knowledge Base" />
+  <meta property="og:description" content="NeuroCore is the governed platform behind TENSA's AI systems: the runtime, control path, tool boundary, context layer, evidence layer, and product foundation." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/neurocore-architecture/" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:title" content="NeuroCore Architecture | TENSA Engineering Knowledge Base" />
+  <meta name="twitter:description" content="NeuroCore is the governed platform behind TENSA's AI systems: the runtime, control path, tool boundary, context layer, evidence layer, and product foundation." />
+  <title>NeuroCore Architecture | TENSA Engineering Knowledge Base</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tensaengineering.dev/knowledge-base/neurocore-architecture/#article",
+  "url": "https://tensaengineering.dev/knowledge-base/neurocore-architecture/",
+  "headline": "NeuroCore Architecture",
+  "description": "NeuroCore is the governed platform behind TENSA's AI systems: the runtime, control path, tool boundary, context layer, evidence layer, and product foundation.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://tensaengineering.dev/#website",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tensaengineering.dev/#organization",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
+  },
+  "inLanguage": "en-US"
+}
+  </script>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img
+        src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
+        alt="TENSA Engineering"
+        class="brand-logo"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../">Knowledge Base</a>
+      <a href="../../story/">Story</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Knowledge Base</p>
+        <h1>NeuroCore Architecture</h1>
+        <p class="kb-article-summary">
+          The governed platform behind TENSA's AI systems.
+        </p>
+
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="../">Knowledge Base</a>
+          <span>Recommended path: 8 of 8</span>
+          <span>Platform architecture</span>
+        </div>
+      </header>
+
+      <article class="kb-article-body">
+        <section class="kb-section">
+          <p>
+            Most AI tools start with a model.
+          </p>
+
+          <p>
+            NeuroCore starts with a different question: what has to exist around the model
+            before AI can safely work near real systems?
+          </p>
+
+          <p>
+            That question changes everything. A model can generate text. It can explain a
+            log. It can suggest a command. It can sound completely sure of itself. But
+            confidence is not authority.
+          </p>
+
+          <p>
+            NeuroCore is the system around the model. It is the runtime, the control path,
+            the tool boundary, the context layer, the evidence layer, and the foundation
+            that products are built on. Together, those pieces let AI work near real
+            systems without letting the model become the thing in charge.
+          </p>
+
+          <p>
+            It exists because real systems need more than intelligence. They need
+            boundaries, continuity, evidence, source truth, and a clear way to decide what
+            the AI is allowed to see, what it is allowed to use, what it is allowed to
+            request, and what stays under human control.
+          </p>
+
+          <p>That is the job NeuroCore is built to do.</p>
+        </section>
+
+        <section class="kb-path-card">
+          <h2>Where this fits</h2>
+
+          <p>
+            This page is the final stop on the recommended TENSA Knowledge Base path. You
+            can read each article on its own, but the sequence is designed to build in
+            order, each article on the one before it.
+          </p>
+
+          <ol class="kb-path-list">
+            <li><span>1.</span> AI Operations</li>
+            <li><span>2.</span> Persistent AI Memory</li>
+            <li><span>3.</span> Controlled AI Systems</li>
+            <li><span>4.</span> Local-First AI</li>
+            <li><span>5.</span> Safe Tool Interaction</li>
+            <li><span>6.</span> Linux Diagnostics</li>
+            <li><span>7.</span> Troubleshooting Training</li>
+            <li><span>8.</span> NeuroCore Architecture</li>
+          </ol>
+
+          <p>
+            Everything before this page explained a piece of the thinking. This page is
+            where those pieces come together as a platform.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>NeuroCore is not the AI model</h2>
+
+          <p>
+            This is the first thing to understand. NeuroCore is not the model. The model
+            is one part of the system.
+          </p>
+
+          <p>
+            The model can reason over the information it is given. It can explain
+            evidence. It can help a user understand what may be happening. It can ask for
+            more evidence when something is unclear.
+          </p>
+
+          <p>
+            But the model does not own the system. It does not own the operating system.
+            It does not own durable memory. It does not decide what is authoritative. It
+            does not get direct access to tools. And it does not get to step around a
+            safety boundary just because it sounds helpful.
+          </p>
+
+          <p>
+            NeuroCore is the architecture that sits around the model and governs how
+            everything works.
+          </p>
+
+          <p>
+            That distinction is the whole point. Without it, an AI system slowly turns into
+            a chat window with some tools bolted on. That can be useful for simple work. It
+            is not enough for real infrastructure.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Why NeuroCore exists</h2>
+
+          <p>
+            Most AI tools reset constantly. You open a chat. You explain your project. You
+            paste your logs. You describe your system. You remind the model what you are
+            building. You correct what it misunderstood.
+          </p>
+
+          <p>
+            Then the thread gets long. Important details drift out of focus. Old
+            assumptions get tangled up with new decisions. The model still remembers the
+            general shape of the work, but it loses the exact facts. Eventually, it starts
+            guessing.
+          </p>
+
+          <p>
+            That is the loop NeuroCore is designed to break.
+          </p>
+
+          <p>
+            The long-term goal is not simply to give a better answer inside a single
+            conversation. The goal is a local-first AI platform that can hold continuity
+            over time, reason from source-grounded context, understand real system
+            evidence, and stay inside controlled boundaries.
+          </p>
+
+          <p>
+            The original idea behind it is simple: a useful AI system should not have to be
+            reintroduced to your environment every time you use it.
+          </p>
+
+          <p>
+            It should know what project you are working on. It should know which sources
+            are authoritative. It should know what was already decided, what is still
+            current, what has gone stale, and what still needs evidence.
+          </p>
+
+          <p>It should not run on memory vibes. It should run on structure.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>The basic architecture idea</h2>
+
+          <p>
+            NeuroCore can be understood as a set of layers. The layers are not decoration.
+            Each one exists to keep responsibility separated.
+          </p>
+
+          <p>At a conceptual level, a public view of the architecture looks like this:</p>
+
+          <pre class="kb-code-block"><code>User / Interface Layer
+        ↓
+Runtime / Coordination Layer
+        ↓
+Control / Authority Layer
+        ↓
+Tool / Evidence Layer
+        ↓
+Knowledge / Memory / Context Layer
+        ↓
+Model / Explanation Layer
+        ↓
+Product / Distribution Layer</code></pre>
+
+          <p>
+            The exact internal implementation can evolve over time. The principle behind it
+            should not.
+          </p>
+
+          <p>
+            Each layer has a job. The interface lets a user interact with the system. The
+            runtime coordinates the request. The control layer decides what is allowed. The
+            tools collect evidence. The context layer assembles source-grounded working
+            memory. The model explains and reasons over what it is given. The product layer
+            turns the platform into something useful for a specific audience.
+          </p>
+
+          <p>
+            That separation is what keeps NeuroCore from becoming an uncontrolled assistant
+            with system access.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>The control path matters</h2>
+
+          <p>
+            In NeuroCore, requests are not supposed to jump straight from user intent to
+            system action.
+          </p>
+
+          <p>
+            A user may ask for something. A model may interpret it. A tool may happen to be
+            available. But availability is not permission.
+          </p>
+
+          <p>
+            The control path exists so a request can be classified, checked, routed,
+            limited, approved, denied, or scaled back before anything meaningful happens.
+          </p>
+
+          <p>
+            That is the difference between "the AI decided to do something" and "the
+            system evaluated the request and allowed one specific, controlled action."
+          </p>
+
+          <p>
+            That difference is the foundation of trust. A controlled AI system does not
+            depend on the model being perfectly obedient. It assumes the model is useful,
+            but not authoritative, and it builds the boundary into the system so the
+            boundary holds even when the model is wrong.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Tools collect evidence</h2>
+
+          <p>
+            Real systems produce real signals. Services fail. Logs change. Ports open.
+            Processes spike. Disks fill. Mounts disappear. Configurations drift.
+          </p>
+
+          <p>
+            A model cannot safely diagnose any of that by guessing. It needs evidence.
+          </p>
+
+          <p>
+            In NeuroCore, tools are the controlled path for collecting that evidence. And
+            the important part is not just that tools exist. It is that tools are bounded.
+          </p>
+
+          <p>
+            A tool should have a specific purpose. It should return structured output. It
+            should preserve raw evidence where it can. It should stay inside the authority
+            it was granted. And it should never become a quiet shortcut around the rest of
+            the system.
+          </p>
+
+          <p>
+            This matters most around Linux diagnostics. If an AI system can freely run
+            commands, edit files, restart services, install packages, or change
+            permissions, then the model is no longer helping. It has become an operator.
+          </p>
+
+          <p>NeuroCore is designed to avoid exactly that mistake.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Argus ACLI is the first product built from NeuroCore</h2>
+
+          <p>
+            Argus ACLI is not a separate runtime. It is the first product, and the first
+            distribution, built on NeuroCore. Argus uses NeuroCore's governed architecture
+            to deliver Linux diagnostics.
+          </p>
+
+          <p>
+            It does not exist to replace NeuroCore. It exists to prove why NeuroCore
+            matters.
+          </p>
+
+          <p>
+            The current role of Argus ACLI is focused and intentionally limited. It
+            inspects. It structures. It interprets. It explains. It does not remediate
+            automatically.
+          </p>
+
+          <p>
+            That read-only boundary is not a weakness. It is part of the design. The first
+            version of a serious diagnostic tool should earn trust by showing what it sees,
+            how it knows, and what evidence stands behind a finding.
+          </p>
+
+          <p>
+            That is why raw evidence matters. It is why structured findings matter. It is
+            why severity classification matters. And it is why a recommendation should
+            always stay tied to the evidence underneath it.
+          </p>
+
+          <p>Argus is where the architecture starts becoming useful to real people.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>System tools collect. Argus interprets. NeuroCore governs.</h2>
+
+          <p>
+            This is one of the simplest ways to understand the design.
+          </p>
+
+          <p>
+            System tools collect raw system data. Argus tools interpret that data into
+            diagnostic findings. NeuroCore governs the path that keeps the whole
+            interaction safe and consistent.
+          </p>
+
+          <p>
+            The model can explain the result, but it does not become the source of truth.
+          </p>
+
+          <p>
+            That division keeps the system honest. If a service is failed, the evidence
+            should come from the system. If Argus classifies an issue as critical, that
+            severity should come from deterministic diagnostic logic. If the model explains
+            what the result means, that explanation should stay anchored to the evidence
+            that was actually collected.
+          </p>
+
+          <p>
+            The model should not invent missing facts. It should not dress uncertainty up
+            as certainty. It should not guess its way into a root cause. It should help the
+            user reason from the evidence.
+          </p>
+
+          <p>
+            That is the line between AI-assisted troubleshooting and AI-flavored guessing.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Persistent system awareness</h2>
+
+          <p>
+            The larger NeuroCore vision reaches beyond one command, one diagnostic result,
+            or one chat thread.
+          </p>
+
+          <p>
+            The direction is persistent system awareness.
+          </p>
+
+          <p>
+            That does not mean the model magically remembers everything. It means
+            NeuroCore is designed to eventually manage continuity on purpose, as part of
+            the system itself.
+          </p>
+
+          <p>
+            A system like that should be able to know what project is active, what system
+            is being inspected, what the last known state was, what evidence was already
+            collected, which source documents are authoritative, which decisions were
+            approved, what context has gone stale, what changed since the previous state,
+            and what still needs verification.
+          </p>
+
+          <p>
+            That is a very different idea from dumping more text into a chat window. The
+            goal is not bigger prompts. The goal is engineered continuity.
+          </p>
+
+          <p>
+            This matters because real work does not happen in one clean session. Projects
+            stretch across days, weeks, months, and years. Systems change. Architecture
+            changes. Documentation changes. Goals change.
+          </p>
+
+          <p>
+            So the system has to treat continuity and conversation history as two
+            different things. A chat thread is working memory. It is not source truth.
+          </p>
+
+          <p>
+            To be clear, this kind of deliberate continuity is a direction, not a finished
+            feature. It is where NeuroCore is headed, and it is being built in steps rather
+            than promised all at once.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Context has to be governed too</h2>
+
+          <p>
+            NeuroCore's authority model applies to execution. The same idea applies to
+            context.
+          </p>
+
+          <p>
+            The model should not get to decide what is true just because something appeared
+            earlier in a conversation. It should not treat stale memory as current fact. It
+            should not treat a rough idea as implemented architecture. And it should not
+            confuse private planning notes with public product claims.
+          </p>
+
+          <p>
+            That is why context management belongs in the architecture, not just in the
+            prompt.
+          </p>
+
+          <p>Future NeuroCore context systems are expected to wrestle with questions like:</p>
+
+          <ul class="kb-plain-list">
+            <li>Which source should be trusted for this task?</li>
+            <li>Is this information current or stale?</li>
+            <li>Is this an implemented feature, an active plan, or a backlog idea?</li>
+            <li>Should this context stay active, or be retired?</li>
+            <li>Should a correction override an earlier assistant response?</li>
+            <li>Should the model get a small, task-specific context package instead of a huge pile of unrelated history?</li>
+          </ul>
+
+          <p>
+            That is the path from "AI remembers stuff" to "AI works from governed
+            context." And the gap between those two is enormous.
+          </p>
+
+          <p>
+            Memory without authority rules becomes confusion. Context without source
+            ranking becomes drift. Retrieval without structure becomes a pile of
+            maybe-relevant text.
+          </p>
+
+          <p>
+            The long-term aim is something sturdier: source-grounded continuity. That work
+            is future direction, described here so the intent is clear, not so it sounds
+            done.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Knowledge, memory, and source truth</h2>
+
+          <p>
+            A serious AI system needs different kinds of information, and not all
+            information carries the same authority.
+          </p>
+
+          <p>
+            A current source file is not the same as an old chat message. A build log is
+            not the same as a brainstorm. A user-approved decision is not the same as a
+            model-generated guess. A live system output is not the same as a stale summary.
+          </p>
+
+          <p>
+            NeuroCore's future knowledge and memory direction is built around that
+            distinction.
+          </p>
+
+          <p>
+            Retrieval can help find relevant information. A structured knowledge base can
+            organize important concepts. Context packs can assemble the working context for
+            a task. Approved memory can preserve durable decisions. Snapshots can preserve
+            observed system state. Incident memory can preserve resolved troubleshooting
+            history. Service profiles can preserve diagnostic knowledge.
+          </p>
+
+          <p>
+            None of those should be treated as the same thing, and the model should not be
+            handed an undifferentiated pile of text and told to sort out what matters.
+          </p>
+
+          <p>
+            Instead, NeuroCore should assemble the right context for the task, with source
+            authority and uncertainty preserved.
+          </p>
+
+          <p>
+            That is how a system moves from retrieval toward understanding. These pieces
+            are part of the long-term direction, not the current build.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Snapshot and drift awareness</h2>
+
+          <p>
+            Most troubleshooting eventually reaches one question: what changed?
+          </p>
+
+          <p>
+            A system can be observable without being understandable. You can collect logs,
+            service states, process lists, port information, disk usage, package versions,
+            configuration files, and kernel messages, and still not understand what any of
+            it means together.
+          </p>
+
+          <p>
+            Raw visibility is not operational intelligence.
+          </p>
+
+          <p>
+            The deeper question is not only "what is wrong right now?" It is "what changed,
+            why does it matter, what does it affect, and how does it relate to the current
+            failure?"
+          </p>
+
+          <p>
+            That is where future snapshot and drift intelligence come in.
+          </p>
+
+          <p>
+            A snapshot model could preserve a versioned view of system state. Drift
+            intelligence could compare one state to another and identify meaningful change:
+            a service that was active before and is failed now, a unit file that changed, a
+            port now owned by a different process, a mount that disappeared, a package
+            version that moved, a configuration hash that shifted, or a new externally
+            listening port.
+          </p>
+
+          <p>
+            The goal there is not just to show a diff. The goal is to interpret change.
+          </p>
+
+          <p>
+            That would be a major step toward real system awareness. It is also future
+            direction, not a capability that exists today.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Model-grounded troubleshooting</h2>
+
+          <p>
+            The model still matters. A lot.
+          </p>
+
+          <p>
+            NeuroCore is not trying to take the model out of the experience. The model is
+            what makes the system understandable to people.
+          </p>
+
+          <p>
+            The model can explain what evidence means. It can name uncertainty. It can
+            compare signals. It can ask for the next useful diagnostic check. It can help a
+            learner understand why something matters. It can turn structured data into
+            practical guidance.
+          </p>
+
+          <p>But it has to stay grounded.</p>
+
+          <p>
+            In a future model-grounded troubleshooting layer, the ideal behavior is not "I
+            think this is broken, so run these commands."
+          </p>
+
+          <p>
+            The better behavior sounds more like this: here is what the system is showing,
+            here is why it matters, here is what is still uncertain, here is the next
+            approved, read-only diagnostic that could reduce that uncertainty, and here is
+            where the current tool coverage reaches its limit.
+          </p>
+
+          <p>
+            That is the right relationship between the parts. Argus finds the signal. The
+            model explains the signal. NeuroCore governs the path. The user remains in
+            control.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Argus Lab is planned as the validation arena</h2>
+
+          <p>
+            Argus Lab is not the NeuroCore runtime, and it is not a separate product
+            runtime. It is the future testing and validation environment.
+          </p>
+
+          <p>
+            Argus Lab exists because diagnostic claims should be tested against real
+            systems. If Argus says it can detect a failed service, that should be tested.
+            If Argus calls an issue critical, that severity should be validated. If a new
+            version changes diagnostic behavior, regressions should be caught. And if a
+            learner is practicing Linux troubleshooting, the environment should be real
+            enough to matter.
+          </p>
+
+          <p>
+            Argus Lab gives NeuroCore and Argus a place to prove themselves against
+            controlled failures, repeatable symptoms, and known system states.
+          </p>
+
+          <p>
+            That makes the whole architecture stronger. It turns troubleshooting from a
+            claim into something testable. Its role begins with validation, and grows into
+            a training environment over time.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What exists now</h2>
+
+          <p>
+            NeuroCore is already more than an idea.
+          </p>
+
+          <p>
+            The current platform includes a persistent runtime direction, a control path, a
+            tool execution architecture, structured system tools, Argus diagnostic tools,
+            raw evidence preservation, tracing, and the output work that faces Argus ACLI.
+          </p>
+
+          <p>
+            Argus ACLI is becoming the first product-facing distribution.
+          </p>
+
+          <p>
+            The current focus is deliberately careful and phase-gated: stabilize Argus
+            ACLI behavior, hold the read-only boundary firmly, improve diagnostic output,
+            keep evidence accessible, validate behavior before claiming too much, and
+            resist the pull toward uncontrolled automation.
+          </p>
+
+          <p>
+            That restraint is the point. The goal is not to ship a flashy AI agent that
+            can do anything. The goal is to build a system that can grow without losing its
+            boundaries.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What is future direction</h2>
+
+          <p>
+            Other parts of the NeuroCore vision are still ahead.
+          </p>
+
+          <p>
+            That includes deeper memory systems, context lifecycle management, snapshot
+            state, drift and change intelligence, incident memory, service profiles,
+            model-grounded troubleshooting, remote diagnostics, and broader product
+            distributions.
+          </p>
+
+          <p>
+            Those ideas are important, and they are part of the long-term direction. But
+            they should not be described as finished features before they exist.
+          </p>
+
+          <p>
+            That honesty is part of the architecture too. A trustworthy AI platform should
+            be clear about what is implemented, what is planned, and what is still
+            experimental.
+          </p>
+
+          <p>
+            The future is bigger than the current system. The current system is being built
+            in the right order.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What NeuroCore is not</h2>
+
+          <p>
+            NeuroCore is not a chatbot wrapper. It is not a shell with a model attached. It
+            is not an uncontrolled coding agent. It is not a direct command executor. It is
+            not a replacement for human judgment. It is not a promise that AI will
+            magically understand everything. And it is not a system where the model gets to
+            decide what is true.
+          </p>
+
+          <p>
+            NeuroCore is a platform for governed AI interaction with real environments.
+          </p>
+
+          <p>
+            That means it cares about architecture. It cares about source truth. It cares
+            about evidence. It cares about control boundaries. It cares about continuity.
+            And it cares about keeping the human in authority.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>The bigger picture</h2>
+
+          <p>
+            The other Knowledge Base pages explain the pieces.
+          </p>
+
+          <p>
+            AI Operations explains the working discipline. Persistent AI Memory explains
+            why continuity matters. Controlled AI Systems explains why authority must be
+            governed. Local-First AI explains why evidence and context should stay close to
+            the user when possible. Safe Tool Interaction explains how AI should work with
+            tools without becoming an uncontrolled operator. Linux Diagnostics explains why
+            real evidence matters. Troubleshooting Training explains why people still need
+            judgment, even as tools improve.
+          </p>
+
+          <p>
+            NeuroCore Architecture is where those ideas become a platform.
+          </p>
+
+          <p>
+            The point is not to build an AI that can do anything. The point is to build an
+            AI-assisted system that knows what it has evidence for, what it is allowed to
+            do, what it must not do, and when the human has to decide.
+          </p>
+
+          <p>That is the architecture. That is the difference.</p>
+        </section>
+
+        <section class="kb-reading-nav" aria-label="Continue reading">
+          <div class="kb-nav-card">
+            <p>Previous</p>
+            <a href="../troubleshooting-training/">Troubleshooting Training</a>
+          </div>
+
+          <div class="kb-nav-card">
+            <p>Start again</p>
+            <a href="../ai-operations/">AI Operations</a>
+          </div>
+        </section>
+
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="../ai-operations/">AI Operations</a>
+            <a href="../persistent-ai-memory/">Persistent AI Memory</a>
+            <a href="../controlled-ai-systems/">Controlled AI Systems</a>
+            <a href="../local-first-ai/">Local-First AI</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../linux-diagnostics/">Linux Diagnostics</a>
+            <a href="../../projects/neurocore.html">NeuroCore</a>
+            <a href="../../projects/argus-acli.html">Argus ACLI</a>
+            <a href="../../projects/argus-lab.html">Argus Lab</a>
+            <a href="../../story/">Story</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+  </footer>
+</body>
+</html>

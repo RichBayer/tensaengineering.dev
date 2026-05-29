@@ -20,22 +20,27 @@ Current phase:
     Story page created
     branding asset hierarchy established
     consistent branding added across current public pages
-    Knowledge Base index created
-    page inventory created
-    internal linking strategy created
+    Knowledge Base index created and upgraded into a live article-path hub
+    first eight Knowledge Base articles created
+    page inventory created and updated
+    internal linking strategy created and updated
     repository map updated
+    content source map created and updated
     content style guide created
     SEO topic map created
+    search indexing strategy updated
     Claude website polish prompt created
     closeout verification workflow improved
+    Python full-file writer rule added to closeout workflow
+    local internal-link validation workflow added to closeout workflow
     public GitHub navigation removed from current public pages
     public repository-proof framing replaced with private-development / future-artifacts framing
 
-The site now functions more like an ecosystem portal than a single landing page.
+The site now functions more like an ecosystem portal and teaching platform than a single landing page.
 
 The homepage remains the front door.
 
-Deeper explanations are moving into dedicated pages.
+Deeper explanations are moving into dedicated pages and Knowledge Base articles.
 
 ---
 
@@ -83,6 +88,14 @@ Current key files:
 - projects/argus-acli.html
 - projects/argus-lab.html
 - knowledge-base/index.html
+- knowledge-base/ai-operations/index.html
+- knowledge-base/persistent-ai-memory/index.html
+- knowledge-base/controlled-ai-systems/index.html
+- knowledge-base/local-first-ai/index.html
+- knowledge-base/safe-tool-interaction/index.html
+- knowledge-base/linux-diagnostics/index.html
+- knowledge-base/troubleshooting-training/index.html
+- knowledge-base/neurocore-architecture/index.html
 - story/index.html
 - docs/ai-operations/claude/claude_website_polish_resume_prompt.md
 - docs/ai-operations/documentation_closeout_protocol.md
@@ -100,7 +113,7 @@ Current key files:
 
 Current repository size:
 
-    17 directories, 51 files
+    25 directories, 59 files
 
 Last verified by user-provided output during closeout:
 
@@ -108,6 +121,14 @@ Last verified by user-provided output during closeout:
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
     grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    temporary local Python internal-link validation
+
+Latest local internal-link validation result:
+
+    Public HTML files checked: 15
+    Internal links checked: 210
+    External/skipped links: 15
+    Result: all checked internal links resolved successfully
 
 ---
 
@@ -121,6 +142,14 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /knowledge-base/ai-operations/
+    /knowledge-base/persistent-ai-memory/
+    /knowledge-base/controlled-ai-systems/
+    /knowledge-base/local-first-ai/
+    /knowledge-base/safe-tool-interaction/
+    /knowledge-base/linux-diagnostics/
+    /knowledge-base/troubleshooting-training/
+    /knowledge-base/neurocore-architecture/
     /story/
 
 Current internal planning / continuity docs:
@@ -201,6 +230,8 @@ Current branding behavior:
 - NeuroCore page hero uses the NeuroCore stacked logo
 - Argus ACLI page hero uses the Argus ACLI stacked logo
 - Argus Lab page hero uses the Argus Lab stacked logo
+- Knowledge Base index hero uses the TENSA stacked logo
+- Knowledge Base articles use TENSA site branding
 - Story page hero uses the TENSA stacked logo
 - homepage and Projects project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
@@ -216,6 +247,8 @@ Current visual direction:
 - consistent ecosystem branding
 - full-width showcase sections for complex architecture
 - styled content lists instead of default browser bullets
+- reusable Knowledge Base article layout
+- readable Knowledge Base index links with explicit styling
 
 ---
 
@@ -241,6 +274,8 @@ Important notes:
     Story points to the real /story/ page.
     Public GitHub navigation has been removed from current public pages.
     Direct public links to private implementation repositories have been removed from current public pages.
+    Knowledge Base index links to all eight current Knowledge Base articles.
+    The current Knowledge Base article path links article-to-article and loops back to the start.
 
 Current public artifact strategy:
 
@@ -274,6 +309,14 @@ Current sitemap contents:
 - https://tensaengineering.dev/projects/argus-acli.html
 - https://tensaengineering.dev/projects/argus-lab.html
 - https://tensaengineering.dev/knowledge-base/
+- https://tensaengineering.dev/knowledge-base/ai-operations/
+- https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
+- https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
+- https://tensaengineering.dev/knowledge-base/local-first-ai/
+- https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
+- https://tensaengineering.dev/knowledge-base/linux-diagnostics/
+- https://tensaengineering.dev/knowledge-base/troubleshooting-training/
+- https://tensaengineering.dev/knowledge-base/neurocore-architecture/
 - https://tensaengineering.dev/story/
 
 Current public HTML metadata support:
@@ -293,7 +336,8 @@ Current indexing status:
     sitemap submitted successfully to Google
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
-    /story/ added to sitemap locally during Story page closeout
+    /story/ included in sitemap.xml
+    first eight Knowledge Base article URLs included in sitemap.xml locally
 
 Known Search Console note:
 
@@ -307,11 +351,12 @@ This is expected and harmless because the intended canonical indexed URL is:
 
 Future SEO work:
 
-- After deployment, confirm the live sitemap includes https://tensaengineering.dev/story/.
-- Inspect https://tensaengineering.dev/story/ in Google Search Console if appropriate.
-- Add or verify richer Open Graph / Twitter / JSON-LD metadata on the updated NeuroCore page.
-- Optionally add sitemap lastmod dates.
-- Focus future search growth on Knowledge Base pages, not metadata alone.
+- After deployment, confirm the live sitemap includes all eight Knowledge Base article URLs.
+- Inspect the Knowledge Base index and important article URLs in Google Search Console if appropriate.
+- Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
+- Add or verify richer Open Graph / Twitter / JSON-LD metadata on updated pages as needed.
+- Optionally add sitemap lastmod dates after a reliable maintenance process exists.
+- Focus future search growth on useful Knowledge Base content and clean internal links, not metadata alone.
 
 ---
 
@@ -375,7 +420,7 @@ Current purpose:
 Current project model:
 
     NeuroCore = platform
-    Argus ACLI = first product built on NeuroCore
+    Argus ACLI = first product / distribution
     Argus Lab = future training and validation environment
 
 Current branding:
@@ -536,22 +581,22 @@ Do not imply it is currently available, downloadable, or a finished training pro
 
 ---
 
-## Current Knowledge Base Page
+## Current Knowledge Base
 
-Current path:
+Current index path:
 
     knowledge-base/index.html
 
-Current status:
+Current index status:
 
-    Structure-only public index
+    Live public article-path hub
 
 Current purpose:
 
 - establish the Knowledge Base as a top-level public site section
 - move TENSA away from pure landing-page structure
 - introduce major educational topic areas
-- prepare for future modular knowledge-base articles
+- route readers through the first recommended eight-article path
 - route to the Story page through primary navigation
 - frame future public artifacts without implying public implementation repositories are currently available
 
@@ -560,24 +605,47 @@ Current branding:
 - TENSA header logo
 - TENSA stacked logo in hero
 
-Current topic areas introduced:
+Current article path:
 
-- Controlled AI Systems
-- AI Operations
-- Persistent AI Memory
-- Local-First AI
-- Safe Tool Interaction
-- Linux Diagnostics
-- Troubleshooting Training
-- NeuroCore Architecture
+    1. AI Operations
+       /knowledge-base/ai-operations/
+
+    2. Persistent AI Memory
+       /knowledge-base/persistent-ai-memory/
+
+    3. Controlled AI Systems
+       /knowledge-base/controlled-ai-systems/
+
+    4. Local-First AI
+       /knowledge-base/local-first-ai/
+
+    5. Safe Tool Interaction
+       /knowledge-base/safe-tool-interaction/
+
+    6. Linux Diagnostics
+       /knowledge-base/linux-diagnostics/
+
+    7. Troubleshooting Training
+       /knowledge-base/troubleshooting-training/
+
+    8. NeuroCore Architecture
+       /knowledge-base/neurocore-architecture/
+
+Current article-path behavior:
+
+    Knowledge Base index links to all eight articles.
+    Articles link forward through the recommended reading path.
+    NeuroCore Architecture links back to AI Operations to restart the path.
+    Related links point only to real public pages.
+    Article pages preserve current-vs-future language where needed.
 
 Important note:
 
-The Knowledge Base index is public-facing.
+The Knowledge Base is public-facing.
 
 It should not read like an internal writing guide.
 
-Future article/category pages should be created deliberately and tracked in:
+Future articles should be created deliberately and tracked in:
 
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
@@ -688,6 +756,7 @@ TENSA Engineering is intended to become:
 - educational resource for local-first AI
 - educational resource for safe tool interaction
 - educational resource for AI operations
+- educational resource for Linux diagnostics and troubleshooting training
 - future product funnel for Argus ACLI and later offerings
 
 The site should expand into many categorized pages over time.
@@ -808,6 +877,8 @@ Social content:
 - Argus Lab full public landing page created
 - Story page created
 - long-form article styling added
+- Knowledge Base article layout styling added
+- Knowledge Base index link styling corrected
 - project links updated so pages route internally
 - Story navigation updated to point to `/story/`
 - TENSA repository map created
@@ -825,7 +896,11 @@ Social content:
 - Argus Lab full public landing page created and branded
 - Story page branded
 - Knowledge Base index page created
+- Knowledge Base index upgraded into a live article-path hub
+- first eight Knowledge Base articles created
 - Knowledge Base navigation updated across current public pages
+- Knowledge Base article path linked article-to-article
+- local internal-link validation completed successfully for 210 internal links
 - page inventory planning doc created
 - internal linking strategy planning doc created
 - TENSA website documentation closeout protocol created
@@ -835,8 +910,11 @@ Social content:
 - SEO topic map created
 - Claude website polish resume prompt created
 - targeted verification rule added to closeout workflow
+- Python full-file writer rule added to closeout workflow
+- real local internal-link validation rule added to closeout workflow
 - root sitemap.xml created
 - `/story/` added to sitemap.xml
+- eight Knowledge Base article URLs added to sitemap.xml
 - root robots.txt created
 - dedicated TENSA social preview image created
 - canonical URLs added across current public HTML pages
@@ -861,19 +939,20 @@ Social content:
 
 - Resources page
 - About page
+- Contact page
+- Contact email forwarding setup
 - Build Notes section
 - analytics decisions
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- live sitemap confirmation after Story deployment
-- Google Search Console inspection of Story URL after deployment if appropriate
+- live sitemap confirmation after Knowledge Base article deployment
+- Google Search Console inspection of Knowledge Base index and key article URLs after deployment if appropriate
 - old-site migration plan
-- internal link checker script
-- Knowledge Base category pages
-- Knowledge Base article pages
-- article templates
+- permanent internal link checker script
+- article templates for future Knowledge Base expansion
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
+- dedicated SEO/topic-map session for the first Knowledge Base article path
 - optional sitemap lastmod dates
 - public technical artifact strategy
 - public repository / open-component strategy
@@ -934,7 +1013,7 @@ Purpose of each:
         logical linking map, preferred destinations, temporary links, and link-audit expectations
 
     search_indexing_strategy.md
-        sitemap, robots.txt, search engine registration, and indexing workflow
+        sitemap, robots.txt, search engine registration, indexing workflow, and local link validation expectations
 
     seo_topic_map.md
         future SEO topic planning and Knowledge Base search strategy
@@ -950,7 +1029,9 @@ At the beginning of serious website build sessions, run:
     find . -maxdepth 3 -name "*.html" -print
     grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
-Future recommended replacement for manual link grep:
+When public links, navigation, or routes matter, prefer real local internal-link validation over grep-only review.
+
+Future recommended permanent script:
 
     scripts/check_internal_links.py
 
@@ -974,8 +1055,8 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "17 directories, 51 files\|story/index.html" docs/infrastructure/tensa_repository_map.txt
-    grep -n "https://tensaengineering.dev/story/" sitemap.xml
+    grep -n "25 directories, 59 files\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
 
@@ -988,6 +1069,36 @@ This rule exists to catch:
 
 ---
 
+## Python Full-File Writer Rule
+
+Python-based file writing is allowed and often preferred for closeout documentation delivery, but only under the right conditions.
+
+Use Python as a delivery mechanism when:
+
+- the current full file context has been loaded or otherwise verified
+- the complete intended replacement has been decided
+- the assistant is writing the whole file, not guessing at a hidden section
+- the command is easier and safer than manual copy/paste
+- the replacement can be verified immediately afterward
+
+Do not use Python as a shortcut to:
+
+- inspect only partial file context
+- make blind surgical patches from incomplete information
+- guess what a hidden section probably says
+- rewrite unrelated content without approval
+- bypass the user's review expectations
+
+Preferred safe pattern:
+
+    full context first
+    define intended changes
+    write the complete file
+    run targeted verification
+    wait for user output
+
+---
+
 ## Next Recommended Steps
 
 Recommended next website session:
@@ -997,29 +1108,73 @@ Recommended next website session:
 3. Review `docs/planning/page_inventory.md`.
 4. Review `docs/planning/internal_linking_strategy.md`.
 5. Review `docs/planning/content_source_map.md`.
-6. Choose the next page or section deliberately before editing.
+6. Choose the next page, section, or SEO/topic-map session deliberately before editing.
 
 Recommended next public-page work:
 
-    Resources page, About page, first Knowledge Base category pages, or Build Notes section
+    About page, Contact page, Resources page, Build Notes section, or additional focused Knowledge Base articles
+
+Recommended next website session priority:
+
+    1. Set up email routing or forwarding for contact@tensaengineering.dev.
+    2. Confirm the address forwards correctly before publishing it publicly.
+    3. Ask Richard for the saved About page rough draft from email before creating /about.html.
+    4. Create or plan /contact.html only after email routing is confirmed.
+
+Important About page source note:
+
+    Richard has a saved About page rough draft in email.
+    Ask for that rough draft before creating /about.html.
+
+Planned Contact page:
+
+    Future path: /contact.html
+    Planned public email: contact@tensaengineering.dev
+    Purpose: allow readers to ask questions, report site issues, or make appropriate TENSA Engineering inquiries.
+    Do not publish the Contact page until email routing or forwarding is confirmed.
+
+Later-phase public-page idea:
+
+    FAQ page after recurring site, project, product, or Knowledge Base questions emerge.
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, and Story now all have public site structure. The next major website step should either organize public resources, add concise organizational identity, or begin focused teaching articles.
+NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should confirm the public contact path, add concise organizational identity, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+
+Recommended SEO/topic work:
+
+    Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
+
+Reason:
+
+The technical discoverability layer is in place locally, but content SEO should be handled deliberately instead of mixed into documentation closeout.
 
 Recommended post-deploy checks after this session:
 
-1. Confirm the Story page loads live:
+1. Confirm the Knowledge Base index loads live:
 
-       https://tensaengineering.dev/story/
+       https://tensaengineering.dev/knowledge-base/
 
-2. Confirm the live sitemap includes Story:
+2. Confirm all eight Knowledge Base article URLs load live:
+
+       https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
+       https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
+       https://tensaengineering.dev/knowledge-base/local-first-ai/
+       https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
+       https://tensaengineering.dev/knowledge-base/linux-diagnostics/
+       https://tensaengineering.dev/knowledge-base/troubleshooting-training/
+       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
+
+3. Confirm the live sitemap includes all eight Knowledge Base article URLs:
 
        https://tensaengineering.dev/sitemap.xml
 
-3. Inspect the Story URL in Google Search Console if appropriate:
+4. Inspect the Knowledge Base index and key article URLs in Google Search Console if appropriate:
 
-       https://tensaengineering.dev/story/
+       https://tensaengineering.dev/knowledge-base/
+       https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
 
 ---
 
@@ -1059,6 +1214,26 @@ Recent Story page work used context from:
 - Claude website polish workflow
 - local browser review
 
+Recent Knowledge Base article path work used context from:
+
+- AI Operations article draft and Claude-polished copy
+- Persistent AI Memory article draft and Claude-polished copy
+- Controlled AI Systems article draft and rewritten report-style version
+- Local-First AI article draft and Claude-polished copy
+- Safe Tool Interaction article draft and Claude-polished copy
+- Linux Diagnostics article draft and Claude-polished copy
+- Troubleshooting Training article draft and Claude-polished copy
+- NeuroCore Architecture article draft and Claude-polished copy
+- current public project pages
+- current Knowledge Base index
+- current `styles.css`
+- content style guide
+- page inventory
+- internal linking strategy
+- content source map
+- search indexing strategy
+- documentation closeout protocol
+
 Recent GitHub/private-repository public-page cleanup used context from:
 
 - current public HTML pages
@@ -1078,11 +1253,17 @@ Public website copy should use NeuroCore unless explicitly discussing historical
 
 ## Working Rules
 
-Use full file replacements only.
+Use full file replacements only unless explicitly requested otherwise.
 
 Do not provide snippets unless explicitly requested.
 
+Python full-file writers are allowed when full context is loaded and the complete intended replacement is known.
+
+Do not use Python to blindly patch unknown sections from partial context.
+
 After each full-file replacement, run a targeted verification check before moving to the next file.
+
+When public links, navigation, or routes changed, run real local internal-link validation when practical.
 
 Do not make hidden changes.
 
