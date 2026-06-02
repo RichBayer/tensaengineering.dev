@@ -51,6 +51,7 @@ Current active public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/index.html
+    /glossary/index.html
     /knowledge-base/ai-operations/index.html
     /knowledge-base/persistent-ai-memory/index.html
     /knowledge-base/controlled-ai-systems/index.html
@@ -76,6 +77,7 @@ Current header navigation should use:
 | Home | `/index.html` | Active | Use relative path appropriate to page depth. |
 | Projects | `/projects/` | Active | Main ecosystem project index. |
 | Knowledge Base | `/knowledge-base/` | Active | Main teaching layer index. |
+| Glossary | `/glossary/` | Active | Public reference page for ecosystem terms and inline tooltip destinations. |
 | Story | `/story/` | Active | Full public origin story page. |
 
 ---
@@ -91,8 +93,9 @@ Use these preferred destinations when topics appear in public pages.
 | NeuroCore | `/projects/neurocore.html` | Same | Main public NeuroCore platform explainer. |
 | NeuroCore Architecture | `/knowledge-base/neurocore-architecture/` | Same, plus deeper future subtopics if needed | Public architecture article explains the governed platform behind TENSA's AI systems. |
 | Argus ACLI | `/projects/argus-acli.html` | Same | Full public product page for local-first read-only Linux diagnostics. |
-| Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the planned real-Linux troubleshooting, training, and validation environment. |
+| Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the early real-Linux troubleshooting, training, and validation implementation. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
+| Glossary / definitions | `/glossary/` | Same | Public reference page for compact ecosystem definitions and inline tooltip destinations. |
 | Origin story | `/story/` | Same, or future deeper story article if needed | Story index now owns the full public origin narrative. |
 | Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
 | AI Operations | `/knowledge-base/ai-operations/` | Same, plus deeper future subtopics if needed | Article 1 in the current recommended Knowledge Base path. |
@@ -104,14 +107,14 @@ Use these preferred destinations when topics appear in public pages.
 | CAG-style context assembly | `/projects/neurocore.html` | Future context-aware memory article if needed | NeuroCore page currently covers future context-aware memory direction. |
 | Controlled AI systems | `/knowledge-base/controlled-ai-systems/` | Same, plus deeper future subtopics if needed | Article 3 in the current recommended Knowledge Base path. |
 | Intelligence vs authority | `/knowledge-base/controlled-ai-systems/` | Future focused article if needed | Current article owns the “AI can reason, but authority must be governed” concept. |
-| Control plane | `/knowledge-base/neurocore-architecture/` | Future deeper control-plane article if needed | NeuroCore Architecture is the current public architecture destination. |
+| Control plane | `/knowledge-base/neurocore-architecture/` or `/glossary/` | Future deeper control-plane article if needed | Use NeuroCore Architecture for deeper explanation; use Glossary for compact definition support. |
 | Safe tool interaction | `/knowledge-base/safe-tool-interaction/` | Same, plus deeper future subtopics if needed | Article 5 in the current recommended Knowledge Base path. |
 | Tool execution | `/knowledge-base/safe-tool-interaction/` | Future controlled-tool-execution article if needed | Current article owns the public tool-boundary explanation. |
 | Observability | `/knowledge-base/neurocore-architecture/` | Future observability article if needed | Current NeuroCore Architecture article explains evidence, tool layers, and system awareness at a public level. |
 | Local-first AI | `/knowledge-base/local-first-ai/` | Same, plus deeper future subtopics if needed | Article 4 in the current recommended Knowledge Base path. |
 | Documentation as memory | `/knowledge-base/ai-operations/` or `/story/` | Future documentation-as-operational-memory article if needed | Use AI Operations for workflow discipline; use Story for origin narrative. |
 | Linux diagnostics | `/knowledge-base/linux-diagnostics/` | Same, plus deeper future subtopics if needed | Article 6 in the current recommended Knowledge Base path. |
-| Raw evidence | `/knowledge-base/linux-diagnostics/` | Future raw-evidence article if needed | Current Linux Diagnostics article owns evidence-first diagnostic framing. |
+| Raw evidence | `/knowledge-base/linux-diagnostics/` or `/glossary/` | Future raw-evidence article if needed | Use Linux Diagnostics for concept explanation; use Glossary for compact definition support. |
 | Severity / findings / recommendations | `/knowledge-base/linux-diagnostics/` or `/projects/argus-acli.html` | Future structured-diagnostics article if needed | Use Argus ACLI for product behavior; use Linux Diagnostics for concept explanation. |
 | Kernel-Up / Service Intelligence | `/projects/neurocore.html` | Future Linux diagnostics / service intelligence article if needed | NeuroCore architecture showcase currently mentions this near-term expansion. |
 | Troubleshooting training | `/knowledge-base/troubleshooting-training/` | Same, plus deeper future subtopics if needed | Article 7 in the current recommended Knowledge Base path. |
@@ -131,6 +134,7 @@ The website should guide readers through logical paths.
     → Projects
     → NeuroCore / Argus ACLI / Argus Lab
     → Knowledge Base
+    → Glossary as needed for terminology
 
 Purpose:
 
@@ -149,6 +153,7 @@ Help a new visitor understand what TENSA Engineering is, how the ecosystem fits 
     → Safe Tool Interaction
     → NeuroCore Architecture
     → NeuroCore
+    → Glossary as needed for terminology
 
 Purpose:
 
@@ -179,6 +184,7 @@ Connect the origin story to continuity engineering, documentation discipline, an
     → Linux Diagnostics
     → Troubleshooting Training
     → NeuroCore Architecture
+    → Glossary as needed for terminology
 
 Purpose:
 
@@ -197,7 +203,7 @@ Show how Argus uses NeuroCore to turn real Linux system data into grounded diagn
 
 Purpose:
 
-Explain Argus Lab as both a future human training platform and a validation environment for Argus ACLI.
+Explain Argus Lab as both an early real-Linux training implementation and a validation environment for Argus ACLI.
 
 ---
 
@@ -248,6 +254,32 @@ Before adding links to a public page:
 8. Prefer the first meaningful mention of a topic.
 9. Prefer links that help the reader move forward logically.
 10. Do not link to internal planning docs from public pages.
+11. Use inline glossary links sparingly: prefer first meaningful use, avoid repeated terms, and do not turn articles into link soup.
+
+---
+
+## Inline Glossary Link Rules
+
+Inline glossary links are allowed in public pages when they help readers understand ecosystem terminology.
+
+Current implementation:
+
+    assets/js/glossary-tooltips.js
+    glossary/index.html
+
+Rules:
+
+- link only meaningful first uses inside body content
+- avoid repeated links for the same term on the same page
+- avoid adding glossary links to headers, nav, footers, card titles, or boilerplate lists unless deliberately reviewed
+- keep tooltip definitions short
+- use the glossary page for the full reference entry
+- preserve normal anchor behavior if JavaScript is unavailable
+- do not use glossary links as a substitute for source-grounded Knowledge Base articles
+
+Current primary glossary destination:
+
+    /glossary/
 
 ---
 
@@ -259,6 +291,7 @@ The homepage should link to:
 
 - `/projects/`
 - `/knowledge-base/`
+- `/glossary/`
 - `/story/`
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
@@ -276,6 +309,7 @@ The Projects page should link to:
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/` where helpful
+- `/glossary/` through header navigation
 - `/story/` through header navigation
 - relevant Knowledge Base articles after deliberate copy/link review
 
@@ -287,6 +321,7 @@ The Projects page should remain an ecosystem router.
 
 The NeuroCore page should link to:
 
+- `/glossary/` through header navigation
 - `/story/` through header navigation
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
@@ -307,6 +342,7 @@ It should not become the full architecture manual.
 
 The Argus ACLI page should link to:
 
+- `/glossary/` through header navigation
 - `/story/` through header navigation
 - `/projects/neurocore.html`
 - `/projects/argus-lab.html`
@@ -323,6 +359,7 @@ The Argus ACLI page should clearly distinguish current product state from future
 
 The Argus Lab page should link to:
 
+- `/glossary/` through header navigation
 - `/story/` through header navigation
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
@@ -330,9 +367,9 @@ The Argus Lab page should link to:
 - `/knowledge-base/linux-diagnostics/` where evidence-first diagnostics explanation is useful
 - future public technical artifacts after a Resources page or public artifact strategy exists
 
-The Argus Lab page should clearly remain future-phase until implementation status changes.
+The Argus Lab page should clearly describe the current early implementation status without implying public availability or completed platform maturity.
 
-The page is now a full public landing page. Keep future-phase status clear until implementation status changes.
+The page is now a full public landing page. Keep implementation status accurate as the lab develops.
 
 ---
 
@@ -340,6 +377,7 @@ The page is now a full public landing page. Keep future-phase status clear until
 
 The Knowledge Base index should link to:
 
+- `/glossary/` through header navigation
 - `/story/` through header navigation
 - `/projects/` through header navigation and CTA links
 - `/knowledge-base/ai-operations/`
@@ -374,7 +412,8 @@ Current Knowledge Base articles should link through the recommended path:
 Each article should:
 
 - link back to `/knowledge-base/` through article metadata or navigation
-- include header navigation to Home, Projects, Knowledge Base, and Story
+- include header navigation to Home, Projects, Knowledge Base, Glossary, and Story
+- use inline glossary links sparingly where definitions help readers
 - preserve previous/next navigation where appropriate
 - include related links only to real public pages
 - avoid links to internal planning docs or private repositories
@@ -390,6 +429,7 @@ The Story page should link to:
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
 - `/knowledge-base/` through header navigation
+- `/glossary/` through header navigation
 
 The Story page should remain the origin and philosophy page.
 
@@ -401,7 +441,23 @@ It should not become:
 - an internal planning document
 - a replacement for the project pages
 
-Deeper definitions should branch into the Knowledge Base later.
+Deeper definitions should branch into the Knowledge Base or Glossary depending on whether the reader needs a full concept article or a compact reference definition.
+
+---
+
+### Glossary Page
+
+The Glossary page should link to:
+
+- `/projects/neurocore.html` where NeuroCore is referenced
+- `/projects/argus-acli.html` where Argus ACLI is referenced
+- `/projects/argus-lab.html` where Argus Lab is referenced
+- `/knowledge-base/` for deeper conceptual learning
+- relevant Knowledge Base articles where definitions need deeper explanation
+
+The Glossary page should remain a compact reference page.
+
+It should not replace Knowledge Base articles or become a full architecture manual.
 
 ---
 
@@ -421,6 +477,7 @@ When these pages are created, update links across the site.
 | `/knowledge-base/linux-diagnostics/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Argus ACLI or Argus Lab later only after deliberate copy review. |
 | `/knowledge-base/troubleshooting-training/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Argus Lab later only after deliberate copy review. |
 | `/knowledge-base/neurocore-architecture/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from NeuroCore or project pages later only after deliberate copy review. |
+| `/glossary/index.html` | Completed. Header navigation now points to `/glossary/`. Inline glossary tooltip links now target glossary entries from Knowledge Base articles. Keep glossary additions deliberate and compact. |
 | `/resources/index.html` | Header nav if Resources becomes primary, footer/artifacts sections, Knowledge Base index, project pages where useful |
 | `/build-notes/index.html` | Knowledge Base index, NeuroCore page, Story page where useful |
 
@@ -432,7 +489,7 @@ Before closeout, run a link-oriented check manually or with a future script.
 
 Current manual checks:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
     find . -maxdepth 3 -name "*.html" -print
 
 Future recommended script:
@@ -475,13 +532,17 @@ This rule exists to catch:
 
 ## Current Verified Link Snapshot
 
-Last verified command:
+Last verified local internal-link validation:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    Public HTML files checked: 16
+    Internal links checked: 346
+    External/skipped links: 0
+    Result: all checked internal links resolved successfully
 
 Current verified public HTML files:
 
     ./index.html
+    ./glossary/index.html
     ./knowledge-base/index.html
     ./knowledge-base/ai-operations/index.html
     ./knowledge-base/persistent-ai-memory/index.html
@@ -499,7 +560,7 @@ Current verified public HTML files:
 
 Current notable link state:
 
-- Home, Projects, Knowledge Base, and Story navigation exists across current public pages.
+- Home, Projects, Knowledge Base, Glossary, and Story navigation exists across current public pages.
 - Public GitHub navigation has been removed from current public pages.
 - Direct public links to private implementation repositories have been removed from current public pages.
 - Knowledge Base links point to the real `/knowledge-base/` page.
@@ -509,7 +570,8 @@ Current notable link state:
 - Argus ACLI links to NeuroCore and Argus Lab.
 - NeuroCore links to Argus ACLI and Argus Lab.
 - Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.
-- Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, and Knowledge Base.
+- Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and Glossary.
+- Glossary is linked from primary navigation and supports inline Knowledge Base tooltip terms.
 
 ---
 
@@ -518,6 +580,8 @@ Current notable link state:
 If a new public page is created, add it to `page_inventory.md`.
 
 If a new major topic is introduced, add it to this internal linking strategy.
+
+If a new glossary term is introduced, make sure it belongs in the Glossary rather than needing a full Knowledge Base article.
 
 If a temporary link is replaced by a real page, update this document.
 

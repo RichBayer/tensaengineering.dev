@@ -48,6 +48,7 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /glossary/
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -72,13 +73,14 @@ Current search-indexing status:
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
     /story/ is included in sitemap.xml
+    /glossary/ is included in sitemap.xml locally
     the first eight Knowledge Base article URLs are included in sitemap.xml locally
 
 Latest local link validation:
 
-    Public HTML files checked: 15
-    Internal links checked: 210
-    External/skipped links: 15
+    Public HTML files checked: 16
+    Internal links checked: 346
+    External/skipped links: 0
     Result: all checked internal links resolved successfully
 
 ---
@@ -134,6 +136,7 @@ The current sitemap should include only the current real public pages:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/glossary/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -166,6 +169,7 @@ Directory index pages should use clean directory URLs when appropriate:
 
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/glossary/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -188,6 +192,7 @@ Avoid duplicate sitemap entries such as:
     https://tensaengineering.dev/projects/index.html
     https://tensaengineering.dev/knowledge-base/index.html
     https://tensaengineering.dev/story/index.html
+    https://tensaengineering.dev/glossary/index.html
 
 when the clean directory URL is the preferred public route.
 
@@ -216,6 +221,9 @@ Current root-level `sitemap.xml` should use this structure:
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/glossary/</loc>
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/ai-operations/</loc>
@@ -312,6 +320,7 @@ Google Search Console setup steps:
        https://tensaengineering.dev/knowledge-base/ai-operations/
        https://tensaengineering.dev/knowledge-base/neurocore-architecture/
        https://tensaengineering.dev/story/
+       https://tensaengineering.dev/glossary/
 
 Preferred verification method:
 
@@ -684,7 +693,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "knowledge-base/neurocore-architecture/\|Internal links checked: 210\|all eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
+    grep -n "glossary/\|Internal links checked: 346\|first eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:

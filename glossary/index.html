@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Plain-English definitions for controlled AI systems, Linux diagnostics, safe tool interaction, troubleshooting training, and TENSA Engineering ecosystem terms."
+  />
+  <link rel="canonical" href="https://tensaengineering.dev/glossary/" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Glossary | TENSA Engineering" />
+  <meta property="og:description" content="Plain-English definitions for controlled AI systems, Linux diagnostics, safe tool interaction, troubleshooting training, and TENSA Engineering ecosystem terms." />
+  <meta property="og:url" content="https://tensaengineering.dev/glossary/" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
+  <meta name="twitter:title" content="Glossary | TENSA Engineering" />
+  <meta name="twitter:description" content="Plain-English definitions for controlled AI systems, Linux diagnostics, safe tool interaction, troubleshooting training, and TENSA Engineering ecosystem terms." />
+  <title>Glossary | TENSA Engineering</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://tensaengineering.dev/glossary/#defined-term-set",
+  "url": "https://tensaengineering.dev/glossary/",
+  "name": "TENSA Engineering Glossary",
+  "description": "Plain-English definitions for controlled AI systems, Linux diagnostics, safe tool interaction, troubleshooting training, and TENSA Engineering ecosystem terms.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://tensaengineering.dev/#website",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tensaengineering.dev/#organization",
+    "name": "TENSA Engineering",
+    "url": "https://tensaengineering.dev/"
+  },
+  "inLanguage": "en-US"
+}
+  </script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="TENSA Engineering home">
+      <img
+        src="../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
+        alt="TENSA Engineering"
+        class="brand-logo"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../projects/">Projects</a>
+      <a href="../knowledge-base/">Knowledge Base</a>
+      <a href="./">Glossary</a>
+      <a href="../story/">Story</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-hero branded-page-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Glossary</p>
+
+        <h1>Plain-English definitions for the TENSA ecosystem.</h1>
+
+        <p class="subtitle">
+          A quick reference for the language used across TENSA Engineering, NeuroCore,
+          Argus ACLI, Argus Lab, controlled AI systems, and Linux diagnostics.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#term-index" class="button primary">Browse terms</a>
+          <a href="../knowledge-base/" class="button secondary">Knowledge Base</a>
+        </div>
+      </div>
+
+      <div class="ecosystem-mark" aria-label="TENSA Engineering glossary">
+        <img
+          src="../assets/images/branding/tensa/tensa-stacked-logo-transparent.png"
+          alt="TENSA Engineering stacked logo"
+          class="ecosystem-logo-main"
+        />
+      </div>
+    </section>
+
+    <section class="intro-card">
+      <p class="eyebrow">How to use this page</p>
+      <h2>Short definitions first. Deeper reading second.</h2>
+      <p>
+        This page is meant to support the rest of the site. Terms on project pages and Knowledge Base
+        articles can link here when a reader needs a quick human definition without leaving the larger
+        flow of the page.
+      </p>
+      <p>
+        Each definition stays short, explains the term in plain English, gives TENSA context, and links
+        back to the best deeper page when one exists.
+      </p>
+    </section>
+
+    <section id="term-index" class="glossary-index">
+      <div class="section-heading">
+        <p class="eyebrow">Term index</p>
+        <h2>Browse by category.</h2>
+        <p>
+          Use the links below as a quick map. Each term jumps to a short definition lower on the page.
+        </p>
+      </div>
+
+      <div class="glossary-category-grid">
+        <div class="glossary-category">
+          <h3>TENSA ecosystem</h3>
+          <ul>
+            <li><a href="#neurocore">NeuroCore</a></li>
+            <li><a href="#argus-acli">Argus ACLI</a></li>
+            <li><a href="#argus-lab">Argus Lab</a></li>
+            <li><a href="#ai-operations">AI Operations</a></li>
+            <li><a href="#operational-continuity">Operational continuity</a></li>
+          </ul>
+        </div>
+
+        <div class="glossary-category">
+          <h3>Controlled AI</h3>
+          <ul>
+            <li><a href="#controlled-ai-system">Controlled AI system</a></li>
+            <li><a href="#control-plane">Control plane</a></li>
+            <li><a href="#authority-boundary">Authority boundary</a></li>
+            <li><a href="#model-authority">Model authority</a></li>
+            <li><a href="#tool-boundary">Tool boundary</a></li>
+            <li><a href="#safe-tool-interaction">Safe tool interaction</a></li>
+          </ul>
+        </div>
+
+        <div class="glossary-category">
+          <h3>Diagnostics</h3>
+          <ul>
+            <li><a href="#linux-diagnostics">Linux diagnostics</a></li>
+            <li><a href="#diagnostic-intelligence">Diagnostic intelligence</a></li>
+            <li><a href="#evidence-first-troubleshooting">Evidence-first troubleshooting</a></li>
+            <li><a href="#raw-evidence">Raw evidence</a></li>
+            <li><a href="#read-only-diagnostics">Read-only diagnostics</a></li>
+            <li><a href="#structured-findings">Structured findings</a></li>
+          </ul>
+        </div>
+
+        <div class="glossary-category">
+          <h3>System awareness</h3>
+          <ul>
+            <li><a href="#local-first-ai">Local-first AI</a></li>
+            <li><a href="#persistent-ai-memory">Persistent AI memory</a></li>
+            <li><a href="#system-awareness">System awareness</a></li>
+            <li><a href="#telemetry">Telemetry</a></li>
+            <li><a href="#source-of-truth">Source-of-truth</a></li>
+          </ul>
+        </div>
+
+        <div class="glossary-category">
+          <h3>Training</h3>
+          <ul>
+            <li><a href="#troubleshooting-training">Troubleshooting training</a></li>
+            <li><a href="#verification">Verification</a></li>
+            <li><a href="#severity">Severity</a></li>
+          </ul>
+        </div>
+
+        <div class="glossary-category">
+          <h3>Architecture</h3>
+          <ul>
+            <li><a href="#governed-execution">Governed execution</a></li>
+            <li><a href="#safe-tool-interaction">Safe tool interaction</a></li>
+            <li><a href="#control-plane">Control plane</a></li>
+            <li><a href="#structured-findings">Structured findings</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-card">
+      <p class="eyebrow">Definitions</p>
+      <h2>Human-readable term definitions.</h2>
+      <p>
+        These are intentionally short. The goal is to explain the term clearly, connect it to the TENSA
+        ecosystem, and point readers toward the deeper page when they want more context.
+      </p>
+    </section>
+
+    <section class="glossary-definitions">
+
+      <div class="glossary-definition" id="ai-operations">
+      <h2>AI Operations</h2>
+      <p><strong>Human definition:</strong> The discipline of making AI-assisted work repeatable, grounded, reviewable, and continuous.</p>
+      <p><strong>TENSA context:</strong> AI Operations includes context loading, source-of-truth documents, build logs, resume prompts, review loops, and closeout workflows.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/ai-operations/">AI Operations</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="argus-acli">
+      <h2>Argus ACLI</h2>
+      <p><strong>Human definition:</strong> The read-only Linux diagnostics interface built on NeuroCore.</p>
+      <p><strong>TENSA context:</strong> Argus ACLI turns Linux system signals into structured findings, severity, recommendations, and raw evidence.</p>
+      <p><strong>Read more:</strong> <a href="../projects/argus-acli.html">Argus ACLI</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="argus-lab">
+      <h2>Argus Lab</h2>
+      <p><strong>Human definition:</strong> A real-Linux troubleshooting training and validation environment built around controlled faults and real symptoms.</p>
+      <p><strong>TENSA context:</strong> Argus Lab is where future learners practice troubleshooting and where Argus diagnostic behavior can be tested against known failures.</p>
+      <p><strong>Read more:</strong> <a href="../projects/argus-lab.html">Argus Lab</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="authority-boundary">
+      <h2>Authority boundary</h2>
+      <p><strong>Human definition:</strong> The line between what an AI model may reason about and what it is allowed to control.</p>
+      <p><strong>TENSA context:</strong> Authority boundaries keep model explanation separate from governed execution paths.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/controlled-ai-systems/">Controlled AI Systems</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="control-plane">
+      <h2>Control plane</h2>
+      <p><strong>Human definition:</strong> The governance layer that decides what actions are allowed before tools or operations run.</p>
+      <p><strong>TENSA context:</strong> NeuroCore’s control plane helps separate AI reasoning from operational authority.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/neurocore-architecture/">NeuroCore Architecture</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="controlled-ai-system">
+      <h2>Controlled AI system</h2>
+      <p><strong>Human definition:</strong> An AI-assisted system where intelligence and authority are deliberately separated.</p>
+      <p><strong>TENSA context:</strong> The model may reason and explain, but system interaction must pass through governed paths.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/controlled-ai-systems/">Controlled AI Systems</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="diagnostic-intelligence">
+      <h2>Diagnostic intelligence</h2>
+      <p><strong>Human definition:</strong> The ability to turn system evidence into useful troubleshooting insight.</p>
+      <p><strong>TENSA context:</strong> Argus builds diagnostic intelligence from real service state, logs, memory, disk, network, and process evidence.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/linux-diagnostics/">Linux Diagnostics</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="evidence-first-troubleshooting">
+      <h2>Evidence-first troubleshooting</h2>
+      <p><strong>Human definition:</strong> Starting an investigation from real system evidence instead of guesses.</p>
+      <p><strong>TENSA context:</strong> Argus and Argus Lab both emphasize finding, preserving, and reasoning from evidence.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/linux-diagnostics/">Linux Diagnostics</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="governed-execution">
+      <h2>Governed execution</h2>
+      <p><strong>Human definition:</strong> Tool or system actions pass through policy and control boundaries instead of being launched directly by the model.</p>
+      <p><strong>TENSA context:</strong> Governed execution is how NeuroCore keeps AI useful near real systems without giving it unchecked control.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/safe-tool-interaction/">Safe Tool Interaction</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="linux-diagnostics">
+      <h2>Linux diagnostics</h2>
+      <p><strong>Human definition:</strong> Inspecting Linux system state to understand what is happening and why.</p>
+      <p><strong>TENSA context:</strong> Argus ACLI focuses on services, logs, processes, memory, disk, network state, and raw command evidence.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/linux-diagnostics/">Linux Diagnostics</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="local-first-ai">
+      <h2>Local-first AI</h2>
+      <p><strong>Human definition:</strong> AI designed to work close to the user, the system, and the evidence by default.</p>
+      <p><strong>TENSA context:</strong> Local-first design keeps sensitive system context closer to the owner and closer to the real environment.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/local-first-ai/">Local-First AI</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="model-authority">
+      <h2>Model authority</h2>
+      <p><strong>Human definition:</strong> What an AI model is allowed to decide or control.</p>
+      <p><strong>TENSA context:</strong> TENSA limits model authority so explanation and reasoning do not become unchecked system control.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/controlled-ai-systems/">Controlled AI Systems</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="neurocore">
+      <h2>NeuroCore</h2>
+      <p><strong>Human definition:</strong> The governed local-first AI platform behind TENSA Engineering systems.</p>
+      <p><strong>TENSA context:</strong> NeuroCore provides the foundation for controlled tool interaction, structured evidence, system awareness, continuity, and AI-assisted explanation.</p>
+      <p><strong>Read more:</strong> <a href="../projects/neurocore.html">NeuroCore</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="operational-continuity">
+      <h2>Operational continuity</h2>
+      <p><strong>Human definition:</strong> Preserving enough project or system context to keep moving without constantly restarting from memory.</p>
+      <p><strong>TENSA context:</strong> TENSA uses source-of-truth documents, build logs, state records, and context loading to preserve continuity.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/persistent-ai-memory/">Persistent AI Memory</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="persistent-ai-memory">
+      <h2>Persistent AI memory</h2>
+      <p><strong>Human definition:</strong> Stored context that helps an AI system remember useful project information across sessions.</p>
+      <p><strong>TENSA context:</strong> TENSA treats persistent memory as useful only when it stays grounded, reviewable, and connected to source-of-truth material.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/persistent-ai-memory/">Persistent AI Memory</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="raw-evidence">
+      <h2>Raw evidence</h2>
+      <p><strong>Human definition:</strong> The original system signal behind a diagnostic finding.</p>
+      <p><strong>TENSA context:</strong> Raw evidence can include command output, service status, journal logs, process data, ports, disk usage, and direct system signals.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/linux-diagnostics/">Linux Diagnostics</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="read-only-diagnostics">
+      <h2>Read-only diagnostics</h2>
+      <p><strong>Human definition:</strong> Inspecting system state without changing the system.</p>
+      <p><strong>TENSA context:</strong> Argus ACLI starts read-only so users can gather evidence and understand the problem before considering repair.</p>
+      <p><strong>Read more:</strong> <a href="../projects/argus-acli.html">Argus ACLI</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="safe-tool-interaction">
+      <h2>Safe tool interaction</h2>
+      <p><strong>Human definition:</strong> Letting AI work near tools without giving the model unchecked control over those tools.</p>
+      <p><strong>TENSA context:</strong> NeuroCore structures and governs tool interaction so the model does not become a raw command launcher.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/safe-tool-interaction/">Safe Tool Interaction</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="severity">
+      <h2>Severity</h2>
+      <p><strong>Human definition:</strong> A label that helps describe how important or risky a diagnostic finding appears to be.</p>
+      <p><strong>TENSA context:</strong> Argus uses severity to help users distinguish normal state, warnings, degraded conditions, and critical signals.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/linux-diagnostics/">Linux Diagnostics</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="source-of-truth">
+      <h2>Source-of-truth</h2>
+      <p><strong>Human definition:</strong> The trusted reference used to decide what is actually true about a project, system, or page.</p>
+      <p><strong>TENSA context:</strong> Source-of-truth documents prevent public pages and AI-assisted work from drifting into memory, assumptions, or stale summaries.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/ai-operations/">AI Operations</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="structured-findings">
+      <h2>Structured findings</h2>
+      <p><strong>Human definition:</strong> Diagnostic results organized into clear fields such as status, severity, evidence, recommendation, and explanation.</p>
+      <p><strong>TENSA context:</strong> Structured findings make Linux diagnostics easier for humans to read and easier for AI systems to explain.</p>
+      <p><strong>Read more:</strong> <a href="../projects/argus-acli.html">Argus ACLI</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="system-awareness">
+      <h2>System awareness</h2>
+      <p><strong>Human definition:</strong> Grounded information about the real environment an AI-assisted system is helping explain.</p>
+      <p><strong>TENSA context:</strong> NeuroCore’s direction is built around structured awareness from real evidence, controlled tools, context, and memory.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/neurocore-architecture/">NeuroCore Architecture</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="telemetry">
+      <h2>Telemetry</h2>
+      <p><strong>Human definition:</strong> Data collected from a system so its state or behavior can be understood.</p>
+      <p><strong>TENSA context:</strong> Diagnostic telemetry can include service state, logs, process data, network information, and other system evidence.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/linux-diagnostics/">Linux Diagnostics</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="tool-boundary">
+      <h2>Tool boundary</h2>
+      <p><strong>Human definition:</strong> The separation between AI reasoning and the tools that interact with a real system.</p>
+      <p><strong>TENSA context:</strong> Tool boundaries let the model request, interpret, or explain information without directly running unrestricted commands.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/safe-tool-interaction/">Safe Tool Interaction</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="troubleshooting-training">
+      <h2>Troubleshooting training</h2>
+      <p><strong>Human definition:</strong> Structured practice in identifying, investigating, fixing, and verifying real technical problems.</p>
+      <p><strong>TENSA context:</strong> Argus Lab is designed to support troubleshooting training through controlled real-Linux scenarios and mentor-style guidance.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/troubleshooting-training/">Troubleshooting Training</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="verification">
+      <h2>Verification</h2>
+      <p><strong>Human definition:</strong> Checking that a conclusion, fix, page update, or system state is actually true.</p>
+      <p><strong>TENSA context:</strong> Verification matters across diagnostics, documentation, AI-assisted writing, website updates, lab scenarios, and project continuity.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/ai-operations/">AI Operations</a>.</p>
+      </div>
+
+
+    </section>
+
+    <section class="footer-card">
+      <p class="eyebrow">Next layer</p>
+      <h2>Definitions should support the site, not compete with it.</h2>
+      <p>
+        The glossary gives readers fast definitions. The Knowledge Base and project pages provide the deeper
+        explanations, examples, and system context.
+      </p>
+
+      <div class="hero-actions">
+        <a href="../knowledge-base/" class="button primary">Read the Knowledge Base</a>
+        <a href="../projects/" class="button secondary">Explore the projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+  </footer>
+</body>
+</html>

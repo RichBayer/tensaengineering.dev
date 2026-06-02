@@ -49,6 +49,7 @@
 }
   </script>
   <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
 </head>
 
 <body>
@@ -67,6 +68,7 @@
       <a href="../../index.html">Home</a>
       <a href="../../projects/">Projects</a>
       <a href="../">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
       <a href="../../story/">Story</a>
     </nav>
   </header>
@@ -94,7 +96,7 @@
           </p>
 
           <p>
-            Linux diagnostics is not just running commands. It is the process of
+            <a class="glossary-term" href="../../glossary/#linux-diagnostics" data-term="Linux diagnostics" data-definition="Inspecting Linux system state to understand what is happening and why.">Linux diagnostics</a> is not just running commands. It is the process of
             collecting system evidence, identifying signals, separating symptoms from
             causes, and deciding what to inspect next.
           </p>
@@ -133,7 +135,7 @@
           </ol>
 
           <p>
-            This page builds on Safe Tool Interaction by showing why approved, read-only
+            This page builds on <a class="glossary-term" href="../../glossary/#safe-tool-interaction" data-term="Safe tool interaction" data-definition="Letting AI work near tools without giving the model unchecked control over those tools.">Safe Tool Interaction</a> by showing why approved, read-only
             tools need to collect real Linux evidence before AI can explain anything
             responsibly.
           </p>
@@ -273,7 +275,7 @@
           <h2>Raw evidence matters</h2>
 
           <p>
-            Raw evidence is the original observed data collected from the system. That
+            <a class="glossary-term" href="../../glossary/#raw-evidence" data-term="Raw evidence" data-definition="The original system signal behind a diagnostic finding.">Raw evidence</a> is the original observed data collected from the system. That
             might be service status, command output, log lines, disk usage, process data,
             network state, or other system signals.
           </p>
@@ -326,7 +328,7 @@
           </p>
 
           <p>
-            That is why Linux diagnostics connects directly to controlled AI systems,
+            That is why Linux diagnostics connects directly to <a class="glossary-term" href="../../glossary/#controlled-ai-system" data-term="Controlled AI system" data-definition="An AI-assisted system where intelligence and authority are deliberately separated.">controlled AI systems</a>,
             local-first design, and safe tool interaction. The model is strongest when it
             explains real evidence. It is weakest when it guesses about a machine it
             cannot see.
@@ -337,7 +339,7 @@
           <h2>Read-only diagnostics first</h2>
 
           <p>
-            Argus ACLI starts with read-only diagnostics for a reason. Before a system
+            <a class="glossary-term" href="../../glossary/#argus-acli" data-term="Argus ACLI" data-definition="The read-only Linux diagnostics interface built on NeuroCore.">Argus ACLI</a> starts with <a class="glossary-term" href="../../glossary/#read-only-diagnostics" data-term="Read-only diagnostics" data-definition="Inspecting system state without changing the system.">read-only diagnostics</a> for a reason. Before a system
             should be trusted to fix anything, it should prove that it can inspect the
             system safely.
           </p>
@@ -370,7 +372,7 @@
           <h2>Diagnostics are the beginning of system awareness</h2>
 
           <p>
-            Linux diagnostics also point toward a larger NeuroCore goal: true system
+            Linux diagnostics also point toward a larger <a class="glossary-term" href="../../glossary/#neurocore" data-term="NeuroCore" data-definition="The governed local-first AI platform behind TENSA Engineering systems.">NeuroCore</a> goal: true system
             awareness. A single diagnostic run can answer a question about the current
             state of a machine. But repeated, structured diagnostics can become something
             more powerful.
@@ -443,7 +445,7 @@
           <p>
             Argus ACLI is designed to collect read-only system evidence, organize
             diagnostic signals, preserve raw output, and turn that information into
-            structured findings, severity, and recommendations.
+            <a class="glossary-term" href="../../glossary/#structured-findings" data-term="Structured findings" data-definition="Diagnostic results organized into clear fields such as status, severity, evidence, recommendation, and explanation.">structured findings</a>, <a class="glossary-term" href="../../glossary/#severity" data-term="Severity" data-definition="A label that helps describe how important or risky a diagnostic finding appears to be.">severity</a>, and recommendations.
           </p>
 
           <p>
@@ -461,7 +463,7 @@
           <h2>How Argus Lab extends the idea</h2>
 
           <p>
-            Argus Lab is the future validation and training environment for this work.
+            <a class="glossary-term" href="../../glossary/#argus-lab" data-term="Argus Lab" data-definition="A real-Linux troubleshooting training and validation environment built around controlled faults and real symptoms.">Argus Lab</a> is the future validation and training environment for this work.
             First, it is planned to provide a place to validate Argus ACLI against real
             Linux scenarios and controlled failures. Later, it becomes a platform for
             teaching real people how to troubleshoot Linux systems through real work.

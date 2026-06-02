@@ -49,6 +49,7 @@
 }
   </script>
   <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
 </head>
 
 <body>
@@ -67,6 +68,7 @@
       <a href="../../index.html">Home</a>
       <a href="../../projects/">Projects</a>
       <a href="../">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
       <a href="../../story/">Story</a>
     </nav>
   </header>
@@ -94,7 +96,7 @@
           </p>
 
           <p>
-            NeuroCore starts with a different question: what has to exist around the model
+            <a class="glossary-term" href="../../glossary/#neurocore" data-term="NeuroCore" data-definition="The governed local-first AI platform behind TENSA Engineering systems.">NeuroCore</a> starts with a different question: what has to exist around the model
             before AI can safely work near real systems?
           </p>
 
@@ -106,7 +108,7 @@
 
           <p>
             NeuroCore is the system around the model. It is the runtime, the control path,
-            the tool boundary, the context layer, the evidence layer, and the foundation
+            the <a class="glossary-term" href="../../glossary/#tool-boundary" data-term="Tool boundary" data-definition="The separation between AI reasoning and the tools that interact with a real system.">tool boundary</a>, the context layer, the evidence layer, and the foundation
             that products are built on. Together, those pieces let AI work near real
             systems without letting the model become the thing in charge.
           </p>
@@ -202,7 +204,7 @@
 
           <p>
             The long-term goal is not simply to give a better answer inside a single
-            conversation. The goal is a local-first AI platform that can hold continuity
+            conversation. The goal is a <a class="glossary-term" href="../../glossary/#local-first-ai" data-term="Local-first AI" data-definition="AI designed to work close to the user, the system, and the evidence by default.">local-first AI</a> platform that can hold continuity
             over time, reason from source-grounded context, understand real system
             evidence, and stay inside controlled boundaries.
           </p>
@@ -288,7 +290,7 @@ Product / Distribution Layer</code></pre>
           </p>
 
           <p>
-            That difference is the foundation of trust. A controlled AI system does not
+            That difference is the foundation of trust. A <a class="glossary-term" href="../../glossary/#controlled-ai-system" data-term="Controlled AI system" data-definition="An AI-assisted system where intelligence and authority are deliberately separated.">controlled AI system</a> does not
             depend on the model being perfectly obedient. It assumes the model is useful,
             but not authoritative, and it builds the boundary into the system so the
             boundary holds even when the model is wrong.
@@ -314,13 +316,13 @@ Product / Distribution Layer</code></pre>
 
           <p>
             A tool should have a specific purpose. It should return structured output. It
-            should preserve raw evidence where it can. It should stay inside the authority
+            should preserve <a class="glossary-term" href="../../glossary/#raw-evidence" data-term="Raw evidence" data-definition="The original system signal behind a diagnostic finding.">raw evidence</a> where it can. It should stay inside the authority
             it was granted. And it should never become a quiet shortcut around the rest of
             the system.
           </p>
 
           <p>
-            This matters most around Linux diagnostics. If an AI system can freely run
+            This matters most around <a class="glossary-term" href="../../glossary/#linux-diagnostics" data-term="Linux diagnostics" data-definition="Inspecting Linux system state to understand what is happening and why.">Linux diagnostics</a>. If an AI system can freely run
             commands, edit files, restart services, install packages, or change
             permissions, then the model is no longer helping. It has become an operator.
           </p>
@@ -332,7 +334,7 @@ Product / Distribution Layer</code></pre>
           <h2>Argus ACLI is the first product built from NeuroCore</h2>
 
           <p>
-            Argus ACLI is not a separate runtime. It is the first product, and the first
+            <a class="glossary-term" href="../../glossary/#argus-acli" data-term="Argus ACLI" data-definition="The read-only Linux diagnostics interface built on NeuroCore.">Argus ACLI</a> is not a separate runtime. It is the first product, and the first
             distribution, built on NeuroCore. Argus uses NeuroCore's governed architecture
             to deliver Linux diagnostics.
           </p>
@@ -355,8 +357,8 @@ Product / Distribution Layer</code></pre>
           </p>
 
           <p>
-            That is why raw evidence matters. It is why structured findings matter. It is
-            why severity classification matters. And it is why a recommendation should
+            That is why raw evidence matters. It is why <a class="glossary-term" href="../../glossary/#structured-findings" data-term="Structured findings" data-definition="Diagnostic results organized into clear fields such as status, severity, evidence, recommendation, and explanation.">structured findings</a> matter. It is
+            why <a class="glossary-term" href="../../glossary/#severity" data-term="Severity" data-definition="A label that helps describe how important or risky a diagnostic finding appears to be.">severity</a> classification matters. And it is why a recommendation should
             always stay tied to the evidence underneath it.
           </p>
 
@@ -408,7 +410,7 @@ Product / Distribution Layer</code></pre>
           </p>
 
           <p>
-            The direction is persistent system awareness.
+            The direction is persistent <a class="glossary-term" href="../../glossary/#system-awareness" data-term="System awareness" data-definition="Grounded information about the real environment an AI-assisted system is helping explain.">system awareness</a>.
           </p>
 
           <p>
@@ -422,7 +424,7 @@ Product / Distribution Layer</code></pre>
             is being inspected, what the last known state was, what evidence was already
             collected, which source documents are authoritative, which decisions were
             approved, what context has gone stale, what changed since the previous state,
-            and what still needs verification.
+            and what still needs <a class="glossary-term" href="../../glossary/#verification" data-term="Verification" data-definition="Checking that a conclusion, fix, page update, or system state is actually true.">verification</a>.
           </p>
 
           <p>
@@ -631,7 +633,7 @@ Product / Distribution Layer</code></pre>
           <h2>Argus Lab is planned as the validation arena</h2>
 
           <p>
-            Argus Lab is not the NeuroCore runtime, and it is not a separate product
+            <a class="glossary-term" href="../../glossary/#argus-lab" data-term="Argus Lab" data-definition="A real-Linux troubleshooting training and validation environment built around controlled faults and real symptoms.">Argus Lab</a> is not the NeuroCore runtime, and it is not a separate product
             runtime. It is the future testing and validation environment.
           </p>
 
@@ -748,7 +750,7 @@ Product / Distribution Layer</code></pre>
           </p>
 
           <p>
-            AI Operations explains the working discipline. Persistent AI Memory explains
+            <a class="glossary-term" href="../../glossary/#ai-operations" data-term="AI Operations" data-definition="The discipline of making AI-assisted work repeatable, grounded, reviewable, and continuous.">AI Operations</a> explains the working discipline. <a class="glossary-term" href="../../glossary/#persistent-ai-memory" data-term="Persistent AI memory" data-definition="Stored context that helps an AI system remember useful project information across sessions.">Persistent AI Memory</a> explains
             why continuity matters. Controlled AI Systems explains why authority must be
             governed. Local-First AI explains why evidence and context should stay close to
             the user when possible. Safe Tool Interaction explains how AI should work with

@@ -23,7 +23,7 @@ DNS / domain:
 
 Current repository size:
 
-    25 directories, 59 files
+    27 directories, 63 files
 
 Verify at build start with:
 
@@ -70,12 +70,101 @@ If something is unclear:
 At the start of a serious website build session:
 
 - Treat the session as having zero reliable prior context.
-- Ask the user to upload or provide the core website context docs.
-- Ingest uploaded documents silently.
-- Do not analyze, summarize, or act during ingestion.
-- Wait until the user explicitly says uploads are complete.
+- Use connector reads first for committed repository docs when connector access is available.
+- Do not ask Richard to upload every core context document by habit.
+- Ask Richard for local command output that connector reads cannot provide:
+    - `git status --short`
+    - current `tree` output
+    - current public HTML list
+    - current local validation output
+    - browser preview observations
+- Ask Richard for exact local file contents when a file is modified, uncommitted, local-only, or about to be edited.
+- During closeout, local working-tree files and local command output override connector-read committed state.
+- Avoid giant all-doc upload bundles unless connector access is unavailable or many local-only files must be reviewed together.
+- Do not analyze, summarize, or act on incomplete context when source docs are still being loaded.
+- Begin analysis only after the required connector reads, local command output, or requested file contents are available.
 
-Only after context loading is complete should analysis begin.
+Correct rhythm:
+
+    Start of session:
+        connector reads committed repo docs first
+        Richard provides git status / tree / validation output
+        assistant asks only for local files that are changed or needed
+
+    During build:
+        local repo becomes source of truth for edited files
+        connector remains useful only for unchanged committed files
+
+    During closeout:
+        use local file contents/output for anything modified
+        request exact full local docs before editing planning/closeout docs
+        avoid giant upload bundles unless connector is unavailable or many local-only files changed
+
+    After commit/push:
+        connector state can be trusted again as committed baseline
+
+---
+
+# CONNECTOR ACCESS RULES
+
+When repository connector access is available, the assistant may use it as the first-pass read-only source-loading mechanism for current committed repository files.
+
+Connector-read workflow:
+
+    use repository connector access for read-only source-of-truth retrieval
+    prefer current committed repository files over prior conversation memory
+    cite or clearly identify connector-read source files when summarizing retrieved context
+    still request user-provided command output for local working-tree state, uncommitted changes, browser review, and validation results
+    request exact local file contents when local files may differ from committed connector state
+    never use connector-read committed files as closeout truth for files edited locally during the session
+
+Default connector posture:
+
+    read-only
+
+Even if write-capable connector tools are available in the future:
+
+    do not write repository files through connector tools
+    do not create files through connector tools
+    do not update files through connector tools
+    do not delete files through connector tools
+    do not commit through connector tools
+    do not push through connector tools
+
+Exception:
+
+    Richard must explicitly authorize the specific connector write action in the current session before it is used.
+
+Normal website workflow remains:
+
+    assistant reads and analyzes
+    assistant provides local commands, verification checks, or full-file replacement content
+    Richard applies changes locally
+    Richard reviews diffs
+    Richard commits and pushes manually
+
+Treat connector write capability as disabled-by-policy unless Richard explicitly enables it for a specific action.
+
+Connector reads are appropriate for:
+
+    committed AI-operations docs
+    committed planning docs
+    committed website state files
+    committed public HTML/CSS/JS files
+    committed repository map and source maps
+
+Richard-provided local context is required for:
+
+    uncommitted working-tree changes
+    current git status
+    current tree output
+    current local validation output
+    browser preview results
+    local files edited during the current session before commit
+
+Closeout and planning docs must not be edited from grep snippets alone.
+
+If a closeout or planning doc is being edited and the connector version may be stale, request the full current local file before editing.
 
 ---
 
@@ -91,7 +180,9 @@ Request or load these docs at the start of serious website sessions:
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
     docs/planning/documentation_strategy.md
+    docs/planning/glossary_strategy.md
     docs/planning/page_inventory.md
+    docs/planning/search_answer_optimization_template.md
     docs/planning/internal_linking_strategy.md
     docs/planning/search_indexing_strategy.md
     docs/planning/content_style_guide.md
@@ -123,6 +214,9 @@ Purpose:
     documentation_strategy.md
         documentation ownership, update triggers, and overlap boundaries
 
+    glossary_strategy.md
+        glossary scope, term-selection rules, tooltip behavior, and expansion guardrails
+
     page_inventory.md
         page existence, status, purpose, navigation state, and next actions
 
@@ -131,6 +225,9 @@ Purpose:
 
     search_indexing_strategy.md
         sitemap, robots.txt, Google Search Console, Bing Webmaster Tools, and indexing workflow
+
+    search_answer_optimization_template.md
+        future search-and-answer optimization workflow for page clarity and reader/search intent
 
     content_style_guide.md
         public writing voice, tone, formatting, and page-copy standards
@@ -147,7 +244,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
 
 For diff checks, prefer no-pager output to avoid clipped terminal pager output:
 
@@ -181,6 +278,7 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /glossary/
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -215,6 +313,7 @@ Current public page status:
     /projects/argus-acli.html   Live full Argus ACLI public product page
     /projects/argus-lab.html    Live full Argus Lab public landing page
     /knowledge-base/                                      Live Knowledge Base article-path hub
+    /glossary/                                            Live public Glossary page
     /knowledge-base/ai-operations/                        Live Knowledge Base article
     /knowledge-base/persistent-ai-memory/                 Live Knowledge Base article
     /knowledge-base/controlled-ai-systems/                Live Knowledge Base article
@@ -250,6 +349,7 @@ Current sitemap contains canonical HTTPS non-www URLs for:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/glossary/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -280,13 +380,14 @@ Current search registration status:
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
     /story/ included in sitemap.xml
+    /glossary/ included in sitemap.xml locally
     first eight Knowledge Base article URLs included in sitemap.xml locally
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 15
-    Internal links checked: 210
-    External/skipped links: 15
+    Public HTML files checked: 16
+    Internal links checked: 346
+    External/skipped links: 0
     Result: all checked internal links resolved successfully
 
 Known Search Console status:
@@ -299,7 +400,7 @@ This is expected and harmless because those are alternate redirect versions. The
 
     https://tensaengineering.dev/
 
-Post-deploy search checks after the Knowledge Base article-path closeout:
+Post-deploy search checks after the latest Glossary / Knowledge Base sitemap closeout:
 
 - Confirm the live Knowledge Base index loads:
 
@@ -307,7 +408,7 @@ Post-deploy search checks after the Knowledge Base article-path closeout:
 
 - Confirm all eight Knowledge Base article URLs load live.
 
-- Confirm the live sitemap includes all eight Knowledge Base article URLs.
+- Confirm the live sitemap includes `/glossary/` and all eight Knowledge Base article URLs.
 
 - Inspect the Knowledge Base index and key article URLs in Google Search Console if appropriate:
 
@@ -404,7 +505,7 @@ Argus ACLI:
 
 Argus Lab:
 
-- future real-Linux troubleshooting, training, and validation environment
+- early real-Linux troubleshooting, training, and validation environment
 - controlled failure scenarios
 - resettable lab sessions
 - mentor-style AI guidance
@@ -450,6 +551,13 @@ Knowledge Base:
     - Linux Diagnostics
     - Troubleshooting Training
     - NeuroCore Architecture
+
+Glossary:
+
+- public compact reference layer for recurring ecosystem terms
+- supports Knowledge Base readers without bloating every article
+- provides inline tooltip destinations for selected Knowledge Base terms
+- should remain compact and should not replace full Knowledge Base articles
 
 ---
 
@@ -504,6 +612,7 @@ Current branding behavior:
 - Knowledge Base index hero uses the TENSA stacked logo
 - Knowledge Base articles use TENSA site branding
 - Story page hero uses the TENSA stacked logo
+- Glossary page uses TENSA site branding
 - homepage and Projects page project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - header logo removes the tiny unreadable subtitle line
@@ -520,6 +629,8 @@ Current visual direction:
 - styled content lists instead of default browser bullets
 - reusable Knowledge Base article layout
 - readable Knowledge Base index links with explicit styling
+- glossary reference page layout
+- inline glossary tooltip styling
 
 ---
 
@@ -530,6 +641,7 @@ Current primary navigation:
     Home
     Projects
     Knowledge Base
+    Glossary
     Story
 
 Current targets:
@@ -537,9 +649,12 @@ Current targets:
     Home → /index.html
     Projects → /projects/
     Knowledge Base → /knowledge-base/
+    Glossary → /glossary/
     Story → /story/
 
 Knowledge Base points to the real `/knowledge-base/` page.
+
+Glossary points to the real `/glossary/` page.
 
 Story points to the real `/story/` page.
 
@@ -550,6 +665,8 @@ Direct public links to private implementation repositories have been removed fro
 Knowledge Base index links to all eight current Knowledge Base articles.
 
 The current Knowledge Base article path links article-to-article and loops back to the start.
+
+Inline glossary terms in Knowledge Base articles point to `/glossary/` entries.
 
 When `/resources/` is created:
 
@@ -611,6 +728,16 @@ Completed so far:
 - sitemap submitted successfully to Google
 - Bing Webmaster Tools imported from Google Search Console
 - sitemap submitted to Bing and processing
+- Glossary page created and added to primary navigation
+- inline glossary tooltip JavaScript added
+- glossary reference styling added
+- inline glossary tooltip styling added
+- Knowledge Base articles received inline glossary tooltip links
+- `/glossary/` added to sitemap.xml
+- local internal-link validation completed successfully for 346 internal links across 16 public HTML files
+- glossary strategy planning doc created
+- search-answer optimization template planning doc created
+- repository map updated to 27 directories and 63 files
 
 Recent completed website work:
 
@@ -626,8 +753,8 @@ Recent completed website work:
 - `knowledge-base/index.html` upgraded into a live article-path hub.
 - Knowledge Base article layout and index link styling added to `styles.css`.
 - Article path links were validated locally.
-- Temporary local internal-link validation checked 210 internal links successfully.
-- `sitemap.xml` updated with the eight new Knowledge Base article URLs.
+- Temporary local internal-link validation checked 346 internal links successfully across 16 public HTML files.
+- `sitemap.xml` updated with `/glossary/` and the eight Knowledge Base article URLs.
 - Closeout docs updated for the Knowledge Base article path, sitemap update, source requirements, link validation, and Python writer workflow.
 - `story/index.html` created as a full public Story page.
 - Story page explains:
@@ -639,7 +766,7 @@ Recent completed website work:
     - real systems requiring control
     - NeuroCore as the platform
     - Argus ACLI as the first practical product
-    - Argus Lab as the future training and validation environment
+    - Argus Lab as the early training and validation environment
     - AI Operations as the disciplined way of working behind the ecosystem
 - Story page was drafted by ChatGPT, polished by Claude using constrained instructions, proofed by ChatGPT, and reviewed locally by Richard.
 - Primary navigation updated so Story points to `/story/`.
@@ -687,6 +814,20 @@ Previous completed website work:
     - improved card/list styling
     - responsive behavior for architecture sections
 
+Current Glossary / tooltip work completed:
+
+- `glossary/index.html` created as a compact public reference page.
+- `assets/js/glossary-tooltips.js` created for inline glossary tooltip behavior.
+- Glossary reference layout and tooltip styling added to `styles.css`.
+- Primary navigation updated to include Glossary across current public pages.
+- Knowledge Base articles received selected inline glossary tooltip links.
+- Glossary links were kept out of footers after cleanup.
+- Internal link validation passed after glossary/nav changes.
+- `docs/planning/glossary_strategy.md` created.
+- `docs/planning/search_answer_optimization_template.md` created.
+- Closeout docs updated to reflect connector-read / local-working-tree workflow improvements.
+
+
 Current public-page cleanup completed:
 
 - Public GitHub navigation removed from current public pages.
@@ -715,7 +856,7 @@ Not yet completed:
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - dedicated SEO/topic-map session for the first Knowledge Base article path
 - optional sitemap lastmod dates
-- live sitemap confirmation after Knowledge Base article deployment
+- live sitemap confirmation after latest Glossary / Knowledge Base sitemap deployment
 - Google Search Console inspection of Knowledge Base index and key article URLs after deployment if appropriate
 - article templates for future Knowledge Base expansion
 - public technical artifact strategy
@@ -808,7 +949,7 @@ The verification should confirm:
 Example checks:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "25 directories, 59 files\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 63 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 Do not move to the next replacement until verification passes or the mismatch is understood and corrected.
@@ -871,7 +1012,7 @@ Recommended SEO/topic work:
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Story, and the first eight Knowledge Base articles now all have public site structure. The next website session should confirm the public contact path, add concise organizational identity, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next website session should confirm the public contact path, add concise organizational identity, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
 
 ---
 
@@ -889,6 +1030,8 @@ Possible next public work:
 8. Add sitemap lastmod dates after a reliable maintenance process exists.
 9. Create permanent internal link checker script.
 10. Create additional focused Knowledge Base articles.
+11. Review glossary terms after future Knowledge Base expansion.
+12. Use the search-answer optimization template during a focused SEO/content clarity pass.
 
 Recommended next direction:
 

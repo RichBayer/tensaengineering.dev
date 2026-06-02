@@ -48,6 +48,75 @@ The documentation system should grow deliberately, not randomly.
 
 ## Documentation Responsibility Model
 
+
+---
+
+## Connector Access Documentation Rule
+
+Repository connector access may be used as the first-pass read-only source-loading mechanism for website build sessions when the needed files are committed and accessible through the connector.
+
+The goal is to reduce manual upload friction without weakening source-of-truth discipline.
+
+This affects documentation workflow ownership as follows:
+
+- `tensa_website_resume_prompt.md` owns the startup rule that connector reads should be attempted first for committed core context docs when connector access is available.
+- `documentation_closeout_protocol.md` owns the closeout rule that connector reads are allowed, but connector writes are disabled by default.
+- `website_state.md` summarizes the current connector workflow for future sessions.
+- `documentation_strategy.md` owns the distinction between connector-readable committed files and local working-tree truth.
+- Local repository output remains required for uncommitted changes, git status, tree verification, browser review, and link validation.
+
+Default connector posture:
+
+    read-only
+
+If write-capable connector tools become available later, the documentation system must treat those capabilities as disabled-by-policy unless Richard explicitly authorizes a specific write action in the current session.
+
+The normal repository-editing workflow remains local-first:
+
+    assistant reads and analyzes source docs
+    assistant provides local commands or replacement content
+    Richard applies changes locally
+    Richard reviews diffs
+    Richard commits and pushes manually
+
+Do not update this documentation model to assume connector write authority unless Richard deliberately changes that operating rule.
+
+---
+
+## Hybrid Source Loading Rule
+
+Future serious website sessions should use a hybrid source-loading model:
+
+1. Use connector reads for committed repository files when available.
+2. Ask Richard for local command output for current working-tree state.
+3. Ask Richard for full local file contents when a file may have uncommitted changes that differ from the connector version.
+4. Avoid giant all-doc upload bundles unless the connector is unavailable or many local-only changes must be reviewed together.
+5. Prefer targeted single-file full-context requests when editing closeout or planning docs.
+
+Connector reads are appropriate for:
+
+    committed AI-operations docs
+    committed planning docs
+    committed website state files
+    committed public HTML/CSS/JS files
+    committed repository map and source maps
+
+Richard-provided local context is required for:
+
+    uncommitted working-tree changes
+    current git status
+    current tree output
+    current local validation output
+    browser preview results
+    local files edited during the current session before commit
+
+Closeout and planning docs must not be edited from grep snippets alone.
+
+If a closeout or planning doc is being edited and the connector version may be stale, request the full current local file before editing.
+
+This rule exists to avoid regressing back to manual-upload overhead while also avoiding stale connector reads or grep-marker patching.
+
+
 Each documentation file should have one primary responsibility.
 
 A document may reference related areas, but it should not duplicate entire sections from other docs unless a compressed summary is required for restart context.
@@ -85,7 +154,9 @@ The current core documentation set is:
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/documentation_strategy.md
+    docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
 
@@ -520,6 +591,41 @@ This document should change rarely but should remain authoritative.
 
 ---
 
+
+### docs/planning/glossary_strategy.md
+
+Primary role:
+
+    Glossary scope, term-selection rules, and inline tooltip behavior.
+
+This document defines how the public Glossary page and inline glossary tooltip system should be maintained.
+
+It should include:
+
+- glossary purpose
+- term-selection rules
+- definition length and tone rules
+- inline tooltip usage rules
+- guidance for when a term needs a full Knowledge Base article instead
+- expansion guardrails
+
+It should not become:
+
+- a full Knowledge Base article plan
+- a public copy draft for every definition
+- a general content style guide
+- a replacement for internal linking strategy
+
+Update when:
+
+- glossary scope changes
+- glossary term-selection rules change
+- inline tooltip behavior changes
+- glossary links become noisy or need tighter rules
+- the Glossary starts overlapping with Knowledge Base articles
+
+---
+
 ### docs/planning/content_style_guide.md
 
 Primary role:
@@ -561,6 +667,49 @@ This is the general TENSA public writing standard.
 Claude-specific handoff behavior belongs in:
 
     docs/ai-operations/claude/claude_website_polish_resume_prompt.md
+
+---
+
+
+### docs/planning/search_answer_optimization_template.md
+
+Primary role:
+
+    Future page-level search-answer clarity and reader-intent optimization template.
+
+This document defines a reusable future workflow for improving pages so they answer likely reader/search questions clearly.
+
+It should include:
+
+- answer-focused page review prompts
+- reader-intent checks
+- heading and summary improvement patterns
+- concise explanation opportunities
+- internal-link opportunities
+- search-result usefulness considerations
+
+It should not become:
+
+- the technical sitemap/indexing operations doc
+- the SEO topic map
+- a keyword-stuffing checklist
+- a replacement for content style guide
+- a page inventory
+
+Update when:
+
+- the search-answer optimization workflow changes
+- recurring page clarity issues are found
+- search-answer improvement patterns become reusable
+- future SEO/content sessions refine the template
+
+Technical search discoverability belongs in:
+
+    docs/planning/search_indexing_strategy.md
+
+SEO content cluster planning belongs in:
+
+    docs/planning/seo_topic_map.md
 
 ---
 
@@ -789,7 +938,7 @@ Update the resume prompt if the branding change affects future session continuit
 
 ### Workflow changes
 
-If build-start, closeout, full-file replacement, replacement verification, Claude polish workflow, or AI-session operating rules change, update:
+If build-start, closeout, full-file replacement, replacement verification, connector-read workflow, local-context loading, Claude polish workflow, or AI-session operating rules change, update:
 
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
@@ -867,6 +1016,9 @@ Use these boundaries:
 - Session restart context belongs in `tensa_website_resume_prompt.md`.
 - Closeout workflow belongs in `documentation_closeout_protocol.md`.
 - Documentation ownership belongs in `documentation_strategy.md`.
+- Glossary scope and tooltip behavior belongs in `glossary_strategy.md`.
+- Search-answer optimization workflow belongs in `search_answer_optimization_template.md`.
+- Connector/local source loading workflow belongs in `documentation_strategy.md`, `documentation_closeout_protocol.md`, and `tensa_website_resume_prompt.md`.
 
 If a document begins duplicating another document too heavily, trim it back to summary-level references.
 
@@ -933,6 +1085,7 @@ When adding a new planning doc:
 5. Add it to website state if it becomes part of core context.
 6. Add it to the resume prompt if future sessions must load it.
 7. Add it to page inventory if it is an important internal continuity doc.
+8. Add connector/local-context loading notes if the new doc affects startup or closeout behavior.
 
 ---
 
@@ -950,7 +1103,9 @@ Current active documentation system now includes:
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/documentation_strategy.md
+    docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
 

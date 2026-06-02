@@ -18,6 +18,8 @@ Current phase:
     Argus ACLI project page upgraded into a full public product page
     Argus Lab full public landing page created
     Story page created
+    Glossary page created
+    inline glossary tooltip system added for Knowledge Base articles
     branding asset hierarchy established
     consistent branding added across current public pages
     Knowledge Base index created and upgraded into a live article-path hub
@@ -35,6 +37,7 @@ Current phase:
     local internal-link validation workflow added to closeout workflow
     public GitHub navigation removed from current public pages
     public repository-proof framing replaced with private-development / future-artifacts framing
+    glossary strategy and search-answer optimization planning docs added
 
 The site now functions more like an ecosystem portal and teaching platform than a single landing page.
 
@@ -66,6 +69,47 @@ HTTPS:
 
 ## Repository
 
+
+---
+
+## Current Connector Workflow
+
+Repository connector access is now available for read-only source loading during website sessions.
+
+Current default connector posture:
+
+    read-only
+
+Connector reads may be used to fetch current repository source files directly, reducing the need for manual upload bundles when the files are already committed and accessible through the connector.
+
+Connector reads are appropriate for:
+
+- current committed AI-operations docs
+- current committed planning docs
+- current committed website state files
+- current committed public HTML/CSS/JS source files
+- source-of-truth review before closeout
+
+Connector reads do not replace local command output for:
+
+- uncommitted working-tree changes
+- `git status --short`
+- local `tree` output
+- browser preview
+- internal-link validation results
+- deployment checks
+
+Even if write-capable connector tools are available in the future, the assistant must not create, update, delete, commit, or push repository content through connector tools unless Richard explicitly authorizes that specific write action in the current session.
+
+Normal website workflow remains local-first:
+
+    assistant reads and analyzes source docs
+    assistant provides local commands or full-file replacement content
+    Richard applies changes locally
+    Richard reviews diffs
+    Richard commits and pushes manually
+
+
 Local path:
 
     /mnt/g/ai/projects/tensaengineering.dev
@@ -83,11 +127,13 @@ Current key files:
 - assets/images/branding/argus-acli/
 - assets/images/branding/argus-lab/
 - assets/images/social/tensa-og-image.png
+- assets/js/glossary-tooltips.js
 - projects/index.html
 - projects/neurocore.html
 - projects/argus-acli.html
 - projects/argus-lab.html
 - knowledge-base/index.html
+- glossary/index.html
 - knowledge-base/ai-operations/index.html
 - knowledge-base/persistent-ai-memory/index.html
 - knowledge-base/controlled-ai-systems/index.html
@@ -104,8 +150,10 @@ Current key files:
 - docs/planning/content_source_map.md
 - docs/planning/content_style_guide.md
 - docs/planning/documentation_strategy.md
+- docs/planning/glossary_strategy.md
 - docs/planning/internal_linking_strategy.md
 - docs/planning/page_inventory.md
+- docs/planning/search_answer_optimization_template.md
 - docs/planning/search_indexing_strategy.md
 - docs/planning/seo_topic_map.md
 - docs/planning/website_information_architecture.md
@@ -113,21 +161,21 @@ Current key files:
 
 Current repository size:
 
-    25 directories, 59 files
+    27 directories, 63 files
 
 Last verified by user-provided output during closeout:
 
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
     temporary local Python internal-link validation
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 15
-    Internal links checked: 210
-    External/skipped links: 15
+    Public HTML files checked: 16
+    Internal links checked: 346
+    External/skipped links: 0
     Result: all checked internal links resolved successfully
 
 ---
@@ -142,6 +190,7 @@ Current public pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /glossary/
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -161,7 +210,9 @@ Current internal planning / continuity docs:
     docs/planning/content_source_map.md
     docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
+    docs/planning/glossary_strategy.md
     docs/planning/internal_linking_strategy.md
+    docs/planning/search_answer_optimization_template.md
     docs/planning/page_inventory.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
@@ -233,6 +284,7 @@ Current branding behavior:
 - Knowledge Base index hero uses the TENSA stacked logo
 - Knowledge Base articles use TENSA site branding
 - Story page hero uses the TENSA stacked logo
+- Glossary page uses TENSA site branding
 - homepage and Projects project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - the header uses a header-optimized TENSA logo without the tiny unreadable subtitle line
@@ -249,6 +301,8 @@ Current visual direction:
 - styled content lists instead of default browser bullets
 - reusable Knowledge Base article layout
 - readable Knowledge Base index links with explicit styling
+- glossary reference page layout
+- inline glossary tooltip styling
 
 ---
 
@@ -259,6 +313,7 @@ Current primary navigation:
     Home
     Projects
     Knowledge Base
+    Glossary
     Story
 
 Current navigation targets:
@@ -266,16 +321,19 @@ Current navigation targets:
     Home → /index.html
     Projects → /projects/
     Knowledge Base → /knowledge-base/
+    Glossary → /glossary/
     Story → /story/
 
 Important notes:
 
     Knowledge Base points to the real /knowledge-base/ page.
+    Glossary points to the real /glossary/ page.
     Story points to the real /story/ page.
     Public GitHub navigation has been removed from current public pages.
     Direct public links to private implementation repositories have been removed from current public pages.
     Knowledge Base index links to all eight current Knowledge Base articles.
     The current Knowledge Base article path links article-to-article and loops back to the start.
+    Inline glossary terms in Knowledge Base articles point to /glossary/ entries.
 
 Current public artifact strategy:
 
@@ -309,6 +367,7 @@ Current sitemap contents:
 - https://tensaengineering.dev/projects/argus-acli.html
 - https://tensaengineering.dev/projects/argus-lab.html
 - https://tensaengineering.dev/knowledge-base/
+- https://tensaengineering.dev/glossary/
 - https://tensaengineering.dev/knowledge-base/ai-operations/
 - https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
 - https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -337,6 +396,7 @@ Current indexing status:
     Bing Webmaster Tools imported from Google Search Console
     sitemap submitted to Bing and processing
     /story/ included in sitemap.xml
+    /glossary/ included in sitemap.xml locally
     first eight Knowledge Base article URLs included in sitemap.xml locally
 
 Known Search Console note:
@@ -385,7 +445,7 @@ The current homepage includes:
 - link to the full Story page
 - public explanation-layer closing section
 - private-development / future-public-artifacts framing
-- navigation to Projects, Knowledge Base, and Story
+- navigation to Projects, Knowledge Base, Glossary, and Story
 
 The homepage treats TENSA Engineering as the single public hub for the ecosystem.
 
@@ -421,7 +481,7 @@ Current project model:
 
     NeuroCore = platform
     Argus ACLI = first product / distribution
-    Argus Lab = future training and validation environment
+    Argus Lab = early real-Linux troubleshooting, training, and validation environment
 
 Current branding:
 
@@ -472,7 +532,7 @@ Current content includes:
 - near-term Kernel-Up / Service Intelligence expansion
 - controlled system awareness value proposition
 - Argus ACLI as first product built on NeuroCore
-- Argus Lab as future training and validation environment
+- Argus Lab as early training and validation environment
 - cleaned bottom CTA flow
 - primary navigation to the Story page
 
@@ -544,12 +604,12 @@ Current status:
 
 Current purpose:
 
-- explain Argus Lab as a planned real-Linux troubleshooting, training, and validation environment
+- explain Argus Lab as an early real-Linux troubleshooting, training, and validation environment
 - explain its origin as a personal Linux troubleshooting practice and portfolio project
 - explain controlled failure scenarios and resettable lab sessions
 - explain mentor-style AI guidance without implying the model gives away answers
 - explain the validation role for NeuroCore, Argus ACLI, and model-guided troubleshooting
-- keep future-phase status clear and honest
+- keep current implementation status clear and honest
 - route readers to Argus ACLI, NeuroCore, and the Projects page
 - route to the Story page through primary navigation
 
@@ -560,7 +620,7 @@ Current branding:
 
 Current content includes:
 
-- planned training and validation environment positioning
+- early training and validation environment positioning
 - real troubleshooting skill through experience, not memorization
 - real systems, controlled failures, and guided growth principles
 - support-ticket-style troubleshooting scenarios
@@ -569,15 +629,15 @@ Current content includes:
 - independent, assisted, and guided resolution modes
 - validation and regression-testing role
 - planned small-business-style Linux environment shape
-- future-phase status / not currently available
+- early implementation status / not publicly available
 - learner, diagnostics, and growth audiences
 - clear explanation of what Argus Lab is not
 
 Important note:
 
-Argus Lab should remain clearly future-phase until implementation status changes.
+Argus Lab should remain clearly described as early implementation until availability changes.
 
-Do not imply it is currently available, downloadable, or a finished training product.
+Do not imply it is publicly available, downloadable, or a finished training product.
 
 ---
 
@@ -637,6 +697,7 @@ Current article-path behavior:
     Articles link forward through the recommended reading path.
     NeuroCore Architecture links back to AI Operations to restart the path.
     Related links point only to real public pages.
+    Inline glossary links provide compact definitions where helpful.
     Article pages preserve current-vs-future language where needed.
 
 Important note:
@@ -650,6 +711,41 @@ Future articles should be created deliberately and tracked in:
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/content_source_map.md
+
+
+---
+
+## Current Glossary Page
+
+Current path:
+
+    glossary/index.html
+
+Current status:
+
+    Live public glossary page
+
+Current purpose:
+
+- define important TENSA ecosystem terms in plain English
+- support readers without bloating every project or Knowledge Base page
+- provide compact reference definitions for recurring terminology
+- serve as the destination for inline glossary tooltip links from Knowledge Base articles
+- help explain NeuroCore, Argus ACLI, Argus Lab, AI Operations, Linux diagnostics, evidence, memory, continuity, control-plane, and tool-boundary terms
+
+Current implementation support:
+
+    assets/js/glossary-tooltips.js
+    docs/planning/glossary_strategy.md
+
+Important note:
+
+The Glossary should stay compact and useful.
+
+Do not turn it into a full Knowledge Base replacement.
+
+Longer explanations should stay in Knowledge Base articles or project pages.
+
 
 ---
 
@@ -689,7 +785,7 @@ Current content includes:
 - authority boundaries
 - NeuroCore as the platform
 - Argus ACLI as the first practical product
-- Argus Lab as the future training and validation environment
+- Argus Lab as the early training and validation environment
 - AI Operations as the disciplined way of working that made the system possible
 
 Important note:
@@ -704,7 +800,7 @@ Do not turn it into:
 - an internal planning document
 - a hype-heavy marketing page
 
-Deeper technical definitions belong in the Knowledge Base.
+Deeper technical definitions belong in the Knowledge Base or Glossary, depending on whether the reader needs a full article or a compact reference definition.
 
 ---
 
@@ -819,7 +915,7 @@ Argus ACLI:
 
 Argus Lab:
 
-- future real-Linux troubleshooting, training, and validation environment
+- early real-Linux troubleshooting, training, and validation environment
 - controlled failure scenarios
 - resettable lab sessions
 - mentor-style AI guidance
@@ -932,6 +1028,17 @@ Social content:
 - Knowledge Base repository-proof language replaced with public artifacts language
 - NeuroCore business-safety wording softened into controlled system awareness and local-first design language
 - Argus ACLI and Story wording standardized around Argus ACLI as the first practical product built on NeuroCore
+- Glossary page created
+- Glossary page added to primary navigation
+- inline glossary tooltip JavaScript added
+- glossary reference styling added
+- inline glossary tooltip styling added
+- Knowledge Base articles received inline glossary tooltip links
+- sitemap.xml updated to include `/glossary/`
+- local internal-link validation completed successfully for 346 internal links across 16 public HTML files
+- glossary strategy planning doc created
+- search-answer optimization template planning doc created
+- repository map updated to 27 directories and 63 files
 
 ---
 
@@ -945,7 +1052,7 @@ Social content:
 - analytics decisions
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- live sitemap confirmation after Knowledge Base article deployment
+- live sitemap confirmation after latest Glossary / Knowledge Base sitemap deployment
 - Google Search Console inspection of Knowledge Base index and key article URLs after deployment if appropriate
 - old-site migration plan
 - permanent internal link checker script
@@ -1006,6 +1113,9 @@ Purpose of each:
     documentation_strategy.md
         documentation ownership, update triggers, and overlap boundaries
 
+    glossary_strategy.md
+        glossary purpose, term-selection rules, tooltip behavior, and expansion guardrails
+
     page_inventory.md
         page existence, status, purpose, and next-action tracker
 
@@ -1014,6 +1124,9 @@ Purpose of each:
 
     search_indexing_strategy.md
         sitemap, robots.txt, search engine registration, indexing workflow, and local link validation expectations
+
+    search_answer_optimization_template.md
+        future search-and-answer optimization workflow for page clarity and search-answer usefulness
 
     seo_topic_map.md
         future SEO topic planning and Knowledge Base search strategy
@@ -1027,7 +1140,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
 
 When public links, navigation, or routes matter, prefer real local internal-link validation over grep-only review.
 
@@ -1055,7 +1168,7 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "25 directories, 59 files\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 63 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -1234,6 +1347,21 @@ Recent Knowledge Base article path work used context from:
 - search indexing strategy
 - documentation closeout protocol
 
+Recent Glossary and inline tooltip work used context from:
+
+- current public project pages
+- current Knowledge Base articles
+- glossary strategy planning
+- internal linking strategy
+- page inventory
+- content source map
+- search indexing strategy
+- repository map
+- current `styles.css`
+- local browser review
+- local internal-link validation
+
+
 Recent GitHub/private-repository public-page cleanup used context from:
 
 - current public HTML pages
@@ -1272,6 +1400,8 @@ No changes the user does not know about.
 Before replacing a file, inspect or request the current full file contents unless it was generated in the same session and not changed afterward.
 
 Do not guess.
+
+Connector reads may load committed repo files, but they do not replace local working-tree output when uncommitted changes exist.
 
 If more context is needed, ask for the exact file or doc.
 
@@ -1329,7 +1459,7 @@ Use the real origin story where appropriate.
 
 Do not compress important story into tiny marketing snippets when the page needs a fuller explanation.
 
-Keep public pages honest about what exists now, what is being built, and what is future-phase.
+Keep public pages honest about what exists now, what is being built, what is publicly available, and what remains future-phase.
 
 ---
 

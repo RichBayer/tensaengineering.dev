@@ -101,7 +101,7 @@ Before updating closeout docs, run or request output for:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
 
 Purpose:
 
@@ -133,6 +133,97 @@ Until that exists, a temporary Python link checker may be used during closeout.
 ---
 
 ## Documentation Responsibility Model
+
+
+---
+
+## Connector Access Rules
+
+When repository connector access is available, it may be used during closeout to read committed repository files as baseline context.
+
+Connector access should reduce manual upload friction, not replace local working-tree truth.
+
+Default connector posture:
+
+    read-only
+
+Allowed by default:
+
+    fetch committed repository files
+    inspect committed source docs
+    compare connector-read baseline docs against user-provided local output
+    identify stale documentation based on verified source files and local command output
+    load unchanged committed files when local working-tree status confirms they were not edited
+
+Not allowed by default, even if the connector exposes write-capable tools:
+
+    create repository files through connector tools
+    update repository files through connector tools
+    delete repository files through connector tools
+    commit through connector tools
+    push through connector tools
+    modify public website files through connector tools
+    modify closeout docs through connector tools
+
+Write-capable connector tools may only be used if Richard explicitly authorizes the specific write action in the current session.
+
+Preferred closeout workflow remains:
+
+    connector reads committed baseline docs when useful
+    Richard provides local git status / tree / validation output
+    assistant requests exact local file contents for modified or about-to-be-edited files
+    assistant proposes scoped local changes
+    Richard applies changes locally
+    targeted verification runs locally
+    Richard reviews diff/status
+    Richard commits and pushes manually
+
+Connector-read access does not replace required local evidence for:
+
+    git status
+    tree output
+    local uncommitted changes
+    modified closeout/planning docs
+    browser preview
+    link validation results
+    deployment checks
+
+---
+
+## Local Working Tree Priority Rule
+
+During closeout, local repository state wins over connector-read state for any file that was edited, generated, created, deleted, or verified during the current session.
+
+Use connector reads for:
+
+    committed baseline context
+    unchanged source docs
+    unchanged public files
+    confirming what was last committed
+
+Use Richard-provided local output or full local file contents for:
+
+    git status
+    current tree output
+    current validation output
+    local browser review
+    uncommitted public pages
+    uncommitted planning docs
+    uncommitted closeout docs
+    any file about to be edited during closeout
+
+Do not close out from connector-read committed files when `git status --short` shows local modifications.
+
+Do not edit closeout or planning docs from grep snippets alone.
+
+If a closeout or planning doc is modified locally, request the full current local file before editing it.
+
+If Richard starts reverting to old upload-bundle habits, remind him:
+
+    connector first for committed baseline
+    local output/files for uncommitted truth
+    exact local files only when needed
+
 
 User:
 
@@ -298,6 +389,8 @@ Examples:
 - new link-checking workflow
 - new source-doc rule
 - new documentation governance rule
+- new connector-read workflow rule
+- new local working-tree source-of-truth rule
 
 ---
 
@@ -434,7 +527,7 @@ The verification should confirm that:
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "17 directories, 51 files\|story/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 63 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/story/" sitemap.xml
 
 This rule exists to catch:
@@ -686,7 +779,7 @@ The preferred validation should confirm:
 
 For small visual reviews, this grep remains useful:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
 
 But grep is not enough by itself when significant routes or article paths were added.
 
@@ -700,8 +793,9 @@ Record significant validation results in closeout docs when useful.
 
 Example result worth recording:
 
-    Internal links checked: 210
-    External/skipped links: 15
+    Public HTML files checked: 16
+    Internal links checked: 346
+    External/skipped links: 0
     Result: all checked internal links resolved successfully
 
 ---
@@ -711,6 +805,7 @@ Example result worth recording:
 Before declaring closeout complete, verify:
 
 - `git status --short` was reviewed
+- connector-read files were not used as closeout truth for locally modified files
 - current tree was reviewed
 - HTML page list was reviewed
 - link output or local link validation was reviewed

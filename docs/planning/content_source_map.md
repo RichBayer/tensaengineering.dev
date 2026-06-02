@@ -38,6 +38,7 @@ Current public pages:
     projects/argus-acli.html
     projects/argus-lab.html
     knowledge-base/
+    glossary/
     knowledge-base/ai-operations/
     knowledge-base/persistent-ai-memory/
     knowledge-base/controlled-ai-systems/
@@ -73,7 +74,8 @@ It should introduce:
 - Argus Lab
 - Knowledge Base direction
 - origin story preview
-- GitHub proof
+- public explanation-layer framing
+- future public artifact direction
 
 The homepage should stay concise.
 
@@ -110,7 +112,7 @@ The Projects page explains the ecosystem model:
 
     NeuroCore = platform
     Argus ACLI = first product / distribution
-    Argus Lab = future training and validation environment
+    Argus Lab = early real-Linux troubleshooting, training, and validation environment
 
 It should route visitors to individual project pages.
 
@@ -307,7 +309,7 @@ Current status:
 
 Current role:
 
-The Argus Lab page explains Argus Lab as a planned future real-Linux troubleshooting, training, and validation environment.
+The Argus Lab page explains Argus Lab as an early real-Linux troubleshooting, training, and validation environment.
 
 It explains:
 
@@ -319,14 +321,14 @@ It explains:
 - realistic support-ticket-style scenarios
 - mentor-style AI guidance
 - validation role for NeuroCore and Argus ACLI
-- future-phase status
+- current early implementation status
 - what Argus Lab is not
 
 Important:
 
-Argus Lab remains future-phase.
+Argus Lab is in early implementation.
 
-Do not imply it is currently available, downloadable, or a finished training product.
+Do not imply it is publicly available, downloadable, or a finished training product.
 
 ---
 
@@ -349,9 +351,9 @@ If expanding deeper implementation details later, also use:
 
 ### Special Notes
 
-Argus Lab is future-phase.
+Argus Lab is early implementation.
 
-Do not describe it as currently available.
+Do not describe it as publicly available or finished.
 
 Do not make it sound like a simple quiz platform.
 
@@ -403,6 +405,74 @@ Use:
     docs/planning/content_style_guide.md
 
 Use source docs from the relevant project whenever the Knowledge Base index makes specific factual claims beyond routing and summary language.
+
+
+---
+
+## Glossary Page
+
+Path:
+
+    glossary/index.html
+
+Current status:
+
+    Live
+
+Current role:
+
+The Glossary page is the public reference page for important TENSA ecosystem terms.
+
+It explains compact definitions for:
+
+- TENSA Engineering
+- NeuroCore
+- Argus ACLI
+- Argus Lab
+- AI Operations
+- Linux diagnostics
+- control-plane language
+- evidence and telemetry language
+- memory and continuity language
+- tool-boundary language
+
+The Glossary page supports readers without bloating every public page.
+
+It also serves as the target for inline glossary tooltip links from Knowledge Base articles.
+
+---
+
+### Required Source Docs Before Major Glossary Rewrite
+
+Use:
+
+    docs/planning/glossary_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+    docs/website_state.md
+    current public project pages
+    current Knowledge Base articles
+
+Use relevant project source docs if adding or changing definitions that make factual project claims.
+
+---
+
+### Special Notes
+
+Glossary definitions should be short, plain-English, and helpful.
+
+Do not turn the Glossary into a full Knowledge Base replacement.
+
+Do not add terms just because they are interesting.
+
+Add terms when they help readers understand current public pages.
+
+Inline glossary tooltip behavior is governed by:
+
+    docs/planning/glossary_strategy.md
+    docs/planning/internal_linking_strategy.md
+    assets/js/glossary-tooltips.js
 
 ---
 
@@ -644,8 +714,8 @@ Required source material before major rewrite:
 
 Special notes:
 
-- Keep Argus Lab described as planned/future where appropriate.
-- Do not imply public availability before implementation exists.
+- Keep Argus Lab status accurate as early implementation where appropriate.
+- Do not imply public availability, downloadable access, or finished platform maturity before those exist.
 - Do not describe Argus Lab as a simple quiz or fake-terminal simulator.
 - Preserve the training-vs-diagnostics distinction.
 
@@ -716,7 +786,7 @@ The Story page explains:
 - why real systems required control
 - how NeuroCore emerged
 - how Argus ACLI became the first practical proof
-- how Argus Lab became the future training and validation environment
+- how Argus Lab became the early training and validation environment
 - how AI Operations became the disciplined way of working behind the ecosystem
 
 Important:
@@ -731,7 +801,7 @@ Do not turn it into:
     an internal planning note
     a marketing hype page
 
-Deeper technical definitions belong in the Knowledge Base.
+Deeper technical definitions belong in the Knowledge Base or Glossary, depending on whether the reader needs a full article or a compact reference definition.
 
 ---
 
@@ -911,7 +981,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "Knowledge Base Article Source Requirements\|NeuroCore Architecture Article\|knowledge-base/neurocore-architecture/index.html" docs/planning/content_source_map.md
+    grep -n "Glossary Page\|glossary/index.html\|glossary_strategy.md\|early implementation" docs/planning/content_source_map.md
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
 
 This rule exists to catch:

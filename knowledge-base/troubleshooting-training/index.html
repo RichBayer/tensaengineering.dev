@@ -49,6 +49,7 @@
 }
   </script>
   <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
 </head>
 
 <body>
@@ -67,6 +68,7 @@
       <a href="../../index.html">Home</a>
       <a href="../../projects/">Projects</a>
       <a href="../">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
       <a href="../../story/">Story</a>
     </nav>
   </header>
@@ -109,7 +111,7 @@
           <p>
             The human still needs to understand evidence, recognize risk, judge
             recommendations, approve or reject action, and know when the tool may be
-            outside its coverage. That is where troubleshooting training still matters.
+            outside its coverage. That is where <a class="glossary-term" href="../../glossary/#troubleshooting-training" data-term="Troubleshooting training" data-definition="Structured practice in identifying, investigating, fixing, and verifying real technical problems.">troubleshooting training</a> still matters.
           </p>
         </section>
 
@@ -134,7 +136,7 @@
           </ol>
 
           <p>
-            This page builds on Linux Diagnostics by shifting from system evidence to
+            This page builds on <a class="glossary-term" href="../../glossary/#linux-diagnostics" data-term="Linux diagnostics" data-definition="Inspecting Linux system state to understand what is happening and why.">Linux Diagnostics</a> by shifting from system evidence to
             human skill. Linux diagnostics asks what the system evidence shows.
             Troubleshooting training asks how a person learns to reason from that evidence
             and make better decisions.
@@ -311,8 +313,8 @@
           <h2>Why Argus Lab exists</h2>
 
           <p>
-            Argus Lab is planned as the training and validation environment for this
-            ecosystem. First, it exists to validate Argus ACLI. Before Argus ACLI can be
+            <a class="glossary-term" href="../../glossary/#argus-lab" data-term="Argus Lab" data-definition="A real-Linux troubleshooting training and validation environment built around controlled faults and real symptoms.">Argus Lab</a> is planned as the training and validation environment for this
+            ecosystem. First, it exists to validate <a class="glossary-term" href="../../glossary/#argus-acli" data-term="Argus ACLI" data-definition="The read-only Linux diagnostics interface built on NeuroCore.">Argus ACLI</a>. Before Argus ACLI can be
             trusted as a public diagnostic product, it needs to be tested against real
             Linux systems, controlled failures, and repeatable scenarios.
           </p>
@@ -384,7 +386,7 @@
             Argus ACLI output could be limited so the learner has to reason from evidence.
             In guided mode, it could suggest what to inspect next. In mentor mode, it
             could explain the reasoning path. In full diagnostic mode, it could provide
-            normal structured findings, severity, recommendations, and raw evidence.
+            normal structured findings, <a class="glossary-term" href="../../glossary/#severity" data-term="Severity" data-definition="A label that helps describe how important or risky a diagnostic finding appears to be.">severity</a>, recommendations, and <a class="glossary-term" href="../../glossary/#raw-evidence" data-term="Raw evidence" data-definition="The original system signal behind a diagnostic finding.">raw evidence</a>.
           </p>
 
           <p>
@@ -423,7 +425,7 @@
 
           <p>
             TENSA Engineering is the company building these systems, and the website
-            teaches the ideas behind them. NeuroCore is the platform that provides the
+            teaches the ideas behind them. <a class="glossary-term" href="../../glossary/#neurocore" data-term="NeuroCore" data-definition="The governed local-first AI platform behind TENSA Engineering systems.">NeuroCore</a> is the platform that provides the
             governed, local-first runtime direction. Argus ACLI is the first product built
             from NeuroCore, and it applies that direction to Linux diagnostics. Argus Lab
             is planned first as the validation arena for Argus ACLI, and later a place to

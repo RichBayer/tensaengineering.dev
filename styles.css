@@ -1256,4 +1256,172 @@ h1 {
   text-decoration-thickness: 2px;
 }
 
+/* Glossary reference layout */
 
+.glossary-index {
+  margin-bottom: 72px;
+}
+
+.glossary-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 72px;
+}
+
+.glossary-category {
+  padding: 24px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(57, 255, 136, 0.055), rgba(255, 255, 255, 0.026)),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(57, 255, 136, 0.16);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.glossary-category h3 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.glossary-category ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.glossary-category li {
+  margin: 0;
+  padding: 0;
+}
+
+.glossary-category a,
+.glossary-definition a {
+  color: #39ff88;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.glossary-category a:hover,
+.glossary-definition a:hover {
+  text-decoration: underline;
+}
+
+.glossary-definitions {
+  max-width: 980px;
+  margin: 0 auto 72px;
+}
+
+.glossary-definition {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(57, 255, 136, 0.16);
+}
+
+.glossary-definition:first-child {
+  border-top: 1px solid rgba(57, 255, 136, 0.16);
+}
+
+.glossary-definition h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(26px, 3vw, 38px);
+  letter-spacing: -0.035em;
+}
+
+.glossary-definition p {
+  max-width: 900px;
+  color: #c7d2df;
+  font-size: 18px;
+  line-height: 1.65;
+  margin: 0 0 10px;
+}
+
+.glossary-definition p:last-child {
+  margin-bottom: 0;
+}
+
+.glossary-definition strong {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .glossary-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Glossary inline tooltip links */
+
+.glossary-term {
+  color: #39ff88;
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(57, 255, 136, 0.72);
+  cursor: help;
+}
+
+.glossary-term:hover,
+.glossary-term:focus {
+  color: #9dffbf;
+  border-bottom-color: #9dffbf;
+}
+
+.glossary-tooltip {
+  position: fixed;
+  z-index: 1000;
+  width: min(360px, calc(100vw - 32px));
+  padding: 16px;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(57, 255, 136, 0.10), rgba(255, 255, 255, 0.045)),
+    rgba(2, 8, 18, 0.96);
+  border: 1px solid rgba(57, 255, 136, 0.28);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.46);
+  color: #c7d2df;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.glossary-tooltip[hidden] {
+  display: none;
+}
+
+.glossary-tooltip strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.glossary-tooltip a {
+  display: inline-flex;
+  margin-top: 10px;
+  color: #39ff88;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.glossary-tooltip a:hover,
+.glossary-tooltip a:focus {
+  text-decoration: underline;
+}
+
+.glossary-tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  color: #c7d2df;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.glossary-tooltip-close:hover,
+.glossary-tooltip-close:focus {
+  color: #39ff88;
+}

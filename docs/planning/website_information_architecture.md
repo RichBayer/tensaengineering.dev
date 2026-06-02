@@ -20,6 +20,7 @@ It should organize public-facing information around:
 - safe AI tool interaction
 - Linux diagnostics
 - real-system troubleshooting
+- glossary / term reference
 - AI-assisted systems engineering
 
 The goal is not to create a small temporary landing page.
@@ -102,7 +103,7 @@ The public ecosystem should be explained clearly and consistently.
 
     Argus ACLI = first product/distribution built on NeuroCore
 
-    Argus Lab = future real-Linux training and validation environment
+    Argus Lab = early real-Linux training and validation implementation with future platform direction
 
     GitHub repositories = engineering proof and source-of-truth documentation
 
@@ -275,7 +276,7 @@ They need a clear explanation of the long-term training vision.
 
 ## Content Pillars
 
-The TENSA website should be organized around three major content pillars.
+The TENSA website should be organized around four major content pillars.
 
 ---
 
@@ -316,7 +317,29 @@ It should translate the ideas into public-facing explanations.
 
 ---
 
-## Pillar 3: Story and Philosophy
+## Pillar 3: Glossary
+
+This pillar supports reader comprehension across the ecosystem.
+
+The Glossary should define recurring TENSA, NeuroCore, Argus ACLI, Argus Lab, AI Operations, Linux diagnostics, evidence, memory, continuity, and tool-boundary terms in compact public language.
+
+It should support the Knowledge Base without replacing it.
+
+Glossary entries should be:
+
+- short
+- plain-English
+- public-facing
+- linked from selected first-use terms where helpful
+- expanded into full Knowledge Base articles only when the topic needs deeper explanation
+
+The Glossary should not become a dumping ground for every technical term.
+
+It should help readers understand the site without bloating project pages or Knowledge Base articles.
+
+---
+
+## Pillar 4: Story and Philosophy
 
 This pillar explains why the work exists.
 
@@ -347,6 +370,7 @@ Recommended long-term navigation:
     Home
     Projects
     Knowledge Base
+    Glossary
     Build Notes
     Story
     Resources
@@ -420,6 +444,26 @@ Potential structure:
 Early implementation can keep this simple.
 
 The first version does not need every category or page.
+
+---
+
+### Glossary
+
+Purpose:
+
+- compact public definitions
+- support recurring ecosystem terminology
+- reduce repeated explanations inside articles
+- provide inline tooltip destinations for selected Knowledge Base terms
+- help readers understand project pages, Knowledge Base articles, and Story content
+
+Current structure:
+
+    /glossary/index.html
+
+The Glossary should remain compact.
+
+Longer explanations belong in Knowledge Base articles.
 
 ---
 
@@ -529,6 +573,7 @@ Recommended near-term public pages:
     projects/argus-acli.html
     projects/argus-lab.html
     knowledge-base/index.html
+    glossary/index.html
     story/index.html
     resources/index.html
     about.html
@@ -630,11 +675,11 @@ It inspects, structures, and explains.
 
 ## Argus Lab Page Strategy
 
-Argus Lab should be presented as a future training and validation environment.
+Argus Lab should be presented as an early real-Linux troubleshooting, training, and validation implementation with a larger future platform direction.
 
 Core message:
 
-    Argus Lab is a planned real-Linux troubleshooting and validation environment built around controlled failures, resettable scenarios, and progressive AI-guided learning.
+    Argus Lab is a real-Linux troubleshooting and validation environment built around controlled failures, resettable scenarios, and progressive AI-guided learning.
 
 Key concepts:
 
@@ -649,9 +694,9 @@ Key concepts:
 - regression testing for diagnostic intelligence
 - future skill tracking and proficiency levels
 
-Argus Lab must be clearly labeled as future-phase.
+Argus Lab must be clearly labeled as early implementation.
 
-It should not be marketed as currently available if implementation is not complete.
+It should not be marketed as publicly available, downloadable, or a finished training product until that is true.
 
 ---
 
@@ -808,7 +853,7 @@ The origin story should connect naturally to the architecture:
     → real system interaction required governance
     → NeuroCore emerged
     → Argus became the first practical proof
-    → Argus Lab became the future training and validation environment
+    → Argus Lab became the early training and validation environment with a future platform direction
 
 ---
 
@@ -986,6 +1031,7 @@ Recommended homepage sections:
     Ecosystem Overview
     Projects
     Knowledge Base Preview
+    Glossary / Term Reference Preview
     Story / Origin Preview
     GitHub Proof
     Build / Follow Along
@@ -1031,7 +1077,7 @@ Purpose:
 
     NeuroCore = platform
     Argus ACLI = product/distribution
-    Argus Lab = future training and validation environment
+    Argus Lab = early training and validation implementation with future platform direction
 
 ---
 
@@ -1184,6 +1230,10 @@ Examples:
     → Linux Diagnostics
 
 The site should help readers move naturally from idea to project to proof.
+
+Glossary should be linked sparingly from first-use or high-value terms.
+
+Glossary links should support comprehension, not turn articles into link soup.
 
 ---
 
@@ -1367,6 +1417,7 @@ These should be resolved before deeper implementation.
 8. How much personal founder story should appear on the homepage?
 9. What should the first conversion action be before products are available?
 10. How should video/social content be embedded or linked?
+11. How should Glossary entries be expanded without duplicating Knowledge Base articles?
 
 ---
 

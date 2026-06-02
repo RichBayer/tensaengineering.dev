@@ -38,90 +38,96 @@ DNS / domain provider:
     ├── CNAME
     ├── README.md
     ├── assets
-    │   └── images
-    │       ├── branding
-    │       │   ├── argus-acli
-    │       │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │       │   │   ├── argus-acli-neurocore-horizontal.png
-    │       │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │       │   │   ├── argus-acli-neurocore-stacked.png
-    │       │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │       │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │       │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │       │   │   └── argus-acli-system-intelligence-stacked.png
-    │       │   ├── argus-lab
-    │       │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │       │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │       │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │       │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │       │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │       │   │   ├── argus-lab-neurocore-horizontal.png
-    │       │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │       │   │   └── argus-lab-neurocore-stacked.png
-    │       │   ├── neurocore
-    │       │   │   ├── neurocore-horizontal-transparent.png
-    │       │   │   ├── neurocore-horizontal.png
-    │       │   │   ├── neurocore-stacked-transparent.png
-    │       │   │   └── neurocore-stacked.png
-    │       │   └── tensa
-    │       │       ├── tensa-horizontal-header-transparent.png
-    │       │       ├── tensa-horizontal-logo-transparent.png
-    │       │       ├── tensa-horizontal-logo.png
-    │       │       ├── tensa-stacked-logo-transparent.png
-    │       │       └── tensa-stacked-logo.png
-    │       └── social
-    │           └── tensa-og-image.png
+    │   ├── images
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
+    ├── glossary
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
 
 Current size:
 
-    25 directories, 59 files
+    27 directories, 63 files
 
 ---
 
@@ -168,7 +174,8 @@ The homepage introduces:
 - Argus Lab
 - knowledge base direction
 - origin story preview
-- GitHub proof
+- public explanation-layer framing
+- future public artifact direction
 
 Current branding status:
 
@@ -181,7 +188,7 @@ Current navigation:
 - Projects links to `/projects/`.
 - Knowledge Base links to `/knowledge-base/`.
 - Story links to `/story/`.
-- GitHub currently links to the homepage proof section.
+- Glossary links to `/glossary/`.
 
 The homepage should remain concise.
 
@@ -225,6 +232,7 @@ Current sitemap URLs:
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
+    https://tensaengineering.dev/glossary/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -264,6 +272,8 @@ Currently controls:
 - Knowledge Base article layout and typography
 - Knowledge Base article navigation and related-link cards
 - Knowledge Base index article link styling
+- glossary reference page styling
+- inline glossary tooltip styling
 
 All current public pages use this stylesheet.
 
@@ -276,6 +286,25 @@ Purpose:
     Public website assets.
 
 This directory is the long-term home for branding images, project logos, social preview images, and future public visual assets.
+
+
+---
+
+## assets/js/
+
+Purpose:
+
+    Public JavaScript assets for progressive website behavior.
+
+Current files:
+
+    assets/js/glossary-tooltips.js
+
+Current usage:
+
+- Provides inline glossary tooltip popups for Knowledge Base article terms.
+- Keeps glossary links functional as normal anchors if JavaScript is unavailable.
+- Does not replace the public glossary page.
 
 ---
 
@@ -404,6 +433,36 @@ Notes:
 
 - The `neurocore` variants communicate that Argus Lab belongs to the NeuroCore ecosystem.
 - The `interactive-analysis` variants communicate the training and analysis direction.
+
+
+---
+
+### docs/planning/glossary_strategy.md
+
+Purpose:
+
+    Internal strategy for the public glossary page and inline glossary tooltip behavior.
+
+Current role:
+
+- defines glossary purpose and scope
+- defines glossary term selection rules
+- defines inline tooltip usage rules
+- keeps glossary behavior educational instead of noisy
+
+---
+
+### docs/planning/search_answer_optimization_template.md
+
+Purpose:
+
+    Internal planning template for future search-and-answer optimization passes.
+
+Current role:
+
+- guides future page improvements for search visibility and answer clarity
+- supports clearer headings, answer blocks, and reader-intent matching
+- should be implemented in a separate focused session after this closeout
 
 ---
 
@@ -672,6 +731,36 @@ It should reflect:
 - phase status
 
 This is one of the core anti-drift files.
+
+
+---
+
+## glossary/
+
+Purpose:
+
+    Public glossary reference page for TENSA ecosystem terms.
+
+Current files:
+
+    glossary/index.html
+
+Current route:
+
+    /glossary/
+
+Current role:
+
+- defines important TENSA, NeuroCore, Argus ACLI, Argus Lab, AI Operations, and Linux diagnostics terms
+- supports readers who are new to the ecosystem
+- serves as the target for inline glossary tooltip links
+- provides plain-English definitions without bloating every public page
+
+Current navigation:
+
+- linked from primary navigation across current public pages
+- included in sitemap.xml
+- linked from inline Knowledge Base glossary terms
 
 ---
 

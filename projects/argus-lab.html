@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Argus Lab is a planned real-Linux troubleshooting, training, and validation environment built around controlled faults, resettable scenarios, and mentor-style AI-guided learning."
+    content="Argus Lab is an early-stage real-Linux troubleshooting training and validation environment where controlled faults create real symptoms for learners and Argus diagnostics."
   />
   <link rel="canonical" href="https://tensaengineering.dev/projects/argus-lab.html" />
   <meta property="og:site_name" content="TENSA Engineering" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Argus Lab | Real Linux Troubleshooting Training" />
-  <meta property="og:description" content="Argus Lab is a planned real-Linux troubleshooting, training, and validation environment built around controlled faults, resettable scenarios, and mentor-style AI-guided learning." />
+  <meta property="og:description" content="Argus Lab is an early-stage real-Linux troubleshooting training and validation environment where controlled faults create real symptoms for learners and Argus diagnostics." />
   <meta property="og:url" content="https://tensaengineering.dev/projects/argus-lab.html" />
   <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
   <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
@@ -19,7 +19,7 @@
   <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
   <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
   <meta name="twitter:title" content="Argus Lab | Real Linux Troubleshooting Training" />
-  <meta name="twitter:description" content="Argus Lab is a planned real-Linux troubleshooting, training, and validation environment built around controlled faults, resettable scenarios, and mentor-style AI-guided learning." />
+  <meta name="twitter:description" content="Argus Lab is an early-stage real-Linux troubleshooting training and validation environment where controlled faults create real symptoms for learners and Argus diagnostics." />
   <title>Argus Lab | Real Linux Troubleshooting Training</title>
   <script type="application/ld+json">
 {
@@ -28,7 +28,7 @@
   "@id": "https://tensaengineering.dev/projects/argus-lab.html#webpage",
   "url": "https://tensaengineering.dev/projects/argus-lab.html",
   "name": "Argus Lab | Real Linux Troubleshooting Training",
-  "description": "Argus Lab is a planned real-Linux troubleshooting, training, and validation environment built around controlled faults, resettable scenarios, and mentor-style AI-guided learning.",
+  "description": "Argus Lab is an early-stage real-Linux troubleshooting training and validation environment where controlled faults create real symptoms for learners and Argus diagnostics.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://tensaengineering.dev/#website",
@@ -67,6 +67,7 @@
       <a href="../index.html">Home</a>
       <a href="./index.html">Projects</a>
       <a href="../knowledge-base/">Knowledge Base</a>
+      <a href="../glossary/">Glossary</a>
       <a href="../story/">Story</a>
     </nav>
   </header>
@@ -76,12 +77,13 @@
       <div class="hero-copy">
         <p class="eyebrow">Argus Lab</p>
 
-        <h1>Real Linux troubleshooting, practiced on real failure.</h1>
+        <h1>Real Linux troubleshooting training, built on real failure.</h1>
 
         <p class="subtitle">
-          Argus Lab is a planned environment for hands-on Linux troubleshooting, training, and
-          validation. It is built around controlled faults, resettable lab sessions, mentor-style
-          AI guidance, and measurable growth in real diagnostic skill.
+          Argus Lab is the training and validation side of the TENSA ecosystem. It puts
+          learners into real Linux environments, injects controlled faults that create
+          real symptoms, and helps future administrators practice the investigation,
+          reasoning, repair, and verification loop that real troubleshooting requires.
         </p>
 
         <div class="hero-actions">
@@ -100,20 +102,20 @@
     </section>
 
     <section class="article-card">
-      <p class="eyebrow">Planned training and validation environment</p>
-      <h2>Argus Lab teaches troubleshooting through experience, not memorization.</h2>
+      <p class="eyebrow">The experience</p>
+      <h2>You are not handed an answer. You are dropped into a real situation.</h2>
 
       <p>
-        Argus Lab started as a personal practice environment, a way to build real Linux skill by
-        diagnosing and fixing actual system failures instead of only reading theory or working
-        through tidy guided labs.
+        The long-term Argus Lab experience is simple: a learner enters a real Linux environment,
+        receives a support-ticket-style problem, and has to figure out what is wrong from the
+        symptoms the system actually produces.
       </p>
 
       <p>
-        That original purpose still drives the project. Argus Lab is planned as a hands-on
-        environment where learners work through realistic Linux problems: investigating symptoms,
-        finding the root cause, repairing the issue, verifying recovery, and repeating the process
-        safely.
+        Maybe a web service is down. Maybe permissions are wrong. Maybe DNS is broken. Maybe disk
+        pressure is causing strange behavior. The learner does not start with a multiple-choice
+        question. They start the way real administrators often do: with incomplete information,
+        noisy signals, and a system that needs to be understood before it can be repaired.
       </p>
 
       <p class="callout-line">
@@ -121,56 +123,147 @@
       </p>
 
       <p>
-        As NeuroCore and Argus ACLI matured, Argus Lab grew into something larger. It is now planned
-        as both a training environment for Linux users and a validation environment for testing
-        diagnostic intelligence against known Linux faults.
+        Argus Lab is designed to make that kind of practice repeatable and safe. The system can
+        begin from a known-good state, introduce a controlled fault, let the learner investigate,
+        validate the repair, and then reset the environment for the next scenario.
       </p>
     </section>
 
     <section class="principles">
       <div>
-        <h3>Real systems</h3>
+        <h3>Real Linux</h3>
         <p>
-          Argus Lab is planned around real Linux environments, with services, users, logs,
-          permissions, networking, resource pressure, and the kind of behavior actual systems
-          produce.
+          Learners work against real services, logs, users, permissions, networking, and system
+          behavior instead of fake terminal output or toy examples.
         </p>
       </div>
 
       <div>
-        <h3>Controlled failures</h3>
+        <h3>Real symptoms</h3>
         <p>
-          Scenarios use repeatable injected faults that create realistic symptoms while keeping the
-          environment safe to practice in, validate against, and reset cleanly.
+          Controlled faults create the kind of evidence real systems create: failed services,
+          broken access, noisy logs, bad assumptions, and misleading first impressions.
         </p>
       </div>
 
       <div>
-        <h3>Guided growth</h3>
+        <h3>Real growth</h3>
         <p>
-          The system should challenge learners first and offer progressive coaching only when they
-          ask for hints, explanation, or a guided walkthrough.
+          The goal is not memorizing answers. The goal is improving how learners investigate,
+          reason, verify, and recover when the answer is not obvious.
+        </p>
+      </div>
+    </section>
+
+    <section class="article-card">
+      <p class="eyebrow">Training loop</p>
+      <h2>The lab turns troubleshooting into repeatable practice.</h2>
+
+      <p>
+        Each scenario is intended to follow a repeatable loop. The system starts clean. A known
+        fault is introduced. The learner investigates the symptoms, gathers evidence, forms a
+        hypothesis, repairs the issue, verifies recovery, and then resets the lab.
+      </p>
+
+      <p class="code-line">known-good → injected fault → symptoms → investigation → repair → verification → reset</p>
+
+      <p>
+        That loop matters because troubleshooting skill develops through exposure and reflection.
+        A learner should be able to work through failure, learn from the evidence, reset cleanly,
+        and then face a different failure without rebuilding the entire environment by hand.
+      </p>
+    </section>
+
+    <section class="split-section">
+      <div class="section-heading">
+        <p class="eyebrow">Mentor-style guidance</p>
+        <h2>Argus should behave like a senior admin, not an answer machine.</h2>
+      </div>
+
+      <div class="article-card">
+        <p>
+          The AI role in Argus Lab is not to instantly solve the scenario and rob the learner of
+          the useful struggle. The better experience is progressive guidance: first asking what
+          the learner sees, then suggesting what evidence to inspect, then explaining signals,
+          and only later walking through root cause and recovery when needed.
+        </p>
+
+        <ul>
+          <li><strong>Independent mode:</strong> the learner works the problem with minimal help.</li>
+          <li><strong>Assisted mode:</strong> Argus offers hints, signal explanations, and next-inspection suggestions.</li>
+          <li><strong>Guided resolution:</strong> when the learner is stuck, Argus can explain the evidence, root cause, fix, and verification path.</li>
+        </ul>
+
+        <p>
+          The point is not to make troubleshooting easy. The point is to make real difficulty
+          safe to practice, with a mentor nearby when the learner needs help.
         </p>
       </div>
     </section>
 
     <section class="split-section">
       <div class="section-heading">
-        <p class="eyebrow">Why it matters</p>
-        <h2>Real troubleshooting does not feel like a multiple-choice question.</h2>
+        <p class="eyebrow">How it fits</p>
+        <h2>NeuroCore provides control. Argus ACLI provides diagnostics. Argus Lab provides the arena.</h2>
       </div>
 
       <div class="article-card">
         <p>
-          Traditional technical training builds familiarity, but real operational work is messier.
-          Systems fail in unexpected ways. Logs are noisy. Symptoms mislead. Information is
-          incomplete. There is rarely a clean step-by-step guide waiting beside the terminal.
+          Argus Lab sits downstream from the rest of the TENSA ecosystem. NeuroCore provides the
+          governed runtime foundation. Argus ACLI collects real Linux signals and turns them into
+          structured diagnostic findings. Argus Lab creates the controlled real-world situations
+          where that diagnostic behavior can be used, tested, and taught.
+        </p>
+
+        <ul>
+          <li><strong>NeuroCore</strong> controls runtime behavior, tool access, system interaction, memory direction, and governed execution paths.</li>
+          <li><strong>Argus ACLI</strong> collects and structures read-only Linux diagnostic evidence.</li>
+          <li><strong>Argus Lab</strong> injects known faults into real systems so learners and diagnostics can be tested against real symptoms.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="article-card">
+      <p class="eyebrow">Validation role</p>
+      <h2>The same lab that trains people can test whether Argus actually understands the system.</h2>
+
+      <p>
+        Because Argus Lab controls the starting state and the injected fault, it can become a
+        proving ground for Argus diagnostic behavior. If the lab knows nginx was intentionally
+        stopped, then Argus should be able to detect the failed service state, preserve the right
+        evidence, assign useful severity, and recommend a sane next step.
+      </p>
+
+      <p>
+        That makes the lab valuable in two directions at once. Learners get realistic practice.
+        The diagnostic system gets tested against known truth. When Argus sees the right signals
+        and explains them accurately, confidence goes up. When it misses something, the lab exposes
+        the gap so the tool coverage can improve.
+      </p>
+
+      <p>
+        This is the bridge between training and engineering validation: the lab is not just a
+        classroom. It is also a controlled evidence environment for making Argus better.
+      </p>
+    </section>
+
+    <section class="split-section">
+      <div class="section-heading">
+        <p class="eyebrow">Why it matters</p>
+        <h2>Real troubleshooting is messy, noisy, and evidence-driven.</h2>
+      </div>
+
+      <div class="article-card">
+        <p>
+          Traditional technical training builds familiarity, but real operational work is rarely
+          clean. Systems fail in unexpected ways. Logs are noisy. Symptoms mislead. Information is
+          incomplete. There is usually no neat checklist waiting beside the terminal.
         </p>
 
         <p>
-          Argus Lab is designed to bridge that gap by dropping users into support-ticket-style
-          scenarios where they have to investigate, reason, test, correct course, and verify the
-          result on their own.
+          Argus Lab is designed to bridge that gap by creating support-ticket-style scenarios
+          where learners have to investigate, reason, test, correct course, and verify results
+          on systems that behave like real infrastructure.
         </p>
 
         <ul>
@@ -184,123 +277,57 @@
     </section>
 
     <section class="article-card">
-      <p class="eyebrow">Training loop</p>
-      <h2>Failure should be safe to practice.</h2>
+      <p class="eyebrow">Current implementation</p>
+      <h2>The first known-good web01 baseline is in place.</h2>
 
       <p>
-        Each Argus Lab scenario is intended to start from a known-good state, inject a controlled
-        fault, let the learner investigate and repair the system, validate whether the issue was
-        resolved, record what happened, and reset the environment for the next round.
-      </p>
-
-      <p class="code-line">known-good → injected fault → investigation → repair → validation → reset</p>
-
-      <p>
-        This repeatable loop matters because troubleshooting skill develops through exposure,
-        repetition, and reflection. Learners should be able to break things, investigate them, learn
-        from them, and start fresh without manually rebuilding the entire environment.
-      </p>
-    </section>
-
-    <section class="split-section">
-      <div class="section-heading">
-        <p class="eyebrow">Mentor-style AI guidance</p>
-        <h2>The model should coach the learner, not hand over the answer.</h2>
-      </div>
-
-      <div class="article-card">
-        <p>
-          Argus Lab is intended to integrate with NeuroCore and Argus ACLI as the platform matures.
-          Each layer has a distinct role.
-        </p>
-
-        <ul>
-          <li><strong>NeuroCore</strong> controls runtime behavior, tool access, system interaction, memory direction, and governed execution paths.</li>
-          <li><strong>Argus ACLI</strong> collects, structures, and interprets real Linux system data through read-only diagnostics.</li>
-          <li><strong>The AI model</strong> uses that grounded Argus data to guide the learner progressively.</li>
-        </ul>
-
-        <p>
-          In a production diagnostic workflow, Argus might flag a failed service and recommend
-          checking its state and recent logs. In Argus Lab, the model should behave more like a
-          senior admin mentoring a junior admin: asking what the learner notices, suggesting what
-          evidence to inspect next, and helping them reason their way to the root cause.
-        </p>
-      </div>
-    </section>
-
-    <section class="principles">
-      <div>
-        <h3>Independent mode</h3>
-        <p>
-          The learner gets the scenario and works without guidance unless they ask for it. This mode
-          is for testing skill under realistic pressure.
-        </p>
-      </div>
-
-      <div>
-        <h3>Assisted mode</h3>
-        <p>
-          The learner can request hints, signal explanations, Linux concept clarification, or
-          suggestions about what to inspect next.
-        </p>
-      </div>
-
-      <div>
-        <h3>Guided resolution</h3>
-        <p>
-          When the learner is stuck, the system can walk through the evidence, root cause, fix,
-          verification steps, and the lesson behind the scenario.
-        </p>
-      </div>
-    </section>
-
-    <section class="article-card">
-      <p class="eyebrow">Validation role</p>
-      <h2>Argus Lab is also a proving ground for NeuroCore and Argus ACLI.</h2>
-
-      <p>
-        Controlled failure scenarios make it possible to test whether the diagnostic system behaves
-        correctly against known Linux problems. That gives Argus Lab a second purpose: not only
-        teaching people, but validating the intelligence being built around NeuroCore and Argus
-        ACLI.
+        Argus Lab is now in early implementation. The first validation target exists: a web01
+        Linux server with nginx installed, enabled, active, and listening on port 80. NeuroCore
+        runtime components and Argus ACLI diagnostics have been validated against that healthy
+        service state.
       </p>
 
       <p>
-        The lab can help confirm that NeuroCore interacts with real systems safely, that data
-        collection stays controlled and traceable, that Argus ACLI identifies the right symptoms,
-        that severity is classified accurately, that recommendations are useful, and that the raw
-        evidence supports each finding.
+        That baseline proves the first version of the lab loop can begin: build a real Linux
+        target, confirm the service state, run read-only diagnostics through Argus ACLI, preserve
+        raw evidence, capture a clean snapshot, and then introduce a controlled failure for testing.
       </p>
 
+      <ul>
+        <li><strong>web01 baseline:</strong> Linux server target created for the first Argus Lab validation slice.</li>
+        <li><strong>nginx service:</strong> installed, enabled, active, and available as the first service-diagnostics target.</li>
+        <li><strong>Argus ACLI service check:</strong> validated against nginx while the service is healthy.</li>
+        <li><strong>Failed-service check:</strong> validated in the clean state with no failed units reported.</li>
+        <li><strong>Known-good snapshot:</strong> captured so the lab can return to a clean baseline before fault testing.</li>
+      </ul>
+
       <p>
-        Over time, the same lab can support regression testing for diagnostic behavior. When a known
-        fault is injected, Argus should continue recognizing the relevant signals consistently as
-        the platform evolves.
+        The next validation step is a controlled nginx failed-state scenario. That scenario will
+        test whether Argus ACLI can detect the service failure, preserve the right evidence, and
+        explain the finding without guessing.
       </p>
     </section>
 
     <section class="split-section">
       <div class="section-heading">
-        <p class="eyebrow">Planned environment shape</p>
-        <h2>A lab should feel like a real environment, not a toy simulator.</h2>
+        <p class="eyebrow">Environment direction</p>
+        <h2>A lab should feel like infrastructure, not a toy simulator.</h2>
       </div>
 
       <div class="article-card">
         <p>
-          The planned direction is a small-business-style Linux environment with defined system
-          roles, interacting services, and realistic operational problems. The exact design will
-          evolve as the project matures, but the goal is for the systems to behave like real
-          infrastructure.
+          The long-term direction is a small-business-style Linux environment with defined system
+          roles, interacting services, and realistic operational problems. The design can grow over
+          time, but the goal is for the systems to behave like real infrastructure.
         </p>
 
         <ul>
-          <li><strong>client01:</strong> an admin workstation for investigation and operations.</li>
-          <li><strong>web01:</strong> a web or application server for service and access scenarios.</li>
-          <li><strong>files01:</strong> a file and backup server for storage, permissions, and recovery scenarios.</li>
-          <li><strong>mon01:</strong> a monitoring system for signal, alerting, and observability practice.</li>
-          <li><strong>infra01:</strong> DNS and infrastructure services for dependency-based troubleshooting.</li>
-          <li><strong>legacy01:</strong> an optional degraded system for older, messier troubleshooting scenarios.</li>
+          <li><strong>web01:</strong> the first active server target, currently used for nginx service diagnostics validation.</li>
+          <li><strong>client01:</strong> a planned admin workstation for investigation and operations.</li>
+          <li><strong>files01:</strong> a planned file and backup server for storage, permissions, and recovery scenarios.</li>
+          <li><strong>mon01:</strong> a planned monitoring system for signal, alerting, and observability practice.</li>
+          <li><strong>infra01:</strong> a planned DNS and infrastructure-services node for dependency-based troubleshooting.</li>
+          <li><strong>legacy01:</strong> an optional future degraded system for older, messier troubleshooting scenarios.</li>
         </ul>
 
         <p>
@@ -311,47 +338,19 @@
     </section>
 
     <section class="article-card">
-      <p class="eyebrow">Future-phase status</p>
-      <h2>Argus Lab is planned work, not a finished training product.</h2>
+      <p class="eyebrow">Current status boundary</p>
+      <h2>Argus Lab is active early implementation, not a finished training product.</h2>
 
       <p>
-        Argus Lab is currently in planning and public documentation mode. Implementation has not
-        started. The current focus is aligning the public vision, repository structure, training
-        model, and validation direction with the larger NeuroCore and Argus ACLI ecosystem.
+        Argus Lab has moved beyond public planning. The first web01 validation target is built,
+        a clean baseline exists, and Argus ACLI has been tested against the healthy nginx service state.
       </p>
 
       <p>
-        Build-out is planned to begin once the core NeuroCore and Argus ACLI V1 path is stable
-        enough to support meaningful validation. That order keeps the page honest: Argus Lab is a
-        serious part of the long-term ecosystem, but it should not be presented as something
-        available today.
+        It is not currently a public training platform, downloadable lab distribution, or completed
+        product. The current work is building and validating the foundation that can later support
+        broader training scenarios, tracked sessions, progressive guidance, and multi-node practice.
       </p>
-    </section>
-
-    <section class="principles">
-      <div>
-        <h3>For learners</h3>
-        <p>
-          Argus Lab is designed for aspiring system administrators, junior admins, self-taught
-          learners, homelab users, and future Linux users who need practice that goes beyond theory.
-        </p>
-      </div>
-
-      <div>
-        <h3>For diagnostics</h3>
-        <p>
-          Known faults can validate whether Argus finds the right signals, classifies severity
-          correctly, gives useful recommendations, and preserves the evidence behind each call.
-        </p>
-      </div>
-
-      <div>
-        <h3>For growth</h3>
-        <p>
-          Long term, Argus Lab may track time to completion, hints requested, command usage,
-          diagnosis quality, repair quality, verification steps, and improvement over time.
-        </p>
-      </div>
     </section>
 
     <section class="article-card">
@@ -364,26 +363,25 @@
       </p>
 
       <p>
-        The learner should still have to think. The system should make real troubleshooting safer to
-        practice, not replace the learning process with instant answers.
+        The learner should still have to think. The system should make real troubleshooting safer
+        to practice, not replace the learning process with instant answers.
       </p>
     </section>
 
     <section class="footer-card">
       <p class="eyebrow">TENSA ecosystem</p>
-      <h2>Argus Lab will complete the training and validation side of the system.</h2>
+      <h2>Argus Lab connects diagnostics, validation, and training.</h2>
 
       <p>
         NeuroCore provides the governed runtime foundation. Argus ACLI turns real Linux system data
-        into structured diagnostic findings. Argus Lab will provide the realistic failure environment
-        where people can build troubleshooting skill and where diagnostic behavior can be tested
-        against known faults.
+        into structured diagnostic findings. Argus Lab provides the real failure environment where
+        diagnostic behavior can be tested and, over time, where people can build troubleshooting skill.
       </p>
 
       <div class="hero-actions">
         <a href="./argus-acli.html" class="button primary">Explore Argus ACLI</a>
         <a href="./neurocore.html" class="button secondary">Explore NeuroCore</a>
-        <a href="./index.html" class="button secondary">Back to projects</a>
+        <a href="../glossary/" class="button secondary">Open the glossary</a>
       </div>
     </section>
   </main>

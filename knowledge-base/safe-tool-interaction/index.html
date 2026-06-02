@@ -49,6 +49,7 @@
 }
   </script>
   <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
 </head>
 
 <body>
@@ -67,6 +68,7 @@
       <a href="../../index.html">Home</a>
       <a href="../../projects/">Projects</a>
       <a href="../">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
       <a href="../../story/">Story</a>
     </nav>
   </header>
@@ -91,7 +93,7 @@
       <article class="kb-article-body">
         <section class="kb-section">
           <p>
-            Safe tool interaction is how AI moves from talking about systems to working
+            <a class="glossary-term" href="../../glossary/#safe-tool-interaction" data-term="Safe tool interaction" data-definition="Letting AI work near tools without giving the model unchecked control over those tools.">Safe tool interaction</a> is how AI moves from talking about systems to working
             near systems without becoming an uncontrolled operator. That distinction
             matters.
           </p>
@@ -131,7 +133,7 @@
           </ol>
 
           <p>
-            This page builds on Local-First AI by explaining how AI should interact with
+            This page builds on <a class="glossary-term" href="../../glossary/#local-first-ai" data-term="Local-first AI" data-definition="AI designed to work close to the user, the system, and the evidence by default.">Local-First AI</a> by explaining how AI should interact with
             tools inside a trusted environment.
           </p>
         </section>
@@ -153,7 +155,7 @@
 
           <p>
             So the safety question is not only whether the model is smart. The safety
-            question is whether the tool boundary is designed well.
+            question is whether the <a class="glossary-term" href="../../glossary/#tool-boundary" data-term="Tool boundary" data-definition="The separation between AI reasoning and the tools that interact with a real system.">tool boundary</a> is designed well.
           </p>
 
           <p>
@@ -170,7 +172,7 @@
           <p>
             The model should not be the operating system. It should not directly hold
             shell access, own credentials, call arbitrary APIs, or decide on its own what
-            it is allowed to execute. Controlled AI Systems makes the full case for that
+            it is allowed to execute. <a class="glossary-term" href="../../glossary/#controlled-ai-system" data-term="Controlled AI system" data-definition="An AI-assisted system where intelligence and authority are deliberately separated.">Controlled AI Systems</a> makes the full case for that
             separation; here the point is what it means once tools enter the picture.
           </p>
 
@@ -310,7 +312,7 @@
           </p>
 
           <p>
-            Raw evidence matters because trust should be inspectable. The user should not
+            <a class="glossary-term" href="../../glossary/#raw-evidence" data-term="Raw evidence" data-definition="The original system signal behind a diagnostic finding.">Raw evidence</a> matters because trust should be inspectable. The user should not
             have to accept a polished summary just because it sounds confident.
           </p>
 
@@ -331,7 +333,7 @@
           <h2>Read-only first</h2>
 
           <p>
-            For systems work, read-only diagnostics should come before automated
+            For systems work, <a class="glossary-term" href="../../glossary/#read-only-diagnostics" data-term="Read-only diagnostics" data-definition="Inspecting system state without changing the system.">read-only diagnostics</a> should come before automated
             remediation. That is not because fixing things is unimportant. It is because a
             system should first prove that it can inspect, structure, explain, and preserve
             evidence safely.
@@ -367,7 +369,7 @@
           <h2>How NeuroCore applies the pattern</h2>
 
           <p>
-            NeuroCore is the platform system being built by TENSA Engineering. At a high
+            <a class="glossary-term" href="../../glossary/#neurocore" data-term="NeuroCore" data-definition="The governed local-first AI platform behind TENSA Engineering systems.">NeuroCore</a> is the platform system being built by TENSA Engineering. At a high
             level, NeuroCore uses a tool-based architecture so system interaction happens
             through governed tools, not through the model directly touching the operating
             system.
@@ -394,8 +396,8 @@
           <h2>How Argus ACLI demonstrates the pattern</h2>
 
           <p>
-            Argus ACLI is the first product built from NeuroCore. It demonstrates safe
-            tool interaction through read-only Linux diagnostics.
+            <a class="glossary-term" href="../../glossary/#argus-acli" data-term="Argus ACLI" data-definition="The read-only Linux diagnostics interface built on NeuroCore.">Argus ACLI</a> is the first product built from NeuroCore. It demonstrates safe
+            tool interaction through read-only <a class="glossary-term" href="../../glossary/#linux-diagnostics" data-term="Linux diagnostics" data-definition="Inspecting Linux system state to understand what is happening and why.">Linux diagnostics</a>.
           </p>
 
           <p>
