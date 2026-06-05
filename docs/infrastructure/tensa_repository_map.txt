@@ -8,7 +8,7 @@ This document maps the current TENSA Engineering website repository.
 
 It is used as an AI-operations reference so future website build sessions can quickly understand the live repository structure, current public pages, planning documents, branding assets, and website continuity files.
 
-This repository is growing from a small static website into the public ecosystem portal, knowledge hub, and public explanation layer for TENSA Engineering, NeuroCore, Argus ACLI, and Argus Lab.
+This repository is growing from a small static website into the public ecosystem portal and knowledge hub for TENSA Engineering and its systems: NeuroCore, Argus ACLI, and Argus Lab.
 
 ---
 
@@ -174,7 +174,7 @@ The homepage introduces:
 - Argus Lab
 - knowledge base direction
 - origin story preview
-- public explanation-layer framing
+- umbrella engineering company / ecosystem-owner framing
 - future public artifact direction
 
 Current branding status:
@@ -1108,7 +1108,7 @@ Purpose:
 
 Current status:
 
-    Live full public landing page.
+    Live full public project page.
 
 Current role:
 

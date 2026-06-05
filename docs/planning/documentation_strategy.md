@@ -6,7 +6,7 @@
 
 This document defines the long-term documentation strategy for the TENSA Engineering website repository.
 
-TENSA Engineering is growing from a small static website into a modular public ecosystem hub, knowledge platform, product funnel, and public explanation layer for NeuroCore, Argus ACLI, and Argus Lab.
+TENSA Engineering is growing from a small static website into a modular public ecosystem hub, knowledge platform, product funnel, and public home for NeuroCore, Argus ACLI, and Argus Lab.
 
 As the site grows, its internal documentation must stay organized enough to prevent:
 

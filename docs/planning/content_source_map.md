@@ -74,7 +74,7 @@ It should introduce:
 - Argus Lab
 - Knowledge Base direction
 - origin story preview
-- public explanation-layer framing
+- umbrella engineering company / ecosystem-owner framing
 - future public artifact direction
 
 The homepage should stay concise.

@@ -61,9 +61,9 @@ Preserve the structure unless explicitly instructed otherwise.
 
 ## TENSA Engineering Context
 
-TENSA Engineering is the public hub, brand home, knowledge platform, and ecosystem portal for NeuroCore, Argus ACLI, and Argus Lab.
+TENSA Engineering is the umbrella engineering company, public brand, and ecosystem owner behind NeuroCore, Argus ACLI, Argus Lab, and the public Knowledge Base.
 
-The public site explains the ecosystem.
+The website is the public home for the ecosystem. The Knowledge Base is the public teaching and explanation layer. Do not collapse TENSA Engineering into merely a public explanation layer for NeuroCore.
 
 The repositories prove the engineering.
 

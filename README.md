@@ -8,7 +8,7 @@ Domain:
 
 TENSA Engineering is the public umbrella, knowledge hub, and information architecture layer for the NeuroCore, Argus ACLI, and Argus Lab ecosystem.
 
-This website starts as a simple static site, but it is not intended to remain a small landing page.
+This website starts as a simple static site, but it is being built into a modular ecosystem website.
 
 The long-term goal is for tensaengineering.dev to become the central public destination for controlled AI systems, persistent local AI, real-system AI operations, NeuroCore, Argus ACLI, Argus Lab, and the engineering philosophy behind them.
 
@@ -90,7 +90,7 @@ Control is what the original vision required once persistent AI began interactin
 
 ## Website Role
 
-This site should become the public explanation layer for everything TENSA Engineering is building.
+This site should become the public home, knowledge hub, and ecosystem portal for everything TENSA Engineering is building.
 
 The site should:
 

@@ -4,7 +4,7 @@
 
 This document defines the information architecture for the TENSA Engineering website.
 
-TENSA Engineering is the long-term public website, knowledge hub, brand home, and product funnel for the NeuroCore ecosystem.
+TENSA Engineering is the umbrella engineering company and public brand behind a controlled-AI ecosystem. The website is the long-term public home, knowledge hub, and future product funnel for that ecosystem.
 
 The site should be designed to grow over time without needing major restructuring.
 
@@ -23,7 +23,7 @@ It should organize public-facing information around:
 - glossary / term reference
 - AI-assisted systems engineering
 
-The goal is not to create a small temporary landing page.
+The goal is not to create a small temporary single-page site.
 
 The goal is to build a serious public knowledge hub that teaches, builds trust, explains the ecosystem, proves the philosophy, and eventually supports product adoption.
 
@@ -97,7 +97,7 @@ TENSA Engineering should become the unified public home for NeuroCore, Argus ACL
 
 The public ecosystem should be explained clearly and consistently.
 
-    TENSA Engineering = public hub / brand / knowledge base / product funnel
+    TENSA Engineering = umbrella engineering company / public brand / ecosystem owner / website home
 
     NeuroCore = local-first AI platform
 
@@ -313,7 +313,7 @@ The knowledge base should be SEO-friendly, educational, and expandable.
 
 It should not duplicate the full technical repository documentation.
 
-It should translate the ideas into public-facing explanations.
+It should translate the ideas into clear public website explanations.
 
 ---
 
@@ -959,7 +959,7 @@ Responsible for:
 
 - be expected to sell the product
 - be expected to teach every beginner concept
-- replace public-facing explanations
+- replace public website explanations
 - carry the full burden of SEO or branding
 
 ---
@@ -1437,7 +1437,7 @@ After this document is committed, the next implementation step should be a focus
 
 ## Final Principle
 
-TENSA Engineering should become the public explanation layer for the ecosystem.
+TENSA Engineering should become the public home, knowledge hub, and ecosystem portal for the systems it builds.
 
 The repositories prove the work.
 

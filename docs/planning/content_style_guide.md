@@ -6,7 +6,13 @@
 
 This document defines the public writing style for the TENSA Engineering website.
 
-TENSA Engineering is the public explanation layer for the NeuroCore ecosystem.
+TENSA Engineering is the umbrella engineering company, public brand, and ecosystem owner behind NeuroCore, Argus ACLI, Argus Lab, and the public Knowledge Base.
+
+The TENSA website is the public home for that ecosystem.
+
+The Knowledge Base is the public teaching and explanation layer.
+
+NeuroCore is the platform foundation inside the TENSA ecosystem; it should not be framed as the thing TENSA exists only to explain.
 
 The site should explain:
 

@@ -55,6 +55,10 @@ Do not use Python to blindly patch unknown sections from partial context.
 - Do NOT write factual project pages without checking source requirements.
 - Do NOT let the site grow faster than the documentation system that tracks it.
 - Public website copy must not sound like internal planning notes.
+- Do NOT describe TENSA Engineering as “the public explanation layer,” “the teaching layer,” or merely “the public-facing explanation” of NeuroCore.
+- Treat TENSA Engineering as the umbrella engineering company, public brand, and ecosystem owner.
+- Treat the Knowledge Base as the public teaching/explanation layer.
+- Treat NeuroCore as the platform foundation inside the TENSA ecosystem, not the thing TENSA exists only to explain.
 - Keep the homepage as a front door, not a giant explanation page.
 
 If something is unclear:
@@ -311,7 +315,7 @@ Current public page status:
     /projects/                  Live ecosystem project index
     /projects/neurocore.html    Live expanded NeuroCore platform page
     /projects/argus-acli.html   Live full Argus ACLI public product page
-    /projects/argus-lab.html    Live full Argus Lab public landing page
+    /projects/argus-lab.html    Live full Argus Lab public project page
     /knowledge-base/                                      Live Knowledge Base article-path hub
     /glossary/                                            Live public Glossary page
     /knowledge-base/ai-operations/                        Live Knowledge Base article
@@ -427,7 +431,7 @@ Future SEO work:
 
 # CURRENT STRATEGIC DIRECTION
 
-TENSA Engineering is no longer just a static landing page.
+TENSA Engineering is no longer just a small static site.
 
 It is becoming:
 
@@ -441,7 +445,7 @@ The website should increasingly function as:
 - ecosystem portal
 - future product funnel
 - SEO destination
-- public explanation layer for NeuroCore, Argus ACLI, and Argus Lab
+- public home, knowledge hub, and ecosystem portal for NeuroCore, Argus ACLI, and Argus Lab
 
 The site should not become one huge homepage.
 
@@ -689,7 +693,7 @@ Completed so far:
 - Projects overview page created
 - NeuroCore page created and expanded
 - Argus ACLI full public page created
-- Argus Lab full public landing page created
+- Argus Lab full public project page created
 - Knowledge Base index created
 - Knowledge Base index upgraded into a live article-path hub
 - first eight Knowledge Base articles created
@@ -1045,7 +1049,7 @@ The core project pages, Story page, Knowledge Base index, and first eight Knowle
 
 # FINAL PRINCIPLE
 
-TENSA Engineering should become the public explanation layer for the ecosystem.
+TENSA Engineering should become the public home, knowledge hub, and ecosystem portal for the systems it builds.
 
 Private implementation repositories and internal source docs preserve the engineering source of truth during active development.
 

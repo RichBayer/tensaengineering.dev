@@ -6,7 +6,7 @@
 
 TENSA Engineering website foundation is live.
 
-The site is transitioning from a small static landing page into a modular ecosystem knowledge platform.
+The site is transitioning from a small static site into a modular ecosystem knowledge platform.
 
 Current phase:
 
@@ -16,7 +16,7 @@ Current phase:
     Projects section created
     NeuroCore project page expanded into a stronger public platform page
     Argus ACLI project page upgraded into a full public product page
-    Argus Lab full public landing page created
+    Argus Lab full public project page created
     Story page created
     Glossary page created
     inline glossary tooltip system added for Knowledge Base articles
@@ -39,7 +39,7 @@ Current phase:
     public repository-proof framing replaced with private-development / future-artifacts framing
     glossary strategy and search-answer optimization planning docs added
 
-The site now functions more like an ecosystem portal and teaching platform than a single landing page.
+The site now functions as a modular ecosystem portal and teaching platform, not a single long page.
 
 The homepage remains the front door.
 
@@ -337,7 +337,7 @@ Important notes:
 
 Current public artifact strategy:
 
-    TENSA Engineering is the public explanation layer.
+    TENSA Engineering is the umbrella engineering company and public home for the ecosystem.
     Active implementation repositories are private during current development and product maturation.
     Public technical artifacts may be added later when they are useful for users, builders, releases, examples, documentation, or selected open components.
     A Resources page remains deferred until there is enough public material to organize.
@@ -443,7 +443,7 @@ The current homepage includes:
 - Knowledge Base direction preview
 - origin story preview
 - link to the full Story page
-- public explanation-layer closing section
+- ecosystem public-home closing section
 - private-development / future-public-artifacts framing
 - navigation to Projects, Knowledge Base, Glossary, and Story
 
@@ -600,7 +600,7 @@ Current path:
 
 Current status:
 
-    Live full public landing page
+    Live full public project page
 
 Current purpose:
 
@@ -846,7 +846,7 @@ TENSA Engineering is intended to become:
 - public umbrella for the ecosystem
 - structured knowledge hub
 - SEO-focused authority site
-- public explanation layer for NeuroCore, Argus ACLI, and Argus Lab
+- public home for NeuroCore, Argus ACLI, and Argus Lab
 - educational resource for controlled AI systems
 - educational resource for persistent AI memory
 - educational resource for local-first AI
@@ -884,7 +884,7 @@ TENSA Engineering:
 - public hub
 - brand home
 - knowledge base
-- public explanation layer
+- ecosystem public home
 - ecosystem portal
 - future product funnel
 
@@ -970,7 +970,7 @@ Social content:
 - NeuroCore page expanded into a stronger public platform page
 - Argus ACLI placeholder page created
 - Argus ACLI full public product page created
-- Argus Lab full public landing page created
+- Argus Lab full public project page created
 - Story page created
 - long-form article styling added
 - Knowledge Base article layout styling added
@@ -989,7 +989,7 @@ Social content:
 - Projects page branding updated
 - NeuroCore page branding updated
 - Argus ACLI page branding updated
-- Argus Lab full public landing page created and branded
+- Argus Lab full public project page created and branded
 - Story page branded
 - Knowledge Base index page created
 - Knowledge Base index upgraded into a live article-path hub
@@ -1483,7 +1483,7 @@ Build Notes explain how the system evolved.
 
 Private implementation repositories and internal documentation preserve the engineering source of truth during active development.
 
-TENSA Engineering is the public explanation layer.
+TENSA Engineering is the umbrella engineering company and public home for the ecosystem.
 
 Public technical artifacts can be added later when they are ready and useful.
 

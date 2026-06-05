@@ -93,7 +93,7 @@ Use these preferred destinations when topics appear in public pages.
 | NeuroCore | `/projects/neurocore.html` | Same | Main public NeuroCore platform explainer. |
 | NeuroCore Architecture | `/knowledge-base/neurocore-architecture/` | Same, plus deeper future subtopics if needed | Public architecture article explains the governed platform behind TENSA's AI systems. |
 | Argus ACLI | `/projects/argus-acli.html` | Same | Full public product page for local-first read-only Linux diagnostics. |
-| Argus Lab | `/projects/argus-lab.html` | Same | Full public landing page for the early real-Linux troubleshooting, training, and validation implementation. |
+| Argus Lab | `/projects/argus-lab.html` | Same | Full public project page for the early real-Linux troubleshooting, training, and validation implementation. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
 | Glossary / definitions | `/glossary/` | Same | Public reference page for compact ecosystem definitions and inline tooltip destinations. |
 | Origin story | `/story/` | Same, or future deeper story article if needed | Story index now owns the full public origin narrative. |
@@ -369,7 +369,7 @@ The Argus Lab page should link to:
 
 The Argus Lab page should clearly describe the current early implementation status without implying public availability or completed platform maturity.
 
-The page is now a full public landing page. Keep implementation status accurate as the lab develops.
+The page is now a full public project page. Keep implementation status accurate as the lab develops.
 
 ---
 

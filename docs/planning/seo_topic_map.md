@@ -6,7 +6,7 @@
 
 This document defines the early SEO topic map for the TENSA Engineering website.
 
-TENSA Engineering is becoming the public explanation layer, knowledge hub, and ecosystem portal for NeuroCore, Argus ACLI, and Argus Lab.
+TENSA Engineering is becoming the public home, knowledge hub, and ecosystem portal for NeuroCore, Argus ACLI, and Argus Lab.
 
 The goal of this document is to organize future public content around useful topic clusters so the website can grow deliberately instead of randomly.
 
@@ -612,7 +612,7 @@ This cluster should link to:
 
 ### Purpose
 
-Translate NeuroCore architecture into public-facing explanations without duplicating raw repository docs.
+Translate NeuroCore architecture into public website explanations without duplicating raw repository docs.
 
 This cluster should explain the system architecture in plain language and link to the GitHub repository for proof.
 
