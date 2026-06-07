@@ -101,7 +101,7 @@ Before updating closeout docs, run or request output for:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
 
 Purpose:
 
@@ -527,7 +527,7 @@ The verification should confirm that:
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 63 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 64 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/story/" sitemap.xml
 
 This rule exists to catch:
@@ -779,7 +779,7 @@ The preferred validation should confirm:
 
 For small visual reviews, this grep remains useful:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
 
 But grep is not enough by itself when significant routes or article paths were added.
 
@@ -793,8 +793,8 @@ Record significant validation results in closeout docs when useful.
 
 Example result worth recording:
 
-    Public HTML files checked: 16
-    Internal links checked: 346
+    Public HTML files checked: 17
+    Internal links checked: 403
     External/skipped links: 0
     Result: all checked internal links resolved successfully
 

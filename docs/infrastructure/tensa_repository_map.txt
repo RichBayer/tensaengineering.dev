@@ -188,10 +188,29 @@ Current navigation:
 - Knowledge Base links to `/knowledge-base/`.
 - Story links to `/story/`.
 - Glossary links to `/glossary/`.
+- About links to `/about.html`.
 
 The homepage should remain concise.
 
 It should function as an ecosystem introduction and navigation layer, not a giant explanation page.
+
+---
+
+### about.html
+
+Purpose:
+
+    Public About page for TENSA Engineering.
+
+Current role:
+
+    Concise company / ecosystem identity page.
+
+The About page explains TENSA Engineering as the umbrella engineering company and public home for the ecosystem.
+
+It should stay concise and professional.
+
+It should not replace the Story page or become a full project explainer.
 
 ---
 
@@ -226,12 +245,14 @@ Current sitemap includes only real public pages.
 Current sitemap URLs:
 
     https://tensaengineering.dev/
+    https://tensaengineering.dev/about.html
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
     https://tensaengineering.dev/glossary/
+    https://tensaengineering.dev/story/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -240,7 +261,6 @@ Current sitemap URLs:
     https://tensaengineering.dev/knowledge-base/linux-diagnostics/
     https://tensaengineering.dev/knowledge-base/troubleshooting-training/
     https://tensaengineering.dev/knowledge-base/neurocore-architecture/
-    https://tensaengineering.dev/story/
 
 ---
 
@@ -681,6 +701,26 @@ Purpose:
 This document exists to prevent link drift, duplicate explanations, orphaned pages, and confusing visitor paths.
 
 Use this document before adding new public pages or changing navigation.
+
+---
+
+### docs/planning/glossary_strategy.md
+
+Purpose:
+
+    Defines public glossary scope, glossary term-selection rules, and inline tooltip behavior.
+
+This document keeps glossary usage educational instead of noisy.
+
+---
+
+### docs/planning/search_answer_optimization_template.md
+
+Purpose:
+
+    Internal planning template for future search-and-answer optimization passes.
+
+This document supports future page improvements for search visibility, answer clarity, headings, and reader-intent matching.
 
 ---
 
@@ -1203,11 +1243,14 @@ Deeper technical definitions belong in the Knowledge Base.
 Current public routes:
 
     /
+    /about.html
     /projects/
     /projects/neurocore.html
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/
+    /glossary/
+    /story/
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -1216,7 +1259,6 @@ Current public routes:
     /knowledge-base/linux-diagnostics/
     /knowledge-base/troubleshooting-training/
     /knowledge-base/neurocore-architecture/
-    /story/
 
 ---
 
@@ -1231,8 +1273,10 @@ Current internal docs:
     docs/planning/content_source_map.md
     docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
+    docs/planning/glossary_strategy.md
     docs/planning/internal_linking_strategy.md
     docs/planning/page_inventory.md
+    docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
     docs/planning/website_information_architecture.md
@@ -1250,7 +1294,6 @@ These directories do not exist yet but are likely future additions:
 
 These files do not exist yet but are likely future additions:
 
-    about.html
     scripts/check_internal_links.py
     docs/planning/old_site_migration_plan.md
 
@@ -1262,19 +1305,24 @@ Likely future public structure:
 
     /
     ├── index.html
+    ├── about.html
     ├── assets/
-    │   └── images/
-    │       ├── branding/
-    │       │   ├── tensa/
-    │       │   ├── neurocore/
-    │       │   ├── argus-acli/
-    │       │   └── argus-lab/
-    │       └── social/
+    │   ├── images/
+    │   │   ├── branding/
+    │   │   │   ├── tensa/
+    │   │   │   ├── neurocore/
+    │   │   │   ├── argus-acli/
+    │   │   │   └── argus-lab/
+    │   │   └── social/
+    │   └── js/
+    │       └── glossary-tooltips.js
     ├── projects/
     │   ├── index.html
     │   ├── neurocore.html
     │   ├── argus-acli.html
     │   └── argus-lab.html
+    ├── glossary/
+    │   └── index.html
     ├── knowledge-base/
     │   ├── index.html
     │   ├── ai-operations/
@@ -1299,9 +1347,8 @@ Likely future public structure:
     │   └── index.html
     ├── resources/
     │   └── index.html
-    ├── scripts/
-    │   └── check_internal_links.py
-    └── about.html
+    └── scripts/
+        └── check_internal_links.py
 
 Likely future docs structure:
 
@@ -1320,10 +1367,11 @@ Likely future docs structure:
     │   ├── documentation_strategy.md
     │   ├── page_inventory.md
     │   ├── internal_linking_strategy.md
+    │   ├── glossary_strategy.md
+    │   ├── search_answer_optimization_template.md
     │   ├── search_indexing_strategy.md
     │   ├── seo_topic_map.md
-    │   ├── old_site_migration_plan.md
-    │   └── documentation_strategy.md
+    │   └── old_site_migration_plan.md
     └── website_state.md
 
 ---
@@ -1421,40 +1469,43 @@ Last known output:
     .
     ├── CNAME
     ├── README.md
+    ├── about.html
     ├── assets
-    │   └── images
-    │       ├── branding
-    │       │   ├── argus-acli
-    │       │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │       │   │   ├── argus-acli-neurocore-horizontal.png
-    │       │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │       │   │   ├── argus-acli-neurocore-stacked.png
-    │       │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │       │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │       │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │       │   │   └── argus-acli-system-intelligence-stacked.png
-    │       │   ├── argus-lab
-    │       │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │       │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │       │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │       │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │       │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │       │   │   ├── argus-lab-neurocore-horizontal.png
-    │       │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │       │   │   └── argus-lab-neurocore-stacked.png
-    │       │   ├── neurocore
-    │       │   │   ├── neurocore-horizontal-transparent.png
-    │       │   │   ├── neurocore-horizontal.png
-    │       │   │   ├── neurocore-stacked-transparent.png
-    │       │   │   └── neurocore-stacked.png
-    │       │   └── tensa
-    │       │       ├── tensa-horizontal-header-transparent.png
-    │       │       ├── tensa-horizontal-logo-transparent.png
-    │       │       ├── tensa-horizontal-logo.png
-    │       │       ├── tensa-stacked-logo-transparent.png
-    │       │       └── tensa-stacked-logo.png
-    │       └── social
-    │           └── tensa-og-image.png
+    │   ├── images
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
     ├── docs
     │   ├── ai-operations
     │   │   ├── claude
@@ -1467,12 +1518,16 @@ Last known output:
     │   │   ├── content_source_map.md
     │   │   ├── content_style_guide.md
     │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
     │   │   ├── internal_linking_strategy.md
     │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
     │   │   ├── search_indexing_strategy.md
     │   │   ├── seo_topic_map.md
     │   │   └── website_information_architecture.md
     │   └── website_state.md
+    ├── glossary
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
     │   ├── ai-operations
@@ -1503,4 +1558,4 @@ Last known output:
     │   └── index.html
     └── styles.css
 
-    25 directories, 59 files
+    27 directories, 64 files

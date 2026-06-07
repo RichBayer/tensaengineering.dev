@@ -248,7 +248,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
 
 For diff checks, prefer no-pager output to avoid clipped terminal pager output:
 
@@ -356,6 +356,7 @@ Current sitemap contains canonical HTTPS non-www URLs for:
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
     https://tensaengineering.dev/glossary/
+    https://tensaengineering.dev/story/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -364,7 +365,6 @@ Current sitemap contains canonical HTTPS non-www URLs for:
     https://tensaengineering.dev/knowledge-base/linux-diagnostics/
     https://tensaengineering.dev/knowledge-base/troubleshooting-training/
     https://tensaengineering.dev/knowledge-base/neurocore-architecture/
-    https://tensaengineering.dev/story/
 
 Current SEO/social metadata:
 
@@ -387,6 +387,8 @@ Current search registration status:
     sitemap submitted to Bing and processing
     /story/ included in sitemap.xml
     /glossary/ included in sitemap.xml locally
+    /about.html included in sitemap.xml locally
+    sitemap.xml is URL-only locally
     first eight Knowledge Base article URLs included in sitemap.xml locally
 
 Latest local internal-link validation result:
@@ -406,7 +408,7 @@ This is expected and harmless because those are alternate redirect versions. The
 
     https://tensaengineering.dev/
 
-Post-deploy search checks after the latest Glossary / Knowledge Base sitemap closeout:
+Post-deploy search checks after the latest sitemap URL-only cleanup and documentation closeout:
 
 - Confirm the live Knowledge Base index loads:
 
@@ -414,7 +416,7 @@ Post-deploy search checks after the latest Glossary / Knowledge Base sitemap clo
 
 - Confirm all eight Knowledge Base article URLs load live.
 
-- Confirm the live sitemap includes `/glossary/` and all eight Knowledge Base article URLs.
+- Confirm the live sitemap is URL-only and includes About, Glossary, Story, and all eight Knowledge Base article URLs.
 
 - Inspect the Knowledge Base index and key article URLs in Google Search Console if appropriate:
 
@@ -425,7 +427,7 @@ Post-deploy search checks after the latest Glossary / Knowledge Base sitemap clo
 Future SEO work:
 
 - Add or verify richer Open Graph / Twitter / JSON-LD metadata on the updated NeuroCore page.
-- Optionally add sitemap lastmod dates.
+- Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
 - Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
 - Focus future search growth on useful Knowledge Base content and clean internal links, not metadata alone.
 
@@ -746,7 +748,7 @@ Completed so far:
 - local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
-- repository map updated to 27 directories and 63 files
+- repository map updated to 27 directories and 64 files
 
 Recent completed website work:
 
@@ -762,7 +764,7 @@ Recent completed website work:
 - `knowledge-base/index.html` upgraded into a live article-path hub.
 - Knowledge Base article layout and index link styling added to `styles.css`.
 - Article path links were validated locally.
-- Temporary local internal-link validation checked 346 internal links successfully across 16 public HTML files.
+- Temporary local internal-link validation previously checked 346 internal links successfully across 16 public HTML files; latest validation checked 403 internal links/assets across 17 public HTML files.
 - `sitemap.xml` updated with `/glossary/` and the eight Knowledge Base article URLs.
 - Closeout docs updated for the Knowledge Base article path, sitemap update, source requirements, link validation, and Python writer workflow.
 - `story/index.html` created as a full public Story page.
@@ -863,8 +865,7 @@ Not yet completed:
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - dedicated SEO/topic-map session for the first Knowledge Base article path
-- optional sitemap lastmod dates
-- live sitemap confirmation after latest Glossary / Knowledge Base sitemap deployment
+- live sitemap confirmation after latest sitemap URL-only cleanup deployment
 - Google Search Console inspection of Knowledge Base index and key article URLs after deployment if appropriate
 - article templates for future Knowledge Base expansion
 - public technical artifact strategy
@@ -957,7 +958,7 @@ The verification should confirm:
 Example checks:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 63 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 64 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 Do not move to the next replacement until verification passes or the mismatch is understood and corrected.
@@ -1014,7 +1015,7 @@ Recommended SEO/topic work:
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next website session should confirm the public contact path, add concise organizational identity, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+The homepage, About page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next website session should confirm the public contact path, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
 
 ---
 
@@ -1029,7 +1030,7 @@ Possible next public work:
 5. Create `/build-notes/index.html`.
 6. Run a dedicated SEO/topic-map pass for the first Knowledge Base article path.
 7. Add deeper SEO/metadata pass for updated pages.
-8. Add sitemap lastmod dates after a reliable maintenance process exists.
+8. Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
 9. Create permanent internal link checker script.
 10. Create additional focused Knowledge Base articles.
 11. Review glossary terms after future Knowledge Base expansion.
@@ -1041,7 +1042,7 @@ Recommended next direction:
 
 Reason:
 
-The core project pages, Story page, Knowledge Base index, and first eight Knowledge Base articles now exist. The next session should make TENSA easier to understand and contact without publishing an unconfirmed email address or inventing About-page copy from memory.
+The homepage, About page, core project pages, Glossary, Story page, Knowledge Base index, and first eight Knowledge Base articles now exist. The next session should make TENSA easier to understand and contact without publishing an unconfirmed email address.
 
 ---
 

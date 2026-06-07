@@ -170,7 +170,7 @@ Last verified by user-provided output during closeout:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
     temporary local Python internal-link validation
 
 Latest local internal-link validation result:
@@ -422,7 +422,7 @@ Future SEO work:
 - Inspect the Knowledge Base index and important article URLs in Google Search Console if appropriate.
 - Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
 - Add or verify richer Open Graph / Twitter / JSON-LD metadata on updated pages as needed.
-- Optionally add sitemap lastmod dates after a reliable maintenance process exists.
+- Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
 - Focus future search growth on useful Knowledge Base content and clean internal links, not metadata alone.
 
 ---
@@ -1073,7 +1073,7 @@ Social content:
 - local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
-- repository map updated to 27 directories and 63 files
+- repository map updated to 27 directories and 64 files
 
 ---
 
@@ -1094,7 +1094,6 @@ Social content:
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - dedicated SEO/topic-map session for the first Knowledge Base article path
-- optional sitemap lastmod dates
 - public technical artifact strategy
 - public repository / open-component strategy
 
@@ -1174,7 +1173,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
 
 When public links, navigation, or routes matter, prefer real local internal-link validation over grep-only review.
 
@@ -1202,7 +1201,7 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "27 directories, 63 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 64 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -1280,7 +1279,7 @@ Later-phase public-page idea:
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should confirm the public contact path, confirm the public contact path, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+The homepage, About page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should confirm the public contact path, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
 
 Recommended SEO/topic work:
 

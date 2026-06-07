@@ -140,6 +140,7 @@ The current sitemap should include only the current real public pages:
     https://tensaengineering.dev/projects/argus-lab.html
     https://tensaengineering.dev/knowledge-base/
     https://tensaengineering.dev/glossary/
+    https://tensaengineering.dev/story/
     https://tensaengineering.dev/knowledge-base/ai-operations/
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
@@ -148,7 +149,6 @@ The current sitemap should include only the current real public pages:
     https://tensaengineering.dev/knowledge-base/linux-diagnostics/
     https://tensaengineering.dev/knowledge-base/troubleshooting-training/
     https://tensaengineering.dev/knowledge-base/neurocore-architecture/
-    https://tensaengineering.dev/story/
 
 Do not include:
 
@@ -230,6 +230,9 @@ Current root-level `sitemap.xml` should use this structure:
         <loc>https://tensaengineering.dev/glossary/</loc>
       </url>
       <url>
+        <loc>https://tensaengineering.dev/story/</loc>
+      </url>
+      <url>
         <loc>https://tensaengineering.dev/knowledge-base/ai-operations/</loc>
       </url>
       <url>
@@ -252,9 +255,6 @@ Current root-level `sitemap.xml` should use this structure:
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/neurocore-architecture/</loc>
-      </url>
-      <url>
-        <loc>https://tensaengineering.dev/story/</loc>
       </url>
     </urlset>
 
@@ -697,7 +697,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "glossary/\|Internal links checked: 346\|first eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
+    grep -n "glossary/\|about.html\|Internal links checked: 403\|URL-only\|first eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -714,31 +714,24 @@ This rule exists to catch:
 
 Immediate next steps:
 
-1. Commit and push the Knowledge Base article path, sitemap update, styling update, and closeout documentation updates.
+1. Commit and push the sitemap URL-only cleanup and closeout documentation alignment updates.
 
 2. Wait for GitHub Pages deployment to complete.
 
 3. Confirm these URLs load in the browser:
 
+       https://tensaengineering.dev/
+       https://tensaengineering.dev/about.html
+       https://tensaengineering.dev/projects/
        https://tensaengineering.dev/knowledge-base/
-       https://tensaengineering.dev/knowledge-base/ai-operations/
-       https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
-       https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
-       https://tensaengineering.dev/knowledge-base/local-first-ai/
-       https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
-       https://tensaengineering.dev/knowledge-base/linux-diagnostics/
-       https://tensaengineering.dev/knowledge-base/troubleshooting-training/
-       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
+       https://tensaengineering.dev/glossary/
+       https://tensaengineering.dev/story/
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-4. Confirm the live sitemap includes the eight Knowledge Base article URLs.
+4. Confirm the live sitemap is URL-only and includes About, Glossary, Story, and all eight Knowledge Base article URLs.
 
-5. Inspect the Knowledge Base index and important new article URLs in Google Search Console if appropriate:
-
-       https://tensaengineering.dev/knowledge-base/
-       https://tensaengineering.dev/knowledge-base/ai-operations/
-       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
+5. Inspect discovered-but-not-indexed public URLs in Google Search Console if appropriate.
 
 6. Monitor Google and Bing sitemap processing after deployment.
 
@@ -746,7 +739,6 @@ Later next steps:
 
 - run a dedicated SEO/topic-map session for the first Knowledge Base article path
 - create Resources if organizing future public technical artifacts, selected documentation, videos, downloads, examples, and public links becomes the priority
-- create About if concise TENSA mission/builder identity becomes the priority
 - create Build Notes if public development history becomes the next content lane
 - add additional Knowledge Base articles only after source requirements and link destinations are defined
 
@@ -782,7 +774,10 @@ After the current public-page closeout deploys, confirm:
 - `https://tensaengineering.dev/knowledge-base/` is reachable
 - all eight Knowledge Base article URLs are reachable
 - `https://tensaengineering.dev/about.html` is reachable
-- the live sitemap includes About and all eight Knowledge Base article URLs
+- `https://tensaengineering.dev/glossary/` is reachable
+- `https://tensaengineering.dev/story/` is reachable
+- the live sitemap is URL-only
+- the live sitemap includes About, Glossary, Story, and all eight Knowledge Base article URLs
 
 ---
 

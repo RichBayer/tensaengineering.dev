@@ -102,7 +102,7 @@ Definitions:
 
 | Path | Type | Status | Purpose | Update Trigger |
 |---|---|---|---|
-| `/sitemap.xml` | Search indexing support | Live | Lists the current real public website URLs, including `/glossary/`, for search engine discovery and sitemap submission. | Update whenever public pages are created, removed, renamed, or public routes change. |
+| `/sitemap.xml` | Search indexing support | Live | Lists the current real public website URLs for search engine discovery and sitemap submission. | Update whenever public pages are created, removed, renamed, or public routes change. |
 | `/robots.txt` | Search indexing support | Live | Allows normal crawling and points search engines to the root sitemap. | Update when sitemap location, crawl guidance, or search indexing policy changes. |
 
 Current public HTML pages include canonical URLs.
@@ -177,6 +177,7 @@ Current pages with full header navigation:
     /projects/argus-acli.html
     /projects/argus-lab.html
     /knowledge-base/index.html
+    /glossary/index.html
     /knowledge-base/ai-operations/index.html
     /knowledge-base/persistent-ai-memory/index.html
     /knowledge-base/controlled-ai-systems/index.html
@@ -252,12 +253,11 @@ Recommended next public-page options:
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should either organize future public technical artifacts, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+The homepage, About page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should either organize future public technical artifacts, publish public-friendly build history, or expand the teaching layer with additional focused articles.
 
 Likely next direction:
 
 - create Resources if organizing future public technical artifacts, selected documentation, videos, downloads, examples, and public links becomes the priority
-- create About if a concise TENSA mission/builder page is needed
 - create Build Notes if public development history becomes the next content lane
 - add additional Knowledge Base articles only after source requirements and link destinations are defined
 
