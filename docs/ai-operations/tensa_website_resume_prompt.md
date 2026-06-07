@@ -23,7 +23,7 @@ DNS / domain:
 
 Current repository size:
 
-    27 directories, 63 files
+    27 directories, 64 files
 
 Verify at build start with:
 
@@ -283,6 +283,7 @@ Current public pages:
     /projects/argus-lab.html
     /knowledge-base/
     /glossary/
+    /about.html
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -348,6 +349,7 @@ Current robots URL after deployment:
 Current sitemap contains canonical HTTPS non-www URLs for:
 
     https://tensaengineering.dev/
+    https://tensaengineering.dev/about.html
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
@@ -389,8 +391,8 @@ Current search registration status:
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 16
-    Internal links checked: 346
+    Public HTML files checked: 17
+    Internal links checked: 403
     External/skipped links: 0
     Result: all checked internal links resolved successfully
 
@@ -647,6 +649,7 @@ Current primary navigation:
     Knowledge Base
     Glossary
     Story
+    About
 
 Current targets:
 
@@ -655,6 +658,7 @@ Current targets:
     Knowledge Base → /knowledge-base/
     Glossary → /glossary/
     Story → /story/
+    About → /about.html
 
 Knowledge Base points to the real `/knowledge-base/` page.
 
@@ -733,12 +737,13 @@ Completed so far:
 - Bing Webmaster Tools imported from Google Search Console
 - sitemap submitted to Bing and processing
 - Glossary page created and added to primary navigation
+- About page created and added to sitemap.xml
 - inline glossary tooltip JavaScript added
 - glossary reference styling added
 - inline glossary tooltip styling added
 - Knowledge Base articles received inline glossary tooltip links
 - `/glossary/` added to sitemap.xml
-- local internal-link validation completed successfully for 346 internal links across 16 public HTML files
+- local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
 - repository map updated to 27 directories and 63 files
@@ -849,7 +854,6 @@ Current public-page cleanup completed:
 Not yet completed:
 
 - Resources page
-- About page
 - Contact page
 - Contact email forwarding setup
 - Build Notes section
@@ -991,13 +995,7 @@ Recommended next website session priority:
 
     1. Set up email routing or forwarding for contact@tensaengineering.dev.
     2. Confirm the address forwards correctly before publishing it publicly.
-    3. Ask Richard for the saved About page rough draft from email before creating /about.html.
-    4. Create or plan /contact.html only after email routing is confirmed.
-
-Important About page source note:
-
-    Richard has a saved About page rough draft in email.
-    Ask for that rough draft before creating /about.html.
+    3. Create or plan /contact.html only after email routing is confirmed.
 
 Planned Contact page:
 
@@ -1025,7 +1023,7 @@ NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first
 Possible next public work:
 
 1. Set up and confirm forwarding for `contact@tensaengineering.dev`.
-2. Create `/about.html` from Richard's saved rough draft.
+2. Review `/about.html` locally and polish it only if needed.
 3. Create `/contact.html` after email forwarding is confirmed.
 4. Create `/resources/index.html`.
 5. Create `/build-notes/index.html`.
@@ -1039,7 +1037,7 @@ Possible next public work:
 
 Recommended next direction:
 
-    Confirm the public contact path, then create the About page from Richard's saved draft.
+    Confirm the public contact path, then create or plan the Contact page.
 
 Reason:
 

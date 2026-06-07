@@ -52,6 +52,7 @@ Current active public pages:
     /projects/argus-lab.html
     /knowledge-base/index.html
     /glossary/index.html
+    /about.html
     /knowledge-base/ai-operations/index.html
     /knowledge-base/persistent-ai-memory/index.html
     /knowledge-base/controlled-ai-systems/index.html
@@ -79,6 +80,7 @@ Current header navigation should use:
 | Knowledge Base | `/knowledge-base/` | Active | Main teaching layer index. |
 | Glossary | `/glossary/` | Active | Public reference page for ecosystem terms and inline tooltip destinations. |
 | Story | `/story/` | Active | Full public origin story page. |
+| About | `/about.html` | Active | Concise public organizational identity page. |
 
 ---
 
@@ -88,7 +90,7 @@ Use these preferred destinations when topics appear in public pages.
 
 | Topic / Mention | Preferred Destination Now | Future Preferred Destination | Notes |
 |---|---|---|---|
-| TENSA Engineering | `/index.html` | `/about.html` may supplement | Homepage remains public front door. |
+| TENSA Engineering | `/index.html` | `/about.html` supplements | Homepage remains public front door; About provides concise organizational identity. |
 | Ecosystem | `/projects/` | `/projects/` | Projects page explains platform/product/lab structure. |
 | NeuroCore | `/projects/neurocore.html` | Same | Main public NeuroCore platform explainer. |
 | NeuroCore Architecture | `/knowledge-base/neurocore-architecture/` | Same, plus deeper future subtopics if needed | Public architecture article explains the governed platform behind TENSA's AI systems. |
@@ -96,7 +98,7 @@ Use these preferred destinations when topics appear in public pages.
 | Argus Lab | `/projects/argus-lab.html` | Same | Full public project page for the early real-Linux troubleshooting, training, and validation implementation. |
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
 | Glossary / definitions | `/glossary/` | Same | Public reference page for compact ecosystem definitions and inline tooltip destinations. |
-| Origin story | `/story/` | Same, or future deeper story article if needed | Story index now owns the full public origin narrative. |
+| Origin story | `/story/` | Same, or future deeper story article if needed | Story index owns the full public origin narrative. Do not overload About with the full origin story. |
 | Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
 | AI Operations | `/knowledge-base/ai-operations/` | Same, plus deeper future subtopics if needed | Article 1 in the current recommended Knowledge Base path. |
 | Persistent AI memory | `/knowledge-base/persistent-ai-memory/` | Same, plus deeper future subtopics if needed | Article 2 in the current recommended Knowledge Base path. |
@@ -203,7 +205,7 @@ Show how Argus uses NeuroCore to turn real Linux system data into grounded diagn
 
 Purpose:
 
-Explain Argus Lab as both an early real-Linux training implementation and a validation environment for Argus ACLI.
+Explain Argus Lab as both an active early real-Linux troubleshooting, training, and validation environment for Argus ACLI.
 
 ---
 
@@ -293,6 +295,7 @@ The homepage should link to:
 - `/knowledge-base/`
 - `/glossary/`
 - `/story/`
+- `/about.html`
 - `/projects/neurocore.html`
 - `/projects/argus-acli.html`
 - `/projects/argus-lab.html`
@@ -461,6 +464,31 @@ It should not replace Knowledge Base articles or become a full architecture manu
 
 ---
 
+### About Page
+
+The About page should link to:
+
+- `/projects/`
+- `/knowledge-base/`
+- `/glossary/`
+- `/story/`
+
+The About page should remain concise and professional.
+
+It should not become:
+
+- the full origin story
+- a technical architecture manual
+- a project page replacement
+- an internal planning document
+
+The deeper origin narrative belongs in Story.
+
+Project details belong in Project pages.
+
+Concept explanations belong in the Knowledge Base or Glossary.
+
+
 ## Planned Link Upgrades
 
 When these pages are created, update links across the site.
@@ -572,6 +600,7 @@ Current notable link state:
 - Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.
 - Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and Glossary.
 - Glossary is linked from primary navigation and supports inline Knowledge Base tooltip terms.
+- About is linked from primary navigation if present in the current headers and provides concise organizational identity.
 
 ---
 

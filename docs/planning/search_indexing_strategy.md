@@ -49,6 +49,7 @@ Current public pages:
     /projects/argus-lab.html
     /knowledge-base/
     /glossary/
+    /about.html
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -74,12 +75,13 @@ Current search-indexing status:
     sitemap submitted to Bing and processing
     /story/ is included in sitemap.xml
     /glossary/ is included in sitemap.xml locally
+    /about.html is included in sitemap.xml locally
     the first eight Knowledge Base article URLs are included in sitemap.xml locally
 
 Latest local link validation:
 
-    Public HTML files checked: 16
-    Internal links checked: 346
+    Public HTML files checked: 17
+    Internal links checked: 403
     External/skipped links: 0
     Result: all checked internal links resolved successfully
 
@@ -131,6 +133,7 @@ The root-level sitemap file is:
 The current sitemap should include only the current real public pages:
 
     https://tensaengineering.dev/
+    https://tensaengineering.dev/about.html
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
@@ -151,8 +154,6 @@ Do not include:
 
     /resources/
     /build-notes/
-    /about.html
-
 until those pages or directories actually exist.
 
 ---
@@ -206,6 +207,9 @@ Current root-level `sitemap.xml` should use this structure:
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://tensaengineering.dev/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/about.html</loc>
       </url>
       <url>
         <loc>https://tensaengineering.dev/projects/</loc>
@@ -773,11 +777,12 @@ Search indexing foundation is complete when:
 - page inventory reflects search/indexing support files where appropriate
 - resume prompt includes search/indexing status if useful for future sessions
 
-After the Knowledge Base article-path closeout deploys, confirm:
+After the current public-page closeout deploys, confirm:
 
 - `https://tensaengineering.dev/knowledge-base/` is reachable
-- all eight new Knowledge Base article URLs are reachable
-- the live sitemap includes all eight new Knowledge Base article URLs
+- all eight Knowledge Base article URLs are reachable
+- `https://tensaengineering.dev/about.html` is reachable
+- the live sitemap includes About and all eight Knowledge Base article URLs
 
 ---
 

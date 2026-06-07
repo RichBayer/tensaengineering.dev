@@ -19,6 +19,7 @@ Current phase:
     Argus Lab full public project page created
     Story page created
     Glossary page created
+    About page created
     inline glossary tooltip system added for Knowledge Base articles
     branding asset hierarchy established
     consistent branding added across current public pages
@@ -117,6 +118,7 @@ Local path:
 Current key files:
 
 - index.html
+- about.html
 - styles.css
 - README.md
 - CNAME
@@ -161,7 +163,7 @@ Current key files:
 
 Current repository size:
 
-    27 directories, 63 files
+    27 directories, 64 files
 
 Last verified by user-provided output during closeout:
 
@@ -173,8 +175,8 @@ Last verified by user-provided output during closeout:
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 16
-    Internal links checked: 346
+    Public HTML files checked: 17
+    Internal links checked: 403
     External/skipped links: 0
     Result: all checked internal links resolved successfully
 
@@ -191,6 +193,7 @@ Current public pages:
     /projects/argus-lab.html
     /knowledge-base/
     /glossary/
+    /about.html
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -315,6 +318,7 @@ Current primary navigation:
     Knowledge Base
     Glossary
     Story
+    About
 
 Current navigation targets:
 
@@ -323,12 +327,14 @@ Current navigation targets:
     Knowledge Base → /knowledge-base/
     Glossary → /glossary/
     Story → /story/
+    About → /about.html
 
 Important notes:
 
     Knowledge Base points to the real /knowledge-base/ page.
     Glossary points to the real /glossary/ page.
     Story points to the real /story/ page.
+    About points to the standalone /about.html page.
     Public GitHub navigation has been removed from current public pages.
     Direct public links to private implementation repositories have been removed from current public pages.
     Knowledge Base index links to all eight current Knowledge Base articles.
@@ -362,6 +368,7 @@ Current robots URL:
 Current sitemap contents:
 
 - https://tensaengineering.dev/
+- https://tensaengineering.dev/about.html
 - https://tensaengineering.dev/projects/
 - https://tensaengineering.dev/projects/neurocore.html
 - https://tensaengineering.dev/projects/argus-acli.html
@@ -455,6 +462,30 @@ It should stay a front door and navigation layer, not become a giant explanation
 
 ---
 
+## Current About Page
+
+Current path:
+
+    about.html
+
+Current status:
+
+    Live
+
+Current purpose:
+
+- explain TENSA Engineering as the umbrella engineering company and public home for the ecosystem
+- provide concise organizational identity
+- support the public site without turning the homepage into a long About section
+- route readers toward Projects, Knowledge Base, Glossary, and Story
+
+Important note:
+
+The About page should stay concise and professional.
+
+The deeper origin story belongs in the Story section.
+
+
 ## Current Projects Page
 
 Current path:
@@ -481,7 +512,7 @@ Current project model:
 
     NeuroCore = platform
     Argus ACLI = first product / distribution
-    Argus Lab = early real-Linux troubleshooting, training, and validation environment
+    Argus Lab = active early real-Linux troubleshooting, training, and validation environment
 
 Current branding:
 
@@ -620,7 +651,7 @@ Current branding:
 
 Current content includes:
 
-- early training and validation environment positioning
+- active early real-Linux troubleshooting, training, and validation positioning
 - real troubleshooting skill through experience, not memorization
 - real systems, controlled failures, and guided growth principles
 - support-ticket-style troubleshooting scenarios
@@ -635,7 +666,9 @@ Current content includes:
 
 Important note:
 
-Argus Lab should remain clearly described as early implementation until availability changes.
+Argus Lab should remain clearly described as active early implementation until availability changes.
+
+Argus Lab detailed scenario milestones remain tracked in the Argus Lab repository, not repeated in TENSA website copy.
 
 Do not imply it is publicly available, downloadable, or a finished training product.
 
@@ -785,7 +818,7 @@ Current content includes:
 - authority boundaries
 - NeuroCore as the platform
 - Argus ACLI as the first practical product
-- Argus Lab as the early training and validation environment
+- Argus Lab as the active early real-Linux troubleshooting, training, and validation environment
 - AI Operations as the disciplined way of working that made the system possible
 
 Important note:
@@ -1036,6 +1069,8 @@ Social content:
 - Knowledge Base articles received inline glossary tooltip links
 - sitemap.xml updated to include `/glossary/`
 - local internal-link validation completed successfully for 346 internal links across 16 public HTML files
+- About page created and added to sitemap.xml
+- local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
 - repository map updated to 27 directories and 63 files
@@ -1045,7 +1080,6 @@ Social content:
 ## Not Yet Completed
 
 - Resources page
-- About page
 - Contact page
 - Contact email forwarding setup
 - Build Notes section
@@ -1225,19 +1259,13 @@ Recommended next website session:
 
 Recommended next public-page work:
 
-    About page, Contact page, Resources page, Build Notes section, or additional focused Knowledge Base articles
+    Contact page, Resources page, Build Notes section, About page polish if needed, or additional focused Knowledge Base articles
 
 Recommended next website session priority:
 
     1. Set up email routing or forwarding for contact@tensaengineering.dev.
     2. Confirm the address forwards correctly before publishing it publicly.
-    3. Ask Richard for the saved About page rough draft from email before creating /about.html.
-    4. Create or plan /contact.html only after email routing is confirmed.
-
-Important About page source note:
-
-    Richard has a saved About page rough draft in email.
-    Ask for that rough draft before creating /about.html.
+    3. Create or plan /contact.html only after email routing is confirmed.
 
 Planned Contact page:
 
@@ -1252,7 +1280,7 @@ Later-phase public-page idea:
 
 Reason:
 
-NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should confirm the public contact path, add concise organizational identity, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should confirm the public contact path, confirm the public contact path, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
 
 Recommended SEO/topic work:
 

@@ -19,12 +19,13 @@
             <img src="../assets/images/branding/tensa/tensa-horizontal-header-transparent.png" alt="TENSA Engineering" class="brand-logo">
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-            <a href="../index.html">Home</a>
-            <a href="./index.html" class="active">Projects</a>
-            <a href="../knowledge-base/">Knowledge Base</a>
-            <a href="../glossary/">Glossary</a>
+      <a href="../index.html">Home</a>
+      <a href="../projects/" class="active">Projects</a>
+      <a href="../knowledge-base/">Knowledge Base</a>
+      <a href="../glossary/">Glossary</a>
       <a href="../story/">Story</a>
-        </nav>
+      <a href="../about.html">About</a>
+    </nav>
     </header>
 
     <main>
@@ -57,6 +58,7 @@
         <section class="article-card">
             <h2>What NeuroCore actually is</h2>
             <p>NeuroCore is not a chatbot wrapper or an uncontrolled agent. It is a persistent, local-first cognitive runtime platform designed to run as a daemon inside your own systems.</p>
+            <p>Its long-term direction goes beyond one diagnostic product. NeuroCore is being designed to develop governed awareness of the systems it runs on, the users it supports, and eventually the environment around it through approved interfaces such as voice, cameras, sensors, and connected devices.</p>
             <p>It gives AI three things it normally lacks:</p>
             <ul>
                 <li><strong>Continuity</strong> — the system remembers your environment and history across sessions</li>
@@ -69,12 +71,12 @@
         <!-- Memory and Continuity -->
         <section class="article-card">
             <h2>How NeuroCore will build continuity over time</h2>
-            <p>Continuity is the future heart of NeuroCore. The current system already has a local retrieval foundation: project documents can be indexed and retrieved so the model can answer from local context instead of relying only on chat history or general model knowledge.</p>
-            <p>That current retrieval-augmented generation setup is only the starting point. After Argus ACLI distribution work stabilizes, deeper NeuroCore development will move toward a more structured memory and context architecture.</p>
-            <p>The planned direction includes a Karpathy-style knowledge base layer: atomic, linked knowledge pages that organize important system concepts, components, workflows, and relationships. RAG helps NeuroCore find information. The structured knowledge base will help NeuroCore understand how that information fits together.</p>
-            <p>Beyond that, NeuroCore is planned to move toward a context-aware memory system inspired by CAG-style thinking. Instead of rebuilding context from scratch every session, NeuroCore will eventually assemble governed context packs from source-of-truth docs, structured knowledge, current repo state, runtime state, snapshots, incident memory, service profiles, and user-approved memory.</p>
-            <p>This is not hidden memory and it is not the model deciding what is true. The goal is explicit, inspectable, local-first continuity: what is stable truth, what is current state, what changed, what matters now, and what source proves it.</p>
-            <p>The full details of RAG, structured knowledge, CAG-style context assembly, snapshots, incident memory, and service profiles will be explained in the TENSA Engineering Knowledge Base as the architecture matures.</p>
+            <p>Continuity is one of NeuroCore’s core design goals, but the long-term memory system is not meant to be hidden model memory or a chatbot remembering whatever happened in a previous conversation.</p>
+            <p>The current direction is <strong>NeuroCore Continuum</strong>: a planned continuity layer for governed context, source authority, memory discipline, reload behavior, and long-running project understanding. Continuum is in Stage 0 architecture planning, not runtime implementation yet.</p>
+            <p>The current foundation already points in that direction: source-controlled documentation, build logs, repo maps, resume prompts, context-loading rules, and local retrieval all help preserve project state without relying on fragile chat history.</p>
+            <p>As the architecture matures, Continuum is intended to organize that material through a source registry, context index, task-specific context load profiles, conflict handling, decision records, correction records, context status reports, and working-understanding reports.</p>
+            <p>The goal is not for the model to decide what is true. The goal is for NeuroCore to assemble explicit, inspectable, source-grounded context so the model can reason over the right evidence, understand what is current, identify what is stale, and show what sources support the answer.</p>
+            <p>In plain English: NeuroCore is being designed so future AI work can resume with durable project understanding instead of starting over, guessing from chat history, or treating old summaries as truth.</p>
         </section>
 
         <!-- Architecture & Control Plane -->
@@ -147,7 +149,7 @@
                             <li>Resolves approved tools from the registry</li>
                             <li>Validates tool input</li>
                             <li>Invokes the correct tool layer</li>
-                            <li>Propagates trace context through the stack</li>
+                            <li>Preserves traceable execution flow</li>
                         </ul>
                     </article>
 
@@ -183,12 +185,12 @@
                         <article class="flow-card command-card">
                             <div class="flow-number">07</div>
                             <p class="flow-label">OS boundary</p>
-                            <h3>CommandRunner + Linux</h3>
+                            <h3>Controlled Linux boundary</h3>
                             <ul>
-                                <li>Isolated subprocess boundary</li>
-                                <li>Timeout enforcement</li>
-                                <li>stdout, stderr, and return-code capture</li>
-                                <li>Read-only system inspection for Argus V1</li>
+                                <li>Runs through a constrained operating-system boundary</li>
+                                <li>Captures verifiable command results</li>
+                                <li>Preserves read-only inspection for Argus V1</li>
+                                <li>Keeps low-level system access behind NeuroCore controls</li>
                             </ul>
                         </article>
                     </div>
@@ -205,9 +207,9 @@
                             <span>Findings</span>
                             <span>Severity</span>
                             <span>Recommendations</span>
-                            <span>Raw evidence</span>
+                            <span>Evidence</span>
                             <span>System area</span>
-                            <span>Trace context</span>
+                            <span>Traceability</span>
                         </div>
                     </article>
 
@@ -257,14 +259,14 @@
                             <h3>Kernel-Up Service Intelligence will extend the same controlled path.</h3>
                             <p>
                                 The next service-diagnostics lane is being designed to help Argus look beyond
-                                shallow service status and inspect the layers underneath a failure: systemd state,
-                                dependencies, processes, ports, logs, permissions, mounts, filesystems, resource
-                                pressure, security denials, and kernel-level signals.
+                                shallow service status and inspect the surrounding evidence behind a failure:
+                                service state, dependencies, logs, resource pressure, access boundaries, and
+                                lower-level system signals.
                             </p>
                             <p>
                                 These tools are not a separate runtime and they are not an automation shortcut.
-                                They will run through the same control plane, execution engine, system tools,
-                                raw-evidence contract, and model explanation boundary shown above.
+                                They will follow the same governed runtime path, evidence contract,
+                                and model explanation boundary shown above.
                             </p>
                         </div>
                     </div>
@@ -289,10 +291,10 @@
                             <p class="flow-label">Possible system tools</p>
                             <h3>Read-only evidence collectors</h3>
                             <ul>
-                                <li>service logs and systemd unit inspection</li>
-                                <li>process, package, and file metadata</li>
-                                <li>kernel messages and mount state</li>
-                                <li>permissions, DNS, and security policy status</li>
+                                <li>service and log evidence</li>
+                                <li>process and file context</li>
+                                <li>resource and dependency signals</li>
+                                <li>access and policy indicators</li>
                             </ul>
                         </article>
 
@@ -301,10 +303,10 @@
                             <p class="flow-label">Possible Argus tools</p>
                             <h3>Evidence correlation</h3>
                             <ul>
-                                <li>service analysis</li>
-                                <li>kernel analysis</li>
-                                <li>permission analysis</li>
-                                <li>mount, DNS, and security policy analysis</li>
+                                <li>service-level analysis</li>
+                                <li>system-signal correlation</li>
+                                <li>access-boundary analysis</li>
+                                <li>evidence-backed diagnostic reasoning</li>
                             </ul>
                         </article>
 
@@ -323,20 +325,32 @@
                 </div>
             </div>
 
+                    <div class="intelligence-bridge">
+                        <div>
+                            <p class="eyebrow">Future continuity layer</p>
+                            <h3>Continuum will eventually govern long-running context.</h3>
+                            <p>
+                                NeuroCore Continuum is planned as the source-authority and context-continuity layer above the runtime:
+                                source registry, context index, load profiles, conflict handling, decision and correction ledgers,
+                                and context status reports. It is Stage 0 architecture planning today, not runtime implementation yet.
+                            </p>
+                        </div>
+                    </div>
+
             <div class="architecture-proof-grid">
                 <article>
                     <h3>Runtime control</h3>
                     <p>
-                        The model does not freely touch the machine. Requests pass through the daemon,
-                        runtime manager, control plane, execution engine, and approved tools.
+                        The model does not freely touch the machine. Requests pass through a governed
+                        runtime path before any system-facing tool is allowed to run.
                     </p>
                 </article>
 
                 <article>
                     <h3>Grounded intelligence</h3>
                     <p>
-                        Argus turns real Linux telemetry into findings, severity, recommendations,
-                        and evidence before the model explains the result.
+                        Argus turns real Linux signals into structured findings, severity,
+                        recommendations, and evidence before the model explains the result.
                     </p>
                 </article>
 
@@ -360,7 +374,7 @@
             <p>Traditional AI is stateless and external. NeuroCore turns it into durable, trustworthy operational intelligence that:</p>
             <ul>
                 <li>Keeps all your data private (local-first)</li>
-                <li>Remembers your systems (continuity)</li>
+                <li>Builds source-grounded continuity over time</li>
                 <li>Enforces strict rules before any action (governed authority)</li>
                 <li>Preserves raw evidence for every diagnosis (full auditability)</li>
             </ul>
@@ -384,7 +398,7 @@
             <h2>Argus ACLI — the first product built on NeuroCore</h2>
             <p>Argus ACLI is the first real-world product being built on top of NeuroCore. It delivers read-only Linux system intelligence: structured diagnostics, severity classification, evidence-backed findings, and raw evidence visibility. It runs entirely through NeuroCore’s control plane and is the focus of current Phase 6 work.</p>
 
-            <p><strong>Argus Lab</strong> is the future training and validation environment. It will use real Linux server VMs with real networking, logs, and data. We will intentionally inject faults into these environments to test how Argus tools, the structured data flow, and the model work together to diagnose and explain real problems.</p>
+            <p><strong>Argus Lab</strong> is the active early real-Linux troubleshooting, training, and validation environment for Argus. It uses controlled failures, resettable scenarios, and evidence-based diagnostic validation to test how Argus tools, structured evidence flow, and model explanations work together against real problems.</p>
 
             <p class="callout-line">The core runtime and control-plane path are built and working; deeper memory and continuity features remain in active development. Argus ACLI is the first product being actively refined on top of NeuroCore.</p>
         </section>
@@ -394,7 +408,7 @@
             <h2>The NeuroCore ecosystem</h2>
             <p><strong>NeuroCore</strong> — the governed runtime platform, with the core runtime and control-plane path built and working<br>
             <strong>Argus ACLI</strong> — first product built on NeuroCore, currently in active development<br>
-            <strong>Argus Lab</strong> — future validation environment with real fault injection</p>
+            <strong>Argus Lab</strong> — active early validation environment for controlled Linux troubleshooting</p>
             <p>All three share the same principles: local-first, governed authority, persistent continuity.</p>
         </section>
 
@@ -412,7 +426,7 @@
 
     <!-- Footer (exact match) -->
     <footer class="site-footer">
-        <p>© TENSA Engineering • Built with governed authority and persistent memory</p>
+        <p>© TENSA Engineering • Built with governed authority and durable continuity</p>
         <p class="footer-links">
             <a href="../index.html">TENSA Engineering</a> •
             <a href="../projects/">Projects</a>

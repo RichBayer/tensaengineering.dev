@@ -39,6 +39,7 @@ Current public pages:
     projects/argus-lab.html
     knowledge-base/
     glossary/
+    about.html
     knowledge-base/ai-operations/
     knowledge-base/persistent-ai-memory/
     knowledge-base/controlled-ai-systems/
@@ -351,7 +352,9 @@ If expanding deeper implementation details later, also use:
 
 ### Special Notes
 
-Argus Lab is early implementation.
+Argus Lab is active early implementation.
+
+Detailed scenario milestones remain tracked in the Argus Lab repository, not repeated in TENSA website copy.
 
 Do not describe it as publicly available or finished.
 
@@ -922,21 +925,36 @@ Do not add direct public links to private implementation repositories.
 
 ## About Page
 
-Future path:
+Path:
 
     about.html
 
 Current status:
 
-    Not created
+    Live
 
-Future role:
+Current role:
 
-The About page should explain TENSA Engineering and the mission.
+The About page explains TENSA Engineering as the umbrella engineering company and public home for the ecosystem.
 
 It should be professional and concise.
 
 It may mention the origin story, but the deeper origin story belongs in the Story section.
+
+### Required Source Docs Before Major About Rewrite
+
+Use:
+
+    docs/planning/website_information_architecture.md
+    docs/website_state.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    current public project pages
+    approved public mission/builder framing
+
+Use Story source material only if expanding the origin-story portion.
+
+Do not turn About into the full Story page.
 
 ---
 

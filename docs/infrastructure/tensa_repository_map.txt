@@ -37,97 +37,96 @@ DNS / domain provider:
     .
     ├── CNAME
     ├── README.md
+    ├── about.html
     ├── assets
-    │   ├── images
-    │   │   ├── branding
-    │   │   │   ├── argus-acli
-    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
-    │   │   │   ├── argus-lab
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
-    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │   │   │   │   └── argus-lab-neurocore-stacked.png
-    │   │   │   ├── neurocore
-    │   │   │   │   ├── neurocore-horizontal-transparent.png
-    │   │   │   │   ├── neurocore-horizontal.png
-    │   │   │   │   ├── neurocore-stacked-transparent.png
-    │   │   │   │   └── neurocore-stacked.png
-    │   │   │   └── tensa
-    │   │   │       ├── tensa-horizontal-header-transparent.png
-    │   │   │       ├── tensa-horizontal-logo-transparent.png
-    │   │   │       ├── tensa-horizontal-logo.png
-    │   │   │       ├── tensa-stacked-logo-transparent.png
-    │   │   │       └── tensa-stacked-logo.png
-    │   │   └── social
-    │   │       └── tensa-og-image.png
-    │   └── js
-    │       └── glossary-tooltips.js
+    │   ├── images
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── glossary_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_answer_optimization_template.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
     ├── glossary
-    │   └── index.html
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
 
-Current size:
-
-    27 directories, 63 files
+    27 directories, 64 files
 
 ---
 
@@ -587,7 +586,7 @@ This file should be updated when:
 
 Recommended command to refresh the tree:
 
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    tree -a -I '.git|node_modules|__pycache__|tmp'
 
 ---
 
@@ -984,7 +983,7 @@ Current project model:
 
     NeuroCore = platform
     Argus ACLI = first product / distribution
-    Argus Lab = future training and validation environment
+    Argus Lab = active early real-Linux troubleshooting, training, and validation environment
 
 ---
 
@@ -1052,7 +1051,7 @@ Current themes:
 - ACLI output
 - near-term Kernel-Up / Service Intelligence expansion
 - Argus ACLI as first distribution
-- Argus Lab as future training and validation environment
+- Argus Lab as the active early real-Linux troubleshooting, training, and validation environment
 
 This page should remain public-facing and business-readable.
 
@@ -1112,7 +1111,7 @@ Current status:
 
 Current role:
 
-    Explains Argus Lab as the planned real-Linux troubleshooting, training, and validation environment.
+    Explains Argus Lab as an active early real-Linux troubleshooting, training, and validation environment.
 
 Current branding:
 
@@ -1178,7 +1177,7 @@ Current content covers:
 - real systems requiring control
 - NeuroCore as the platform
 - Argus ACLI as the first practical proof
-- Argus Lab as the future training and validation environment
+- Argus Lab as the active early real-Linux troubleshooting, training, and validation environment
 - AI Operations as the disciplined way of working that made the system possible
 
 Current branding:
@@ -1392,7 +1391,7 @@ GitHub remains the source of truth.
 At the beginning of serious website build sessions, run:
 
     git status --short
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    tree -a -I '.git|node_modules|__pycache__|tmp'
     find . -maxdepth 3 -name "*.html" -print
     grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
 
@@ -1415,7 +1414,7 @@ Purpose:
 
 Command used:
 
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    tree -a -I '.git|node_modules|__pycache__|tmp'
 
 Last known output:
 
