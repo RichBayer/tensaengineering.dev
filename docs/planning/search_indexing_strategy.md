@@ -327,6 +327,7 @@ Google Search Console setup steps:
 8. Monitor indexing status and sitemap processing errors.
 9. After new public pages are added and deployed, confirm the updated sitemap is processed and inspect important new URLs such as:
 
+       https://tensaengineering.dev/contact.html
        https://tensaengineering.dev/knowledge-base/
        https://tensaengineering.dev/knowledge-base/ai-operations/
        https://tensaengineering.dev/knowledge-base/neurocore-architecture/
@@ -704,7 +705,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "glossary/\|about.html\|Internal links checked: 403\|URL-only\|first eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
+    grep -n "glossary/\|about.html\|contact.html\|Internal links checked: 546\|URL-only\|first eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -721,7 +722,7 @@ This rule exists to catch:
 
 Immediate next steps:
 
-1. Commit and push the sitemap URL-only cleanup and closeout documentation alignment updates.
+1. Confirm the Contact / favicon / sitemap / footer update is committed and pushed.
 
 2. Wait for GitHub Pages deployment to complete.
 
@@ -729,6 +730,7 @@ Immediate next steps:
 
        https://tensaengineering.dev/
        https://tensaengineering.dev/about.html
+       https://tensaengineering.dev/contact.html
        https://tensaengineering.dev/projects/
        https://tensaengineering.dev/knowledge-base/
        https://tensaengineering.dev/glossary/
@@ -736,9 +738,9 @@ Immediate next steps:
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-4. Confirm the live sitemap is URL-only and includes About, Glossary, Story, and all eight Knowledge Base article URLs.
+4. Confirm the live sitemap is URL-only and includes Contact, About, Glossary, Story, and all eight Knowledge Base article URLs.
 
-5. Inspect discovered-but-not-indexed public URLs in Google Search Console if appropriate.
+5. Inspect Contact, the Knowledge Base index, and key article URLs in Google Search Console if appropriate.
 
 6. Monitor Google and Bing sitemap processing after deployment.
 
@@ -781,10 +783,11 @@ After the current public-page closeout deploys, confirm:
 - `https://tensaengineering.dev/knowledge-base/` is reachable
 - all eight Knowledge Base article URLs are reachable
 - `https://tensaengineering.dev/about.html` is reachable
+- `https://tensaengineering.dev/contact.html` is reachable
 - `https://tensaengineering.dev/glossary/` is reachable
 - `https://tensaengineering.dev/story/` is reachable
 - the live sitemap is URL-only
-- the live sitemap includes About, Glossary, Story, and all eight Knowledge Base article URLs
+- the live sitemap includes Contact, About, Glossary, Story, and all eight Knowledge Base article URLs
 
 ---
 

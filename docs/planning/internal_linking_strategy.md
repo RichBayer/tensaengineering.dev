@@ -434,7 +434,7 @@ Current Knowledge Base articles should link through the recommended path:
 Each article should:
 
 - link back to `/knowledge-base/` through article metadata or navigation
-- include header navigation to Home, Projects, Knowledge Base, Glossary, and Story
+- include header navigation to Home, Projects, Knowledge Base, Glossary, Story, and About
 - use inline glossary links sparingly where definitions help readers
 - preserve previous/next navigation where appropriate
 - include related links only to real public pages
@@ -536,7 +536,7 @@ Before closeout, run a link-oriented check manually or with a future script.
 
 Current manual checks:
 
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html contact.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
     find . -maxdepth 3 -name "*.html" -print
 
 Future recommended script:
@@ -565,7 +565,7 @@ The verification should confirm the intended change actually landed and that the
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "25 directories, 59 files\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 71 files\|contact.html\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
 
 This rule exists to catch:
 
@@ -581,14 +581,16 @@ This rule exists to catch:
 
 Last verified local internal-link validation:
 
-    Public HTML files checked: 16
-    Internal links checked: 346
-    External/skipped links: 0
+    Public HTML files checked: 18
+    Internal links checked: 546
+    External/skipped links: 20
     Result: all checked internal links resolved successfully
 
 Current verified public HTML files:
 
     ./index.html
+    ./about.html
+    ./contact.html
     ./glossary/index.html
     ./knowledge-base/index.html
     ./knowledge-base/ai-operations/index.html
@@ -607,11 +609,14 @@ Current verified public HTML files:
 
 Current notable link state:
 
-- Home, Projects, Knowledge Base, Glossary, and Story navigation exists across current public pages.
+- Home, Projects, Knowledge Base, Glossary, Story, and About primary navigation exists across current public pages.
+- Contact is linked footer-only across current public pages and intentionally remains out of primary header navigation.
 - Public GitHub navigation has been removed from current public pages.
 - Direct public links to private implementation repositories have been removed from current public pages.
 - Knowledge Base links point to the real `/knowledge-base/` page.
 - Story links point to the real `/story/` page.
+- About links point to the standalone `/about.html` page.
+- Footer Contact links point to `/contact.html`.
 - The Knowledge Base index links to all eight current Knowledge Base articles.
 - The current Knowledge Base article path links from AI Operations through NeuroCore Architecture, then back to AI Operations.
 - Argus ACLI links to NeuroCore and Argus Lab.
@@ -619,7 +624,7 @@ Current notable link state:
 - Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.
 - Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and Glossary.
 - Glossary is linked from primary navigation and supports inline Knowledge Base tooltip terms.
-- About is linked from primary navigation if present in the current headers and provides concise organizational identity.
+- About provides concise organizational identity.
 
 ---
 

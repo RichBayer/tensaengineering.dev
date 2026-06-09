@@ -132,7 +132,7 @@ DNS / domain provider:
     ├── story
     │   └── index.html
     └── styles.css
-    
+
     27 directories, 71 files
 
 ---
