@@ -20,9 +20,12 @@ Current phase:
     Story page created
     Glossary page created
     About page created
+    Contact page created after email routing was configured and tested
     inline glossary tooltip system added for Knowledge Base articles
     branding asset hierarchy established
     consistent branding added across current public pages
+    favicon assets added and wired across current public pages
+    footer-only Contact navigation added across current public pages
     Knowledge Base index created and upgraded into a live article-path hub
     first eight Knowledge Base articles created
     page inventory created and updated
@@ -119,12 +122,19 @@ Current key files:
 
 - index.html
 - about.html
+- contact.html
+- favicon.ico
 - styles.css
 - README.md
 - CNAME
 - robots.txt
 - sitemap.xml
 - assets/images/branding/tensa/
+- assets/images/branding/tensa/favicon-32x32.png
+- assets/images/branding/tensa/apple-touch-icon.png
+- assets/images/branding/tensa/tensa-icon-512.png
+- assets/images/branding/tensa/android-chrome-192x192.png
+- assets/images/branding/tensa/android-chrome-512x512.png
 - assets/images/branding/neurocore/
 - assets/images/branding/argus-acli/
 - assets/images/branding/argus-lab/
@@ -163,7 +173,7 @@ Current key files:
 
 Current repository size:
 
-    27 directories, 64 files
+    27 directories, 71 files
 
 Last verified by user-provided output during closeout:
 
@@ -175,9 +185,9 @@ Last verified by user-provided output during closeout:
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 17
-    Internal links checked: 403
-    External/skipped links: 0
+    Public HTML files checked: 18
+    Internal links checked: 546
+    External/skipped links: 20
     Result: all checked internal links resolved successfully
 
 ---
@@ -194,6 +204,7 @@ Current public pages:
     /knowledge-base/
     /glossary/
     /about.html
+    /contact.html
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -237,9 +248,14 @@ Current asset structure:
 
 Current TENSA branding assets:
 
+    android-chrome-192x192.png
+    android-chrome-512x512.png
+    apple-touch-icon.png
+    favicon-32x32.png
     tensa-horizontal-logo.png
     tensa-horizontal-logo-transparent.png
     tensa-horizontal-header-transparent.png
+    tensa-icon-512.png
     tensa-stacked-logo.png
     tensa-stacked-logo-transparent.png
 
@@ -279,6 +295,8 @@ Current social preview asset:
 Current branding behavior:
 
 - all current public pages use the TENSA header logo
+- all current public pages include favicon link tags
+- root favicon.ico provides browser favicon discovery
 - homepage hero uses the TENSA stacked logo
 - Projects page hero uses the TENSA stacked logo
 - NeuroCore page hero uses the NeuroCore stacked logo
@@ -306,6 +324,8 @@ Current visual direction:
 - readable Knowledge Base index links with explicit styling
 - glossary reference page layout
 - inline glossary tooltip styling
+- footer navigation styling
+- simplified TENSA T-symbol favicon for small browser-tab readability
 
 ---
 
@@ -329,12 +349,21 @@ Current navigation targets:
     Story → /story/
     About → /about.html
 
+Current footer navigation targets:
+
+    Contact → /contact.html
+    About → /about.html
+    Projects → /projects/
+    Knowledge Base → /knowledge-base/
+    Glossary → /glossary/
+
 Important notes:
 
     Knowledge Base points to the real /knowledge-base/ page.
     Glossary points to the real /glossary/ page.
     Story points to the real /story/ page.
     About points to the standalone /about.html page.
+    Contact is footer-only and intentionally not part of the primary header navigation.
     Public GitHub navigation has been removed from current public pages.
     Direct public links to private implementation repositories have been removed from current public pages.
     Knowledge Base index links to all eight current Knowledge Base articles.
@@ -369,6 +398,7 @@ Current sitemap contents:
 
 - https://tensaengineering.dev/
 - https://tensaengineering.dev/about.html
+- https://tensaengineering.dev/contact.html
 - https://tensaengineering.dev/projects/
 - https://tensaengineering.dev/projects/neurocore.html
 - https://tensaengineering.dev/projects/argus-acli.html
@@ -404,6 +434,7 @@ Current indexing status:
     sitemap submitted to Bing and processing
     /story/ included in sitemap.xml
     /glossary/ included in sitemap.xml locally
+    /contact.html included in sitemap.xml locally
     first eight Knowledge Base article URLs included in sitemap.xml locally
 
 Known Search Console note:
@@ -418,7 +449,7 @@ This is expected and harmless because the intended canonical indexed URL is:
 
 Future SEO work:
 
-- After deployment, confirm the live sitemap includes all eight Knowledge Base article URLs.
+- After deployment, confirm the live sitemap includes `/contact.html` and all eight Knowledge Base article URLs.
 - Inspect the Knowledge Base index and important article URLs in Google Search Console if appropriate.
 - Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
 - Add or verify richer Open Graph / Twitter / JSON-LD metadata on updated pages as needed.
@@ -453,6 +484,7 @@ The current homepage includes:
 - ecosystem public-home closing section
 - private-development / future-public-artifacts framing
 - navigation to Projects, Knowledge Base, Glossary, and Story
+- footer navigation to Contact, About, Projects, Knowledge Base, and Glossary
 
 The homepage treats TENSA Engineering as the single public hub for the ecosystem.
 
@@ -485,6 +517,47 @@ The About page should stay concise and professional.
 
 The deeper origin story belongs in the Story section.
 
+
+---
+
+## Current Contact Page
+
+Current path:
+
+    contact.html
+
+Current status:
+
+    Live
+
+Current purpose:
+
+- provide a simple public contact route for TENSA Engineering
+- support appropriate questions, website issues, and ecosystem inquiries
+- keep contact expectations clear without implying paid support, public product support SLAs, public downloads, or a public issue tracker
+- provide both a mailto link and visible email address
+
+Current public contact address:
+
+    contact@tensaengineering.dev
+
+Current routing status:
+
+    Cloudflare Email Routing was configured and tested before publishing the page.
+
+Current navigation:
+
+    Footer-only link across current public pages.
+
+Important note:
+
+The Contact page should stay simple.
+
+It should not become a support portal, sales page, or public issue tracker unless those systems exist.
+
+Contact should remain out of the primary header navigation unless the site strategy changes.
+
+---
 
 ## Current Projects Page
 
@@ -1073,21 +1146,26 @@ Social content:
 - local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
-- repository map updated to 27 directories and 64 files
+- Cloudflare Email Routing configured and tested for contact@tensaengineering.dev
+- Contact page created
+- Contact page added to sitemap.xml
+- Contact page linked footer-only across current public pages
+- simplified TENSA T-symbol favicon assets created and wired across current public pages
+- root favicon.ico added
+- footer navigation styling added
+- repository map updated to 27 directories and 71 files
+- local internal-link validation completed successfully for 546 internal links across 18 public HTML files
 
 ---
 
 ## Not Yet Completed
 
 - Resources page
-- Contact page
-- Contact email forwarding setup
 - Build Notes section
 - analytics decisions
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- live sitemap confirmation after latest Glossary / Knowledge Base sitemap deployment
-- Google Search Console inspection of Knowledge Base index and key article URLs after deployment if appropriate
+- live deployment confirmation after latest Contact / favicon / sitemap / footer update
 - old-site migration plan
 - permanent internal link checker script
 - article templates for future Knowledge Base expansion
@@ -1201,7 +1279,7 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "27 directories, 64 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 71 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -1247,6 +1325,16 @@ Preferred safe pattern:
 
 ## Next Recommended Steps
 
+Recommended immediate post-closeout work:
+
+1. Review the final diff.
+2. Commit the Contact page, favicon assets, sitemap update, footer navigation update, and documentation closeout changes.
+3. Push to GitHub Pages.
+4. Confirm the deployed Contact page loads.
+5. Confirm the deployed favicon appears in browser tabs or after cache refresh.
+6. Confirm footer Contact links work on live public pages.
+7. Confirm the live sitemap includes `/contact.html`.
+
 Recommended next website session:
 
 1. Run build-start checks.
@@ -1258,20 +1346,12 @@ Recommended next website session:
 
 Recommended next public-page work:
 
-    Contact page, Resources page, Build Notes section, About page polish if needed, or additional focused Knowledge Base articles
+    Resources page, Build Notes section, About page polish if needed, or additional focused Knowledge Base articles
 
 Recommended next website session priority:
 
-    1. Set up email routing or forwarding for contact@tensaengineering.dev.
-    2. Confirm the address forwards correctly before publishing it publicly.
-    3. Create or plan /contact.html only after email routing is confirmed.
-
-Planned Contact page:
-
-    Future path: /contact.html
-    Planned public email: contact@tensaengineering.dev
-    Purpose: allow readers to ask questions, report site issues, or make appropriate TENSA Engineering inquiries.
-    Do not publish the Contact page until email routing or forwarding is confirmed.
+    Verify the deployed Contact page, favicon behavior, footer links, and sitemap after push.
+    After that, choose between Resources, Build Notes, About polish, or additional Knowledge Base expansion.
 
 Later-phase public-page idea:
 
@@ -1279,7 +1359,7 @@ Later-phase public-page idea:
 
 Reason:
 
-The homepage, About page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should confirm the public contact path, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+The homepage, About page, Contact page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should organize public resources, publish public-friendly build history, polish existing pages if needed, or expand the teaching layer with additional focused articles.
 
 Recommended SEO/topic work:
 
@@ -1291,11 +1371,15 @@ The technical discoverability layer is in place locally, but content SEO should 
 
 Recommended post-deploy checks after this session:
 
-1. Confirm the Knowledge Base index loads live:
+1. Confirm the Contact page loads live:
+
+       https://tensaengineering.dev/contact.html
+
+2. Confirm the Knowledge Base index loads live:
 
        https://tensaengineering.dev/knowledge-base/
 
-2. Confirm all eight Knowledge Base article URLs load live:
+3. Confirm all eight Knowledge Base article URLs load live:
 
        https://tensaengineering.dev/knowledge-base/ai-operations/
        https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
@@ -1306,12 +1390,13 @@ Recommended post-deploy checks after this session:
        https://tensaengineering.dev/knowledge-base/troubleshooting-training/
        https://tensaengineering.dev/knowledge-base/neurocore-architecture/
 
-3. Confirm the live sitemap includes all eight Knowledge Base article URLs:
+4. Confirm the live sitemap includes `/contact.html` and all eight Knowledge Base article URLs:
 
        https://tensaengineering.dev/sitemap.xml
 
-4. Inspect the Knowledge Base index and key article URLs in Google Search Console if appropriate:
+5. Inspect the Contact page, Knowledge Base index, and key article URLs in Google Search Console if appropriate:
 
+       https://tensaengineering.dev/contact.html
        https://tensaengineering.dev/knowledge-base/
        https://tensaengineering.dev/knowledge-base/ai-operations/
        https://tensaengineering.dev/knowledge-base/neurocore-architecture/

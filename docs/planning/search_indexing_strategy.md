@@ -50,6 +50,7 @@ Current public pages:
     /knowledge-base/
     /glossary/
     /about.html
+    /contact.html
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -76,13 +77,14 @@ Current search-indexing status:
     /story/ is included in sitemap.xml
     /glossary/ is included in sitemap.xml locally
     /about.html is included in sitemap.xml locally
+    /contact.html is included in sitemap.xml locally
     the first eight Knowledge Base article URLs are included in sitemap.xml locally
 
 Latest local link validation:
 
-    Public HTML files checked: 17
-    Internal links checked: 403
-    External/skipped links: 0
+    Public HTML files checked: 18
+    Internal links checked: 546
+    External/skipped links: 20
     Result: all checked internal links resolved successfully
 
 ---
@@ -134,6 +136,7 @@ The current sitemap should include only the current real public pages:
 
     https://tensaengineering.dev/
     https://tensaengineering.dev/about.html
+    https://tensaengineering.dev/contact.html
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
@@ -183,6 +186,7 @@ Directory index pages should use clean directory URLs when appropriate:
 
 Standalone HTML pages should use their actual paths:
 
+    https://tensaengineering.dev/contact.html
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
@@ -210,6 +214,9 @@ Current root-level `sitemap.xml` should use this structure:
       </url>
       <url>
         <loc>https://tensaengineering.dev/about.html</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/contact.html</loc>
       </url>
       <url>
         <loc>https://tensaengineering.dev/projects/</loc>

@@ -493,6 +493,45 @@ h1 {
   font-size: 14px;
 }
 
+.site-footer p {
+  margin: 0 0 12px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
+
+.footer-nav a {
+  color: #c7d2df;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #39ff88;
+  text-decoration: underline;
+}
+
+.callout-line a,
+.article-card a,
+.intro-card a,
+.story-card a,
+.footer-card a {
+  color: #39ff88;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.callout-line a:hover,
+.article-card a:hover,
+.intro-card a:hover,
+.story-card a:hover,
+.footer-card a:hover {
+  text-decoration: underline;
+}
+
 /* NeuroCore architecture showcase */
 
 .architecture-showcase {
@@ -1424,4 +1463,26 @@ h1 {
 .glossary-tooltip-close:hover,
 .glossary-tooltip-close:focus {
   color: #39ff88;
+}
+
+/* Keep button text readable when buttons appear inside content cards. */
+.article-card a.button,
+.intro-card a.button,
+.story-card a.button,
+.footer-card a.button {
+  text-decoration: none;
+}
+
+.article-card a.button.primary,
+.intro-card a.button.primary,
+.story-card a.button.primary,
+.footer-card a.button.primary {
+  color: #031109;
+}
+
+.article-card a.button.secondary,
+.intro-card a.button.secondary,
+.story-card a.button.secondary,
+.footer-card a.button.secondary {
+  color: #f5f7fa;
 }

@@ -16,6 +16,41 @@ The repositories remain the source of truth.
 
 ---
 
+## Contact Page Source Requirements
+
+Page type:
+
+    Public contact / inquiry page
+
+Current public route:
+
+    /contact.html
+
+Required source context before creating or materially changing this page:
+
+- confirmed email address
+- confirmed routing or forwarding behavior
+- website state
+- content style guide
+- current public navigation strategy
+- current public/private boundary for implementation repositories and support expectations
+
+Current verified contact address:
+
+    contact@tensaengineering.dev
+
+Current verified routing status:
+
+    Email forwarding was configured and tested before the public Contact page was published.
+
+Current content boundary:
+
+- The Contact page may provide a simple route for appropriate questions, website issues, and ecosystem inquiries.
+- It should not imply paid support, product support SLAs, public downloads, sales operations, or a public issue tracker unless those systems exist.
+- It should not expand factual project claims without project source docs.
+- It should remain footer-only unless the navigation strategy changes.
+
+
 ## Core Rule
 
 Before writing or significantly changing a factual project page, load the source docs for that page.

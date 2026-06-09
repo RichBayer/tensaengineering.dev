@@ -39,94 +39,101 @@ DNS / domain provider:
     ├── README.md
     ├── about.html
     ├── assets
-    │   ├── images
-    │   │   ├── branding
-    │   │   │   ├── argus-acli
-    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
-    │   │   │   ├── argus-lab
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
-    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │   │   │   │   └── argus-lab-neurocore-stacked.png
-    │   │   │   ├── neurocore
-    │   │   │   │   ├── neurocore-horizontal-transparent.png
-    │   │   │   │   ├── neurocore-horizontal.png
-    │   │   │   │   ├── neurocore-stacked-transparent.png
-    │   │   │   │   └── neurocore-stacked.png
-    │   │   │   └── tensa
-    │   │   │       ├── tensa-horizontal-header-transparent.png
-    │   │   │       ├── tensa-horizontal-logo-transparent.png
-    │   │   │       ├── tensa-horizontal-logo.png
-    │   │   │       ├── tensa-stacked-logo-transparent.png
-    │   │   │       └── tensa-stacked-logo.png
-    │   │   └── social
-    │   │       └── tensa-og-image.png
-    │   └── js
-    │       └── glossary-tooltips.js
+    │   ├── images
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── android-chrome-192x192.png
+    │   │   │       ├── android-chrome-512x512.png
+    │   │   │       ├── apple-touch-icon.png
+    │   │   │       ├── favicon-32x32.png
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-icon-512.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
+    ├── contact.html
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── glossary_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_answer_optimization_template.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
+    ├── favicon.ico
     ├── glossary
-    │   └── index.html
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
-
-    27 directories, 64 files
+    
+    27 directories, 71 files
 
 ---
 
@@ -214,6 +221,53 @@ It should not replace the Story page or become a full project explainer.
 
 ---
 
+### contact.html
+
+Purpose:
+
+    Public Contact page for TENSA Engineering.
+
+Current role:
+
+    Provides a simple public contact route after Cloudflare Email Routing was configured and tested.
+
+Current public contact address:
+
+    contact@tensaengineering.dev
+
+Current navigation:
+
+    Footer-only link across current public pages.
+
+Notes:
+
+- Contact is intentionally not part of the primary header navigation.
+- The page uses a mailto link and visible email address so users can either click or copy the address.
+- Email routing forwards to the configured destination inbox.
+
+---
+
+### favicon.ico
+
+Purpose:
+
+    Root-level browser favicon file.
+
+Current role:
+
+    Provides the primary favicon used by browser tabs, bookmarks, and default favicon discovery.
+
+Current source:
+
+    Dedicated simplified TENSA T-symbol favicon asset.
+
+Notes:
+
+- The favicon is intentionally simplified compared with the full TENSA logo.
+- It uses a transparent background and no wordmark for small-size readability.
+
+---
+
 ### robots.txt
 
 Purpose:
@@ -246,6 +300,7 @@ Current sitemap URLs:
 
     https://tensaengineering.dev/
     https://tensaengineering.dev/about.html
+    https://tensaengineering.dev/contact.html
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
@@ -293,6 +348,9 @@ Currently controls:
 - Knowledge Base index article link styling
 - glossary reference page styling
 - inline glossary tooltip styling
+- footer navigation styling
+- content-link styling inside cards
+- explicit button color protection when buttons appear inside content cards
 
 All current public pages use this stylesheet.
 
@@ -355,9 +413,14 @@ Rules:
 
 Current files:
 
+    android-chrome-192x192.png
+    android-chrome-512x512.png
+    apple-touch-icon.png
+    favicon-32x32.png
     tensa-horizontal-logo.png
     tensa-horizontal-logo-transparent.png
     tensa-horizontal-header-transparent.png
+    tensa-icon-512.png
     tensa-stacked-logo.png
     tensa-stacked-logo-transparent.png
 
@@ -369,11 +432,13 @@ Current usage:
 
 - `tensa-horizontal-header-transparent.png` is used in page headers.
 - `tensa-stacked-logo-transparent.png` is used in homepage and section hero branding.
+- `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `tensa-icon-512.png`, and root `favicon.ico` support browser tabs, bookmarks, and mobile icon discovery.
 
 Notes:
 
 - The header logo removes the tiny bottom subtitle text so it remains readable at navigation size.
 - The full horizontal and stacked logo versions are preserved for larger or future uses.
+- The favicon uses a simplified TENSA T-symbol with a transparent background for small-size readability.
 
 ---
 
@@ -1558,4 +1623,4 @@ Last known output:
     │   └── index.html
     └── styles.css
 
-    27 directories, 64 files
+    27 directories, 71 files

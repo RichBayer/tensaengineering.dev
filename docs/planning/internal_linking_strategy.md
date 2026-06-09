@@ -53,6 +53,7 @@ Current active public pages:
     /knowledge-base/index.html
     /glossary/index.html
     /about.html
+    /contact.html
     /knowledge-base/ai-operations/index.html
     /knowledge-base/persistent-ai-memory/index.html
     /knowledge-base/controlled-ai-systems/index.html
@@ -82,6 +83,22 @@ Current header navigation should use:
 | Story | `/story/` | Active | Full public origin story page. |
 | About | `/about.html` | Active | Concise public organizational identity page. |
 
+Contact is intentionally not part of primary header navigation.
+
+---
+
+## Current Footer Navigation Targets
+
+Current footer navigation should use:
+
+| Label | Target | Status | Notes |
+|---|---|---|---|
+| Contact | `/contact.html` | Active | Footer-only public contact route. Do not add to primary header navigation unless the site strategy changes. |
+| About | `/about.html` | Active | Concise public organizational identity page. |
+| Projects | `/projects/` | Active | Main ecosystem project index. |
+| Knowledge Base | `/knowledge-base/` | Active | Main teaching layer index. |
+| Glossary | `/glossary/` | Active | Public reference page for ecosystem terms. |
+
 ---
 
 ## Link Destination Map
@@ -99,6 +116,7 @@ Use these preferred destinations when topics appear in public pages.
 | Knowledge Base | `/knowledge-base/` | Same | Main teaching layer index. |
 | Glossary / definitions | `/glossary/` | Same | Public reference page for compact ecosystem definitions and inline tooltip destinations. |
 | Origin story | `/story/` | Same, or future deeper story article if needed | Story index owns the full public origin narrative. Do not overload About with the full origin story. |
+| Contact / inquiries / site issues | `/contact.html` | Same unless a future support or resources flow is created | Contact page is a simple public route and should remain footer-only for now. |
 | Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
 | AI Operations | `/knowledge-base/ai-operations/` | Same, plus deeper future subtopics if needed | Article 1 in the current recommended Knowledge Base path. |
 | Persistent AI memory | `/knowledge-base/persistent-ai-memory/` | Same, plus deeper future subtopics if needed | Article 2 in the current recommended Knowledge Base path. |
@@ -235,6 +253,7 @@ These are intentional temporary or future targets.
 |---|---|---|
 | Homepage Knowledge Base preview | `/knowledge-base/` | `/knowledge-base/` |
 | Homepage origin story preview | `/story/` | `/story/` |
+| Footer Contact link | `/contact.html` | `/contact.html` |
 | Public technical artifacts | No public link yet | Possibly `/resources/` after enough useful public material exists |
 | Build history | No public link yet | Possibly `/build-notes/` after public-friendly build summaries are ready |
 

@@ -23,7 +23,7 @@ DNS / domain:
 
 Current repository size:
 
-    27 directories, 64 files
+    27 directories, 71 files
 
 Verify at build start with:
 
@@ -248,7 +248,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html about.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
+    grep -R "href=" -n index.html about.html contact.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
 
 For diff checks, prefer no-pager output to avoid clipped terminal pager output:
 
@@ -284,6 +284,7 @@ Current public pages:
     /knowledge-base/
     /glossary/
     /about.html
+    /contact.html
     /knowledge-base/ai-operations/
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
@@ -319,6 +320,8 @@ Current public page status:
     /projects/argus-lab.html    Live full Argus Lab public project page
     /knowledge-base/                                      Live Knowledge Base article-path hub
     /glossary/                                            Live public Glossary page
+    /about.html                                           Live About page
+    /contact.html                                         Live Contact page, footer-only navigation
     /knowledge-base/ai-operations/                        Live Knowledge Base article
     /knowledge-base/persistent-ai-memory/                 Live Knowledge Base article
     /knowledge-base/controlled-ai-systems/                Live Knowledge Base article
@@ -329,7 +332,26 @@ Current public page status:
     /knowledge-base/neurocore-architecture/               Live Knowledge Base article
     /story/                                               Live full public Story page
 
+Current Contact page:
+
+    /contact.html
+
+Current public contact address:
+
+    contact@tensaengineering.dev
+
+Current contact routing status:
+
+    Cloudflare Email Routing configured and tested before public Contact page publication.
+
+Current favicon / browser icon state:
+
+    root favicon.ico exists
+    favicon assets exist under assets/images/branding/tensa/
+    current public HTML pages include favicon link tags
+
 ---
+
 
 # CURRENT SEARCH / SEO STATE
 
@@ -350,6 +372,7 @@ Current sitemap contains canonical HTTPS non-www URLs for:
 
     https://tensaengineering.dev/
     https://tensaengineering.dev/about.html
+    https://tensaengineering.dev/contact.html
     https://tensaengineering.dev/projects/
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
@@ -374,6 +397,7 @@ Current SEO/social metadata:
 - public HTML pages use Twitter large-image card metadata where currently implemented
 - public HTML pages use the dedicated TENSA social preview image where currently implemented
 - public HTML pages use JSON-LD structured data where currently implemented
+- current public HTML pages include favicon link tags
 
 Current social preview asset:
 
@@ -388,14 +412,15 @@ Current search registration status:
     /story/ included in sitemap.xml
     /glossary/ included in sitemap.xml locally
     /about.html included in sitemap.xml locally
+    /contact.html included in sitemap.xml locally
     sitemap.xml is URL-only locally
     first eight Knowledge Base article URLs included in sitemap.xml locally
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 17
-    Internal links checked: 403
-    External/skipped links: 0
+    Public HTML files checked: 18
+    Internal links checked: 546
+    External/skipped links: 20
     Result: all checked internal links resolved successfully
 
 Known Search Console status:
@@ -408,7 +433,11 @@ This is expected and harmless because those are alternate redirect versions. The
 
     https://tensaengineering.dev/
 
-Post-deploy search checks after the latest sitemap URL-only cleanup and documentation closeout:
+Post-deploy search checks after the latest Contact / favicon / sitemap / footer update:
+
+- Confirm the live Contact page loads:
+
+      https://tensaengineering.dev/contact.html
 
 - Confirm the live Knowledge Base index loads:
 
@@ -416,22 +445,24 @@ Post-deploy search checks after the latest sitemap URL-only cleanup and document
 
 - Confirm all eight Knowledge Base article URLs load live.
 
-- Confirm the live sitemap is URL-only and includes About, Glossary, Story, and all eight Knowledge Base article URLs.
+- Confirm the live sitemap is URL-only and includes Contact, About, Glossary, Story, and all eight Knowledge Base article URLs.
 
-- Inspect the Knowledge Base index and key article URLs in Google Search Console if appropriate:
+- Inspect the Contact page, Knowledge Base index, and key article URLs in Google Search Console if appropriate:
 
+      https://tensaengineering.dev/contact.html
       https://tensaengineering.dev/knowledge-base/
       https://tensaengineering.dev/knowledge-base/ai-operations/
       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
 
 Future SEO work:
 
-- Add or verify richer Open Graph / Twitter / JSON-LD metadata on the updated NeuroCore page.
+- Add or verify richer Open Graph / Twitter / JSON-LD metadata on updated pages as needed.
 - Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
 - Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
 - Focus future search growth on useful Knowledge Base content and clean internal links, not metadata alone.
 
 ---
+
 
 # CURRENT STRATEGIC DIRECTION
 
@@ -609,9 +640,20 @@ Branding hierarchy exists at:
     assets/images/branding/argus-acli/
     assets/images/branding/argus-lab/
 
+Current TENSA favicon / icon assets:
+
+    favicon.ico
+    assets/images/branding/tensa/favicon-32x32.png
+    assets/images/branding/tensa/apple-touch-icon.png
+    assets/images/branding/tensa/tensa-icon-512.png
+    assets/images/branding/tensa/android-chrome-192x192.png
+    assets/images/branding/tensa/android-chrome-512x512.png
+
 Current branding behavior:
 
 - all current public pages use the header-optimized TENSA logo
+- all current public pages include favicon link tags
+- root favicon.ico provides browser favicon discovery
 - homepage hero uses the TENSA stacked logo
 - Projects page hero uses the TENSA stacked logo
 - NeuroCore page hero uses the NeuroCore stacked logo
@@ -621,9 +663,11 @@ Current branding behavior:
 - Knowledge Base articles use TENSA site branding
 - Story page hero uses the TENSA stacked logo
 - Glossary page uses TENSA site branding
+- Contact page uses TENSA site branding
 - homepage and Projects page project cards use horizontal project logos
 - transparent PNG variants are used to avoid baked black logo backgrounds
 - header logo removes the tiny unreadable subtitle line
+- favicon uses a simplified TENSA T-symbol for small browser-tab readability
 
 Current visual direction:
 
@@ -639,8 +683,10 @@ Current visual direction:
 - readable Knowledge Base index links with explicit styling
 - glossary reference page layout
 - inline glossary tooltip styling
+- footer navigation styling
 
 ---
+
 
 # CURRENT NAVIGATION STATE
 
@@ -653,7 +699,7 @@ Current primary navigation:
     Story
     About
 
-Current targets:
+Current primary targets:
 
     Home → /index.html
     Projects → /projects/
@@ -661,6 +707,16 @@ Current targets:
     Glossary → /glossary/
     Story → /story/
     About → /about.html
+
+Current footer navigation targets:
+
+    Contact → /contact.html
+    About → /about.html
+    Projects → /projects/
+    Knowledge Base → /knowledge-base/
+    Glossary → /glossary/
+
+Contact is footer-only and intentionally not part of the primary header navigation.
 
 Knowledge Base points to the real `/knowledge-base/` page.
 
@@ -684,6 +740,7 @@ When `/resources/` is created:
 
 ---
 
+
 # CURRENT COMPLETED WORK
 
 Completed so far:
@@ -704,13 +761,23 @@ Completed so far:
 - Knowledge Base index upgraded into a live article-path hub
 - first eight Knowledge Base articles created
 - Story page created
+- Glossary page created and added to primary navigation
+- About page created and added to sitemap.xml
+- Contact page created after email routing was configured and tested
+- Cloudflare Email Routing configured and tested for contact@tensaengineering.dev
+- Contact page added to sitemap.xml
+- Contact page linked footer-only across current public pages
 - branding asset hierarchy created
 - TENSA, NeuroCore, Argus ACLI, and Argus Lab logos added
 - transparent logo variants created
 - header-optimized TENSA logo created
+- simplified TENSA T-symbol favicon assets created
+- root favicon.ico added
+- favicon link tags added across current public pages
 - branding integrated across all current public pages
 - Knowledge Base nav links updated across current pages
 - Story nav links updated across current pages
+- footer navigation styling added
 - repository map created and updated
 - website state created and updated
 - content source map created and updated
@@ -727,6 +794,8 @@ Completed so far:
 - real local internal-link validation rule added to closeout workflow
 - root sitemap.xml created
 - `/story/` added to sitemap.xml
+- `/glossary/` added to sitemap.xml
+- `/contact.html` added to sitemap.xml
 - eight Knowledge Base article URLs added to sitemap.xml
 - root robots.txt created
 - dedicated 1200 x 630 TENSA social preview image created
@@ -738,19 +807,30 @@ Completed so far:
 - sitemap submitted successfully to Google
 - Bing Webmaster Tools imported from Google Search Console
 - sitemap submitted to Bing and processing
-- Glossary page created and added to primary navigation
-- About page created and added to sitemap.xml
 - inline glossary tooltip JavaScript added
 - glossary reference styling added
 - inline glossary tooltip styling added
 - Knowledge Base articles received inline glossary tooltip links
-- `/glossary/` added to sitemap.xml
-- local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
-- repository map updated to 27 directories and 64 files
+- repository map updated to 27 directories and 71 files
+- local internal-link validation completed successfully for 546 internal links across 18 public HTML files
 
 Recent completed website work:
+
+- Contact page created at `contact.html`.
+- `contact@tensaengineering.dev` configured through Cloudflare Email Routing and tested before publication.
+- Contact added as a footer-only route across current public pages.
+- Contact intentionally kept out of primary header navigation.
+- `sitemap.xml` updated with `https://tensaengineering.dev/contact.html`.
+- Favicon assets created and wired across current public pages.
+- Root `favicon.ico` added.
+- `styles.css` updated for footer navigation, content links, button readability inside cards, and favicon-related visual consistency.
+- `projects/neurocore.html` footer normalized with the shared footer pattern.
+- Local internal-link validation checked 18 public HTML files, 546 internal links, and 20 external/skipped links successfully.
+- Closeout docs updated for Contact, favicon assets, footer navigation, sitemap, source requirements, page inventory, repository map, search indexing, and website state.
+
+Previous completed website work:
 
 - First eight Knowledge Base article pages created:
     - `knowledge-base/ai-operations/index.html`
@@ -764,7 +844,6 @@ Recent completed website work:
 - `knowledge-base/index.html` upgraded into a live article-path hub.
 - Knowledge Base article layout and index link styling added to `styles.css`.
 - Article path links were validated locally.
-- Temporary local internal-link validation previously checked 346 internal links successfully across 16 public HTML files; latest validation checked 403 internal links/assets across 17 public HTML files.
 - `sitemap.xml` updated with `/glossary/` and the eight Knowledge Base article URLs.
 - Closeout docs updated for the Knowledge Base article path, sitemap update, source requirements, link validation, and Python writer workflow.
 - `story/index.html` created as a full public Story page.
@@ -786,7 +865,7 @@ Recent completed website work:
 - `docs/ai-operations/claude/claude_website_polish_resume_prompt.md` created to preserve Claude polish workflow and reduce tone drift.
 - Closeout docs updated for the new Story page, Claude prompt, sitemap entry, navigation changes, and targeted verification workflow.
 
-Previous completed website work:
+Earlier NeuroCore / Argus ACLI page work:
 
 - `projects/neurocore.html` updated with a stronger public platform story.
 - NeuroCore page architecture section replaced with a visual architecture showcase.
@@ -838,7 +917,6 @@ Current Glossary / tooltip work completed:
 - `docs/planning/search_answer_optimization_template.md` created.
 - Closeout docs updated to reflect connector-read / local-working-tree workflow improvements.
 
-
 Current public-page cleanup completed:
 
 - Public GitHub navigation removed from current public pages.
@@ -851,13 +929,12 @@ Current public-page cleanup completed:
 
 ---
 
+
 # CURRENT NOT COMPLETED
 
 Not yet completed:
 
 - Resources page
-- Contact page
-- Contact email forwarding setup
 - Build Notes section
 - old-site migration plan
 - permanent internal link checker script
@@ -865,13 +942,15 @@ Not yet completed:
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - dedicated SEO/topic-map session for the first Knowledge Base article path
-- live sitemap confirmation after latest sitemap URL-only cleanup deployment
-- Google Search Console inspection of Knowledge Base index and key article URLs after deployment if appropriate
+- live deployment confirmation after latest Contact / favicon / sitemap / footer update
+- Google Search Console indexing data review after processing
+- Bing Webmaster Tools indexing data review after processing
 - article templates for future Knowledge Base expansion
 - public technical artifact strategy
 - public repository / open-component strategy
 
 ---
+
 
 # SOURCE-DOC RULES
 
@@ -958,7 +1037,7 @@ The verification should confirm:
 Example checks:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 64 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 71 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 Do not move to the next replacement until verification passes or the mismatch is understood and corrected.
@@ -992,18 +1071,20 @@ Update only the docs actually impacted by the session.
 
 # CURRENT NEXT BEST STEP
 
+Recommended immediate post-closeout work:
+
+1. Review the final diff.
+2. Commit the Contact page, favicon assets, sitemap update, footer navigation update, and documentation closeout changes.
+3. Push to GitHub Pages.
+4. Confirm the deployed Contact page loads.
+5. Confirm the deployed favicon appears in browser tabs or after cache refresh.
+6. Confirm footer Contact links work on live public pages.
+7. Confirm the live sitemap includes `/contact.html`.
+
 Recommended next website session priority:
 
-    1. Set up email routing or forwarding for contact@tensaengineering.dev.
-    2. Confirm the address forwards correctly before publishing it publicly.
-    3. Create or plan /contact.html only after email routing is confirmed.
-
-Planned Contact page:
-
-    Future path: /contact.html
-    Planned public email: contact@tensaengineering.dev
-    Purpose: allow readers to ask questions, report site issues, or make appropriate TENSA Engineering inquiries.
-    Do not publish the Contact page until email routing or forwarding is confirmed.
+    Verify the deployed Contact page, favicon behavior, footer links, and sitemap after push.
+    After that, choose between Resources, Build Notes, About polish, or additional Knowledge Base expansion.
 
 Later-phase public-page idea:
 
@@ -1015,36 +1096,37 @@ Recommended SEO/topic work:
 
 Reason:
 
-The homepage, About page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next website session should confirm the public contact path, organize public resources, publish public-friendly build history, or expand the teaching layer with additional focused articles.
+The homepage, About page, Contact page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next website session should verify the deployed Contact / favicon / sitemap changes first, then deliberately choose whether to organize public resources, publish public-friendly build history, polish existing pages, or expand the teaching layer with additional focused articles.
 
 ---
+
 
 # NEXT PUBLIC BUILD OPTIONS
 
 Possible next public work:
 
-1. Set up and confirm forwarding for `contact@tensaengineering.dev`.
+1. Verify the deployed Contact page, favicon behavior, footer links, and sitemap after push.
 2. Review `/about.html` locally and polish it only if needed.
-3. Create `/contact.html` after email forwarding is confirmed.
-4. Create `/resources/index.html`.
-5. Create `/build-notes/index.html`.
-6. Run a dedicated SEO/topic-map pass for the first Knowledge Base article path.
-7. Add deeper SEO/metadata pass for updated pages.
-8. Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
-9. Create permanent internal link checker script.
-10. Create additional focused Knowledge Base articles.
-11. Review glossary terms after future Knowledge Base expansion.
-12. Use the search-answer optimization template during a focused SEO/content clarity pass.
+3. Create `/resources/index.html`.
+4. Create `/build-notes/index.html`.
+5. Run a dedicated SEO/topic-map pass for the first Knowledge Base article path.
+6. Add deeper SEO/metadata pass for updated pages.
+7. Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
+8. Create permanent internal link checker script.
+9. Create additional focused Knowledge Base articles.
+10. Review glossary terms after future Knowledge Base expansion.
+11. Use the search-answer optimization template during a focused SEO/content clarity pass.
 
 Recommended next direction:
 
-    Confirm the public contact path, then create or plan the Contact page.
+    Commit and push the current Contact / favicon / footer / sitemap build, verify it live, then choose the next public website expansion deliberately.
 
 Reason:
 
-The homepage, About page, core project pages, Glossary, Story page, Knowledge Base index, and first eight Knowledge Base articles now exist. The next session should make TENSA easier to understand and contact without publishing an unconfirmed email address.
+The homepage, About page, Contact page, core project pages, Glossary, Story page, Knowledge Base index, and first eight Knowledge Base articles now exist. The next session should verify the latest deployed changes first, then make TENSA easier to navigate, understand, and trust through Resources, Build Notes, page polish, or more focused Knowledge Base work.
 
 ---
+
 
 # FINAL PRINCIPLE
 
