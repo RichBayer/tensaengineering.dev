@@ -51,6 +51,40 @@ Deeper explanations are moving into dedicated pages and Knowledge Base articles.
 
 ---
 
+## Current Closeout Snapshot
+
+Current branch:
+
+    content/ai-ops-project-context
+
+Current local closeout state:
+
+- focused AI Operations article created
+- AI Operations page links to the focused guide
+- MCP-based tool glossary definition added
+- sitemap.xml contains 19 canonical URLs
+- repository size is 27 directories and 72 files
+- required closeout planning docs are updated
+- local internal-link and anchor validation passed
+
+Focused article:
+
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+
+Latest validation:
+
+    Public HTML files checked: 19
+    Internal links checked: 579
+    External/skipped links: 21
+    Result: all checked internal links and anchors resolved successfully
+
+Current boundary:
+
+    These closeout changes are local branch work until committed and pushed.
+    Deployment and indexing must not be claimed until the branch is merged and GitHub Pages deploys it.
+
+---
+
 ## URL
 
 Primary domain:
@@ -147,6 +181,7 @@ Current key files:
 - knowledge-base/index.html
 - glossary/index.html
 - knowledge-base/ai-operations/index.html
+- knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
 - knowledge-base/persistent-ai-memory/index.html
 - knowledge-base/controlled-ai-systems/index.html
 - knowledge-base/local-first-ai/index.html
@@ -173,7 +208,7 @@ Current key files:
 
 Current repository size:
 
-    27 directories, 71 files
+    27 directories, 72 files
 
 Last verified by user-provided output during closeout:
 
@@ -185,10 +220,10 @@ Last verified by user-provided output during closeout:
 
 Latest local internal-link validation result:
 
-    Public HTML files checked: 18
-    Internal links checked: 546
-    External/skipped links: 20
-    Result: all checked internal links resolved successfully
+    Public HTML files checked: 19
+    Internal links checked: 579
+    External/skipped links: 21
+    Result: all checked internal links and anchors resolved successfully
 
 ---
 
@@ -206,6 +241,7 @@ Current public pages:
     /about.html
     /contact.html
     /knowledge-base/ai-operations/
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
     /knowledge-base/local-first-ai/
@@ -366,8 +402,9 @@ Important notes:
     Contact is footer-only and intentionally not part of the primary header navigation.
     Public GitHub navigation has been removed from current public pages.
     Direct public links to private implementation repositories have been removed from current public pages.
-    Knowledge Base index links to all eight current Knowledge Base articles.
-    The current Knowledge Base article path links article-to-article and loops back to the start.
+    Knowledge Base index links to all eight foundation Knowledge Base articles.
+    The foundation path links article-to-article and loops back to the start.
+    AI Operations links to the focused project-context guide.
     Inline glossary terms in Knowledge Base articles point to /glossary/ entries.
 
 Current public artifact strategy:
@@ -406,6 +443,7 @@ Current sitemap contents:
 - https://tensaengineering.dev/knowledge-base/
 - https://tensaengineering.dev/glossary/
 - https://tensaengineering.dev/knowledge-base/ai-operations/
+- https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
 - https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
 - https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
 - https://tensaengineering.dev/knowledge-base/local-first-ai/
@@ -435,7 +473,9 @@ Current indexing status:
     /story/ included in sitemap.xml
     /glossary/ included in sitemap.xml locally
     /contact.html included in sitemap.xml locally
-    first eight Knowledge Base article URLs included in sitemap.xml locally
+    eight foundation Knowledge Base article URLs included in sitemap.xml locally
+    focused project-context guide URL included in sitemap.xml locally
+    current local sitemap contains 19 canonical URLs
 
 Known Search Console note:
 
@@ -797,9 +837,15 @@ Current article path:
     8. NeuroCore Architecture
        /knowledge-base/neurocore-architecture/
 
+Current focused article:
+
+    How to Keep AI From Losing Project Context
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+
 Current article-path behavior:
 
-    Knowledge Base index links to all eight articles.
+    Knowledge Base index links to all eight foundation articles.
+    AI Operations links to the focused project-context guide.
     Articles link forward through the recommended reading path.
     NeuroCore Architecture links back to AI Operations to restart the path.
     Related links point only to real public pages.
@@ -838,6 +884,10 @@ Current purpose:
 - provide compact reference definitions for recurring terminology
 - serve as the destination for inline glossary tooltip links from Knowledge Base articles
 - help explain NeuroCore, Argus ACLI, Argus Lab, AI Operations, Linux diagnostics, evidence, memory, continuity, control-plane, and tool-boundary terms
+
+Current focused-article glossary addition:
+
+    MCP-based tool definition added
 
 Current implementation support:
 
@@ -1158,6 +1208,15 @@ Social content:
 
 ---
 
+- focused AI Operations article created
+- AI Operations discovery links added
+- MCP-based tool glossary definition added
+- sitemap.xml expanded to 19 canonical URLs
+- closeout docs updated for the new article
+- local validation passed for 579 internal links across 19 public HTML files
+
+---
+
 ## Not Yet Completed
 
 - Resources page
@@ -1165,7 +1224,7 @@ Social content:
 - analytics decisions
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- live deployment confirmation after latest Contact / favicon / sitemap / footer update
+- commit, push, merge, and live deployment confirmation for the focused AI Operations article branch
 - old-site migration plan
 - permanent internal link checker script
 - article templates for future Knowledge Base expansion
@@ -1279,7 +1338,7 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "27 directories, 71 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 72 files\|how-to-keep-ai-from-losing-project-context.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -1325,81 +1384,29 @@ Preferred safe pattern:
 
 ## Next Recommended Steps
 
-Recommended immediate post-closeout work:
+Immediate:
 
-1. Review the final diff.
-2. Commit the Contact page, favicon assets, sitemap update, footer navigation update, and documentation closeout changes.
-3. Push to GitHub Pages.
-4. Confirm the deployed Contact page loads.
-5. Confirm the deployed favicon appears in browser tabs or after cache refresh.
-6. Confirm footer Contact links work on live public pages.
-7. Confirm the live sitemap includes `/contact.html`.
+1. Update the compressed resume prompt.
+2. Run final validation.
+3. Review the diff.
+4. Commit and push the feature branch.
+5. Merge the branch.
+6. Confirm GitHub Pages deploys the focused article and 19-URL sitemap.
 
-Recommended next website session:
+After deployment:
 
-1. Run build-start checks.
-2. Confirm repo is clean.
-3. Review `docs/planning/page_inventory.md`.
-4. Review `docs/planning/internal_linking_strategy.md`.
-5. Review `docs/planning/content_source_map.md`.
-6. Choose the next page, section, or SEO/topic-map session deliberately before editing.
+- confirm the AI Operations page links to the focused guide
+- confirm the focused article loads at its canonical URL
+- confirm the live sitemap contains 19 URLs
+- inspect the article in Google Search Console if appropriate
+- do not claim indexing until webmaster-tool evidence confirms it
 
-Recommended next public-page work:
+Next website work:
 
-    Resources page, Build Notes section, About page polish if needed, or additional focused Knowledge Base articles
-
-Recommended next website session priority:
-
-    Verify the deployed Contact page, favicon behavior, footer links, and sitemap after push.
-    After that, choose between Resources, Build Notes, About polish, or additional Knowledge Base expansion.
-
-Later-phase public-page idea:
-
-    FAQ page after recurring site, project, product, or Knowledge Base questions emerge.
-
-Reason:
-
-The homepage, About page, Contact page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, and the first eight Knowledge Base articles now all have public site structure. The next major website step should organize public resources, publish public-friendly build history, polish existing pages if needed, or expand the teaching layer with additional focused articles.
-
-Recommended SEO/topic work:
-
-    Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
-
-Reason:
-
-The technical discoverability layer is in place locally, but content SEO should be handled deliberately instead of mixed into documentation closeout.
-
-Recommended post-deploy checks after this session:
-
-1. Confirm the Contact page loads live:
-
-       https://tensaengineering.dev/contact.html
-
-2. Confirm the Knowledge Base index loads live:
-
-       https://tensaengineering.dev/knowledge-base/
-
-3. Confirm all eight Knowledge Base article URLs load live:
-
-       https://tensaengineering.dev/knowledge-base/ai-operations/
-       https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
-       https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
-       https://tensaengineering.dev/knowledge-base/local-first-ai/
-       https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
-       https://tensaengineering.dev/knowledge-base/linux-diagnostics/
-       https://tensaengineering.dev/knowledge-base/troubleshooting-training/
-       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
-
-4. Confirm the live sitemap includes `/contact.html` and all eight Knowledge Base article URLs:
-
-       https://tensaengineering.dev/sitemap.xml
-
-5. Inspect the Contact page, Knowledge Base index, and key article URLs in Google Search Console if appropriate:
-
-       https://tensaengineering.dev/contact.html
-       https://tensaengineering.dev/knowledge-base/
-       https://tensaengineering.dev/knowledge-base/ai-operations/
-       https://tensaengineering.dev/knowledge-base/neurocore-architecture/
+    Start a fresh thread from the resume prompt.
+    Run the full workflow.
+    Fix any remaining drift found during that review.
+    Then choose the next page deliberately.
 
 ---
 
