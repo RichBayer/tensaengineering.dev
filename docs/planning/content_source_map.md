@@ -76,6 +76,7 @@ Current public pages:
     glossary/
     about.html
     knowledge-base/ai-operations/
+    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     knowledge-base/persistent-ai-memory/
     knowledge-base/controlled-ai-systems/
     knowledge-base/local-first-ai/
@@ -417,7 +418,7 @@ Current role:
 
 The Knowledge Base is the public teaching layer for concepts that appear across the ecosystem.
 
-It currently introduces and routes readers through the first recommended eight-article path:
+It currently introduces and routes readers through the recommended eight-article foundation path:
 
     AI Operations
     Persistent AI Memory
@@ -427,6 +428,8 @@ It currently introduces and routes readers through the first recommended eight-a
     Linux Diagnostics
     Troubleshooting Training
     NeuroCore Architecture
+
+Focused long-form articles may extend individual foundation categories after their source requirements, discovery links, and documentation ownership are defined.
 
 ---
 
@@ -558,6 +561,100 @@ Special notes:
 - Keep this article focused on disciplined AI-assisted work.
 - Do not turn it into a generic prompting tips article.
 - Preserve the distinction between AI productivity and governed AI operations.
+
+---
+
+### Project Context Continuity Guide
+
+Path:
+
+    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+
+Current status:
+
+    Live
+
+Current role:
+
+Provides a practical long-form guide for keeping AI-assisted project work grounded and recoverable across sessions, tools, repositories, and fresh AI threads.
+
+It explains:
+
+- version control as a shared checkpoint system
+- source-of-truth documents
+- project-state and resume documents
+- repository connectors and their boundaries
+- local versus remote repository state
+- explicit operating rules
+- verification before claims
+- documentation maintenance
+- disciplined closeout
+- current reality versus future plans
+
+Required source material before major rewrite:
+
+    TENSA AI Operations methodology source material
+    docs/ai-operations/documentation_closeout_protocol.md
+    docs/ai-operations/tensa_website_resume_prompt.md
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/glossary_strategy.md
+    docs/website_state.md
+    current public AI Operations article
+    current Persistent AI Memory article
+    current Controlled AI Systems article
+    current Safe Tool Interaction article
+    current Story page
+    current NeuroCore project page
+
+Repository and connector evidence rules:
+
+- Use local repository commands for claims about the current local checkout, branch, working tree, uncommitted files, generated files, and local validation results.
+- Use the connected GitHub repository or other verified remote evidence for claims about remote branches, commits, pull requests, and files already present on GitHub.
+- Do not treat a remote connector read as proof of uncommitted local state.
+- Do not treat local uncommitted state as proof that a change exists remotely.
+- When local and remote state differ, explain the distinction explicitly.
+- Do not claim that a write occurred unless the write was explicitly authorized and its result was verified.
+- Read-only connector access does not imply permission to create commits, branches, pull requests, issues, comments, or file changes.
+
+Current-versus-future rules:
+
+- Separate implemented workflow, current repository state, recommended practice, planned automation, and future architecture.
+- Do not describe proposed context automation as already implemented.
+- Do not imply that a connector provides complete project memory.
+- Do not present the TENSA website as the engineering source of truth for NeuroCore, Argus ACLI, or Argus Lab.
+- Preserve the rule that the website explains and teaches while the repositories prove.
+
+Glossary and terminology requirements:
+
+- Use `docs/planning/glossary_strategy.md` before adding or changing glossary-linked terms.
+- Keep inline glossary links sparse and deliberate.
+- Use the public Glossary for compact definitions.
+- Use full Knowledge Base articles for concepts that require explanation rather than a tooltip.
+- Keep MCP-based tool language accurate and avoid implying capabilities that the connected tool does not expose.
+
+Verification requirements after material change:
+
+- verify the article locally in a browser
+- run the internal-link and anchor validator
+- confirm the article remains discoverable from the AI Operations page
+- confirm all documented related destinations exist
+- confirm `sitemap.xml` includes the canonical article URL
+- update `page_inventory.md`
+- update `internal_linking_strategy.md`
+- update `tensa_repository_map.txt` if structure changed
+- update `website_state.md`
+- update the resume prompt when the current operating state changes
+
+Special notes:
+
+- Keep the guide practical rather than turning it into generic prompting advice.
+- Preserve the distinction between memory, continuity, retrieval, documentation, repository state, and authorization.
+- Do not oversell connectors as automatic truth or complete memory.
+- Do not expose private implementation details, credentials, tokens, private repository contents, or personal information.
+- Keep examples useful without making unsupported claims about a specific tool or platform.
 
 ---
 

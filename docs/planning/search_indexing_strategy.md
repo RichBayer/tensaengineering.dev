@@ -52,6 +52,7 @@ Current public pages:
     /about.html
     /contact.html
     /knowledge-base/ai-operations/
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
     /knowledge-base/local-first-ai/
@@ -78,14 +79,16 @@ Current search-indexing status:
     /glossary/ is included in sitemap.xml locally
     /about.html is included in sitemap.xml locally
     /contact.html is included in sitemap.xml locally
-    the first eight Knowledge Base article URLs are included in sitemap.xml locally
+    the eight foundation Knowledge Base article URLs are included in sitemap.xml locally
+    the project-context continuity guide URL is included in sitemap.xml locally
+    sitemap.xml currently contains 19 canonical public URLs
 
 Latest local link validation:
 
-    Public HTML files checked: 18
-    Internal links checked: 546
-    External/skipped links: 20
-    Result: all checked internal links resolved successfully
+    Public HTML files checked: 19
+    Internal links checked: 579
+    External/skipped links: 21
+    Result: all checked internal links and anchors resolved successfully
 
 ---
 
@@ -132,7 +135,7 @@ The root-level sitemap file is:
 
     sitemap.xml
 
-The current sitemap should include only the current real public pages:
+The current sitemap should include only the current 19 real public pages:
 
     https://tensaengineering.dev/
     https://tensaengineering.dev/about.html
@@ -145,6 +148,7 @@ The current sitemap should include only the current real public pages:
     https://tensaengineering.dev/glossary/
     https://tensaengineering.dev/story/
     https://tensaengineering.dev/knowledge-base/ai-operations/
+    https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
     https://tensaengineering.dev/knowledge-base/local-first-ai/
@@ -190,6 +194,7 @@ Standalone HTML pages should use their actual paths:
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
+    https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
 
 Avoid duplicate sitemap entries such as:
 
@@ -241,6 +246,9 @@ Current root-level `sitemap.xml` should use this structure:
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/ai-operations/</loc>
+      </url>
+      <url>
+        <loc>https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html</loc>
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/persistent-ai-memory/</loc>
@@ -330,6 +338,7 @@ Google Search Console setup steps:
        https://tensaengineering.dev/contact.html
        https://tensaengineering.dev/knowledge-base/
        https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
        https://tensaengineering.dev/knowledge-base/neurocore-architecture/
        https://tensaengineering.dev/story/
        https://tensaengineering.dev/glossary/
@@ -705,7 +714,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "glossary/\|about.html\|contact.html\|Internal links checked: 546\|URL-only\|first eight Knowledge Base article URLs" docs/planning/search_indexing_strategy.md
+    grep -n "how-to-keep-ai-from-losing-project-context.html\|Internal links checked: 579\|19 canonical public URLs\|URL-only" docs/planning/search_indexing_strategy.md
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -722,27 +731,22 @@ This rule exists to catch:
 
 Immediate next steps:
 
-1. Confirm the Contact / favicon / sitemap / footer update is committed and pushed.
+1. Complete documentation closeout and final repository validation on `content/ai-ops-project-context`.
 
-2. Wait for GitHub Pages deployment to complete.
+2. Review the complete diff, then commit and push the closeout changes only after approval.
 
-3. Confirm these URLs load in the browser:
+3. After the changes reach the deployment branch and GitHub Pages finishes deploying, confirm these URLs load:
 
-       https://tensaengineering.dev/
-       https://tensaengineering.dev/about.html
-       https://tensaengineering.dev/contact.html
-       https://tensaengineering.dev/projects/
-       https://tensaengineering.dev/knowledge-base/
-       https://tensaengineering.dev/glossary/
-       https://tensaengineering.dev/story/
+       https://tensaengineering.dev/knowledge-base/ai-operations/
+       https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-4. Confirm the live sitemap is URL-only and includes Contact, About, Glossary, Story, and all eight Knowledge Base article URLs.
+4. Confirm the live sitemap remains URL-only, contains 19 canonical public URLs, and includes the project-context continuity guide.
 
-5. Inspect Contact, the Knowledge Base index, and key article URLs in Google Search Console if appropriate.
+5. Inspect the new article in Google Search Console if appropriate. Resubmit or refresh the sitemap only if the normal sitemap fetch does not discover the update.
 
-6. Monitor Google and Bing sitemap processing after deployment.
+6. Monitor Google and Bing after their next sitemap fetch. Do not record the article as indexed until the webmaster tools confirm it.
 
 Later next steps:
 
@@ -781,13 +785,15 @@ Search indexing foundation is complete when:
 After the current public-page closeout deploys, confirm:
 
 - `https://tensaengineering.dev/knowledge-base/` is reachable
-- all eight Knowledge Base article URLs are reachable
+- all eight foundation Knowledge Base article URLs are reachable
+- `https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` is reachable
 - `https://tensaengineering.dev/about.html` is reachable
 - `https://tensaengineering.dev/contact.html` is reachable
 - `https://tensaengineering.dev/glossary/` is reachable
 - `https://tensaengineering.dev/story/` is reachable
 - the live sitemap is URL-only
-- the live sitemap includes Contact, About, Glossary, Story, and all eight Knowledge Base article URLs
+- the live sitemap contains 19 canonical public URLs
+- the live sitemap includes Contact, About, Glossary, Story, all eight foundation Knowledge Base articles, and the focused project-context continuity guide
 
 ---
 

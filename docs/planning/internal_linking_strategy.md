@@ -55,6 +55,7 @@ Current active public pages:
     /about.html
     /contact.html
     /knowledge-base/ai-operations/index.html
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     /knowledge-base/persistent-ai-memory/index.html
     /knowledge-base/controlled-ai-systems/index.html
     /knowledge-base/local-first-ai/index.html
@@ -118,7 +119,8 @@ Use these preferred destinations when topics appear in public pages.
 | Origin story | `/story/` | Same, or future deeper story article if needed | Story index owns the full public origin narrative. Do not overload About with the full origin story. |
 | Contact / inquiries / site issues | `/contact.html` | Same unless a future support or resources flow is created | Contact page is a simple public route and should remain footer-only for now. |
 | Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
-| AI Operations | `/knowledge-base/ai-operations/` | Same, plus deeper future subtopics if needed | Article 1 in the current recommended Knowledge Base path. |
+| AI Operations | `/knowledge-base/ai-operations/` | Same, plus focused AI Operations guides as they are published | Foundation article and category entry for AI Operations. Use it as the preferred discovery route for focused AI Operations content. |
+| AI project continuity / keeping AI context | `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` | Same | Practical long-form guide for version control, source-of-truth documents, repository connectors, operating rules, verification, and closeout. |
 | Persistent AI memory | `/knowledge-base/persistent-ai-memory/` | Same, plus deeper future subtopics if needed | Article 2 in the current recommended Knowledge Base path. |
 | Continuity | `/knowledge-base/persistent-ai-memory/` or `/story/` | Same, or future deeper continuity article if needed | Use Story for origin/philosophy; use Persistent AI Memory for concept explanation. |
 | Context | `/knowledge-base/persistent-ai-memory/` | Future deeper context-and-continuity article if needed | Current article explains memory vs continuity and source-grounded context. |
@@ -132,7 +134,7 @@ Use these preferred destinations when topics appear in public pages.
 | Tool execution | `/knowledge-base/safe-tool-interaction/` | Future controlled-tool-execution article if needed | Current article owns the public tool-boundary explanation. |
 | Observability | `/knowledge-base/neurocore-architecture/` | Future observability article if needed | Current NeuroCore Architecture article explains evidence, tool layers, and system awareness at a public level. |
 | Local-first AI | `/knowledge-base/local-first-ai/` | Same, plus deeper future subtopics if needed | Article 4 in the current recommended Knowledge Base path. |
-| Documentation as memory | `/knowledge-base/ai-operations/` or `/story/` | Future documentation-as-operational-memory article if needed | Use AI Operations for workflow discipline; use Story for origin narrative. |
+| Documentation as memory | `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` or `/story/` | Future documentation-as-operational-memory article if needed | Use the project-context guide for practical continuity workflow; use Story for origin narrative. |
 | Linux diagnostics | `/knowledge-base/linux-diagnostics/` | Same, plus deeper future subtopics if needed | Article 6 in the current recommended Knowledge Base path. |
 | Raw evidence | `/knowledge-base/linux-diagnostics/` or `/glossary/` | Future raw-evidence article if needed | Use Linux Diagnostics for concept explanation; use Glossary for compact definition support. |
 | Severity / findings / recommendations | `/knowledge-base/linux-diagnostics/` or `/projects/argus-acli.html` | Future structured-diagnostics article if needed | Use Argus ACLI for product behavior; use Linux Diagnostics for concept explanation. |
@@ -186,6 +188,7 @@ Help technical readers understand the architectural philosophy without requiring
     Home
     → Story
     → AI Operations
+    → How to Keep AI From Losing Project Context
     → Persistent AI Memory
     → NeuroCore
     → Build Notes after created
@@ -411,15 +414,17 @@ The Knowledge Base index should link to:
 - `/knowledge-base/troubleshooting-training/`
 - `/knowledge-base/neurocore-architecture/`
 
-The Knowledge Base index currently acts as the article-path router for the first eight public Knowledge Base articles.
+The Knowledge Base index currently acts as the foundation-path router for the first eight public Knowledge Base articles.
+
+Focused articles should be discovered through their category or foundation page unless a deliberate index expansion is approved.
 
 Do not add fake links for planned topics before pages exist.
 
 ---
 
-### Knowledge Base Articles
+### Knowledge Base Foundation Articles
 
-Current Knowledge Base articles should link through the recommended path:
+Current Knowledge Base foundation articles should link through the recommended path:
 
     AI Operations
     → Persistent AI Memory
@@ -431,7 +436,7 @@ Current Knowledge Base articles should link through the recommended path:
     → NeuroCore Architecture
     → AI Operations
 
-Each article should:
+Each foundation article should:
 
 - link back to `/knowledge-base/` through article metadata or navigation
 - include header navigation to Home, Projects, Knowledge Base, Glossary, Story, and About
@@ -439,6 +444,27 @@ Each article should:
 - preserve previous/next navigation where appropriate
 - include related links only to real public pages
 - avoid links to internal planning docs or private repositories
+
+### Focused AI Operations Article
+
+`/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` should be discovered through:
+
+- `/knowledge-base/ai-operations/` as its preferred category entry
+- the AI Operations page practical-guide link
+- the AI Operations page related-reading links
+- `sitemap.xml` for search discovery
+
+The article should link to:
+
+- `/knowledge-base/ai-operations/`
+- `/knowledge-base/persistent-ai-memory/`
+- `/knowledge-base/safe-tool-interaction/`
+- `/knowledge-base/controlled-ai-systems/`
+- `/story/`
+- `/projects/neurocore.html`
+- `/knowledge-base/`
+
+It should remain a focused practical guide rather than being treated as position 9 in the eight-article foundation path.
 
 ---
 
@@ -516,7 +542,8 @@ When these pages are created, update links across the site.
 |---|---|
 | Full `/projects/argus-lab.html` page | Completed. Keep related links current if homepage, Projects page, NeuroCore page, or Argus ACLI page copy changes later. |
 | `/story/index.html` | Completed. Header navigation now points to `/story/`. Keep story-related links current if deeper Story articles are added later. |
-| `/knowledge-base/ai-operations/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Story/project pages later only after deliberate copy review. |
+| `/knowledge-base/ai-operations/` | Completed. Linked from Knowledge Base index and foundation-path navigation. Acts as the preferred discovery route for focused AI Operations guides. |
+| `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` | Completed. Linked from the AI Operations practical-guide and related-reading sections, included in `sitemap.xml`, and connected to relevant Knowledge Base, Story, and NeuroCore destinations. |
 | `/knowledge-base/persistent-ai-memory/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Story/project pages later only after deliberate copy review. |
 | `/knowledge-base/controlled-ai-systems/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
 | `/knowledge-base/local-first-ai/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
@@ -565,7 +592,7 @@ The verification should confirm the intended change actually landed and that the
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 71 files\|contact.html\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 72 files\|contact.html\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
 
 This rule exists to catch:
 
@@ -581,10 +608,10 @@ This rule exists to catch:
 
 Last verified local internal-link validation:
 
-    Public HTML files checked: 18
-    Internal links checked: 546
-    External/skipped links: 20
-    Result: all checked internal links resolved successfully
+    Public HTML files checked: 19
+    Internal links checked: 579
+    External/skipped links: 21
+    Result: all checked internal links and anchors resolved successfully
 
 Current verified public HTML files:
 
@@ -594,6 +621,7 @@ Current verified public HTML files:
     ./glossary/index.html
     ./knowledge-base/index.html
     ./knowledge-base/ai-operations/index.html
+    ./knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     ./knowledge-base/persistent-ai-memory/index.html
     ./knowledge-base/controlled-ai-systems/index.html
     ./knowledge-base/local-first-ai/index.html
@@ -617,8 +645,11 @@ Current notable link state:
 - Story links point to the real `/story/` page.
 - About links point to the standalone `/about.html` page.
 - Footer Contact links point to `/contact.html`.
-- The Knowledge Base index links to all eight current Knowledge Base articles.
-- The current Knowledge Base article path links from AI Operations through NeuroCore Architecture, then back to AI Operations.
+- The Knowledge Base index links to all eight current foundation Knowledge Base articles.
+- The current Knowledge Base foundation path links from AI Operations through NeuroCore Architecture, then back to AI Operations.
+- The AI Operations page links to the project-context continuity guide in both its practical-guide and related-reading sections.
+- The project-context continuity guide links back to AI Operations and to Persistent AI Memory, Safe Tool Interaction, Controlled AI Systems, Story, NeuroCore, and the Knowledge Base.
+- The project-context continuity guide is included in `sitemap.xml` and is not orphaned.
 - Argus ACLI links to NeuroCore and Argus Lab.
 - NeuroCore links to Argus ACLI and Argus Lab.
 - Argus Lab links to Argus ACLI, NeuroCore, and the Projects page.
