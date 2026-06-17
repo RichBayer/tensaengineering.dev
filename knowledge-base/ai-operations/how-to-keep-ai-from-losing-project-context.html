@@ -1,1 +1,2012 @@
-<!-- Paste the approved long-form TENSA Knowledge Base article HTML here. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Learn how version control, source-of-truth documents, repository connectors, operating rules, verification, and disciplined closeout preserve context across long AI-assisted projects."
+  />
+
+  <link
+    rel="canonical"
+    href="https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html"
+  />
+
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:title"
+    content="How to Keep AI From Losing Project Context | TENSA Engineering"
+  />
+  <meta
+    property="og:description"
+    content="A practical guide to preserving project continuity with version control, repository-grounded context, operating rules, and AI-assisted documentation."
+  />
+  <meta
+    property="og:url"
+    content="https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html"
+  />
+  <meta
+    property="og:image"
+    content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="TENSA Engineering logo on a dark technical background"
+  />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:image"
+    content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
+  />
+  <meta
+    name="twitter:image:alt"
+    content="TENSA Engineering logo on a dark technical background"
+  />
+  <meta
+    name="twitter:title"
+    content="How to Keep AI From Losing Project Context | TENSA Engineering"
+  />
+  <meta
+    name="twitter:description"
+    content="A practical guide to preserving project continuity with version control, repository-grounded context, operating rules, and AI-assisted documentation."
+  />
+
+  <title>How to Keep AI From Losing Project Context | TENSA Engineering</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html#article",
+        "url": "https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html",
+        "headline": "How to Keep AI From Losing Project Context",
+        "description": "A practical guide to preserving project continuity with version control, repository-grounded context, operating rules, and AI-assisted documentation.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://tensaengineering.dev/#website",
+          "name": "TENSA Engineering",
+          "url": "https://tensaengineering.dev/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://tensaengineering.dev/#organization",
+          "name": "TENSA Engineering",
+          "url": "https://tensaengineering.dev/"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png"
+        },
+        "inLanguage": "en-US",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I have to use GitHub?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. GitLab, Bitbucket, another Git hosting provider, or a different version-control system can also support the continuity method."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does committing a change automatically make it visible to a cloud AI model?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not always. A local commit usually must be pushed to the remote repository before a remote repository connector can see it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should an AI model update project documentation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, when the model has the necessary source context and a clearly approved scope. Documentation changes should be based on current files, repository state, validation evidence, and approved decisions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a resume prompt enough?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. A resume prompt should load and verify current sources, but it cannot make stale documentation accurate or replace project-specific verification."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should AI memory be treated as the source of truth?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Current files, verified output, repository state, and human-approved decisions should outrank AI memory."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link
+    rel="icon"
+    type="image/png"
+    href="../../assets/images/branding/tensa/favicon-32x32.png"
+    sizes="32x32"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="../../assets/images/branding/tensa/apple-touch-icon.png"
+  />
+
+  <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <a
+      class="brand"
+      href="../../index.html"
+      aria-label="TENSA Engineering home"
+    >
+      <img
+        src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"
+        alt="TENSA Engineering"
+        class="brand-logo"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/" class="active">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+      <a href="../../story/">Story</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">AI Operations</p>
+
+        <h1>How to Keep AI From Losing Project Context</h1>
+
+        <p class="kb-article-summary">
+          Long AI-assisted projects stay coherent when important information is
+          stored outside the conversation, organized in a version-controlled
+          repository, reloaded deliberately, verified against current reality,
+          and updated before each working session ends.
+        </p>
+
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="./">AI Operations</a>
+          <span>Practical continuity guide</span>
+          <span>For long AI-assisted projects</span>
+        </div>
+      </header>
+
+      <article class="kb-article-body">
+        <section class="kb-section">
+          <p>
+            An AI model can help you plan, write, analyze, troubleshoot, and
+            build. What it cannot do is automatically reconstruct the full
+            history of a long-running project every time you open a new
+            conversation.
+          </p>
+
+          <p>Reliable continuity has to be designed.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>How do you keep AI from losing project context?</h2>
+
+          <p>
+            Do not rely on chat history or AI memory as the permanent record of
+            your project.
+          </p>
+
+          <p>Instead:</p>
+
+          <ol class="kb-path-list">
+            <li>
+              <span>1.</span>
+              <div>
+                <strong>Store the project in a version-controlled repository.</strong>
+              </div>
+            </li>
+            <li>
+              <span>2.</span>
+              <div>
+                <strong>Keep current project information in clearly defined documents.</strong>
+              </div>
+            </li>
+            <li>
+              <span>3.</span>
+              <div>
+                <strong>Give the AI model access to the correct repository and branch.</strong>
+              </div>
+            </li>
+            <li>
+              <span>4.</span>
+              <div>
+                <strong>Load only the information needed for the current task.</strong>
+              </div>
+            </li>
+            <li>
+              <span>5.</span>
+              <div>
+                <strong>Verify written summaries against the actual files.</strong>
+              </div>
+            </li>
+            <li>
+              <span>6.</span>
+              <div>
+                <strong>Record important decisions while you work.</strong>
+              </div>
+            </li>
+            <li>
+              <span>7.</span>
+              <div>
+                <strong>Update the project documentation before ending the session.</strong>
+              </div>
+            </li>
+          </ol>
+
+          <p>Together these steps form a repeatable continuity loop:</p>
+
+          <div class="code-card" aria-label="AI project continuity loop">
+            <pre><code>Current project files and documentation
+                ↓
+        Load relevant context
+                ↓
+       Verify against reality
+                ↓
+       Perform controlled work
+                ↓
+        Review and validate
+                ↓
+   Update the project documentation
+                ↓
+     Begin the next session stronger</code></pre>
+          </div>
+
+          <p>
+            The goal is not to make the model remember everything. The goal is
+            to give it a dependable way to reconstruct the truth.
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>Chat history is a workspace. It should not be the project database.</p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>Why an AI model loses track of long projects</h2>
+
+          <p>
+            A short conversation can feel seamless because the task, the
+            assumptions, and the most recent decisions all sit close together
+            in the same exchange.
+          </p>
+
+          <p>A real project works differently.</p>
+
+          <p>A long project may contain:</p>
+
+          <ul class="kb-plain-list">
+            <li>months of decisions</li>
+            <li>changing requirements</li>
+            <li>architecture choices</li>
+            <li>rejected ideas</li>
+            <li>unfinished experiments</li>
+            <li>completed features</li>
+            <li>known defects</li>
+            <li>file and directory changes</li>
+            <li>validation results</li>
+            <li>deployment information</li>
+            <li>security rules</li>
+            <li>future plans</li>
+          </ul>
+
+          <p>
+            Some of that information changes constantly. Other parts must stay
+            stable for the life of the project. When all of it lives only inside
+            a conversation, predictable problems begin to appear.
+          </p>
+
+          <p>
+            Earlier details compete with newer messages for the model's
+            attention. Decisions made weeks ago may no longer be visible in the
+            current thread. Rejected ideas can resurface as if they were still
+            approved. Planned features may be described as though they already
+            exist. Old summaries can contradict the current files.
+          </p>
+
+          <p>
+            When information is missing, a model may also fill the gap with a
+            reasonable-sounding assumption—and that assumption may be wrong.
+          </p>
+
+          <p>
+            So the real problem is larger than the model forgetting a sentence.
+            The project lacks a dependable system for preserving context and
+            restoring it on demand.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Begin with version control</h2>
+
+          <p>
+            Before building a serious AI-assisted workflow, it helps to
+            understand the basics of version control.
+          </p>
+
+          <p>
+            Version control is a system that records changes to files over time.
+            It lets you see what changed, compare one version with another,
+            restore an earlier version, and trace when a particular decision
+            entered the project.
+          </p>
+
+          <p>Git is one of the most widely used version-control systems.</p>
+
+          <p>
+            GitHub, GitLab, Bitbucket, and similar services are
+            repository-hosting platforms. They store Git repositories on a
+            remote server and add tools for collaboration, review, issue
+            tracking, access control, and automation.
+          </p>
+
+          <p>Git and GitHub are related, but they are not the same thing:</p>
+
+          <ul class="kb-plain-list">
+            <li><strong>Git</strong> is the version-control software itself.</li>
+            <li><strong>GitHub</strong> is one service that hosts Git repositories.</li>
+            <li><strong>GitLab</strong> and <strong>Bitbucket</strong> are alternative hosting services.</li>
+            <li>Other version-control systems and hosting platforms exist as well.</li>
+          </ul>
+
+          <p>
+            You do not have to use GitHub specifically. What matters is that
+            your project has a controlled location where files and their history
+            can be inspected.
+          </p>
+
+          <p>
+            Version control gives both you and the model something concrete to
+            reason from. Without it, a project tends to become a folder full of
+            files whose history is difficult to reconstruct.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What is a repository?</h2>
+
+          <p>A repository is the managed home of a project.</p>
+
+          <p>
+            It usually holds the project files together with the information the
+            version-control system needs to track their history.
+          </p>
+
+          <p>A software repository might contain:</p>
+
+          <div class="code-card" aria-label="Example software repository structure">
+            <pre><code>project/
+├── README.md
+├── source-code/
+├── tests/
+├── configuration/
+├── documentation/
+├── build-logs/
+└── project-state.md</code></pre>
+          </div>
+
+          <p>The exact layout depends on the project.</p>
+
+          <p>
+            A writing project might store chapters, research notes, source
+            material, and an editorial plan. An infrastructure project might
+            store configuration files, architecture diagrams, deployment
+            instructions, and validation records. A business-process project
+            might store procedures, decisions, templates, and supporting
+            evidence.
+          </p>
+
+          <p>The principle stays the same regardless of the field.</p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            The repository should contain the material needed to understand and
+            continue the project.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>Local files and remote repositories</h2>
+
+          <p>
+            One of the most important distinctions to understand is the
+            difference between the files on your own computer and the files
+            stored on a remote repository service.
+          </p>
+
+          <p>
+            Your <strong>local working tree</strong> is the copy of the project
+            you are actively editing on your computer.
+          </p>
+
+          <p>
+            Your <strong>local repository</strong> holds that project's Git
+            history on the same computer.
+          </p>
+
+          <p>
+            The <strong>remote repository</strong> is the hosted copy stored by
+            a service such as GitHub or GitLab. It changes when local commits are
+            pushed to it or remote changes are otherwise synchronized.
+          </p>
+
+          <p>A simplified flow looks like this:</p>
+
+          <div class="code-card" aria-label="Local and remote repository flow">
+            <pre><code>Your computer
+│
+├── Working tree
+│   └── Files you are currently editing
+│
+├── Uncommitted changes
+│   └── Edits that exist only in the working tree
+│
+└── Local Git repository
+    └── Changes that have been saved as commits
+              │
+              │ push
+              ▼
+Remote repository
+GitHub, GitLab, Bitbucket, or another host
+              │
+              │ authorized connector
+              ▼
+Cloud AI model</code></pre>
+          </div>
+
+          <p>
+            A <strong>commit</strong> is a recorded snapshot of a set of changes,
+            normally accompanied by a short message describing what changed.
+          </p>
+
+          <p>
+            A <strong>push</strong> sends your local commits to the remote
+            repository.
+          </p>
+
+          <p>
+            This distinction explains why a cloud AI model may not see your
+            newest work.
+          </p>
+
+          <p>
+            Suppose you edit three files on your laptop but do not commit or
+            push them. Those edits exist only in your local working tree.
+          </p>
+
+          <p>
+            A cloud AI model connected to GitHub can inspect the remote
+            repository, but it cannot reach unpublished files sitting on your
+            laptop. From the model's point of view, those local changes do not
+            exist unless one of the following is true:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>you paste or upload the changed files</li>
+            <li>you provide the relevant diff or command output</li>
+            <li>you use a local AI tool that has authorized filesystem access</li>
+            <li>you commit and push the changes to the remote repository</li>
+          </ul>
+
+          <p>
+            This is why a model may describe an older version of the project
+            even though you finished editing it an hour ago. It is not
+            necessarily ignoring your work—it may simply be looking at a
+            different copy of reality.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Branches protect the stable version</h2>
+
+          <p>A branch is an independent line of project history.</p>
+
+          <p>
+            Most repositories have a primary branch, often named
+            <code>main</code>, which represents the accepted or stable version
+            of the project.
+          </p>
+
+          <p>
+            Rather than changing <code>main</code> directly, you can create a
+            separate branch for a specific task:
+          </p>
+
+          <div class="code-card" aria-label="Example repository branches">
+            <pre><code>main
+├── feature/new-dashboard
+├── fix/login-error
+└── docs/project-context-guide</code></pre>
+          </div>
+
+          <p>
+            You make and review your changes on the task branch. Once the work
+            is approved, that branch can be merged into <code>main</code>.
+          </p>
+
+          <p>
+            Branches are especially valuable in AI-assisted work because they
+            create a safe boundary. The model can help prepare changes without
+            immediately altering the accepted version of the project, and you
+            can inspect the difference, validate the result, correct mistakes,
+            and decide whether the work deserves to be merged.
+          </p>
+
+          <p>
+            A branch does not make AI-generated work correct. What it does is
+            make that work easier to isolate, inspect, reverse, and reject when
+            necessary.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>How repository connectors work</h2>
+
+          <p>
+            Some cloud AI platforms can connect directly to repository services
+            such as GitHub.
+          </p>
+
+          <p>Depending on the platform, the feature may be called:</p>
+
+          <ul class="kb-plain-list">
+            <li>a connector</li>
+            <li>an app</li>
+            <li>an integration</li>
+            <li>a repository tool</li>
+            <li>a coding agent</li>
+            <li>a project connection</li>
+            <li>
+              an
+              <a
+                class="glossary-term"
+                href="../../glossary/#mcp-based-tool"
+                data-term="MCP-based tool"
+                data-definition="A tool connected to an AI application through the Model Context Protocol, an open standard for exposing external data, tools, and workflows."
+              >MCP-based tool</a>
+            </li>
+          </ul>
+
+          <p>
+            The names and setup screens vary from service to service, and access
+            may also depend on the account type, organization settings,
+            subscription, and the permissions granted by the repository owner.
+            The underlying idea, however, is always the same.
+          </p>
+
+          <p>
+            You authorize the AI platform to communicate with a repository
+            provider. You then choose which repositories the service may access
+            and what permissions it receives.
+          </p>
+
+          <p>A basic connection process usually looks like this:</p>
+
+          <ol class="kb-path-list">
+            <li>
+              <span>1.</span>
+              <div>Open the AI platform's settings, tools, apps, or integrations area.</div>
+            </li>
+            <li>
+              <span>2.</span>
+              <div>Choose the repository provider, such as GitHub or GitLab.</div>
+            </li>
+            <li>
+              <span>3.</span>
+              <div>Sign in to the repository provider.</div>
+            </li>
+            <li>
+              <span>4.</span>
+              <div>Review the requested permissions carefully.</div>
+            </li>
+            <li>
+              <span>5.</span>
+              <div>Restrict access to only the repositories that are needed.</div>
+            </li>
+            <li>
+              <span>6.</span>
+              <div>Confirm whether the connection is read-only or write-capable.</div>
+            </li>
+            <li>
+              <span>7.</span>
+              <div>Select the repository inside the AI conversation or coding workspace.</div>
+            </li>
+            <li>
+              <span>8.</span>
+              <div>Tell the model which branch, file, issue, or pull request to inspect.</div>
+            </li>
+          </ol>
+
+          <p>
+            Some platforms offer built-in repository connectors. Others provide
+            coding agents, plugins, development-environment integrations, or
+            MCP servers that let the model interact with repository tools.
+          </p>
+
+          <p>The names differ, but the questions that matter do not:</p>
+
+          <ul class="kb-plain-list">
+            <li>Which repository can the model access?</li>
+            <li>Which branch is it reading?</li>
+            <li>Can it see only committed files?</li>
+            <li>Can it create or modify files?</li>
+            <li>Can it create commits or pull requests?</li>
+            <li>Which actions still require human approval?</li>
+          </ul>
+
+          <p>
+            Because product interfaces change over time, follow the current
+            instructions for whichever AI platform and repository provider you
+            have chosen. More important than the name of the feature is a clear
+            understanding of its access boundary.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What a repository connector can see</h2>
+
+          <p>
+            A repository connector normally sees the information exposed by the
+            remote repository service, limited by the permissions you granted.
+          </p>
+
+          <p>It may be able to read:</p>
+
+          <ul class="kb-plain-list">
+            <li>committed files</li>
+            <li>commit history</li>
+            <li>branches</li>
+            <li>issues</li>
+            <li>pull requests</li>
+            <li>review comments</li>
+            <li>repository metadata</li>
+          </ul>
+
+          <p>A write-capable integration may additionally be able to:</p>
+
+          <ul class="kb-plain-list">
+            <li>create a branch</li>
+            <li>create or update files</li>
+            <li>make commits</li>
+            <li>open a pull request</li>
+            <li>comment on issues</li>
+            <li>apply labels</li>
+            <li>merge approved work</li>
+          </ul>
+
+          <p>
+            Do not assume that every connector has all of these abilities. Ask
+            the model to state plainly what it can read and what it can change.
+          </p>
+
+          <p>
+            Just as important is what a repository connector normally cannot
+            see:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>uncommitted changes on your computer</li>
+            <li>files that have never been added to the repository</li>
+            <li>local command output you have not provided</li>
+            <li>an application or service running only on your machine</li>
+            <li>secrets that are correctly excluded from the repository</li>
+            <li>decisions that were discussed but never written down</li>
+          </ul>
+
+          <p>A useful instruction makes the boundary explicit:</p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            Read the current committed repository, identify the branch and
+            commit you inspected, and tell me what additional local information
+            you need before reaching a conclusion.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>Use the AI model safely when it can write to a repository</h2>
+
+          <p>
+            Connecting an AI model to a repository creates a powerful workflow,
+            but write access also introduces real risk.
+          </p>
+
+          <p>
+            A model can understand the general request correctly while
+            misunderstanding the permitted scope. Suppose you ask it to update a
+            single documentation page. The model may decide that several related
+            files should change too, for the sake of consistency. Those extra
+            changes can look reasonable while quietly altering decisions,
+            wording, architecture, or behavior that were deliberately left as
+            they were.
+          </p>
+
+          <p>A model may also:</p>
+
+          <ul class="kb-plain-list">
+            <li>treat a suggestion as approval to implement it</li>
+            <li>modify files that were never discussed</li>
+            <li>overwrite carefully chosen wording</li>
+            <li>replace an established architecture with a more familiar pattern</li>
+            <li>remove information it judges redundant</li>
+            <li>update an old document without checking whether another document owns that information</li>
+            <li>commit changes before you have reviewed them</li>
+            <li>merge a branch when you only intended to inspect the result</li>
+          </ul>
+
+          <p>
+            These failures often arise from ambiguity, incomplete context, or
+            permissions that are broader than the task requires. The model may
+            interpret “complete” more broadly than you intended.
+          </p>
+
+          <p>
+            The remedy is to set explicit operating boundaries. A safe
+            repository-writing instruction might read:
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            Work only on the branch named
+            <code>docs/project-context-guide</code>. You may modify only
+            <code>docs/project-context.md</code>. Do not change any other file.
+            Do not merge the branch. Before writing, summarize the intended
+            change and identify any missing context. After writing, show the
+            complete diff for review.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <p>For higher-risk work, break the process into stages:</p>
+
+          <div class="code-card" aria-label="Controlled AI repository writing flow">
+            <pre><code>Read and analyze
+        ↓
+Explain proposed changes
+        ↓
+Human approves exact scope
+        ↓
+Create or update files on a branch
+        ↓
+Show the diff
+        ↓
+Validate the result
+        ↓
+Human approves merge</code></pre>
+          </div>
+
+          <p>Several safety practices are worth applying consistently:</p>
+
+          <ul class="kb-plain-list">
+            <li>use read-only access by default</li>
+            <li>grant write access only when the task requires it</li>
+            <li>restrict access to selected repositories</li>
+            <li>work on a task branch instead of directly on <code>main</code></li>
+            <li>name the exact files the model may modify</li>
+            <li>state which files it must not modify</li>
+            <li>separate discussion from authorization</li>
+            <li>require the model to stop when scope is unclear</li>
+            <li>require a diff before approval</li>
+            <li>review commits before merging</li>
+            <li>keep version history so unwanted changes can be reversed</li>
+            <li>never let the model treat a suggestion as automatic permission to write</li>
+          </ul>
+
+          <p>
+            Version control matters here precisely because mistakes stay
+            visible. A changed file can be compared against its previous
+            version, a bad commit can be reverted, an unwanted branch can be
+            discarded, and a pull request can be reviewed before it ever becomes
+            part of the stable project.
+          </p>
+
+          <p>
+            The repository history records what changed and when. It does not
+            replace careful review, but it gives you a reliable path to
+            recovery.
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>AI write access should be explicit, narrow, reviewable, and reversible.</p>
+        </aside>
+
+        <section class="kb-section">
+          <p>
+            Repository permission design, branch protection, write
+            authorization, and recovery from unwanted changes require deeper
+            treatment than this introductory section can provide.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Use connector permissions carefully</h2>
+
+          <p>Repository access should be treated as a security decision.</p>
+
+          <p>Before connecting an AI service:</p>
+
+          <ul class="kb-plain-list">
+            <li>confirm which repositories it can access</li>
+            <li>prefer access to selected repositories rather than every repository</li>
+            <li>check whether the connector is read-only or write-capable</li>
+            <li>never store passwords, API keys, or private credentials in tracked files</li>
+            <li>know whether the repository is public or private</li>
+            <li>review changes before approving commits or merges</li>
+            <li>disconnect access once it is no longer needed</li>
+          </ul>
+
+          <p>
+            Read-only access is often enough for analysis, planning,
+            explanation, and review. Write access becomes useful when you need
+            the model to create branches, files, commits, or pull requests, but
+            it should be granted deliberately.
+          </p>
+
+          <p>
+            The model should never hold more authority than the task in front of
+            it requires.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Separate chat context, AI memory, and source of truth</h2>
+
+          <p>
+            Chat context, AI memory, and project documentation all support
+            continuity, but they serve different purposes and should not be
+            confused with one another.
+          </p>
+        </section>
+
+        <section
+          class="kb-principle-grid"
+          aria-label="Chat context, AI memory, and source of truth"
+        >
+          <div class="kb-principle-card">
+            <h3>Chat context</h3>
+
+            <p>
+              Chat context is the information available inside the active
+              conversation. It lets the model follow the immediate discussion,
+              refer back to recent messages, and reason about the task at hand.
+            </p>
+
+            <p>
+              This context is temporary. As a conversation grows, earlier
+              details receive less attention, and a new conversation usually
+              begins without most of the previous discussion.
+            </p>
+
+            <p>
+              Chat context is useful working space, but it is not reliable
+              long-term storage.
+            </p>
+          </div>
+
+          <div class="kb-principle-card">
+            <h3>AI memory</h3>
+
+            <p>
+              AI memory can carry selected facts across conversations. It may
+              retain preferences, recurring instructions, broad project
+              background, or frequently used information.
+            </p>
+
+            <p>
+              Memory reduces repetition, but it can be incomplete, outdated,
+              summarized, or unavailable in a particular tool.
+            </p>
+
+            <p>
+              Its proper role is to help the model locate and interpret the
+              project's authoritative sources—not to stand in for them.
+            </p>
+          </div>
+
+          <div class="kb-principle-card">
+            <h3>Source of truth</h3>
+
+            <p>
+              A
+              <a
+                class="glossary-term"
+                href="../../glossary/#source-of-truth"
+                data-term="Source of truth"
+                data-definition="The trusted reference used to decide what is actually true about a project, system, or page."
+              >source of truth</a>
+              is the record you use to decide what is actually current.
+            </p>
+
+            <p>
+              Different facts often have different authoritative sources. The
+              source code may own implementation truth. An architecture document
+              may own system boundaries. A project-state document may own the
+              list of current priorities. A decision record may own the reason a
+              particular approach was chosen.
+            </p>
+          </div>
+        </section>
+
+        <aside class="kb-callout">
+          <p>Memory can help locate the truth, but memory does not replace the truth.</p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>Build a minimum continuity system</h2>
+
+          <p>
+            You do not need an elaborate documentation framework to get
+            started. You need a small number of records, each with a clearly
+            separated responsibility.
+          </p>
+
+          <p>A practical starting system includes the following.</p>
+
+          <h3>1. Current project state</h3>
+
+          <p>
+            This document describes the project as it exists right now. It
+            should answer questions such as:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>What is currently working?</li>
+            <li>What is incomplete?</li>
+            <li>What is being worked on?</li>
+            <li>What is blocked?</li>
+            <li>What was verified recently?</li>
+            <li>What should happen next?</li>
+          </ul>
+
+          <p>The project-state document changes regularly.</p>
+
+          <h3>2. Stable rules and architecture</h3>
+
+          <p>
+            This document records the decisions that should stay consistent
+            from session to session. It may describe:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>major system components</li>
+            <li>approved naming conventions</li>
+            <li>security boundaries</li>
+            <li>public and private information boundaries</li>
+            <li>which directories hold which kinds of files</li>
+            <li>which technologies have been selected</li>
+            <li>which actions require human approval</li>
+            <li>what the project must never do</li>
+          </ul>
+
+          <p>It changes far less often than the project-state document.</p>
+
+          <h3>3. Decision record</h3>
+
+          <p>
+            A decision record explains the important choices behind the
+            project. It should capture:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>what was decided</li>
+            <li>why it was decided</li>
+            <li>which alternatives were considered</li>
+            <li>what evidence supported the choice</li>
+            <li>what conditions might cause the decision to be revisited</li>
+          </ul>
+
+          <p>
+            Without this record, a model may keep recommending an option that
+            was already evaluated and rejected.
+          </p>
+
+          <h3>4. Repository or system map</h3>
+
+          <p>
+            A repository map explains where important material lives. It might
+            identify:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>source-code directories</li>
+            <li>test directories</li>
+            <li>documentation locations</li>
+            <li>configuration files</li>
+            <li>deployment files</li>
+            <li>validation scripts</li>
+            <li>build histories</li>
+            <li>generated files</li>
+            <li>files that must not be edited manually</li>
+          </ul>
+
+          <p>
+            Use descriptive directory and file names wherever practical. A name
+            such as:
+          </p>
+
+          <p><code>docs/architecture/security_boundaries.md</code></p>
+
+          <p>
+            gives both a human and a model a useful clue about the file's
+            purpose. A vague name such as:
+          </p>
+
+          <p><code>docs/notes2.md</code></p>
+
+          <p>does not.</p>
+
+          <p>
+            Descriptive names help the model identify which files are likely to
+            hold relevant context before it opens them. The model must still
+            read and verify each file, but a clear repository structure makes
+            that context far easier to discover.
+          </p>
+
+          <p>
+            The repository map should also explain the purpose of important
+            files rather than listing paths without context. For example:
+          </p>
+
+          <div class="code-card" aria-label="Example documented repository map">
+            <pre><code>docs/
+├── project_state.md
+│   Current implementation status, open work, and next actions.
+│
+├── architecture/
+│   ├── system_architecture.md
+│   │   Stable component relationships and system boundaries.
+│   │
+│   └── security_boundaries.md
+│       Permissions, protected actions, and trust boundaries.
+│
+├── decisions/
+│   Approved technical and product decisions with reasoning.
+│
+└── build-logs/
+    Chronological records of meaningful implementation milestones.</code></pre>
+          </div>
+
+          <p>
+            A map like this keeps the model from guessing file locations,
+            overlooking important sources, or assuming that two similarly named
+            documents serve the same purpose.
+          </p>
+
+          <h3>5. Session startup procedure</h3>
+
+          <p>
+            The startup procedure tells the model how to rebuild its working
+            context. It should identify:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>which documents to load first</li>
+            <li>which repository and branch to inspect</li>
+            <li>how to check for local changes</li>
+            <li>which sources outrank others</li>
+            <li>what the current task is</li>
+            <li>what information must be requested if it is unavailable</li>
+          </ul>
+
+          <p>A resume prompt is one way to implement this procedure.</p>
+
+          <h3>6. Session closeout procedure</h3>
+
+          <p>
+            The closeout procedure preserves the value created during the
+            session. It should identify:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>what changed</li>
+            <li>what was verified</li>
+            <li>what decisions were made</li>
+            <li>what remains incomplete</li>
+            <li>which documentation must be updated</li>
+            <li>what the next session should inspect first</li>
+          </ul>
+
+          <p>
+            Each of these records can start life as a plain Markdown file. Their
+            value comes not from any special format but from giving every
+            document a clear responsibility and keeping it current.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Use the AI model to create and maintain the project documents</h2>
+
+          <p>
+            You should not have to remember every change and update every
+            project document by hand. Let the model do the detailed
+            documentation work.
+          </p>
+
+          <p>
+            Your job as the human operator is to provide direction, approve
+            decisions, review important changes, and confirm that the result
+            matches reality. The model can read the relevant files, identify
+            which records were affected, draft the updates, and present them for
+            your review.
+          </p>
+
+          <p>
+            For example, after completing a task, you might instruct the model:
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            Review the work completed in this session. Identify which project
+            documents now contain stale information. Draft the required updates,
+            but do not change any file until you show me the proposed scope.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <p>
+            Once you have reviewed the proposed scope, you might continue:
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            Update only <code>docs/project_state.md</code> and the relevant
+            decision record. Preserve all unrelated content. Clearly separate
+            completed work from future plans. Show me the diff before committing.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <p>
+            The model can also help create the initial documents. A useful first
+            request is:
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            Inspect this repository and propose a small AI-operations
+            documentation structure. Identify the minimum files needed for
+            project state, stable architecture, decisions, repository mapping,
+            session startup, and session closeout. Do not create files yet.
+            Explain what information each file should own and where duplication
+            could occur.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <p>After you approve the structure:</p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            Create the approved documents on a new branch. Use the current
+            repository files as evidence. Mark unknown information clearly
+            instead of guessing. Do not modify source code or unrelated
+            documentation.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <p>
+            This approach puts the model to work on the hard, detailed drafting
+            while keeping human authority over scope and truth.
+          </p>
+
+          <p>
+            Do not ask the model to update documentation purely from memory.
+            Require it to read:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>the current files</li>
+            <li>the current branch</li>
+            <li>relevant diffs</li>
+            <li>recent commits</li>
+            <li>validation results</li>
+            <li>the existing project documents</li>
+            <li>approved decisions</li>
+          </ul>
+
+          <p>
+            The records should be updated from evidence, not from a vague
+            recollection of the conversation.
+          </p>
+
+          <p>
+            You also do not need to update every document after every small
+            action. Ask the model which documents own the information that
+            changed, and update only those. That keeps the documentation useful
+            without turning the workflow into unnecessary paperwork.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Define operating rules</h2>
+
+          <p>
+            Operating rules are instructions that govern how the AI model is
+            expected to behave while working on the project. They are different
+            from the project goal.
+          </p>
+
+          <p>A goal describes the desired outcome:</p>
+
+          <p><code>Add a secure user login system.</code></p>
+
+          <p>An operating rule describes the boundaries for reaching it:</p>
+
+          <p><code>Do not change the database schema without approval.</code></p>
+
+          <p>
+            Operating rules reduce ambiguity. They tell the model how to handle
+            missing information, conflicts, permissions, validation, and risk.
+            Common examples follow.
+          </p>
+
+          <h3>Do not guess missing facts</h3>
+
+          <p>
+            When a required file, command result, or decision is unavailable,
+            the model should say what is missing rather than invent a plausible
+            answer.
+          </p>
+
+          <h3>Evidence outranks confidence</h3>
+
+          <p>
+            A confident explanation is not proof that a result is correct.
+            Claims should be backed by current files, command output, tests,
+            logs, previews, source material, or another form of evidence
+            appropriate to the project.
+          </p>
+
+          <h3>Work on a branch</h3>
+
+          <p>
+            Changes should stay isolated on a task branch until they have been
+            reviewed and approved.
+          </p>
+
+          <h3>Read-only by default</h3>
+
+          <p>
+            The model may inspect files and propose changes, but it should not
+            alter the repository unless write access has been explicitly
+            authorized.
+          </p>
+
+          <h3>Modify only approved files</h3>
+
+          <p>
+            Permission to edit one file is not permission to edit every related
+            file. The model should list any additional recommended changes
+            separately and wait for approval before making them.
+          </p>
+
+          <h3>Protect secrets</h3>
+
+          <p>
+            Credentials, private keys, access tokens, customer data, and other
+            sensitive information must never be added to the repository or
+            exposed in a conversation.
+          </p>
+
+          <h3>Keep current work separate from future plans</h3>
+
+          <p>
+            A planned feature should not be described as already built.
+            Documentation should clearly distinguish current reality, active
+            work, and future direction.
+          </p>
+
+          <h3>Use the correct source of truth</h3>
+
+          <p>
+            When two sources disagree, the model should apply the project's
+            precedence rules or report the conflict for a human to resolve.
+          </p>
+
+          <h3>Preserve approved decisions</h3>
+
+          <p>
+            The model should not casually reverse architecture, naming,
+            security, product, or workflow decisions simply because another
+            approach looks more familiar. If it believes an approved decision
+            should change, it should explain why and request approval before
+            altering the implementation or documentation.
+          </p>
+
+          <h3>Verify before declaring completion</h3>
+
+          <p>
+            The required form of verification depends on the project. For
+            software, it might mean automated tests or a successful run of the
+            program. For infrastructure, it might mean service status,
+            configuration validation, logs, or connectivity checks. For a
+            document, it might mean proofreading, source checking, link
+            validation, and formatting review. For a data project, it might mean
+            schema checks, sample validation, and reproducible output.
+          </p>
+
+          <h3>Keep the task within scope</h3>
+
+          <p>
+            The model should not quietly redesign unrelated parts of the project
+            while completing a narrow assignment.
+          </p>
+
+          <h3>Stop when authorization is unclear</h3>
+
+          <p>
+            When the model is unsure whether it may read, write, commit, push,
+            merge, delete, or rename something, it should stop and ask.
+          </p>
+
+          <p>
+            Operating rules are valuable because they stay stable even as the
+            individual task changes.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Start each session from zero reliable context</h2>
+
+          <p>
+            A disciplined session should not begin by assuming the model already
+            remembers the project correctly. Begin instead as though any prior
+            conversation is untrusted until the required evidence has rebuilt
+            the working context.
+          </p>
+
+          <p>A strong startup process looks like this:</p>
+
+          <div class="code-card" aria-label="AI project session startup flow">
+            <pre><code>1. Identify the repository and branch
+              ↓
+2. Inspect the current project-state document
+              ↓
+3. Load the relevant rules and architecture
+              ↓
+4. Check the current files and repository status
+              ↓
+5. Compare documentation with actual reality
+              ↓
+6. Define the task and its boundaries
+              ↓
+7. Identify missing information before working</code></pre>
+          </div>
+
+          <p>
+            This does not mean loading every project file into every
+            conversation. More context is not automatically better context.
+          </p>
+
+          <p>
+            The objective is to load the smallest set of trustworthy information
+            that is sufficient for the task at hand. A documentation task may
+            need the content guide, the current page, and the linking rules. A
+            database change may require the schema, the migration history, the
+            architecture rules, and the related tests. A deployment problem may
+            require the service configuration, recent logs, environment details,
+            and the last known working state.
+          </p>
+
+          <p>The right context depends on the work.</p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What a resume prompt does</h2>
+
+          <p>
+            A resume prompt is a structured instruction used to restart work on
+            an existing project. It should tell the model:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>what project it is working on</li>
+            <li>where the authoritative information lives</li>
+            <li>which documents to load</li>
+            <li>which repository and branch to inspect</li>
+            <li>which operating rules apply</li>
+            <li>how to handle missing information</li>
+            <li>what the current priorities are</li>
+            <li>what verification is required</li>
+          </ul>
+
+          <p>
+            A resume prompt should not try to contain the entire history of the
+            project. Its main job is to point the model toward the sources that
+            hold the current truth.
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>A resume prompt is a loading procedure, not a giant memory dump.</p>
+        </aside>
+
+        <section class="kb-section">
+          <h2>Let current reality outrank old summaries</h2>
+
+          <p>
+            Documentation goes stale. A project-state document may still call a
+            feature unfinished even though it was completed yesterday. A
+            repository map may omit a directory that was added last week. A
+            remote repository may not yet include changes still sitting on
+            someone's computer.
+          </p>
+
+          <p>
+            When sources disagree, apply a clear order of precedence. A typical
+            ordering might be:
+          </p>
+
+          <div class="code-card" aria-label="Example project source precedence">
+            <pre><code>Verified current files and system output
+                    ↓
+Current local working-tree state
+                    ↓
+Current local repository history
+                    ↓
+Current remote repository state
+                    ↓
+Approved project documentation
+                    ↓
+Older summaries and build notes
+                    ↓
+AI memory and previous conversation</code></pre>
+          </div>
+
+          <p>
+            The exact order may vary from one project to another. What matters is
+            that the order is defined and applied consistently.
+          </p>
+
+          <p>
+            The model should report disagreements rather than silently pick
+            whichever source is easiest to continue from. For example:
+          </p>
+        </section>
+
+        <aside class="kb-callout">
+          <p>
+            The project-state document says the feature is incomplete, but the
+            current branch contains an implementation committed yesterday. I
+            need the latest validation result before I can determine the actual
+            status.
+          </p>
+        </aside>
+
+        <section class="kb-section">
+          <p>
+            That kind of response is far more useful than confidently repeating
+            either source while ignoring the conflict.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Keep the working session controlled</h2>
+
+          <p>
+            Context can drift once a session is under way. A conversation may
+            open with a single task and gradually accumulate unrelated
+            troubleshooting questions, architectural ideas, documentation
+            changes, and future plans. As it widens, the model has to track more
+            assumptions and boundaries, and the chance of confusion rises with
+            each one.
+          </p>
+
+          <p>During a serious session:</p>
+
+          <ul class="kb-plain-list">
+            <li>keep the active task clearly defined</li>
+            <li>separate exploration from approved implementation</li>
+            <li>record major decisions as they are made</li>
+            <li>verify important claims with appropriate evidence</li>
+            <li>pause when required source material is missing</li>
+            <li>distinguish suggestions from approved decisions</li>
+            <li>reload context when the discussion moves to a different project area</li>
+            <li>start a new session when the current conversation becomes too mixed or too difficult to verify</li>
+          </ul>
+
+          <p>
+            Starting a new conversation is not a failure. Sometimes it is the
+            cleanest way to restore a controlled working context.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Close the session before the conversation ends</h2>
+
+          <p>
+            A project loses continuity when useful work happens but the project
+            record is never updated. A conversation summary on its own is not
+            enough—the information has to be placed into the documents or files
+            that own it.
+          </p>
+
+          <p>
+            Before ending a meaningful working session, ask the model to
+            identify:
+          </p>
+
+          <ul class="kb-plain-list">
+            <li>what changed</li>
+            <li>which files were affected</li>
+            <li>what was verified</li>
+            <li>which decisions were approved</li>
+            <li>what remains incomplete</li>
+            <li>which risks or questions surfaced</li>
+            <li>whether documentation or repository maps changed</li>
+            <li>what the next session should load first</li>
+            <li>what the next likely action is</li>
+          </ul>
+
+          <p>
+            Then have the model draft the necessary updates to the relevant
+            project-state, architecture, decision, map, or build-history
+            documents, and review those changes before they are committed.
+          </p>
+
+          <p>
+            The goal is not documentation for its own sake. The goal is to keep
+            the next session from repeating investigation that has already been
+            done.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>What a resume prompt can and cannot do</h2>
+
+          <h3>A resume prompt can:</h3>
+
+          <ul class="kb-plain-list">
+            <li>define the context-loading order</li>
+            <li>identify the required source documents</li>
+            <li>state operating rules and boundaries</li>
+            <li>identify the repository and expected branch</li>
+            <li>require the model to report missing information</li>
+            <li>require verification before implementation</li>
+            <li>point to current priorities and known risks</li>
+            <li>define which sources outrank others</li>
+            <li>instruct the model to flag documentation that needs updating</li>
+          </ul>
+
+          <h3>A resume prompt cannot:</h3>
+
+          <ul class="kb-plain-list">
+            <li>make stale documentation accurate</li>
+            <li>see unpublished local changes through a remote connector</li>
+            <li>prove that a feature works</li>
+            <li>replace project-specific validation</li>
+            <li>resolve contradictions without evidence</li>
+            <li>preserve decisions that were never recorded</li>
+            <li>guarantee continuity if closeout never happens</li>
+            <li>compensate for a repository that is disorganized or incomplete</li>
+            <li>prevent unauthorized changes unless the access rules and review process are actually enforced</li>
+          </ul>
+
+          <p>
+            The resume prompt is the doorway into the continuity system. It is
+            not the system itself.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>Common failure patterns</h2>
+
+          <h3>One giant context file</h3>
+
+          <p>
+            Everything is copied into a single document until current facts, old
+            history, instructions, ideas, and plans all blur together. The file
+            becomes hard to maintain, and the model cannot easily tell which
+            sections are authoritative.
+          </p>
+
+          <h3>Documentation without ownership</h3>
+
+          <p>
+            Several documents describe the same project fact, but no rule
+            decides which one owns it. One file says the project is in early
+            development; another says the same feature is complete; a third
+            still describes an older architecture. Clear document ownership
+            prevents most of these contradictions.
+          </p>
+
+          <h3>Startup without verification</h3>
+
+          <p>
+            The model loads a polished project summary but never checks the
+            current repository, files, or system state. The session begins
+            coherently—but from outdated information.
+          </p>
+
+          <h3>Closeout only inside the chat</h3>
+
+          <p>
+            The conversation ends with an excellent summary, yet no project
+            files are updated. The next session cannot reliably recover the
+            decisions that were made.
+          </p>
+
+          <h3>Memory treated as authority</h3>
+
+          <p>
+            The model recalls a project detail and keeps working from it even
+            though the current files say something different. Memory is useful
+            context, not final evidence.
+          </p>
+
+          <h3>Too much context for every task</h3>
+
+          <p>
+            The entire project is loaded for a narrow task, and the important
+            information becomes harder to find because it is buried in
+            unrelated material.
+          </p>
+
+          <h3>Connector access mistaken for complete access</h3>
+
+          <p>
+            Because the model can read the remote repository, everyone assumes
+            it can also see local edits, running services, unpublished files,
+            and recent command output. A connector is a controlled window into a
+            particular system, not universal access to the whole project
+            environment.
+          </p>
+
+          <h3>Write access mistaken for broad permission</h3>
+
+          <p>
+            Because the model can modify the repository, it treats every related
+            improvement as part of the task. Technical capability is not the
+            same as authorization.
+          </p>
+
+          <h3>Documentation updated from memory</h3>
+
+          <p>
+            The model rewrites a project-state or architecture document from the
+            conversation without first checking the current files and approved
+            decisions. The result may read well while being factually stale.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2>A lightweight workflow you can use now</h2>
+
+          <p>Start small. Create:</p>
+
+          <ol class="kb-path-list">
+            <li>
+              <span>1.</span>
+              <div>a project-state document</div>
+            </li>
+            <li>
+              <span>2.</span>
+              <div>a stable rules and architecture document</div>
+            </li>
+            <li>
+              <span>3.</span>
+              <div>a decision record</div>
+            </li>
+            <li>
+              <span>4.</span>
+              <div>a repository or system map</div>
+            </li>
+            <li>
+              <span>5.</span>
+              <div>a startup and closeout checklist</div>
+            </li>
+          </ol>
+
+          <p>Use the AI model to help design and draft these documents.</p>
+
+          <p>
+            First, ask it to inspect the repository and propose which files are
+            needed, and to explain what information each file should own and
+            where duplication could occur. Review the proposed structure.
+          </p>
+
+          <p>
+            Then authorize the model to create the approved files on a separate
+            branch, using current repository evidence and marking unknown
+            information clearly instead of guessing.
+          </p>
+
+          <h3>At the beginning of a session:</h3>
+
+          <ol class="kb-path-list">
+            <li><span>1.</span><div>identify the repository and branch</div></li>
+            <li><span>2.</span><div>check whether local changes exist</div></li>
+            <li><span>3.</span><div>load the documents relevant to the task</div></li>
+            <li><span>4.</span><div>compare the documentation with the current files</div></li>
+            <li><span>5.</span><div>define the task and operating boundaries</div></li>
+            <li><span>6.</span><div>identify missing information</div></li>
+          </ol>
+
+          <h3>During the session:</h3>
+
+          <ol class="kb-path-list">
+            <li><span>1.</span><div>keep the task focused</div></li>
+            <li><span>2.</span><div>record decisions</div></li>
+            <li><span>3.</span><div>verify important results</div></li>
+            <li><span>4.</span><div>report contradictions</div></li>
+            <li><span>5.</span><div>avoid making unapproved changes</div></li>
+            <li><span>6.</span><div>flag documentation that has become stale</div></li>
+          </ol>
+
+          <h3>At the end:</h3>
+
+          <ol class="kb-path-list">
+            <li><span>1.</span><div>ask the model to review what changed</div></li>
+            <li><span>2.</span><div>have it identify which project documents are affected</div></li>
+            <li><span>3.</span><div>review the proposed documentation scope</div></li>
+            <li><span>4.</span><div>have the model draft the updates</div></li>
+            <li><span>5.</span><div>verify the updated information</div></li>
+            <li><span>6.</span><div>record incomplete work</div></li>
+            <li><span>7.</span><div>identify the next action</div></li>
+            <li><span>8.</span><div>commit the approved changes</div></li>
+            <li><span>9.</span><div>push them to the remote repository when appropriate</div></li>
+          </ol>
+
+          <p>
+            This system can begin with nothing more than simple text files and a
+            basic understanding of Git. As the project grows, you can add
+            standardized templates, automated checks, specialized documentation,
+            role-specific workflows, or tools that detect stale information.
+          </p>
+
+          <p>
+            Those additions improve consistency and save setup time, but they
+            all build on the same foundation:
+          </p>
+
+          <ul class="kb-compact-principles">
+            <li>controlled project history</li>
+            <li>clear sources of truth</li>
+            <li>deliberate context loading</li>
+            <li>explicit operating rules</li>
+            <li>narrow repository permissions</li>
+            <li>appropriate verification</li>
+            <li>AI-assisted documentation maintenance</li>
+            <li>disciplined closeout</li>
+          </ul>
+        </section>
+
+        <section class="kb-section">
+          <h2>Frequently asked questions</h2>
+
+          <div class="kb-faq-list">
+            <details>
+              <summary>Do I have to use GitHub?</summary>
+              <p>
+                No. You can use GitLab, Bitbucket, another Git hosting provider,
+                or a different version-control system altogether. GitHub is a
+                common choice because many AI tools and development platforms
+                integrate with it, but the continuity method itself does not
+                depend on any single provider.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Does committing a change automatically make it visible to a
+                cloud AI model?
+              </summary>
+              <p>
+                Not always. A local commit lives in the repository on your
+                computer, and a remote repository connector usually will not see
+                it until the commit has been pushed to the remote service. Ask
+                the model which repository, branch, and commit it inspected.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can a local AI coding tool see uncommitted changes?</summary>
+              <p>
+                It may be able to if it has been given access to the local
+                project directory or development environment. That is a
+                different situation from a cloud AI model reading a remote
+                repository through a connector. Always confirm the actual access
+                boundary.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Should every project document be loaded in every session?
+              </summary>
+              <p>
+                No. Load the smallest trustworthy set of information the task
+                requires. Too little context leads to guessing; too much
+                unrelated context creates noise.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Should the AI model be allowed to update project documentation?
+              </summary>
+              <p>
+                Yes—when it has the necessary source context and the permitted
+                scope is clear. The model is well suited to reading multiple
+                files, spotting stale information, drafting coordinated updates,
+                and preserving details that are easy to overlook by hand. The
+                human should review important changes and remain the authority
+                over project decisions.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Should the AI model update documentation from the conversation
+                alone?
+              </summary>
+              <p>
+                No. The conversation may hold useful context, but documentation
+                updates should be verified against the current files, repository
+                state, validation evidence, and approved decisions.
+              </p>
+            </details>
+
+            <details>
+              <summary>Is a resume prompt enough?</summary>
+              <p>
+                No. A resume prompt is valuable when it points to current source
+                documents and requires verification. On its own, it can only
+                repeat the information it already contains or can reach.
+              </p>
+            </details>
+
+            <details>
+              <summary>Should AI memory be trusted?</summary>
+              <p>
+                AI memory can be useful background, but it should not be the
+                final authority. When sources disagree, current files, verified
+                output, repository state, and human-approved decisions should
+                win.
+              </p>
+            </details>
+
+            <details>
+              <summary>How often should documentation be updated?</summary>
+              <p>
+                Update a document when the information it owns changes. A
+                project-state document may change frequently; stable architecture
+                rules may change rarely; a decision record should change
+                whenever an important decision is approved. Use the model to
+                identify which documents were affected instead of trying to
+                track every update from memory.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="kb-section">
+          <h2>Where this fits in AI Operations</h2>
+
+          <p>
+            Keeping project context is one part of
+            <a
+              class="glossary-term"
+              href="../../glossary/#ai-operations"
+              data-term="AI Operations"
+              data-definition="The discipline of making AI-assisted work repeatable, grounded, reviewable, and continuous."
+            >AI Operations</a>.
+          </p>
+
+          <p>The broader discipline also includes:</p>
+
+          <ul class="kb-plain-list">
+            <li>source grounding</li>
+            <li>human authority</li>
+            <li>controlled repository access</li>
+            <li>safe write boundaries</li>
+            <li>evidence</li>
+            <li>verification</li>
+            <li>documentation ownership</li>
+            <li>repeatable workflows</li>
+            <li>safe project handoffs</li>
+            <li>recoverable decision history</li>
+          </ul>
+
+          <p>
+            The next related concept is documentation as operational memory:
+            treating project records as active infrastructure that helps the
+            work continue, rather than as administrative cleanup performed once
+            the important work is already over.
+          </p>
+        </section>
+
+        <section class="kb-next-step">
+          <p class="eyebrow">Continue reading</p>
+          <h2>Build the larger continuity model.</h2>
+
+          <div class="kb-next-step-links">
+            <a href="./">
+              <span>Foundation</span>
+              <strong>AI Operations</strong>
+            </a>
+
+            <a href="../persistent-ai-memory/">
+              <span>Related concept</span>
+              <strong>Persistent AI Memory</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="kb-related">
+          <p class="eyebrow">Related reading</p>
+
+          <div class="kb-related-links">
+            <a href="./">AI Operations</a>
+            <a href="../persistent-ai-memory/">Persistent AI Memory</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../controlled-ai-systems/">Controlled AI Systems</a>
+            <a href="../../story/">Story</a>
+            <a href="../../projects/neurocore.html">NeuroCore</a>
+            <a href="../../knowledge-base/">Knowledge Base</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © 2026 TENSA Engineering. Built for controlled AI systems, real
+      infrastructure, and operational continuity.
+    </p>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="../../contact.html">Contact</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+    </nav>
+  </footer>
+</body>
+</html>
