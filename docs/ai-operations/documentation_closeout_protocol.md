@@ -190,6 +190,22 @@ Connector-read access does not replace required local evidence for:
 
 ---
 
+## Repository Boundary Lock
+
+Once the active writable repository and approved edit scope are established, the boundary remains locked until Richard explicitly expands it.
+
+For normal TENSA website work, the active writable repository is:
+
+    RichBayer/tensaengineering.dev
+
+External repositories may be loaded as read-only reference context when the active task requires them, but connector visibility does not grant write authority.
+
+During workflow-only updates, do not change public page content, sitemap state, deployment state, indexing claims, website state, branch closeout state, current public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
+
+Potential improvements outside the approved boundary should be recorded as recommendations or follow-up items, not silently implemented.
+
+---
+
 ## Local Working Tree Priority Rule
 
 During closeout, local repository state wins over connector-read state for any file that was edited, generated, created, deleted, or verified during the current session.
@@ -245,6 +261,48 @@ Assistant:
 - provides targeted verification commands after each full-file replacement
 
 The assistant is responsible for identifying documentation impact, but must not make undocumented assumptions.
+
+---
+
+## Unknown Authority Rule
+
+Any existing source-of-truth document that has not been loaded or bundled in full during the current session is an unknown authority document.
+
+Unknown authority documents must not be:
+
+- modified
+- summarized as current state
+- indirectly synchronized from memory
+- rewritten from assumptions
+- used as proof of implementation status
+
+If a file may need to change, load the full current file first.
+
+If a file exists only locally or may differ from GitHub, use local evidence or the read-only bundler workflow before editing.
+
+---
+
+## Bundler-First Local Context Workflow
+
+When local files, uncommitted changes, generated artifacts, browser-preview observations, validation output, deployment evidence, or machine-specific state matter, and full local context is not already available, request a read-only context bundle or targeted local evidence before generating local editor scripts.
+
+The bundle or local evidence should collect only relevant context, such as:
+
+- required AI-operations docs
+- repository map and website state docs
+- affected planning docs
+- affected public HTML, CSS, JavaScript, sitemap, robots, or asset references
+- current local file contents or diffs
+- `git status --short`
+- `git diff --stat`
+- full relevant `git diff` output
+- internal-link validation output
+- browser-preview observations
+- deployment or search-console evidence when deployment or indexing claims matter
+
+The bundler must not edit repository files.
+
+After Richard uploads a bundle or local evidence, review it before generating any local Python editor script.
 
 ---
 
@@ -487,10 +545,20 @@ Python-based file writing is allowed and often preferred for closeout documentat
 Use Python as a delivery mechanism when:
 
 - the current full file context has been loaded or otherwise verified
-- the complete intended replacement has been decided
-- the assistant is writing the whole file, not guessing at a hidden section
+- the complete intended replacement or approved scoped edit has been decided
+- every existing file being edited is inside the approved repository boundary
 - the command is easier and safer than manual copy/paste
-- the replacement can be verified immediately afterward
+- the replacement or edit can be verified immediately afterward
+
+Local Python editor scripts must:
+
+- edit only approved files
+- create only approved new files
+- preserve unrelated content
+- fail loudly if an expected marker, heading, or exact replacement count is missing
+- avoid silently continuing after a failed required replacement
+- print every file they create or update
+- leave review to `git status --short`, `git diff --stat`, targeted `git --no-pager diff`, and local validation
 
 Do not use Python as a shortcut to:
 
@@ -498,13 +566,14 @@ Do not use Python as a shortcut to:
 - make blind surgical patches from incomplete information
 - guess what a hidden section probably says
 - rewrite unrelated content without approval
-- bypass the user's review expectations
+- bypass Richard's review expectations
+- change public content, sitemap state, branch state, website state, deployment state, or indexing claims during workflow-only updates
 
 Preferred safe pattern:
 
     full context first
     define intended changes
-    write the complete file
+    write the complete file or approved scoped edit
     run targeted verification
     wait for user output
 

@@ -140,6 +140,25 @@ The internal documentation system should be organized around these responsibilit
 
 ---
 
+## Workflow Guardrail Ownership Rule
+
+TENSA website workflow guardrails are owned across the internal documentation system as follows:
+
+- `tensa_website_resume_prompt.md` owns fresh-session startup behavior, current operating rules, source loading, and the compact continuation handoff.
+- `documentation_closeout_protocol.md` owns end-of-session workflow, repository-boundary discipline, unknown-authority handling, local evidence requirements, local editor rules, and completion gates.
+- `documentation_strategy.md` owns which internal document is responsible for each workflow rule and when each doc should be updated.
+- `website_state.md` summarizes current workflow behavior only when future sessions need to know it.
+
+The active writable repository remains locked to `RichBayer/tensaengineering.dev` unless Richard explicitly expands the boundary.
+
+External repositories may be read as source context when required, but they must not be modified from a TENSA website workflow session.
+
+Workflow-only updates must not rewrite public page content, sitemap state, deployment state, indexing claims, branch closeout state, public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
+
+Any source-of-truth document not loaded or bundled in full during the current session is an unknown authority document and must not be modified or summarized as current state from memory.
+
+---
+
 ## Current Core Documentation Set
 
 The current core documentation set is:

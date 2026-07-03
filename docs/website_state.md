@@ -147,6 +147,15 @@ Normal website workflow remains local-first:
     Richard reviews diffs
     Richard commits and pushes manually
 
+Current additional workflow guardrails:
+
+- Active repository boundary remains `RichBayer/tensaengineering.dev` unless Richard explicitly expands it.
+- Connector access is read-only by default.
+- Unknown source-of-truth documents must be loaded in full before being modified or summarized as current state.
+- Local files, browser-preview observations, validation output, deployment evidence, and search-console evidence override connector-read committed state when those local or external facts matter.
+- During workflow-only updates, do not change public page content, sitemap state, deployment state, indexing claims, branch closeout state, public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
+- Use read-only local evidence or a context bundle before generating local editor scripts when local working-tree or validation state matters.
+
 
 Local path:
 

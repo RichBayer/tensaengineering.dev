@@ -107,6 +107,42 @@ If something is unclear:
 
 ---
 
+# WORKFLOW GUARDRAIL ADDENDUM
+
+Repository Boundary Lock:
+
+    Once the active writable repository and approved edit scope are established, the boundary remains locked until Richard explicitly expands it.
+
+    For normal TENSA website work, the active writable repository is:
+
+        RichBayer/tensaengineering.dev
+
+    External repositories may be loaded as read-only reference context when the active task requires them, but connector visibility does not grant write authority.
+
+    During workflow-only updates, do not change public page content, sitemap state, deployment state, indexing claims, website state, branch closeout state, current public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
+
+Unknown Authority Rule:
+
+    Any existing source-of-truth document that has not been loaded or bundled in full during the current session is an unknown authority document.
+
+    Unknown authority documents must not be modified, summarized as current state, synchronized from memory, rewritten from assumptions, or used as proof of implementation status.
+
+    If a file may need to change, load the full current file first.
+
+Bundler-First Local Context Rule:
+
+    When local files, uncommitted changes, generated artifacts, browser-preview observations, validation output, deployment evidence, or machine-specific state matter, request local evidence or a read-only context bundle before generating local editor scripts.
+
+    The bundle or local evidence must not edit repository files.
+
+Local Python Editor Rule:
+
+    Local Python editors should be generated only after full context exists for every existing file being edited.
+
+    They must edit only approved files, preserve unrelated content, fail loudly if expected markers are missing, print every file they create or update, and leave review to git status, git diff --stat, targeted git --no-pager diff, and local validation.
+
+---
+
 # SESSION INITIALIZATION PROTOCOL
 
 At the start of a serious website build session:
