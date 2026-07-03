@@ -157,6 +157,33 @@ Current additional workflow guardrails:
 - Use read-only local evidence or a context bundle before generating local editor scripts when local working-tree or validation state matters.
 
 
+
+## Known Local Branch Repair Notes
+
+Known local-only website repair state:
+
+- Branch `content/knowledge-base-reading-experience` had uncommitted public-site reading-experience work before this AI-Ops guardrail update.
+- That WIP was preserved locally in a Git stash named `WIP knowledge-base-reading-experience before ai-ops guardrail update`.
+- The stash is local-only and will not be visible through the GitHub connector.
+- A fresh AI session must ask for local Git evidence before trying to repair or continue that branch.
+- Do not apply, pop, drop, or rewrite the stash until the branch repair scope is clear.
+
+Before repairing that branch, inspect locally:
+
+    git branch
+    git stash list
+    git checkout content/knowledge-base-reading-experience
+    git status --short
+    git stash show --stat "stash@{0}"
+
+If the stash still exists and the branch is selected intentionally, review the stash contents before applying it:
+
+    git stash show --stat "stash@{0}"
+    git stash show --patch "stash@{0}"
+
+Only apply or pop the stash after Richard approves the repair scope.
+
+
 Local path:
 
     /mnt/g/ai/projects/tensaengineering.dev
