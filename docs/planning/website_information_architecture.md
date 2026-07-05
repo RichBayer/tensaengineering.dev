@@ -718,6 +718,14 @@ Articles should be:
 - connected to project pages
 - connected to source-of-truth GitHub docs when useful
 
+Long-form Knowledge Base articles should use the prose-first article standard established by `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html`.
+
+That standard favors fuller paragraphs, natural article flow, fewer bullets and numbered lists, and a small number of useful styled diagrams. It should feel like a polished technical article or short book chapter, not an internal checklist, dashboard, repository map, or code comment block.
+
+Diagrams should be used sparingly. When used, they should look like explanatory article graphics and help the reader understand the concept quickly. They should not look like terminal output, file trees, raw code blocks, or internal planning diagrams unless the article is specifically teaching code, configuration, or repository structure.
+
+Category pages and article pages should have different jobs. A category page should route readers to articles and explain the topic area briefly. A focused article should answer one reader question in depth.
+
 The knowledge base should avoid vague AI hype.
 
 It should explain real concepts using examples from NeuroCore, Argus ACLI, and Argus Lab.
@@ -749,7 +757,28 @@ Topics:
 - resume prompts
 - anti-drift safeguards
 - source-of-truth documentation
+- repository connector boundaries
+- closeout protocols
 - AI-assisted systems engineering
+
+Current structure:
+
+    /knowledge-base/ai-operations/
+        currently live as the AI Operations foundation article and category entry
+
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+        live focused long-form article and current prose-first article-format proof page
+
+Planned structure:
+
+    /knowledge-base/ai-operations/
+        future AI Operations category / article index page
+
+    /knowledge-base/ai-operations/what-is-ai-operations.html
+        likely future dedicated article for the current long-form AI Operations landing-page content, pending final slug approval
+
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+        focused continuity guide under the AI Operations category
 
 ---
 
@@ -1353,17 +1382,30 @@ They should establish structure before depth.
 
 ## Phase 4 Knowledge Base Expansion Scope
 
-After the first internal pages exist, begin expanding the knowledge base.
+After the first internal pages exist, begin expanding the knowledge base deliberately.
 
-Recommended first articles:
+Current foundation path:
 
-    /knowledge-base/persistent-ai-memory/intelligence-without-continuity-is-fragile.html
-    /knowledge-base/ai-operations/documentation-as-operational-memory.html
-    /knowledge-base/controlled-ai-systems/ai-can-reason-but-authority-must-be-governed.html
-    /knowledge-base/safe-tool-interaction/why-ai-should-not-directly-execute-on-systems.html
-    /knowledge-base/linux-diagnostics/why-raw-command-output-is-not-enough.html
+    /knowledge-base/ai-operations/
+    /knowledge-base/persistent-ai-memory/
+    /knowledge-base/controlled-ai-systems/
+    /knowledge-base/local-first-ai/
+    /knowledge-base/safe-tool-interaction/
+    /knowledge-base/linux-diagnostics/
+    /knowledge-base/troubleshooting-training/
+    /knowledge-base/neurocore-architecture/
 
-Each article should be focused and internally linked.
+Current focused article and article-format proof page:
+
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+
+Recommended next Knowledge Base structure work:
+
+    Convert /knowledge-base/ai-operations/ into a true AI Operations category / article index page.
+    Move the current long-form AI Operations landing-page content into a dedicated article page.
+    Keep the project-context continuity guide as a focused article under the AI Operations category.
+
+Future focused articles should be added only after source requirements, internal links, and page-inventory entries are defined.
 
 ---
 

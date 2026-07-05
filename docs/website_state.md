@@ -42,6 +42,7 @@ Current phase:
     public GitHub navigation removed from current public pages
     public repository-proof framing replaced with private-development / future-artifacts framing
     glossary strategy and search-answer optimization planning docs added
+    Knowledge Base article reading-experience standard created on focused project-context guide
 
 The site now functions as a modular ecosystem portal and teaching platform, not a single long page.
 
@@ -55,16 +56,15 @@ Deeper explanations are moving into dedicated pages and Knowledge Base articles.
 
 Current branch:
 
-    content/ai-ops-project-context
+    feature/kb-reading-experience-standard
 
 Current local closeout state:
 
-- focused AI Operations article created
-- AI Operations page links to the focused guide
-- MCP-based tool glossary definition added
-- sitemap.xml contains 19 canonical URLs
-- repository size is 27 directories and 72 files
-- required closeout planning docs are updated
+- focused AI Operations project-context article converted into the first prose-first Knowledge Base article standard / proof page
+- article now uses fuller paragraphs, far fewer lists, and three styled explanatory diagrams
+- article metadata changed from pill-style tags to a single plain reader-context sentence
+- shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
+- no new public routes, directories, assets, sitemap entries, or navigation destinations were added in this branch
 - local internal-link and anchor validation passed
 
 Focused article:
@@ -80,8 +80,8 @@ Latest validation:
 
 Current boundary:
 
-    These closeout changes are local branch work until committed and pushed.
-    Deployment and indexing must not be claimed until the branch is merged and GitHub Pages deploys it.
+    These closeout changes are local branch work until committed, merged to main, pushed, and deployed by GitHub Pages.
+    Deployment and indexing must not be claimed until live-site evidence confirms the branch has been published.
 
 ---
 
@@ -878,6 +878,12 @@ Current focused article:
     How to Keep AI From Losing Project Context
     /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
 
+Current article-format standard:
+
+    The focused project-context article is the current proof page for the prose-first Knowledge Base article format.
+    The standard favors fuller paragraphs, natural section flow, fewer bullets, fewer numbered lists, and a small number of useful styled diagrams.
+    Diagrams should look like explanatory article graphics, not terminal output, code blocks, file trees, or internal planning artifacts unless the subject actually requires code or file examples.
+
 Current article-path behavior:
 
     Knowledge Base index links to all eight foundation articles.
@@ -887,6 +893,12 @@ Current article-path behavior:
     Related links point only to real public pages.
     Inline glossary links provide compact definitions where helpful.
     Article pages preserve current-vs-future language where needed.
+
+Planned AI Operations category direction:
+
+    /knowledge-base/ai-operations/ should become a true AI Operations category / article index page in a future branch.
+    The current long-form AI Operations landing-page content should move into a dedicated article, likely /knowledge-base/ai-operations/what-is-ai-operations.html or another approved article slug.
+    The project-context article should remain a focused article under the AI Operations category.
 
 Important note:
 
@@ -1253,6 +1265,15 @@ Social content:
 
 ---
 
+- focused AI Operations project-context article converted into the first prose-first Knowledge Base article standard / proof page
+- list-heavy project-context article structure replaced with fuller article prose
+- raw/code-style diagrams reduced to three styled explanatory article diagrams
+- article metadata changed from pill-style tags to a plain reader-context sentence
+- reusable Knowledge Base article diagram, FAQ, and metadata styling added to styles.css
+- local validation passed for 579 internal links across 19 public HTML files after the reading-experience pass
+
+---
+
 ## Not Yet Completed
 
 - Resources page
@@ -1260,10 +1281,13 @@ Social content:
 - analytics decisions
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- commit, push, merge, and live deployment confirmation for the focused AI Operations article branch
+- commit, push, merge, and live deployment confirmation for `feature/kb-reading-experience-standard`
+- AI Operations category / article index conversion
+- migration of the current long-form AI Operations landing-page content into a dedicated article page
 - old-site migration plan
 - permanent internal link checker script
-- article templates for future Knowledge Base expansion
+- reusable article templates for future Knowledge Base expansion
+- optional stock / editorial image system for future Knowledge Base article polish
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - dedicated SEO/topic-map session for the first Knowledge Base article path
@@ -1422,27 +1446,27 @@ Preferred safe pattern:
 
 Immediate:
 
-1. Update the compressed resume prompt.
-2. Run final validation.
-3. Review the diff.
-4. Commit and push the feature branch.
-5. Merge the branch.
-6. Confirm GitHub Pages deploys the focused article and 19-URL sitemap.
+1. Review the final diff for the project-context article and shared CSS.
+2. Commit the reading-experience branch.
+3. Merge `feature/kb-reading-experience-standard` into `main` without force.
+4. Push `main`.
+5. Confirm GitHub Pages deploys the updated focused article and existing 19-URL sitemap.
 
 After deployment:
 
-- confirm the AI Operations page links to the focused guide
 - confirm the focused article loads at its canonical URL
-- confirm the live sitemap contains 19 URLs
-- inspect the article in Google Search Console if appropriate
+- confirm the AI Operations page still links to the focused guide
+- confirm the live sitemap still contains 19 URLs
+- inspect the focused article in Google Search Console if appropriate
 - do not claim indexing until webmaster-tool evidence confirms it
 
 Next website work:
 
-    Start a fresh thread from the resume prompt.
-    Run the full workflow.
-    Fix any remaining drift found during that review.
-    Then choose the next page deliberately.
+    Start a fresh branch for the AI Operations category / article index conversion.
+    Convert /knowledge-base/ai-operations/ into a true category / article index page.
+    Move the current long-form AI Operations landing-page content into a dedicated article page.
+    Keep the project-context article as a focused article under that category.
+    Apply the new prose-first article standard to future Knowledge Base articles deliberately.
 
 ---
 

@@ -515,6 +515,19 @@ Knowledge Base pages should:
 
 Each article should answer one focused question.
 
+Long-form Knowledge Base articles should use the prose-first reading standard established by the focused AI Operations project-context guide.
+
+That standard means:
+
+- use fuller paragraphs with natural transitions
+- avoid making the page feel like a checklist or documentation dump
+- use bullets only when they genuinely improve scanning
+- avoid long numbered lists unless the article is teaching a sequence
+- use two or three strong explanatory diagrams rather than many weak ones
+- make diagrams feel like polished article graphics, not code blocks or file trees
+- keep FAQ useful but secondary
+- preserve current-vs-future boundaries
+
 Examples:
 
 - Why should AI reason but not hold authority?
@@ -582,16 +595,21 @@ Use headings to create a clear reading path.
 
 Prefer:
 
-    Short sections.
-    Clear headings.
-    Short paragraphs.
+    Clear sections.
+    Strong headings.
+    Short-to-medium paragraphs with natural transitions.
+    Fuller paragraph flow for long-form articles.
     Bullets only when they improve scanning.
-    Narrative prose when explaining story or philosophy.
+    Narrative prose when explaining story, philosophy, or operating method.
     Tables only when comparison is useful.
+    A small number of purposeful diagrams when they improve understanding.
 
 Avoid:
 
     Massive bullet lists replacing explanation.
+    Repeated one- or two-sentence fragments that make articles feel disconnected.
+    Too many diagrams interrupting the reading path.
+    Diagrams that look like terminal output, code blocks, file trees, or internal planning artifacts unless that is the subject.
     Dense technical paragraphs.
     Repeating the same project summary on every page.
     Burying the current status.
@@ -877,6 +895,7 @@ Update this document when:
 - public writing tone changes
 - product maturity language needs refinement
 - Knowledge Base articles begin expanding
+- Knowledge Base article format standards change
 - Story pages begin expanding
 - public page patterns become clearer
 - recurring writing mistakes appear
