@@ -1,17 +1,18 @@
 # TENSA Engineering Website – Resume Prompt (Compressed)
 
-We are continuing development of the TENSA Engineering website:
+Use this prompt when starting a fresh TENSA Engineering website session.
+
+The website is the public home for TENSA Engineering:
 
     https://tensaengineering.dev
 
-Repository path:
+Local repository path:
 
     /mnt/g/ai/projects/tensaengineering.dev
 
-Default working assumption:
+GitHub repository:
 
-    The user is usually in VS Code at the repository root with an integrated terminal open.
-    Provide commands that can be copied and run from the repo root unless told otherwise.
+    RichBayer/tensaengineering.dev
 
 Deployment:
 
@@ -21,234 +22,236 @@ DNS / domain:
 
     Cloudflare
 
-Current repository size:
+Default working assumption:
 
-    27 directories, 72 files
-
-Verify at build start with:
-
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
-
-Do not rely on an old repository size count.
+    Richard is usually in VS Code at the repository root with an integrated terminal open.
+    Provide copy-ready commands that can be run from the repo root unless told otherwise.
 
 ---
 
-# CURRENT FEATURE BRANCH CLOSEOUT
+## Current Committed Baseline
 
-Current branch:
+The latest confirmed website-content closeout merged and pushed to `main` was:
 
-    content/ai-ops-project-context
+    5687392 Refine KB article reading experience
+
+That commit converted the focused AI Operations project-context article into the first prose-first Knowledge Base article reading-standard proof page.
+
+Current repository size from latest local closeout evidence:
+
+    27 directories, 72 files
 
 Current public HTML page count:
 
     19
 
-Current focused article:
-
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
-
-Current completed branch work:
-
-- focused AI Operations article created
-- AI Operations page links to the focused guide
-- MCP-based tool glossary definition added
-- sitemap.xml contains 19 canonical URLs
-- repository map updated to 27 directories and 72 files
-- required closeout planning docs updated
-- local internal-link and anchor validation passed
-
-Latest validation:
+Latest local internal-link validation from closeout:
 
     Public HTML files checked: 19
     Internal links checked: 579
     External/skipped links: 21
     Result: all checked internal links and anchors resolved successfully
 
-Current boundary:
-
-    Changes remain local until committed and pushed.
-    Deployment and indexing must not be claimed until the branch is merged and GitHub Pages deploys it.
+Do not assume the live site deployed just because `main` was pushed. GitHub Pages deployment and live-page behavior must be verified from current evidence before making deployment or indexing claims.
 
 ---
 
-# CRITICAL OPERATING RULES
+## Most Recent Completed Work
 
-- Do NOT guess page state, repo structure, paths, links, or project facts.
-- Do NOT treat prior conversation as system truth.
-- Only treat uploaded docs, current file contents, repo output, and user-provided command output as truth.
-- Always reference the repository map before assuming file locations.
-- Ask for exact docs or files when context is missing.
-- Do not edit closeout or planning docs from grep snippets alone.
-- Read or request full-file context before editing closeout or planning docs.
-- Use full file replacements when the user must manually paste large code/docs.
-- Controlled Python edits are acceptable after full-file context has been reviewed and the intended changes are clear.
+Completed in the latest reading-experience branch:
 
-Python full-file writers are allowed when full context is loaded and the complete intended replacement is known.
+- branch `feature/kb-reading-experience-standard` was committed, fast-forward merged into `main`, and pushed to `origin/main`
+- focused article updated at:
 
-Do not use Python to blindly patch unknown sections from partial context.
-- Do NOT provide snippets unless explicitly requested.
-- After each full-file replacement or controlled Python edit, run a targeted verification check before moving to the next file.
-- Do NOT make hidden changes.
-- Do NOT invent public-facing claims.
-- Do NOT write factual project pages without checking source requirements.
-- Do NOT let the site grow faster than the documentation system that tracks it.
-- Public website copy must not sound like internal planning notes.
-- Do NOT describe TENSA Engineering as “the public explanation layer,” “the teaching layer,” or merely “the public-facing explanation” of NeuroCore.
-- Treat TENSA Engineering as the umbrella engineering company, public brand, and ecosystem owner.
-- Treat the Knowledge Base as the public teaching/explanation layer.
-- Treat NeuroCore as the platform foundation inside the TENSA ecosystem, not the thing TENSA exists only to explain.
-- Keep the homepage as a front door, not a giant explanation page.
+        knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
 
-If something is unclear:
+- article became the first prose-first Knowledge Base article standard / proof page
+- list-heavy structure was replaced with fuller article prose
+- raw/code-looking diagrams were reduced to three styled explanatory diagrams
+- article metadata was changed from pill-style tags to one plain reader-context sentence
+- shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
+- closeout docs were updated to record the article format standard and next IA direction
 
-    STOP
-    explain what is missing
-    ask for the needed file, repo output, or source doc
+Important:
+
+    This latest branch did not add new public routes, directories, assets, sitemap entries, or navigation destinations.
 
 ---
 
-# WORKFLOW GUARDRAIL ADDENDUM
+## Current Next Website Direction
 
-Repository Boundary Lock:
+Next high-value website work:
 
-    Once the active writable repository and approved edit scope are established, the boundary remains locked until Richard explicitly expands it.
+    AI Operations category / article index conversion
 
-    For normal TENSA website work, the active writable repository is:
+Recommended next branch:
 
-        RichBayer/tensaengineering.dev
+    feature/kb-ai-operations-index
 
-    External repositories may be loaded as read-only reference context when the active task requires them, but connector visibility does not grant write authority.
+or:
 
-    During workflow-only updates, do not change public page content, sitemap state, deployment state, indexing claims, website state, branch closeout state, current public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
+    feature/kb-category-article-index
 
-Unknown Authority Rule:
+Target structure:
 
-    Any existing source-of-truth document that has not been loaded or bundled in full during the current session is an unknown authority document.
+    knowledge-base/ai-operations/
+        index.html
+            future AI Operations category / article index page
 
-    Unknown authority documents must not be modified, summarized as current state, synchronized from memory, rewritten from assumptions, or used as proof of implementation status.
+        what-is-ai-operations.html
+            likely future home for the current long-form AI Operations landing-page content
+            final slug still needs explicit approval
 
-    If a file may need to change, load the full current file first.
+        how-to-keep-ai-from-losing-project-context.html
+            existing focused continuity guide and article-format proof page
 
-Bundler-First Local Context Rule:
-
-    When local files, uncommitted changes, generated artifacts, browser-preview observations, validation output, deployment evidence, or machine-specific state matter, request local evidence or a read-only context bundle before generating local editor scripts.
-
-    The bundle or local evidence must not edit repository files.
-
-Local Python Editor Rule:
-
-    Local Python editors should be generated only after full context exists for every existing file being edited.
-
-    They must edit only approved files, preserve unrelated content, fail loudly if expected markers are missing, print every file they create or update, and leave review to git status, git diff --stat, targeted git --no-pager diff, and local validation.
+Do not start by rewriting the whole Knowledge Base. Work one page / structure decision at a time.
 
 ---
 
-# SESSION INITIALIZATION PROTOCOL
+## Critical Local-Only Context
 
-At the start of a serious website build session:
+A protected local stash existed at latest local confirmation:
 
-- Treat the session as having zero reliable prior context.
-- Use connector reads first for committed repository docs when connector access is available.
-- Do not ask Richard to upload every core context document by habit.
-- Ask Richard for local command output that connector reads cannot provide:
-    - `git status --short`
-    - current `tree` output
-    - current public HTML list
-    - current local validation output
-    - browser preview observations
-- Ask Richard for exact local file contents when a file is modified, uncommitted, local-only, or about to be edited.
-- During closeout, local working-tree files and local command output override connector-read committed state.
-- Avoid giant all-doc upload bundles unless connector access is unavailable or many local-only files must be reviewed together.
-- Do not analyze, summarize, or act on incomplete context when source docs are still being loaded.
-- Begin analysis only after the required connector reads, local command output, or requested file contents are available.
+    stash@{0}: On content/knowledge-base-reading-experience: WIP knowledge-base-reading-experience before ai-ops guardrail update
 
-Correct rhythm:
+Rules:
 
-    Start of session:
-        connector reads committed repo docs first
-        Richard provides git status / tree / validation output
-        assistant asks only for local files that are changed or needed
+- do not apply, pop, drop, rewrite, or otherwise touch this stash unless Richard explicitly approves that exact stash action
+- the stash is local-only and may not be visible through the GitHub connector
+- if branch repair comes up, request current local Git output first
 
-    During build:
-        local repo becomes source of truth for edited files
-        connector remains useful only for unchanged committed files
+Suggested inspection commands only if Richard intentionally revisits that repair work:
 
-    During closeout:
-        use local file contents/output for anything modified
-        request exact full local docs before editing planning/closeout docs
-        avoid giant upload bundles unless connector is unavailable or many local-only files changed
-
-    After commit/push:
-        connector state can be trusted again as committed baseline
+    git branch
+    git stash list
+    git checkout content/knowledge-base-reading-experience
+    git status --short
+    git stash show --stat "stash@{0}"
+    git stash show --patch "stash@{0}"
 
 ---
 
-# CONNECTOR ACCESS RULES
+## Session Initialization Protocol
 
-When repository connector access is available, the assistant may use it as the first-pass read-only source-loading mechanism for current committed repository files.
+At the start of every serious website build session:
 
-Connector-read workflow:
+1. Treat the session as having zero reliable prior context.
+2. Use connector reads first for committed source-of-truth docs when connector access is available.
+3. Do not ask Richard for giant upload bundles by habit.
+4. Ask Richard for current local command output that connector reads cannot provide.
+5. Ask for exact local file contents only when a file is modified, uncommitted, local-only, or about to be edited.
+6. Do not analyze, summarize, or act on incomplete source context while required docs are still being loaded.
 
-    use repository connector access for read-only source-of-truth retrieval
-    prefer current committed repository files over prior conversation memory
-    cite or clearly identify connector-read source files when summarizing retrieved context
-    still request user-provided command output for local working-tree state, uncommitted changes, browser review, and validation results
-    request exact local file contents when local files may differ from committed connector state
-    never use connector-read committed files as closeout truth for files edited locally during the session
+Build-start local checks:
+
+    git status --short
+    git branch --show-current
+    git log --oneline --decorate -5
+    git stash list
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    find . -maxdepth 3 -name "*.html" -print | sort
+    grep -R "href=" -n index.html about.html contact.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
+
+When public links, routes, or navigation matter, prefer real local internal-link validation over grep-only review.
+
+Future recommended permanent script:
+
+    scripts/check_internal_links.py
+
+---
+
+## Source-of-Truth Priority
+
+Use this order when facts conflict:
+
+1. current local files and local command output supplied by Richard
+2. current browser preview observations supplied by Richard
+3. current local validation output supplied by Richard
+4. committed repository files read through the connector
+5. current planning / closeout docs
+6. previous chat context and model memory
+
+Do not close out from connector-read committed files when local modifications exist.
+
+During closeout, local working-tree files and local command output override connector-read committed state.
+
+---
+
+## Connector Access Rules
 
 Default connector posture:
 
     read-only
 
-Even if write-capable connector tools are available in the future:
+Connector reads are appropriate for:
 
-    do not write repository files through connector tools
-    do not create files through connector tools
-    do not update files through connector tools
-    do not delete files through connector tools
-    do not commit through connector tools
-    do not push through connector tools
+- committed AI-operations docs
+- committed planning docs
+- committed website state files
+- committed public HTML/CSS/JS source files
+- committed repository map and source maps
 
-Exception:
+Connector reads do not replace local command output for:
 
-    Richard must explicitly authorize the specific connector write action in the current session before it is used.
+- uncommitted working-tree changes
+- current `git status --short`
+- current branch state
+- current stash state
+- local `tree` output
+- browser preview
+- internal-link validation results
+- deployment checks
 
-Normal website workflow remains:
+Connector writes are disabled by policy unless Richard explicitly authorizes the specific write action in the current session.
+
+If Richard explicitly authorizes a connector write:
+
+- keep it scoped to the named file(s)
+- avoid public page changes unless he explicitly asked for them
+- do not force-push
+- do not delete files unless explicitly authorized
+- report exactly what was changed and which branch was updated
+- remind Richard to pull locally if the connector wrote to a branch he has checked out
+
+Normal preferred workflow remains:
 
     assistant reads and analyzes
-    assistant provides local commands, verification checks, or full-file replacement content
+    assistant provides local commands or full-file replacement content
     Richard applies changes locally
     Richard reviews diffs
     Richard commits and pushes manually
 
-Treat connector write capability as disabled-by-policy unless Richard explicitly enables it for a specific action.
+---
 
-Connector reads are appropriate for:
+## Critical Operating Rules
 
-    committed AI-operations docs
-    committed planning docs
-    committed website state files
-    committed public HTML/CSS/JS files
-    committed repository map and source maps
+- Do not guess page state, repository structure, paths, links, deployment state, or project facts.
+- Do not treat prior conversation as system truth.
+- Do not invent public-facing claims.
+- Do not write factual public pages without checking source requirements.
+- Do not edit closeout or planning docs from grep snippets alone.
+- Read or request full-file context before editing closeout or planning docs.
+- Do not use Python to blindly patch unknown sections from partial context.
+- Controlled Python edits are acceptable after full-file context has been reviewed and intended changes are clear.
+- Use full file replacements when manual copy/paste editing would be error-prone.
+- Do not make hidden changes.
+- After each full-file replacement or controlled Python edit, run targeted verification before moving on.
+- Keep public-facing content separate from internal planning content.
+- Do not let the site grow faster than the documentation system that tracks it.
+- Build one page or structure decision at a time.
 
-Richard-provided local context is required for:
+If something is unclear:
 
-    uncommitted working-tree changes
-    current git status
-    current tree output
-    current local validation output
-    browser preview results
-    local files edited during the current session before commit
-
-Closeout and planning docs must not be edited from grep snippets alone.
-
-If a closeout or planning doc is being edited and the connector version may be stale, request the full current local file before editing.
+    STOP
+    explain what is missing
+    ask for the needed file, repo output, browser observation, validation result, or source doc
 
 ---
 
-# CORE CONTEXT DOCS
+## Core Context Docs
 
-Request or load these docs at the start of serious website sessions:
+Load or inspect these at the start of serious website sessions as needed:
 
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/ai-operations/documentation_closeout_protocol.md
@@ -257,43 +260,46 @@ Request or load these docs at the start of serious website sessions:
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
+    docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/page_inventory.md
-    docs/planning/search_answer_optimization_template.md
     docs/planning/internal_linking_strategy.md
     docs/planning/search_indexing_strategy.md
-    docs/planning/content_style_guide.md
+    docs/planning/search_answer_optimization_template.md
     docs/planning/seo_topic_map.md
 
-Purpose:
+Purpose of each:
 
     tensa_website_resume_prompt.md
         compressed startup protocol and current direction
 
     documentation_closeout_protocol.md
-        documentation closeout workflow for serious website build sessions
+        mandatory documentation closeout workflow for serious website build sessions
 
     claude_website_polish_resume_prompt.md
-        Claude prose-polish handoff workflow and guardrails
+        Claude prose-polish workflow and guardrails
 
     website_state.md
-        current live-state record
+        current state record, completed work, incomplete work, and next steps
 
     website_information_architecture.md
-        long-term website structure and expansion plan
+        long-term site structure and expansion plan
 
     tensa_repository_map.txt
-        authoritative repository structure and file map
+        repository structure and file-role map
 
     content_source_map.md
         source-doc requirements before writing factual pages
+
+    content_style_guide.md
+        public writing voice, tone, formatting, and article standards
 
     documentation_strategy.md
         documentation ownership, update triggers, and overlap boundaries
 
     glossary_strategy.md
-        glossary scope, term-selection rules, tooltip behavior, and expansion guardrails
+        glossary purpose, term-selection rules, tooltip behavior, and expansion guardrails
 
     page_inventory.md
         page existence, status, purpose, navigation state, and next actions
@@ -307,46 +313,12 @@ Purpose:
     search_answer_optimization_template.md
         future search-and-answer optimization workflow for page clarity and reader/search intent
 
-    content_style_guide.md
-        public writing voice, tone, formatting, and page-copy standards
-
     seo_topic_map.md
         future SEO topic planning and Knowledge Base search strategy
 
 ---
 
-# BUILD-START CHECKS
-
-At the beginning of serious website build sessions, run:
-
-    git status --short
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
-    find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html about.html contact.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
-
-For diff checks, prefer no-pager output to avoid clipped terminal pager output:
-
-    git --no-pager diff -- <path>
-    git --no-pager diff --stat
-
-Purpose:
-
-- confirm repository state
-- confirm current tree
-- confirm public page inventory
-- confirm current links
-- detect stale navigation targets
-- prevent broken links and drift
-
-When public links, routes, or navigation changed, prefer real local internal-link validation over grep-only review.
-
-Future recommended permanent script:
-
-    scripts/check_internal_links.py
-
----
-
-# CURRENT SITE STATE
+## Current Public Pages
 
 Current public pages:
 
@@ -370,69 +342,116 @@ Current public pages:
     /knowledge-base/neurocore-architecture/
     /story/
 
-Current internal planning / continuity docs:
+Current public HTML page count:
 
-    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-    docs/ai-operations/documentation_closeout_protocol.md
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/content_source_map.md
-    docs/planning/content_style_guide.md
-    docs/planning/documentation_strategy.md
-    docs/planning/internal_linking_strategy.md
-    docs/planning/page_inventory.md
-    docs/planning/search_indexing_strategy.md
-    docs/planning/seo_topic_map.md
-    docs/planning/website_information_architecture.md
-    docs/website_state.md
-
-Current public page status:
-
-    /                           Live homepage / ecosystem front door
-    /projects/                  Live ecosystem project index
-    /projects/neurocore.html    Live expanded NeuroCore platform page
-    /projects/argus-acli.html   Live full Argus ACLI public product page
-    /projects/argus-lab.html    Live full Argus Lab public project page
-    /knowledge-base/                                      Live Knowledge Base foundation-path hub
-    /glossary/                                            Live public Glossary page
-    /about.html                                           Live About page
-    /contact.html                                         Live Contact page, footer-only navigation
-    /knowledge-base/ai-operations/                        Live Knowledge Base foundation article / category entry
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
-                                                            Live focused AI Operations article
-    /knowledge-base/persistent-ai-memory/                 Live Knowledge Base article
-    /knowledge-base/controlled-ai-systems/                Live Knowledge Base article
-    /knowledge-base/local-first-ai/                       Live Knowledge Base article
-    /knowledge-base/safe-tool-interaction/                Live Knowledge Base article
-    /knowledge-base/linux-diagnostics/                    Live Knowledge Base article
-    /knowledge-base/troubleshooting-training/             Live Knowledge Base article
-    /knowledge-base/neurocore-architecture/               Live Knowledge Base article
-    /story/                                               Live full public Story page
-
-Current Contact page:
-
-    /contact.html
-
-Current public contact address:
-
-    contact@tensaengineering.dev
-
-Current contact routing status:
-
-    Cloudflare Email Routing configured and tested before public Contact page publication.
-
-Current favicon / browser icon state:
-
-    root favicon.ico exists
-    favicon assets exist under assets/images/branding/tensa/
-    current public HTML pages include favicon link tags
+    19
 
 ---
 
+## Current Navigation State
 
-# CURRENT SEARCH / SEO STATE
+Primary navigation:
 
-Current root search files:
+    Home
+    Projects
+    Knowledge Base
+    Glossary
+    Story
+    About
+
+Primary targets:
+
+    Home → /index.html
+    Projects → /projects/
+    Knowledge Base → /knowledge-base/
+    Glossary → /glossary/
+    Story → /story/
+    About → /about.html
+
+Footer targets:
+
+    Contact → /contact.html
+    About → /about.html
+    Projects → /projects/
+    Knowledge Base → /knowledge-base/
+    Glossary → /glossary/
+
+Important navigation rules:
+
+- Contact is footer-only.
+- Public GitHub navigation has been removed from current public pages.
+- Direct public links to private implementation repositories have been removed from current public pages.
+- Knowledge Base index links to all eight foundation Knowledge Base articles.
+- The foundation path links article-to-article and loops back to AI Operations from NeuroCore Architecture.
+- AI Operations links to the focused project-context guide.
+- Inline glossary terms in Knowledge Base articles point to `/glossary/` entries.
+
+---
+
+## Current Knowledge Base State
+
+Knowledge Base index:
+
+    /knowledge-base/
+
+Current eight-article foundation path:
+
+    1. AI Operations
+       /knowledge-base/ai-operations/
+
+    2. Persistent AI Memory
+       /knowledge-base/persistent-ai-memory/
+
+    3. Controlled AI Systems
+       /knowledge-base/controlled-ai-systems/
+
+    4. Local-First AI
+       /knowledge-base/local-first-ai/
+
+    5. Safe Tool Interaction
+       /knowledge-base/safe-tool-interaction/
+
+    6. Linux Diagnostics
+       /knowledge-base/linux-diagnostics/
+
+    7. Troubleshooting Training
+       /knowledge-base/troubleshooting-training/
+
+    8. NeuroCore Architecture
+       /knowledge-base/neurocore-architecture/
+
+Current focused AI Operations article:
+
+    How to Keep AI From Losing Project Context
+    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+
+Current article-format standard:
+
+    The project-context article is the proof page for the prose-first Knowledge Base article standard.
+
+That standard means:
+
+- fuller paragraphs with natural transitions
+- fewer lists and numbered sections
+- bullets only when they improve scanning
+- two or three strong explanatory diagrams rather than many weak ones
+- diagrams that feel like article graphics, not code blocks or file trees
+- useful FAQ, but secondary to the main article
+- clear distinction between current reality and future plans
+
+Category pages and focused article pages should have different jobs:
+
+    Category page:
+        route readers to articles and briefly explain the topic area
+
+    Focused article:
+        answer one reader question in depth
+
+---
+
+## Current Search / SEO State
+
+Root search files:
 
     robots.txt
     sitemap.xml
@@ -445,144 +464,35 @@ Current robots URL after deployment:
 
     https://tensaengineering.dev/robots.txt
 
-Current sitemap contains canonical HTTPS non-www URLs for:
+Current sitemap contains 19 canonical HTTPS non-www URLs.
 
-    https://tensaengineering.dev/
-    https://tensaengineering.dev/about.html
-    https://tensaengineering.dev/contact.html
-    https://tensaengineering.dev/projects/
-    https://tensaengineering.dev/projects/neurocore.html
-    https://tensaengineering.dev/projects/argus-acli.html
-    https://tensaengineering.dev/projects/argus-lab.html
-    https://tensaengineering.dev/knowledge-base/
-    https://tensaengineering.dev/glossary/
-    https://tensaengineering.dev/story/
-    https://tensaengineering.dev/knowledge-base/ai-operations/
-    https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
-    https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
-    https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
-    https://tensaengineering.dev/knowledge-base/local-first-ai/
-    https://tensaengineering.dev/knowledge-base/safe-tool-interaction/
-    https://tensaengineering.dev/knowledge-base/linux-diagnostics/
-    https://tensaengineering.dev/knowledge-base/troubleshooting-training/
-    https://tensaengineering.dev/knowledge-base/neurocore-architecture/
+Known Search Console note:
 
-Current SEO/social metadata:
-
-- public HTML pages have canonical URLs
-- public HTML pages have tuned meta descriptions
-- public HTML pages use Open Graph metadata where currently implemented
-- public HTML pages use Twitter large-image card metadata where currently implemented
-- public HTML pages use the dedicated TENSA social preview image where currently implemented
-- public HTML pages use JSON-LD structured data where currently implemented
-- current public HTML pages include favicon link tags
-
-Current social preview asset:
-
-    assets/images/social/tensa-og-image.png
-
-Current search registration status:
-
-    Google Search Console verified
-    sitemap submitted successfully to Google
-    Bing Webmaster Tools imported from Google Search Console
-    sitemap submitted to Bing and processing
-    /story/ included in sitemap.xml
-    /glossary/ included in sitemap.xml locally
-    /about.html included in sitemap.xml locally
-    /contact.html included in sitemap.xml locally
-    sitemap.xml is URL-only locally
-    eight foundation Knowledge Base article URLs included in sitemap.xml locally
-    focused project-context guide included in sitemap.xml locally
-    current local sitemap contains 19 canonical URLs
-
-Latest local internal-link validation result:
-
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
-
-Known Search Console status:
-
-    Google reported "Page with redirect" for:
+    Google reported "Page with redirect" for alternate redirect versions:
         http://tensaengineering.dev/
         https://www.tensaengineering.dev/
 
-This is expected and harmless because those are alternate redirect versions. The intended canonical indexed version is:
+This is expected and harmless because the intended canonical indexed URL is:
 
     https://tensaengineering.dev/
 
-Post-deploy checks for the focused AI Operations branch:
+Post-deploy checks after the reading-experience merge:
 
-- Confirm the AI Operations page contains the focused-guide links.
-- Confirm the focused article loads:
-
-      https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
-
-- Confirm the live sitemap remains URL-only and contains 19 canonical URLs.
-- Inspect the focused article in Google Search Console if appropriate.
-- Monitor Google and Bing after their next sitemap fetch.
-- Do not claim the article is indexed until webmaster-tool evidence confirms it.
-
-Future SEO work:
-
-- Add or verify richer Open Graph / Twitter / JSON-LD metadata on updated pages as needed.
-- Keep sitemap.xml URL-only unless a reliable lastmod maintenance process is added later.
-- Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
-- Focus future search growth on useful Knowledge Base content and clean internal links, not metadata alone.
+- confirm the focused article loads at its canonical URL
+- confirm the AI Operations page still links to the focused guide
+- confirm the live sitemap still contains 19 URLs
+- inspect the focused article in Google Search Console if appropriate
+- do not claim indexing until webmaster-tool evidence confirms it
 
 ---
 
-
-# CURRENT STRATEGIC DIRECTION
-
-TENSA Engineering is no longer just a small static site.
-
-It is becoming:
-
-    a modular ecosystem knowledge platform
-
-The website should increasingly function as:
-
-- public umbrella for the ecosystem
-- structured knowledge hub
-- public teaching layer
-- ecosystem portal
-- future product funnel
-- SEO destination
-- public home, knowledge hub, and ecosystem portal for NeuroCore, Argus ACLI, and Argus Lab
-
-The site should not become one huge homepage.
-
-Correct structure:
-
-    Homepage
-        ecosystem introduction + navigation layer
-
-    Project pages
-        major system explanations
-
-    Story
-        origin and philosophy
-
-    Knowledge Base
-        educational concept pages
-
-    Build Notes
-        readable public development history
-
-    Resources
-        future public technical artifacts, selected documentation, examples, release materials, downloads, videos, and public resources
-
----
-
-# CURRENT ECOSYSTEM MODEL
+## Current Ecosystem Model
 
 TENSA Engineering:
 
+- umbrella engineering company
+- public brand and ecosystem owner
 - public hub
-- brand home
 - knowledge base
 - ecosystem portal
 - future product funnel
@@ -599,7 +509,6 @@ NeuroCore:
 - real Linux system awareness
 - governed execution
 - operational continuity
-- architecture showcase explaining runtime, control plane, tool layers, Argus diagnostics, model explanation, ACLI output, and near-term Kernel-Up / Service Intelligence expansion
 
 Argus ACLI:
 
@@ -621,13 +530,6 @@ Argus Lab:
 - mentor-style AI guidance
 - validation environment for NeuroCore, Argus ACLI, and model-guided troubleshooting
 
-Story:
-
-- public origin and philosophy page
-- explains the continuity failure that started NeuroCore
-- explains why documentation became project memory
-- connects the origin story to NeuroCore, Argus ACLI, Argus Lab, and AI Operations
-
 AI Operations:
 
 - disciplined AI-assisted workflow
@@ -637,6 +539,13 @@ AI Operations:
 - closeout protocols
 - resume prompts
 - human review and local verification
+
+Glossary:
+
+- compact public reference layer for recurring ecosystem terms
+- supports Knowledge Base readers without bloating every article
+- provides inline tooltip destinations for selected Knowledge Base terms
+- should remain compact and should not replace full Knowledge Base articles
 
 Private implementation repositories and internal source docs:
 
@@ -649,174 +558,36 @@ Future public technical artifacts:
 
 - may include selected documentation, examples, release materials, downloads, videos, or open technical components when useful
 
-Knowledge Base:
+---
 
-- public teaching layer for philosophy, architecture, AI operations, diagnostics, training systems, memory/context systems, and long-term platform vision
-- current live eight-article foundation path:
-    - AI Operations
-    - Persistent AI Memory
-    - Controlled AI Systems
-    - Local-First AI
-    - Safe Tool Interaction
-    - Linux Diagnostics
-    - Troubleshooting Training
-    - NeuroCore Architecture
-- current focused AI Operations article:
-    - How to Keep AI From Losing Project Context
+## Public Writing Rules
 
-Glossary:
+Public pages should:
 
-- public compact reference layer for recurring ecosystem terms
-- supports Knowledge Base readers without bloating every article
-- provides inline tooltip destinations for selected Knowledge Base terms
-- should remain compact and should not replace full Knowledge Base articles
+- be professional, practical, and technically credible
+- sound human and builder-oriented
+- explain technical terms in plain language
+- avoid AI hype
+- avoid corporate fluff
+- distinguish current reality from future plans
+- use conversational prose for story and explainer pages
+- use prose-first article flow for long-form Knowledge Base content
+- use bullets only when they improve clarity
+- route readers toward deeper pages instead of dumping everything on one page
+
+Public pages should not:
+
+- sound like internal instructions
+- say “this section should”
+- expose internal planning language
+- overstate product maturity
+- imply future features already exist
+- duplicate entire technical repository docs
+- look like raw documentation checklists unless the page is intentionally a reference page
 
 ---
 
-# CURRENT CLAUDE POLISH WORKFLOW
-
-A Claude-specific website polish prompt now exists at:
-
-    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
-
-Purpose:
-
-- preserve consistent tone and cadence across TENSA public pages
-- let Claude polish readability without becoming the source of truth
-- keep ChatGPT as the factual proofing / alignment layer
-- preserve HTML structure, metadata, links, CSS classes, and current-vs-future boundaries
-- reduce drift when using Claude for wording polish
-
-Recommended workflow:
-
-    ChatGPT prepares technically accurate public-page draft
-    Claude polishes readability and cadence using the constrained prompt
-    ChatGPT reviews Claude output for factual drift, invented claims, maturity drift, and formatting issues
-    Richard reviews locally in browser before publishing
-
-Important:
-
-Claude should not be treated as project source of truth.
-
-Claude improves readability.
-
-Source docs and ChatGPT proofing preserve accuracy.
-
----
-
-# CURRENT BRANDING SYSTEM
-
-Branding hierarchy exists at:
-
-    assets/images/branding/tensa/
-    assets/images/branding/neurocore/
-    assets/images/branding/argus-acli/
-    assets/images/branding/argus-lab/
-
-Current TENSA favicon / icon assets:
-
-    favicon.ico
-    assets/images/branding/tensa/favicon-32x32.png
-    assets/images/branding/tensa/apple-touch-icon.png
-    assets/images/branding/tensa/tensa-icon-512.png
-    assets/images/branding/tensa/android-chrome-192x192.png
-    assets/images/branding/tensa/android-chrome-512x512.png
-
-Current branding behavior:
-
-- all current public pages use the header-optimized TENSA logo
-- all current public pages include favicon link tags
-- root favicon.ico provides browser favicon discovery
-- homepage hero uses the TENSA stacked logo
-- Projects page hero uses the TENSA stacked logo
-- NeuroCore page hero uses the NeuroCore stacked logo
-- Argus ACLI page hero uses the Argus ACLI stacked logo
-- Argus Lab page hero uses the Argus Lab stacked logo
-- Knowledge Base index hero uses the TENSA stacked logo
-- Knowledge Base articles use TENSA site branding
-- Story page hero uses the TENSA stacked logo
-- Glossary page uses TENSA site branding
-- Contact page uses TENSA site branding
-- homepage and Projects page project cards use horizontal project logos
-- transparent PNG variants are used to avoid baked black logo backgrounds
-- header logo removes the tiny unreadable subtitle line
-- favicon uses a simplified TENSA T-symbol for small browser-tab readability
-
-Current visual direction:
-
-- black backgrounds
-- neon green signal/circuit motif
-- blue/purple accents for architecture and model explanation sections
-- hexagonal / system geometry
-- modern technical typography
-- consistent ecosystem branding
-- full-width showcase sections for complex architecture
-- styled content lists instead of default browser bullets
-- reusable Knowledge Base article layout
-- readable Knowledge Base index links with explicit styling
-- glossary reference page layout
-- inline glossary tooltip styling
-- footer navigation styling
-
----
-
-
-# CURRENT NAVIGATION STATE
-
-Current primary navigation:
-
-    Home
-    Projects
-    Knowledge Base
-    Glossary
-    Story
-    About
-
-Current primary targets:
-
-    Home → /index.html
-    Projects → /projects/
-    Knowledge Base → /knowledge-base/
-    Glossary → /glossary/
-    Story → /story/
-    About → /about.html
-
-Current footer navigation targets:
-
-    Contact → /contact.html
-    About → /about.html
-    Projects → /projects/
-    Knowledge Base → /knowledge-base/
-    Glossary → /glossary/
-
-Contact is footer-only and intentionally not part of the primary header navigation.
-
-Knowledge Base points to the real `/knowledge-base/` page.
-
-Glossary points to the real `/glossary/` page.
-
-Story points to the real `/story/` page.
-
-Public GitHub navigation has been removed from current public pages.
-
-Direct public links to private implementation repositories have been removed from current public pages.
-
-Knowledge Base index links to all eight foundation Knowledge Base articles.
-
-The foundation path links article-to-article and loops back to the start.
-
-AI Operations links to the focused project-context guide.
-
-Inline glossary terms in Knowledge Base articles point to `/glossary/` entries.
-
-When `/resources/` is created:
-
-    use it to organize future public technical artifacts, selected documentation, examples, release materials, downloads, videos, and any intentional public repository or open-component links
-
----
-
-
-# CURRENT COMPLETED WORK
+## Current Completed Work Summary
 
 Completed so far:
 
@@ -832,214 +603,51 @@ Completed so far:
 - NeuroCore page created and expanded
 - Argus ACLI full public page created
 - Argus Lab full public project page created
-- Knowledge Base index created
-- Knowledge Base index upgraded into a live foundation-path hub
+- Knowledge Base index created and upgraded into a foundation-path hub
 - eight Knowledge Base foundation articles created
+- focused AI Operations project-context article created
+- focused AI Operations project-context article converted into the first prose-first article-format proof page
 - Story page created
 - Glossary page created and added to primary navigation
-- About page created and added to sitemap.xml
+- About page created
 - Contact page created after email routing was configured and tested
-- Cloudflare Email Routing configured and tested for contact@tensaengineering.dev
-- Contact page added to sitemap.xml
-- Contact page linked footer-only across current public pages
 - branding asset hierarchy created
 - TENSA, NeuroCore, Argus ACLI, and Argus Lab logos added
-- transparent logo variants created
-- header-optimized TENSA logo created
-- simplified TENSA T-symbol favicon assets created
-- root favicon.ico added
-- favicon link tags added across current public pages
-- branding integrated across all current public pages
-- Knowledge Base nav links updated across current pages
-- Story nav links updated across current pages
-- footer navigation styling added
-- repository map created and updated
-- website state created and updated
-- content source map created and updated
-- page inventory created and updated
-- internal linking strategy created and updated
-- documentation closeout protocol created and updated
-- documentation strategy created and updated
-- search indexing strategy created and updated
-- content style guide created
-- SEO topic map created
-- Claude website polish resume prompt created
-- targeted verification rule added to closeout workflow
-- Python full-file writer rule added to closeout workflow
-- real local internal-link validation rule added to closeout workflow
-- root sitemap.xml created
-- `/story/` added to sitemap.xml
-- `/glossary/` added to sitemap.xml
-- `/contact.html` added to sitemap.xml
-- eight Knowledge Base article URLs added to sitemap.xml
-- root robots.txt created
-- dedicated 1200 x 630 TENSA social preview image created
-- canonical URLs added across current public HTML pages
-- Open Graph metadata added across current public HTML pages where currently implemented
-- Twitter large-image card metadata added across current public HTML pages where currently implemented
-- SEO titles and meta descriptions tuned across current public pages
-- Google Search Console verified
-- sitemap submitted successfully to Google
-- Bing Webmaster Tools imported from Google Search Console
-- sitemap submitted to Bing and processing
+- favicon assets created and wired across current public pages
+- public GitHub navigation removed from current public pages
+- direct public links to private implementation repositories removed from current public pages
 - inline glossary tooltip JavaScript added
-- glossary reference styling added
-- inline glossary tooltip styling added
-- Knowledge Base articles received inline glossary tooltip links
-- glossary strategy planning doc created
-- search-answer optimization template planning doc created
-- repository map updated to 27 directories and 71 files
-- local internal-link and anchor validation completed successfully for 579 internal links across 19 public HTML files
-
-Latest completed website work:
-
-- Focused AI Operations article created:
-    - `knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html`
-- AI Operations category page updated with focused-guide discovery links.
-- MCP-based tool definition added to the public Glossary.
-- `sitemap.xml` expanded to 19 canonical public URLs.
-- Repository map updated to 27 directories and 72 files.
-- Page inventory, internal linking strategy, content source map, search indexing strategy, and website state updated.
-- Local validation passed for 579 internal links across 19 public HTML files.
-
-Previous Contact / favicon website work:
-
-- Contact page created at `contact.html`.
-- `contact@tensaengineering.dev` configured through Cloudflare Email Routing and tested before publication.
-- Contact added as a footer-only route across current public pages.
-- Contact intentionally kept out of primary header navigation.
-- `sitemap.xml` updated with `https://tensaengineering.dev/contact.html`.
-- Favicon assets created and wired across current public pages.
-- Root `favicon.ico` added.
-- `styles.css` updated for footer navigation, content links, button readability inside cards, and favicon-related visual consistency.
-- `projects/neurocore.html` footer normalized with the shared footer pattern.
-- Local internal-link validation checked 18 public HTML files, 546 internal links, and 20 external/skipped links successfully.
-- Closeout docs updated for Contact, favicon assets, footer navigation, sitemap, source requirements, page inventory, repository map, search indexing, and website state.
-
-Previous completed website work:
-
-- First eight Knowledge Base article pages created:
-    - `knowledge-base/ai-operations/index.html`
-    - `knowledge-base/persistent-ai-memory/index.html`
-    - `knowledge-base/controlled-ai-systems/index.html`
-    - `knowledge-base/local-first-ai/index.html`
-    - `knowledge-base/safe-tool-interaction/index.html`
-    - `knowledge-base/linux-diagnostics/index.html`
-    - `knowledge-base/troubleshooting-training/index.html`
-    - `knowledge-base/neurocore-architecture/index.html`
-- `knowledge-base/index.html` upgraded into a live article-path hub.
-- Knowledge Base article layout and index link styling added to `styles.css`.
-- Article path links were validated locally.
-- `sitemap.xml` updated with `/glossary/` and the eight Knowledge Base article URLs.
-- Closeout docs updated for the Knowledge Base article path, sitemap update, source requirements, link validation, and Python writer workflow.
-- `story/index.html` created as a full public Story page.
-- Story page explains:
-    - the day the AI forgot everything
-    - AI memory failure as a project continuity problem
-    - documentation becoming project memory
-    - workflow discipline beginning to mirror architecture discipline
-    - local AI changing the direction
-    - real systems requiring control
-    - NeuroCore as the platform
-    - Argus ACLI as the first practical product
-    - Argus Lab as the early training and validation environment
-    - AI Operations as the disciplined way of working behind the ecosystem
-- Story page was drafted by ChatGPT, polished by Claude using constrained instructions, proofed by ChatGPT, and reviewed locally by Richard.
-- Primary navigation updated so Story points to `/story/`.
-- Homepage Story preview now links to `/story/`.
-- `sitemap.xml` updated to include `https://tensaengineering.dev/story/`.
-- `docs/ai-operations/claude/claude_website_polish_resume_prompt.md` created to preserve Claude polish workflow and reduce tone drift.
-- Closeout docs updated for the new Story page, Claude prompt, sitemap entry, navigation changes, and targeted verification workflow.
-
-Earlier NeuroCore / Argus ACLI page work:
-
-- `projects/neurocore.html` updated with a stronger public platform story.
-- NeuroCore page architecture section replaced with a visual architecture showcase.
-- Architecture showcase now explains:
-    - CLI / ACLI
-    - daemon and runtime manager
-    - control plane
-    - execution engine
-    - Argus tool layer
-    - system tool layer
-    - CommandRunner and Linux
-    - structured telemetry and raw evidence return path
-    - Argus diagnostic result
-    - model explanation layer
-    - ACLI output
-    - near-term Kernel-Up / Service Intelligence expansion
-- NeuroCore page now includes a continuity/memory section explaining:
-    - current local retrieval / RAG foundation
-    - planned Karpathy-style structured knowledge base
-    - planned context-aware memory / CAG-style context assembly
-    - future explanation in the Knowledge Base
-- NeuroCore page bottom CTA cleaned up:
-    - Review the architecture
-    - Explore Argus ACLI
-    - Explore Argus Lab
-- `projects/argus-acli.html` upgraded into a full public product page.
-- Argus ACLI page now emphasizes:
-    - local-first diagnostics
-    - no pasting sensitive system data into cloud chatbots
-    - read-only Linux system intelligence
-    - raw evidence
-    - AI explanation grounded in structured diagnostics
-    - NeuroCore as the controlled runtime
-- `styles.css` updated with:
-    - architecture showcase styling
-    - improved card/list styling
-    - responsive behavior for architecture sections
-
-Current Glossary / tooltip work completed:
-
-- `glossary/index.html` created as a compact public reference page.
-- `assets/js/glossary-tooltips.js` created for inline glossary tooltip behavior.
-- Glossary reference layout and tooltip styling added to `styles.css`.
-- Primary navigation updated to include Glossary across current public pages.
-- Knowledge Base articles received selected inline glossary tooltip links.
-- Glossary links were kept out of footers after cleanup.
-- Internal link validation passed after glossary/nav changes.
-- `docs/planning/glossary_strategy.md` created.
-- `docs/planning/search_answer_optimization_template.md` created.
-- Closeout docs updated to reflect connector-read / local-working-tree workflow improvements.
-
-Current public-page cleanup completed:
-
-- Public GitHub navigation removed from current public pages.
-- Direct public links to private implementation repositories removed from current public pages.
-- Homepage repository-proof section replaced with public explanation / future public artifacts framing.
-- Knowledge Base repository-proof language replaced with public artifacts language.
-- NeuroCore business-safety wording softened into controlled system awareness and local-first design language.
-- Argus ACLI and Story wording standardized around Argus ACLI as the first practical product built on NeuroCore.
-- Resources page deferred until useful public artifacts exist.
+- Knowledge Base articles received selected inline glossary tooltip links
+- closeout / planning docs created and maintained
+- sitemap.xml contains 19 canonical URLs
+- local internal-link validation passed for 579 internal links across 19 public HTML files during the latest closeout
 
 ---
 
-
-# CURRENT NOT COMPLETED
+## Current Not Completed
 
 Not yet completed:
 
-- final repository validation
-- browser preview of the changed AI Operations page and focused article
-- review of the complete diff
-- commit and push of `content/ai-ops-project-context`
-- merge into the deployment branch
-- GitHub Pages deployment verification
-- live verification of the focused article and 19-URL sitemap
+- GitHub Pages live deployment verification after the reading-experience merge
+- live verification of the focused project-context article
+- live verification that the AI Operations page still links to the focused article
+- live verification that sitemap.xml still contains 19 canonical URLs
 - Google/Bing discovery review after deployment
+- AI Operations category / article index conversion
+- migration of the current long-form AI Operations landing-page content into a dedicated article page
+- optional stock / editorial image system for future Knowledge Base article polish
 - Resources page
 - Build Notes section
 - old-site migration plan
 - permanent internal link checker script
 - analytics decisions
 - future install/download guidance for Argus ACLI
-- future Knowledge Base article templates
+- reusable article templates for future Knowledge Base expansion
 - public technical artifact strategy
 
 ---
 
-# SOURCE-DOC RULES
+## Source-Doc Rules
 
 Before writing or significantly rewriting factual pages, check:
 
@@ -1061,39 +669,13 @@ Do not write full factual Argus ACLI, Argus Lab, NeuroCore, Story, or Knowledge 
 
 ---
 
-# PUBLIC WRITING RULES
+## Editing Rule
 
-Public pages should:
-
-- be professional, practical, and technically credible
-- sound human and builder-oriented
-- explain technical terms in plain language
-- avoid AI hype
-- avoid corporate fluff
-- avoid over-compressed explanations
-- distinguish current reality from future plans
-- use conversational prose for story/explainer pages
-- use bullets only when they improve clarity
-- route readers toward deeper pages instead of dumping everything on one page
-
-Public pages should not:
-
-- sound like internal instructions
-- say “this section should”
-- expose internal planning language
-- overstate product maturity
-- imply future features already exist
-- duplicate entire technical repository docs
-
----
-
-# EDITING RULE
-
-The user prefers full file replacements when manual copy/paste editing would be error-prone.
+Richard prefers full-file replacements when manual copy/paste editing would be error-prone.
 
 Do not provide small manual find/replace snippets unless explicitly requested.
 
-For code, HTML, CSS, or long Markdown replacements that the user must paste manually:
+For code, HTML, CSS, or long Markdown replacements that Richard must paste manually:
 
     provide the complete replacement file
 
@@ -1105,13 +687,11 @@ For closeout docs and planning docs:
 
 Controlled Python edits are acceptable after full-file context has been reviewed and the intended changes are clear.
 
-For mechanical multi-file link corrections, command-based edits are acceptable only when the user approves the workflow.
-
 ---
 
-# REPLACEMENT VERIFICATION RULE
+## Replacement Verification Rule
 
-After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
+After each full-file replacement or controlled Python edit during closeout or live website editing, run a targeted verification check before moving to the next file.
 
 The verification should confirm:
 
@@ -1121,86 +701,67 @@ The verification should confirm:
 - the file was saved
 - no obvious paste truncation occurred
 
-Example checks:
-
-    grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 72 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
-    grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
-
 Do not move to the next replacement until verification passes or the mismatch is understood and corrected.
 
 ---
 
-# DOCUMENTATION CLOSEOUT RULES
+## Documentation Closeout Rules
 
 During closeout:
 
-- Do not silently rewrite docs.
-- Do not make unknown documentation changes.
-- Do not perform broad cleanup unless explicitly requested.
-- Only update docs directly impacted by the build session.
-- Preserve unchanged sections unless modification is needed.
-- Explain what each closeout doc update is meant to capture.
-- Keep closeout docs aligned with real repo state.
-- Run targeted verification after each full-file replacement.
+- do not silently rewrite docs
+- do not make unknown documentation changes
+- do not perform broad cleanup unless explicitly requested
+- only update docs directly impacted by the build session
+- preserve unchanged sections unless modification is needed
+- explain what each closeout doc update is meant to capture
+- keep closeout docs aligned with real repo state
+- run targeted verification after each full-file replacement or controlled edit
 
-Closeout docs usually include:
-
-    docs/infrastructure/tensa_repository_map.txt
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-
-Update only the docs actually impacted by the session.
+Closeout docs usually include only the files impacted by the session. Do not update every planning doc by habit.
 
 ---
 
-# CURRENT NEXT BEST STEP
+## Current Next Best Step
 
-Immediate:
+Immediate after latest push:
 
-1. Run final repository validation.
-2. Preview the changed public pages locally.
-3. Review the complete diff.
-4. Commit and push the feature branch.
-5. Merge the branch.
-6. Confirm GitHub Pages deploys the focused article and 19-URL sitemap.
+1. Verify GitHub Pages deployed the latest `main` changes.
+2. Confirm the focused article loads at its canonical URL.
+3. Confirm the AI Operations page still links to the focused article.
+4. Confirm the live sitemap still contains 19 canonical URLs.
+5. Pull the latest `main` locally if a connector write updated this file.
 
-After deployment:
-
-- confirm the AI Operations page links to the focused guide
-- confirm the focused article loads
-- confirm the live sitemap contains 19 canonical URLs
-- inspect the article in Google Search Console if appropriate
-- do not claim indexing until verified
-
-Next website session:
-
-    Start a fresh thread.
-    Run this resume prompt and the full startup workflow.
-    Fix any remaining drift found during that review.
-    Then choose the next page deliberately.
-
----
-
-# NEXT PUBLIC BUILD OPTIONS
-
-After this branch is merged and verified:
+Next build session:
 
 1. Start a fresh thread from this resume prompt.
-2. Run the full build-start and context-loading workflow.
-3. Fix any remaining documentation or site drift.
-4. Choose one next public build deliberately:
-   - Resources
-   - Build Notes
-   - another focused Knowledge Base article after source requirements are defined
-5. Keep sitemap.xml URL-only unless a reliable `lastmod` workflow is added.
-6. Create the permanent internal-link checker when manual validation becomes annoying.
+2. Run the build-start checks.
+3. Load core context docs through connector reads first.
+4. Ask Richard for local git status, tree, validation, stash, and browser observations as needed.
+5. Start a fresh branch for the AI Operations category / article index conversion.
+6. Do not touch the protected local stash unless Richard explicitly approves that exact action.
 
 ---
 
-# FINAL PRINCIPLE
+## Next Public Build Options
+
+Highest-priority next public build:
+
+    AI Operations category / article index conversion
+
+Later options:
+
+- Resources page
+- Build Notes section
+- additional focused Knowledge Base articles after source requirements and link destinations are defined
+- optional stock / editorial image system for future Knowledge Base article polish
+- permanent internal-link checker script when manual validation becomes annoying
+
+Keep sitemap.xml URL-only unless a reliable `lastmod` workflow is added.
+
+---
+
+## Final Principle
 
 TENSA Engineering should become the public home, knowledge hub, and ecosystem portal for the systems it builds.
 
