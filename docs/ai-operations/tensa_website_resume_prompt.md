@@ -268,6 +268,7 @@ Request or load these docs at the start of serious website sessions:
     docs/planning/internal_linking_strategy.md
     docs/planning/search_indexing_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/knowledge_base_reading_experience_standard.md
     docs/planning/seo_topic_map.md
 
 Purpose:
