@@ -69,7 +69,8 @@ Latest validation:
 
 Current boundary:
 
-    Changes remain local until committed and pushed.
+    Planning changes are committed and pushed on `repair/kb-context-article-reading-pass`.
+    The branch is not merged into `main`.
     Deployment and indexing must not be claimed from this branch because no public website deployment change has been made.
 
 ---
@@ -1166,12 +1167,11 @@ Update only the docs actually impacted by the session.
 
 Immediate:
 
-1. Run final repository validation.
-2. Preview the changed public pages locally.
-3. Review the complete diff.
-4. Commit and push the feature branch.
-5. Merge the branch.
-6. Confirm GitHub Pages deploys the focused article and 19-URL sitemap.
+1. Start a fresh implementation thread.
+2. Load this resume prompt from `repair/kb-context-article-reading-pass`.
+3. Load `docs/planning/knowledge_base_reading_experience_standard.md`.
+4. Confirm current local repo state before editing.
+5. Decide whether to merge the planning branch into `main` first or create a fresh implementation branch from `main`.
 
 Next website session:
 
