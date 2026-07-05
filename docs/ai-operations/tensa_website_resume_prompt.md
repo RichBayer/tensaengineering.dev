@@ -37,9 +37,20 @@ The latest confirmed website-content closeout merged and pushed to `main` was:
 
 That commit converted the focused AI Operations project-context article into the first prose-first Knowledge Base article reading-standard proof page.
 
+Docs-only connector follow-up after that closeout:
+
+- `docs/ai-operations/tensa_website_resume_prompt.md` was refreshed after the reading-experience merge.
+- `docs/planning/knowledge_base_article_template.md` was created as the canonical Knowledge Base article template / creation guide.
+- This resume prompt was then updated to include the new template doc in the core context set.
+
 Current repository size from latest local closeout evidence:
 
     27 directories, 72 files
+
+Important:
+
+    The connector-created template doc changed the repository tree after the last local tree count.
+    Revalidate the tree locally before updating repository-size claims or repository-map docs.
 
 Current public HTML page count:
 
@@ -72,9 +83,18 @@ Completed in the latest reading-experience branch:
 - shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
 - closeout docs were updated to record the article format standard and next IA direction
 
+Completed in the docs-only connector follow-up:
+
+- created `docs/planning/knowledge_base_article_template.md`
+- defined the reusable long-form Knowledge Base article structure
+- documented the project-context article as the reference implementation, not a file to blindly copy
+- recorded prose, diagram, FAQ, SEO/schema, internal-link, and source-doc expectations for future articles
+- added the template doc to this resume prompt's core context set
+
 Important:
 
-    This latest branch did not add new public routes, directories, assets, sitemap entries, or navigation destinations.
+    The reading-experience branch did not add new public routes, directories, assets, sitemap entries, or navigation destinations.
+    The docs-only connector follow-up added one internal planning doc and did not change public website pages.
 
 ---
 
@@ -106,6 +126,10 @@ Target structure:
             existing focused continuity guide and article-format proof page
 
 Do not start by rewriting the whole Knowledge Base. Work one page / structure decision at a time.
+
+Before creating or rewriting a long-form Knowledge Base article, load:
+
+    docs/planning/knowledge_base_article_template.md
 
 ---
 
@@ -263,6 +287,7 @@ Load or inspect these at the start of serious website sessions as needed:
     docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
+    docs/planning/knowledge_base_article_template.md
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/search_indexing_strategy.md
@@ -300,6 +325,9 @@ Purpose of each:
 
     glossary_strategy.md
         glossary purpose, term-selection rules, tooltip behavior, and expansion guardrails
+
+    knowledge_base_article_template.md
+        reusable structure, pacing, diagram, FAQ, SEO/schema, source-doc, and internal-link guidance for future long-form Knowledge Base articles
 
     page_inventory.md
         page existence, status, purpose, navigation state, and next actions
@@ -428,6 +456,7 @@ Current focused AI Operations article:
 Current article-format standard:
 
     The project-context article is the proof page for the prose-first Knowledge Base article standard.
+    The canonical internal template / creation guide is `docs/planning/knowledge_base_article_template.md`.
 
 That standard means:
 
@@ -607,6 +636,7 @@ Completed so far:
 - eight Knowledge Base foundation articles created
 - focused AI Operations project-context article created
 - focused AI Operations project-context article converted into the first prose-first article-format proof page
+- `docs/planning/knowledge_base_article_template.md` created as the canonical long-form Knowledge Base article template / creation guide
 - Story page created
 - Glossary page created and added to primary navigation
 - About page created
@@ -628,6 +658,10 @@ Completed so far:
 
 Not yet completed:
 
+- local pull / status / tree verification after docs-only connector commits
+- repository map update for the connector-created Knowledge Base article template doc
+- website state update for the connector-created Knowledge Base article template doc
+- documentation strategy update for the connector-created Knowledge Base article template doc
 - GitHub Pages live deployment verification after the reading-experience merge
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
@@ -642,7 +676,6 @@ Not yet completed:
 - permanent internal link checker script
 - analytics decisions
 - future install/download guidance for Argus ACLI
-- reusable article templates for future Knowledge Base expansion
 - public technical artifact strategy
 
 ---
@@ -656,6 +689,10 @@ Before writing or significantly rewriting factual pages, check:
 Before creating or changing public pages, check:
 
     docs/planning/page_inventory.md
+
+Before creating or rewriting long-form Knowledge Base articles, check:
+
+    docs/planning/knowledge_base_article_template.md
 
 Before adding or changing major links, check:
 
@@ -724,13 +761,22 @@ Closeout docs usually include only the files impacted by the session. Do not upd
 
 ## Current Next Best Step
 
-Immediate after latest push:
+Immediate after connector docs-only commits:
 
-1. Verify GitHub Pages deployed the latest `main` changes.
-2. Confirm the focused article loads at its canonical URL.
-3. Confirm the AI Operations page still links to the focused article.
-4. Confirm the live sitemap still contains 19 canonical URLs.
-5. Pull the latest `main` locally if a connector write updated this file.
+1. Pull latest `main` locally.
+2. Verify local status, branch, log, stash, tree, and public HTML list.
+3. Update files that require local tree evidence or are larger than 1000 lines.
+4. Confirm the live focused article and sitemap after GitHub Pages deployment.
+
+Suggested local checks:
+
+    git pull --ff-only
+    git status --short
+    git branch --show-current
+    git log --oneline --decorate -5
+    git stash list
+    tree -a -I '.git|.obsidian|node_modules|__pycache__'
+    find . -maxdepth 3 -name "*.html" -print | sort
 
 Next build session:
 
