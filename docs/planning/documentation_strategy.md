@@ -175,6 +175,7 @@ The current core documentation set is:
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/knowledge_base_reading_experience_standard.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
@@ -690,6 +691,55 @@ Claude-specific handoff behavior belongs in:
 ---
 
 
+### docs/planning/knowledge_base_reading_experience_standard.md
+
+Primary role:
+
+    Knowledge Base reading experience, category navigation, article layout, and implementation standard.
+
+This document defines how the Knowledge Base should feel and function before public page implementation resumes.
+
+It should include:
+
+- Knowledge Base front page navigation expectations
+- category landing page behavior
+- recommended reading path behavior
+- optional same-page article navigation boundaries
+- article layout standards
+- diagram and figure standards
+- list usage standards
+- FAQ behavior
+- glossary-link behavior
+- CSS component direction
+- branch and stash guidance for the reading-experience repair
+
+It should not become:
+
+- a public article draft
+- a live website state document
+- a page inventory
+- a source-doc map
+- a search indexing plan
+
+Update when:
+
+- the Knowledge Base navigation model changes
+- category landing page behavior changes
+- article layout standards change
+- reusable Knowledge Base figure, FAQ, glossary, or CSS standards change
+- the reading-experience implementation plan changes before public pages are edited
+
+Public writing tone still belongs in:
+
+    docs/planning/content_style_guide.md
+
+Live current implementation status still belongs in:
+
+    docs/website_state.md
+
+---
+
+
 ### docs/planning/search_answer_optimization_template.md
 
 Primary role:
@@ -1124,6 +1174,7 @@ Current active documentation system now includes:
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/knowledge_base_reading_experience_standard.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md

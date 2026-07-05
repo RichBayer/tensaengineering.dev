@@ -23,7 +23,7 @@ DNS / domain:
 
 Current repository size:
 
-    27 directories, 72 files
+    27 directories, 73 files
 
 Verify at build start with:
 
@@ -37,37 +37,40 @@ Do not rely on an old repository size count.
 
 Current branch:
 
-    content/ai-ops-project-context
+    repair/kb-context-article-reading-pass
 
 Current public HTML page count:
 
     19
 
-Current focused article:
+Current planning focus:
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    docs/planning/knowledge_base_reading_experience_standard.md
 
 Current completed branch work:
 
-- focused AI Operations article created
-- AI Operations page links to the focused guide
-- MCP-based tool glossary definition added
-- sitemap.xml contains 19 canonical URLs
-- repository map updated to 27 directories and 72 files
-- required closeout planning docs updated
-- local internal-link and anchor validation passed
+- Knowledge Base reading experience standard planning doc created
+- standard separates Knowledge Base front page navigation, category landing pages, recommended reading paths, and optional same-page article section navigation
+- standard defines article layout, diagram/figure, list, FAQ, glossary-link, CSS, and branch/stash guidance
+- public HTML, CSS, sitemap, robots.txt, navigation, and public routes unchanged
+- repository map updated to 27 directories and 73 files
+- closeout pointer docs updated for the new planning standard
+
+Current local branch/stash boundary:
+
+- do not merge `content/knowledge-base-reading-experience` as-is
+- do not apply, pop, drop, or rewrite `stash@{0}` as-is
+- use the stash only as reference unless Richard explicitly approves otherwise
+- future implementation should start from clean `main` or a fresh branch based on `main`
 
 Latest validation:
 
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
+    Public page validation was not rerun because this branch only adds internal planning and pointer-doc updates.
 
 Current boundary:
 
     Changes remain local until committed and pushed.
-    Deployment and indexing must not be claimed until the branch is merged and GitHub Pages deploys it.
+    Deployment and indexing must not be claimed from this branch because no public website deployment change has been made.
 
 ---
 
@@ -309,6 +312,9 @@ Purpose:
 
     content_style_guide.md
         public writing voice, tone, formatting, and page-copy standards
+
+    knowledge_base_reading_experience_standard.md
+        Knowledge Base front-page, category landing page, reading path, article layout, figure, FAQ, glossary-link, CSS, and branch/stash guidance before public page implementation resumes
 
     seo_topic_map.md
         future SEO topic planning and Knowledge Base search strategy
@@ -1124,7 +1130,7 @@ The verification should confirm:
 Example checks:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 72 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 73 files\|glossary/index.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 Do not move to the next replacement until verification passes or the mismatch is understood and corrected.
@@ -1167,36 +1173,30 @@ Immediate:
 5. Merge the branch.
 6. Confirm GitHub Pages deploys the focused article and 19-URL sitemap.
 
-After deployment:
-
-- confirm the AI Operations page links to the focused guide
-- confirm the focused article loads
-- confirm the live sitemap contains 19 canonical URLs
-- inspect the article in Google Search Console if appropriate
-- do not claim indexing until verified
-
 Next website session:
 
     Start a fresh thread.
     Run this resume prompt and the full startup workflow.
-    Fix any remaining drift found during that review.
-    Then choose the next page deliberately.
+    Load docs/planning/knowledge_base_reading_experience_standard.md before editing public Knowledge Base pages.
+    Keep the approved article wording on main as the baseline.
+    Do not merge the old reading-experience branch as-is.
+    Do not apply or pop the old reading-experience stash as-is.
+    Implement the Knowledge Base reading experience deliberately from the approved standard.
 
 ---
 
 # NEXT PUBLIC BUILD OPTIONS
 
-After this branch is merged and verified:
+After this planning branch is committed and pushed:
 
-1. Start a fresh thread from this resume prompt.
+1. Start a fresh implementation thread from this resume prompt.
 2. Run the full build-start and context-loading workflow.
-3. Fix any remaining documentation or site drift.
-4. Choose one next public build deliberately:
-   - Resources
-   - Build Notes
-   - another focused Knowledge Base article after source requirements are defined
-5. Keep sitemap.xml URL-only unless a reliable `lastmod` workflow is added.
-6. Create the permanent internal-link checker when manual validation becomes annoying.
+3. Load `docs/planning/knowledge_base_reading_experience_standard.md`.
+4. Build the reusable Knowledge Base front page, category landing page, recommended reading path, article layout, figure, FAQ, glossary-link, and CSS standard deliberately.
+5. Start public implementation from clean `main` or a fresh branch based on `main`.
+6. Preserve approved article wording from `main` unless Richard explicitly approves editorial changes.
+7. Keep sitemap.xml URL-only unless a reliable `lastmod` workflow is added.
+8. Create the permanent internal-link checker when manual validation becomes annoying.
 
 ---
 

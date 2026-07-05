@@ -94,6 +94,7 @@ DNS / domain provider:
     │   │   ├── documentation_strategy.md
     │   │   ├── glossary_strategy.md
     │   │   ├── internal_linking_strategy.md
+    │   │   ├── knowledge_base_reading_experience_standard.md
     │   │   ├── page_inventory.md
     │   │   ├── search_answer_optimization_template.md
     │   │   ├── search_indexing_strategy.md
@@ -134,7 +135,8 @@ DNS / domain provider:
     │   └── index.html
     └── styles.css
 
-    27 directories, 72 files
+    27 directories, 73 files
+
 
 ---
 
@@ -734,6 +736,16 @@ Purpose:
     Defines public writing voice, tone, formatting, copy standards, and style direction for website content.
 
 This document should be used when writing or reviewing public-facing TENSA website copy.
+
+---
+
+### docs/planning/knowledge_base_reading_experience_standard.md
+
+Purpose:
+
+    Defines the planned Knowledge Base reading experience, category navigation, article layout, diagram/figure, FAQ, glossary-link, CSS, and branch/stash guidance before public page implementation resumes.
+
+This document should be loaded before repairing Knowledge Base public page layout or navigation.
 
 ---
 
@@ -1370,6 +1382,7 @@ Current internal docs:
     docs/infrastructure/tensa_repository_map.txt
     docs/planning/content_source_map.md
     docs/planning/content_style_guide.md
+    docs/planning/knowledge_base_reading_experience_standard.md
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/internal_linking_strategy.md
@@ -1625,6 +1638,7 @@ Last known output:
     │   │   ├── documentation_strategy.md
     │   │   ├── glossary_strategy.md
     │   │   ├── internal_linking_strategy.md
+    │   │   ├── knowledge_base_reading_experience_standard.md
     │   │   ├── page_inventory.md
     │   │   ├── search_answer_optimization_template.md
     │   │   ├── search_indexing_strategy.md
@@ -1665,4 +1679,4 @@ Last known output:
     │   └── index.html
     └── styles.css
 
-    27 directories, 72 files
+    27 directories, 73 files

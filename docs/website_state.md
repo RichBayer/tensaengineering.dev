@@ -42,6 +42,7 @@ Current phase:
     public GitHub navigation removed from current public pages
     public repository-proof framing replaced with private-development / future-artifacts framing
     glossary strategy and search-answer optimization planning docs added
+    Knowledge Base reading experience standard planning doc added
 
 The site now functions as a modular ecosystem portal and teaching platform, not a single long page.
 
@@ -55,33 +56,29 @@ Deeper explanations are moving into dedicated pages and Knowledge Base articles.
 
 Current branch:
 
-    content/ai-ops-project-context
+    repair/kb-context-article-reading-pass
 
 Current local closeout state:
 
-- focused AI Operations article created
-- AI Operations page links to the focused guide
-- MCP-based tool glossary definition added
-- sitemap.xml contains 19 canonical URLs
-- repository size is 27 directories and 72 files
-- required closeout planning docs are updated
-- local internal-link and anchor validation passed
+- Knowledge Base reading experience standard planning doc created
+- public HTML, CSS, sitemap, robots.txt, and navigation unchanged
+- experimental `content/knowledge-base-reading-experience` branch not merged
+- experimental `stash@{0}` not applied, popped, dropped, or rewritten
+- repository size is 27 directories and 73 files
+- closeout pointer docs updated for the new planning standard
 
-Focused article:
+Planning focus:
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    docs/planning/knowledge_base_reading_experience_standard.md
 
 Latest validation:
 
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
+    Public page validation was not rerun because no public HTML, navigation, sitemap, robots.txt, CSS, or public routes changed in this planning-only branch.
 
 Current boundary:
 
-    These closeout changes are local branch work until committed and pushed.
-    Deployment and indexing must not be claimed until the branch is merged and GitHub Pages deploys it.
+    These planning-doc closeout changes are local branch work until committed and pushed.
+    Deployment and indexing must not be claimed from this branch because no public website deployment change has been made.
 
 ---
 
@@ -232,6 +229,7 @@ Current key files:
 - docs/infrastructure/tensa_repository_map.txt
 - docs/planning/content_source_map.md
 - docs/planning/content_style_guide.md
+- docs/planning/knowledge_base_reading_experience_standard.md
 - docs/planning/documentation_strategy.md
 - docs/planning/glossary_strategy.md
 - docs/planning/internal_linking_strategy.md
@@ -244,7 +242,7 @@ Current key files:
 
 Current repository size:
 
-    27 directories, 72 files
+    27 directories, 73 files
 
 Last verified by user-provided output during closeout:
 
@@ -1232,6 +1230,7 @@ Social content:
 - local internal-link validation completed successfully for 403 internal links/assets across 17 public HTML files
 - glossary strategy planning doc created
 - search-answer optimization template planning doc created
+- Knowledge Base reading experience standard planning doc created
 - Cloudflare Email Routing configured and tested for contact@tensaengineering.dev
 - Contact page created
 - Contact page added to sitemap.xml
@@ -1374,7 +1373,7 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "27 directories, 72 files\|how-to-keep-ai-from-losing-project-context.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 73 files\|how-to-keep-ai-from-losing-project-context.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -1422,27 +1421,18 @@ Preferred safe pattern:
 
 Immediate:
 
-1. Update the compressed resume prompt.
-2. Run final validation.
-3. Review the diff.
-4. Commit and push the feature branch.
-5. Merge the branch.
-6. Confirm GitHub Pages deploys the focused article and 19-URL sitemap.
-
-After deployment:
-
-- confirm the AI Operations page links to the focused guide
-- confirm the focused article loads at its canonical URL
-- confirm the live sitemap contains 19 URLs
-- inspect the article in Google Search Console if appropriate
-- do not claim indexing until webmaster-tool evidence confirms it
+1. Review the planning-doc and pointer-doc diff.
+2. Confirm no public HTML, CSS, sitemap, robots.txt, or navigation files changed.
+3. Commit and push the planning branch after review.
+4. Start a fresh implementation thread from the resume prompt and the Knowledge Base reading experience standard.
 
 Next website work:
 
-    Start a fresh thread from the resume prompt.
-    Run the full workflow.
-    Fix any remaining drift found during that review.
-    Then choose the next page deliberately.
+    Start from clean local state.
+    Load the Knowledge Base reading experience standard.
+    Do not merge the old reading-experience branch as-is.
+    Do not apply or pop the old reading-experience stash as-is.
+    Build the reusable Knowledge Base category/page/article standard deliberately before editing public pages.
 
 ---
 
