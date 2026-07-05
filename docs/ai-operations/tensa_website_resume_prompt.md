@@ -42,15 +42,12 @@ Docs-only connector follow-up after that closeout:
 - `docs/ai-operations/tensa_website_resume_prompt.md` was refreshed after the reading-experience merge.
 - `docs/planning/knowledge_base_article_template.md` was created as the canonical Knowledge Base article template / creation guide.
 - This resume prompt was then updated to include the new template doc in the core context set.
+- Local Legion evidence confirmed the repository tree is now 27 directories and 73 files.
+- Local closeout updated the repository map, documentation strategy, website state, and resume prompt for the new template doc.
 
 Current repository size from latest local closeout evidence:
 
-    27 directories, 72 files
-
-Important:
-
-    The connector-created template doc changed the repository tree after the last local tree count.
-    Revalidate the tree locally before updating repository-size claims or repository-map docs.
+    27 directories, 73 files
 
 Current public HTML page count:
 
@@ -83,18 +80,23 @@ Completed in the latest reading-experience branch:
 - shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
 - closeout docs were updated to record the article format standard and next IA direction
 
-Completed in the docs-only connector follow-up:
+Completed in the docs-only connector / local closeout follow-up:
 
 - created `docs/planning/knowledge_base_article_template.md`
 - defined the reusable long-form Knowledge Base article structure
 - documented the project-context article as the reference implementation, not a file to blindly copy
 - recorded prose, diagram, FAQ, SEO/schema, internal-link, and source-doc expectations for future articles
 - added the template doc to this resume prompt's core context set
+- local Legion evidence confirmed the repository tree is now 27 directories and 73 files
+- repository map updated for the new template doc
+- documentation strategy updated to define template-doc ownership
+- website state updated to record the template doc and current closeout state
+- resume prompt updated to treat the template doc as core future-session context
 
 Important:
 
     The reading-experience branch did not add new public routes, directories, assets, sitemap entries, or navigation destinations.
-    The docs-only connector follow-up added one internal planning doc and did not change public website pages.
+    The docs-only template follow-up added one internal planning doc and did not change public website pages.
 
 ---
 
@@ -505,7 +507,7 @@ This is expected and harmless because the intended canonical indexed URL is:
 
     https://tensaengineering.dev/
 
-Post-deploy checks after the reading-experience merge:
+Post-deploy checks after the reading-experience merge and docs-only template closeout:
 
 - confirm the focused article loads at its canonical URL
 - confirm the AI Operations page still links to the focused guide
@@ -649,6 +651,10 @@ Completed so far:
 - inline glossary tooltip JavaScript added
 - Knowledge Base articles received selected inline glossary tooltip links
 - closeout / planning docs created and maintained
+- repository map updated to 27 directories and 73 files
+- documentation strategy updated to include Knowledge Base article template ownership
+- website state updated to include the Knowledge Base article template doc and current docs-only closeout state
+- resume prompt updated to include local 27 directories / 73 files evidence
 - sitemap.xml contains 19 canonical URLs
 - local internal-link validation passed for 579 internal links across 19 public HTML files during the latest closeout
 
@@ -658,11 +664,7 @@ Completed so far:
 
 Not yet completed:
 
-- local pull / status / tree verification after docs-only connector commits
-- repository map update for the connector-created Knowledge Base article template doc
-- website state update for the connector-created Knowledge Base article template doc
-- documentation strategy update for the connector-created Knowledge Base article template doc
-- GitHub Pages live deployment verification after the reading-experience merge
+- GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
 - live verification that sitemap.xml still contains 19 canonical URLs
@@ -761,22 +763,12 @@ Closeout docs usually include only the files impacted by the session. Do not upd
 
 ## Current Next Best Step
 
-Immediate after connector docs-only commits:
+Immediate external verification after docs-only template closeout:
 
-1. Pull latest `main` locally.
-2. Verify local status, branch, log, stash, tree, and public HTML list.
-3. Update files that require local tree evidence or are larger than 1000 lines.
-4. Confirm the live focused article and sitemap after GitHub Pages deployment.
-
-Suggested local checks:
-
-    git pull --ff-only
-    git status --short
-    git branch --show-current
-    git log --oneline --decorate -5
-    git stash list
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
-    find . -maxdepth 3 -name "*.html" -print | sort
+1. Confirm GitHub Pages has deployed the latest `main` changes.
+2. Confirm the focused project-context article loads at its canonical URL.
+3. Confirm the AI Operations page still links to the focused article.
+4. Confirm the live sitemap still contains 19 canonical URLs.
 
 Next build session:
 
@@ -785,7 +777,8 @@ Next build session:
 3. Load core context docs through connector reads first.
 4. Ask Richard for local git status, tree, validation, stash, and browser observations as needed.
 5. Start a fresh branch for the AI Operations category / article index conversion.
-6. Do not touch the protected local stash unless Richard explicitly approves that exact action.
+6. Load `docs/planning/knowledge_base_article_template.md` before creating or rewriting long-form Knowledge Base articles.
+7. Do not touch the protected local stash unless Richard explicitly approves that exact action.
 
 ---
 

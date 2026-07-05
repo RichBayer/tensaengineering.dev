@@ -39,102 +39,103 @@ DNS / domain provider:
     ├── README.md
     ├── about.html
     ├── assets
-    │   ├── images
-    │   │   ├── branding
-    │   │   │   ├── argus-acli
-    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
-    │   │   │   ├── argus-lab
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
-    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │   │   │   │   └── argus-lab-neurocore-stacked.png
-    │   │   │   ├── neurocore
-    │   │   │   │   ├── neurocore-horizontal-transparent.png
-    │   │   │   │   ├── neurocore-horizontal.png
-    │   │   │   │   ├── neurocore-stacked-transparent.png
-    │   │   │   │   └── neurocore-stacked.png
-    │   │   │   └── tensa
-    │   │   │       ├── android-chrome-192x192.png
-    │   │   │       ├── android-chrome-512x512.png
-    │   │   │       ├── apple-touch-icon.png
-    │   │   │       ├── favicon-32x32.png
-    │   │   │       ├── tensa-horizontal-header-transparent.png
-    │   │   │       ├── tensa-horizontal-logo-transparent.png
-    │   │   │       ├── tensa-horizontal-logo.png
-    │   │   │       ├── tensa-icon-512.png
-    │   │   │       ├── tensa-stacked-logo-transparent.png
-    │   │   │       └── tensa-stacked-logo.png
-    │   │   └── social
-    │   │       └── tensa-og-image.png
-    │   └── js
-    │       └── glossary-tooltips.js
+    │   ├── images
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── android-chrome-192x192.png
+    │   │   │       ├── android-chrome-512x512.png
+    │   │   │       ├── apple-touch-icon.png
+    │   │   │       ├── favicon-32x32.png
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-icon-512.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
     ├── contact.html
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── glossary_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_answer_optimization_template.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── knowledge_base_article_template.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
     ├── favicon.ico
     ├── glossary
-    │   └── index.html
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   ├── how-to-keep-ai-from-losing-project-context.html
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   ├── how-to-keep-ai-from-losing-project-context.html
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
 
-    27 directories, 72 files
+    27 directories, 73 files
 
 ---
 
@@ -353,6 +354,9 @@ Currently controls:
 - footer navigation styling
 - content-link styling inside cards
 - explicit button color protection when buttons appear inside content cards
+- reusable Knowledge Base article diagram styling
+- Knowledge Base FAQ styling
+- Knowledge Base article metadata styling
 
 All current public pages use this stylesheet.
 
@@ -365,7 +369,6 @@ Purpose:
     Public website assets.
 
 This directory is the long-term home for branding images, project logos, social preview images, and future public visual assets.
-
 
 ---
 
@@ -519,36 +522,6 @@ Notes:
 
 - The `neurocore` variants communicate that Argus Lab belongs to the NeuroCore ecosystem.
 - The `interactive-analysis` variants communicate the training and analysis direction.
-
-
----
-
-### docs/planning/glossary_strategy.md
-
-Purpose:
-
-    Internal strategy for the public glossary page and inline glossary tooltip behavior.
-
-Current role:
-
-- defines glossary purpose and scope
-- defines glossary term selection rules
-- defines inline tooltip usage rules
-- keeps glossary behavior educational instead of noisy
-
----
-
-### docs/planning/search_answer_optimization_template.md
-
-Purpose:
-
-    Internal planning template for future search-and-answer optimization passes.
-
-Current role:
-
-- guides future page improvements for search visibility and answer clarity
-- supports clearer headings, answer blocks, and reader-intent matching
-- should be implemented in a separate focused session after this closeout
 
 ---
 
@@ -771,6 +744,31 @@ Use this document before adding new public pages or changing navigation.
 
 ---
 
+### docs/planning/knowledge_base_article_template.md
+
+Purpose:
+
+    Canonical internal template and creation guide for future long-form Knowledge Base articles.
+
+Current role:
+
+- defines the prose-first Knowledge Base article structure
+- records the focused project-context article as the reference implementation
+- defines diagram, FAQ, metadata, source-doc, and internal-link expectations for future articles
+- keeps article-format guidance out of public pages and separate from the general content style guide
+
+This document should be loaded before creating or substantially rewriting future long-form Knowledge Base articles.
+
+It does not replace:
+
+- `docs/planning/content_style_guide.md`
+- `docs/planning/content_source_map.md`
+- `docs/planning/page_inventory.md`
+- `docs/planning/internal_linking_strategy.md`
+- `docs/website_state.md`
+
+---
+
 ### docs/planning/glossary_strategy.md
 
 Purpose:
@@ -787,7 +785,11 @@ Purpose:
 
     Internal planning template for future search-and-answer optimization passes.
 
-This document supports future page improvements for search visibility, answer clarity, headings, and reader-intent matching.
+Current role:
+
+- guides future page improvements for search visibility and answer clarity
+- supports clearer headings, answer blocks, and reader-intent matching
+- should be implemented in a separate focused session after this closeout
 
 ---
 
@@ -837,7 +839,6 @@ It should reflect:
 - phase status
 
 This is one of the core anti-drift files.
-
 
 ---
 
@@ -895,6 +896,18 @@ Current public pages:
     /knowledge-base/troubleshooting-training/
     /knowledge-base/neurocore-architecture/
 
+Current article-format standard:
+
+    The focused project-context article is the current proof page for the prose-first Knowledge Base article format.
+    The canonical internal template / creation guide is docs/planning/knowledge_base_article_template.md.
+    The standard favors fuller paragraphs, natural section flow, fewer bullets, fewer numbered lists, and a small number of useful styled diagrams.
+
+Planned AI Operations category direction:
+
+    /knowledge-base/ai-operations/ should become a true AI Operations category / article index page in a future branch.
+    The current long-form AI Operations landing-page content should move into a dedicated article, likely /knowledge-base/ai-operations/what-is-ai-operations.html or another approved article slug.
+    The project-context article should remain a focused article under the AI Operations category.
+
 ---
 
 ### knowledge-base/index.html
@@ -939,6 +952,11 @@ Recommended path position:
 
     1 of 8
 
+Future direction:
+
+    This route should become a true AI Operations category / article index page in a future branch.
+    The current long-form AI Operations content should move into a dedicated article page.
+
 ---
 
 ### knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
@@ -967,6 +985,10 @@ Validation:
 - full 2,012-line article audited after commit
 - internal links and anchors validated locally
 - latest validation checked 19 public HTML files and 579 internal links with no broken targets
+
+Reference role:
+
+    This is the current reference implementation for the prose-first Knowledge Base article standard documented in docs/planning/knowledge_base_article_template.md.
 
 ---
 
@@ -1341,6 +1363,7 @@ Current public routes:
 
     /
     /about.html
+    /contact.html
     /projects/
     /projects/neurocore.html
     /projects/argus-acli.html
@@ -1373,6 +1396,7 @@ Current internal docs:
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/internal_linking_strategy.md
+    docs/planning/knowledge_base_article_template.md
     docs/planning/page_inventory.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
@@ -1404,6 +1428,7 @@ Likely future public structure:
     /
     ├── index.html
     ├── about.html
+    ├── contact.html
     ├── assets/
     │   ├── images/
     │   │   ├── branding/
@@ -1466,6 +1491,7 @@ Likely future docs structure:
     │   ├── documentation_strategy.md
     │   ├── page_inventory.md
     │   ├── internal_linking_strategy.md
+    │   ├── knowledge_base_article_template.md
     │   ├── glossary_strategy.md
     │   ├── search_answer_optimization_template.md
     │   ├── search_indexing_strategy.md
@@ -1525,6 +1551,8 @@ Use project pages for major ecosystem explanations.
 
 Use Knowledge Base pages for focused teaching articles.
 
+Use `docs/planning/knowledge_base_article_template.md` before creating or substantially rewriting long-form Knowledge Base articles.
+
 Use Story pages for origin, philosophy, and ecosystem narrative.
 
 Use Build Notes pages for readable development history.
@@ -1540,7 +1568,7 @@ At the beginning of serious website build sessions, run:
     git status --short
     tree -a -I '.git|.obsidian|node_modules|__pycache__'
     find . -maxdepth 3 -name "*.html" -print
-    grep -R "href=" -n index.html projects/*.html knowledge-base/*.html story/*.html
+    grep -R "href=" -n index.html about.html contact.html projects/*.html knowledge-base/*.html knowledge-base/*/*.html glossary/*.html story/*.html
 
 Future recommended replacement for manual link grep:
 
@@ -1570,99 +1598,100 @@ Last known output:
     ├── README.md
     ├── about.html
     ├── assets
-    │   ├── images
-    │   │   ├── branding
-    │   │   │   ├── argus-acli
-    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
-    │   │   │   ├── argus-lab
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
-    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │   │   │   │   └── argus-lab-neurocore-stacked.png
-    │   │   │   ├── neurocore
-    │   │   │   │   ├── neurocore-horizontal-transparent.png
-    │   │   │   │   ├── neurocore-horizontal.png
-    │   │   │   │   ├── neurocore-stacked-transparent.png
-    │   │   │   │   └── neurocore-stacked.png
-    │   │   │   └── tensa
-    │   │   │       ├── android-chrome-192x192.png
-    │   │   │       ├── android-chrome-512x512.png
-    │   │   │       ├── apple-touch-icon.png
-    │   │   │       ├── favicon-32x32.png
-    │   │   │       ├── tensa-horizontal-header-transparent.png
-    │   │   │       ├── tensa-horizontal-logo-transparent.png
-    │   │   │       ├── tensa-horizontal-logo.png
-    │   │   │       ├── tensa-icon-512.png
-    │   │   │       ├── tensa-stacked-logo-transparent.png
-    │   │   │       └── tensa-stacked-logo.png
-    │   │   └── social
-    │   │       └── tensa-og-image.png
-    │   └── js
-    │       └── glossary-tooltips.js
+    │   ├── images
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── android-chrome-192x192.png
+    │   │   │       ├── android-chrome-512x512.png
+    │   │   │       ├── apple-touch-icon.png
+    │   │   │       ├── favicon-32x32.png
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-icon-512.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
     ├── contact.html
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── glossary_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_answer_optimization_template.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── knowledge_base_article_template.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
     ├── favicon.ico
     ├── glossary
-    │   └── index.html
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   ├── how-to-keep-ai-from-losing-project-context.html
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   ├── how-to-keep-ai-from-losing-project-context.html
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
 
-    27 directories, 72 files
+    27 directories, 73 files

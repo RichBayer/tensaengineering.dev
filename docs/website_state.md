@@ -28,6 +28,9 @@ Current phase:
     footer-only Contact navigation added across current public pages
     Knowledge Base index created and upgraded into a live article-path hub
     first eight Knowledge Base articles created
+    focused AI Operations project-context article created
+    focused AI Operations project-context article converted into the first prose-first Knowledge Base article standard / proof page
+    Knowledge Base article template / creation guide created for future long-form articles
     page inventory created and updated
     internal linking strategy created and updated
     repository map updated
@@ -56,22 +59,27 @@ Deeper explanations are moving into dedicated pages and Knowledge Base articles.
 
 Current branch:
 
-    feature/kb-reading-experience-standard
+    main
 
 Current local closeout state:
 
-- focused AI Operations project-context article converted into the first prose-first Knowledge Base article standard / proof page
-- article now uses fuller paragraphs, far fewer lists, and three styled explanatory diagrams
-- article metadata changed from pill-style tags to a single plain reader-context sentence
-- shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
-- no new public routes, directories, assets, sitemap entries, or navigation destinations were added in this branch
-- local internal-link and anchor validation passed
+- local `main` pulled to `68cc3f7 Track KB article template in resume prompt`
+- connector-created Knowledge Base article template exists at `docs/planning/knowledge_base_article_template.md`
+- local tree verified at 27 directories and 73 files
+- current public HTML page count remains 19
+- focused AI Operations project-context article remains the reference implementation for the prose-first Knowledge Base article standard
+- docs-only closeout updates are limited to internal planning / continuity docs
+- no public pages, public routes, sitemap entries, navigation links, assets, or public HTML files changed during the template-doc closeout
 
 Focused article:
 
     /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
 
-Latest validation:
+Template / creation guide:
+
+    docs/planning/knowledge_base_article_template.md
+
+Latest public-link validation from the reading-experience closeout:
 
     Public HTML files checked: 19
     Internal links checked: 579
@@ -80,8 +88,8 @@ Latest validation:
 
 Current boundary:
 
-    These closeout changes are local branch work until committed, merged to main, pushed, and deployed by GitHub Pages.
-    Deployment and indexing must not be claimed until live-site evidence confirms the branch has been published.
+    The template-doc closeout is internal documentation only.
+    Deployment and indexing must not be claimed until live-site evidence confirms the relevant public pages and sitemap are deployed.
 
 ---
 
@@ -106,83 +114,6 @@ HTTPS:
 ---
 
 ## Repository
-
-
----
-
-## Current Connector Workflow
-
-Repository connector access is now available for read-only source loading during website sessions.
-
-Current default connector posture:
-
-    read-only
-
-Connector reads may be used to fetch current repository source files directly, reducing the need for manual upload bundles when the files are already committed and accessible through the connector.
-
-Connector reads are appropriate for:
-
-- current committed AI-operations docs
-- current committed planning docs
-- current committed website state files
-- current committed public HTML/CSS/JS source files
-- source-of-truth review before closeout
-
-Connector reads do not replace local command output for:
-
-- uncommitted working-tree changes
-- `git status --short`
-- local `tree` output
-- browser preview
-- internal-link validation results
-- deployment checks
-
-Even if write-capable connector tools are available in the future, the assistant must not create, update, delete, commit, or push repository content through connector tools unless Richard explicitly authorizes that specific write action in the current session.
-
-Normal website workflow remains local-first:
-
-    assistant reads and analyzes source docs
-    assistant provides local commands or full-file replacement content
-    Richard applies changes locally
-    Richard reviews diffs
-    Richard commits and pushes manually
-
-Current additional workflow guardrails:
-
-- Active repository boundary remains `RichBayer/tensaengineering.dev` unless Richard explicitly expands it.
-- Connector access is read-only by default.
-- Unknown source-of-truth documents must be loaded in full before being modified or summarized as current state.
-- Local files, browser-preview observations, validation output, deployment evidence, and search-console evidence override connector-read committed state when those local or external facts matter.
-- During workflow-only updates, do not change public page content, sitemap state, deployment state, indexing claims, branch closeout state, public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
-- Use read-only local evidence or a context bundle before generating local editor scripts when local working-tree or validation state matters.
-
-
-
-## Known Local Branch Repair Notes
-
-Known local-only website repair state:
-
-- Branch `content/knowledge-base-reading-experience` had uncommitted public-site reading-experience work before this AI-Ops guardrail update.
-- That WIP was preserved locally in a Git stash named `WIP knowledge-base-reading-experience before ai-ops guardrail update`.
-- The stash is local-only and will not be visible through the GitHub connector.
-- A fresh AI session must ask for local Git evidence before trying to repair or continue that branch.
-- Do not apply, pop, drop, or rewrite the stash until the branch repair scope is clear.
-
-Before repairing that branch, inspect locally:
-
-    git branch
-    git stash list
-    git checkout content/knowledge-base-reading-experience
-    git status --short
-    git stash show --stat "stash@{0}"
-
-If the stash still exists and the branch is selected intentionally, review the stash contents before applying it:
-
-    git stash show --stat "stash@{0}"
-    git stash show --patch "stash@{0}"
-
-Only apply or pop the stash after Richard approves the repair scope.
-
 
 Local path:
 
@@ -235,6 +166,7 @@ Current key files:
 - docs/planning/documentation_strategy.md
 - docs/planning/glossary_strategy.md
 - docs/planning/internal_linking_strategy.md
+- docs/planning/knowledge_base_article_template.md
 - docs/planning/page_inventory.md
 - docs/planning/search_answer_optimization_template.md
 - docs/planning/search_indexing_strategy.md
@@ -244,7 +176,7 @@ Current key files:
 
 Current repository size:
 
-    27 directories, 72 files
+    27 directories, 73 files
 
 Last verified by user-provided output during closeout:
 
@@ -260,6 +192,81 @@ Latest local internal-link validation result:
     Internal links checked: 579
     External/skipped links: 21
     Result: all checked internal links and anchors resolved successfully
+
+---
+
+## Current Connector Workflow
+
+Repository connector access is now available for read-only source loading during website sessions.
+
+Current default connector posture:
+
+    read-only
+
+Connector reads may be used to fetch current repository source files directly, reducing the need for manual upload bundles when the files are already committed and accessible through the connector.
+
+Connector reads are appropriate for:
+
+- current committed AI-operations docs
+- current committed planning docs
+- current committed website state files
+- current committed public HTML/CSS/JS source files
+- source-of-truth review before closeout
+
+Connector reads do not replace local command output for:
+
+- uncommitted working-tree changes
+- `git status --short`
+- local `tree` output
+- browser preview
+- internal-link validation results
+- deployment checks
+
+Even if write-capable connector tools are available in the future, the assistant must not create, update, delete, commit, or push repository content through connector tools unless Richard explicitly authorizes that specific write action in the current session.
+
+Normal website workflow remains local-first:
+
+    assistant reads and analyzes source docs
+    assistant provides local commands or full-file replacement content
+    Richard applies changes locally
+    Richard reviews diffs
+    Richard commits and pushes manually
+
+Current additional workflow guardrails:
+
+- Active repository boundary remains `RichBayer/tensaengineering.dev` unless Richard explicitly expands it.
+- Connector access is read-only by default.
+- Unknown source-of-truth documents must be loaded in full before being modified or summarized as current state.
+- Local files, browser-preview observations, validation output, deployment evidence, and search-console evidence override connector-read committed state when those local or external facts matter.
+- During workflow-only updates, do not change public page content, sitemap state, deployment state, indexing claims, branch closeout state, public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
+- Use read-only local evidence or a context bundle before generating local editor scripts when local working-tree or validation state matters.
+
+---
+
+## Known Local Branch Repair Notes
+
+Known local-only website repair state:
+
+- Branch `content/knowledge-base-reading-experience` had uncommitted public-site reading-experience work before this AI-Ops guardrail update.
+- That WIP was preserved locally in a Git stash named `WIP knowledge-base-reading-experience before ai-ops guardrail update`.
+- The stash is local-only and will not be visible through the GitHub connector.
+- A fresh AI session must ask for local Git evidence before trying to repair or continue that branch.
+- Do not apply, pop, drop, or rewrite the stash until the branch repair scope is clear.
+
+Before repairing that branch, inspect locally:
+
+    git branch
+    git stash list
+    git checkout content/knowledge-base-reading-experience
+    git status --short
+    git stash show --stat "stash@{0}"
+
+If the stash still exists and the branch is selected intentionally, review the stash contents before applying it:
+
+    git stash show --stat "stash@{0}"
+    git stash show --patch "stash@{0}"
+
+Only apply or pop the stash after Richard approves the repair scope.
 
 ---
 
@@ -298,6 +305,7 @@ Current internal planning / continuity docs:
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/internal_linking_strategy.md
+    docs/planning/knowledge_base_article_template.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/page_inventory.md
     docs/planning/search_indexing_strategy.md
@@ -398,6 +406,9 @@ Current visual direction:
 - inline glossary tooltip styling
 - footer navigation styling
 - simplified TENSA T-symbol favicon for small browser-tab readability
+- reusable Knowledge Base diagram styling
+- Knowledge Base FAQ styling
+- Knowledge Base article metadata styling
 
 ---
 
@@ -525,7 +536,7 @@ This is expected and harmless because the intended canonical indexed URL is:
 
 Future SEO work:
 
-- After deployment, confirm the live sitemap includes `/contact.html` and all eight Knowledge Base article URLs.
+- After deployment, confirm the live sitemap includes `/contact.html`, all eight foundation Knowledge Base article URLs, and the focused project-context guide URL.
 - Inspect the Knowledge Base index and important article URLs in Google Search Console if appropriate.
 - Run a dedicated SEO/topic-map session for the first Knowledge Base article path.
 - Add or verify richer Open Graph / Twitter / JSON-LD metadata on updated pages as needed.
@@ -592,7 +603,6 @@ Important note:
 The About page should stay concise and professional.
 
 The deeper origin story belongs in the Story section.
-
 
 ---
 
@@ -881,6 +891,7 @@ Current focused article:
 Current article-format standard:
 
     The focused project-context article is the current proof page for the prose-first Knowledge Base article format.
+    The canonical internal template / creation guide is `docs/planning/knowledge_base_article_template.md`.
     The standard favors fuller paragraphs, natural section flow, fewer bullets, fewer numbered lists, and a small number of useful styled diagrams.
     Diagrams should look like explanatory article graphics, not terminal output, code blocks, file trees, or internal planning artifacts unless the subject actually requires code or file examples.
 
@@ -912,6 +923,9 @@ Future articles should be created deliberately and tracked in:
     docs/planning/internal_linking_strategy.md
     docs/planning/content_source_map.md
 
+Future long-form Knowledge Base articles should use:
+
+    docs/planning/knowledge_base_article_template.md
 
 ---
 
@@ -949,7 +963,6 @@ The Glossary should stay compact and useful.
 Do not turn it into a full Knowledge Base replacement.
 
 Longer explanations should stay in Knowledge Base articles or project pages.
-
 
 ---
 
@@ -1251,43 +1264,41 @@ Social content:
 - simplified TENSA T-symbol favicon assets created and wired across current public pages
 - root favicon.ico added
 - footer navigation styling added
-- repository map updated to 27 directories and 71 files
+- repository map updated to 27 directories and 73 files
 - local internal-link validation completed successfully for 546 internal links across 18 public HTML files
-
----
-
 - focused AI Operations article created
 - AI Operations discovery links added
 - MCP-based tool glossary definition added
 - sitemap.xml expanded to 19 canonical URLs
 - closeout docs updated for the new article
 - local validation passed for 579 internal links across 19 public HTML files
-
----
-
 - focused AI Operations project-context article converted into the first prose-first Knowledge Base article standard / proof page
+- `docs/planning/knowledge_base_article_template.md` created as the canonical long-form Knowledge Base article template / creation guide
 - list-heavy project-context article structure replaced with fuller article prose
 - raw/code-style diagrams reduced to three styled explanatory article diagrams
 - article metadata changed from pill-style tags to a plain reader-context sentence
 - reusable Knowledge Base article diagram, FAQ, and metadata styling added to styles.css
 - local validation passed for 579 internal links across 19 public HTML files after the reading-experience pass
+- local tree verified at 27 directories and 73 files after adding the Knowledge Base article template doc
 
 ---
 
 ## Not Yet Completed
 
-- Resources page
-- Build Notes section
-- analytics decisions
+- GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
+- live verification of the focused project-context article
+- live verification that the AI Operations page still links to the focused article
+- live verification that sitemap.xml still contains 19 canonical URLs
 - Google Search Console indexing data review after processing
 - Bing Webmaster Tools indexing data review after processing
-- commit, push, merge, and live deployment confirmation for `feature/kb-reading-experience-standard`
 - AI Operations category / article index conversion
 - migration of the current long-form AI Operations landing-page content into a dedicated article page
+- optional stock / editorial image system for future Knowledge Base article polish
+- Resources page
+- Build Notes section
 - old-site migration plan
 - permanent internal link checker script
-- reusable article templates for future Knowledge Base expansion
-- optional stock / editorial image system for future Knowledge Base article polish
+- analytics decisions
 - future install/download guidance for Argus ACLI
 - deeper NeuroCore metadata / SEO pass after latest page expansion
 - dedicated SEO/topic-map session for the first Knowledge Base article path
@@ -1309,6 +1320,7 @@ Use these docs at the start of future serious website sessions:
     docs/planning/content_source_map.md
     docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
+    docs/planning/knowledge_base_article_template.md
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/search_indexing_strategy.md
@@ -1345,6 +1357,9 @@ Purpose of each:
 
     glossary_strategy.md
         glossary purpose, term-selection rules, tooltip behavior, and expansion guardrails
+
+    knowledge_base_article_template.md
+        reusable Knowledge Base article structure, pacing, diagram, FAQ, metadata, source-doc, and internal-link guidance
 
     page_inventory.md
         page existence, status, purpose, and next-action tracker
@@ -1398,7 +1413,7 @@ The verification should confirm the intended change landed and old/stale text or
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-lab.html
-    grep -n "27 directories, 72 files\|how-to-keep-ai-from-losing-project-context.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
+    grep -n "27 directories, 73 files\|knowledge_base_article_template.md\|how-to-keep-ai-from-losing-project-context.html\|assets/js/glossary-tooltips.js" docs/infrastructure/tensa_repository_map.txt
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -1444,21 +1459,12 @@ Preferred safe pattern:
 
 ## Next Recommended Steps
 
-Immediate:
+Immediate external verification:
 
-1. Review the final diff for the project-context article and shared CSS.
-2. Commit the reading-experience branch.
-3. Merge `feature/kb-reading-experience-standard` into `main` without force.
-4. Push `main`.
-5. Confirm GitHub Pages deploys the updated focused article and existing 19-URL sitemap.
-
-After deployment:
-
-- confirm the focused article loads at its canonical URL
-- confirm the AI Operations page still links to the focused guide
-- confirm the live sitemap still contains 19 URLs
-- inspect the focused article in Google Search Console if appropriate
-- do not claim indexing until webmaster-tool evidence confirms it
+1. Confirm GitHub Pages has deployed the latest `main` changes.
+2. Confirm the focused project-context article loads at its canonical URL.
+3. Confirm the AI Operations page still links to the focused article.
+4. Confirm the live sitemap still contains 19 canonical URLs.
 
 Next website work:
 
@@ -1466,7 +1472,7 @@ Next website work:
     Convert /knowledge-base/ai-operations/ into a true category / article index page.
     Move the current long-form AI Operations landing-page content into a dedicated article page.
     Keep the project-context article as a focused article under that category.
-    Apply the new prose-first article standard to future Knowledge Base articles deliberately.
+    Use docs/planning/knowledge_base_article_template.md when creating or rewriting future long-form Knowledge Base articles.
 
 ---
 
@@ -1526,6 +1532,16 @@ Recent Knowledge Base article path work used context from:
 - search indexing strategy
 - documentation closeout protocol
 
+Recent Knowledge Base article-template work used context from:
+
+- focused AI Operations project-context article reference implementation
+- Knowledge Base article reading-experience standard
+- content style guide
+- page inventory
+- internal linking strategy
+- content source map
+- documentation closeout protocol
+
 Recent Glossary and inline tooltip work used context from:
 
 - current public project pages
@@ -1539,7 +1555,6 @@ Recent Glossary and inline tooltip work used context from:
 - current `styles.css`
 - local browser review
 - local internal-link validation
-
 
 Recent GitHub/private-repository public-page cleanup used context from:
 
@@ -1593,6 +1608,10 @@ Check the content source map before writing or significantly rewriting factual p
 Check page inventory before creating or changing public pages:
 
     docs/planning/page_inventory.md
+
+Check the Knowledge Base article template before creating or rewriting long-form Knowledge Base articles:
+
+    docs/planning/knowledge_base_article_template.md
 
 Check internal linking strategy before adding or changing major links:
 

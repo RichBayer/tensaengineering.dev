@@ -21,6 +21,7 @@ As the site grows, its internal documentation must stay organized enough to prev
 - AI-assisted build sessions drifting from the real repository
 - AI polish workflows changing tone or facts without review
 - copy/paste replacement mistakes going undetected
+- reusable Knowledge Base article standards drifting between pages
 
 The goal of this document is to define what each internal documentation file is responsible for, when it should be updated, and how the documentation system should scale as the public site grows.
 
@@ -38,7 +39,7 @@ The public website explains the ecosystem.
 
 The repositories prove the engineering.
 
-The internal TENSA website docs keep the public site aligned with real project state, real source documents, real page inventory, real navigation, and real workflow rules.
+The internal TENSA website docs keep the public site aligned with real project state, real source documents, real page inventory, real navigation, reusable content standards, and real workflow rules.
 
 If the documentation system becomes confusing, stale, or overlapping, the website will eventually drift.
 
@@ -47,7 +48,6 @@ The documentation system should grow deliberately, not randomly.
 ---
 
 ## Documentation Responsibility Model
-
 
 ---
 
@@ -116,7 +116,6 @@ If a closeout or planning doc is being edited and the connector version may be s
 
 This rule exists to avoid regressing back to manual-upload overhead while also avoiding stale connector reads or grep-marker patching.
 
-
 Each documentation file should have one primary responsibility.
 
 A document may reference related areas, but it should not duplicate entire sections from other docs unless a compressed summary is required for restart context.
@@ -133,6 +132,7 @@ The internal documentation system should be organized around these responsibilit
 - documentation closeout
 - search indexing
 - public content style
+- Knowledge Base article template ownership
 - Claude polish workflow
 - SEO planning
 - old-site migration
@@ -175,6 +175,7 @@ The current core documentation set is:
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/knowledge_base_article_template.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
@@ -236,7 +237,7 @@ This document defines what must happen before a serious website build session is
 It should include:
 
 - when closeout is triggered
-- required build-end checks
+- required build-start or build-end checks
 - impacted-doc detection rules
 - closeout update order
 - completion gates
@@ -343,6 +344,7 @@ It should not become:
 - the full internal linking strategy
 - a build log
 - a style guide
+- a reusable Knowledge Base article template
 
 Update when:
 
@@ -372,7 +374,7 @@ It should include:
 - website role
 - ecosystem model
 - content pillars
-- long-term navigation
+- top-level navigation
 - page hierarchy
 - project page strategy
 - Knowledge Base strategy
@@ -391,6 +393,7 @@ It should not become:
 - a link audit
 - a closeout checklist
 - a build log
+- an article-format template
 
 Update when:
 
@@ -430,6 +433,7 @@ It should not become:
 - a full strategy document
 - a page inventory table
 - a content source map
+- a Knowledge Base article template
 
 Update when:
 
@@ -473,6 +477,7 @@ It should not become:
 - a link strategy
 - a full project explainer
 - a public copy draft
+- an article-format template
 
 Update when:
 
@@ -516,6 +521,7 @@ It should not become:
 - a full source-doc map
 - a full link strategy
 - a website state narrative
+- a reusable article template
 
 Update when:
 
@@ -556,6 +562,7 @@ It should not become:
 - a source-doc map
 - a content style guide
 - a full SEO topic map
+- a reusable article template
 
 Update when:
 
@@ -597,6 +604,7 @@ It should not become:
 - a source-doc map
 - a content style guide
 - a build log
+- a Knowledge Base article template
 
 Update when:
 
@@ -609,7 +617,6 @@ Update when:
 This document should change rarely but should remain authoritative.
 
 ---
-
 
 ### docs/planning/glossary_strategy.md
 
@@ -634,6 +641,7 @@ It should not become:
 - a public copy draft for every definition
 - a general content style guide
 - a replacement for internal linking strategy
+- a reusable long-form article template
 
 Update when:
 
@@ -672,6 +680,7 @@ It should not become:
 - a page inventory
 - a link strategy
 - a current website state document
+- a detailed reusable HTML article template
 
 Update when:
 
@@ -687,8 +696,60 @@ Claude-specific handoff behavior belongs in:
 
     docs/ai-operations/claude/claude_website_polish_resume_prompt.md
 
+Reusable long-form Knowledge Base article structure belongs in:
+
+    docs/planning/knowledge_base_article_template.md
+
 ---
 
+### docs/planning/knowledge_base_article_template.md
+
+Primary role:
+
+    Reusable Knowledge Base article structure and creation guide.
+
+This document defines how future long-form focused Knowledge Base articles should be built.
+
+It should include:
+
+- article structure
+- prose-first article flow
+- diagram guidance
+- list and bullet rules
+- callout and FAQ guidance
+- SEO and schema expectations
+- source-doc checks
+- internal-link checks
+- HTML/CSS reuse guidance
+- article creation workflow
+
+It should not become:
+
+- a live website state document
+- a page inventory
+- a content source map
+- a full public writing voice guide
+- a public article draft
+- a replacement for browser review or local validation
+
+Update when:
+
+- the preferred Knowledge Base article structure changes
+- recurring article-format problems are found
+- new reusable article diagram, FAQ, metadata, or schema patterns are adopted
+- the reference implementation changes
+- future article creation workflows need tighter guidance
+
+Relationship to other docs:
+
+- `content_style_guide.md` owns overall public voice, tone, and writing standards.
+- `knowledge_base_article_template.md` owns the reusable article skeleton, pacing, diagrams, FAQ, metadata, source checks, and creation workflow.
+- `page_inventory.md` owns whether an article exists, its status, and its next action.
+- `content_source_map.md` owns required factual source context before writing or rewriting an article.
+- `internal_linking_strategy.md` owns preferred destinations and reader-flow logic.
+- `website_state.md` records the current state of the site and notes that this template exists as part of the anti-drift context pack.
+
+---
 
 ### docs/planning/search_answer_optimization_template.md
 
@@ -714,6 +775,7 @@ It should not become:
 - a keyword-stuffing checklist
 - a replacement for content style guide
 - a page inventory
+- a reusable article structure template
 
 Update when:
 
@@ -759,6 +821,7 @@ It should not become:
 - a content style guide
 - a public copy draft
 - a general marketing strategy document
+- a reusable article template
 
 Update when:
 
@@ -802,6 +865,7 @@ It should not become:
 - a public copy draft
 - a page inventory replacement
 - a search-indexing operations document
+- a reusable article template
 
 Update when:
 
@@ -987,6 +1051,58 @@ Update the resume prompt only if the change is important for fresh-session conti
 
 ---
 
+### New internal planning docs
+
+If a new internal planning doc is created, update:
+
+    docs/infrastructure/tensa_repository_map.txt
+    docs/planning/documentation_strategy.md
+
+Also update:
+
+    docs/website_state.md
+    docs/ai-operations/tensa_website_resume_prompt.md
+
+if the new doc becomes part of the core anti-drift context pack or future sessions must load it.
+
+Also update:
+
+    docs/planning/page_inventory.md
+
+if the new internal doc is important enough to track in the internal continuity inventory.
+
+Do not update public pages, sitemap.xml, search indexing claims, or public navigation just because an internal planning doc was created.
+
+---
+
+### Knowledge Base article template changes
+
+If the reusable long-form Knowledge Base article structure changes, update:
+
+    docs/planning/knowledge_base_article_template.md
+    docs/website_state.md
+    docs/ai-operations/tensa_website_resume_prompt.md
+
+Also update:
+
+    docs/planning/content_style_guide.md
+
+only if public voice, tone, cadence, or general writing standards changed.
+
+Also update:
+
+    docs/planning/content_source_map.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+
+only if source requirements, link destinations, page status, or planned article tracking changed.
+
+The template document owns reusable article structure.
+
+It does not automatically change the public page inventory, sitemap, search indexing strategy, or live website state unless actual public pages changed.
+
+---
+
 ## Replacement Verification Rule
 
 After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
@@ -1031,6 +1147,7 @@ Use these boundaries:
 - Search indexing belongs in `search_indexing_strategy.md`.
 - SEO topic planning belongs in `seo_topic_map.md`.
 - Public content style belongs in `content_style_guide.md`.
+- Knowledge Base article structure and creation workflow belong in `knowledge_base_article_template.md`.
 - Claude prose-polish workflow belongs in `claude_website_polish_resume_prompt.md`.
 - Session restart context belongs in `tensa_website_resume_prompt.md`.
 - Closeout workflow belongs in `documentation_closeout_protocol.md`.
@@ -1079,7 +1196,7 @@ Do not link public pages to internal planning docs.
 
 Public pages should speak to visitors.
 
-Internal docs may contain instructions, rules, source requirements, and operational warnings.
+Internal docs may contain instructions, rules, source requirements, reusable templates, and operational warnings.
 
 ---
 
@@ -1124,6 +1241,7 @@ Current active documentation system now includes:
     docs/planning/documentation_strategy.md
     docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
+    docs/planning/knowledge_base_article_template.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
@@ -1147,22 +1265,28 @@ When this file changes, update related docs only if the documentation responsibi
 For this closeout, impacted docs include:
 
     docs/infrastructure/tensa_repository_map.txt
-    docs/planning/page_inventory.md
     docs/website_state.md
     docs/ai-operations/tensa_website_resume_prompt.md
-    docs/ai-operations/documentation_closeout_protocol.md
+
+Potentially update:
+
+    docs/planning/page_inventory.md
+
+only if the new internal planning doc should be tracked there as an important internal continuity doc.
 
 Potentially update:
 
     docs/planning/internal_linking_strategy.md
 
-only if this document changes link strategy.
+only if this document changes public link strategy.
 
 Potentially update:
 
     docs/planning/content_source_map.md
 
 only if this document changes source requirements.
+
+The current template-doc closeout does not create a new public page, public route, sitemap entry, navigation target, or live search-indexing claim.
 
 ---
 
