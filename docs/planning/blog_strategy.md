@@ -17,7 +17,7 @@ Planned future public routes may include:
     /blog/homelab/
     /blog/tools-and-models/
     /blog/local-ai/
-    /blog/build-notes/
+    /blog/build-lessons/
 
 These routes should not be created until the first public blog implementation branch.
 
