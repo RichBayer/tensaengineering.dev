@@ -47,21 +47,43 @@ Current DNS / registrar:
 
     Cloudflare
 
-Current repo files include:
+Current public structure includes:
 
-    index.html
-    styles.css
-    README.md
-    CNAME
-    docs/ai-operations/tensa_website_resume_prompt.md
+    homepage
+    Projects section
+    NeuroCore project page
+    Argus ACLI project page
+    Argus Lab project page
+    Knowledge Base index
+    eight Knowledge Base foundation articles
+    focused AI Operations project-context article
+    Glossary
+    Story
+    About
+    Contact
+
+Current planning / scaffold structure includes:
+
+    Blog planning docs
+    structure-only Blog directories
+    structure-only Blog image asset directories
+    Knowledge Base article template
+    page inventory
+    content source map
+    internal linking strategy
+    search indexing strategy
+    repository map
+    resume prompt
+    website state
 
 Current status:
 
-- TENSA Engineering has a live static homepage.
+- TENSA Engineering has a live static public website foundation.
 - The site introduces NeuroCore, Argus ACLI, and Argus Lab.
-- The homepage currently links to related GitHub repositories and the existing Argus ACLI landing page.
-- The current homepage is intentionally simple.
-- The long-term site needs a stronger information architecture before expansion.
+- The site now includes Projects, Knowledge Base, Glossary, Story, About, and Contact pages.
+- Public GitHub navigation and direct public links to private implementation repositories have been removed from current public pages.
+- The Blog is planned and scaffolded internally, but no public Blog pages or article routes exist yet.
+- The information architecture should continue guiding expansion so the site grows deliberately instead of randomly.
 
 ---
 
@@ -105,7 +127,9 @@ The public ecosystem should be explained clearly and consistently.
 
     Argus Lab = early real-Linux training and validation implementation with future platform direction
 
-    GitHub repositories = engineering proof and source-of-truth documentation
+    Private implementation repositories = engineering source of truth during active development
+
+    Future public artifacts = selected proof, documentation, demos, examples, releases, or open components when ready
 
     Social content = educational discovery engine and traffic driver
 
@@ -290,7 +314,7 @@ Project pages should include:
     Argus ACLI
     Argus Lab
 
-These pages should explain what each project is, why it exists, how it fits into the ecosystem, and where to go for deeper technical proof.
+These pages should explain what each project is, why it exists, how it fits into the ecosystem, and where to go for deeper public explanation or future public artifacts.
 
 ---
 
@@ -444,7 +468,7 @@ Project pages:
     /projects/argus-acli.html
     /projects/argus-lab.html
 
-Future index page:
+Current index page:
 
     /projects/index.html
 
@@ -457,7 +481,7 @@ Purpose:
 - educational content
 - SEO destination
 - public explanation of key ideas
-- bridge between social content and technical repos
+- bridge between social content and deeper project understanding
 
 Potential structure:
 
@@ -470,9 +494,9 @@ Potential structure:
     /knowledge-base/linux-diagnostics/
     /knowledge-base/troubleshooting-training/
 
-Early implementation can keep this simple.
+The current foundation path is live.
 
-The first version does not need every category or page.
+Future Knowledge Base expansion should happen deliberately after source requirements, page inventory, and internal-linking destinations are clear.
 
 ---
 
@@ -532,7 +556,7 @@ Purpose:
 - public build-in-progress updates
 - less formal than source-of-truth build logs
 - more readable than repo implementation history
-- bridge between social videos and GitHub proof
+- bridge between social videos and future public technical artifacts
 
 Potential structure:
 
@@ -541,9 +565,9 @@ Potential structure:
     /build-notes/argus-acli/
     /build-notes/ai-operations/
 
-Build Notes should not replace GitHub build logs.
+Build Notes should not replace repository build logs.
 
-They should summarize important milestones in a public-friendly way and link to the deeper technical source.
+They should summarize important milestones in a public-friendly way and link to public technical artifacts only when those artifacts exist and are ready.
 
 ---
 
@@ -570,19 +594,20 @@ Potential structure:
 
 Purpose:
 
-- links to GitHub repos
+- future selected public technical artifacts
 - videos
-- documentation
+- public documentation
 - future downloads
-- install instructions
-- community or contact links
+- install instructions when product readiness supports them
+- community or contact links if those systems exist
 
 Potential structure:
 
     /resources/index.html
-    /resources/github.html
     /resources/videos.html
     /resources/downloads.html
+
+Resources should remain deferred until there is enough useful public material to organize.
 
 Downloads should remain future-phase until Argus ACLI is ready.
 
@@ -607,38 +632,71 @@ It can include origin context, but the deeper story belongs in the Story section
 
 ---
 
-## Recommended Initial Page Hierarchy
+## Current / Near-Term Page Hierarchy
 
-The first serious version of the site should not implement everything.
+The site has moved beyond the first serious version. This section preserves the original hierarchy concept while keeping the current direction grounded.
 
-Recommended initial structure:
+Current foundation structure:
 
     /
     ├── index.html
-    ├── styles.css
-    ├── CNAME
-    ├── README.md
-    ├── docs/
+    ├── about.html
+    ├── contact.html
+    ├── projects/
+    │   ├── index.html
+    │   ├── neurocore.html
+    │   ├── argus-acli.html
+    │   └── argus-lab.html
+    ├── knowledge-base/
+    │   ├── index.html
     │   ├── ai-operations/
-    │   │   └── tensa_website_resume_prompt.md
-    │   └── planning/
-    │       └── website_information_architecture.md
+    │   ├── persistent-ai-memory/
+    │   ├── controlled-ai-systems/
+    │   ├── local-first-ai/
+    │   ├── safe-tool-interaction/
+    │   ├── linux-diagnostics/
+    │   ├── troubleshooting-training/
+    │   └── neurocore-architecture/
+    ├── glossary/
+    │   └── index.html
+    ├── story/
+    │   └── index.html
+    ├── blog/
+    │   ├── .gitkeep
+    │   ├── ai-coding/
+    │   ├── homelab/
+    │   ├── tools-and-models/
+    │   ├── local-ai/
+    │   ├── build-lessons/
+    │   └── buying-guides/
+    ├── assets/
+    ├── docs/
+    ├── styles.css
+    ├── sitemap.xml
+    ├── robots.txt
+    ├── CNAME
+    └── README.md
 
-Recommended near-term public pages:
+Current and near-term public-page direction:
 
     index.html
+    projects/index.html
     projects/neurocore.html
     projects/argus-acli.html
     projects/argus-lab.html
     knowledge-base/index.html
+    knowledge-base/ai-operations/index.html
+    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
     glossary/index.html
     story/index.html
-    resources/index.html
     about.html
+    contact.html
+    blog/index.html              # future
+    resources/index.html         # deferred until useful public artifacts exist
 
-The first code pass should not necessarily create all of these.
+Future public pages should be created only when their source requirements, page role, and link destinations are clear.
 
-The immediate priority is to plan the structure, then update the homepage to point toward that structure.
+The immediate priority is to keep the structure coherent as the site expands, not to create every planned section at once.
 
 ---
 
@@ -657,7 +715,7 @@ Each project page should follow a consistent structure:
     5. Current status
     6. What is available now
     7. What is future-phase
-    8. Links to GitHub / deeper documentation
+    8. Links to approved public artifacts or deeper public documentation when those destinations exist
 
 ---
 
@@ -774,7 +832,7 @@ Articles should be:
 - searchable
 - internally linked
 - connected to project pages
-- connected to source-of-truth GitHub docs when useful
+- connected to approved public artifacts when those exist and are useful
 
 Long-form Knowledge Base articles should use the prose-first article standard established by `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html`.
 
@@ -958,7 +1016,7 @@ Purpose:
 - teach controlled AI runtime design
 - show real implementation milestones
 - demonstrate architecture decisions
-- drive viewers to the website and GitHub
+- drive viewers to the website
 
 Website alignment:
 
@@ -967,7 +1025,7 @@ Website alignment:
     Linux Diagnostics knowledge base
     Safe Tool Interaction knowledge base
     Build Notes
-    GitHub resources
+    Future public artifacts when ready
 
 ---
 
@@ -979,7 +1037,7 @@ Purpose:
 - explain documentation as memory
 - explain context loading and anti-drift protocols
 - show how large AI-assisted projects can maintain continuity
-- drive viewers to the website and GitHub
+- drive viewers to the website
 
 Website alignment:
 
@@ -987,15 +1045,15 @@ Website alignment:
     Persistent AI Memory knowledge base
     Story / Philosophy pages
     Build Notes
-    Resources
+    Resources when public artifacts exist
 
 ---
 
 ## Repository Boundary Rules
 
-The GitHub repositories remain the source of truth.
+Private implementation repositories remain the engineering source of truth during active development.
 
-The website should not replace the repos.
+The website should not replace the repositories.
 
 The website should translate, organize, and explain.
 
@@ -1010,7 +1068,7 @@ Responsible for:
 - product positioning
 - trust-building
 - conversion
-- linking to source proof
+- linking to approved public artifacts when those exist
 
 ### NeuroCore Repository
 
@@ -1063,7 +1121,7 @@ Recommended funnel path:
     → TENSA article or project page
     → clearer understanding of problem
     → project/product page
-    → GitHub proof or demo
+    → public proof, demo, or artifact when available
     → future install/download/signup/purchase action
 
 Future product actions may include:
@@ -1072,7 +1130,7 @@ Future product actions may include:
 - install Argus ACLI
 - join waitlist
 - read documentation
-- view GitHub repo
+- view public proof or demo
 - watch demo
 - request access
 - purchase product
@@ -1120,7 +1178,7 @@ Recommended homepage sections:
     Knowledge Base Preview
     Glossary / Term Reference Preview
     Story / Origin Preview
-    GitHub Proof
+    Future Public Artifacts
     Build / Follow Along
     Call to Action
 
@@ -1195,17 +1253,19 @@ Purpose:
 
 ---
 
-### GitHub Proof
+### Future Public Artifacts
 
 Purpose:
 
-- show that this is real engineering, not vaporware
+- explain that selected public documentation, examples, demos, downloads, or open components may be added later when useful and ready
 
-Should link to:
+Should not currently imply:
 
-- NeuroCore repo
-- Argus Lab repo
-- build logs or architecture docs when appropriate
+- public implementation repositories are available
+- downloads exist
+- support channels exist
+- install guidance exists
+- product maturity is ahead of reality
 
 ---
 
@@ -1223,7 +1283,7 @@ Early CTA options:
 
     Explore the architecture
     Read the origin story
-    View the GitHub repo
+    Learn the core ideas
     Follow the build
 
 Future CTA options:
@@ -1244,11 +1304,11 @@ They should answer:
     What changed?
     Why did it matter?
     What architectural lesson came from it?
-    Where is the source proof?
+    Where is the public proof or deeper explanation, if available?
 
 Build Notes should be shorter and more polished than repo build logs.
 
-They should link back to GitHub for full technical detail.
+They should link to public artifacts only when those artifacts exist and are ready.
 
 Potential build note categories:
 
@@ -1372,6 +1432,8 @@ This is especially important for:
 - commercial offerings
 - certification/proficiency ideas
 - hosted training environments
+- public artifacts
+- Blog pages and Blog article routes
 
 Do not describe future-phase ideas as available products.
 
@@ -1379,7 +1441,7 @@ Do not describe future-phase ideas as available products.
 
 ## Phase 1 Planning Scope
 
-Phase 1 should focus on planning and foundation.
+Phase 1 focused on planning and foundation.
 
 Goals:
 
@@ -1400,9 +1462,9 @@ Deliverables:
 
 ## Phase 2 Homepage Refinement Scope
 
-After this planning doc is approved, the next implementation phase should update the homepage.
+After the planning doc was approved, the next implementation phase updated the homepage.
 
-Possible scope:
+Scope included:
 
 - improve hero message
 - clarify TENSA ecosystem
@@ -1410,31 +1472,33 @@ Possible scope:
 - add project sections
 - add knowledge base preview
 - add origin/story preview
-- add GitHub proof section
+- replace public repository-proof framing with private-development / future-public-artifacts framing
 - remove or reduce dependency on the old Argus ACLI landing page
 - prepare for future internal pages
 
-Do not build the full site yet.
+Do not turn the homepage into the full site.
 
 ---
 
 ## Phase 3 Initial Multi-Page Scope
 
-After the homepage structure is stable, create first internal pages.
+After the homepage structure became stable, the first internal pages were created.
 
-Recommended first pages:
+Current public foundation pages include:
 
+    /projects/
     /projects/neurocore.html
     /projects/argus-acli.html
     /projects/argus-lab.html
-    /knowledge-base/index.html
-    /story/index.html
-    /resources/index.html
+    /knowledge-base/
+    /glossary/
+    /story/
     /about.html
+    /contact.html
 
-These pages can start simple.
+Future Resources and Build Notes sections remain deferred until there is enough useful public material to organize.
 
-They should establish structure before depth.
+These pages establish structure before depth.
 
 ---
 
@@ -1467,7 +1531,37 @@ Future focused articles should be added only after source requirements, internal
 
 ---
 
-## Phase 5 Product Funnel Scope
+## Phase 5 Blog Foundation Scope
+
+The Blog is currently planned and scaffolded internally, but not public.
+
+Current Blog planning docs:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+
+Current Blog scaffold:
+
+    /blog/
+    /blog/ai-coding/
+    /blog/homelab/
+    /blog/tools-and-models/
+    /blog/local-ai/
+    /blog/build-lessons/
+    /blog/buying-guides/
+
+Future Blog implementation should start with:
+
+    /blog/index.html
+    one category index
+    one proof article
+
+Do not add Blog links to sitemap.xml or public navigation until real public Blog pages exist and are ready to index.
+
+---
+
+## Phase 6 Product Funnel Scope
 
 Future phase only.
 
@@ -1489,7 +1583,7 @@ This phase should happen only after Argus ACLI is mature enough to support publi
 
 ---
 
-## Phase 6 Argus ACLI Site Retirement Scope
+## Phase 7 Argus ACLI Site Retirement Scope
 
 Future phase only.
 
@@ -1518,20 +1612,29 @@ These should be resolved before deeper implementation.
 9. What should the first conversion action be before products are available?
 10. How should video/social content be embedded or linked?
 11. How should Glossary entries be expanded without duplicating Knowledge Base articles?
+12. When should the public Blog be linked from navigation and sitemap.xml?
+13. What should the first public Blog proof article be?
+14. What disclosure workflow is required before buying guides or monetized links exist?
 
 ---
 
 ## Immediate Next Step
 
-Do not build the full website yet.
+Do not build the full website randomly.
 
 The immediate next step is:
 
-    Create this planning document in the TENSA Engineering repo.
+    Finish reviewing and merging the Blog planning foundation branch after confirming it remains planning / scaffold only.
 
-Then review and refine it before making significant homepage or navigation changes.
+After the Blog planning foundation is merged, the next implementation work should happen on a fresh focused branch.
 
-After this document is committed, the next implementation step should be a focused homepage refinement pass based on this architecture.
+Recommended next public Blog branch:
+
+    feature/blog-public-foundation
+
+Recommended separate non-Blog branch:
+
+    feature/kb-ai-operations-index
 
 ---
 
@@ -1539,7 +1642,9 @@ After this document is committed, the next implementation step should be a focus
 
 TENSA Engineering should become the public home, knowledge hub, and ecosystem portal for the systems it builds.
 
-The repositories prove the work.
+The private implementation repositories preserve the engineering source of truth during active development.
+
+Future public artifacts can prove selected work when they are useful, intentional, and ready.
 
 The social content tells the story and teaches the lessons.
 
@@ -1549,6 +1654,6 @@ The long-term goal:
 
     Teach the ideas.
     Explain the systems.
-    Prove the work.
+    Preserve the work.
     Build trust.
     Convert attention into adoption.

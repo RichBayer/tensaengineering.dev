@@ -31,7 +31,7 @@ Default working assumption:
 
 ## Current Committed Baseline
 
-The latest confirmed website-content closeout merged and pushed to `main` before the current Blog planning branch was:
+The latest confirmed website-content closeout merged and pushed to `main` before the Blog planning foundation branch was:
 
     5687392 Refine KB article reading experience
 
@@ -45,11 +45,11 @@ Docs-only connector / local follow-up after that closeout:
 - Local Legion evidence confirmed the repository tree was 27 directories and 73 files after the template-doc closeout.
 - Local closeout updated the repository map, documentation strategy, website state, and resume prompt for the new template doc.
 
-Current working branch closeout:
+Latest completed planning branch:
 
     feature/blog-planning-foundation
 
-Current Blog planning branch state:
+Current Blog planning foundation state:
 
 - branch contains Blog planning docs and structure-only scaffold directories
 - local cleanup commit `2dfa282 Align blog strategy scaffold naming` is present on the branch
@@ -100,7 +100,7 @@ Latest local internal-link validation from the previous reading-experience close
 
 Important:
 
-    The Blog planning branch is planning / scaffold only.
+    The Blog planning foundation is planning / scaffold only.
     It is not a public Blog launch.
     Do not assume the live site deployed just because a branch or `main` was pushed.
     GitHub Pages deployment and live-page behavior must be verified from current evidence before making deployment or indexing claims.
@@ -109,7 +109,7 @@ Important:
 
 ## Most Recent Completed Work
 
-Completed in the current Blog planning branch:
+Completed in the Blog planning foundation branch:
 
 - branch `feature/blog-planning-foundation` was created for Blog planning and structure-only scaffolding
 - `docs/planning/blog_strategy.md` was created for future Blog strategy and category planning
@@ -128,7 +128,7 @@ Completed in the current Blog planning branch:
 
 Important:
 
-    The Blog planning branch did not add public Blog pages, public article routes, sitemap entries, navigation links, RSS feeds, newsletter signup, comment systems, guest-post systems, affiliate systems, CSS changes, JavaScript changes, or public HTML changes.
+    The Blog planning foundation did not add public Blog pages, public article routes, sitemap entries, navigation links, RSS feeds, newsletter signup, comment systems, guest-post systems, affiliate systems, CSS changes, JavaScript changes, or public HTML changes.
     It created planning docs and `.gitkeep` scaffold directories only.
 
 Previous completed work in the reading-experience branch:
@@ -162,13 +162,11 @@ Completed in the docs-only connector / local closeout follow-up before the Blog 
 
 ## Current Next Website Direction
 
-Immediate branch closeout:
+Immediate branch review:
 
-    Finish reviewing, committing, pushing, and merging `feature/blog-planning-foundation`.
+    Review and merge `feature/blog-planning-foundation` only after confirming it remains planning / scaffold only.
 
-This branch should remain planning / scaffold only.
-
-Before committing, confirm:
+Before or after merge, confirm:
 
 - only Blog planning / scaffold documentation changed
 - no public HTML files changed
@@ -882,7 +880,7 @@ Completed so far:
 
 Not yet completed:
 
-- review, commit, push, and merge of the Blog planning closeout branch
+- merge of the Blog planning foundation branch into `main`
 - GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
@@ -1000,13 +998,13 @@ Closeout docs usually include only the files impacted by the session. Do not upd
 
 ## Current Next Best Step
 
-Immediate branch closeout:
+Immediate branch review:
 
-1. Review the Blog planning closeout diffs.
+1. Review the Blog planning foundation diffs.
 2. Confirm only Blog planning / scaffold documentation changed.
 3. Confirm no public HTML, sitemap, robots, navigation, CSS, or JavaScript files changed.
-4. Commit and push `feature/blog-planning-foundation`.
-5. Merge only after review.
+4. Merge `feature/blog-planning-foundation` only after review.
+5. After merge, treat Blog public implementation as a separate future branch.
 
 Next Blog build option:
 

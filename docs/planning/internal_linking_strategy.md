@@ -142,6 +142,13 @@ Use these preferred destinations when topics appear in public pages.
 | Troubleshooting training | `/knowledge-base/troubleshooting-training/` | Same, plus deeper future subtopics if needed | Article 7 in the current recommended Knowledge Base path. |
 | Real Linux failure scenarios | `/knowledge-base/troubleshooting-training/` or `/projects/argus-lab.html` | Future real-failure-scenarios article if needed | Use Argus Lab for platform/lab role; use Troubleshooting Training for skill-development concept. |
 | Build history | No public link yet | `/build-notes/` | Build Notes not created yet. Public build summaries should avoid exposing private implementation details. |
+| Blog | No public link yet | `/blog/` | Blog is planned/scaffold-only. Do not link publicly until real Blog pages exist. |
+| AI Coding Blog | No public link yet | `/blog/ai-coding/` | Planned category. Do not link publicly until the category page exists. |
+| Homelab Blog | No public link yet | `/blog/homelab/` | Planned category. Do not link publicly until the category page exists. |
+| Tools and Models Blog | No public link yet | `/blog/tools-and-models/` | Planned category. Do not link publicly until the category page exists. |
+| Local AI Blog | No public link yet | `/blog/local-ai/` | Planned category. Do not link publicly until the category page exists. |
+| Build Lessons Blog | No public link yet | `/blog/build-lessons/` | Planned category. Do not link publicly until the category page exists. |
+| Buying Guides Blog | No public link yet | `/blog/buying-guides/` | Planned category. Do not link publicly until the category page exists and disclosure/source rules are ready. |
 | Downloads / install guidance | No public link yet | `/resources/downloads.html` or Argus ACLI page | Do not create until product readiness supports it. |
 
 ---
@@ -259,6 +266,7 @@ These are intentional temporary or future targets.
 | Footer Contact link | `/contact.html` | `/contact.html` |
 | Public technical artifacts | No public link yet | Possibly `/resources/` after enough useful public material exists |
 | Build history | No public link yet | Possibly `/build-notes/` after public-friendly build summaries are ready |
+| Blog navigation | No public link yet | `/blog/` after real public Blog pages exist and are ready to index |
 
 ---
 
@@ -533,7 +541,6 @@ Project details belong in Project pages.
 
 Concept explanations belong in the Knowledge Base or Glossary.
 
-
 ## Planned Link Upgrades
 
 When these pages are created, update links across the site.
@@ -554,6 +561,13 @@ When these pages are created, update links across the site.
 | `/glossary/index.html` | Completed. Header navigation now points to `/glossary/`. Inline glossary tooltip links now target glossary entries from Knowledge Base articles. Keep glossary additions deliberate and compact. |
 | `/resources/index.html` | Header nav if Resources becomes primary, footer/artifacts sections, Knowledge Base index, project pages where useful |
 | `/build-notes/index.html` | Knowledge Base index, NeuroCore page, Story page where useful |
+| `/blog/index.html` | Public navigation, sitemap, Knowledge Base index, homepage, and relevant project / Knowledge Base pages only after real Blog pages exist |
+| `/blog/ai-coding/index.html` | Blog index and relevant AI Operations / AI coding posts only after the page exists |
+| `/blog/homelab/index.html` | Blog index and relevant Argus Lab / homelab posts only after the page exists |
+| `/blog/tools-and-models/index.html` | Blog index and relevant tool/model posts only after the page exists |
+| `/blog/local-ai/index.html` | Blog index and relevant Local-First AI / NeuroCore posts only after the page exists |
+| `/blog/build-lessons/index.html` | Blog index and relevant public build-lesson posts only after the page exists |
+| `/blog/buying-guides/index.html` | Blog index and carefully governed buying-guide posts only after the page exists and disclosure/source rules are ready |
 
 ---
 
@@ -592,7 +606,7 @@ The verification should confirm the intended change actually landed and that the
 Examples:
 
     grep -n 'href="../story/"\|href="../index.html#story"' projects/argus-acli.html
-    grep -n "27 directories, 72 files\|contact.html\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
+    grep -n "41 directories, 90 files\|assets/images/blog\|blog_strategy.md\|knowledge-base/neurocore-architecture/index.html" docs/infrastructure/tensa_repository_map.txt
 
 This rule exists to catch:
 
@@ -656,6 +670,7 @@ Current notable link state:
 - Story links to NeuroCore, Argus ACLI, Argus Lab, Projects, Knowledge Base, and Glossary.
 - Glossary is linked from primary navigation and supports inline Knowledge Base tooltip terms.
 - About provides concise organizational identity.
+- Blog is planned/scaffold-only and is not linked from current public navigation or sitemap.xml.
 
 ---
 

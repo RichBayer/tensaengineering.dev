@@ -64,20 +64,19 @@ The Blog is planned and scaffolded internally, but it has not launched publicly.
 
 ## Current Closeout Snapshot
 
-Current branch:
+Latest completed planning branch:
 
     feature/blog-planning-foundation
 
-Current local closeout state:
+Current Blog planning foundation state:
 
-- local branch `feature/blog-planning-foundation` is checked out
+- `feature/blog-planning-foundation` contains Blog planning docs and structure-only scaffold directories
 - local cleanup commit `2dfa282 Align blog strategy scaffold naming` is present on the branch
-- branch contains Blog planning docs and structure-only scaffold directories
 - local tree verified at 41 directories and 90 files
 - current public HTML page count remains 19
 - focused AI Operations project-context article remains the reference implementation for the prose-first Knowledge Base article standard
-- Blog planning closeout updates are limited to internal planning / continuity docs and structure-only `.gitkeep` scaffold directories
-- no public Blog pages, public article routes, sitemap entries, navigation links, RSS feed, newsletter signup, CSS changes, JavaScript changes, or public HTML files changed during the Blog planning closeout
+- Blog planning foundation updates are limited to internal planning / continuity docs and structure-only `.gitkeep` scaffold directories
+- no public Blog pages, public article routes, sitemap entries, navigation links, RSS feed, newsletter signup, CSS changes, JavaScript changes, or public HTML files changed during the Blog planning foundation
 
 Focused article:
 
@@ -122,7 +121,7 @@ Latest public-link validation from the reading-experience closeout:
 
 Current boundary:
 
-    The Blog planning closeout is internal documentation and structure-only scaffold work.
+    The Blog planning foundation is internal documentation and structure-only scaffold work.
     Public Blog implementation should happen later on a separate reviewed branch.
     Deployment and indexing must not be claimed until live-site evidence confirms the relevant public pages and sitemap are deployed.
 
@@ -1488,7 +1487,7 @@ Social content:
 
 ## Not Yet Completed
 
-- review, commit, push, and merge of the Blog planning closeout branch
+- merge of the Blog planning foundation branch into `main`
 - GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
@@ -1683,12 +1682,13 @@ Preferred safe pattern:
 
 ## Next Recommended Steps
 
-Immediate branch closeout:
+Immediate branch review:
 
-1. Review the Blog planning closeout diffs.
+1. Review the Blog planning foundation diffs.
 2. Confirm only Blog planning / scaffold documentation changed.
-3. Commit and push `feature/blog-planning-foundation`.
-4. Merge only after review.
+3. Confirm no public HTML, sitemap, robots, navigation, CSS, or JavaScript files changed.
+4. Merge `feature/blog-planning-foundation` only after review.
+5. After merge, keep public Blog implementation on a separate future branch.
 
 Next Blog build option:
 
