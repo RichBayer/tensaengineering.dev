@@ -31,42 +31,107 @@ Default working assumption:
 
 ## Current Committed Baseline
 
-The latest confirmed website-content closeout merged and pushed to `main` was:
+The latest confirmed website-content closeout merged and pushed to `main` before the current Blog planning branch was:
 
     5687392 Refine KB article reading experience
 
 That commit converted the focused AI Operations project-context article into the first prose-first Knowledge Base article reading-standard proof page.
 
-Docs-only connector follow-up after that closeout:
+Docs-only connector / local follow-up after that closeout:
 
 - `docs/ai-operations/tensa_website_resume_prompt.md` was refreshed after the reading-experience merge.
 - `docs/planning/knowledge_base_article_template.md` was created as the canonical Knowledge Base article template / creation guide.
 - This resume prompt was then updated to include the new template doc in the core context set.
-- Local Legion evidence confirmed the repository tree is now 27 directories and 73 files.
+- Local Legion evidence confirmed the repository tree was 27 directories and 73 files after the template-doc closeout.
 - Local closeout updated the repository map, documentation strategy, website state, and resume prompt for the new template doc.
 
-Current repository size from latest local closeout evidence:
+Current working branch closeout:
 
-    27 directories, 73 files
+    feature/blog-planning-foundation
+
+Current Blog planning branch state:
+
+- branch contains Blog planning docs and structure-only scaffold directories
+- local cleanup commit `2dfa282 Align blog strategy scaffold naming` is present on the branch
+- current local tree is 41 directories and 90 files
+- current public HTML page count remains 19
+- no public Blog pages exist yet
+- no public Blog articles exist yet
+- no Blog URLs are in `sitemap.xml`
+- no Blog links are in public navigation
+- no Blog RSS feed, newsletter signup, comment system, guest-post flow, affiliate flow, CSS change, JavaScript change, or public HTML change exists yet
+
+New internal Blog planning docs:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+
+New structure-only scaffold directories:
+
+    blog/
+    blog/ai-coding/
+    blog/homelab/
+    blog/tools-and-models/
+    blog/local-ai/
+    blog/build-lessons/
+    blog/buying-guides/
+
+New structure-only Blog image asset directories:
+
+    assets/images/blog/
+    assets/images/blog/ai-coding/
+    assets/images/blog/homelab/
+    assets/images/blog/tools-and-models/
+    assets/images/blog/local-ai/
+    assets/images/blog/build-lessons/
+    assets/images/blog/buying-guides/
 
 Current public HTML page count:
 
     19
 
-Latest local internal-link validation from closeout:
+Latest local internal-link validation from the previous reading-experience closeout:
 
     Public HTML files checked: 19
     Internal links checked: 579
     External/skipped links: 21
     Result: all checked internal links and anchors resolved successfully
 
-Do not assume the live site deployed just because `main` was pushed. GitHub Pages deployment and live-page behavior must be verified from current evidence before making deployment or indexing claims.
+Important:
+
+    The Blog planning branch is planning / scaffold only.
+    It is not a public Blog launch.
+    Do not assume the live site deployed just because a branch or `main` was pushed.
+    GitHub Pages deployment and live-page behavior must be verified from current evidence before making deployment or indexing claims.
 
 ---
 
 ## Most Recent Completed Work
 
-Completed in the latest reading-experience branch:
+Completed in the current Blog planning branch:
+
+- branch `feature/blog-planning-foundation` was created for Blog planning and structure-only scaffolding
+- `docs/planning/blog_strategy.md` was created for future Blog strategy and category planning
+- `docs/planning/blog_reader_experience.md` was created for future Blog article reader-experience planning
+- `docs/planning/blog_engagement_strategy.md` was created for future Blog contact, collaboration, attribution, and link-safety planning
+- structure-only future Blog scaffold directories were created under `blog/`
+- structure-only future Blog image asset scaffold directories were created under `assets/images/blog/`
+- planned route naming was aligned to `/blog/build-lessons/`
+- repository map was updated to 41 directories and 90 files for Blog planning / scaffold state
+- website information architecture was updated to include Blog as a planned long-term content pillar
+- documentation strategy was updated to define ownership for Blog planning docs
+- page inventory was updated to track Blog planning docs and future planned Blog public pages
+- content source map was updated with future Blog page and article source requirements
+- website state was updated with Blog planning / scaffold closeout state
+- resume prompt was updated with Blog planning branch state and future-session context
+
+Important:
+
+    The Blog planning branch did not add public Blog pages, public article routes, sitemap entries, navigation links, RSS feeds, newsletter signup, comment systems, guest-post systems, affiliate systems, CSS changes, JavaScript changes, or public HTML changes.
+    It created planning docs and `.gitkeep` scaffold directories only.
+
+Previous completed work in the reading-experience branch:
 
 - branch `feature/kb-reading-experience-standard` was committed, fast-forward merged into `main`, and pushed to `origin/main`
 - focused article updated at:
@@ -80,33 +145,71 @@ Completed in the latest reading-experience branch:
 - shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
 - closeout docs were updated to record the article format standard and next IA direction
 
-Completed in the docs-only connector / local closeout follow-up:
+Completed in the docs-only connector / local closeout follow-up before the Blog branch:
 
 - created `docs/planning/knowledge_base_article_template.md`
 - defined the reusable long-form Knowledge Base article structure
 - documented the project-context article as the reference implementation, not a file to blindly copy
 - recorded prose, diagram, FAQ, SEO/schema, internal-link, and source-doc expectations for future articles
 - added the template doc to this resume prompt's core context set
-- local Legion evidence confirmed the repository tree is now 27 directories and 73 files
+- local Legion evidence confirmed the repository tree was 27 directories and 73 files
 - repository map updated for the new template doc
 - documentation strategy updated to define template-doc ownership
 - website state updated to record the template doc and current closeout state
 - resume prompt updated to treat the template doc as core future-session context
 
-Important:
-
-    The reading-experience branch did not add new public routes, directories, assets, sitemap entries, or navigation destinations.
-    The docs-only template follow-up added one internal planning doc and did not change public website pages.
-
 ---
 
 ## Current Next Website Direction
 
-Next high-value website work:
+Immediate branch closeout:
+
+    Finish reviewing, committing, pushing, and merging `feature/blog-planning-foundation`.
+
+This branch should remain planning / scaffold only.
+
+Before committing, confirm:
+
+- only Blog planning / scaffold documentation changed
+- no public HTML files changed
+- no sitemap.xml changes exist
+- no robots.txt changes exist
+- no public navigation changes exist
+- no CSS or JavaScript changes exist
+- `git diff --check` is clean
+
+Future Blog implementation option:
+
+    feature/blog-public-foundation
+
+Recommended first public Blog implementation goal:
+
+    Create the Blog index, one category index, and one proof post.
+
+Recommended first proof post:
+
+    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
+
+Recommended second proof post:
+
+    /blog/homelab/what-is-a-homelab-actually-for.html
+
+Before creating public Blog pages or posts, load:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_source_map.md
+    docs/planning/content_style_guide.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/website_state.md
+
+Separate non-Blog high-value website work remains:
 
     AI Operations category / article index conversion
 
-Recommended next branch:
+Recommended future branch for that work:
 
     feature/kb-ai-operations-index
 
@@ -127,7 +230,9 @@ Target structure:
         how-to-keep-ai-from-losing-project-context.html
             existing focused continuity guide and article-format proof page
 
-Do not start by rewriting the whole Knowledge Base. Work one page / structure decision at a time.
+Do not start by rewriting the whole Knowledge Base or launching a full Blog operation.
+
+Work one page / structure decision at a time.
 
 Before creating or rewriting a long-form Knowledge Base article, load:
 
@@ -285,6 +390,9 @@ Load or inspect these at the start of serious website sessions as needed:
     docs/website_state.md
     docs/planning/website_information_architecture.md
     docs/infrastructure/tensa_repository_map.txt
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
     docs/planning/content_source_map.md
     docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
@@ -315,6 +423,15 @@ Purpose of each:
 
     tensa_repository_map.txt
         repository structure and file-role map
+
+    blog_strategy.md
+        future Blog strategy, categories, reader groups, first-post candidates, and public implementation boundaries
+
+    blog_reader_experience.md
+        future Blog article layout, reader features, quick-answer boxes, metadata, CTAs, RSS/newsletter planning, and launch boundaries
+
+    blog_engagement_strategy.md
+        future Blog contact CTA, reader-question workflow, guest posts, collaboration, attribution, outbound-link, and affiliate/sponsored-link boundaries
 
     content_source_map.md
         source-doc requirements before writing factual pages
@@ -376,6 +493,32 @@ Current public HTML page count:
 
     19
 
+Current Blog planning / scaffold directories:
+
+    blog/
+    blog/ai-coding/
+    blog/homelab/
+    blog/tools-and-models/
+    blog/local-ai/
+    blog/build-lessons/
+    blog/buying-guides/
+
+Current Blog image planning / scaffold directories:
+
+    assets/images/blog/
+    assets/images/blog/ai-coding/
+    assets/images/blog/homelab/
+    assets/images/blog/tools-and-models/
+    assets/images/blog/local-ai/
+    assets/images/blog/build-lessons/
+    assets/images/blog/buying-guides/
+
+Important Blog boundary:
+
+    Blog directories are structure-only placeholders.
+    They contain `.gitkeep` files only.
+    They do not create public Blog pages, sitemap entries, navigation links, RSS feeds, newsletter signup, or article content.
+
 ---
 
 ## Current Navigation State
@@ -415,6 +558,7 @@ Important navigation rules:
 - The foundation path links article-to-article and loops back to AI Operations from NeuroCore Architecture.
 - AI Operations links to the focused project-context guide.
 - Inline glossary terms in Knowledge Base articles point to `/glossary/` entries.
+- Blog does not appear in current public navigation.
 
 ---
 
@@ -480,6 +624,55 @@ Category pages and focused article pages should have different jobs:
 
 ---
 
+## Current Blog Planning State
+
+Current status:
+
+    Planned / scaffold only
+
+Current internal planning docs:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+
+Current planned categories:
+
+    AI Coding
+    Homelab
+    Tools and Models
+    Local AI
+    Build Lessons
+    Buying Guides
+
+Current Blog boundary:
+
+    No public Blog HTML pages exist yet.
+    No public Blog articles exist yet.
+    No Blog routes are in sitemap.xml.
+    No Blog links are in public navigation.
+    No Blog RSS feed exists yet.
+    No newsletter signup exists yet.
+    No comment system exists yet.
+    No guest-post submission system exists yet.
+    No affiliate/sponsored-link system exists yet.
+
+Future Blog implementation should be handled on a separate branch after loading the Blog planning docs, content source map, content style guide, page inventory, internal linking strategy, and website state.
+
+Recommended future branch:
+
+    feature/blog-public-foundation
+
+Recommended first proof post:
+
+    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
+
+Recommended second proof post:
+
+    /blog/homelab/what-is-a-homelab-actually-for.html
+
+---
+
 ## Current Search / SEO State
 
 Root search files:
@@ -496,6 +689,8 @@ Current robots URL after deployment:
     https://tensaengineering.dev/robots.txt
 
 Current sitemap contains 19 canonical HTTPS non-www URLs.
+
+No Blog URLs are currently included in sitemap.xml.
 
 Known Search Console note:
 
@@ -514,6 +709,8 @@ Post-deploy checks after the reading-experience merge and docs-only template clo
 - confirm the live sitemap still contains 19 URLs
 - inspect the focused article in Google Search Console if appropriate
 - do not claim indexing until webmaster-tool evidence confirms it
+
+Do not add Blog URLs to sitemap.xml until real public Blog HTML pages exist and are ready to be indexed.
 
 ---
 
@@ -570,6 +767,14 @@ AI Operations:
 - closeout protocols
 - resume prompts
 - human review and local verification
+
+Blog:
+
+- planned future public content section
+- structure-only scaffold exists
+- internal planning docs exist
+- no public Blog pages or articles exist yet
+- future practical posts should be source-aware, reader-focused, and connected to deeper Knowledge Base or Project pages where useful
 
 Glossary:
 
@@ -651,12 +856,25 @@ Completed so far:
 - inline glossary tooltip JavaScript added
 - Knowledge Base articles received selected inline glossary tooltip links
 - closeout / planning docs created and maintained
-- repository map updated to 27 directories and 73 files
+- repository map updated to 27 directories and 73 files after the Knowledge Base article template closeout
 - documentation strategy updated to include Knowledge Base article template ownership
 - website state updated to include the Knowledge Base article template doc and current docs-only closeout state
 - resume prompt updated to include local 27 directories / 73 files evidence
 - sitemap.xml contains 19 canonical URLs
-- local internal-link validation passed for 579 internal links across 19 public HTML files during the latest closeout
+- local internal-link validation passed for 579 internal links across 19 public HTML files during the latest reading-experience closeout
+- `docs/planning/blog_strategy.md` created for future Blog strategy and category planning
+- `docs/planning/blog_reader_experience.md` created for future Blog article reader-experience planning
+- `docs/planning/blog_engagement_strategy.md` created for future Blog contact, collaboration, attribution, and link-safety planning
+- structure-only future Blog scaffold directories created under `blog/`
+- structure-only future Blog image asset scaffold directories created under `assets/images/blog/`
+- Blog planned route naming aligned to `/blog/build-lessons/`
+- repository map updated to 41 directories and 90 files for Blog planning / scaffold state
+- website information architecture updated to include Blog as a planned long-term content pillar
+- documentation strategy updated to define ownership for Blog planning docs
+- page inventory updated to track Blog planning docs and future planned Blog public pages
+- content source map updated with future Blog page and article source requirements
+- website state updated with Blog planning / scaffold closeout state
+- resume prompt updated with Blog planning branch state and future-session context
 
 ---
 
@@ -664,6 +882,7 @@ Completed so far:
 
 Not yet completed:
 
+- review, commit, push, and merge of the Blog planning closeout branch
 - GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
@@ -672,6 +891,14 @@ Not yet completed:
 - AI Operations category / article index conversion
 - migration of the current long-form AI Operations landing-page content into a dedicated article page
 - optional stock / editorial image system for future Knowledge Base article polish
+- public Blog index page
+- public Blog category index pages
+- first public Blog proof article
+- Blog RSS feed
+- Blog newsletter signup
+- Blog comment system
+- Blog guest-post / collaboration submission workflow
+- Blog affiliate / sponsored-link disclosure workflow
 - Resources page
 - Build Notes section
 - old-site migration plan
@@ -696,6 +923,16 @@ Before creating or rewriting long-form Knowledge Base articles, check:
 
     docs/planning/knowledge_base_article_template.md
 
+Before creating or rewriting public Blog pages or posts, check:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_source_map.md
+    docs/planning/content_style_guide.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+
 Before adding or changing major links, check:
 
     docs/planning/internal_linking_strategy.md
@@ -704,7 +941,7 @@ Before assuming file paths or repo structure, check:
 
     docs/infrastructure/tensa_repository_map.txt
 
-Do not write full factual Argus ACLI, Argus Lab, NeuroCore, Story, or Knowledge Base pages without the required source docs.
+Do not write full factual Argus ACLI, Argus Lab, NeuroCore, Story, Knowledge Base, or Blog pages without the required source docs.
 
 ---
 
@@ -763,37 +1000,52 @@ Closeout docs usually include only the files impacted by the session. Do not upd
 
 ## Current Next Best Step
 
-Immediate external verification after docs-only template closeout:
+Immediate branch closeout:
 
-1. Confirm GitHub Pages has deployed the latest `main` changes.
-2. Confirm the focused project-context article loads at its canonical URL.
-3. Confirm the AI Operations page still links to the focused article.
-4. Confirm the live sitemap still contains 19 canonical URLs.
+1. Review the Blog planning closeout diffs.
+2. Confirm only Blog planning / scaffold documentation changed.
+3. Confirm no public HTML, sitemap, robots, navigation, CSS, or JavaScript files changed.
+4. Commit and push `feature/blog-planning-foundation`.
+5. Merge only after review.
 
-Next build session:
+Next Blog build option:
 
-1. Start a fresh thread from this resume prompt.
+1. Start a future `feature/blog-public-foundation` branch.
+2. Load the three Blog planning docs plus source map, style guide, page inventory, internal linking strategy, and website state.
+3. Create only the Blog index, one category index, and one proof post first.
+4. Do not add Blog routes to sitemap.xml or public navigation until real public Blog HTML pages exist and are ready to be indexed.
+5. Keep RSS, newsletter signup, comments, guest posts, and affiliate/sponsored-link behavior deferred until the public Blog foundation is stable.
+
+Separate non-Blog option:
+
+1. Start a fresh branch for the AI Operations category / article index conversion.
 2. Run the build-start checks.
 3. Load core context docs through connector reads first.
 4. Ask Richard for local git status, tree, validation, stash, and browser observations as needed.
-5. Start a fresh branch for the AI Operations category / article index conversion.
-6. Load `docs/planning/knowledge_base_article_template.md` before creating or rewriting long-form Knowledge Base articles.
-7. Do not touch the protected local stash unless Richard explicitly approves that exact action.
+5. Load `docs/planning/knowledge_base_article_template.md` before creating or rewriting long-form Knowledge Base articles.
+6. Do not touch the protected local stash unless Richard explicitly approves that exact action.
 
 ---
 
 ## Next Public Build Options
 
-Highest-priority next public build:
+Near-term Blog option:
 
-    AI Operations category / article index conversion
+- Blog public foundation branch with `/blog/`, one category index, and one proof post
+- first proof post candidate: `/blog/ai-coding/why-ai-code-breaks-after-it-works-once.html`
+- second proof post candidate: `/blog/homelab/what-is-a-homelab-actually-for.html`
+
+Separate Knowledge Base option:
+
+- AI Operations category / article index conversion
+- migration of the current long-form AI Operations landing-page content into a dedicated article page
+- additional focused Knowledge Base articles after source requirements and link destinations are defined
 
 Later options:
 
 - Resources page
 - Build Notes section
-- additional focused Knowledge Base articles after source requirements and link destinations are defined
-- optional stock / editorial image system for future Knowledge Base article polish
+- optional stock / editorial image system for future Knowledge Base or Blog article polish
 - permanent internal-link checker script when manual validation becomes annoying
 
 Keep sitemap.xml URL-only unless a reliable `lastmod` workflow is added.
@@ -807,6 +1059,8 @@ TENSA Engineering should become the public home, knowledge hub, and ecosystem po
 Private implementation repositories and internal source docs preserve the engineering source of truth during active development.
 
 Public technical artifacts should be added later when they are useful, intentional, and ready.
+
+The Blog should eventually answer timely practical questions and route readers toward deeper source-grounded Knowledge Base or Project pages when useful.
 
 The social content tells the story and teaches the lessons.
 

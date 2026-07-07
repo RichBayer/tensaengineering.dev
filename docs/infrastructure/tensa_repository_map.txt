@@ -39,103 +39,134 @@ DNS / domain provider:
     ├── README.md
     ├── about.html
     ├── assets
-    │   ├── images
-    │   │   ├── branding
-    │   │   │   ├── argus-acli
-    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
-    │   │   │   ├── argus-lab
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
-    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │   │   │   │   └── argus-lab-neurocore-stacked.png
-    │   │   │   ├── neurocore
-    │   │   │   │   ├── neurocore-horizontal-transparent.png
-    │   │   │   │   ├── neurocore-horizontal.png
-    │   │   │   │   ├── neurocore-stacked-transparent.png
-    │   │   │   │   └── neurocore-stacked.png
-    │   │   │   └── tensa
-    │   │   │       ├── android-chrome-192x192.png
-    │   │   │       ├── android-chrome-512x512.png
-    │   │   │       ├── apple-touch-icon.png
-    │   │   │       ├── favicon-32x32.png
-    │   │   │       ├── tensa-horizontal-header-transparent.png
-    │   │   │       ├── tensa-horizontal-logo-transparent.png
-    │   │   │       ├── tensa-horizontal-logo.png
-    │   │   │       ├── tensa-icon-512.png
-    │   │   │       ├── tensa-stacked-logo-transparent.png
-    │   │   │       └── tensa-stacked-logo.png
-    │   │   └── social
-    │   │       └── tensa-og-image.png
-    │   └── js
-    │       └── glossary-tooltips.js
+    │   ├── images
+    │   │   ├── blog
+    │   │   │   ├── .gitkeep
+    │   │   │   ├── ai-coding
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── build-lessons
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── buying-guides
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── homelab
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── local-ai
+    │   │   │   │   └── .gitkeep
+    │   │   │   └── tools-and-models
+    │   │   │       └── .gitkeep
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── android-chrome-192x192.png
+    │   │   │       ├── android-chrome-512x512.png
+    │   │   │       ├── apple-touch-icon.png
+    │   │   │       ├── favicon-32x32.png
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-icon-512.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
+    ├── blog
+    │   ├── .gitkeep
+    │   ├── ai-coding
+    │   │   └── .gitkeep
+    │   ├── build-lessons
+    │   │   └── .gitkeep
+    │   ├── buying-guides
+    │   │   └── .gitkeep
+    │   ├── homelab
+    │   │   └── .gitkeep
+    │   ├── local-ai
+    │   │   └── .gitkeep
+    │   └── tools-and-models
+    │       └── .gitkeep
     ├── contact.html
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── glossary_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── knowledge_base_article_template.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_answer_optimization_template.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── blog_engagement_strategy.md
+    │   │   ├── blog_reader_experience.md
+    │   │   ├── blog_strategy.md
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── knowledge_base_article_template.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
     ├── favicon.ico
     ├── glossary
-    │   └── index.html
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   ├── how-to-keep-ai-from-losing-project-context.html
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   ├── how-to-keep-ai-from-losing-project-context.html
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
 
-    27 directories, 73 files
+    41 directories, 90 files
 
 ---
 
@@ -390,6 +421,35 @@ Current usage:
 
 ---
 
+## assets/images/blog/
+
+Purpose:
+
+    Planned image asset hierarchy for future TENSA Engineering Blog articles and blog category pages.
+
+Current structure:
+
+    assets/images/blog/
+    assets/images/blog/ai-coding/
+    assets/images/blog/homelab/
+    assets/images/blog/tools-and-models/
+    assets/images/blog/local-ai/
+    assets/images/blog/build-lessons/
+    assets/images/blog/buying-guides/
+
+Current status:
+
+    Structure-only scaffold.
+
+Rules:
+
+- Keep future blog visuals organized by category.
+- Prefer useful diagrams, screenshots, article-specific social preview cards, and real supporting visuals.
+- Avoid generic stock imagery or hype-heavy AI visuals.
+- Do not imply that public blog pages or article images exist until they are created.
+
+---
+
 ## assets/images/branding/
 
 Purpose:
@@ -522,6 +582,40 @@ Notes:
 
 - The `neurocore` variants communicate that Argus Lab belongs to the NeuroCore ecosystem.
 - The `interactive-analysis` variants communicate the training and analysis direction.
+
+---
+
+## blog/
+
+Purpose:
+
+    Planned future public blog section scaffold.
+
+Current structure:
+
+    blog/
+    blog/ai-coding/
+    blog/homelab/
+    blog/tools-and-models/
+    blog/local-ai/
+    blog/build-lessons/
+    blog/buying-guides/
+
+Current status:
+
+    Structure-only scaffold.
+
+Important:
+
+- These directories currently contain `.gitkeep` files only.
+- No public blog `index.html` files exist yet.
+- No public blog article pages exist yet.
+- No blog routes have been added to `sitemap.xml`.
+- No blog links have been added to public navigation.
+
+Future role:
+
+    The Blog should become the faster, more flexible public content layer for timely questions, practical builder lessons, AI coding frustrations, homelab planning, local AI, tools/models, and future buying-guide content.
 
 ---
 
@@ -766,6 +860,52 @@ It does not replace:
 - `docs/planning/page_inventory.md`
 - `docs/planning/internal_linking_strategy.md`
 - `docs/website_state.md`
+
+---
+
+### docs/planning/blog_strategy.md
+
+Purpose:
+
+    Defines the planning strategy for the future TENSA Engineering Blog.
+
+Current role:
+
+- defines the blog as a faster, flexible public content layer
+- defines initial blog categories and reader groups
+- distinguishes Blog, Knowledge Base, Build Notes, and Project Pages
+- captures first candidate post ideas and first public build recommendations
+- records that current blog routes are planned only, not public pages
+
+---
+
+### docs/planning/blog_reader_experience.md
+
+Purpose:
+
+    Defines the planned reader experience for future TENSA Engineering Blog articles and blog index pages.
+
+Current role:
+
+- defines required future article components
+- captures quick-answer, related-reading, CTA, RSS, newsletter, metadata, and visual guidance
+- defines which reader features belong at launch and which should wait
+- records that no public blog pages, RSS feed, newsletter, or article templates exist yet
+
+---
+
+### docs/planning/blog_engagement_strategy.md
+
+Purpose:
+
+    Defines reader contact, collaboration, guest-post, attribution, outbound-link, and SEO/link-safety strategy for future blog activity.
+
+Current role:
+
+- defines future blog contact CTA direction
+- keeps reader questions separate from public comments or support promises
+- defines guest-post and cross-site collaboration guardrails
+- records outbound-link, sponsored-link, affiliate, and attribution rules for future blog work
 
 ---
 
@@ -1391,6 +1531,9 @@ Current internal docs:
     docs/ai-operations/documentation_closeout_protocol.md
     docs/ai-operations/tensa_website_resume_prompt.md
     docs/infrastructure/tensa_repository_map.txt
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_strategy.md
     docs/planning/content_source_map.md
     docs/planning/content_style_guide.md
     docs/planning/documentation_strategy.md
@@ -1598,100 +1741,131 @@ Last known output:
     ├── README.md
     ├── about.html
     ├── assets
-    │   ├── images
-    │   │   ├── branding
-    │   │   │   ├── argus-acli
-    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
-    │   │   │   │   ├── argus-acli-neurocore-stacked.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
-    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
-    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
-    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
-    │   │   │   ├── argus-lab
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
-    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
-    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
-    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
-    │   │   │   │   └── argus-lab-neurocore-stacked.png
-    │   │   │   ├── neurocore
-    │   │   │   │   ├── neurocore-horizontal-transparent.png
-    │   │   │   │   ├── neurocore-horizontal.png
-    │   │   │   │   ├── neurocore-stacked-transparent.png
-    │   │   │   │   └── neurocore-stacked.png
-    │   │   │   └── tensa
-    │   │   │       ├── android-chrome-192x192.png
-    │   │   │       ├── android-chrome-512x512.png
-    │   │   │       ├── apple-touch-icon.png
-    │   │   │       ├── favicon-32x32.png
-    │   │   │       ├── tensa-horizontal-header-transparent.png
-    │   │   │       ├── tensa-horizontal-logo-transparent.png
-    │   │   │       ├── tensa-horizontal-logo.png
-    │   │   │       ├── tensa-icon-512.png
-    │   │   │       ├── tensa-stacked-logo-transparent.png
-    │   │   │       └── tensa-stacked-logo.png
-    │   │   └── social
-    │   │       └── tensa-og-image.png
-    │   └── js
-    │       └── glossary-tooltips.js
+    │   ├── images
+    │   │   ├── blog
+    │   │   │   ├── .gitkeep
+    │   │   │   ├── ai-coding
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── build-lessons
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── buying-guides
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── homelab
+    │   │   │   │   └── .gitkeep
+    │   │   │   ├── local-ai
+    │   │   │   │   └── .gitkeep
+    │   │   │   └── tools-and-models
+    │   │   │       └── .gitkeep
+    │   │   ├── branding
+    │   │   │   ├── argus-acli
+    │   │   │   │   ├── argus-acli-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-horizontal.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked-transparent.png
+    │   │   │   │   ├── argus-acli-neurocore-stacked.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal-transparent.png
+    │   │   │   │   ├── argus-acli-system-intelligence-horizontal.png
+    │   │   │   │   ├── argus-acli-system-intelligence-stacked-transparent.png
+    │   │   │   │   └── argus-acli-system-intelligence-stacked.png
+    │   │   │   ├── argus-lab
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-horizontal.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked-transparent.png
+    │   │   │   │   ├── argus-lab-interactive-analysis-stacked.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal-transparent.png
+    │   │   │   │   ├── argus-lab-neurocore-horizontal.png
+    │   │   │   │   ├── argus-lab-neurocore-stacked-transparent.png
+    │   │   │   │   └── argus-lab-neurocore-stacked.png
+    │   │   │   ├── neurocore
+    │   │   │   │   ├── neurocore-horizontal-transparent.png
+    │   │   │   │   ├── neurocore-horizontal.png
+    │   │   │   │   ├── neurocore-stacked-transparent.png
+    │   │   │   │   └── neurocore-stacked.png
+    │   │   │   └── tensa
+    │   │   │       ├── android-chrome-192x192.png
+    │   │   │       ├── android-chrome-512x512.png
+    │   │   │       ├── apple-touch-icon.png
+    │   │   │       ├── favicon-32x32.png
+    │   │   │       ├── tensa-horizontal-header-transparent.png
+    │   │   │       ├── tensa-horizontal-logo-transparent.png
+    │   │   │       ├── tensa-horizontal-logo.png
+    │   │   │       ├── tensa-icon-512.png
+    │   │   │       ├── tensa-stacked-logo-transparent.png
+    │   │   │       └── tensa-stacked-logo.png
+    │   │   └── social
+    │   │       └── tensa-og-image.png
+    │   └── js
+    │       └── glossary-tooltips.js
+    ├── blog
+    │   ├── .gitkeep
+    │   ├── ai-coding
+    │   │   └── .gitkeep
+    │   ├── build-lessons
+    │   │   └── .gitkeep
+    │   ├── buying-guides
+    │   │   └── .gitkeep
+    │   ├── homelab
+    │   │   └── .gitkeep
+    │   ├── local-ai
+    │   │   └── .gitkeep
+    │   └── tools-and-models
+    │       └── .gitkeep
     ├── contact.html
     ├── docs
-    │   ├── ai-operations
-    │   │   ├── claude
-    │   │   │   └── claude_website_polish_resume_prompt.md
-    │   │   ├── documentation_closeout_protocol.md
-    │   │   └── tensa_website_resume_prompt.md
-    │   ├── infrastructure
-    │   │   └── tensa_repository_map.txt
-    │   ├── planning
-    │   │   ├── content_source_map.md
-    │   │   ├── content_style_guide.md
-    │   │   ├── documentation_strategy.md
-    │   │   ├── glossary_strategy.md
-    │   │   ├── internal_linking_strategy.md
-    │   │   ├── knowledge_base_article_template.md
-    │   │   ├── page_inventory.md
-    │   │   ├── search_answer_optimization_template.md
-    │   │   ├── search_indexing_strategy.md
-    │   │   ├── seo_topic_map.md
-    │   │   └── website_information_architecture.md
-    │   └── website_state.md
+    │   ├── ai-operations
+    │   │   ├── claude
+    │   │   │   └── claude_website_polish_resume_prompt.md
+    │   │   ├── documentation_closeout_protocol.md
+    │   │   └── tensa_website_resume_prompt.md
+    │   ├── infrastructure
+    │   │   └── tensa_repository_map.txt
+    │   ├── planning
+    │   │   ├── blog_engagement_strategy.md
+    │   │   ├── blog_reader_experience.md
+    │   │   ├── blog_strategy.md
+    │   │   ├── content_source_map.md
+    │   │   ├── content_style_guide.md
+    │   │   ├── documentation_strategy.md
+    │   │   ├── glossary_strategy.md
+    │   │   ├── internal_linking_strategy.md
+    │   │   ├── knowledge_base_article_template.md
+    │   │   ├── page_inventory.md
+    │   │   ├── search_answer_optimization_template.md
+    │   │   ├── search_indexing_strategy.md
+    │   │   ├── seo_topic_map.md
+    │   │   └── website_information_architecture.md
+    │   └── website_state.md
     ├── favicon.ico
     ├── glossary
-    │   └── index.html
+    │   └── index.html
     ├── index.html
     ├── knowledge-base
-    │   ├── ai-operations
-    │   │   ├── how-to-keep-ai-from-losing-project-context.html
-    │   │   └── index.html
-    │   ├── controlled-ai-systems
-    │   │   └── index.html
-    │   ├── index.html
-    │   ├── linux-diagnostics
-    │   │   └── index.html
-    │   ├── local-first-ai
-    │   │   └── index.html
-    │   ├── neurocore-architecture
-    │   │   └── index.html
-    │   ├── persistent-ai-memory
-    │   │   └── index.html
-    │   ├── safe-tool-interaction
-    │   │   └── index.html
-    │   └── troubleshooting-training
-    │       └── index.html
+    │   ├── ai-operations
+    │   │   ├── how-to-keep-ai-from-losing-project-context.html
+    │   │   └── index.html
+    │   ├── controlled-ai-systems
+    │   │   └── index.html
+    │   ├── index.html
+    │   ├── linux-diagnostics
+    │   │   └── index.html
+    │   ├── local-first-ai
+    │   │   └── index.html
+    │   ├── neurocore-architecture
+    │   │   └── index.html
+    │   ├── persistent-ai-memory
+    │   │   └── index.html
+    │   ├── safe-tool-interaction
+    │   │   └── index.html
+    │   └── troubleshooting-training
+    │       └── index.html
     ├── projects
-    │   ├── argus-acli.html
-    │   ├── argus-lab.html
-    │   ├── index.html
-    │   └── neurocore.html
+    │   ├── argus-acli.html
+    │   ├── argus-lab.html
+    │   ├── index.html
+    │   └── neurocore.html
     ├── robots.txt
     ├── sitemap.xml
     ├── story
-    │   └── index.html
+    │   └── index.html
     └── styles.css
 
-    27 directories, 73 files
+    41 directories, 90 files

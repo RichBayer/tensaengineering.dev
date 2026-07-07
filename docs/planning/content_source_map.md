@@ -88,6 +88,336 @@ Current public pages:
 
 ---
 
+## Future Blog Pages and Articles
+
+Current status:
+
+    Planned only.
+    Structure-only scaffold directories exist under `blog/`.
+    Structure-only image asset directories exist under `assets/images/blog/`.
+    No public Blog HTML pages exist yet.
+    No public Blog articles exist yet.
+    No Blog URLs are in `sitemap.xml`.
+    No Blog links exist in public navigation.
+    No RSS feed or newsletter signup exists yet.
+
+Future paths may include:
+
+    blog/index.html
+    blog/ai-coding/index.html
+    blog/homelab/index.html
+    blog/tools-and-models/index.html
+    blog/local-ai/index.html
+    blog/build-lessons/index.html
+    blog/buying-guides/index.html
+
+Current role:
+
+Future Blog posts should answer timely reader questions, practical frustrations, search-driven topics, AI coding workflow problems, homelab planning questions, tool/model confusion, local AI constraints, build lessons, and carefully governed buying-guide topics.
+
+The Blog may be more timely and conversational than the Knowledge Base.
+
+It must still follow source discipline.
+
+The Blog should not become:
+
+    unsourced opinion publishing
+    generic AI news commentary
+    stale tool/model comparison content
+    unsupported product recommendations
+    a support channel
+    a comment/community system
+    an affiliate site without disclosure rules
+    a replacement for the Knowledge Base
+    a replacement for project pages
+    a replacement for source repositories
+
+---
+
+### Required Source Docs Before Creating Public Blog Pages
+
+Use these before creating or materially changing the Blog index, Blog category index pages, or Blog article templates:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/website_information_architecture.md
+    docs/website_state.md
+    docs/ai-operations/tensa_website_resume_prompt.md
+
+Also use:
+
+    docs/infrastructure/tensa_repository_map.txt
+
+if new files, directories, assets, or route structure are created.
+
+Do not add Blog routes to `sitemap.xml`, public navigation, or current-public-page lists until real public Blog HTML pages exist and are ready to be indexed.
+
+---
+
+### Blog Index Source Requirements
+
+Future path:
+
+    blog/index.html
+
+Current status:
+
+    Planned
+
+Required source material before creation:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/page_inventory.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/website_information_architecture.md
+    docs/website_state.md
+
+The Blog index should:
+
+- explain what the Blog is for
+- route readers to approved Blog categories
+- make clear that Blog posts are practical, source-aware, and builder-focused
+- avoid pretending RSS, newsletter signup, comments, guest posts, or affiliate systems exist before they do
+- link to deeper Knowledge Base or Project pages when useful
+- avoid duplicating the entire Knowledge Base index
+
+---
+
+### AI Coding Blog Source Requirements
+
+Future path:
+
+    blog/ai-coding/index.html
+
+Future category role:
+
+AI Coding posts may cover AI-assisted coding frustrations, context loss, repo workflow, tool boundaries, prompting discipline, source-of-truth habits, review loops, and practical lessons from building with AI.
+
+Required source material before category creation or major article publication:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+    docs/ai-operations/documentation_closeout_protocol.md
+    docs/ai-operations/tensa_website_resume_prompt.md
+    current relevant Knowledge Base articles
+
+Use additional source material based on topic:
+
+- official tool documentation when describing a specific AI coding tool
+- changelogs or release notes when discussing current model/tool behavior
+- local repo evidence when using TENSA build workflow examples
+- public project pages when explaining ecosystem relevance
+
+Special notes:
+
+- Do not publish tool behavior claims from memory.
+- Do not imply a workflow is implemented in TENSA repositories unless local or committed evidence proves it.
+- Keep examples practical and source-grounded.
+- Avoid generic prompting advice unless it directly supports governed AI Operations workflow.
+
+---
+
+### Homelab Blog Source Requirements
+
+Future path:
+
+    blog/homelab/index.html
+
+Future category role:
+
+Homelab posts may cover workload-first homelab planning, Linux lab setup, networking, troubleshooting practice, infrastructure decisions, and realistic training environments.
+
+Required source material before category creation or major article publication:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+    current relevant Knowledge Base articles
+    current Argus Lab project page when Argus Lab is referenced
+
+Use additional source material based on topic:
+
+- current hardware documentation when discussing specific hardware
+- vendor documentation when describing specific network/storage/server gear
+- current pricing/spec source review when posts include product or buying decisions
+- Argus Lab source docs when posts discuss Argus Lab implementation, scenarios, or training behavior
+
+Special notes:
+
+- Do not turn homelab posts into generic gear-flex content.
+- Keep the focus on workload, learning, troubleshooting, and practical infrastructure.
+- Distinguish Richard's personal lab/build context from public TENSA product claims.
+- Do not imply Argus Lab public availability unless that status is verified.
+
+---
+
+### Tools and Models Blog Source Requirements
+
+Future path:
+
+    blog/tools-and-models/index.html
+
+Future category role:
+
+Tools and Models posts may cover AI coding tools, model tradeoffs, provider changes, local/cloud workflow fit, tool confusion, and model-selection lessons.
+
+Required source material before category creation or major article publication:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+
+Use additional source material based on topic:
+
+- official provider documentation
+- official model cards or release notes where available
+- changelogs
+- pricing pages when discussing price or tier behavior
+- current public source review for time-sensitive tool claims
+- local evidence if describing observed behavior in TENSA workflows
+
+Special notes:
+
+- Tool/model claims are time-sensitive.
+- Do not publish comparisons from memory.
+- Include date context when a claim may age quickly.
+- Avoid hype rankings unless the comparison criteria are explicit and sourced.
+- Keep practical workflow fit more important than popularity.
+
+---
+
+### Local AI Blog Source Requirements
+
+Future path:
+
+    blog/local-ai/index.html
+
+Future category role:
+
+Local AI posts may cover local AI infrastructure, GPU/VRAM constraints, local-first trust boundaries, private runtime behavior, local model tradeoffs, and real-system awareness.
+
+Required source material before category creation or major article publication:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+    current Local-First AI Knowledge Base article
+    current NeuroCore project page
+
+Use additional source material based on topic:
+
+- current local hardware facts when discussing Richard's machine or lab
+- official model/runtime documentation
+- GPU/VRAM requirements from current sources
+- NeuroCore source docs if discussing NeuroCore runtime or architecture
+- local repo evidence if describing implemented local-first behavior
+
+Special notes:
+
+- Keep local-first framed as a trust-boundary and system-awareness design choice.
+- Do not imply local AI eliminates all risk.
+- Do not claim a local model can perform a task unless tested or sourced.
+- Distinguish local AI experiments, current implementation, and future architecture.
+
+---
+
+### Build Lessons Blog Source Requirements
+
+Future path:
+
+    blog/build-lessons/index.html
+
+Future category role:
+
+Build Lessons posts may turn selected TENSA, NeuroCore, Argus ACLI, Argus Lab, and AI Operations lessons into public-friendly practical posts without exposing private implementation details.
+
+Required source material before category creation or major article publication:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+    docs/website_state.md
+    current public project pages
+
+Use additional source material based on topic:
+
+- relevant build logs
+- current project-state docs
+- current architecture/planning docs
+- current public Knowledge Base articles
+- local or committed repository evidence for implementation claims
+
+Special notes:
+
+- Public Build Lessons should explain lessons, not leak private implementation details.
+- Do not copy private build logs directly into public posts.
+- Avoid making project maturity claims beyond what public project pages and source docs support.
+- Tie lessons back to useful reader takeaways.
+
+---
+
+### Buying Guides Blog Source Requirements
+
+Future path:
+
+    blog/buying-guides/index.html
+
+Future category role:
+
+Buying Guide posts may cover hardware, tools, infrastructure, and practical product choices for readers when TENSA has a clear source-review and disclosure workflow.
+
+Required source material before category creation or major article publication:
+
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
+    docs/planning/content_style_guide.md
+    docs/planning/internal_linking_strategy.md
+    docs/planning/page_inventory.md
+
+Use additional source material based on topic:
+
+- current product specs
+- current pricing
+- vendor documentation
+- reputable current reviews or testing sources
+- compatibility documentation
+- affiliate/sponsored-link disclosure rules if monetized links exist
+- reader-fit criteria and explicit recommendation boundaries
+
+Special notes:
+
+- Buying-guide claims are time-sensitive.
+- Do not publish price/spec/recommendation claims from memory.
+- Do not use affiliate or sponsored links without clear disclosure and link-safety rules.
+- Do not make recommendations where safety, compatibility, or legal restrictions require current verification.
+- Keep reader-fit guidance more important than hype.
+
+---
+
 ## Homepage
 
 Path:
@@ -1102,6 +1432,9 @@ Existing core docs:
     docs/planning/content_style_guide.md
     docs/planning/internal_linking_strategy.md
     docs/planning/seo_topic_map.md
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
     docs/ai-operations/claude/claude_website_polish_resume_prompt.md
 
 ---

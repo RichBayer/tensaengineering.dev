@@ -81,7 +81,7 @@ Definitions:
 ## Internal Planning / Continuity Docs
 
 | Path | Type | Status | Purpose | Update Trigger |
-|---|---|---|---|
+|---|---|---|---|---|
 | `docs/ai-operations/claude/claude_website_polish_resume_prompt.md` | AI operations / Claude polish prompt | Live | Defines the reusable Claude handoff workflow for polishing TENSA public website copy while preserving factual boundaries, page type, HTML structure, metadata, links, and current-vs-future status. | Update when Claude workflow, tone/cadence rules, page-type modifiers, or factual-boundary rules change. |
 | `docs/ai-operations/documentation_closeout_protocol.md` | AI operations / closeout protocol | Live | Defines the required documentation closeout workflow for serious website build sessions. | Update when closeout workflow rules change. |
 | `docs/ai-operations/tensa_website_resume_prompt.md` | AI operations / resume prompt | Live | Fresh-thread startup context for website build sessions. | Update after major site structure, page, workflow, or direction changes. |
@@ -91,6 +91,9 @@ Definitions:
 | `docs/planning/content_source_map.md` | Source-doc map | Live | Defines required source docs before writing factual pages. | Update when new page types are added or source requirements change. |
 | `docs/planning/content_style_guide.md` | Planning / content style | Live | Defines public writing voice, tone, formatting, copy standards, and style direction for website content. | Update when public writing standards or page-copy conventions change. |
 | `docs/planning/documentation_strategy.md` | Documentation strategy | Live | Defines ownership boundaries, scaling rules, update triggers, and overlap prevention for internal website documentation. | Update when internal documentation responsibilities change or new planning docs become part of the core workflow. |
+| `docs/planning/blog_strategy.md` | Planning / Blog strategy | Live | Defines the planned TENSA Blog role, reader groups, categories, article positioning, candidate posts, SEO/content boundaries, and first public build direction. | Update when Blog category strategy, first-post direction, Blog positioning, or public Blog implementation scope changes. |
+| `docs/planning/blog_reader_experience.md` | Planning / Blog reader experience | Live | Defines future Blog article and category-page reader experience, including article components, quick-answer boxes, metadata, related reading, CTAs, visual guidance, RSS/newsletter boundaries, and launch constraints. | Update when future Blog article layout, reader-facing components, RSS/newsletter expectations, or Blog template decisions change. |
+| `docs/planning/blog_engagement_strategy.md` | Planning / Blog engagement strategy | Live | Defines future Blog contact CTA behavior, reader-question workflow, guest-post/collaboration guardrails, attribution expectations, outbound-link rules, and affiliate/sponsored-link boundaries. | Update when Blog contact, collaboration, attribution, outbound-link, guest-post, or affiliate/sponsored-link rules change. |
 | `docs/planning/glossary_strategy.md` | Planning / glossary strategy | Live | Defines the public glossary purpose, term-selection rules, inline tooltip behavior, and glossary expansion guardrails. | Update when glossary page structure, term strategy, or inline glossary behavior changes. |
 | `docs/planning/search_answer_optimization_template.md` | Planning / search-answer optimization | Live | Defines the future search-and-answer optimization pass template for improving page clarity, answerability, headings, and reader-intent alignment. | Use in a later focused optimization session; update when the search-answer workflow changes. |
 | `docs/planning/page_inventory.md` | Page inventory | Live | Tracks what pages exist, what state they are in, and what needs to happen next. | Update whenever pages are created, renamed, retired, or change status. |
@@ -119,8 +122,28 @@ A future metadata pass should verify all public pages as the site continues to e
 
 | Planned Path | Page Type | Purpose | Dependency | Status |
 |---|---|---|---|---|
+| `/blog/index.html` | Public section index | Future TENSA Engineering Blog hub for timely practical posts, AI coding workflow lessons, homelab planning, tool/model explanations, local AI infrastructure notes, build lessons, buying-guide topics, category routing, and future RSS discovery. | Blog strategy, Blog reader experience, Blog engagement strategy, content style guide, content source map, internal linking strategy, and future public Blog implementation branch. | Planned |
+| `/blog/ai-coding/index.html` | Blog category index | Future category for AI-assisted coding frustrations, context loss, workflow discipline, prompt/process failures, repo guardrails, and practical builder lessons. | Blog planning docs, AI Operations sources, relevant Knowledge Base articles, and current tool documentation where factual claims are made. | Planned |
+| `/blog/homelab/index.html` | Blog category index | Future category for workload-first homelab planning, Linux lab setup, networking, training environments, troubleshooting practice, and practical infrastructure decisions. | Blog planning docs, hardware/source review where factual claims are made, and Argus Lab source docs if Argus Lab is referenced. | Planned |
+| `/blog/tools-and-models/index.html` | Blog category index | Future category for practical tool/model comparisons, tradeoffs, provider changes, workflow fit, AI coding tool confusion, and model-selection lessons. | Blog planning docs, official provider documentation, release notes, changelogs, dated public source review, and content source map rules. | Planned |
+| `/blog/local-ai/index.html` | Blog category index | Future category for local AI, GPU/VRAM constraints, local-first trust boundaries, private infrastructure, local model tradeoffs, and real-system awareness. | Blog planning docs, local AI/runtime/hardware source review, NeuroCore source docs if referenced, and current hardware facts where used. | Planned |
+| `/blog/build-lessons/index.html` | Blog category index | Future category for lighter public lessons from building TENSA, NeuroCore, Argus ACLI, Argus Lab, AI Operations workflows, and project documentation systems. | Blog planning docs, current project-state docs, build logs where appropriate, and public project pages. | Planned |
+| `/blog/buying-guides/index.html` | Blog category index | Future category for carefully governed buying guides, hardware/tool recommendations, affiliate-aware product selection, and practical reader-fit guidance. | Blog planning docs, current product specs/pricing/source review, affiliate/sponsored-link disclosure rules, and source discipline. | Planned |
 | `/resources/index.html` | Public section index | Collect future public technical artifacts, selected documentation, examples, release materials, downloads, videos, and public resource links when enough useful material exists. | Website IA and current public resource inventory. | Planned |
 | `/build-notes/index.html` | Public section index | Public-friendly build milestone summaries that explain project evolution without exposing private implementation details. | Build logs and source repos. | Planned |
+
+Current Blog status:
+
+    Planned only.
+    Structure-only scaffold directories exist under `blog/`.
+    Structure-only image asset directories exist under `assets/images/blog/`.
+    No public Blog HTML pages exist yet.
+    No public Blog articles exist yet.
+    No Blog URLs are in `sitemap.xml`.
+    No Blog links exist in public navigation.
+    No RSS feed or newsletter signup exists yet.
+
+Do not add Blog routes to sitemap.xml, public navigation, or known-navigation state until real public Blog HTML pages exist and are ready to be indexed.
 
 ---
 
@@ -261,9 +284,11 @@ Reason:
 
 The homepage, About page, Contact page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, the eight foundation Knowledge Base articles, and the first focused AI Operations long-form article now all have public site structure. The project-context article has also established the preferred prose-first article reading format.
 
-The next highest-value Knowledge Base structure fix is to make `/knowledge-base/ai-operations/` a true category / article index page, then move the current long-form AI Operations landing-page content into a dedicated article such as `/knowledge-base/ai-operations/what-is-ai-operations.html` or another approved slug.
+The Blog is now represented as a planned future public section with structure-only scaffold directories and internal planning docs, but it has not been launched publicly. Blog public pages should be created only on a future public Blog implementation branch after the Blog strategy, reader-experience, engagement, content-source, style, and internal-linking docs are loaded.
 
-Likely next direction:
+The next highest-value Knowledge Base structure fix remains to make `/knowledge-base/ai-operations/` a true category / article index page, then move the current long-form AI Operations landing-page content into a dedicated article such as `/knowledge-base/ai-operations/what-is-ai-operations.html` or another approved slug.
+
+Likely next non-Blog direction:
 
 - start a fresh branch for the AI Operations category / article index conversion
 - keep `/knowledge-base/ai-operations/` as the category route
@@ -271,6 +296,13 @@ Likely next direction:
 - keep `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` as a focused article under the category
 - apply the new prose-first article standard to future long-form Knowledge Base articles deliberately
 - defer Resources and Build Notes until the Knowledge Base structure is cleaner or public artifacts/build-history become the priority
+
+Likely next Blog direction, if Richard chooses to continue Blog work next:
+
+- start a fresh public Blog implementation branch
+- create only the Blog index, one category index, and one proof article first
+- do not add Blog routes to sitemap.xml or public navigation until real public Blog HTML pages exist and are ready to be indexed
+- keep RSS, newsletter signup, comments, guest posts, and affiliate/sponsored-link behavior deferred until the public Blog foundation is stable
 
 ---
 

@@ -276,7 +276,7 @@ They need a clear explanation of the long-term training vision.
 
 ## Content Pillars
 
-The TENSA website should be organized around four major content pillars.
+The TENSA website should be organized around five major content pillars.
 
 ---
 
@@ -363,6 +363,34 @@ Public story pages should be polished derivatives, not replacements for the orig
 
 ---
 
+## Pillar 5: Blog
+
+This pillar should become the faster, more flexible public content layer.
+
+The Blog should cover timely questions, practical builder lessons, AI coding frustrations, homelab planning, tool/model confusion, local AI constraints, and future buying-guide content.
+
+It should connect reader questions and search-driven topics back to deeper TENSA concepts without replacing the Knowledge Base.
+
+Potential categories:
+
+    AI Coding Frustrations
+    Purposeful Homelab
+    Tools and Models
+    Local AI and Infrastructure
+    Build Lessons
+    Buying Guides
+
+The Blog should not become:
+
+- a generic AI news site
+- a content farm
+- a random personal journal
+- an affiliate catalog
+- a replacement for Build Notes
+- the source of truth for project maturity or install/download status
+
+---
+
 ## Top-Level Navigation
 
 Recommended long-term navigation:
@@ -370,6 +398,7 @@ Recommended long-term navigation:
     Home
     Projects
     Knowledge Base
+    Blog
     Glossary
     Build Notes
     Story
@@ -444,6 +473,35 @@ Potential structure:
 Early implementation can keep this simple.
 
 The first version does not need every category or page.
+
+---
+
+### Blog
+
+Purpose:
+
+- answer timely reader questions
+- explain practical builder frustrations
+- support AI-assisted coding, homelab, local AI, tools/models, and build-lesson topics
+- route readers toward Knowledge Base articles, project pages, and contact when useful
+- provide a future home for blog CTAs, RSS, collaboration, and carefully governed buying-guide content
+
+Potential structure:
+
+    /blog/index.html
+    /blog/ai-coding/
+    /blog/homelab/
+    /blog/tools-and-models/
+    /blog/local-ai/
+    /blog/build-lessons/
+    /blog/buying-guides/
+
+Current status:
+
+    Planned only.
+    Scaffold directories exist, but no public blog pages or article routes exist yet.
+
+The Blog should read faster than Knowledge Base articles while preserving TENSA's grounded technical voice.
 
 ---
 

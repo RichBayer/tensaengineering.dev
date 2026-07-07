@@ -133,6 +133,8 @@ The internal documentation system should be organized around these responsibilit
 - search indexing
 - public content style
 - Knowledge Base article template ownership
+- Blog strategy and reader-experience planning
+- Blog engagement, attribution, and link-safety planning
 - Claude polish workflow
 - SEO planning
 - old-site migration
@@ -176,6 +178,9 @@ The current core documentation set is:
     docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
     docs/planning/knowledge_base_article_template.md
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
@@ -751,6 +756,115 @@ Relationship to other docs:
 
 ---
 
+### docs/planning/blog_strategy.md
+
+Primary role:
+
+    Future Blog strategy and category planning.
+
+This document defines the planned TENSA Engineering Blog role, reader groups, categories, article positioning, SEO/content boundaries, and first public build direction.
+
+It should include:
+
+- blog purpose
+- relationship between Blog, Knowledge Base, Build Notes, and Project Pages
+- target reader groups
+- initial blog categories
+- candidate post ideas
+- first public blog implementation recommendations
+- current planning boundary
+
+It should not become:
+
+- a public article draft
+- a page inventory
+- a content source map
+- an engagement/collaboration policy
+- a visual/article layout template
+- a live website state record
+
+Update when:
+
+- the blog category model changes
+- first-post strategy changes
+- public blog implementation scope changes
+- blog positioning relative to Knowledge Base, Build Notes, or Projects changes
+
+---
+
+### docs/planning/blog_reader_experience.md
+
+Primary role:
+
+    Future Blog article reader-experience planning.
+
+This document defines how future Blog articles and Blog index/category pages should feel and function for readers.
+
+It should include:
+
+- standard Blog article components
+- quick-answer box guidance
+- metadata expectations
+- related-reading patterns
+- contact CTA placement
+- optional table-of-contents guidance
+- visual/image guidance
+- RSS and newsletter planning boundaries
+- features to avoid at launch
+
+It should not become:
+
+- the Blog strategy document
+- a public page
+- a specific article draft
+- the general site style guide
+- a search indexing operations document
+
+Update when:
+
+- the planned Blog article layout changes
+- reader-facing Blog components change
+- RSS/newsletter expectations change
+- future Blog template decisions are made
+
+---
+
+### docs/planning/blog_engagement_strategy.md
+
+Primary role:
+
+    Future Blog reader contact, collaboration, and link-safety planning.
+
+This document defines how future Blog posts should invite useful contact and handle collaboration without creating comment spam, support promises, or unsafe backlink behavior.
+
+It should include:
+
+- Blog contact CTA direction
+- reader-question workflow
+- comment-system boundary
+- guest-post standards
+- cross-site collaboration rules
+- attribution expectations
+- outbound-link rules
+- affiliate/sponsored-link boundaries
+
+It should not become:
+
+- a public collaboration page
+- a comment policy for a system that does not exist
+- an affiliate program plan
+- a replacement for content source requirements
+- a public support policy
+
+Update when:
+
+- Blog contact CTA strategy changes
+- guest-post or collaboration rules change
+- affiliate/sponsored-link policy changes
+- a public collaboration or submission page is created
+
+---
+
 ### docs/planning/search_answer_optimization_template.md
 
 Primary role:
@@ -1148,6 +1262,9 @@ Use these boundaries:
 - SEO topic planning belongs in `seo_topic_map.md`.
 - Public content style belongs in `content_style_guide.md`.
 - Knowledge Base article structure and creation workflow belong in `knowledge_base_article_template.md`.
+- Blog category strategy and first-post direction belong in `blog_strategy.md`.
+- Blog article reader experience, quick-answer boxes, article metadata, CTAs, RSS/newsletter planning, and future article layout belong in `blog_reader_experience.md`.
+- Blog contact CTAs, reader-question handling, guest-post rules, collaboration, attribution, outbound-link, and affiliate/sponsored-link boundaries belong in `blog_engagement_strategy.md`.
 - Claude prose-polish workflow belongs in `claude_website_polish_resume_prompt.md`.
 - Session restart context belongs in `tensa_website_resume_prompt.md`.
 - Closeout workflow belongs in `documentation_closeout_protocol.md`.
@@ -1242,6 +1359,9 @@ Current active documentation system now includes:
     docs/planning/glossary_strategy.md
     docs/planning/content_style_guide.md
     docs/planning/knowledge_base_article_template.md
+    docs/planning/blog_strategy.md
+    docs/planning/blog_reader_experience.md
+    docs/planning/blog_engagement_strategy.md
     docs/planning/search_answer_optimization_template.md
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
@@ -1262,31 +1382,37 @@ Do not create these until there is enough real need.
 
 When this file changes, update related docs only if the documentation responsibility model, workflow rules, or current core documentation set changed.
 
-For this closeout, impacted docs include:
+For this Blog planning closeout, impacted docs include:
 
     docs/infrastructure/tensa_repository_map.txt
+    docs/planning/website_information_architecture.md
+    docs/planning/page_inventory.md
+    docs/planning/content_source_map.md
     docs/website_state.md
     docs/ai-operations/tensa_website_resume_prompt.md
 
-Potentially update:
+Do not update:
 
-    docs/planning/page_inventory.md
+    public HTML files
+    sitemap.xml
+    robots.txt
+    public navigation
+    CSS
+    JavaScript
 
-only if the new internal planning doc should be tracked there as an important internal continuity doc.
+unless real public Blog pages or public Blog links are created.
 
-Potentially update:
+The current Blog planning closeout created internal planning docs and structure-only scaffold directories.
 
-    docs/planning/internal_linking_strategy.md
+It does not create:
 
-only if this document changes public link strategy.
-
-Potentially update:
-
-    docs/planning/content_source_map.md
-
-only if this document changes source requirements.
-
-The current template-doc closeout does not create a new public page, public route, sitemap entry, navigation target, or live search-indexing claim.
+- a public Blog page
+- a public Blog article route
+- a sitemap entry
+- a navigation target
+- an RSS feed
+- a newsletter signup
+- a live search-indexing claim
 
 ---
 
