@@ -307,6 +307,20 @@ Use that file when starting a fresh AI thread for TENSA website planning or deve
 
 ---
 
+## Ecosystem Context Registry Pointer
+
+For ecosystem-level repository ownership, repository relationships, routing, or source selection for public claims, consult:
+
+    RichBayer/build-ops-doctrine::docs/ecosystem/README.md
+    RichBayer/build-ops-doctrine::docs/ecosystem/repository_registry.yaml
+    RichBayer/build-ops-doctrine::docs/ecosystem/document-index/tensaengineering_dev.yaml
+
+Do not front-load these files for purely website-local implementation or presentation work.
+
+The TENSA Engineering website repository remains authoritative for its public website implementation, information architecture, website state, and public content workflow. Build Ops Doctrine provides ecosystem routing only and does not grant Agent Operations or any external repository write authority over this repository.
+
+---
+
 ## Current Phase
 
 Current phase:
