@@ -123,6 +123,12 @@ Protected local stash still exists at the latest local check:
 
 Do not apply, pop, drop, rewrite, or otherwise touch that stash without Richard's explicit approval for the exact stash action.
 
+Current connector editing boundary:
+
+- connector full-file replacement is not used for files over 1,000 lines
+- large-file connector access is read/verification only
+- surgical edits to those files are performed locally with fail-loud verification
+
 ---
 
 ## URL

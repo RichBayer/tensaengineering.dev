@@ -298,6 +298,12 @@ Connector reads do not replace local command output for:
 
 Connector writes are disabled by policy unless Richard explicitly authorizes the specific write action in the current session.
 
+Large-file connector boundary:
+
+- do not use connector full-file replacement for files over 1,000 lines
+- use connector read/verification plus a fail-loud local surgical editor for those files
+- do not reconstruct large files from connector chunks merely to bypass the limit
+
 If Richard explicitly authorizes a connector write:
 
 - keep it scoped to the named file(s)

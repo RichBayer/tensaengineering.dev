@@ -81,7 +81,7 @@ Use the website structure intentionally:
 - Story pages explain origin and philosophy.
 - Build Notes summarize development milestones.
 - Resources collect links and future user actions.
-- GitHub proves the work.
+- Approved public artifacts provide proof where appropriate; private implementation repositories remain engineering source of truth rather than default public links.
 
 ---
 
@@ -282,7 +282,7 @@ TENSA Engineering should be framed around:
 - safe tool interaction
 - public education
 - ecosystem organization
-- GitHub-backed engineering proof
+- source-grounded engineering proof and approved public artifacts
 
 Avoid making TENSA sound like a generic consulting company unless that becomes an explicit direction later.
 
@@ -473,7 +473,7 @@ The homepage should:
 - route visitors to deeper pages
 - stay concise
 - show that the work is real
-- link to Projects, Knowledge Base, Story, and GitHub proof
+- link to Projects, Knowledge Base, Story, and approved public proof or artifacts when they exist
 
 The homepage should not:
 
@@ -562,7 +562,7 @@ Build Notes should:
 
 - summarize meaningful development milestones
 - explain why the change mattered
-- link to GitHub proof where appropriate
+- link to approved public technical artifacts where appropriate
 - be readable by public technical readers
 
 Build Notes should not:
@@ -578,7 +578,7 @@ Build Notes should not:
 Resources pages should:
 
 - collect useful links
-- route readers to GitHub, videos, future downloads, docs, and demos
+- route readers to approved public repositories or technical artifacts, videos, future downloads, docs, and demos
 - stay practical
 
 They should not:
@@ -642,7 +642,7 @@ Preferred link text:
 - Explore NeuroCore
 - Read about Argus ACLI
 - Learn how the ecosystem fits together
-- View the GitHub repository
+- View the public technical artifact
 - Explore the Knowledge Base
 
 ---
@@ -923,5 +923,6 @@ Avoid hype.
 Keep the distinction clear:
 
     The website explains.
-    The repositories prove.
+    The repositories preserve the engineering source of truth.
+    Public pages link only to approved public artifacts.
     The documentation keeps both honest.

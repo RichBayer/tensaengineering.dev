@@ -167,6 +167,29 @@ Not allowed by default, even if the connector exposes write-capable tools:
 
 Write-capable connector tools may only be used if Richard explicitly authorizes the specific write action in the current session.
 
+### Large-File Connector Write Rule
+
+Current connector file-write actions replace the complete file rather than applying a surgical text patch.
+
+Do not use connector full-file replacement for files over 1,000 lines.
+
+For files over 1,000 lines:
+
+- use the connector for committed read and verification only
+- perform required surgical edits locally
+- prefer a fail-loud Python editor or another local method that preserves the full current file
+- verify exact markers before writing
+- run targeted verification immediately after the edit
+
+Do not reconstruct a large file from connector chunks merely to work around this limit.
+
+For files at or under 1,000 lines, connector full-file replacement may be used only when:
+
+- the full current file has been loaded and reviewed
+- the specific connector write was explicitly authorized
+- full-file replacement is safer than a local surgical edit
+- the resulting file is re-read or otherwise verified after the write
+
 Preferred closeout workflow remains:
 
     connector reads committed baseline docs when useful

@@ -122,7 +122,7 @@ A future metadata pass should verify all public pages as the site continues to e
 
 | Planned Path | Page Type | Purpose | Dependency | Status |
 |---|---|---|---|---|
-| `/blog/index.html` | Public section index | Future TENSA Engineering Blog hub for timely practical posts, AI coding workflow lessons, homelab planning, tool/model explanations, local AI infrastructure notes, build lessons, buying-guide topics, category routing, and future RSS discovery. | Blog strategy, Blog reader experience, Blog engagement strategy, content style guide, content source map, internal linking strategy, and future public Blog implementation branch. | Planned |
+| `/blog/index.html` | Public section index | Future TENSA Engineering Blog hub for timely practical posts, AI coding workflow lessons, homelab planning, tool/model explanations, local AI infrastructure notes, build lessons, buying-guide topics, category routing, and future RSS discovery. | Blog strategy, Blog reader experience, Blog engagement strategy, content style guide, content source map, internal linking strategy, and active `feature/blog-public-foundation` branch after the research and source gates are satisfied. | Planned |
 | `/blog/ai-coding/index.html` | Blog category index | Future category for AI-assisted coding frustrations, context loss, workflow discipline, prompt/process failures, repo guardrails, and practical builder lessons. | Blog planning docs, AI Operations sources, relevant Knowledge Base articles, and current tool documentation where factual claims are made. | Planned |
 | `/blog/homelab/index.html` | Blog category index | Future category for workload-first homelab planning, Linux lab setup, networking, training environments, troubleshooting practice, and practical infrastructure decisions. | Blog planning docs, hardware/source review where factual claims are made, and Argus Lab source docs if Argus Lab is referenced. | Planned |
 | `/blog/tools-and-models/index.html` | Blog category index | Future category for practical tool/model comparisons, tradeoffs, provider changes, workflow fit, AI coding tool confusion, and model-selection lessons. | Blog planning docs, official provider documentation, release notes, changelogs, dated public source review, and content source map rules. | Planned |
@@ -276,33 +276,37 @@ This rule exists to catch:
 
 ## Current Next Public Page Priority
 
-Recommended next public-page option:
+Current active website direction:
+
+    Blog research-to-draft handoff on feature/blog-public-foundation
+
+No new public Blog page should be created yet.
+
+Required next Blog action:
+
+    Build the article-specific source packet for the current leading AI Coding candidate.
+
+Use that packet to decide whether the research gate is satisfied enough to formally select Article #1.
+
+After formal selection:
+
+- decide the exact reader question, public title, slug, Quick Answer, and scope
+- build the article outline
+- draft and validate one AI Coding proof article
+- build the AI Coding category page and Blog home around the validated proof article
+- add Blog navigation and sitemap entries only after real public Blog pages exist and validate
+
+Do not start another Blog implementation branch.
+
+The active Blog branch is:
+
+    feature/blog-public-foundation
+
+Separate non-Blog work remains available later:
 
     AI Operations category / article index conversion
 
-Reason:
-
-The homepage, About page, Contact page, Projects, NeuroCore, Argus ACLI, Argus Lab, Knowledge Base, Glossary, Story, the eight foundation Knowledge Base articles, and the first focused AI Operations long-form article now all have public site structure. The project-context article has also established the preferred prose-first article reading format.
-
-The Blog is now represented as a planned future public section with structure-only scaffold directories and internal planning docs, but it has not been launched publicly. Blog public pages should be created only on a future public Blog implementation branch after the Blog strategy, reader-experience, engagement, content-source, style, and internal-linking docs are loaded.
-
-The next highest-value Knowledge Base structure fix remains to make `/knowledge-base/ai-operations/` a true category / article index page, then move the current long-form AI Operations landing-page content into a dedicated article such as `/knowledge-base/ai-operations/what-is-ai-operations.html` or another approved slug.
-
-Likely next non-Blog direction:
-
-- start a fresh branch for the AI Operations category / article index conversion
-- keep `/knowledge-base/ai-operations/` as the category route
-- move current long-form AI Operations content into a dedicated article page
-- keep `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` as a focused article under the category
-- apply the new prose-first article standard to future long-form Knowledge Base articles deliberately
-- defer Resources and Build Notes until the Knowledge Base structure is cleaner or public artifacts/build-history become the priority
-
-Likely next Blog direction, if Richard chooses to continue Blog work next:
-
-- start a fresh public Blog implementation branch
-- create only the Blog index, one category index, and one proof article first
-- do not add Blog routes to sitemap.xml or public navigation until real public Blog HTML pages exist and are ready to be indexed
-- keep RSS, newsletter signup, comments, guest posts, and affiliate/sponsored-link behavior deferred until the public Blog foundation is stable
+That work should remain on its own focused branch rather than being mixed into the active Blog workflow.
 
 ---
 

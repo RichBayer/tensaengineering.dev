@@ -502,11 +502,15 @@ The blog should feel clean, useful, and trustworthy.
 
 The first public blog implementation branch should create only enough to prove the format.
 
-Recommended first public structure:
+Recommended first public set:
 
-    /blog/index.html
+    one research-selected AI Coding proof article
     /blog/ai-coding/index.html
-    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
+    /blog/index.html
+
+Do not hard-code a historical candidate article path here.
+
+The exact first-article question, title, and slug are selected only after the current pain-point research, article-specific source packet, and formal Article #1 decision are complete.
 
 Recommended second category proof:
 

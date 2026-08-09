@@ -1069,13 +1069,37 @@ Before selecting the first AI Coding article:
 
 - treat the initial Google Keyword Planner and Google Trends passes as completed quantitative discovery
 - treat the initial Claude Code/Codex community pass as completed qualitative discovery, not prevalence research
-- verify current official provider documentation for the leading article's usage, pricing, model, and limit claims
+- verify current official provider documentation for the leading candidate's usage, pricing, model, and limit claims
 - reopen the strongest community sources before quoting or closely paraphrasing them publicly
 - collect additional community evidence only where it resolves a specific remaining question
 - distinguish searcher symptoms from underlying workflow problems
 - preserve the difference between tool memory, conversation context, authoritative project state, and project continuity
-- decide whether the research gate is satisfied enough to formally select Article #1
-- after selection, create the article-specific source packet and outline before drafting public copy
+- build an article-specific source packet for the current leading candidate
+- use that packet to decide whether the research gate is satisfied enough to formally select Article #1
+- after formal selection, decide the exact public question, title, slug, Quick Answer, scope, and outline before drafting public copy
+
+### Article-Specific Source Packet
+
+The article-specific source packet is the structured evidence record used to decide whether the leading candidate is strong enough to become Article #1.
+
+Until Article #1 is formally selected, keep the working source packet in this Blog strategy under the active candidate rather than creating a new public page or a new documentation family.
+
+The packet should capture:
+
+- the exact reader question being tested
+- current official provider sources and the claims each source supports
+- reopened community sources and the observations each source supports
+- time-sensitive facts and the date they were reverified
+- TENSA firsthand observations that are verified enough to use, if any
+- unresolved questions or evidence gaps
+- claims that are supported for publication
+- claims that are explicitly not supported
+- likely internal links to existing TENSA public pages
+- the final gate decision: select, reject, or continue researching the candidate
+
+The source packet comes before the formal Article #1 decision.
+
+The final public title and slug come after the candidate is formally selected.
 
 Google Search Console should become an additional feedback source after public Blog pages begin earning impressions.
 

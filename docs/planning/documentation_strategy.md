@@ -81,6 +81,13 @@ The normal repository-editing workflow remains local-first:
 
 Do not update this documentation model to assume connector write authority unless Richard deliberately changes that operating rule.
 
+Large-file connector write boundary:
+
+- connector full-file replacement must not be used for files over 1,000 lines
+- files over 1,000 lines should use connector reads for committed context and verification, with surgical edits performed locally
+- do not rebuild large files from connector chunks to bypass the full-file replacement limitation
+- files at or under 1,000 lines may use connector replacement only after full current context is reviewed and the specific write is authorized
+
 ---
 
 ## Hybrid Source Loading Rule
