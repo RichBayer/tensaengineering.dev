@@ -31,224 +31,171 @@ Default working assumption:
 
 ## Current Committed Baseline
 
-The latest confirmed website-content closeout merged and pushed to `main` before the Blog planning foundation branch was:
+Current active Blog implementation / research branch:
 
-    5687392 Refine KB article reading experience
+    feature/blog-public-foundation
 
-That commit converted the focused AI Operations project-context article into the first prose-first Knowledge Base article reading-standard proof page.
+Confirmed committed guardrail checkpoint on that branch before the current research closeout:
 
-Docs-only connector / local follow-up after that closeout:
+    2c625a2 Harden website resume prerequisite gates
 
-- `docs/ai-operations/tensa_website_resume_prompt.md` was refreshed after the reading-experience merge.
-- `docs/planning/knowledge_base_article_template.md` was created as the canonical Knowledge Base article template / creation guide.
-- This resume prompt was then updated to include the new template doc in the core context set.
-- Local Legion evidence confirmed the repository tree was 27 directories and 73 files after the template-doc closeout.
-- Local closeout updated the repository map, documentation strategy, website state, and resume prompt for the new template doc.
+Confirmed `main` baseline at the start of this closeout:
 
-Latest completed planning branch:
+    c3d670f Add ecosystem registry pointer to TENSA website entrypoint
 
-    feature/blog-planning-foundation
+Current repository / public-page evidence:
 
-Current Blog planning foundation state:
+    41 directories, 90 files
+    19 public HTML pages
 
-- branch contains Blog planning docs and structure-only scaffold directories
-- local cleanup commit `2dfa282 Align blog strategy scaffold naming` is present on the branch
-- current local tree is 41 directories and 90 files
-- current public HTML page count remains 19
-- no public Blog pages exist yet
-- no public Blog articles exist yet
-- no Blog URLs are in `sitemap.xml`
-- no Blog links are in public navigation
-- no Blog RSS feed, newsletter signup, comment system, guest-post flow, affiliate flow, CSS change, JavaScript change, or public HTML change exists yet
+Current public Blog state:
 
-New internal Blog planning docs:
+    no public Blog HTML pages
+    no public Blog articles
+    no Blog sitemap entries
+    no Blog navigation links
+    no RSS feed
+    no newsletter signup
+    no comment system
+    no guest-post submission flow
+    no affiliate/sponsored-link system
+
+Current Blog pain-point research checkpoint:
+
+    Google Keyword Planner discovery complete for the current gate
+    Google Trends discovery complete for the current gate
+    initial Claude Code / Codex qualitative community discovery complete
+
+Detailed research authority:
 
     docs/planning/blog_strategy.md
-    docs/planning/blog_reader_experience.md
-    docs/planning/blog_engagement_strategy.md
 
-New structure-only scaffold directories:
+Compressed SEO/content-priority summary:
 
-    blog/
-    blog/ai-coding/
-    blog/homelab/
-    blog/tools-and-models/
-    blog/local-ai/
-    blog/build-lessons/
-    blog/buying-guides/
+    docs/planning/seo_topic_map.md
 
-New structure-only Blog image asset directories:
+Current leading research candidate:
 
-    assets/images/blog/
-    assets/images/blog/ai-coding/
-    assets/images/blog/homelab/
-    assets/images/blog/tools-and-models/
-    assets/images/blog/local-ai/
-    assets/images/blog/build-lessons/
-    assets/images/blog/buying-guides/
+    Why does AI coding burn through my usage limit so fast?
 
-Current public HTML page count:
+Current runner-up:
 
-    19
-
-Latest local internal-link validation from the previous reading-experience closeout:
-
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
+    Why does my coding AI forget or repeat work?
 
 Important:
 
-    The Blog planning foundation is planning / scaffold only.
-    It is not a public Blog launch.
-    Do not assume the live site deployed just because a branch or `main` was pushed.
-    GitHub Pages deployment and live-page behavior must be verified from current evidence before making deployment or indexing claims.
+    The leading candidate is not yet a locked public Article #1 title, slug, or assignment.
+    Final public framing waits for an article-specific source packet and current-source verification.
+
+Current pain lanes a fresh session must understand:
+
+1. Usage limits, cost, pricing, and plan selection
+2. Continuity, context loss, memory, and repeated work
+3. Agent operations: project docs, instructions, skills, agents, plugins, review, and workflow control
+4. Regressions, unrelated changes, and code-quality failures
+5. Tool/model selection and workload fit across Claude Code, Codex, and other coding agents
+
+Current cross-lane research hypothesis:
+
+    context / task state degrades
+        → rediscovery or reconsideration can occur
+        → repeated work can reduce useful progress per paid session
+        → continuity and workflow control may improve useful progress
+
+Treat that as a research interpretation, not a universal causal claim.
+
+Evidence guardrails:
+
+- Keyword Planner ranges are broad buckets, not exact search counts
+- Keyword Planner competition is paid-ad competition, not organic SEO difficulty
+- Google Trends is normalized relative interest, not market share or absolute search volume
+- public issues and discussions are self-selected qualitative evidence, not prevalence measurements
+- provider pricing, plan limits, model behavior, and usage mechanics are time-sensitive
+- never claim a specific token or usage reduction from documentation or workflow improvements without evidence
+
+The public site itself was unchanged by this research work.
 
 ---
 
 ## Most Recent Completed Work
 
-Completed in the Blog planning foundation branch:
+Completed on `feature/blog-public-foundation` before this closeout:
 
-- branch `feature/blog-planning-foundation` was created for Blog planning and structure-only scaffolding
-- `docs/planning/blog_strategy.md` was created for future Blog strategy and category planning
-- `docs/planning/blog_reader_experience.md` was created for future Blog article reader-experience planning
-- `docs/planning/blog_engagement_strategy.md` was created for future Blog contact, collaboration, attribution, and link-safety planning
-- structure-only future Blog scaffold directories were created under `blog/`
-- structure-only future Blog image asset scaffold directories were created under `assets/images/blog/`
-- planned route naming was aligned to `/blog/build-lessons/`
-- repository map was updated to 41 directories and 90 files for Blog planning / scaffold state
-- website information architecture was updated to include Blog as a planned long-term content pillar
-- documentation strategy was updated to define ownership for Blog planning docs
-- page inventory was updated to track Blog planning docs and future planned Blog public pages
-- content source map was updated with future Blog page and article source requirements
-- website state was updated with Blog planning / scaffold closeout state
-- resume prompt was updated with Blog planning branch state and future-session context
+- hardened the website resume startup protocol so historical candidate titles cannot bypass required Blog pain-point research
+- committed that guardrail repair as `2c625a2 Harden website resume prerequisite gates`
+- ran six Google Keyword Planner research batches across broad AI-coding, memory/context, failure, usage-limit, and subscription-plan terms
+- ran controlled Google Trends comparisons for pain terms and parent AI-coding terms
+- completed an initial qualitative Claude Code / Codex public issue/discussion discovery pass
+- recorded source limitations and evidence guardrails
+- identified five current AI-coding pain lanes
+- ranked current Blog candidate questions
+- established usage-limit / workload-economics pain as the leading research candidate
+- preserved continuity / repeated-work pain as the strongest runner-up and likely follow-up lane
+- updated `docs/planning/seo_topic_map.md` during closeout with the compressed active Blog research priority
 
-Important:
+Key quantitative direction already captured in `blog_strategy.md`:
 
-    The Blog planning foundation did not add public Blog pages, public article routes, sitemap entries, navigation links, RSS feeds, newsletter signup, comment systems, guest-post systems, affiliate systems, CSS changes, JavaScript changes, or public HTML changes.
-    It created planning docs and `.gitkeep` scaffold directories only.
+- broad interest exists around Claude Code, Cursor AI, vibe coding, and AI coding
+- usage-limit, pricing, subscription, plan-comparison, and cost questions show meaningful demand
+- memory/context queries are smaller but clearly present
+- exact natural-language failure phrases often have lower search volume than the community pain they describe
 
-Previous completed work in the reading-experience branch:
+Key qualitative direction already captured in `blog_strategy.md`:
 
-- branch `feature/kb-reading-experience-standard` was committed, fast-forward merged into `main`, and pushed to `origin/main`
-- focused article updated at:
+- users report continuity loss, repeated repository work, compaction/task-state problems, usage pressure, and instruction persistence concerns
+- users independently create handoff files, project-state docs, CLAUDE.md / AGENTS.md-style instructions, session notes, and external state
+- agent-operation discussions emphasize smaller tasks, plans, checkpoints, validation, and human control
+- Claude Code and Codex samples expose overlapping continuity/workflow pain, but the samples are not a controlled product comparison
 
-        knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
-
-- article became the first prose-first Knowledge Base article standard / proof page
-- list-heavy structure was replaced with fuller article prose
-- raw/code-looking diagrams were reduced to three styled explanatory diagrams
-- article metadata was changed from pill-style tags to one plain reader-context sentence
-- shared `styles.css` now includes reusable Knowledge Base article diagram, FAQ, and metadata styling
-- closeout docs were updated to record the article format standard and next IA direction
-
-Completed in the docs-only connector / local closeout follow-up before the Blog branch:
-
-- created `docs/planning/knowledge_base_article_template.md`
-- defined the reusable long-form Knowledge Base article structure
-- documented the project-context article as the reference implementation, not a file to blindly copy
-- recorded prose, diagram, FAQ, SEO/schema, internal-link, and source-doc expectations for future articles
-- added the template doc to this resume prompt's core context set
-- local Legion evidence confirmed the repository tree was 27 directories and 73 files
-- repository map updated for the new template doc
-- documentation strategy updated to define template-doc ownership
-- website state updated to record the template doc and current closeout state
-- resume prompt updated to treat the template doc as core future-session context
+Do not restart this research from zero in a fresh thread.
 
 ---
 
 ## Current Next Website Direction
 
-Immediate branch review:
+Immediate continuation is the research-to-draft handoff for the first AI Coding Blog proof article.
 
-    Review and merge `feature/blog-planning-foundation` only after confirming it remains planning / scaffold only.
+Do not begin by writing public HTML.
 
-Before or after merge, confirm:
+Use this sequence:
 
-- only Blog planning / scaffold documentation changed
-- no public HTML files changed
-- no sitemap.xml changes exist
-- no robots.txt changes exist
-- no public navigation changes exist
-- no CSS or JavaScript changes exist
-- `git diff --check` is clean
+1. Load the current local `docs/planning/blog_strategy.md`.
+2. Load `docs/planning/blog_reader_experience.md`.
+3. Load `docs/planning/blog_engagement_strategy.md`.
+4. Load `docs/planning/seo_topic_map.md`.
+5. Load the Blog source, style, inventory, linking, website-state, and closeout docs required by the source map.
+6. Reverify current official provider usage-limit, pricing, plan, and model/tool claims relevant to the leading candidate.
+7. Reopen the strongest community sources before quoting or close paraphrasing.
+8. Build an article-specific source packet.
+9. Decide the exact reader question, public title, slug, Quick Answer, and scope.
+10. Build an outline.
+11. Draft one proof article.
+12. Validate the proof article before building the wider Blog surface.
+13. Build the AI Coding category page.
+14. Build the Blog home.
+15. Add navigation and sitemap entries only after real public Blog pages exist and validate.
 
-Future Blog implementation option:
+Current leading research candidate:
 
-    feature/blog-public-foundation
+    Why does AI coding burn through my usage limit so fast?
 
-Recommended first public Blog implementation goal:
+Likely follow-up chain:
 
-    Create the Blog index, one category index, and one proof post.
+    usage-limit pain
+        → repeated work after long sessions
+        → what context means in AI coding
+        → durable project state / memory
+        → session handoff and resume workflow
+        → tool/model workload fit
+        → AI Operations
 
-Historical first proof-post candidate:
+Do not lock a title or slug merely because the leading research question is already known.
 
-    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
-
-Historical second proof-post candidate:
-
-    /blog/homelab/what-is-a-homelab-actually-for.html
-
-These are planning candidates, not approved article assignments.
-
-Before selecting a Blog article topic, title, slug, or implementation target:
-
-- load the governing Blog and search-planning documents
-- run the Pain-Point Research Workflow defined in `docs/planning/blog_strategy.md`
-- identify questions people are actually asking
-- identify repeated frustrations, misunderstood terms, and signs that readers may be solving the wrong problem
-- use available search-demand and trend evidence where appropriate
-- distinguish the reader's observed question from the likely underlying problem
-- only then select the primary question, article scope, working title, slug, and follow-up path
-
-Do not begin a Blog article merely because a candidate proof-post path appears in this resume prompt.
-
-Before creating public Blog pages or posts, load:
-
-    docs/planning/blog_strategy.md
-    docs/planning/blog_reader_experience.md
-    docs/planning/blog_engagement_strategy.md
-    docs/planning/content_source_map.md
-    docs/planning/content_style_guide.md
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    docs/website_state.md
-
-Separate non-Blog high-value website work remains:
+Separate non-Blog website work remains:
 
     AI Operations category / article index conversion
 
-Recommended future branch for that work:
-
-    feature/kb-ai-operations-index
-
-or:
-
-    feature/kb-category-article-index
-
-Target structure:
-
-    knowledge-base/ai-operations/
-        index.html
-            future AI Operations category / article index page
-
-        what-is-ai-operations.html
-            likely future home for the current long-form AI Operations landing-page content
-            final slug still needs explicit approval
-
-        how-to-keep-ai-from-losing-project-context.html
-            existing focused continuity guide and article-format proof page
-
-Do not start by rewriting the whole Knowledge Base or launching a full Blog operation.
-
-Work one page / structure decision at a time.
-
-Before creating or rewriting a long-form Knowledge Base article, load:
-
-    docs/planning/knowledge_base_article_template.md
+Keep that work on its own focused branch rather than mixing it into the Blog proof-article workflow.
 
 ---
 
@@ -644,8 +591,10 @@ Category pages and focused article pages should have different jobs:
 Current status:
 
     Planned / scaffold only
+    Initial pain-point research gate completed
+    Public Blog implementation not started
 
-Current internal planning docs:
+Current planning docs:
 
     docs/planning/blog_strategy.md
     docs/planning/blog_reader_experience.md
@@ -660,7 +609,7 @@ Current planned categories:
     Build Lessons
     Buying Guides
 
-Current Blog boundary:
+Current public boundary:
 
     No public Blog HTML pages exist yet.
     No public Blog articles exist yet.
@@ -672,19 +621,35 @@ Current Blog boundary:
     No guest-post submission system exists yet.
     No affiliate/sponsored-link system exists yet.
 
-Future Blog implementation should be handled on a separate branch after loading the Blog planning docs, content source map, content style guide, page inventory, internal linking strategy, and website state.
+Current AI-coding research priorities:
 
-Recommended future branch:
+1. Usage limits / cost / subscription economics
+2. Continuity / memory / repeated work
+3. Agent operations / workflow control
+4. Regressions / unrelated changes / code-quality failures
+5. Tool-model selection / workload fit
 
-    feature/blog-public-foundation
+Current leading candidate:
 
-Recommended first proof post:
+    Why does AI coding burn through my usage limit so fast?
 
-    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
+Current runner-up:
 
-Recommended second proof post:
+    Why does my coding AI forget or repeat work?
 
-    /blog/homelab/what-is-a-homelab-actually-for.html
+Do not substitute historical candidates such as:
+
+    Why AI Code Breaks After It Works Once
+
+for the research-ranked candidates unless new evidence deliberately changes the ranking.
+
+The detailed evidence, Keyword Planner observations, Trends observations, community source notes, candidate scores, and next research steps live in:
+
+    docs/planning/blog_strategy.md
+
+The compressed SEO/content-priority summary lives in:
+
+    docs/planning/seo_topic_map.md
 
 ---
 
@@ -897,7 +862,7 @@ Completed so far:
 
 Not yet completed:
 
-- merge of the Blog planning foundation branch into `main`
+- article-specific source packet for the leading AI Coding Blog candidate
 - GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
@@ -1015,40 +980,59 @@ Closeout docs usually include only the files impacted by the session. Do not upd
 
 ## Current Next Best Step
 
-Immediate branch review:
+Continue the active Blog branch without restarting discovery from zero.
 
-1. Review the Blog planning foundation diffs.
-2. Confirm only Blog planning / scaffold documentation changed.
-3. Confirm no public HTML, sitemap, robots, navigation, CSS, or JavaScript files changed.
-4. Merge `feature/blog-planning-foundation` only after review.
-5. After merge, treat Blog public implementation as a separate future branch.
+Required next step:
 
-Next Blog build option:
+    Build the article-specific source packet for the leading usage-limit candidate.
 
-1. Start a future `feature/blog-public-foundation` branch.
-2. Load the three Blog planning docs plus source map, style guide, page inventory, internal linking strategy, and website state.
-3. Create only the Blog index, one category index, and one proof post first.
-4. Do not add Blog routes to sitemap.xml or public navigation until real public Blog HTML pages exist and are ready to be indexed.
-5. Keep RSS, newsletter signup, comments, guest posts, and affiliate/sponsored-link behavior deferred until the public Blog foundation is stable.
+Required source work:
 
-Separate non-Blog option:
+1. Reverify current official Claude / Claude Code usage, pricing, plan-limit, and relevant model/tool documentation.
+2. Reverify current official Codex usage / allowance mechanics where the article compares or references Codex.
+3. Reopen the strongest community sources already identified in `blog_strategy.md`.
+4. Add new community evidence only for specific unresolved gaps.
+5. Keep official provider mechanics separate from community observations and from TENSA workflow interpretation.
 
-1. Start a fresh branch for the AI Operations category / article index conversion.
-2. Run the build-start checks.
-3. Load core context docs through connector reads first.
-4. Ask Richard for local git status, tree, validation, stash, and browser observations as needed.
-5. Load `docs/planning/knowledge_base_article_template.md` before creating or rewriting long-form Knowledge Base articles.
-6. Do not touch the protected local stash unless Richard explicitly approves that exact action.
+After the source packet:
+
+1. Decide the exact reader question.
+2. Decide the public title.
+3. Decide the slug.
+4. Write the Quick Answer.
+5. Build the article outline.
+6. Draft the proof article.
+7. Validate links, metadata, schema, and current-vs-future claims before wider Blog implementation.
+
+Do not add Blog navigation or sitemap entries before real Blog pages exist and validate.
+
+Do not touch the protected local stash.
 
 ---
 
 ## Next Public Build Options
 
-Near-term Blog option:
+Primary current option:
 
-- Blog public foundation branch with `/blog/`, one category index, and one proof post
-- first proof post candidate: `/blog/ai-coding/why-ai-code-breaks-after-it-works-once.html`
-- second proof post candidate: `/blog/homelab/what-is-a-homelab-actually-for.html`
+- first AI Coding proof article based on the completed pain-point research
+- leading research question: `Why does AI coding burn through my usage limit so fast?`
+- exact public title and slug remain pending the article-specific source packet
+
+After the proof article is validated:
+
+- AI Coding category index
+- Blog home
+- deliberate related-reading path
+- navigation and sitemap only when real public pages exist and are ready to index
+
+Likely follow-up AI Coding topics:
+
+- why coding agents repeat work after long sessions
+- context versus durable project state
+- persistent project memory and handoff patterns
+- how to end an AI coding session so the next session can resume
+- Claude Code versus Codex by workload and subscription fit
+- practical AI Operations for controlled coding-agent workflows
 
 Separate Knowledge Base option:
 

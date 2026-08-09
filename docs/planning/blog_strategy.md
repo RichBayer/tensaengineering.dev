@@ -420,6 +420,669 @@ The goal is to use public frustration as a signal for useful education.
 
 ---
 
+## Active Pain-Point Research Record
+
+Status:
+
+    Active research.
+    No first public Blog article has been selected.
+
+Research checkpoint:
+
+    2026-08-09
+
+Current research scope:
+
+    AI-assisted coding and vibe-coding pain points encountered while using AI coding tools on real projects.
+
+This record captures current evidence and working interpretations.
+
+It does not approve final article titles, slugs, publication order, or public claims.
+
+### Research Method Used So Far
+
+The first quantitative research pass used Google Keyword Planner.
+
+A second quantitative validation pass used Google Trends to compare high-signal pain terms, inspect related searches, and compare broad parent-topic interest.
+
+Current settings:
+
+- United States
+- English
+- Google search network
+- Keyword Planner data period: July 1, 2025 through June 30, 2026
+- six separate seed batches because Keyword Planner currently accepts only ten seed phrases at a time
+
+The six batches explored:
+
+- broad AI coding and tool terminology
+- memory and context terminology
+- conversational failure symptoms
+- issues, bugs, forgetting, and code-quality terminology
+- Claude Code usage, limits, resets, cost, and token terminology
+- Claude subscription, pricing, Pro-versus-Max, and upgrade-intent terminology
+
+Important interpretation rule:
+
+Google Keyword Planner is currently returning broad monthly-search ranges for this account.
+
+The downloaded CSV represents those ranges with values such as:
+
+    50       -> approximately 10-100 monthly searches
+    500      -> approximately 100-1K monthly searches
+    5000     -> approximately 1K-10K monthly searches
+    50000    -> approximately 10K-100K monthly searches
+    500000   -> approximately 100K-1M monthly searches
+
+These values must not be presented publicly as exact monthly search counts.
+
+Keyword Planner's Competition field describes paid-ad competition.
+
+It must not be treated as organic SEO difficulty.
+
+### Broad Parent-Topic Signals
+
+Current broad search signals include:
+
+| Search term | Approximate monthly range | Current signal |
+|---|---:|---|
+| `claude code` | 100K-1M | Large parent topic |
+| `cursor ai` | 100K-1M | Large parent topic |
+| `vibe coding` | 100K-1M | Large parent topic, but recent decline in this dataset |
+| `ai coding` | 10K-100K | Broad category term |
+| `ai coding assistant` | 10K-100K | +900% three-month change |
+| `ai powered coding assistant` | 10K-100K | +900% three-month and YoY change |
+
+These broad phrases validate the overall AI-coding audience.
+
+They are probably too broad to serve as the primary question for an early TENSA article.
+
+### Memory and Context Cluster
+
+Current relevant signals include:
+
+| Search term | Approximate monthly range | Current signal |
+|---|---:|---|
+| `claude code memory` | 1K-10K | +900% YoY |
+| `claude code context` | 100-1K | Stable in current dataset |
+| `cursor memory` | 100-1K | Stable in current dataset |
+| `cursor context` | 100-1K | -90% YoY in current dataset |
+| `ai memory` | 1K-10K | Higher volume but semantically broad |
+| `ai context` | 1K-10K | Higher volume but semantically broad |
+| `persistent ai memory` | 10-100 | Emerging from a negligible prior baseline |
+
+Current interpretation:
+
+People appear more likely to search for tool-specific terms such as `claude code memory` than full natural-language questions such as `ai forgets my project`.
+
+The underlying problem may still be project continuity even when the searcher describes it as a tool-memory problem.
+
+This supports further research into the distinction between:
+
+    conversation context
+    assistant/tool memory
+    authoritative project memory
+    project continuity
+
+Do not assume those concepts are equivalent.
+
+### Failure-Symptom Cluster
+
+Conversational phrases such as:
+
+    ai broke my code
+    ai keeps changing code
+    ai changes unrelated files
+    ai coding mistakes
+    claude code forgets
+    cursor forgets
+
+showed little or no measurable Keyword Planner volume in the current batches.
+
+Broader tool-specific failure language performed better:
+
+| Search term | Approximate monthly range | Current signal |
+|---|---:|---|
+| `claude code issues` | 100-1K | +900% YoY |
+| `claude code problems` | 10-100 | Emerging from a negligible prior baseline |
+| `cursor ai issues` | 10-100 | Small current signal |
+| `vibe coding problems` | 10-100 | Small current signal |
+| `ai code quality` | 10-100 | Small current signal |
+
+Current interpretation:
+
+A problem can be common in developer discussions without people typing its full conversational description into Google.
+
+Search demand and community pain therefore need to be evaluated together.
+
+Low exact-query volume must not automatically disqualify a problem-first article.
+
+### Usage-Limit and Cost Cluster
+
+The usage-limit research produced one of the strongest focused pain signals so far.
+
+| Search term | Approximate monthly range | Current signal |
+|---|---:|---|
+| `claude code usage limits` | 1K-10K | Meaningful active demand |
+| `claude code usage` | 1K-10K | Meaningful active demand |
+| `claude code limit` | 1K-10K | Meaningful active demand |
+| `claude pro usage limit` | 1K-10K | +900% YoY |
+| `claude code cost` | 1K-10K | Meaningful active demand |
+| `claude code rate limit` | 100-1K | Smaller focused query |
+| `claude code 5 hour limit` | 100-1K | Emerging from a negligible prior baseline |
+| `claude code weekly limit` | 10-100 | Emerging from a negligible prior baseline |
+| `claude code usage reset` | 10-100 | +900% three-month change and emerging YoY |
+| `claude code tokens` | 100-1K | Supporting technical query |
+
+Current interpretation:
+
+Usage limits are not merely a pricing question.
+
+Searchers are separately looking for:
+
+    usage
+    limits
+    five-hour limits
+    weekly limits
+    resets
+    cost
+    token behavior
+
+This suggests a real post-purchase workflow problem worth deeper research.
+
+### Subscription and Upgrade-Intent Cluster
+
+The follow-up purchase-intent batch produced very strong signals:
+
+| Search term | Approximate monthly range | Current signal |
+|---|---:|---|
+| `claude code pricing` | 10K-100K | Large commercial-information query |
+| `claude code subscription` | 10K-100K | +900% three-month and +9900% YoY |
+| `claude pro vs max` | 1K-10K | +900% YoY |
+| `claude code pro` | 1K-10K | Meaningful plan-specific demand |
+| `claude code max` | 1K-10K | Meaningful plan-specific demand |
+| `claude max pricing` | 1K-10K | Meaningful purchase-intent demand |
+| `claude max worth it` | 100-1K | +900% YoY |
+| `claude pro worth it` | 100-1K | +900% YoY |
+| `claude code worth it` | 10-100 | Small direct-value query |
+| `claude code unlimited` | 10-100 | Small current query |
+
+Current interpretation:
+
+There are at least three different reader intents inside this cluster:
+
+    discovery:
+        What does Claude Code cost?
+
+    frustration:
+        Why am I hitting the usage limit?
+
+    purchase decision:
+        Do I need Pro, Max, another tool, or a different workflow?
+
+TENSA should not collapse those into one article automatically.
+
+### Google Trends Validation Pass
+
+A Google Trends validation pass was completed on 2026-08-09.
+
+Primary Trends settings:
+
+- United States
+- Past year
+- Web Search
+- exact Search terms were used for controlled comparisons
+- Topic/entity results were not mixed into controlled comparisons
+
+Google Trends values are relative interest scores normalized to the selected place and time.
+
+They are not absolute search counts.
+
+#### Controlled Pain-Point Comparison
+
+The controlled comparison used:
+
+    claude code memory
+    claude code usage limits
+    claude code limit
+    claude code pricing
+    claude pro vs max
+
+Average relative interest across the selected year was approximately:
+
+| Search term | Average relative interest |
+|---|---:|
+| `claude code pricing` | 39 |
+| `claude code memory` | 18 |
+| `claude code limit` | 16 |
+| `claude pro vs max` | 8 |
+| `claude code usage limits` | 6 |
+
+Four of the five terms reached their highest relative interest during the week of 2026-06-07:
+
+| Search term | Peak relative interest | Peak week |
+|---|---:|---|
+| `claude code pricing` | 100 | 2026-06-07 |
+| `claude code memory` | 58 | 2026-06-07 |
+| `claude code limit` | 38 | 2026-06-07 |
+| `claude code usage limits` | 22 | 2026-06-07 |
+
+`claude pro vs max` peaked at 20 during the week of 2026-03-01.
+
+Current interpretation:
+
+Pricing had the strongest relative interest inside this controlled comparison, while memory and limit terminology also showed meaningful sustained interest.
+
+The shared June peak suggests these questions may be participating in the same broader wave of Claude Code interest rather than behaving as completely isolated topics.
+
+Do not infer a cause for that shared peak without event and provider research.
+
+#### Related Search Evidence From the Pain-Point Comparison
+
+Top and rising related searches added stronger evidence around usage limits, pricing, and cross-tool comparison.
+
+Notable results included:
+
+| Related search | Search interest | Change |
+|---|---:|---:|
+| `claude pro usage limits` | 98 | +20% |
+| `claude code pro usage limits` | 98 | +20% |
+| `claude code pricing` | 58 | +110% |
+| `claude pricing` | 57 | +200% |
+| `codex usage limits` | 23 | Breakout |
+| `codex vs claude code` | 10 | Breakout |
+| `claude code vs codex` | 9 | Breakout |
+
+Current interpretation:
+
+The appearance of `codex usage limits` as a Breakout related search suggests that usage-limit pain may be broader than a single Claude-specific issue.
+
+The simultaneous rise of Claude Code-versus-Codex comparison searches also supports research into AI coding subscription economics and workload routing.
+
+Do not conclude that one provider, plan, or multi-subscription strategy is better until current limits, pricing, model behavior, and real workload evidence are compared.
+
+#### Controlled Parent-Topic Comparison
+
+A second controlled comparison used exact Search terms:
+
+    claude code
+    codex
+    cursor ai
+    vibe coding
+    ai coding
+
+Average relative interest shown in the Trends comparison was approximately:
+
+| Search term | Average relative interest |
+|---|---:|
+| `claude code` | 40 |
+| `codex` | 36 |
+| `ai coding` | 10 |
+| `cursor ai` | 6 |
+| `vibe coding` | 4 |
+
+Current interpretation:
+
+Within this exact-term United States comparison, Claude Code and Codex formed the strongest current parent-topic pair.
+
+These values are relative Trends measurements.
+
+They must not be presented as market share, user counts, or absolute search volume.
+
+#### Parent-Topic Related Search Evidence
+
+Related searches around the parent-topic comparison surfaced strong growth in operational and workflow-oriented language.
+
+Notable results included:
+
+| Related search | Search interest | Change |
+|---|---:|---:|
+| `claude code price` | 48 | +130% |
+| `claude code review` | 38 | +200% |
+| `claude code docs` | 35 | +650% |
+| `claude code documentation` | 28 | +450% |
+| `claude code skills` | 21 | +800% |
+| `claude code usage` | 18 | +30% |
+| `claude code agent teams` | 2 | +2,300% |
+| `claude code plugins` | 4 | +450% |
+| `claude code vs codex` | 10 | +130% |
+| `codex vs claude code` | 9 | +120% |
+
+Current interpretation:
+
+The research is surfacing a potential additional lane around agent operations:
+
+    skills
+    documentation
+    agent teams
+    plugins
+    review
+    structured workflows
+
+This lane was not the original focus of the Blog research.
+
+Its appearance through related-search evidence makes it worth qualitative follow-up rather than immediate article selection.
+
+#### Gemini Suggested-Term Discovery Pass
+
+The new Google Trends Gemini suggestion feature was tested as a discovery aid.
+
+It suggested:
+
+    Claude Code
+    OpenAI Codex
+    GitHub Copilot
+    Cursor AI
+    Zed AI
+    Windsurf IDE
+    Tabnine
+    Supermaven
+
+The generated comparison mixed Search terms with Topics/entities.
+
+Because Google Trends measures those result types differently, that mixed chart must not be used as a controlled popularity comparison.
+
+The suggestion set may still be used as discovery input for later research.
+
+### Firsthand Qualitative Signals
+
+Current qualitative observations also point toward usage limits as a meaningful problem.
+
+Richard has observed repeated discussion of AI coding usage limits in short-form developer and vibe-coding content.
+
+A separate active Agent Operations build also produced a firsthand usage-limit example.
+
+Current reported observation:
+
+- approximately 3,000 lines of code were involved in a repair-oriented build
+- implementation plus an initial repair pass exhausted one five-hour usage window
+- completing the repair then consumed approximately 47% of the next five-hour window
+- the work reportedly consumed approximately 17% of the weekly allowance
+- the subscription was reported as approximately $20 per month
+- the exact model used has not yet been verified
+
+This is internal observational evidence only.
+
+Do not publish the model, allowance behavior, percentage, pricing, or causal interpretation until those details are verified against current provider information and the actual session evidence.
+
+The observation is useful now as a research signal:
+
+    real project work can make usage limits a practical engineering constraint, not merely a pricing complaint
+
+### Qualitative Community Research Pass
+
+An initial qualitative community pass was completed on 2026-08-09.
+
+Scope:
+
+- recent public GitHub issues and discussions for OpenAI Codex
+- recent public GitHub issues for Claude Code
+- selected public developer-community discussions about complex agent workflows
+- current official provider documentation used only to verify present usage-limit mechanics
+
+This is a qualitative sample.
+
+Issue trackers and community threads are self-selected reports.
+
+They can show recurring pain, language, and failure patterns, but they must not be treated as prevalence measurements or proof that every user experiences the same behavior.
+
+#### Cross-Product Continuity and Repeated-Work Pattern
+
+Recent Codex reports describe context compaction losing or weakening current task state, project instructions, completed-work state, or recent decisions.
+
+Reported downstream effects include:
+
+- rereading files that were already inspected
+- repeating repository searches and diagnostic commands
+- reconsidering decisions that had already been made
+- reopening resolved work
+- moving backward from verification toward earlier analysis
+- consuming additional usage without equivalent forward progress
+
+Examples reviewed:
+
+    openai/codex#35935
+    openai/codex#25792
+    openai/codex discussion #5799
+
+Claude Code users independently report demand for stronger persistent memory across sessions and compaction boundaries.
+
+Examples reviewed:
+
+    anthropics/claude-code#34556
+    anthropics/claude-code#14227
+    anthropics/claude-code#33464
+
+Those reports include user-built external state patterns such as:
+
+    active task
+    recent decisions
+    project state
+    handoff files
+    project instructions
+    topic-specific reference files
+
+Current interpretation:
+
+The same underlying project-continuity problem can appear through different product-specific symptoms.
+
+A useful working model is:
+
+    context or task state degrades
+        ->
+    the agent must rediscover or reconsider prior work
+        ->
+    repeated work consumes time and paid usage
+        ->
+    less of the allowance becomes forward project progress
+
+This is supported as a recurring qualitative pattern.
+
+It is not evidence that all compaction causes wasted work, that all usage-limit problems are caused by continuity failure, or that documentation alone fixes the problem.
+
+#### Usage Mechanics Verified Against Current Provider Documentation
+
+Current provider documentation supports the broader premise that real coding workload characteristics affect included usage.
+
+Claude Pro documentation currently states that message availability varies with factors including conversation length, attached-file length, model, and feature use.
+
+It also currently documents a five-hour session-based reset and a weekly usage limit.
+
+Current OpenAI Codex documentation states that usage varies with task size and complexity.
+
+It specifically notes that larger codebases, long-running tasks, and extended sessions that require more retained context consume more allowance than small scripts or simple functions.
+
+These provider statements support discussing usage limits as a real workload constraint.
+
+They do not by themselves establish how much any specific workflow, repository, or continuity method will save.
+
+#### Agent-Orchestration Pain
+
+Developer discussions about complex agents add another recurring concern:
+
+    an agent can make one bad decision and continue spending tokens on the wrong branch of work
+
+The useful responses and workflows around that concern repeatedly emphasize:
+
+- smaller or clearer task boundaries
+- explicit plans before broad execution
+- checkpoints between phases
+- validation before continuing
+- human review of consequential decisions
+- durable project instructions and state
+- separating orchestration from blind autonomy
+
+Current interpretation:
+
+This strengthens the provisional agent-operations lane.
+
+The problem is not only which model is strongest.
+
+It is also how work is scoped, handed off, checked, resumed, and stopped.
+
+#### Claude Code Versus Codex Research Interpretation
+
+The current sample suggests slightly different visible complaint surfaces:
+
+Claude Code discussions more often surfaced:
+
+- persistent project memory
+- instruction and context-file design
+- compaction continuity
+- skills and agent orchestration
+- external state and handoff patterns
+
+Codex discussions more often surfaced:
+
+- compaction-related task-state regression
+- repeated repository work
+- usage depletion during long tasks
+- usage visibility
+- project-instruction continuity
+
+Do not turn that observation into a product-quality ranking.
+
+The samples are not controlled, equal-sized, or representative.
+
+The important cross-product finding is that both communities contain evidence around:
+
+    continuity
+    repeated work
+    usage pressure
+    project instructions
+    human supervision
+    workflow control
+
+#### Qualitative Source Notes
+
+Representative public sources reviewed in this pass:
+
+- `openai/codex#35935` - compaction-related task regression, repeated work, and reported weekly-usage exhaustion
+- `openai/codex#25792` - task progress and AGENTS-rule continuity after compaction
+- `openai/codex` discussion `#5799` - compaction obscuring prior work and causing repeated work
+- `anthropics/claude-code#34556` - persistent memory across compactions and external state patterns
+- `anthropics/claude-code#14227` - persistent memory between Claude Code sessions
+- `anthropics/claude-code#33464` - instruction-file context footprint
+- public Claude developer discussion: `Are agents actually useful for complex tasks?` - concern about agents burning tokens after wrong decisions
+
+Before any of these observations become public article claims, reopen the source and verify that it is still accurately represented.
+
+### Current Working Interpretations
+
+The current evidence supports several provisional conclusions.
+
+Tool-specific search language currently appears stronger than long conversational symptom phrases.
+
+`Memory` currently appears to be stronger user-facing search language than `context` for some coding-tool continuity problems.
+
+Usage limits, cost, subscriptions, and plan-selection questions form a substantial pain cluster and may deserve an early Blog lane alongside project-memory and continuity topics.
+
+Google Trends reinforces that pricing, memory, limits, and plan-selection questions are active parts of the same broader Claude Code interest wave.
+
+Cross-tool related searches around Codex usage limits and Claude Code-versus-Codex comparisons suggest that subscription economics may be a broader AI coding problem rather than only a Claude-specific problem.
+
+Strong growth in searches around skills, documentation, agent teams, plugins, and review creates a provisional agent-operations research lane that should be tested qualitatively before article selection.
+
+The strongest search term is not automatically the best TENSA article.
+
+Article selection should combine:
+
+    search demand
+    repeated community pain
+    misunderstanding or bad mental models
+    TENSA's real experience
+    ability to provide a useful answer
+    natural follow-on article potential
+
+### Current Candidate Research Lanes
+
+The highest-priority AI Coding research lanes are currently:
+
+1. Project memory, context, and cross-session continuity.
+2. Usage limits, coding efficiency, cost, and plan-selection pressure.
+3. Agent operations: skills, documentation, agent teams, plugins, review, and structured workflows.
+4. AI coding regressions, unrelated file changes, and code-quality failures.
+5. Tool and model selection based on actual job requirements rather than hype.
+
+These are research lanes.
+
+They are not approved article assignments.
+
+### Current Candidate Article Ranking
+
+The current working ranking combines:
+
+    search demand
+    trend momentum
+    repeated community pain
+    misunderstanding potential
+    TENSA experience
+    natural follow-on potential
+
+This is a research ranking.
+
+It does not approve a final title, slug, or Article #1 assignment.
+
+| Working candidate question | Demand | Pain | Confusion | TENSA fit | Follow-ons | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| Why does AI coding burn through my usage limit so fast? | 5 | 5 | 5 | 5 | 5 | 25/25 |
+| Why does my coding AI forget or repeat work? | 4 | 5 | 5 | 5 | 5 | 24/25 |
+| Claude Code vs Codex: which subscription fits the workload? | 5 | 5 | 4 | 4 | 5 | 23/25 |
+| How do you keep coding agents under control on real projects? | 3 | 4 | 5 | 5 | 5 | 22/25 |
+| Why does AI keep breaking or changing working code? | 2 | 4 | 5 | 5 | 4 | 20/25 |
+
+Current leading candidate:
+
+    Why does AI coding burn through my usage limit so fast?
+
+Why it currently leads:
+
+- focused Google demand exists around usage, limits, cost, pricing, and plan decisions
+- Trends data shows related interest in Claude Code and Codex
+- community reports connect long tasks, context pressure, repeated work, and allowance consumption
+- the problem is understandable without requiring the reader to know terms such as context window or compaction
+- it naturally opens into continuity, memory, workload routing, verification, and AI Operations
+
+The ranking may still change after source verification.
+
+### Important Research Guardrails
+
+Do not claim that documentation automatically reduces token or usage consumption.
+
+That relationship is currently a hypothesis that requires evidence.
+
+Do not claim that a larger subscription tier is the correct solution to usage limits without examining workload and workflow.
+
+Do not publish current tool pricing, usage-limit behavior, model availability, or plan differences without checking current official provider sources.
+
+Do not use search volume alone to select an article.
+
+Do not convert Richard's firsthand Agent Operations usage observation into a public case study until the relevant plan, model, usage measurements, and project details are verified.
+
+Do not turn commercial-intent search demand into affiliate-first content.
+
+Trust and useful explanation remain the priority.
+
+### Next Research Steps
+
+Before selecting the first AI Coding article:
+
+- treat the initial Google Keyword Planner and Google Trends passes as completed quantitative discovery
+- treat the initial Claude Code/Codex community pass as completed qualitative discovery, not prevalence research
+- verify current official provider documentation for the leading article's usage, pricing, model, and limit claims
+- reopen the strongest community sources before quoting or closely paraphrasing them publicly
+- collect additional community evidence only where it resolves a specific remaining question
+- distinguish searcher symptoms from underlying workflow problems
+- preserve the difference between tool memory, conversation context, authoritative project state, and project continuity
+- decide whether the research gate is satisfied enough to formally select Article #1
+- after selection, create the article-specific source packet and outline before drafting public copy
+
+Google Search Console should become an additional feedback source after public Blog pages begin earning impressions.
+
+No first public Blog article should be selected until this research gate is satisfied.
+
+---
+
 ## SEO and Search Intent Rules
 
 Blog posts should be written for humans first, but each post should still have a clear search purpose.
@@ -539,7 +1202,14 @@ Recommended first public structure:
 
     /blog/index.html
     /blog/ai-coding/index.html
+
+Then add one research-selected AI Coding proof article.
+
+Historical first AI Coding proof-post candidate:
+
     /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
+
+The final first article question, title, and slug must be selected through the Pain-Point Research Workflow.
 
 Optional first homelab structure after that:
 
@@ -614,17 +1284,21 @@ Recommended branch name:
 
     feature/blog-public-foundation
 
-Recommended first public post:
+First public AI Coding post:
+
+    Select through the Pain-Point Research Workflow before drafting or implementation.
+
+Historical first AI Coding proof-post candidate:
 
     /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
 
-Recommended second public post:
+Historical first Homelab proof-post candidate:
 
     /blog/homelab/what-is-a-homelab-actually-for.html
 
-The first post validates the AI-assisted coding lane.
+The eventual first AI Coding proof post should validate the AI-assisted coding lane.
 
-The second post validates the purposeful homelab lane.
+The eventual Homelab proof post should validate the purposeful homelab lane.
 
 Together, they prevent the blog from being pigeonholed as only AI coding frustration content.
 

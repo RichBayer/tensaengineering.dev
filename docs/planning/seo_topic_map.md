@@ -88,6 +88,7 @@ Related docs:
     docs/planning/page_inventory.md
     docs/planning/internal_linking_strategy.md
     docs/planning/content_source_map.md
+    docs/planning/blog_strategy.md
     docs/website_state.md
 
 Technical indexing belongs in:
@@ -153,6 +154,79 @@ TENSA Engineering should organize SEO content around these major clusters:
 9. Argus ACLI
 10. Argus Lab
 11. Build Notes and Engineering Lessons
+
+---
+
+## Active Blog AI-Coding Research Priority
+
+Research checkpoint:
+
+    2026-08-09
+
+The detailed pain-point research record, quantitative findings, qualitative source notes, and candidate ranking live in:
+
+    docs/planning/blog_strategy.md
+
+This SEO topic map records only the current content-priority outcome.
+
+The initial discovery gate has completed three passes:
+
+- Google Keyword Planner for broad demand and seed comparison
+- Google Trends for relative-interest and related-search discovery
+- qualitative public community review around Claude Code and Codex issues, discussions, and workflow pain
+
+Current evidence-backed AI-coding pain lanes:
+
+1. Usage limits, cost, and plan selection
+2. Project continuity, memory, and repeated work
+3. Agent operations: skills, documentation, agent teams, plugins, review, and structured workflows
+4. Regressions, unrelated changes, and code-quality failures
+5. Tool/model selection and workload fit
+
+The strongest current cross-lane research pattern is:
+
+    usage pressure
+        ↔ continuity / context loss
+        ↔ repeated work
+        ↔ workflow control
+
+This is a research interpretation.
+
+It is not a claim that all usage-limit problems come from context loss, that every compaction event wastes work, or that documentation alone fixes usage problems.
+
+Current leading Blog candidate question:
+
+    Why does AI coding burn through my usage limit so fast?
+
+Current runner-up:
+
+    Why does my coding AI forget or repeat work?
+
+No public Article #1 title, slug, or assignment is locked yet.
+
+Why the usage-limit question currently leads:
+
+- measurable search demand exists around usage, limits, cost, pricing, and plan decisions
+- Google Trends reinforced interest around Claude Code, Codex, usage/pricing questions, and cross-tool comparisons
+- selected community reports connect long tasks, compaction or task-state loss, repeated repository work, and usage pressure
+- the symptom is understandable to beginners without requiring them to know terms such as context window or compaction
+- the topic can naturally lead into continuity, memory, workload routing, verification, and AI Operations
+
+Evidence guardrails:
+
+- Google Keyword Planner volume bands are broad buckets, not exact monthly counts
+- Keyword Planner competition describes paid-ad competition, not organic SEO difficulty
+- Google Trends scores are normalized relative interest, not market share or absolute search volume
+- GitHub issues and community discussions are self-selected qualitative evidence, not prevalence measurements
+- provider pricing, model behavior, and usage-limit mechanics are time-sensitive and must be reverified from current official documentation before publication
+- do not publish unsupported token-savings percentages or imply that documentation eliminates compaction or usage problems
+
+Next research-to-content step:
+
+    Build an article-specific source packet for the leading candidate.
+    Reverify current official provider claims.
+    Reopen the strongest community evidence.
+    Then decide the exact reader question, public title, slug, and article outline.
 
 ---
 
@@ -1085,21 +1159,23 @@ Do not update this document for every minor page edit.
 
 ## Near-Term Recommendation
 
-Before creating many Knowledge Base articles, complete the public project explanations.
+The public project explanations and Knowledge Base foundation are already established.
+
+The current SEO/content priority is:
+
+    finish the research-to-draft handoff for the first AI Coding Blog proof article
 
 Recommended order:
 
-1. Full Argus ACLI page
-2. Full Argus Lab page
-3. Story index page
-4. First Knowledge Base category pages
-5. First cornerstone Knowledge Base articles
+1. Load `docs/planning/blog_strategy.md` and the required Blog governance/source docs.
+2. Reverify current official provider usage, pricing, model, and limit claims.
+3. Reopen the strongest community sources that support the leading candidate.
+4. Build the article-specific source packet.
+5. Decide the final reader question, title, and slug only after the source packet is complete.
+6. Outline and draft one proof article before expanding the Blog broadly.
+7. Do not add Blog navigation or sitemap entries until real public Blog pages exist and validate.
 
-Reason:
-
-The project pages give visitors a clear ecosystem foundation.
-
-The Knowledge Base can then teach supporting concepts without carrying the entire project explanation burden.
+Separate Knowledge Base or other website work should remain on its own focused branch rather than being mixed into this Blog proof-article workflow.
 
 ---
 

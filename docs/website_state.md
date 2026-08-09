@@ -64,66 +64,64 @@ The Blog is planned and scaffolded internally, but it has not launched publicly.
 
 ## Current Closeout Snapshot
 
-Latest completed planning branch:
+Active branch:
 
-    feature/blog-planning-foundation
+    feature/blog-public-foundation
 
-Current Blog planning foundation state:
+Current confirmed branch baseline before this documentation closeout:
 
-- `feature/blog-planning-foundation` contains Blog planning docs and structure-only scaffold directories
-- local cleanup commit `2dfa282 Align blog strategy scaffold naming` is present on the branch
-- local tree verified at 41 directories and 90 files
+    2c625a2 Harden website resume prerequisite gates
+
+Current `main` baseline at the start of closeout:
+
+    c3d670f Add ecosystem registry pointer to TENSA website entrypoint
+
+Current repository / public-site evidence:
+
+- local tree remains 41 directories and 90 files
 - current public HTML page count remains 19
-- focused AI Operations project-context article remains the reference implementation for the prose-first Knowledge Base article standard
-- Blog planning foundation updates are limited to internal planning / continuity docs and structure-only `.gitkeep` scaffold directories
-- no public Blog pages, public article routes, sitemap entries, navigation links, RSS feed, newsletter signup, CSS changes, JavaScript changes, or public HTML files changed during the Blog planning foundation
+- no public Blog HTML pages exist yet
+- no Blog routes are in `sitemap.xml`
+- no Blog links are in public navigation
+- no Blog RSS feed, newsletter signup, comment system, guest-post system, or affiliate/sponsored-link system exists yet
+- no public HTML, CSS, JavaScript, navigation, sitemap, robots, branding, or route changes were made during the Blog pain-point research work
 
-Focused article:
+Current Blog pain-point research state:
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+- `docs/planning/blog_strategy.md` contains the detailed pain-point research record
+- Google Keyword Planner discovery is complete for the current research gate
+- Google Trends discovery is complete for the current research gate
+- an initial qualitative Claude Code / Codex community discovery pass is complete
+- the five current pain lanes are usage limits / cost, continuity / repeated work, agent operations, regressions / code-quality failures, and tool/model workload fit
+- `docs/planning/seo_topic_map.md` carries the compressed SEO/content-priority summary
 
-Template / creation guide:
+Current leading Blog candidate question:
 
-    docs/planning/knowledge_base_article_template.md
+    Why does AI coding burn through my usage limit so fast?
 
-Blog planning docs:
+Current runner-up:
 
-    docs/planning/blog_strategy.md
-    docs/planning/blog_reader_experience.md
-    docs/planning/blog_engagement_strategy.md
+    Why does my coding AI forget or repeat work?
 
-Blog scaffold directories:
+Important selection boundary:
 
-    blog/
-    blog/ai-coding/
-    blog/homelab/
-    blog/tools-and-models/
-    blog/local-ai/
-    blog/build-lessons/
-    blog/buying-guides/
+    The leading candidate is a research priority, not a locked public Article #1 title, slug, or assignment.
+    Exact public title, slug, and article scope must wait for the article-specific source packet and current-source verification.
 
-Blog image scaffold directories:
+Current evidence guardrails:
 
-    assets/images/blog/
-    assets/images/blog/ai-coding/
-    assets/images/blog/homelab/
-    assets/images/blog/tools-and-models/
-    assets/images/blog/local-ai/
-    assets/images/blog/build-lessons/
-    assets/images/blog/buying-guides/
+- Keyword Planner search-volume bands are broad buckets, not exact monthly search counts
+- Keyword Planner competition is paid-ad competition, not organic SEO difficulty
+- Google Trends scores are normalized relative interest, not market share or absolute volume
+- community issue/discussion samples are qualitative and self-selected, not prevalence measurements
+- provider pricing, usage limits, model behavior, and plan mechanics must be reverified from current official sources before publication
+- do not publish unsupported claims that documentation, memory, or workflow changes reduce token or usage consumption by a specific percentage
 
-Latest public-link validation from the reading-experience closeout:
+Protected local stash still exists at the latest local check:
 
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
+    stash@{0}: On content/knowledge-base-reading-experience: WIP knowledge-base-reading-experience before ai-ops guardrail update
 
-Current boundary:
-
-    The Blog planning foundation is internal documentation and structure-only scaffold work.
-    Public Blog implementation should happen later on a separate reviewed branch.
-    Deployment and indexing must not be claimed until live-site evidence confirms the relevant public pages and sitemap are deployed.
+Do not apply, pop, drop, rewrite, or otherwise touch that stash without Richard's explicit approval for the exact stash action.
 
 ---
 
@@ -1029,15 +1027,8 @@ Future long-form Knowledge Base articles should use:
 Current status:
 
     Planned / scaffold only
-
-Current purpose:
-
-- plan future timely, practical Blog content
-- define Blog categories before public pages are created
-- distinguish Blog posts from Knowledge Base articles
-- define reader experience expectations for future posts
-- define contact, reader-question, collaboration, attribution, outbound-link, affiliate, and sponsored-link boundaries
-- reserve future route and image-asset structure without launching public pages
+    Initial pain-point research gate completed
+    Public Blog implementation not started
 
 Current internal planning docs:
 
@@ -1045,34 +1036,46 @@ Current internal planning docs:
     docs/planning/blog_reader_experience.md
     docs/planning/blog_engagement_strategy.md
 
-Current structure-only directories:
+Detailed research owner:
 
-    blog/
-    blog/ai-coding/
-    blog/homelab/
-    blog/tools-and-models/
-    blog/local-ai/
-    blog/build-lessons/
-    blog/buying-guides/
+    docs/planning/blog_strategy.md
 
-Current structure-only image asset directories:
+Current SEO/content-priority summary:
 
-    assets/images/blog/
-    assets/images/blog/ai-coding/
-    assets/images/blog/homelab/
-    assets/images/blog/tools-and-models/
-    assets/images/blog/local-ai/
-    assets/images/blog/build-lessons/
-    assets/images/blog/buying-guides/
+    docs/planning/seo_topic_map.md
 
-Future planned categories:
+Current evidence-backed AI-coding pain lanes:
 
-    AI Coding
-    Homelab
-    Tools and Models
-    Local AI
-    Build Lessons
-    Buying Guides
+1. Usage limits, cost, pricing, and plan selection
+2. Project continuity, memory, context loss, and repeated work
+3. Agent operations: skills, project docs, instructions, agent teams, plugins, review, and structured workflows
+4. Regressions, unrelated changes, and code-quality failures
+5. Claude Code / Codex / other tool-model selection and workload fit
+
+Current leading research candidate:
+
+    Why does AI coding burn through my usage limit so fast?
+
+Current runner-up:
+
+    Why does my coding AI forget or repeat work?
+
+Current research interpretation:
+
+    context or task state can degrade
+        → the agent may need to rediscover or reconsider work
+        → repeated repository work can consume useful paid allowance
+        → better continuity and workflow control may improve useful progress per session
+
+This is not a universal causal claim.
+
+Do not claim:
+
+- all usage-limit pressure comes from context loss
+- all compaction causes repeated work
+- documentation automatically saves tokens
+- any workflow improvement produces a specific usage reduction without evidence
+- Claude Code or Codex is categorically better based on self-selected issue samples
 
 Current Blog boundary:
 
@@ -1086,28 +1089,16 @@ Current Blog boundary:
     No guest-post submission system exists yet.
     No affiliate/sponsored-link system exists yet.
 
-Future public Blog implementation should happen on a separate branch after loading:
+Next research-to-content gate:
 
-    docs/planning/blog_strategy.md
-    docs/planning/blog_reader_experience.md
-    docs/planning/blog_engagement_strategy.md
-    docs/planning/content_source_map.md
-    docs/planning/content_style_guide.md
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    docs/website_state.md
-
-Recommended future branch:
-
-    feature/blog-public-foundation
-
-Recommended first proof post:
-
-    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
-
-Recommended second proof post:
-
-    /blog/homelab/what-is-a-homelab-actually-for.html
+1. Reverify current official provider usage, pricing, model, and plan-limit claims.
+2. Reopen the strongest community sources supporting the leading candidate.
+3. Build an article-specific source packet.
+4. Decide the exact reader question, title, slug, and scope.
+5. Outline the first proof article.
+6. Draft only after the source packet and outline are grounded.
+7. Build the AI Coding category and Blog home around the validated proof article rather than ahead of it.
+8. Add public Blog navigation and sitemap entries only after real Blog pages exist and validate.
 
 ---
 
@@ -1487,7 +1478,7 @@ Social content:
 
 ## Not Yet Completed
 
-- merge of the Blog planning foundation branch into `main`
+- article-specific source packet for the leading AI Coding Blog candidate
 - GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
 - live verification that the AI Operations page still links to the focused article
@@ -1682,36 +1673,31 @@ Preferred safe pattern:
 
 ## Next Recommended Steps
 
-Immediate branch review:
+Immediate continuation for the active Blog branch:
 
-1. Review the Blog planning foundation diffs.
-2. Confirm only Blog planning / scaffold documentation changed.
-3. Confirm no public HTML, sitemap, robots, navigation, CSS, or JavaScript files changed.
-4. Merge `feature/blog-planning-foundation` only after review.
-5. After merge, keep public Blog implementation on a separate future branch.
+1. Treat `docs/planning/blog_strategy.md` as the detailed research authority.
+2. Treat `docs/planning/seo_topic_map.md` as the compressed SEO/content-priority summary.
+3. Reverify current official provider documentation for usage limits, pricing, plan behavior, and model/tool mechanics relevant to the leading candidate.
+4. Reopen the strongest Claude Code / Codex community sources before quoting or close paraphrasing them.
+5. Build an article-specific source packet for:
 
-Next Blog build option:
+       Why does AI coding burn through my usage limit so fast?
 
-    Start a future `feature/blog-public-foundation` branch.
-    Load the three Blog planning docs plus source map, style guide, page inventory, internal linking strategy, and website state.
-    Create only the Blog index, one category index, and one proof post first.
-    Do not add Blog routes to sitemap.xml or public navigation until real public Blog HTML pages exist and are ready to be indexed.
+6. Decide the final reader question, public title, slug, Quick Answer, and article outline only after that source packet is complete.
+7. Draft one AI Coding proof article.
+8. Build the AI Coding category page and Blog home after the proof article is validated.
+9. Do not add Blog navigation or sitemap entries until real public Blog pages exist, validate locally, and are ready to index.
+10. Keep separate Knowledge Base work, including the AI Operations category/index conversion, on its own focused branch.
 
-Recommended first proof post:
+Fresh-session priority:
 
-    /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
+    Do not restart broad keyword research from zero.
+    Load the existing Blog research first.
+    Research only specific evidence gaps needed for the selected article.
 
-Recommended second proof post:
+Protected local state:
 
-    /blog/homelab/what-is-a-homelab-actually-for.html
-
-Separate non-Blog website work:
-
-    Start a fresh branch for the AI Operations category / article index conversion.
-    Convert /knowledge-base/ai-operations/ into a true category / article index page.
-    Move the current long-form AI Operations landing-page content into a dedicated article page.
-    Keep the project-context article as a focused article under that category.
-    Use docs/planning/knowledge_base_article_template.md when creating or rewriting future long-form Knowledge Base articles.
+    Do not touch the existing knowledge-base-reading-experience stash unless Richard explicitly authorizes the exact stash action.
 
 ---
 
