@@ -184,13 +184,27 @@ Recommended first public Blog implementation goal:
 
     Create the Blog index, one category index, and one proof post.
 
-Recommended first proof post:
+Historical first proof-post candidate:
 
     /blog/ai-coding/why-ai-code-breaks-after-it-works-once.html
 
-Recommended second proof post:
+Historical second proof-post candidate:
 
     /blog/homelab/what-is-a-homelab-actually-for.html
+
+These are planning candidates, not approved article assignments.
+
+Before selecting a Blog article topic, title, slug, or implementation target:
+
+- load the governing Blog and search-planning documents
+- run the Pain-Point Research Workflow defined in `docs/planning/blog_strategy.md`
+- identify questions people are actually asking
+- identify repeated frustrations, misunderstood terms, and signs that readers may be solving the wrong problem
+- use available search-demand and trend evidence where appropriate
+- distinguish the reader's observed question from the likely underlying problem
+- only then select the primary question, article scope, working title, slug, and follow-up path
+
+Do not begin a Blog article merely because a candidate proof-post path appears in this resume prompt.
 
 Before creating public Blog pages or posts, load:
 
@@ -271,6 +285,9 @@ At the start of every serious website build session:
 4. Ask Richard for current local command output that connector reads cannot provide.
 5. Ask for exact local file contents only when a file is modified, uncommitted, local-only, or about to be edited.
 6. Do not analyze, summarize, or act on incomplete source context while required docs are still being loaded.
+7. After loading the documents relevant to the requested work, extract any prerequisite gates, required research, validation steps, approval boundaries, or sequencing rules before selecting or beginning implementation.
+8. Treat candidate paths, example titles, recommended proof pages, and historical next-step suggestions as planning guidance unless the governing domain documents explicitly make them authoritative.
+9. If a domain-specific strategy requires research, validation, source review, or another gate before implementation, complete that gate before drafting, editing, or creating the public artifact.
 
 Build-start local checks:
 
