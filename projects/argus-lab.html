@@ -229,13 +229,13 @@
 
     <section class="article-card">
       <p class="eyebrow">Validation role</p>
-      <h2>The same lab that trains people can test whether Argus actually understands the system.</h2>
+      <h2>The same lab being built for training already tests Argus against known system failures.</h2>
 
       <p>
-        Because Argus Lab controls the starting state and the injected fault, it is becoming a
-        proving ground for Argus diagnostic behavior. If the lab knows nginx was intentionally
-        stopped, then Argus should be able to detect the failed service state, preserve the right
-        evidence, assign useful severity, and recommend a sane next step.
+        Because Argus Lab controls the starting state and the injected fault, it already provides a
+        bounded proving ground for Argus diagnostic behavior. In the current <code>AL-T1-0001</code>
+        scenario, nginx is intentionally placed into a failed state and Argus ACLI is validated
+        against that known truth before and after recovery.
       </p>
 
       <p>
@@ -282,33 +282,36 @@
 
     <section class="article-card">
       <p class="eyebrow">Current implementation</p>
-      <h2>The first known-good web01 baseline is in place.</h2>
+      <h2>The first complete web01 fault-and-recovery lifecycle has passed on Proxmox.</h2>
 
       <p>
-        Argus Lab is now in early implementation. The first validation target exists: a web01
-        Linux server with nginx installed, enabled, active, and listening on port 80. NeuroCore
-        runtime components and Argus ACLI diagnostics have been validated against that healthy
-        service state.
+        Argus Lab remains an early implementation, but the first validation slice is complete.
+        <code>web01</code> now runs as Proxmox VM 100 in the accepted lab architecture, and the
+        <code>AL-T1-0001</code> nginx scenario has been exercised through healthy baseline,
+        controlled failure, ACLI detection, reset, recovery, trace review, reboot persistence,
+        and post-reboot validation.
       </p>
 
       <p>
-        That baseline proves the first version of the lab loop can begin: build a real Linux
-        target, confirm the service state, run read-only diagnostics through Argus ACLI, preserve
-        raw evidence, capture a clean snapshot, and then introduce a controlled failure for testing.
+        That lifecycle proves the first bounded lab loop works against a real Linux target:
+        begin from a known-good state, introduce a controlled service fault, validate the observed
+        failure, inspect it through Argus ACLI, reset the target, verify recovery, and preserve an
+        accepted rollback point.
       </p>
 
       <ul>
-        <li><strong>web01 baseline:</strong> Linux server target created for the first Argus Lab validation slice.</li>
-        <li><strong>nginx service:</strong> installed, enabled, active, and available as the first service-diagnostics target.</li>
-        <li><strong>Argus ACLI service check:</strong> validated against nginx while the service is healthy.</li>
-        <li><strong>Failed-service check:</strong> validated in the clean state with no failed units reported.</li>
-        <li><strong>Known-good snapshot:</strong> captured so the lab can return to a clean baseline before fault testing.</li>
+        <li><strong>web01 authority:</strong> Proxmox VM 100 is the accepted operational <code>web01</code> target.</li>
+        <li><strong>nginx baseline:</strong> healthy service state, TCP port 80, local HTTP response, and clean systemd state were validated.</li>
+        <li><strong>Controlled fault:</strong> <code>AL-T1-0001</code> placed nginx into the expected failed state and exact port-80 loss was verified.</li>
+        <li><strong>Argus ACLI validation:</strong> the failure produced the expected diagnostic detection, and recovery returned ACLI to the healthy state.</li>
+        <li><strong>Recovery validation:</strong> reset, idempotency, trace review, reboot persistence, and post-reboot validation passed.</li>
+        <li><strong>Accepted snapshot:</strong> the current powered-off baseline is <code>web01-known-good-proxmox-migration-001</code>.</li>
       </ul>
 
       <p>
-        The next validation step is a controlled nginx failed-state scenario. That scenario will
-        test whether Argus ACLI can detect the service failure, preserve the right evidence, and
-        explain the finding without guessing.
+        This first scenario is complete as a validated narrow slice. Broader scenario coverage,
+        guided training behavior, multi-node exercises, and the finished training platform remain
+        future work.
       </p>
     </section>
 
@@ -326,7 +329,7 @@
         </p>
 
         <ul>
-          <li><strong>web01:</strong> the first active server target, currently used for nginx service diagnostics validation.</li>
+          <li><strong>web01:</strong> the first implemented server target and current accepted validation baseline for nginx service diagnostics.</li>
           <li><strong>client01:</strong> a planned admin workstation for investigation and operations.</li>
           <li><strong>files01:</strong> a planned file and backup server for storage, permissions, and recovery scenarios.</li>
           <li><strong>mon01:</strong> a planned monitoring system for signal, alerting, and observability practice.</li>
@@ -346,8 +349,10 @@
       <h2>Argus Lab is active early implementation, not a finished training product.</h2>
 
       <p>
-        Argus Lab has moved beyond public planning. The first web01 validation target is built,
-        a clean baseline exists, and Argus ACLI has been tested against the healthy nginx service state.
+        Argus Lab has moved beyond public planning. The first <code>web01</code> validation slice
+        has completed a controlled nginx fault-and-recovery lifecycle on Proxmox, including ACLI
+        detection, reset and recovery, trace review, reboot persistence, and preservation of the
+        accepted powered-off snapshot.
       </p>
 
       <p>
