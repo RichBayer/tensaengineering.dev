@@ -175,6 +175,27 @@ Use this sequence:
 14. Build the Blog home.
 15. Add navigation and sitemap entries only after real public Blog pages exist and validate.
 
+Public launch gate: internal docs stay off the site.
+
+    The Blog is public content only. Internal planning, research notes,
+    strategy, and closeout docs are not Blog content and must not be
+    published with it.
+
+    GitHub Pages publishes the whole repository root from main. Verified
+    2026-10-10: files under docs/ are served as readable text on the live
+    site.
+
+    Before the Blog goes public (before feature/blog-public-foundation or
+    any Blog page merges into main), add a root _config.yml that excludes
+    docs/ from the published site. Do it on its own small branch, not on
+    the Blog branch.
+
+    After it deploys, confirm https://tensaengineering.dev/docs/website_state.md
+    no longer loads.
+
+    Limit: this hides docs/ from the website only. While the repository is
+    public on GitHub, the files remain readable there.
+
 Current leading research candidate:
 
     Why does AI coding burn through my usage limit so fast?
