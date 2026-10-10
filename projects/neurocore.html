@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NeuroCore — local-first governed AI runtime platform in active development. Persistent continuity, strict control plane, and privacy by design. Intelligence without continuity is fragile.">
+    <meta name="description" content="NeuroCore — local-first governed AI runtime platform in active development, with a persistent daemon, controlled tool execution, structured diagnostics, and planned deeper continuity.">
     <meta name="keywords" content="NeuroCore, local-first AI, governed AI, control plane, persistent AI, Argus ACLI, TENSA Engineering">
     <title>NeuroCore | Local-First Governed AI Runtime Platform</title>
   <link rel="icon" href="../favicon.ico" sizes="any" />
@@ -38,7 +38,7 @@
             <div class="hero-copy">
                 <p class="eyebrow">NeuroCore Platform • Phase 6</p>
                 <h1>Intelligence without continuity is fragile.</h1>
-                <p class="subtitle">NeuroCore is a <strong>local-first cognitive runtime platform</strong> — meaning it runs entirely on your own hardware as a persistent background service (daemon). It remembers your systems over time, keeps all your data private, and enforces strict rules before any action happens.</p>
+                <p class="subtitle">NeuroCore is a <strong>local-first cognitive runtime platform</strong> built around a persistent daemon, a governed request path, controlled tools, structured system evidence, and local tracing. The current implementation provides that runtime foundation while deeper continuity, memory, privacy enforcement, and policy capabilities remain under development.</p>
                 <div class="hero-actions">
                     <a href="#architecture" class="button primary">See how it works →</a>
                     <a href="./argus-acli.html" class="button secondary">Explore Argus ACLI</a>
@@ -62,13 +62,13 @@
             <h2>What NeuroCore actually is</h2>
             <p>NeuroCore is not a chatbot wrapper or an uncontrolled agent. It is a persistent, local-first cognitive runtime platform designed to run as a daemon inside your own systems.</p>
             <p>Its long-term direction goes beyond one diagnostic product. NeuroCore is being designed to develop governed awareness of the systems it runs on, the users it supports, and eventually the environment around it through approved interfaces such as voice, cameras, sensors, and connected devices.</p>
-            <p>It gives AI three things it normally lacks:</p>
+            <p>It is being built around three things AI normally lacks:</p>
             <ul>
-                <li><strong>Continuity</strong> — the system remembers your environment and history across sessions</li>
-                <li><strong>Governed authority</strong> — every action is checked by a control plane (the central authority layer that decides what is allowed)</li>
-                <li><strong>Privacy by design</strong> — everything stays on your hardware; nothing is sent to external services</li>
+                <li><strong>Continuity</strong> — current project continuity is preserved through source-controlled documentation, build logs, repository maps, context-loading rules, and local retrieval; NeuroCore Continuum is the planned deeper continuity layer</li>
+                <li><strong>Governed authority</strong> — top-level requests pass through the daemon, runtime manager, and control plane before registered system tools are invoked</li>
+                <li><strong>Local-first operation</strong> — the current runtime and diagnostic tooling are designed to operate close to the systems they inspect, while broader privacy enforcement remains future architecture</li>
             </ul>
-            <p class="callout-line">AI can reason. NeuroCore decides what is allowed.</p>
+            <p class="callout-line">AI can reason. NeuroCore governs how that reasoning reaches real systems.</p>
         </section>
 
         <!-- Memory and Continuity -->
@@ -258,70 +258,69 @@
 
                     <div class="intelligence-bridge">
                         <div>
-                            <p class="eyebrow">Currently being added</p>
-                            <h3>Kernel-Up Service Intelligence will extend the same controlled path.</h3>
+                            <p class="eyebrow">Current service diagnostics</p>
+                            <h3>Service diagnostics now use the same controlled runtime path.</h3>
                             <p>
-                                The next service-diagnostics lane is being designed to help Argus look beyond
-                                shallow service status and inspect the surrounding evidence behind a failure:
-                                service state, dependencies, logs, resource pressure, access boundaries, and
-                                lower-level system signals.
+                                NeuroCore and Argus now include a bounded read-only service-diagnostics layer for
+                                inspecting individual systemd services and failed-service state. The implemented path
+                                preserves structured evidence and raw command output while keeping diagnosis separate
+                                from system modification.
                             </p>
                             <p>
-                                These tools are not a separate runtime and they are not an automation shortcut.
-                                They will follow the same governed runtime path, evidence contract,
-                                and model explanation boundary shown above.
+                                Current service diagnostics include direct single-service inspection, failed-service
+                                detection, and unit-file evidence through <code>systemctl cat</code>.
                             </p>
                         </div>
                     </div>
 
                     <article class="flow-card diagnostic-card">
                         <div class="flow-number">11</div>
-                        <p class="flow-label">Near-term expansion</p>
-                        <h3>Kernel-Up / Service Intelligence tools</h3>
+                        <p class="flow-label">Implemented service-diagnostics slice</p>
+                        <h3>Read-only service evidence and deterministic analysis</h3>
                         <ul>
-                            <li>Discover and inspect systemd services</li>
-                            <li>Collect service state, unit files, dependencies, logs, processes, ports, and package evidence</li>
-                            <li>Correlate service failures with lower-level Linux causes</li>
-                            <li>Separate observed facts from inferred hypotheses</li>
-                            <li>Include confidence levels and raw evidence</li>
-                            <li>Keep the user as the authority for any next action</li>
+                            <li>Inspect individual systemd service state</li>
+                            <li>Detect failed systemd services</li>
+                            <li>Preserve service, journal, unit-file, and failed-unit evidence</li>
+                            <li>Interpret obvious service states conservatively</li>
+                            <li>Return severity, findings, recommendations, and raw evidence</li>
+                            <li>Keep service diagnostics read-only</li>
                         </ul>
                     </article>
 
                     <div class="tool-stack">
                         <article class="flow-card system-card">
                             <div class="flow-number">12</div>
-                            <p class="flow-label">Possible system tools</p>
-                            <h3>Read-only evidence collectors</h3>
+                            <p class="flow-label">Implemented system tools</p>
+                            <h3>Read-only service evidence</h3>
                             <ul>
-                                <li>service and log evidence</li>
-                                <li>process and file context</li>
-                                <li>resource and dependency signals</li>
-                                <li>access and policy indicators</li>
+                                <li>Inspect one named systemd service</li>
+                                <li>Detect failed systemd service units</li>
+                                <li>Preserve service state, journal, and unit-file evidence</li>
+                                <li>Preserve raw command output and command metadata</li>
                             </ul>
                         </article>
 
                         <article class="flow-card argus-card">
                             <div class="flow-number">13</div>
-                            <p class="flow-label">Possible Argus tools</p>
-                            <h3>Evidence correlation</h3>
+                            <p class="flow-label">Implemented Argus tools</p>
+                            <h3>Deterministic service analysis</h3>
                             <ul>
-                                <li>service-level analysis</li>
-                                <li>system-signal correlation</li>
-                                <li>access-boundary analysis</li>
-                                <li>evidence-backed diagnostic reasoning</li>
+                                <li>Interpret single-service state conservatively</li>
+                                <li>Analyze failed-service results</li>
+                                <li>Assign severity and findings</li>
+                                <li>Preserve raw evidence and recommendations</li>
                             </ul>
                         </article>
 
                         <article class="flow-card model-card">
                             <div class="flow-number">14</div>
-                            <p class="flow-label">Model role</p>
-                            <h3>Explain the diagnosis</h3>
+                            <p class="flow-label">Future model role</p>
+                            <h3>Explain from structured evidence</h3>
                             <ul>
-                                <li>Explain findings in plain English</li>
-                                <li>Help users understand evidence</li>
-                                <li>Suggest safe next investigation steps</li>
-                                <li>Never invent evidence or execute fixes directly</li>
+                                <li>Reason over structured NeuroCore / Argus diagnostic data</li>
+                                <li>Explain why observed signals matter</li>
+                                <li>Ask for additional approved ACLI evidence when needed</li>
+                                <li>Stop honestly when current tool coverage is insufficient</li>
                             </ul>
                         </article>
                     </div>
@@ -374,14 +373,15 @@
         <!-- Revolution in Production Environments -->
         <section class="article-card">
             <h2>How this changes AI in production environments</h2>
-            <p>Traditional AI is stateless and external. NeuroCore turns it into durable, trustworthy operational intelligence that:</p>
+            <p>NeuroCore is being built toward durable operational intelligence for real systems. The current implementation already provides:</p>
             <ul>
-                <li>Keeps all your data private (local-first)</li>
-                <li>Builds source-grounded continuity over time</li>
-                <li>Enforces strict rules before any action (governed authority)</li>
-                <li>Preserves raw evidence for every diagnosis (full auditability)</li>
+                <li>a persistent local daemon and runtime manager</li>
+                <li>a governed top-level request and tool-execution path</li>
+                <li>read-only Argus diagnostics backed by structured system evidence</li>
+                <li>raw evidence preservation across implemented diagnostic tools</li>
+                <li>lightweight structured local tracing with request-ID continuity</li>
             </ul>
-            <p class="callout-line">The result is AI that actually knows your environment and can help safely — without the fragility or risk of cloud-based stateless tools.</p>
+            <p class="callout-line">Deeper continuity, broader privacy enforcement, and the full future policy architecture remain separate development work.</p>
         </section>
 
         <!-- Business Safety & Power -->
@@ -390,8 +390,8 @@
             <p>For teams running real infrastructure, NeuroCore provides:</p>
             <ul>
                 <li>Local-first operation — system data is designed to stay inside your environment</li>
-                <li>Controlled execution — the platform enforces boundaries so AI reasoning cannot become destructive action</li>
-                <li>Observable and auditable — every step is traceable</li>
+                <li>Controlled execution — top-level tool requests pass through the governed runtime and registered tool boundary rather than giving the model direct operating-system command access</li>
+                <li>Observable — implemented request and tool paths emit structured local trace events with request-ID continuity</li>
             </ul>
             <p>This level of control is meant to reduce the risk of using AI around real infrastructure by keeping system awareness local, observable, and governed.</p>
         </section>
@@ -399,9 +399,9 @@
         <!-- Argus ACLI & Lab -->
         <section class="article-card">
             <h2>Argus ACLI — the first product built on NeuroCore</h2>
-            <p>Argus ACLI is the first real-world product being built on top of NeuroCore. It delivers read-only Linux system intelligence: structured diagnostics, severity classification, evidence-backed findings, and raw evidence visibility. It runs entirely through NeuroCore’s control plane and is the focus of current Phase 6 work.</p>
+            <p>Argus ACLI is the first real-world product being built on top of NeuroCore. It delivers read-only Linux system intelligence: structured diagnostics, severity classification, evidence-backed findings, and raw evidence visibility. Its top-level requests use NeuroCore’s governed runtime and tool path, and the current diagnostic implementation has progressed through direct service inspection, failed-service detection, and controlled Argus Lab validation.</p>
 
-            <p><strong>Argus Lab</strong> is the active early real-Linux troubleshooting, training, and validation environment for Argus. It uses controlled failures, resettable scenarios, and evidence-based diagnostic validation to test how Argus tools, structured evidence flow, and model explanations work together against real problems.</p>
+            <p><strong>Argus Lab</strong> is the active early real-Linux troubleshooting, training, and validation environment for Argus. It uses controlled failures, resettable scenarios, and evidence-based diagnostic validation to test Argus tools and structured evidence flow against known real Linux problems. Broader model-guided troubleshooting remains future work.</p>
 
             <p class="callout-line">The core runtime and control-plane path are built and working; deeper memory and continuity features remain in active development. Argus ACLI is the first product being actively refined on top of NeuroCore.</p>
         </section>
@@ -412,12 +412,12 @@
             <p><strong>NeuroCore</strong> — the governed runtime platform, with the core runtime and control-plane path built and working<br>
             <strong>Argus ACLI</strong> — first product built on NeuroCore, currently in active development<br>
             <strong>Argus Lab</strong> — active early validation environment for controlled Linux troubleshooting</p>
-            <p>All three share the same principles: local-first, governed authority, persistent continuity.</p>
+            <p>All three share the same principles: local-first operation, governed authority, evidence-backed system interaction, and continuity as an explicit design goal.</p>
         </section>
 
         <!-- Strong CTAs -->
         <section class="article-card cta-section">
-            <h2>Ready to explore governed, persistent AI for your systems?</h2>
+            <h2>Ready to explore governed, local-first AI for real systems?</h2>
             <div class="hero-actions">
                 <a href="#architecture" class="button primary">Review the architecture</a>
                 <a href="./argus-acli.html" class="button secondary">Explore Argus ACLI</a>
