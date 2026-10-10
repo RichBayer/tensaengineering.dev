@@ -454,6 +454,14 @@ The first goal is clean discoverability.
 
 The second goal is useful content expansion.
 
+Known Search Console report, expected:
+
+    Google reports "Page with redirect" for:
+        http://tensaengineering.dev/
+        https://www.tensaengineering.dev/
+
+Both redirect to the canonical address, https://tensaengineering.dev/. That is the intended behavior and needs no fix.
+
 ---
 
 ## What Should Not Be Indexed
@@ -476,16 +484,11 @@ The following should not appear in the sitemap:
 
 Important:
 
-The `docs/` directory exists in the public GitHub Pages repository, but it is internal planning content.
-
-Do not intentionally surface it through public navigation or the sitemap.
-
-If internal docs being publicly reachable becomes a concern later, revisit repository structure or GitHub Pages deployment strategy.
-
-For now:
+The `docs/` directory and `README.md` are internal. The exclude list in the root `_config.yml` keeps them off the published site (verified 2026-10-10: the internal doc addresses return 404). They stay readable on GitHub while the repository is public.
 
     Do not link public pages to internal docs.
     Do not include internal docs in sitemap.xml.
+    Any internal file or folder added outside docs/ joins the exclude list before it reaches main.
 
 ---
 
@@ -516,30 +519,9 @@ Do not update the sitemap for:
 
 ## Documentation Update Triggers
 
-When `sitemap.xml` or `robots.txt` is created, update:
+What to update at the end of a session is set in `docs/ai-operations/operating_rules.md`, under "Closeout".
 
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/page_inventory.md
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-
-When search indexing setup is completed, update:
-
-    docs/website_state.md
-    docs/planning/search_indexing_strategy.md
-    docs/ai-operations/tensa_website_resume_prompt.md if it affects future startup context
-
-When new public pages are added, update:
-
-    sitemap.xml
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    docs/website_state.md
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/content_source_map.md if source requirements changed or a factual page type was added
-    docs/planning/search_indexing_strategy.md if sitemap/indexing state changed
-
-Also update this document if the indexing workflow changes.
+Update this document when the sitemap, robots.txt, search-console state or indexing workflow changes.
 
 ---
 
@@ -549,11 +531,11 @@ Also update this document if the indexing workflow changes.
 
 Owns:
 
-    current live status of sitemap, robots.txt, Google Search Console, and Bing Webmaster Tools.
+    deployment and exposure facts, including the exclude that keeps internal docs off the published site.
 
 Does not own:
 
-    detailed indexing workflow.
+    sitemap, robots.txt or search-console status. Those live in this document.
 
 ---
 
@@ -561,11 +543,11 @@ Does not own:
 
 Owns:
 
-    file existence and repository location for sitemap.xml, robots.txt, and this strategy doc.
+    what each top-level directory is for.
 
 Does not own:
 
-    search submission strategy.
+    file lists or search submission strategy.
 
 ---
 
@@ -729,24 +711,22 @@ This rule exists to catch:
 
 ## Current Recommended Next Steps
 
-Immediate next steps:
+The next step for each lane is in `docs/ai-operations/tensa_website_resume_prompt.md`. This document does not track it.
 
-1. Complete documentation closeout and final repository validation on `content/ai-ops-project-context`.
+Open live checks:
 
-2. Review the complete diff, then commit and push the closeout changes only after approval.
-
-3. After the changes reach the deployment branch and GitHub Pages finishes deploying, confirm these URLs load:
+1. Confirm these URLs load on the live site:
 
        https://tensaengineering.dev/knowledge-base/ai-operations/
        https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-4. Confirm the live sitemap remains URL-only, contains 19 canonical public URLs, and includes the project-context continuity guide.
+2. Confirm the live sitemap remains URL-only, contains 19 canonical public URLs, and includes the project-context continuity guide.
 
-5. Inspect the new article in Google Search Console if appropriate. Resubmit or refresh the sitemap only if the normal sitemap fetch does not discover the update.
+3. Inspect the project-context article in Google Search Console if appropriate. Resubmit or refresh the sitemap only if the normal sitemap fetch does not discover it.
 
-6. Monitor Google and Bing after their next sitemap fetch. Do not record the article as indexed until the webmaster tools confirm it.
+4. Monitor Google and Bing after their next sitemap fetch. Do not record the article as indexed until the webmaster tools confirm it.
 
 Later next steps:
 

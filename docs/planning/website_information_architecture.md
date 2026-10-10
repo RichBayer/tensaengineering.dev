@@ -1622,19 +1622,7 @@ These should be resolved before deeper implementation.
 
 Do not build the full website randomly.
 
-The immediate next step is:
-
-    Finish reviewing and merging the Blog planning foundation branch after confirming it remains planning / scaffold only.
-
-After the Blog planning foundation is merged, the next implementation work should happen on a fresh focused branch.
-
-Recommended next public Blog branch:
-
-    feature/blog-public-foundation
-
-Recommended separate non-Blog branch:
-
-    feature/kb-ai-operations-index
+The next step for each lane is in `docs/ai-operations/tensa_website_resume_prompt.md`. This document does not track it.
 
 ---
 
