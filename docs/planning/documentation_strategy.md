@@ -49,80 +49,6 @@ The documentation system should grow deliberately, not randomly.
 
 ## Documentation Responsibility Model
 
----
-
-## Connector Access Documentation Rule
-
-Repository connector access may be used as the first-pass read-only source-loading mechanism for website build sessions when the needed files are committed and accessible through the connector.
-
-The goal is to reduce manual upload friction without weakening source-of-truth discipline.
-
-This affects documentation workflow ownership as follows:
-
-- `tensa_website_resume_prompt.md` owns the startup rule that connector reads should be attempted first for committed core context docs when connector access is available.
-- `documentation_closeout_protocol.md` owns the closeout rule that connector reads are allowed, but connector writes are disabled by default.
-- `website_state.md` summarizes the current connector workflow for future sessions.
-- `documentation_strategy.md` owns the distinction between connector-readable committed files and local working-tree truth.
-- Local repository output remains required for uncommitted changes, git status, tree verification, browser review, and link validation.
-
-Default connector posture:
-
-    read-only
-
-If write-capable connector tools become available later, the documentation system must treat those capabilities as disabled-by-policy unless Richard explicitly authorizes a specific write action in the current session.
-
-The normal repository-editing workflow remains local-first:
-
-    assistant reads and analyzes source docs
-    assistant provides local commands or replacement content
-    Richard applies changes locally
-    Richard reviews diffs
-    Richard commits and pushes manually
-
-Do not update this documentation model to assume connector write authority unless Richard deliberately changes that operating rule.
-
-Large-file connector write boundary:
-
-- connector full-file replacement must not be used for files over 1,000 lines
-- files over 1,000 lines should use connector reads for committed context and verification, with surgical edits performed locally
-- do not rebuild large files from connector chunks to bypass the full-file replacement limitation
-- files at or under 1,000 lines may use connector replacement only after full current context is reviewed and the specific write is authorized
-
----
-
-## Hybrid Source Loading Rule
-
-Future serious website sessions should use a hybrid source-loading model:
-
-1. Use connector reads for committed repository files when available.
-2. Ask Richard for local command output for current working-tree state.
-3. Ask Richard for full local file contents when a file may have uncommitted changes that differ from the connector version.
-4. Avoid giant all-doc upload bundles unless the connector is unavailable or many local-only changes must be reviewed together.
-5. Prefer targeted single-file full-context requests when editing closeout or planning docs.
-
-Connector reads are appropriate for:
-
-    committed AI-operations docs
-    committed planning docs
-    committed website state files
-    committed public HTML/CSS/JS files
-    committed repository map and source maps
-
-Richard-provided local context is required for:
-
-    uncommitted working-tree changes
-    current git status
-    current tree output
-    current local validation output
-    browser preview results
-    local files edited during the current session before commit
-
-Closeout and planning docs must not be edited from grep snippets alone.
-
-If a closeout or planning doc is being edited and the connector version may be stale, request the full current local file before editing.
-
-This rule exists to avoid regressing back to manual-upload overhead while also avoiding stale connector reads or grep-marker patching.
-
 Each documentation file should have one primary responsibility.
 
 A document may reference related areas, but it should not duplicate entire sections from other docs unless a compressed summary is required for restart context.
@@ -136,7 +62,7 @@ The internal documentation system should be organized around these responsibilit
 - page inventory
 - source-doc requirements
 - internal linking
-- documentation closeout
+- workflow and closeout
 - search indexing
 - public content style
 - Knowledge Base article template ownership
@@ -149,22 +75,21 @@ The internal documentation system should be organized around these responsibilit
 
 ---
 
+## Connector Access Documentation Rule
+
+When and how the GitHub connector may be used is set in `docs/ai-operations/operating_rules.md`, under "Editing through the GitHub connector". No other document owns a connector rule.
+
+---
+
+## Hybrid Source Loading Rule
+
+What a session loads at the start, and when local output from Rich is needed, is set in `docs/ai-operations/operating_rules.md`, under "Resuming".
+
+---
+
 ## Workflow Guardrail Ownership Rule
 
-TENSA website workflow guardrails are owned across the internal documentation system as follows:
-
-- `tensa_website_resume_prompt.md` owns fresh-session startup behavior, current operating rules, source loading, and the compact continuation handoff.
-- `documentation_closeout_protocol.md` owns end-of-session workflow, repository-boundary discipline, unknown-authority handling, local evidence requirements, local editor rules, and completion gates.
-- `documentation_strategy.md` owns which internal document is responsible for each workflow rule and when each doc should be updated.
-- `website_state.md` summarizes current workflow behavior only when future sessions need to know it.
-
-The active writable repository remains locked to `RichBayer/tensaengineering.dev` unless Richard explicitly expands the boundary.
-
-External repositories may be read as source context when required, but they must not be modified from a TENSA website workflow session.
-
-Workflow-only updates must not rewrite public page content, sitemap state, deployment state, indexing claims, branch closeout state, public page inventory, or next public build options unless Richard explicitly approves that website-state or public-content update.
-
-Any source-of-truth document not loaded or bundled in full during the current session is an unknown authority document and must not be modified or summarized as current state from memory.
+Every workflow rule is owned by `docs/ai-operations/operating_rules.md`: resuming, edits and commits, commands, connector use, public content checks, publishing and closeout. This document owns only which document is responsible for which subject.
 
 ---
 
@@ -173,6 +98,7 @@ Any source-of-truth document not loaded or bundled in full during the current se
 The current core documentation set is:
 
     docs/ai-operations/tensa_website_resume_prompt.md
+    docs/ai-operations/operating_rules.md
     docs/ai-operations/documentation_closeout_protocol.md
     docs/ai-operations/claude/claude_website_polish_resume_prompt.md
     docs/website_state.md
@@ -192,7 +118,7 @@ The current core documentation set is:
     docs/planning/search_indexing_strategy.md
     docs/planning/seo_topic_map.md
 
-These docs form the anti-drift system for website build sessions.
+None of these is loaded by default. A session reads the note, the operating rules and only the docs its task names.
 
 ---
 
@@ -202,39 +128,62 @@ These docs form the anti-drift system for website build sessions.
 
 Primary role:
 
-    Fresh-thread startup context.
+    The live note.
 
-This document should help a new AI session restart website work safely and quickly.
+This is the first file a fresh session reads. It lives on `main`.
 
-It should include compressed summaries of:
+It should include:
 
-- current public site state
-- current repo path
-- current public pages
-- branding structure
-- operating rules
-- source-doc rules
-- build-start checks
-- next recommended work
+- the date it was last updated
+- the two lanes, website work and Blog work
+- each lane's branch, active work and next step
+- the docs each lane's next step needs
+- parked items
 
 It should not become:
 
-- a complete website state document
-- a full information architecture document
-- a full page inventory
-- a full link strategy
-- a full source-doc map
+- a rule book
+- a website state document
+- a page list
+- a log of completed work
 
 Update when:
 
-- the public page set changes
-- the repo size or core structure changes
-- core operating rules change
-- current next steps change
-- major completed / incomplete work changes
-- new core context docs are added
+- active work, a next step or a parked item changes
 
-Keep it compressed.
+Cap: 40 lines.
+
+---
+
+### docs/ai-operations/operating_rules.md
+
+Primary role:
+
+    Every workflow rule, stated once.
+
+It should include:
+
+- resuming
+- edits and commits
+- commands given to Rich
+- editing through the GitHub connector
+- what to check before writing public content
+- publishing
+- closeout
+
+It should not become:
+
+- a website state document
+- a tracker of next steps
+- a content planning document
+
+Update when:
+
+- a real incident shows a rule is missing or wrong, by the one-in-one-out rule in `README.md`
+
+Where a planning doc and the operating rules disagree about workflow, the operating rules win.
+
+Cap: 150 lines.
 
 ---
 
@@ -242,40 +191,11 @@ Keep it compressed.
 
 Primary role:
 
-    End-of-session documentation workflow.
+    A pointer to the "Closeout" section of the operating rules.
 
-This document defines what must happen before a serious website build session is considered complete.
+It exists so older references to this path still resolve. It holds no rules and should not grow.
 
-It should include:
-
-- when closeout is triggered
-- required build-start or build-end checks
-- impacted-doc detection rules
-- closeout update order
-- completion gates
-- commit gates
-- full-file replacement rules
-- targeted verification after full-file replacements
-- public vs internal language rules
-
-It should not become:
-
-- a current website state document
-- a page inventory
-- a link strategy
-- a source-doc map
-- a content planning document
-
-Update when:
-
-- closeout workflow changes
-- required build-start or build-end checks change
-- documentation update rules change
-- completion gates change
-- commit/review workflow changes
-- full-file replacement or verification rules change
-
-Do not update it just because a public page was added unless the closeout workflow itself changed.
+Cap: 5 lines.
 
 ---
 
@@ -330,46 +250,30 @@ Richard performs final local review and publishes.
 
 Primary role:
 
-    Live-current-state record.
-
-This document describes what is true about the website right now.
+    The facts no other document owns.
 
 It should include:
 
-- current public pages
-- current page statuses
-- current repo size
-- current branding system
-- current navigation state
-- completed work
-- not-yet-completed work
-- next recommended steps
-- source docs used recently
-- working rules
-- current anti-drift context pack
+- branding and asset use
+- deployment and exposure facts
+- open decisions that have no other tracker
 
 It should not become:
 
-- the full long-term information architecture
-- the full page inventory
-- the full content source map
-- the full internal linking strategy
-- a build log
-- a style guide
-- a reusable Knowledge Base article template
+- a status report
+- a page list
+- a file tree
+- a log of completed work
+- a rule book
+- a list of next steps
 
 Update when:
 
-- serious website sessions change public pages
-- navigation changes
-- branding changes
-- repo structure changes
-- page statuses change
-- major planning docs are added
-- next recommended steps change
-- workflow rules change in a way future sessions need to know
+- a branding choice changes
+- a deployment fact changes
+- an open decision is made or added
 
-The website state document should reflect reality, not intention.
+Cap: 120 lines.
 
 ---
 
@@ -423,45 +327,29 @@ Do not update it for every small page edit.
 
 Primary role:
 
-    Repository structure and file map.
-
-This document maps the real repository tree and describes the purpose of key files and directories.
+    What each top-level directory is for.
 
 It should include:
 
-- current tree output
-- root file descriptions
-- asset directory descriptions
-- public page paths
-- internal documentation paths
-- missing/planned directories
-- recommended future structure
-- source-of-truth rules
-- build-start checks
+- the published directories and what each holds
+- the directories and files kept off the site
+- planned directories that do not exist yet
 
 It should not become:
 
-- a full website state document
-- a full strategy document
-- a page inventory table
-- a content source map
-- a Knowledge Base article template
+- a file tree
+- a file count
+- a per-file description list
+- a website state document
+- a page inventory
 
 Update when:
 
-- files are added
-- files are removed
-- directories are added
-- directories are removed
-- assets are added
-- major files are renamed or moved
-- repo structure changes enough that future AI sessions could drift
+- a top-level directory is added, removed or changes purpose
 
-Use the actual command output:
+For a current file list, use `git ls-files`.
 
-    tree -a -I '.git|.obsidian|node_modules|__pycache__'
-
-Do not update it from memory.
+Cap: 60 lines.
 
 ---
 
@@ -759,7 +647,6 @@ Relationship to other docs:
 - `page_inventory.md` owns whether an article exists, its status, and its next action.
 - `content_source_map.md` owns required factual source context before writing or rewriting an article.
 - `internal_linking_strategy.md` owns preferred destinations and reader-flow logic.
-- `website_state.md` records the current state of the site and notes that this template exists as part of the anti-drift context pack.
 
 ---
 
@@ -1061,195 +948,19 @@ Should check:
 - missing destination files
 - external links ignored or separately reported
 
-This script should eventually replace manual link-grep checks during closeout.
+This script would be the real link check the operating rules call for when links, routes or navigation change.
 
 ---
 
 ## Documentation Update Categories
 
-Documentation updates should be grouped by change type.
-
-### Public page changes
-
-If public pages are created, removed, renamed, or change status, update:
-
-    docs/planning/page_inventory.md
-    docs/website_state.md
-    docs/infrastructure/tensa_repository_map.txt
-
-Also update:
-
-    docs/planning/internal_linking_strategy.md
-
-if navigation or major topic destinations changed.
-
----
-
-### Navigation changes
-
-If primary navigation or major internal links change, update:
-
-    docs/planning/internal_linking_strategy.md
-    docs/planning/page_inventory.md
-    docs/website_state.md
-
-Also update affected HTML pages.
-
----
-
-### New public section
-
-If a new public section is created, update:
-
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    docs/planning/content_source_map.md
-    docs/website_state.md
-    docs/infrastructure/tensa_repository_map.txt
-
-If the new section changes long-term strategy, also update:
-
-    docs/planning/website_information_architecture.md
-
----
-
-### Factual project page expansion
-
-If a factual project page is significantly expanded, first check:
-
-    docs/planning/content_source_map.md
-
-Then update:
-
-    docs/planning/page_inventory.md
-    docs/website_state.md
-    docs/planning/internal_linking_strategy.md
-
-Update source map only if source requirements changed.
-
----
-
-### Branding or asset changes
-
-If branding assets or asset directories change, update:
-
-    docs/infrastructure/tensa_repository_map.txt
-    docs/website_state.md
-
-Update the resume prompt if the branding change affects future session continuity.
-
----
-
-### Workflow changes
-
-If build-start, closeout, full-file replacement, replacement verification, connector-read workflow, local-context loading, Claude polish workflow, or AI-session operating rules change, update:
-
-    docs/ai-operations/tensa_website_resume_prompt.md
-    docs/ai-operations/documentation_closeout_protocol.md
-
-Also update:
-
-    docs/ai-operations/claude/claude_website_polish_resume_prompt.md
-
-if the workflow change affects Claude handoff, prose polish rules, page-type modifiers, or factual proofing.
-
-Also update:
-
-    docs/website_state.md
-
-if the workflow change affects future build sessions.
-
----
-
-### Strategy changes
-
-If long-term site direction changes, update:
-
-    docs/planning/website_information_architecture.md
-    docs/website_state.md
-
-Update the resume prompt only if the change is important for fresh-session continuity.
-
----
-
-### New internal planning docs
-
-If a new internal planning doc is created, update:
-
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/documentation_strategy.md
-
-Also update:
-
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-
-if the new doc becomes part of the core anti-drift context pack or future sessions must load it.
-
-Also update:
-
-    docs/planning/page_inventory.md
-
-if the new internal doc is important enough to track in the internal continuity inventory.
-
-Do not update public pages, sitemap.xml, search indexing claims, or public navigation just because an internal planning doc was created.
-
----
-
-### Knowledge Base article template changes
-
-If the reusable long-form Knowledge Base article structure changes, update:
-
-    docs/planning/knowledge_base_article_template.md
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-
-Also update:
-
-    docs/planning/content_style_guide.md
-
-only if public voice, tone, cadence, or general writing standards changed.
-
-Also update:
-
-    docs/planning/content_source_map.md
-    docs/planning/internal_linking_strategy.md
-    docs/planning/page_inventory.md
-
-only if source requirements, link destinations, page status, or planned article tracking changed.
-
-The template document owns reusable article structure.
-
-It does not automatically change the public page inventory, sitemap, search indexing strategy, or live website state unless actual public pages changed.
+What to update at the end of a session is set in `docs/ai-operations/operating_rules.md`, under "Closeout". A planning doc is updated only when its own subject changed. The roles above say what each subject is.
 
 ---
 
 ## Replacement Verification Rule
 
-After each full-file replacement during closeout or live website editing, run a targeted verification check before moving to the next file.
-
-The verification should confirm the intended change actually landed and that old/stale text or links were removed when applicable.
-
-This rule belongs operationally in:
-
-    docs/ai-operations/documentation_closeout_protocol.md
-
-It should also be summarized in:
-
-    docs/ai-operations/tensa_website_resume_prompt.md
-    docs/website_state.md
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/page_inventory.md
-    docs/planning/internal_linking_strategy.md
-    docs/planning/content_source_map.md
-
-The rule exists to catch:
-
-- paste mistakes
-- missed saves
-- wrong-file edits
-- stale snippets
-- unintended partial replacements
+How edits are verified is set in `docs/ai-operations/operating_rules.md`, under "Edits and commits".
 
 ---
 
@@ -1259,9 +970,9 @@ Do not let internal docs compete for ownership.
 
 Use these boundaries:
 
-- Current reality belongs in `website_state.md`.
+- Branding and asset use, deployment and exposure facts, and open decisions belong in `website_state.md`.
 - Long-term structure belongs in `website_information_architecture.md`.
-- File tree belongs in `tensa_repository_map.txt`.
+- The file tree belongs to the repository itself (`git ls-files`). What each top-level directory is for belongs in `tensa_repository_map.txt`.
 - Page status belongs in `page_inventory.md`.
 - Source requirements belong in `content_source_map.md`.
 - Link destinations belong in `internal_linking_strategy.md`.
@@ -1273,12 +984,11 @@ Use these boundaries:
 - Blog article reader experience, quick-answer boxes, article metadata, CTAs, RSS/newsletter planning, and future article layout belong in `blog_reader_experience.md`.
 - Blog contact CTAs, reader-question handling, guest-post rules, collaboration, attribution, outbound-link, and affiliate/sponsored-link boundaries belong in `blog_engagement_strategy.md`.
 - Claude prose-polish workflow belongs in `claude_website_polish_resume_prompt.md`.
-- Session restart context belongs in `tensa_website_resume_prompt.md`.
-- Closeout workflow belongs in `documentation_closeout_protocol.md`.
+- Active work and the next step for each lane belong in `tensa_website_resume_prompt.md`, the note.
+- Workflow, closeout, and connector or local source loading belong in `operating_rules.md`.
 - Documentation ownership belongs in `documentation_strategy.md`.
 - Glossary scope and tooltip behavior belongs in `glossary_strategy.md`.
 - Search-answer optimization workflow belongs in `search_answer_optimization_template.md`.
-- Connector/local source loading workflow belongs in `documentation_strategy.md`, `documentation_closeout_protocol.md`, and `tensa_website_resume_prompt.md`.
 
 If a document begins duplicating another document too heavily, trim it back to summary-level references.
 
@@ -1286,19 +996,7 @@ If a document begins duplicating another document too heavily, trim it back to s
 
 ## Closeout Relationship
 
-This strategy document does not replace the closeout protocol.
-
-The closeout protocol defines the workflow.
-
-This documentation strategy defines the document ownership model.
-
-During closeout:
-
-1. Use the closeout protocol to determine what needs to be checked.
-2. Use this documentation strategy to determine which document owns each update.
-3. Update only the docs impacted by the actual session.
-4. Avoid broad cleanup unless explicitly approved.
-5. Keep documentation aligned with real repo state.
+The closeout steps are in `docs/ai-operations/operating_rules.md`. This document says only which document owns a subject.
 
 ---
 
@@ -1341,19 +1039,20 @@ When adding a new planning doc:
 1. Define its purpose.
 2. Define what it owns.
 3. Define what it does not own.
-4. Add it to the repository map.
-5. Add it to website state if it becomes part of core context.
-6. Add it to the resume prompt if future sessions must load it.
-7. Add it to page inventory if it is an important internal continuity doc.
-8. Add connector/local-context loading notes if the new doc affects startup or closeout behavior.
+4. Add it to the Current Core Documentation Set and the Document Roles in this document.
+5. Name it in the note, or in the operating rules' check-before-you-write list, only if a task must read it.
+6. Add it to page inventory if it is an important internal continuity doc.
+
+A new planning doc never sets workflow. If it would change how a session starts or closes, that change goes through the operating rules.
 
 ---
 
 ## Current Recommended Documentation Roadmap
 
-Current active documentation system now includes:
+The current documentation set is:
 
     docs/ai-operations/tensa_website_resume_prompt.md
+    docs/ai-operations/operating_rules.md
     docs/ai-operations/documentation_closeout_protocol.md
     docs/ai-operations/claude/claude_website_polish_resume_prompt.md
     docs/website_state.md
@@ -1387,39 +1086,9 @@ Do not create these until there is enough real need.
 
 ## Immediate Impact of This Document
 
-When this file changes, update related docs only if the documentation responsibility model, workflow rules, or current core documentation set changed.
+When this file changes, update another document only if what that document owns has changed.
 
-For this Blog planning closeout, impacted docs include:
-
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/website_information_architecture.md
-    docs/planning/page_inventory.md
-    docs/planning/content_source_map.md
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-
-Do not update:
-
-    public HTML files
-    sitemap.xml
-    robots.txt
-    public navigation
-    CSS
-    JavaScript
-
-unless real public Blog pages or public Blog links are created.
-
-The current Blog planning closeout created internal planning docs and structure-only scaffold directories.
-
-It does not create:
-
-- a public Blog page
-- a public Blog article route
-- a sitemap entry
-- a navigation target
-- an RSS feed
-- a newsletter signup
-- a live search-indexing claim
+A change here never touches public HTML, `sitemap.xml`, `robots.txt`, navigation, CSS or JavaScript.
 
 ---
 

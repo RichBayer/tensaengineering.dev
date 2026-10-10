@@ -1,0 +1,6 @@
+# Keeps internal planning and process docs off the published site.
+# This hides them from tensaengineering.dev only. They stay readable
+# on GitHub for as long as the repository is public.
+exclude:
+  - docs/
+  - README.md

@@ -1479,22 +1479,6 @@ This rule exists to catch:
 
 ## Anti-Drift Rules
 
-Always check:
-
-    docs/website_state.md
-    docs/ai-operations/tensa_website_resume_prompt.md
-    docs/planning/website_information_architecture.md
-    docs/infrastructure/tensa_repository_map.txt
-    docs/planning/content_source_map.md
-
-Before major work.
-
-Use full file replacements only.
-
-After each full-file replacement, run a targeted verification check before moving to the next file.
-
-No hidden changes.
-
-No guessing.
+How to start a session, how to edit and what to verify are set in `docs/ai-operations/operating_rules.md`. This document sets only which sources a page needs.
 
 Ask for source docs before writing factual project pages.
