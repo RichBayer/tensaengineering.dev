@@ -68,13 +68,15 @@ Active branch:
 
     feature/blog-public-foundation
 
-Current confirmed branch baseline before this documentation closeout:
+Current confirmed branch checkpoint (2026-10-10):
 
-    2c625a2 Harden website resume prerequisite gates
+    1b97a5c docs: add public launch gate for internal docs to resume prompt
 
-Current `main` baseline at the start of closeout:
+Current `main` baseline (2026-10-10):
 
-    c3d670f Add ecosystem registry pointer to TENSA website entrypoint
+    404b032 docs: reconcile homepage NeuroCore claims
+
+The branch contains all of main (merge 3951469). It differs from main only in internal planning and closeout docs.
 
 Current repository / public-site evidence:
 
@@ -85,6 +87,20 @@ Current repository / public-site evidence:
 - no Blog links are in public navigation
 - no Blog RSS feed, newsletter signup, comment system, guest-post system, or affiliate/sponsored-link system exists yet
 - no public HTML, CSS, JavaScript, navigation, sitemap, robots, branding, or route changes were made during the Blog pain-point research work
+
+Deployment and exposure (Verified 2026-10-10):
+
+- GitHub Pages builds from the main branch at the repository root (deploy from a branch)
+- anything merged into main is public within minutes
+- files under docs/ are served as readable text on the live site (checked with docs/website_state.md)
+- the repository is public on GitHub, so branch contents are readable there too
+- Richard states the GitHub account is on the free plan (not checked in billing settings); as far as known, Pages from a private repository needs a paid plan (not tested)
+- the Pages settings page showed "DNS Check in Progress" for the custom domain while the site was live; not investigated
+
+Public launch gate for internal docs:
+
+    Before the Blog merges into main, add a root _config.yml that excludes docs/ from the published site.
+    The full rule lives in docs/ai-operations/tensa_website_resume_prompt.md.
 
 Current Blog pain-point research state:
 
@@ -1479,11 +1495,17 @@ Social content:
 - documentation strategy updated to define ownership for Blog planning docs
 - page inventory updated to track Blog planning docs and future planned Blog public pages
 - content source map updated with future Blog page and article source requirements
+- merged main into feature/blog-public-foundation (3951469)
+- added the public launch gate for internal docs to the resume prompt (1b97a5c)
+- added Start Here lanes and refreshed baselines in the resume prompt (670a77e)
+- verified the GitHub Pages source and the public exposure of docs/ (2026-10-10)
 
 ---
 
 ## Not Yet Completed
 
+- public launch gate for internal docs: _config.yml excluding docs/ (required before the Blog merges into main)
+- decision on moving docs/ to a private repository (the _config.yml hides docs/ from the website only)
 - article-specific source packet for the leading AI Coding Blog candidate
 - GitHub Pages live deployment verification after the KB reading-experience merge and docs-only template closeout
 - live verification of the focused project-context article
@@ -1693,7 +1715,8 @@ Immediate continuation for the active Blog branch:
 7. Draft one AI Coding proof article.
 8. Build the AI Coding category page and Blog home after the proof article is validated.
 9. Do not add Blog navigation or sitemap entries until real public Blog pages exist, validate locally, and are ready to index.
-10. Keep separate Knowledge Base work, including the AI Operations category/index conversion, on its own focused branch.
+10. Before the Blog merges into main, apply the public launch gate for internal docs.
+11. Keep separate Knowledge Base work, including the AI Operations category/index conversion, on its own focused branch.
 
 Fresh-session priority:
 
