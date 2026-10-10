@@ -20,7 +20,7 @@ Two lanes. Ask Rich which one before reading anything else.
 - Do not restart the research from zero. It is recorded in `docs/planning/blog_strategy.md`.
 - Do not draft public HTML first. Order: source packet, then reader question, title, slug and Quick Answer, then outline, one proof article, validation, category page, Blog home.
 - The Blog stays on its branch until the proof article validates. No Blog navigation or sitemap entries until real pages exist and validate.
-- Read for it, all in `docs/planning/`: `blog_strategy.md`, `blog_reader_experience.md`, `blog_engagement_strategy.md`, `seo_topic_map.md`.
+- Read for it, from the Blog branch and not from `main`, whose copies are older: `blog_strategy.md`, `blog_reader_experience.md`, `blog_engagement_strategy.md`, `seo_topic_map.md`, all in `docs/planning/`.
 
 ## Parked
 
