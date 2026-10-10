@@ -29,19 +29,45 @@ Default working assumption:
 
 ---
 
+## Start Here: Pick A Lane
+
+A fresh session starts one of two kinds of work. Ask Richard which one, then load only what that lane needs.
+
+Website work:
+
+    Change or repair existing public pages, Knowledge Base articles, or site structure.
+    Use a focused branch off main.
+    Next candidate: AI Operations category / article index conversion.
+
+Blog work:
+
+    Build the public Blog on feature/blog-public-foundation.
+    Next step: the article-specific source packet for the leading usage-limit candidate.
+    Do not draft public HTML first. Follow the sequence in Current Next Website Direction.
+
+Both lanes:
+
+    GitHub Pages publishes from main at the repository root (Verified 2026-10-10).
+    Anything merged into main is public within minutes.
+    Blog work stays on its branch until the proof article validates.
+    Before the Blog merges into main, apply the public launch gate for internal docs.
+    Network and remote-access facts live in the home-network repository. Do not copy them here.
+
 ## Current Committed Baseline
 
 Current active Blog implementation / research branch:
 
     feature/blog-public-foundation
 
-Confirmed committed guardrail checkpoint on that branch before the current research closeout:
+Confirmed committed checkpoint on that branch (2026-10-10):
 
-    2c625a2 Harden website resume prerequisite gates
+    1b97a5c docs: add public launch gate for internal docs to resume prompt
 
-Confirmed `main` baseline at the start of this closeout:
+Confirmed `main` baseline (2026-10-10):
 
-    c3d670f Add ecosystem registry pointer to TENSA website entrypoint
+    404b032 docs: reconcile homepage NeuroCore claims
+
+The branch contains all of main (merge 3951469). It differs from main only in internal planning and closeout docs.
 
 Current repository / public-page evidence:
 
@@ -119,7 +145,15 @@ The public site itself was unchanged by this research work.
 
 ## Most Recent Completed Work
 
-Completed on `feature/blog-public-foundation` before this closeout:
+Completed 2026-10-10:
+
+- merged main into feature/blog-public-foundation (3951469); the branch was 4 commits behind and the merge was clean
+- added the public launch gate for internal docs (1b97a5c)
+- verified GitHub Pages builds from main at the repository root
+- verified files under docs/ are served on the live site
+- Richard states the GitHub account is on the free plan (not checked in billing settings); as far as known, Pages from a private repository needs a paid plan (not tested)
+
+Completed earlier on `feature/blog-public-foundation`, before 2026-10-10:
 
 - hardened the website resume startup protocol so historical candidate titles cannot bypass required Blog pain-point research
 - committed that guardrail repair as `2c625a2 Harden website resume prerequisite gates`
