@@ -424,8 +424,9 @@ The goal is to use public frustration as a signal for useful education.
 
 Status:
 
-    Active research.
-    No first public Blog article has been selected.
+    Article #1 selected 2026-10-11 after the source packet.
+    Question: Why does AI coding use up my usage limit so fast?
+    Title and slug confirmed 2026-10-11, recorded in the source packet below.
 
 Research checkpoint:
 
@@ -1103,7 +1104,95 @@ The final public title and slug come after the candidate is formally selected.
 
 Google Search Console should become an additional feedback source after public Blog pages begin earning impressions.
 
-No first public Blog article should be selected until this research gate is satisfied.
+The research gate for the leading candidate was satisfied and Article #1 was selected on 2026-10-11. The source packet is recorded below.
+
+### Source Packet: Article #1
+
+Decision date: 2026-10-11. Decision: select.
+
+Reader question:
+
+    Why does AI coding use up my usage limit so fast?
+
+Title and slug, confirmed 2026-10-11:
+
+    Why AI Coding Uses Up Your Usage Limit So Fast
+    /blog/ai-coding/why-ai-coding-uses-up-your-usage-limit.html
+
+Framing decision:
+
+The answer leads with the officially documented mechanics of how usage accrues. The continuity and repeated-work pattern is a secondary section, labeled as qualitative community reports.
+
+Official sources, read 2026-10-11. The help pages show only relative update dates.
+
+- Claude Code, manage costs: code.claude.com/docs/en/costs
+- Claude Code, how Claude remembers your project: code.claude.com/docs/en/memory
+- Claude Pro plan usage: support.claude.com/en/articles/8324991
+- How usage and length limits work: support.claude.com/en/articles/11647753
+- Usage limit best practices: support.claude.com/en/articles/9797557
+- Claude pricing: claude.com/pricing
+- Codex pricing and usage: learn.chatgpt.com/docs/pricing
+- Using Codex with a ChatGPT plan: help.openai.com/en/articles/11369540
+
+Supported for publication, after each page is read directly again:
+
+- Usage depends on conversation length, model, and task size and complexity.
+- Claude Code sends the full conversation with every request. Cached history is read at a lower rate, and the first message after a break longer than the cache lifetime reprocesses the context. This is documented for Claude Code only.
+- Compacting a large context is itself a large request in Claude Code.
+- Claude chat and Claude Code share one usage pool on paid plans, with five-hour windows and weekly limits.
+- The providers document ways to reduce usage. Anthropic lists clearing between unrelated tasks, keeping CLAUDE.md short, and matching the model to the job. OpenAI lists focused prompts, nested AGENTS.md files, disabling unused MCP servers, and smaller models. Both advise turning off unused tools.
+
+Not supported:
+
+- That documentation or memory files reduce usage, or any savings percentage.
+- A larger plan as the fix.
+- Per-plan figures from the Claude Code plan-limits help page (article 11145838), which still shows older model names.
+- Compaction as a general cause of usage drain.
+- Anything from Richard's own builds until it is measured.
+
+Community sources reopened 2026-10-11. These are self-selected reports, not prevalence evidence.
+
+- openai/codex#35935, openai/codex#25792 and openai/codex discussion #5799: user reports of repeated work after compaction. No maintainer reply was visible on the pages.
+- anthropics/claude-code#34556: closed by a maintainer because built-in auto memory now exists.
+- anthropics/claude-code#14227: state and maintainer reply not visible. Cost claims in it are anecdotal.
+- anthropics/claude-code#33464: about CLAUDE.md token footprint, not repeated work.
+
+Gaps:
+
+- Every official page was read through a summarizing fetch. Read each directly before publishing.
+- Issue states and dates were not visible for several sources.
+- A measured comparison (fresh session with a packet versus a long session) is planned after the weekly limit reset. Until it is run, the post makes no measured claim.
+
+Internal links, all present on main as of 2026-10-11:
+
+- /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+- /knowledge-base/ai-operations/
+- /knowledge-base/persistent-ai-memory/
+- /projects/neurocore.html
+
+Quick Answer, approved 2026-10-11:
+
+    Usage limits count the work behind each request, not only the code you type. Long conversations, large context, tool use, higher effort, and Claude Code sessions left idle past the cache lifetime all add up. Anthropic and OpenAI both publish ways to cut it, including turning off tools you aren't using, matching the model to the job, and keeping instruction files short.
+
+Outline, approved 2026-10-11:
+
+1. Header: breadcrumb Blog > AI Coding, subtitle, byline, date, read time.
+2. Quick Answer box.
+3. The Problem: you hit the limit and cannot see why.
+4. What People Usually Get Wrong: that usage is only what you type, or only the size of your code. No claim either way on upgrading plans.
+5. What Is Actually Happening: the documented mechanics, with one simple diagram of context being re-sent each turn.
+   - The full conversation goes with every request.
+   - Cached history is cheaper, but an idle gap past the cache lifetime means reprocessing (Claude Code only).
+   - Tools, connectors, web search, higher effort and model choice all add to it.
+   - Compacting a large context is itself a large request.
+   - Chat and Claude Code share one pool, with five-hour and weekly windows.
+6. Do This Instead: the documented levers per provider, with source links.
+7. What Some Users Report: community reports of repeated work after compaction, labeled self-selected and qualitative. Notes that one Claude Code issue was closed because auto memory exists, with no claim that this saves usage.
+8. Where This Fits in TENSA: continuity links to the AI Operations guide and Persistent AI Memory, with a NeuroCore mention that keeps current and future status separate.
+9. Freshness note: the check date, with a link to each provider's pricing and limits page and no per-plan numbers.
+10. Related reading and the AI coding contact CTA.
+
+Left out of the post: any measured result, any savings percentage, Richard's own builds, and any teaser about the planned measurement.
 
 ---
 
