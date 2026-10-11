@@ -1,6 +1,6 @@
 # TENSA Website: Now
 
-Updated: 2026-10-10
+Updated: 2026-10-11
 
 Two lanes. Ask Rich which one before reading anything else.
 
@@ -15,10 +15,10 @@ Two lanes. Ask Rich which one before reading anything else.
 
 - Branch: `feature/blog-public-foundation`. Do not start another Blog implementation branch.
 - Active: none.
-- Next step: build the article-specific source packet for the leading candidate, "Why does AI coding burn through my usage limit so fast?" Runner-up: "Why does my coding AI forget or repeat work?"
-- The candidate is a research question, not a locked title or slug. Those are decided after the source packet.
+- Next step: draft Article #1, "Why AI Coding Uses Up Your Usage Limit So Fast", from the Source Packet: Article #1 section of `blog_strategy.md`. The question, title, slug, Quick Answer and outline are approved there.
+- Selected 2026-10-11. Slug: `/blog/ai-coding/why-ai-coding-uses-up-your-usage-limit.html`. Read each official source page directly before publishing. A measured comparison is planned after the weekly limit reset; until it is run, the post makes no measured claim.
 - Do not restart the research from zero. It is recorded in `docs/planning/blog_strategy.md`.
-- Do not draft public HTML first. Order: source packet, then reader question, title, slug and Quick Answer, then outline, one proof article, validation, category page, Blog home.
+- Order: source packet, reader question, title, slug, Quick Answer and outline are done. Next the proof article, then validation, category page, Blog home.
 - The Blog stays on its branch until the proof article validates. No Blog navigation or sitemap entries until real pages exist and validate.
 - Read for it, from the Blog branch and not from `main`, whose copies are older: `blog_strategy.md`, `blog_reader_experience.md`, `blog_engagement_strategy.md`, `seo_topic_map.md`, all in `docs/planning/`.
 
