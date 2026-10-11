@@ -1133,6 +1133,14 @@ Official sources, read 2026-10-11. The help pages show only relative update date
 - Claude pricing: claude.com/pricing
 - Codex pricing and usage: learn.chatgpt.com/docs/pricing
 - Using Codex with a ChatGPT plan: help.openai.com/en/articles/11369540
+- xAI API rate limits: docs.x.ai/developers/rate-limits (page updated 2026-10-05). API only.
+- xAI prompt caching: docs.x.ai/developers/advanced-api-usage/prompt-caching (page updated 2026-03-16). API only.
+- xAI context compaction: docs.x.ai/developers/advanced-api-usage/context-compaction (page updated 2026-09-02). API only.
+- xAI tool usage details: docs.x.ai/developers/tools/tool-usage-details (page updated 2026-10-06). API only.
+- xAI Grok and Grok Build pages: x.ai/grok and x.ai/build. Neither states usage mechanics. x.ai/grok says only "Upgrade to SuperGrok for higher limits and multi-agent reasoning."
+- Account screens seen by Richard on 2026-10-11. They cannot be linked, so re-check the wording before publishing:
+  - ChatGPT plan limits panel: "Shared across Codex, Work, Workspace Agents, and ChatGPT for Excel. Chat conversations are not included."
+  - Grok Usage page: "Weekly SuperGrok Limit", with chat listed inside it. Tooltips: "Included usage with your subscription. Resets weekly. Used before your credits." and, for Extra Usage Credits, "Used once you hit your weekly included limit."
 
 Supported for publication, after each page is read directly again:
 
@@ -1141,6 +1149,10 @@ Supported for publication, after each page is read directly again:
 - Compacting a large context is itself a large request in Claude Code.
 - Claude chat and Claude Code share one usage pool on paid plans, with five-hour windows and weekly limits.
 - The providers document ways to reduce usage. Anthropic lists clearing between unrelated tasks, keeping CLAUDE.md short, and matching the model to the job. OpenAI lists focused prompts, nested AGENTS.md files, disabling unused MCP servers, and smaller models. Both advise turning off unused tools.
+- Whether chat counts against the limit differs by tool. The ChatGPT plan limits panel (seen 2026-10-11) and the OpenAI Codex help page say regular chat is not included in the Codex allowance. Claude chat and Claude Code share one pool. In Grok's account settings, chat usage sits inside the weekly SuperGrok limit.
+- xAI documents API mechanics only: cached prompt tokens are billed at a reduced rate, compaction itself uses tokens, and tool use sums tokens across an agent run. It does not publish how Grok app or Grok Build usage is counted.
+- Planning outside the coding tool's limit leaves that limit for the implementation. This follows from the documented split. The size of the effect is not measured.
+- Provider advice that matches the reader tips: clear between unrelated tasks, give specific prompts, provide only relevant files, turn off unused tools and servers, match model and effort to the job, keep instruction files short, plan before large changes, test incrementally, and check the usage page or dashboard.
 
 Not supported:
 
@@ -1149,6 +1161,11 @@ Not supported:
 - Per-plan figures from the Claude Code plan-limits help page (article 11145838), which still shows older model names.
 - Compaction as a general cause of usage drain.
 - Anything from Richard's own builds until it is measured.
+- How SuperGrok or Grok Build usage is counted beyond what the Grok Usage page and its tooltips say, including whether Grok Build shares the weekly limit.
+- How ChatGPT limits chat itself.
+- Any savings figure, or any claim that a plan-first workflow lowers total usage or makes the coding session cheaper.
+- Richard's two chat tests of 2026-10-11 (a full read of the NeuroCore repo in ChatGPT, then in Grok). They were single runs on different meters and different tasks, and are not comparable.
+- Third-party Grok limit figures, and the third-party report of a May 2026 Grok Build limit reset, which cites an X post that was not read.
 
 Community sources reopened 2026-10-11. These are self-selected reports, not prevalence evidence.
 
@@ -1162,6 +1179,9 @@ Gaps:
 - Every official page was read through a summarizing fetch. Read each directly before publishing.
 - Issue states and dates were not visible for several sources.
 - A measured comparison (fresh session with a packet versus a long session) is planned after the weekly limit reset. Until it is run, the post makes no measured claim.
+- The four GitHub issue URLs and their states came from the earlier packet and were not reopened after the draft was written. Open each before publishing.
+- The ChatGPT plan limits panel and the Grok Usage page are account screens that cannot be linked. Re-check their wording on the day of publishing.
+- No official xAI page describes the Grok Usage page, how usage is counted for SuperGrok or Grok Build, or whether Grok Build shares the weekly limit.
 
 Internal links, all present on main as of 2026-10-11:
 
@@ -1193,6 +1213,126 @@ Outline, approved 2026-10-11:
 10. Related reading and the AI coding contact CTA.
 
 Left out of the post: any measured result, any savings percentage, Richard's own builds, and any teaser about the planned measurement.
+
+Outline change, approved 2026-10-11: after item 6, add "A workflow some people use: plan in chat, build in the coding tool" and "Things to try". Grok is handled as in the draft text below: named only as a tool, with usage statements limited to what its account page says.
+
+Approved draft text, 2026-10-11. Delete this block once the Article #1 HTML exists. It is indented so its headings do not join this document's outline.
+
+    ## Header
+
+    Title: Why AI Coding Uses Up Your Usage Limit So Fast
+    Slug: /blog/ai-coding/why-ai-coding-uses-up-your-usage-limit.html
+    Breadcrumb: Blog > AI Coding
+    Subtitle: Your limit counts the work behind each request, not just what you type. Here is what the providers say is actually being counted, and what they say to do about it.
+    Byline: Richard Bayer | TENSA Engineering | Published October 2026 | read time to be set when the page is built
+    Meta description: Why AI coding tools burn through usage limits: the full conversation is re-sent each turn, tools and effort add up, and idle sessions reprocess context. What Anthropic and OpenAI recommend.
+
+    ## Quick answer
+
+    Usage limits count the work behind each request, not only the code you type. Long conversations, large context, tool use, higher effort, and Claude Code sessions left idle past the cache lifetime all add up. Anthropic and OpenAI both publish ways to cut it, including turning off tools you aren't using, matching the model to the job, and keeping instruction files short.
+
+    ## The problem
+
+    You sit down with a coding assistant, ask a handful of questions, make a few changes, and a couple of hours later you are told you have hit your limit. It does not feel like you did much, and nothing on the screen tells you where the usage went.
+
+    That gap between what you typed and what you were charged for is the whole story. The usage meter is not measuring your messages. It is measuring everything the model had to process to answer them.
+
+    ## What people usually get wrong
+
+    The common assumption is that usage tracks what you type, or maybe the size of the code you are working on. Ask a short question, use a little. Work on a small project, use a little.
+
+    That is not how either Anthropic or OpenAI describes it. Anthropic's help center says usage depends on "the length and complexity of your conversations," the features you use, the model, and the effort level. OpenAI's Codex pricing page lists "model choice, context, reasoning, tool use, retrieval, and caching." It also notes that "tasks that look similar can consume different amounts of your allowance." A one-line question can be expensive. It depends on what has to come along with it.
+
+    ## What is actually happening
+
+    The whole conversation goes with every request. Anthropic's Claude Code documentation says it plainly: Claude Code "sends your full conversation with every request." Each time the assistant runs a tool, such as reading a file, running a command or searching the code, it sends another request carrying those results. So the conversation does not cost once. It gets re-sent turn after turn, and it grows as you work.
+
+    [Diagram: three turns side by side. Each turn's request is drawn as a stack: instructions, every earlier message and tool result, then the new message on top. The stack gets taller each turn while the new message stays the same small size.]
+
+    Caching makes the repeat cheaper, but not free. Re-sent history is read from a cache at a lower rate. Anthropic notes that this means "a one-line question in a session that has been open all day still draws usage for the whole conversation." The cache also expires. In Claude Code, your first message after a break longer than the cache lifetime "misses the cache and reprocesses your full context." That idle-gap behavior is documented for Claude Code. Do not assume every tool works the same way.
+
+    Tools, effort and model choice all add to it. Anthropic's help center describes tools and connectors as "token-intensive" and says "higher effort uses more tokens." In Claude Code, extended thinking is on by default, and its default budget can be tens of thousands of tokens per request depending on the model. OpenAI says the same about Codex: "Every MCP server adds more context to your messages and uses more of your limit." Bigger models, more reasoning and more tools each mean more work per request.
+
+    Compacting a big conversation is itself a big request. When a conversation gets long, the assistant can summarize it to free up space. Anthropic's Claude Code docs point out that compacting "reads the conversation it summarizes, so compacting a large context is itself a large request." Starting fresh with /clear, by contrast, "costs nothing."
+
+    Chat and coding share one pool on Anthropic's paid plans. Activity across Claude on web, desktop, mobile and Claude Code "all draws from the same pool." That pool has a rolling five-hour session window with weekly limits on top. A long chat in the morning and a coding session in the afternoon come out of the same allowance. OpenAI describes Codex usage in five-hour and weekly windows too.
+
+    ## Do this instead
+
+    Both providers publish specific ways to make usage last. These come straight from their own docs.
+
+    Anthropic, for Claude Code (Manage costs effectively, code.claude.com/docs/en/costs):
+
+    - Clear between unrelated tasks with /clear. Stale context "wastes tokens on every subsequent message."
+    - Match the model to the job. Sonnet handles most coding work and costs less than Opus, so save the bigger model for the hard problems.
+    - Keep CLAUDE.md short. It loads at the start of every session, and Anthropic suggests keeping it under 200 lines. Move workflow-specific instructions into skills, which load only when used.
+    - Disable MCP servers you aren't using, and prefer command-line tools where one exists.
+    - Lower the effort level for simple tasks.
+    - Write specific prompts. "Improve this codebase" triggers broad scanning, while a precise request lets the assistant read less.
+
+    Anthropic, for Claude in general (support.claude.com articles 11647753 and 8324991): turn off tools and connectors you don't need, turn off extended thinking when you don't need it, ask related questions in one message, and don't re-upload the same file within a conversation.
+
+    OpenAI, for Codex (learn.chatgpt.com/docs/pricing):
+
+    - Keep prompts precise and remove context the task doesn't need.
+    - Provide only the relevant files.
+    - Shrink your AGENTS.md by nesting smaller files inside the repository.
+    - Limit the number of MCP servers.
+    - Consider whether a smaller model or a tighter scope would still get the job done.
+
+    The common thread is the same in both: send less, and make what you send count.
+
+    ## A workflow some people use: plan in chat, build in the coding tool
+
+    Whether chat counts against your limit depends on the tool. OpenAI's plan limits panel in ChatGPT says its allowance is "Shared across Codex, Work, Workspace Agents, and ChatGPT for Excel," and that "Chat conversations are not included." OpenAI's Codex help page (help.openai.com/en/articles/11369540) says the same about its credit view: "Regular Chat usage isn't included." Anthropic works differently. Claude chat and Claude Code come out of the same pool. In xAI's account settings, chat usage appears inside the weekly SuperGrok limit, which xAI describes as "Included usage with your subscription. Resets weekly. Used before your credits." xAI does not publish whether its coding tool draws from the same limit. This article does not cover how ChatGPT limits chat itself.
+
+    That suggests a way to split the work. Do the planning in a chat window whose usage does not count against the coding tool you will build in. Work out what you are building, in what order, which files are involved, and what done looks like. Write the result down as a plan and save it in your repo. Then start a fresh session in your coding tool, such as Claude Code, Codex, Grok Build or another coding assistant, and give it the plan plus only the context it needs. Planning in ChatGPT keeps that work out of Codex's allowance, and it does not touch Anthropic's or xAI's limits either, because those are separate accounts. Planning in Claude's chat before building in Claude Code draws on one pool both times.
+
+    Doing the planning outside the coding tool's limit means that limit goes further for the implementation. How much further depends on how much planning you would otherwise do inside the coding tool. We have not measured it, so we give no figure. What the providers document points the same way: a long conversation is re-sent with every request, Anthropic recommends clearing between unrelated tasks, and its help center advises giving complete context in your first message. A saved plan lets a fresh session start with that context instead of rebuilding it over a long back-and-forth. This is TENSA's suggestion, not a provider recommendation.
+
+    Two cautions. A chat window cannot see your repo, so the plan has to carry the details the coding tool will need. And keep secrets and private code out of any chat.
+
+    ## Things to try
+
+    These all come from the providers' own guidance. Change one at a time and watch your own usage meter. Results vary by tool, plan and project.
+
+    - Start fresh between unrelated tasks. Anthropic: stale context "wastes tokens on every subsequent message."
+    - Give a new session a written plan and only the files it needs. OpenAI recommends providing only relevant files and keeping prompts precise. Anthropic recommends specific prompts.
+    - Turn off tools and servers you aren't using. Both Anthropic and OpenAI say so.
+    - Use a smaller model, or lower the effort, for simple jobs. Anthropic and OpenAI both recommend this.
+    - Keep instruction files short. Anthropic suggests keeping CLAUDE.md under 200 lines. OpenAI suggests nesting smaller AGENTS.md files.
+    - Plan before a big change, test as you go, and stop early if it heads the wrong way. Anthropic recommends plan mode, incremental testing and early course-correction.
+    - Check whether your chat usage counts against the same limit as your coding tool. It differs by provider, and your account's usage page will show it.
+    - Check where your usage went. Claude Code's /usage shows a breakdown, and OpenAI points to its dashboard and /status.
+
+    ## What some users report
+
+    There is a second pattern people describe that the providers do not document as a usage cause, so treat it as anecdote. In public GitHub threads, some Codex users report that after a long session gets compacted, the assistant loses track of what it already did and repeats work (openai/codex#35935, openai/codex#25792, and discussion #5799). These are self-selected reports from people who chose to post. They do not tell you how common this is.
+
+    On the Claude Code side, a similar request for better memory between sessions (anthropics/claude-code#34556) was closed by a maintainer because Claude Code now has built-in auto memory. Nothing in Anthropic's docs says that memory reduces usage, and this article does not claim it does.
+
+    ## Where this fits in TENSA
+
+    Usage limits and continuity are separate problems that meet in the same place: a long session. The longer one conversation runs, the more it costs to keep sending it, and the more there is to lose when it gets summarized or cleared.
+
+    One way to deal with the continuity side is to keep project state outside the conversation, in files the assistant can reload. "How to keep AI from losing project context" (/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html) walks through that method, and the AI Operations section (/knowledge-base/ai-operations/) collects the rest. Persistent AI Memory (/knowledge-base/persistent-ai-memory/) explains why a context window is not the same thing as continuity.
+
+    NeuroCore (/projects/neurocore.html) is being built as a local-first platform around persistent understanding. It is the longer-term version of the same idea, and it is not something you can use to manage a usage limit today.
+
+    ## Freshness note
+
+    Checked October 11, 2026. Plans and limits change. For current numbers, see Claude pricing (claude.com/pricing), Anthropic's article "How do usage and length limits work?" (support.claude.com/en/articles/11647753), Codex pricing (learn.chatgpt.com/docs/pricing), and OpenAI's "Using Codex with your ChatGPT plan" (help.openai.com/en/articles/11369540).
+
+    xAI publishes how its API counts tokens (docs.x.ai/developers/rate-limits, docs.x.ai/developers/advanced-api-usage/prompt-caching and docs.x.ai/developers/advanced-api-usage/context-compaction) but does not publish how Grok app or Grok Build usage is counted, so this article says nothing about it beyond what the usage page in Grok's account settings shows. The statements about the ChatGPT and Grok usage pages come from account settings seen on October 11, 2026. Readers cannot link to them, so check your own account for the current wording.
+
+    ## Related reading and CTA
+
+    - Learn how to keep AI from losing project context (/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html)
+    - Explore the AI Operations section (/knowledge-base/ai-operations/)
+    - Read about Persistent AI Memory (/knowledge-base/persistent-ai-memory/)
+    - Explore NeuroCore (/projects/neurocore.html)
+
+    Running into a repeated AI coding failure? Send the pattern, not private code. It may become a future explanation article. Link: Contact TENSA Engineering (/contact.html)
 
 ---
 
