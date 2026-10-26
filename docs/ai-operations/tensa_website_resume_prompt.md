@@ -1,15 +1,16 @@
 # TENSA Website: Now
 
-Updated: 2026-10-11
+Updated: 2026-10-25
 
 Two lanes. Ask Rich which one before reading anything else.
 
 ## Website lane
 
-- Active: none.
+- Active: utility tool experiment (local LLM model recommender). Planning only so far; implementation saved for a fresh thread.
+- Branch: `docs/linux-calculator-toolkit-plan` (contains the full plan in `docs/linux-calculator-toolkit-plan.md`). Cut from main. Not merged.
 - Next up, not started: AI Operations category / article index conversion. Move the long-form content on `/knowledge-base/ai-operations/` into its own article page and leave the category page as an index.
-- Branch: `feature/kb-ai-operations-index`, cut from `main`. Not created yet.
-- Read for it, all in `docs/planning/`: `page_inventory.md`, `content_source_map.md`, `knowledge_base_article_template.md`, `internal_linking_strategy.md`.
+- Branch for that: `feature/kb-ai-operations-index`, cut from `main`. Not created yet.
+- Read for website work, all in `docs/planning/`: `page_inventory.md`, `content_source_map.md`, `knowledge_base_article_template.md`, `internal_linking_strategy.md`.
 
 ## Blog lane
 
