@@ -17,8 +17,10 @@ Keyword Planner research (US, Oct 2025–Sep 2026):
 ## Toolkit idea
 Start with 1–3 focused calculators on the new page (or small set of pages), then expand based on Search Console impressions.
 
-### Initial candidates (pick order after more research if needed)
-1. Disk / directory size estimator (practical for Linux users)
+### First calculator (decided)
+**Disk / directory size estimator** (practical for Linux users).
+
+### Later candidates
 2. Simple unit converter (KB/MB/GB/TB, binary vs decimal)
 3. Basic power / electricity cost estimator for a Linux machine or server
 
@@ -33,8 +35,8 @@ All calculations must be transparent (show formula + assumptions) and accurate f
 - Match existing page templates for consistency.
 
 ## Next actions (one at a time)
-1. Decide the first calculator to implement.
-2. Sketch the page structure, inputs, formula, and target title/H1.
+1. ~~Decide the first calculator to implement.~~ Done — Disk / directory size estimator.
+2. Sketch the page structure, inputs, formula, and target title/H1 for the first tool.
 3. Build and test the page on this branch (using existing templates).
 4. Merge to main only when ready (so it does not go live early).
 5. After publish: request indexing, monitor impressions, iterate.
