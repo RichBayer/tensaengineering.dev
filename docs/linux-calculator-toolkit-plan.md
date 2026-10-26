@@ -1,46 +1,37 @@
-# Linux Calculator Toolkit Plan
+# Utility Tool Experiment Plan
 
 ## Goal
-Build a small set of simple, accurate, client-side Linux-related calculators on tensaengineering.dev to attract organic search traffic (inspired by utility sites that rank for practical queries + ads). Keep everything low-maintenance and static.
+Build a simple, useful, client-side tool on tensaengineering.dev to attract organic search traffic (inspired by utility sites that rank for practical queries + ads). Keep everything low-maintenance and static. Must be easy to build and maintain.
 
-## Why this direction
-Keyword Planner research (US, Oct 2025–Sep 2026):
-- `linux calculator`: 100–1K monthly searches, low competition, with related terms also showing volume (`calc linux`, `linux calc`, etc.).
-- Compared to VRAM and power-cost ideas, this had the broadest related keyword expansion.
-- Fits existing site content (Linux diagnostics, local-first AI, homelab-adjacent topics).
+## Status
+**Linux calculator / disk estimator direction — SCRAPPED (2026-10-25).**
 
-## Page name and structure
-- Main page title / H1: **Linux calculators**
-- Individual tools named after specific keyword terms (e.g. Disk Usage Estimator, Unit Converter).
-- Use existing site page templates so the new page matches the rest of the site visually and structurally.
+Reason: People searching “linux calculator” (and related terms) are mostly looking for how to open the built-in GUI calculator or how to use terminal tools like `bc`/`calc`. Linux already has `du`/`ncdu`/file managers for disk usage. A pure web estimator or math calculator has weak unique value and limited search intent match.
 
-## Toolkit idea
-Start with 1–3 focused calculators on the new page (or small set of pages), then expand based on Search Console impressions.
+## Why we considered it
+Keyword Planner showed 100–1K volume for broader “linux calculator” terms with low competition, but deeper checks showed the intent was not a web tool.
 
-### First calculator (decided)
-**Disk / directory size estimator** (practical for Linux users).
+## Next direction
+Revisit other simple tool ideas that:
+- Match real search demand
+- Can’t already be done easily with a built-in command or app
+- Fit the existing site (Linux diagnostics, local-first AI, projects)
+- Are client-side only and easy to maintain
 
-### Later candidates
-2. Simple unit converter (KB/MB/GB/TB, binary vs decimal)
-3. Basic power / electricity cost estimator for a Linux machine or server
-
-All calculations must be transparent (show formula + assumptions) and accurate for the stated use case.
-
-## Technical approach
+## Technical approach (unchanged)
 - Static HTML + vanilla JavaScript (no backend).
-- New page(s) under something like `/tools/` or `/knowledge-base/tools/`.
-- Internal links from existing Linux diagnostics and related knowledge-base pages.
-- Add to sitemap after publishing.
-- Request indexing in Search Console once live.
-- Match existing page templates for consistency.
+- New page(s) using existing site templates.
+- Internal links from related knowledge-base pages.
+- Add to sitemap and request indexing after publishing.
+- Keep planning docs on this branch so they don’t go live.
 
 ## Next actions (one at a time)
-1. ~~Decide the first calculator to implement.~~ Done — Disk / directory size estimator.
-2. Sketch the page structure, inputs, formula, and target title/H1 for the first tool.
-3. Build and test the page on this branch (using existing templates).
-4. Merge to main only when ready (so it does not go live early).
-5. After publish: request indexing, monitor impressions, iterate.
+1. Choose a new first tool idea based on keyword research + unique value.
+2. Validate search intent for the new idea.
+3. Sketch the tool (inputs, outputs, formula/assumptions).
+4. Build and test on this branch.
+5. Merge to main only when ready.
 
 ## Notes
-- Branch: `docs/linux-calculator-toolkit-plan` (kept off main so GitHub Pages does not publish this planning content).
-- Site currently has near-zero non-brand clicks; this is an experiment to test utility-page traffic.
+- Branch: `docs/linux-calculator-toolkit-plan` (name kept for history; content is now general utility tool planning).
+- Site currently has near-zero non-brand clicks; this remains an experiment.
