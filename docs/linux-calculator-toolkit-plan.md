@@ -15,6 +15,24 @@ User enters their GPU VRAM (or unified memory). The page returns a curated list 
 ### Page title / H1
 **What local AI model can run on my PC?**
 
+### Initial curated model list (starting point)
+**~8 GB**
+- Llama 3.1 8B (Q4) — solid general chat
+- Gemma 2 9B (Q4) — good all-rounder
+- Small uncensored/abliterated 7–8B variant
+
+**~12–16 GB**
+- Qwen 2.5 14B (Q4) — strong general + coding
+- Phi-4 14B (Q4) — efficient and capable
+- Corresponding uncensored options where available
+
+**~24 GB**
+- Qwen 2.5 32B (Q4) — high quality general/coding
+- Llama 3.3 70B (Q4, tighter fit) — strong all-rounder
+- Notes on restricted vs unrestricted versions
+
+List will be refined and updated over time. Fit ranges based on common Q4 estimates with reasonable headroom.
+
 ### Why this version
 - Matches real search intent and beginner experience (many people don’t know about VRAM at first).
 - Educational angle fits the site’s knowledge-base style.
@@ -33,8 +51,8 @@ User enters their GPU VRAM (or unified memory). The page returns a curated list 
 
 ## Next actions (one at a time)
 1. ~~Choose direction and page structure.~~ Done.
-2. Define the initial curated model list and fit ranges.
-3. Build and test on this branch (using existing templates).
+2. ~~Define the initial curated model list.~~ Done (starting point above).
+3. Build and test the page on this branch (using existing templates).
 4. Merge to main only when ready.
 
 ## Notes
