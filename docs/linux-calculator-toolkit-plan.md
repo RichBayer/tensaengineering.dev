@@ -9,8 +9,13 @@ Keyword Planner research (US, Oct 2025–Sep 2026):
 - Compared to VRAM and power-cost ideas, this had the broadest related keyword expansion.
 - Fits existing site content (Linux diagnostics, local-first AI, homelab-adjacent topics).
 
+## Page name and structure
+- Main page title / H1: **Linux calculators**
+- Individual tools named after specific keyword terms (e.g. Disk Usage Estimator, Unit Converter).
+- Use existing site page templates so the new page matches the rest of the site visually and structurally.
+
 ## Toolkit idea
-Start with 1–3 focused calculators on a new page (or small set of pages), then expand based on Search Console impressions.
+Start with 1–3 focused calculators on the new page (or small set of pages), then expand based on Search Console impressions.
 
 ### Initial candidates (pick order after more research if needed)
 1. Disk / directory size estimator (practical for Linux users)
@@ -25,11 +30,12 @@ All calculations must be transparent (show formula + assumptions) and accurate f
 - Internal links from existing Linux diagnostics and related knowledge-base pages.
 - Add to sitemap after publishing.
 - Request indexing in Search Console once live.
+- Match existing page templates for consistency.
 
 ## Next actions (one at a time)
 1. Decide the first calculator to implement.
 2. Sketch the page structure, inputs, formula, and target title/H1.
-3. Build and test the page on this branch.
+3. Build and test the page on this branch (using existing templates).
 4. Merge to main only when ready (so it does not go live early).
 5. After publish: request indexing, monitor impressions, iterate.
 
