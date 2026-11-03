@@ -6,13 +6,11 @@ Two lanes. Ask Rich which one before reading anything else.
 
 ## Website lane
 
-- **Driveline page — content approved, layout pending:** branch `content/tensa-driveline-project-page`, source `docs/content/tensa_driveline_project_page.md`. Fresh thread: implement `/projects/driveline.html` in the existing card-rich project style (not KB article style); add Argus Ventures / Agent Operations glossary pop-ups and entries, project and home cards, metadata, sitemap/inventory, and validate links/mobile layout. Preserve approved copy and current-vs-planned limits. No public page yet; do not merge or publish until Rich reviews. Other website work below remains parked while this is selected.
-
-- Active: utility tool experiment (local LLM model recommender). Planning only so far; implementation saved for a fresh thread.
-- Branch: `docs/linux-calculator-toolkit-plan` (contains the full plan in `docs/linux-calculator-toolkit-plan.md`). Cut from main. Not merged.
-- Next up, not started: AI Operations category / article index conversion. Move the long-form content on `/knowledge-base/ai-operations/` into its own article page and leave the category page as an index.
-- Branch for that: `feature/kb-ai-operations-index`, cut from `main`. Not created yet.
-- Read for website work, all in `docs/planning/`: `page_inventory.md`, `content_source_map.md`, `knowledge_base_article_template.md`, `internal_linking_strategy.md`.
+- Active next: Local LLM Model Recommender — "What local AI model can run on my PC?"
+- Branch: `docs/linux-calculator-toolkit-plan` (historical branch name retained).
+- Next step: Resume the approved utility plan, verify current model specifications and memory-fit assumptions, then build and test the interactive page. Do not restart planning.
+- Read: `docs/linux-calculator-toolkit-plan.md` on the named branch, operating rules, and required website page-planning docs.
+- Queued afterward: AI Operations category/index restructuring on `feature/kb-ai-operations-index` (not yet created).
 
 ## Blog lane
 
