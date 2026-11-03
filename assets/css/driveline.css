@@ -1,0 +1,36 @@
+/* TENSA Driveline project-page enhancement; scoped to this page. */
+.driveline-hero-mark { isolation: isolate; }
+.driveline-hero-logo { width: min(360px, 100%); mix-blend-mode: screen; }
+
+.driveline-feature { margin: 0 0 78px; }
+.driveline-section-heading { max-width: 1060px; margin: 0 0 28px; }
+.driveline-section-heading h2 { max-width: 980px; margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.045em; }
+.driveline-diagram { max-width: 1180px; margin: 0 0 22px; padding: clamp(20px, 3.5vw, 38px); border: 1px solid rgba(57,255,136,.22); border-radius: 26px; background: radial-gradient(circle at 15% 5%, rgba(57,255,136,.105), transparent 55%), rgba(2,8,18,.72); box-shadow: 0 24px 70px rgba(0,0,0,.22); }
+.driveline-diagram-kicker { color: #65ff9a; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin: 0 0 22px; }
+.driveline-branch-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.driveline-node { display: flex; flex-direction: column; justify-content: center; gap: 9px; min-width: 0; padding: 22px 24px; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; background: linear-gradient(135deg,rgba(57,255,136,.075),rgba(255,255,255,.03)); }
+.driveline-node-tag { display: block; color: #65ff9a; font-size: 11px; letter-spacing: .12em; font-weight: 900; text-transform: uppercase; }
+.driveline-node strong { display: block; font-size: clamp(17px, 1.7vw, 22px); line-height: 1.22; color: #fff; }
+.driveline-node span:last-child { color: #c7d2df; font-size: 14px; line-height: 1.55; }
+.driveline-node-end { text-align: center; border-color: rgba(57,255,136,.4); background: rgba(57,255,136,.1); }
+.driveline-node-outcome { text-align: center; background: rgba(255,255,255,.035); }
+.driveline-merge-line { display: grid; place-items: center; height: 38px; font-size: 25px; color: #65ff9a; }
+.driveline-authority-flow { display: grid; grid-template-columns: minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr); gap: 10px; align-items: stretch; }
+.driveline-authority-flow .driveline-node { padding: 20px 18px; }
+.driveline-flow-arrow { display: grid; place-items: center; color: #65ff9a; font-size: 26px; }
+.driveline-diagram-note { color: #c7d2df; font-size: 14px; line-height: 1.55; margin: 20px 0 0; }
+.driveline-prose-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; align-items: stretch; }
+.driveline-prose-card.article-card { max-width: none; margin: 0; padding: clamp(24px, 3vw, 34px); border-radius: 24px; }
+.driveline-prose-card.article-card p { font-size: 16px; line-height: 1.74; margin-bottom: 18px; }
+.driveline-prose-card.article-card p:last-child { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .driveline-authority-flow { grid-template-columns: 1fr; gap: 10px; }
+  .driveline-flow-arrow { transform: rotate(90deg); font-size: 22px; }
+}
+@media (max-width: 700px) {
+  .driveline-feature { margin-bottom: 56px; }
+  .driveline-branch-grid, .driveline-prose-grid { grid-template-columns: 1fr; }
+  .driveline-diagram { padding: 19px; }
+  .driveline-node { padding: 18px; }
+  .driveline-prose-card.article-card p { font-size: 16px; }
+}
