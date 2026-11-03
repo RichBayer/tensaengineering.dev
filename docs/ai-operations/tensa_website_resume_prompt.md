@@ -1,10 +1,12 @@
 # TENSA Website: Now
 
-Updated: 2026-10-25
+Updated: 2026-11-02
 
 Two lanes. Ask Rich which one before reading anything else.
 
 ## Website lane
+
+- **Driveline page — content approved, layout pending:** branch `content/tensa-driveline-project-page`, source `docs/content/tensa_driveline_project_page.md`. Fresh thread: implement `/projects/driveline.html` in the existing card-rich project style (not KB article style); add Argus Ventures / Agent Operations glossary pop-ups and entries, project and home cards, metadata, sitemap/inventory, and validate links/mobile layout. Preserve approved copy and current-vs-planned limits. No public page yet; do not merge or publish until Rich reviews. Other website work below remains parked while this is selected.
 
 - Active: utility tool experiment (local LLM model recommender). Planning only so far; implementation saved for a fresh thread.
 - Branch: `docs/linux-calculator-toolkit-plan` (contains the full plan in `docs/linux-calculator-toolkit-plan.md`). Cut from main. Not merged.
