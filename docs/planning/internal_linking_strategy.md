@@ -102,6 +102,10 @@ Current footer navigation should use:
 
 ---
 
+## TENSA Driveline / Agent Operations engineering article series (local review)
+
+The TENSA Driveline project overview remains `/projects/driveline.html`. The Controlled AI Systems category is the primary discovery point for four focused Agent Operations engineering articles about boundaries, acceptance, recovery, and supervised multi-worker direction. The Knowledge Base homepage presents them as matching article cards. Cross-link individual articles by topic and link from the project page and Agent Operations glossary definition to the category collection. Do not publish or describe the older long-form draft as a public route.
+
 ## Link Destination Map
 
 Use these preferred destinations when topics appear in public pages.

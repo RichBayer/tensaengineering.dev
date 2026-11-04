@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Passing Tests Isn&#x27;t Software Acceptance | TENSA Engineering</title>
+  <meta name="description" content="Agent Operations coding experiments passed 123, 182, and 254 tests yet revealed blocking defects. Learn why independent review matters." />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/why-passing-tests-is-not-software-acceptance.html" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Why Passing Tests Isn&#x27;t Software Acceptance" />
+  <meta property="og:description" content="Agent Operations coding experiments passed 123, 182, and 254 tests yet revealed blocking defects. Learn why independent review matters." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/why-passing-tests-is-not-software-acceptance.html" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering branding on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Passing Tests Isn&#x27;t Software Acceptance" />
+  <meta name="twitter:description" content="Agent Operations coding experiments passed 123, 182, and 254 tests yet revealed blocking defects. Learn why independent review matters." />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why Passing Tests Isn't Software Acceptance", "description": "Agent Operations coding experiments passed 123, 182, and 254 tests yet revealed blocking defects. Learn why independent review matters.", "mainEntityOfPage": "https://tensaengineering.dev/knowledge-base/controlled-ai-systems/why-passing-tests-is-not-software-acceptance.html", "publisher": {"@type": "Organization", "name": "TENSA Engineering", "url": "https://tensaengineering.dev/"}, "author": {"@type": "Organization", "name": "TENSA Engineering"}, "image": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png", "inLanguage": "en-US"}</script>
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../assets/css/driveline-kb-series.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
+</head>
+<body>
+  <div class="site-bg"></div>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png" alt="TENSA Engineering" class="brand-logo" />
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/" class="active">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+      <a href="../../story/">Story</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Controlled AI Systems · Engineering series</p>
+        <h1>Why Passing Tests Isn&#x27;t Software Acceptance</h1>
+        <p class="kb-article-summary">What Agent Operations learned when coding workers passed their tests, but independent review still found defects that mattered.</p>
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="./">Controlled AI Systems</a>
+          <span class="kb-meta-description">Article 2 of 4 · Evidence checkpoint: November 2, 2026</span>
+        </div>
+      </header>
+      <article class="kb-article-body">
+        <section class="kb-section"><p>A green test suite is one of the most reassuring things a coding agent can report. It means that some executable checks ran and produced their expected results. It does not necessarily mean that the code meets the original requirements, that the tests covered important failure conditions, or that the implementation is ready to become part of a larger system. Those are different questions, and the difference became impossible to ignore during development of <strong><a class="glossary-term" data-definition="TENSA's supervised AI-assisted engineering execution system, distinct from the AI Operations continuity workflow." data-term="Agent Operations" href="../../glossary/#agent-operations">Agent Operations</a></strong>, TENSA Engineering's supervised coding-execution system.</p>
+<p>Agent Operations is the execution foundation being developed as part of <strong>TENSA Driveline</strong>, which aims to connect approved discovery and planning with controlled software implementation. Its early coding experiments were not simply demonstrations that AI could generate programs. They were attempts to understand what evidence is sufficient to accept software produced with limited human supervision. The most useful results included several cases where passing tests were not enough.</p>
+</section>
+<section class="kb-section"><h2>The result that changed the acceptance process</h2>
+<p>During a paired calibration, Claude Code and Codex worked on comparable engineering assignments. Both completed implementation and repair attempts within their assigned workflows. One candidate reached <strong>123 passing tests</strong>, while the other reached <strong>182 passing tests</strong>. Independent examination still found acceptance-blocking defects in both implementations. The issues included process behavior, execution boundaries, environment-related handling, and gaps in test coverage. The larger passing test count did not rescue a candidate that failed requirements the existing suite did not adequately exercise.</p>
+<p>A later Agent Operations component produced another revealing result. Its initial validation passed <strong>254 automated tests</strong>, yet independent review identified additional blocking defects. These were not reasons to declare automated testing useless; they showed the need to separate what a test proves from what the operator must ultimately decide. A test is evidence about the conditions it covers. Acceptance is a judgment about whether the candidate satisfies the approved requirements with remaining risk understood.</p>
+<p>This distinction becomes more important when the same model writes both the implementation and its tests. The model may faithfully encode a mistaken interpretation of the requirement in two places, producing a consistent but incorrect implementation. It may omit an error path, accept an invalid response, or make assumptions about how a process terminates. The suite can then pass perfectly while leaving the relevant defect undetected. The correct response is not to demand a bigger number of tests without examining what those tests mean.</p>
+</section>
+<section class="kb-section"><h2>Validation must describe a particular candidate</h2>
+<p>Even a carefully designed test suite can be misleading when it is detached from the final code. A worker might run the prescribed tests, make another small change, and then report the earlier result as evidence that the final implementation passed. A reviewer might inspect a committed diff while important untracked files sit outside it. In either case, the report describes something other than the software the operator is considering for acceptance.</p>
+<p>Agent Operations responded by treating the candidate's identity as part of the evidence. The current manually supervised foundation includes workspace validation, prescribed command execution, and an artifact inventory that identifies created and changed files. The intended managed review process must connect the starting revision, all relevant workspace changes, test outputs, and review findings to the same candidate. If the software changes after a test or a review, the relevant evidence may need to be refreshed.</p>
+<p>An early worker experiment exposed the inventory problem directly: an ordinary Git diff looked empty even though new implementation files existed. That experience helped establish why a complete file inventory matters. A reviewer should not have to infer the entire result from a worker's summary or one convenient view of the repository. Reproducibility starts with being able to say exactly what was built and examined.</p>
+<p>The prescribed validation command is also an important boundary. A coding worker may have reasonable ideas for additional checks, but it should not quietly substitute an easier test for the one the task requires. The operator needs to know what ran, where it ran, whether it finished, and which candidate it exercised. A recorded exit code and output have more value than a narrative such as “all checks look good,” although neither can establish that the coverage was sufficient on its own.</p>
+</section>
+<section class="kb-section"><h2>Independent review must have an independent job</h2>
+<p>A review process adds value only if it is able to challenge the builder. Asking the original coding session to rephrase its confidence is not independent review. Asking a second model whether the first model's summary sounds plausible is little better. A reviewer should receive the approved assignment, the actual changes, the relevant test evidence, and enough source context to identify defects the original implementation may have missed.</p>
+<p>The managed-worker design therefore gives the reviewer a distinct role. Its intended default is a fresh, read-only model from a different provider family than the builder. That separation does not guarantee correctness, but it reduces the risk of simply repeating the original assumptions. The reviewer reports findings and their evidence; it does not silently rewrite code, approve its own changes, or accept the task on the operator's behalf.</p>
+<p>A small October–November 2026 experiment demonstrated a meaningful part of that separation. Claude Code corrected a percentage calculation in a bounded fixture and ran the required focused test. Grok then performed a fresh, read-only review by inspecting the changed file and test. The recorded review showed actual file reads, no observed edits, and a reasoned assessment that identified limitations in test coverage and potential rounding considerations. Grok did <strong>not</strong> run the test itself, which remains an important limitation of that evidence. The two roles were distinguishable, but this was still a manually arranged experiment rather than an unattended managed-review lifecycle.</p>
+<p>This result matters because good review is not a popularity contest between models. If the builder and reviewer disagree, the system must make the disagreement visible and preserve the supporting evidence. Independent review is designed to surface uncertainty and defects before a person accepts the candidate; it does not transfer acceptance authority to whichever model sounds more certain.</p>
+</section>
+<section class="kb-section"><h2>Repair cannot become an infinite loop</h2>
+<p>When a reviewer finds a blocking defect, the candidate may require another implementation pass. This raises a subtle control problem: who decides that the coding worker may modify the work again, and for how long? In Agent Operations, the task packet carries a bounded repair policy. The current manual workflow allows defined repair attempts inside the approved scope and stops when the budget is exhausted or the work would require new authorization.</p>
+<p>This makes repair a controlled continuation of the original assignment rather than an open-ended instruction to “keep fixing it until everything is green.” Every repair changes the candidate. The tests must remain meaningful for the new version, and the findings that prompted repair must be examined again. A repair that resolves one defect while introducing another is not acceptance progress merely because the worker has completed another iteration.</p>
+<p>There is also a business consequence. Unlimited repair attempts can hide the real cost of an implementation. A result that required repeated model sessions, new test suites, additional reviews, and extensive operator intervention may be more expensive than a simpler approach, even if its final test count looks impressive. The useful unit is accepted software with evidence, not the volume of code or the number of agent turns.</p>
+<figure class="kb-visual-diagram ao-diagram" role="group"><figcaption>Figure 1. Tests and review inform acceptance, while blocking findings return to a separately authorized repair stage.</figcaption><div class="ao-flow-track"><div class="ao-flow-node"><strong>Candidate</strong><span>The actual files and revision</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Validation</strong><span>Prescribed tests and artifact inventory</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Independent review</strong><span>Findings based on the code</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Human acceptance</strong><span>A separate final decision</span></div></div><div class="ao-flow-return"><strong>Blocking finding →</strong> Authorized repair → new candidate → retest and re-review. No unbounded repair loop.</div></figure>
+</section>
+<section class="kb-section"><h2>The acceptance decision belongs to the engineer</h2>
+<p>The planned managed workflow is not intended to replace engineering judgment with a reviewer model's verdict. Validation can establish observed behavior. Independent review can identify defects and remaining risks. The person responsible for the work decides whether the evidence satisfies the task's acceptance criteria and whether any separate integration or delivery action is justified.</p>
+<p>This is especially important for a larger system such as TENSA Driveline. Its public project page describes a developing process that begins with discovery and planning, then moves toward supervised implementation. The current foundation has demonstrated bounded work, validation, independent technical review, and accepted components, but it has <strong>not</strong> demonstrated a complete unattended, multi-project acceptance and delivery service. The distinction between established steps and the intended integrated pipeline is part of the project's engineering honesty.</p>
+<p>The lesson from 123, 182, and 254 passing tests is not that those tests failed to matter. They were necessary evidence, and they helped expose where the testing strategy itself was incomplete. The mistake would have been treating an impressive count as a substitute for understanding the tested candidate, its requirements, and the unresolved defects. A system becomes more trustworthy when it can report that distinction clearly, including when the correct outcome is rejection.</p>
+<h3>Continue reading</h3>
+<p>The next article, <a href="./recovering-from-failed-ai-coding-tasks.html">Recovering From Failed AI Coding Tasks</a>, explains why a failed launch, an interrupted process, and a partially modified workspace need different recovery decisions. For the broader principles, see <a href="./">Controlled AI Systems</a> and <a href="../safe-tool-interaction/">Safe Tool Interaction</a>, or explore the <a href="../../projects/driveline.html">TENSA Driveline</a> project overview.</p>
+</section>
+        <section class="kb-reading-nav" aria-label="Article navigation">
+          <div class="kb-nav-card"><p>Category</p><a href="./">Controlled AI Systems</a></div>
+          <div class="kb-nav-card"><p>Project overview</p><a href="../../projects/driveline.html">TENSA Driveline</a></div>
+        </section>
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="./why-ai-coding-agents-need-enforced-boundaries.html">Why AI Coding Agents Need Enforced Boundaries</a>
+<a href="./recovering-from-failed-ai-coding-tasks.html">Recovering From Failed AI Coding Tasks</a>
+<a href="./from-coding-agents-to-supervised-engineering.html">From Individual Coding Agents to Supervised Engineering</a>
+
+            <a href="../../projects/driveline.html">TENSA Driveline</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../../knowledge-base/">Knowledge Base</a>
+          </div>
+          <p class="ao-series-related"><a href="./why-ai-coding-agents-need-enforced-boundaries.html">Previous article</a> · <a href="./recovering-from-failed-ai-coding-tasks.html">Next article</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="../../contact.html">Contact</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+    </nav>
+  </footer>
+</body>
+</html>

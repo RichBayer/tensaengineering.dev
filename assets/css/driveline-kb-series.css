@@ -1,0 +1,31 @@
+/* TENSA Driveline Knowledge Base series: reusable explanatory article diagrams */
+.kb-article-body .kb-section a:not(.glossary-term),
+.kb-article-body .kb-section a:not(.glossary-term):visited {
+ color: #39ff88; text-decoration: underline; text-underline-offset: .18em;
+}
+.kb-article-body .kb-section a:not(.glossary-term):hover,
+.kb-article-body .kb-section a:not(.glossary-term):focus-visible {color: #9dffbf;}
+.ao-diagram {padding: 1.35rem; overflow: hidden;}
+.ao-diagram figcaption {font-size: .92rem; color: #b6c7d6; line-height: 1.5; margin-bottom: 1.05rem;}
+.ao-flow-track {display: flex; align-items: stretch; gap: .5rem;}
+.ao-flow-node {min-width: 0; flex: 1; border: 1px solid rgba(57,255,136,.27); background: rgba(57,255,136,.055); border-radius: 14px; padding: .8rem; display: flex; flex-direction: column; gap: .42rem;}
+.ao-flow-node strong {color: #f3fcf7; line-height: 1.35; font-size: .96rem;}
+.ao-flow-node span {color: #b6c6d5; font-size: .85rem; line-height: 1.45;}
+.ao-flow-node small {margin-top: auto; color: #39ff88; font-weight: 700; font-size: .78rem;}
+.ao-flow-arrow {display: flex; align-items: center; justify-content: center; flex: 0 0 1.1rem; color: #39ff88; font-weight: 800;}
+.ao-flow-return {margin-top: 1rem; background: rgba(10,34,34,.6); border-left: 3px solid #39ff88; padding: .8rem .95rem; color: #c6d7d9; font-size: .92rem; line-height: 1.55;}
+.ao-flow-return strong {color: #39ff88;}
+.ao-decision-top {max-width: 29rem; margin: 0 auto 1rem;}
+.ao-branch-grid {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem;}
+.ao-branch {background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: .85rem;}
+.ao-branch strong {font-size: .96rem; color: #f1f7fa;}
+.ao-branch p {margin: .5rem 0 0; color: #bdccd8; font-size: .86rem; line-height: 1.45;}
+.ao-flow-center {text-align: center; color: #39ff88; font-weight: 900; font-size: 1.5rem; padding: .25rem;}
+.ao-maturity-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;}
+.ao-series-related {margin: 1.1rem 0 0;}
+@media (max-width: 760px) {
+ .ao-flow-track {flex-direction: column; gap: .3rem;}
+ .ao-flow-arrow {transform: rotate(90deg); flex: 0 0 .65rem;}
+ .ao-branch-grid,.ao-maturity-grid {grid-template-columns: 1fr;}
+ .ao-flow-node {padding: .75rem .9rem;}
+}

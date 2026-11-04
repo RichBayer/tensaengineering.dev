@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recovering From Failed AI Coding Tasks | TENSA Engineering</title>
+  <meta name="description" content="Why failed launches, interrupted workers, and partial code changes require different evidence and recovery decisions." />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/recovering-from-failed-ai-coding-tasks.html" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Recovering From Failed AI Coding Tasks" />
+  <meta property="og:description" content="Why failed launches, interrupted workers, and partial code changes require different evidence and recovery decisions." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/recovering-from-failed-ai-coding-tasks.html" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering branding on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Recovering From Failed AI Coding Tasks" />
+  <meta name="twitter:description" content="Why failed launches, interrupted workers, and partial code changes require different evidence and recovery decisions." />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Recovering From Failed AI Coding Tasks", "description": "Why failed launches, interrupted workers, and partial code changes require different evidence and recovery decisions.", "mainEntityOfPage": "https://tensaengineering.dev/knowledge-base/controlled-ai-systems/recovering-from-failed-ai-coding-tasks.html", "publisher": {"@type": "Organization", "name": "TENSA Engineering", "url": "https://tensaengineering.dev/"}, "author": {"@type": "Organization", "name": "TENSA Engineering"}, "image": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png", "inLanguage": "en-US"}</script>
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../assets/css/driveline-kb-series.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
+</head>
+<body>
+  <div class="site-bg"></div>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png" alt="TENSA Engineering" class="brand-logo" />
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/" class="active">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+      <a href="../../story/">Story</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Controlled AI Systems · Engineering series</p>
+        <h1>Recovering From Failed AI Coding Tasks</h1>
+        <p class="kb-article-summary">Why reliable recovery requires durable evidence about the assignment—not merely another prompt or a surviving terminal.</p>
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="./">Controlled AI Systems</a>
+          <span class="kb-meta-description">Article 3 of 4 · Evidence checkpoint: November 2, 2026</span>
+        </div>
+      </header>
+      <article class="kb-article-body">
+        <section class="kb-section"><p>Software development with an AI coding agent can look simple while the session is active. The worker receives an assignment, makes changes, runs a check, and reports what happened. That sequence becomes much harder to manage when a connection drops, the provider stops responding, a process times out, or the machine changes state. The important question is no longer just whether the model can continue writing code. It is whether the surrounding system can establish what work actually happened and safely decide what should happen next.</p>
+<p>This problem has shaped the development of <strong><a class="glossary-term" data-definition="TENSA's supervised AI-assisted engineering execution system, distinct from the AI Operations continuity workflow." data-term="Agent Operations" href="../../glossary/#agent-operations">Agent Operations</a></strong>, the supervised coding-execution foundation of <strong>TENSA Driveline</strong>. The practical goal is to reduce the amount of attention required to carry approved engineering work through implementation and review. That does not mean restarting an interrupted agent automatically. It means making interruption a recognizable state with appropriate evidence, limits, and authority to continue—or to stop.</p>
+</section>
+<section class="kb-section"><h2>A failed launch and a failed task are different events</h2>
+<p>Consider two interruptions that look similar from the operator's perspective. In the first, the provider command fails before a coding worker begins. In the second, the worker starts successfully, changes source files, runs part of its checks, and then disappears. Both may leave a failed command or a missing final report, but they carry very different consequences.</p>
+<p>The first incident may consume time and provider budget without creating a software candidate. The second may leave an incomplete candidate, unknown process state, untracked files, or test output tied to only part of the work. Repeating the task immediately could overwrite useful progress, duplicate changes, or spend a repair allowance twice. Treating both incidents as an ordinary “failed coding attempt” makes the factory's state and economics misleading.</p>
+<p>Agent Operations encountered this distinction directly when a provider launch failed before the model began executing. The lesson was that launch state needs to be recorded independently of the worker's narrative. A system must know whether the provider was invoked, whether a worker actually started, which actions were observed, and whether a candidate exists before it can classify the failure.</p>
+<p>That is why the manual foundation includes a launch envelope and process-supervision components. The launch envelope records the intended launch before the model runs; it is not itself a worker launcher. The process runner can supervise a specified command under its documented limits, but it is not an all-purpose containment or recovery mechanism. Those components help produce evidence. They do not automatically convert a failed provider session into a safely resumable coding assignment.</p>
+</section>
+<section class="kb-section"><h2>Recovery begins with the state outside the conversation</h2>
+<p>An interrupted model may have had valuable reasoning in its conversation context, but that internal state should not be treated as a durable project record. When the session is unavailable, another model—or even the same model in a fresh session—cannot assume it remembers all decisions, actions, and environmental changes. The reliable starting point is the current approved task and the observable external state.</p>
+<p>For an Agent Operations assignment, that means examining the task packet, starting revision, current workspace, created and modified artifacts, available tool-event records, prescribed validation output, and prior review findings. It also means identifying what is missing. A statement that “the agent probably finished the edit” has no place in an acceptance decision unless the file and its relevant evidence confirm it.</p>
+<p>This approach is related to, but distinct from, <strong><a class="glossary-term" data-definition="TENSA's internal continuity workflow for project context, handoffs, and repeatable AI-assisted development." data-term="AI Operations" href="../../glossary/#ai-operations">AI Operations</a></strong>, TENSA's internal workflow for preserving development continuity between human/model sessions. AI Operations helps keep planning, decisions, handoffs, and project context available across conversations. Agent Operations governs actual coding tasks and must determine whether a particular execution may proceed. A good handoff note can help the next operator understand a problem; it cannot authorize a worker to act outside its packet or prove that unobserved commands succeeded.</p>
+<p>The separation prevents a dangerous shortcut. A fresh session might produce a persuasive summary of previous work, but the summary should be checked against the codebase and recorded evidence. Durable information may support continuation; it does not replace the need to verify the current candidate.</p>
+</section>
+<section class="kb-section"><h2>What a surviving process proves—and what it does not</h2>
+<p>During the managed-worker upgrade, Agent Operations tested what happened to a deliberately detached process when the remote operator disconnected and later reconnected. In a controlled follow-up, the process continued writing its expected heartbeat records; all <strong>18 of 18</strong> expected records were observed across the disconnect/reconnect. This was a useful confirmation of one process-survival configuration.</p>
+<p>It did not explain an earlier interruption whose cause remained uncertain. More importantly, it did not prove that a coding assignment could recover its model state or safely resume after an arbitrary crash. Keeping a process alive and restoring trustworthy work are different engineering achievements. A heartbeat indicates that the observed process was active at particular points; it does not establish that the worker's output is correct, that its state is complete, or that it can be restarted without duplication.</p>
+<p>A robust recovery design therefore has to distinguish among at least three conditions: an active worker with observed progress, a known stopped worker with recoverable external state, and an ambiguous run whose effects cannot be established. The third condition should not be forced into either of the first two merely to keep the dashboard looking healthy.</p>
+<p>This also limits what a future operator interface can truthfully display. “Worker unavailable” is not the same state as “task failed.” “Process finished” is not the same state as “software accepted.” A useful view of Agent Operations should show the difference, including when the next required action is human investigation rather than automatic retry.</p>
+</section>
+<section class="kb-section"><h2>Cancellation and repair budgets need durable ownership</h2>
+<p>Recovery is also an authority problem. Suppose a worker reaches the end of its approved repair budget, then its session disconnects. A fresh model should not receive a renewed budget simply because its predecessor's chat history is gone. The approved assignment, not the worker's memory, must own the allowance and any remaining scope. The same rule applies to task dependencies, provider spending limits, and the right to request additional permissions.</p>
+<p>Cancellation creates a related challenge. A system can send a stop request without proving that every child process has stopped or that no more files will change. In the Agent Operations provider experiments, hard timeouts were observed, but graceful cancellation and genuine model-state restoration remained unproven. Those are not minor details to paper over. A system that cannot confirm its worker has stopped should not confidently launch a conflicting replacement into the same workspace.</p>
+<p>The intended managed architecture needs to preserve durable execution states, make retries conditional on the observed outcome, and ensure that a resumed worker cannot grant itself new task authority. The exact implementation of that recovery layer is a later development milestone. It is not a capability established by the current manually supervised foundation or the disconnected-heartbeat test.</p>
+<figure class="kb-visual-diagram ao-diagram" role="group"><figcaption>Figure 1. An interrupted assignment must be classified from observable state before any retry or continuation.</figcaption><div class="ao-decision-top"><div class="ao-flow-node"><strong>Interrupted assignment</strong><span>What do the launch and workspace records prove?</span></div></div><div class="ao-branch-grid"><div class="ao-branch"><strong>No worker started</strong><p>Record launch failure. Seek authorization before retrying.</p></div><div class="ao-branch"><strong>Worker changed state</strong><p>Inspect files, tool events, tests, and remaining permissions.</p></div><div class="ao-branch"><strong>State cannot be established</strong><p>Stop and require investigation. Do not guess or restart blindly.</p></div></div></figure>
+</section>
+<section class="kb-section"><h2>Recovery should be designed into the first task</h2>
+<p>It is tempting to develop recovery only after a system begins running many workers. In practice, even one long-running coding task benefits from clear failure classification and retained evidence. When a worker stops unexpectedly, the operator should be able to identify the approved task, inspect exactly what changed, determine which checks can still be trusted, and either continue or reject the candidate without rebuilding the entire story from chat history.</p>
+<p>That principle shaped Agent Operations after its September 2026 reset. The reset removed weeks of accumulated process complexity and returned to a validated supervised baseline, but it did not remove the requirement for evidence and recoverability. Instead, it sharpened the standard for adding complexity: the next mechanism has to resolve a demonstrated operational burden. A large theoretical recovery framework would not be valuable if it added more effort to ordinary tasks than it saved.</p>
+<p>The current evidence supports a deliberately modest conclusion. The foundation has useful components for recording task identity, launch intent, changes, tests, and process behavior. Selected detached-process survival has been demonstrated. It does not yet support unattended recovery across arbitrary provider failures, transparent restoration of model context, or automatic rescheduling of partial work. That is the boundary between a credible development direction and an operational claim.</p>
+</section>
+<section class="kb-section"><h2>The lesson for a managed engineering system</h2>
+<p>A trustworthy coding system should be able to say, “We know the task never started,” “We know the worker changed these files but did not finish validation,” or “We cannot establish what happened after this point.” Each statement leads to a different next action. None requires pretending that the model's last message is an authoritative record of its work.</p>
+<p>Recovery is successful when the project retains enough trustworthy information to avoid repeating or accepting work blindly. Sometimes the correct continuation is another bounded execution attempt. Sometimes it is a fresh review of partial artifacts. And sometimes it is a stop condition requiring human approval. The purpose is not uninterrupted agent activity; it is preserving the integrity of the engineering process across interruptions.</p>
+<h3>Continue reading</h3>
+<p>The fourth article, <a href="./from-coding-agents-to-supervised-engineering.html">From Individual Coding Agents to Supervised Engineering</a>, examines how those same state and authority problems grow when coordinating workers across multiple projects. See also <a href="../../projects/driveline.html">TENSA Driveline</a> for the broader project direction and <a href="../ai-operations/">AI Operations</a> for development-session continuity, which serves a separate purpose from execution recovery.</p>
+</section>
+        <section class="kb-reading-nav" aria-label="Article navigation">
+          <div class="kb-nav-card"><p>Category</p><a href="./">Controlled AI Systems</a></div>
+          <div class="kb-nav-card"><p>Project overview</p><a href="../../projects/driveline.html">TENSA Driveline</a></div>
+        </section>
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="./why-ai-coding-agents-need-enforced-boundaries.html">Why AI Coding Agents Need Enforced Boundaries</a>
+<a href="./why-passing-tests-is-not-software-acceptance.html">Why Passing Tests Isn&#x27;t Software Acceptance</a>
+<a href="./from-coding-agents-to-supervised-engineering.html">From Individual Coding Agents to Supervised Engineering</a>
+
+            <a href="../../projects/driveline.html">TENSA Driveline</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../../knowledge-base/">Knowledge Base</a>
+          </div>
+          <p class="ao-series-related"><a href="./why-passing-tests-is-not-software-acceptance.html">Previous article</a> · <a href="./from-coding-agents-to-supervised-engineering.html">Next article</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="../../contact.html">Contact</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+    </nav>
+  </footer>
+</body>
+</html>

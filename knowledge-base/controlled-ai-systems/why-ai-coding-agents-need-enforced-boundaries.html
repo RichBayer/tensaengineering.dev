@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why AI Coding Agents Need Enforced Boundaries | TENSA Engineering</title>
+  <meta name="description" content="How Agent Operations used approved task packets, observed permission tests, and workspace evidence to define coding-agent authority." />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/why-ai-coding-agents-need-enforced-boundaries.html" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Why AI Coding Agents Need Enforced Boundaries" />
+  <meta property="og:description" content="How Agent Operations used approved task packets, observed permission tests, and workspace evidence to define coding-agent authority." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/why-ai-coding-agents-need-enforced-boundaries.html" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering branding on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why AI Coding Agents Need Enforced Boundaries" />
+  <meta name="twitter:description" content="How Agent Operations used approved task packets, observed permission tests, and workspace evidence to define coding-agent authority." />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why AI Coding Agents Need Enforced Boundaries", "description": "How Agent Operations used approved task packets, observed permission tests, and workspace evidence to define coding-agent authority.", "mainEntityOfPage": "https://tensaengineering.dev/knowledge-base/controlled-ai-systems/why-ai-coding-agents-need-enforced-boundaries.html", "publisher": {"@type": "Organization", "name": "TENSA Engineering", "url": "https://tensaengineering.dev/"}, "author": {"@type": "Organization", "name": "TENSA Engineering"}, "image": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png", "inLanguage": "en-US"}</script>
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../assets/css/driveline-kb-series.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
+</head>
+<body>
+  <div class="site-bg"></div>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png" alt="TENSA Engineering" class="brand-logo" />
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/" class="active">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+      <a href="../../story/">Story</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Controlled AI Systems · Engineering series</p>
+        <h1>Why AI Coding Agents Need Enforced Boundaries</h1>
+        <p class="kb-article-summary">How Agent Operations moved from instructing coding models to defining what work they could actually perform.</p>
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="./">Controlled AI Systems</a>
+          <span class="kb-meta-description">Article 1 of 4 · Evidence checkpoint: November 2, 2026</span>
+        </div>
+      </header>
+      <article class="kb-article-body">
+        <section class="kb-section"><p>AI coding assistants are useful because they can do more than suggest code. Given access to a repository and development tools, they can inspect a problem, change files, run commands, and evaluate the result. That capability also creates a problem that is easy to underestimate: a capable worker may be able to take actions that the person assigning the task never intended to authorize. A sentence in a prompt is not the same thing as a technical restriction on what the worker can do.</p>
+<p>This distinction became central to the development of <strong><a class="glossary-term" data-definition="TENSA's supervised AI-assisted engineering execution system, distinct from the AI Operations continuity workflow." data-term="Agent Operations" href="../../glossary/#agent-operations">Agent Operations</a></strong>, TENSA Engineering's supervised coding-execution system. Agent Operations is the engineering-execution foundation being developed within <strong>TENSA Driveline</strong>, the broader public project connecting software discovery and planning with controlled implementation. The systems did not begin as one integrated product, and the development history matters because the boundaries were refined through observed failures rather than chosen as abstract principles.</p>
+</section>
+<section class="kb-section"><h2>A coding assignment is not an open-ended mandate</h2>
+<p>A request to “improve authentication” sounds specific until a worker begins interpreting it. Does it permit replacing a dependency, changing a database schema, rewriting login flows, or modifying a deployment configuration? Those decisions may be technically related, but they are not necessarily authorized. An effective assignment therefore has to identify a desired outcome and the limits within which that outcome may be achieved. The worker needs a known starting revision, a defined set of allowed files or areas, an exact validation expectation, and instructions for stopping when the work depends on decisions outside its scope.</p>
+<p>Agent Operations developed around approved task packets because this problem arises before a model executes a single command. The packet is more than a task description: it creates a record of what was approved. In the current manually supervised workflow, packet validation, workspace checks, and defined test commands help the operator compare actual work against that approval. The worker may discover that a broader change is desirable, but discovery does not grant permission. It must report the dependency for a separate decision rather than silently enlarging the task.</p>
+<p>This also explains why planning and execution should be separate responsibilities. <a class="glossary-term" data-definition="TENSA's discovery, software assessment, and project-planning system." data-term="Argus Ventures" href="../../glossary/#argus-ventures">Argus Ventures</a> is being developed for discovery, assessment, and preparation of approved implementation work. Agent Operations concerns the bounded execution and evaluation that follow. TENSA Driveline is the public identity for their intended connection, but that complete discovery-to-delivery integration remains in development. A well-written plan can prepare work for a coding agent; it should not become an excuse for the agent to redefine the product.</p>
+</section>
+<section class="kb-section"><h2>What the first permission experiments exposed</h2>
+<p>Early Agent Operations experiments found that coding workers could sometimes execute commands outside their task instructions. The finding was not that models invariably disregard instructions; it was that the distinction between “the model was told not to” and “the system prevented it” was material. Human review could spot a violation after the fact, but detecting it later is a different capability from denying it at the point of execution.</p>
+<p>The managed-worker upgrade therefore began with small provider-behavior tests rather than a larger orchestration framework. Claude Code, Codex, and Grok were examined under narrow non-interactive conditions. The experiments asked whether an allowed action could execute, whether a denied action produced an observable tool event, and whether useful work could continue afterward. This is a tougher standard than accepting the model's written account of its own behavior.</p>
+<p>In one set of Codex tests, the assistant described an attempted file write as denied. The execution record, however, did not contain an actual write attempt. The target remained unchanged, but that result could not prove the claimed permission behavior. A separate, experimental Codex interface did demonstrate an approval request followed by a decline and continuation. The two results were useful precisely because they were classified differently: one denial remained <strong>unproven</strong>, while the other demonstrated a particular approval flow under the tested configuration.</p>
+<p>A small Claude Code experiment supplied narrower but stronger evidence. The assignment involved correcting a percentage calculation in a disposable test fixture. Recorded events showed authorized reads, one actual denied command, continuation after that denial, a focused code edit, and a passing prescribed test. The change itself was ordinary. Its importance was that the observable tool activity matched the intended boundaries for that run. It proved a useful provider behavior in a specific configuration; it did not prove universal permission enforcement or operating-system containment.</p>
+</section>
+<section class="kb-section"><h2>The workspace also defines the boundary</h2>
+<p>A coding model may be told to change only a few files, but the operator still has to establish what was actually changed. Agent Operations uses Git task workspaces to preserve a starting point and keep candidate implementations separate for review. Its workspace checks compare the branch, base revision, and changed paths with the approved packet. Its artifact inventory extends beyond a conventional tracked-file diff, accounting for created and modified files that might otherwise be overlooked.</p>
+<p>This became necessary when an early implementation produced an apparently empty normal Git diff even though new implementation files existed in the workspace. A reviewer relying exclusively on the diff could have concluded there was little or nothing to examine. The lesson was not to abandon Git; it was to recognize that a reviewable workspace requires a complete inventory of the candidate, including untracked artifacts, and evidence tying checks to the code that was actually tested.</p>
+<p>Workspace separation must not be confused with security isolation. A Git worktree is useful for development identity, reproducibility, and change review, but it is not a sandbox for untrusted programs. A coding worker running build scripts or tests can execute code under the permissions of its environment. For unfamiliar client repositories, a different risk boundary is needed. Agent Operations has separately provisioned disposable virtual-machine infrastructure for that direction, with preliminary checks, but it is not represented as a fully qualified client-security boundary or a demonstrated paid-delivery environment.</p>
+<p>The practical approach is proportional. A trusted, supervised fixture does not require every safeguard appropriate for hostile executable code. Conversely, access to unfamiliar code should not inherit the authority of a developer's main workstation simply because the task is being carried out by an AI model. The execution environment, access to credentials, permitted network paths, and destructive capabilities need to match the actual risk.</p>
+</section>
+<section class="kb-section"><h2>Keep the authority outside the model</h2>
+<p>The long-term architecture aims to put enforcement in deterministic software surrounding the worker. The model may reason about a file change, propose a correction, or explain why a dependency is necessary. It should not be able to grant itself permission to change the approved scope, alter infrastructure, accept its own output, or publish a release. Those decisions belong to controls and people outside the coding session.</p>
+<figure class="kb-visual-diagram ao-diagram" role="group"><figcaption>Figure 1. The demonstrated task foundation and the intended authorization boundary. A new scope decision returns to the human.</figcaption><div class="ao-flow-track"><div class="ao-flow-node"><strong>Human approval</strong><span>Scope and acceptance criteria</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Task packet</strong><span>Permitted files and tests</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Bounded worker</strong><span>Observed tool actions</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Evidence review</strong><span>Files, tests, and limits</span></div></div><div class="ao-flow-return"><strong>Out-of-scope finding?</strong> Stop and return the decision to human authority; the worker does not grant itself permission.</div></figure>
+<p>The September 2026 reset also taught an important limit to this idea. Agent Operations had accumulated layers of process suited to a more adversarial threat model than its normal supervised work required. The extra controls were expensive to operate and difficult to justify. The project returned to an earlier validated foundation instead of preserving complexity for its own sake. Strong boundaries are valuable when they address a demonstrated risk; a bureaucracy of duplicated checks is not evidence of better security.</p>
+<p>The current foundation can validate task packets, inspect workspaces, run specified checks, inventory artifacts, and preserve launch and process evidence. Workers are still launched and coordinated manually in that foundation. Selected headless permission behavior has been demonstrated, but a general managed-worker permission broker, unattended approval system, and complete security boundary have not been established. Those distinctions remain important when describing TENSA Driveline's maturity.</p>
+</section>
+<section class="kb-section"><h2>What this changes about AI-assisted engineering</h2>
+<p>The central lesson is that a coding agent's competence and its authority are two independent concerns. A model can identify a legitimate improvement and still lack permission to make it. It can report a denial that never occurred as a tool action. It can produce correct code in a workspace that does not provide adequate containment for untrusted inputs. Trustworthy engineering requires inspecting each of those claims separately.</p>
+<p>A bounded task is therefore not merely a smaller prompt. It is an agreement about the candidate being built, the environment in which work may occur, and the evidence that will be used to judge the result. That makes the next stage possible: testing and reviewing what the worker actually produced rather than relying on its description of success.</p>
+<h3>Continue reading</h3>
+<p>The next article, <a href="./why-passing-tests-is-not-software-acceptance.html">Why Passing Tests Isn't Software Acceptance</a>, examines what happened when Agent Operations coding experiments passed their test suites and still failed independent technical review. For the broader project context, see <a href="../../projects/driveline.html">TENSA Driveline</a>; for related concepts, see <a href="./">Controlled AI Systems</a> and <a href="../safe-tool-interaction/">Safe Tool Interaction</a>.</p>
+</section>
+        <section class="kb-reading-nav" aria-label="Article navigation">
+          <div class="kb-nav-card"><p>Category</p><a href="./">Controlled AI Systems</a></div>
+          <div class="kb-nav-card"><p>Project overview</p><a href="../../projects/driveline.html">TENSA Driveline</a></div>
+        </section>
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="./why-passing-tests-is-not-software-acceptance.html">Why Passing Tests Isn&#x27;t Software Acceptance</a>
+<a href="./recovering-from-failed-ai-coding-tasks.html">Recovering From Failed AI Coding Tasks</a>
+<a href="./from-coding-agents-to-supervised-engineering.html">From Individual Coding Agents to Supervised Engineering</a>
+
+            <a href="../../projects/driveline.html">TENSA Driveline</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../../knowledge-base/">Knowledge Base</a>
+          </div>
+          <p class="ao-series-related"><a href="./why-passing-tests-is-not-software-acceptance.html">Next article</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="../../contact.html">Contact</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+    </nav>
+  </footer>
+</body>
+</html>

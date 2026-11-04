@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Individual Coding Agents to Supervised Engineering | TENSA Engineering</title>
+  <meta name="description" content="The Agent Operations development path from manually supervised coding tasks toward managed workers, review, and planned scheduling." />
+  <link rel="canonical" href="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html" />
+  <meta property="og:site_name" content="TENSA Engineering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="From Individual Coding Agents to Supervised Engineering" />
+  <meta property="og:description" content="The Agent Operations development path from manually supervised coding tasks toward managed workers, review, and planned scheduling." />
+  <meta property="og:url" content="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html" />
+  <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <meta property="og:image:alt" content="TENSA Engineering branding on a dark technical background" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="From Individual Coding Agents to Supervised Engineering" />
+  <meta name="twitter:description" content="The Agent Operations development path from manually supervised coding tasks toward managed workers, review, and planned scheduling." />
+  <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "From Individual Coding Agents to Supervised Engineering", "description": "The Agent Operations development path from manually supervised coding tasks toward managed workers, review, and planned scheduling.", "mainEntityOfPage": "https://tensaengineering.dev/knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html", "publisher": {"@type": "Organization", "name": "TENSA Engineering", "url": "https://tensaengineering.dev/"}, "author": {"@type": "Organization", "name": "TENSA Engineering"}, "image": "https://tensaengineering.dev/assets/images/social/tensa-og-image.png", "inLanguage": "en-US"}</script>
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../assets/css/driveline-kb-series.css" />
+  <script src="../../assets/js/glossary-tooltips.js" defer></script>
+</head>
+<body>
+  <div class="site-bg"></div>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="TENSA Engineering home">
+      <img src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png" alt="TENSA Engineering" class="brand-logo" />
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/" class="active">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+      <a href="../../story/">Story</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <div class="kb-article-shell">
+      <header class="kb-article-header">
+        <p class="eyebrow">Controlled AI Systems · Engineering series</p>
+        <h1>From Individual Coding Agents to Supervised Engineering</h1>
+        <p class="kb-article-summary">How Agent Operations is evolving from a manually supervised coding workflow toward managed workers, independent review, and coordinated projects.</p>
+        <div class="kb-article-meta" aria-label="Article context">
+          <a href="./">Controlled AI Systems</a>
+          <span class="kb-meta-description">Article 4 of 4 · Evidence checkpoint: November 2, 2026</span>
+        </div>
+      </header>
+      <article class="kb-article-body">
+        <section class="kb-section"><p>Launching several AI coding agents is not the same thing as managing software development. A developer can open multiple terminals and give each model a task, but the resulting activity does not automatically preserve task dependencies, prevent conflicting changes, verify results, or reduce the time spent supervising. The more work runs in parallel, the more important it becomes to know which tasks are ready, what each worker is allowed to do, and which results have actually been accepted.</p>
+<p>These questions shaped the next stage of <strong><a class="glossary-term" data-definition="TENSA's supervised AI-assisted engineering execution system, distinct from the AI Operations continuity workflow." data-term="Agent Operations" href="../../glossary/#agent-operations">Agent Operations</a></strong>, TENSA Engineering's supervised coding-execution system. Agent Operations began as a way to turn approved assignments into bounded coding work with known tests and independent review. It now serves as the engineering-execution foundation of <strong>TENSA Driveline</strong>, the broader project intended to connect software discovery and planning with controlled implementation. The combined Driveline workflow and its planned multi-project scheduler are not yet an operating unattended service; understanding that distinction is essential to the project's actual development story.</p>
+</section>
+<section class="kb-section"><h2>The first bottleneck was the operator</h2>
+<p>Early development established that Claude Code and Codex could carry out meaningful coding work within structured assignments. Agent Operations gained task-packet checks, workspace validation, prescribed test execution, artifact inventories, launch records, and process supervision. Fresh technical review also proved valuable when it found real defects that had passed available tests. These were useful components of a manually supervised workflow, and they made the results more reviewable than an unstructured conversation with a coding assistant.</p>
+<p>The limitation was that a person still had to connect the stages. The operator prepared the assignment, launched the worker, inspected the result, arranged review, decided whether another repair was allowed, and preserved the next handoff. One bounded task could be manageable. Repeating those steps across many tasks created an expanding coordination burden, even when the coding models themselves worked quickly.</p>
+<p>An attempt to solve that problem with increasingly elaborate process controls initially made things worse. By late September 2026, reviewer preparation could require roughly an hour and a half to two hours of operator time. In one instance, the reviewer then found a genuine blocking defect in about two minutes. The review was useful; the surrounding preparation had become disproportionate. Agent Operations was reset to an earlier validated implementation, with the discarded history preserved. The restored baseline passed <strong>336 automated tests</strong>. That decision established a practical design requirement: new automation should remove measured operator work rather than add another layer of ceremony.</p>
+</section>
+<section class="kb-section"><h2>The managed-worker upgrade began with boundaries, not a scheduler</h2>
+<p>After the reset, Agent Operations did not immediately attempt to run many workers. The next objective was to take one approved task through more of its normal lifecycle without a person operating every transition. In October 2026, the upgrade planning defined a supervised architecture involving single-packet admission, bounded worker execution, independent read-only review, controlled repair, durable evidence, and eventual recovery and scheduling. The planning milestone was accepted on October 26 after independent review. That was acceptance of the plan and its constraints, not acceptance of a working managed-worker implementation.</p>
+<p>The next milestone concentrated on the interfaces of Claude Code, Codex, and Grok. A supervisor cannot depend on a generic abstraction called “coding agent” if the underlying products report permissions, tool events, approvals, and exits differently. The experiments deliberately used small, disposable code fixtures so that observable behavior was easier to establish. A claimed permission denial without a recorded tool attempt was classified as unproven. A real denied command followed by continued Claude execution was a narrower demonstrated result. A fresh Grok review of Claude's actual change showed two separate roles could cooperate under manually established boundaries, but the reviewer did not run tests and the complete managed loop was not automated.</p>
+<p>Those results helped identify a modest next implementation path: begin with a provider interface whose relevant behavior has actually been observed, keep deterministic validation and artifact checks, use a separately authorized read-only reviewer, and leave acceptance with the human. The intended sequence is deliberately incremental. An impressive dashboard or general-purpose provider router would not resolve uncertainty about what the underlying worker actually did.</p>
+</section>
+<section class="kb-section"><h2>Scheduling depends on accepted work, not available agents</h2>
+<p>A multi-project scheduler has to understand more than a queue of prompts. Consider three projects: one has a critical defect ready for repair, another has a feature blocked on an unaccepted interface, and a third has several independent tasks with distinct workspaces. Starting every available worker could waste resources or create conflicting changes. The scheduler must know which assignments are approved, which dependencies are satisfied, which resources are available, and whether prior results were merely produced or actually accepted.</p>
+<p>This is the difference between concurrency and coordinated engineering. A project cannot safely consume a dependent component just because its builder said the task was complete. If independent review finds a blocking defect, downstream work may need to remain blocked. If a worker stops mid-task, the queue must preserve the existing candidate and evidence before considering another assignment. A ready task in one project may continue while a different project's task waits, provided the workers, workspaces, and resources remain properly separated.</p>
+<p>The planned Agent Operations design therefore uses per-project queues and a shared worker pool governed by a supervisor. A future operator interface, <strong>AO Control</strong>, is intended to show ready work, active work, blocked tasks, evidence, reviews, and decisions requiring human attention. These are architectural goals under development, not features already demonstrated in a production multi-project environment. The dashboard should report actual task states; it should not invent progress percentages from model confidence or hide uncertainty behind a green status indicator.</p>
+<figure class="kb-visual-diagram ao-diagram" role="group"><figcaption>Figure 1. Planned coordination of approved project queues and independently verified workers.</figcaption><div class="ao-branch-grid"><div class="ao-branch"><strong>Project A queue</strong><p>Approved, dependency-ready tasks</p></div><div class="ao-branch"><strong>Project B queue</strong><p>Separate scope and state</p></div></div><div class="ao-flow-center">↓</div><div class="ao-flow-track"><div class="ao-flow-node"><strong>Supervisor</strong><span>Admits bounded tasks</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Worker pool</strong><span>Runs authorized work</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Validation and review</strong><span>Produces evidence</span></div><div aria-hidden="true" class="ao-flow-arrow">→</div><div class="ao-flow-node"><strong>Human acceptance</strong><span>Decides readiness</span></div></div><div class="ao-flow-return">Conceptual planned architecture; not a completed multi-project service.</div></figure>
+</section>
+<section class="kb-section"><h2>The economics include review, repairs, and human time</h2>
+<p>A factory is not productive just because many workers are active. An inexpensive model that needs repeated fixes or extensive operator attention may cost more than a stronger model that produces an acceptable result sooner. The meaningful cost includes task preparation, compute, validation, independent review, repair attempts, failed launches, recovery, and human decisions.</p>
+<p>Agent Operations has explored local coding models as potential future workers, but those experiments are not evidence that an automatic model router is ready. Local benchmark results may suggest candidates for narrow tasks; they do not establish permission behavior, tool compatibility, recovery, independent review suitability, or total operating cost. The approved direction is to integrate qualified local workers into the <strong>same</strong> Agent Operations execution system after the core cloud-managed path is demonstrated, rather than creating a separate local-model factory.</p>
+<p>The project has a target of reducing routine task preparation to under fifteen minutes of human time, but that remains a target rather than a verified achievement of the future managed system. A meaningful evaluation will compare accepted engineering output against the full operator and compute effort required to obtain it. Counting model tokens, lines of generated code, or worker launches would be easier; those numbers would not answer whether the system is making software development more efficient.</p>
+<p>The reset made this economic standard concrete. Additional process is not automatically valuable. A review that catches a blocker is useful; a workflow that takes two hours to prepare a two-minute review may need simplification. Good orchestration should reduce the repeated coordination needed for already approved work while keeping genuinely consequential decisions visible to the human.</p>
+</section>
+<section class="kb-section"><h2>Why Driveline connects planning to execution</h2>
+<p>Agent Operations is only one part of the larger engineering process. Before a coding task can be bounded, someone has to understand what is being built, examine an existing product when necessary, resolve competing requirements, and decide what success means. <strong><a class="glossary-term" data-definition="TENSA's discovery, software assessment, and project-planning system." data-term="Argus Ventures" href="../../glossary/#argus-ventures">Argus Ventures</a></strong> is being developed to support that discovery and planning work. <strong>TENSA Driveline</strong> is the public identity for connecting approved planning with the supervised execution methods developed through Agent Operations.</p>
+<p>That relationship should not be misunderstood as a claim that the complete integrated pipeline has already been built. The systems have separate development histories and responsibilities. The current Agent Operations foundation provides a manually supervised process with tested supporting components. The managed-worker upgrade has produced useful provider and review experiments, but unattended task recovery, coordinated multi-project execution, and an integrated discovery-to-delivery service have not yet been demonstrated end to end.</p>
+<p>The separation is valuable. Product decisions and commercial commitments should be resolved before they become coding assignments. Execution tasks should stay within the authority they receive. Technical review should examine actual candidate evidence. Acceptance and delivery should require separate human decisions. Joining these responsibilities eventually should not blur the boundaries between them.</p>
+</section>
+<section class="kb-section"><h2>The next milestone is one complete managed task</h2>
+<p>The natural temptation is to move directly to a fleet of agents. The stronger engineering sequence is to prove one controlled assignment first: admit an approved packet, launch a worker whose observable interface is understood, capture its actual changes, run prescribed validation, obtain independent review, handle authorized repair when needed, and preserve a final human acceptance decision. Then test interruption and recovery deliberately. Only after those boundaries work together should the system pursue concurrency, dependency scheduling, or wider model routing.</p>
+<figure class="kb-visual-diagram ao-diagram" role="group"><figcaption>Figure 2. The development milestones are different evidence states, not percentages of completion.</figcaption><div class="ao-maturity-grid"><div class="ao-flow-node"><strong>Manual supervised foundation</strong><span>Tasks, checks, evidence</span><small>Demonstrated</small></div><div class="ao-flow-node"><strong>Managed single task</strong><span>Automated lifecycle and review</span><small>In development</small></div><div class="ao-flow-node"><strong>Durable recovery</strong><span>Interrupted-run decisions</span><small>Not yet established</small></div><div class="ao-flow-node"><strong>Multi-project scheduling</strong><span>Dependencies and resource queues</span><small>Planned</small></div></div></figure>
+<p>This is the direction supported by the Agent Operations history through the November 2026 source checkpoint. The project has real demonstrations, accepted components, failed experiments, deliberate simplification, and unresolved gates. That is more informative than a claim that the factory is fully autonomous. The purpose of the next stage is not to remove the engineer from the process, but to reduce the amount of manual coordination needed to produce software whose scope, evidence, and acceptance are clear.</p>
+<h3>Continue reading</h3>
+<p>The first three articles in this series cover <strong>Enforced Boundaries</strong>, <strong>Tests Versus Acceptance</strong>, and <strong>Recovery After Failure</strong>. The <a href="../../projects/driveline.html">TENSA Driveline</a> project page explains the broader discovery-to-delivery direction; <a href="./">Controlled AI Systems</a> and <a href="../safe-tool-interaction/">Safe Tool Interaction</a> explain the underlying authority principles.</p>
+</section>
+        <section class="kb-reading-nav" aria-label="Article navigation">
+          <div class="kb-nav-card"><p>Category</p><a href="./">Controlled AI Systems</a></div>
+          <div class="kb-nav-card"><p>Project overview</p><a href="../../projects/driveline.html">TENSA Driveline</a></div>
+        </section>
+        <section class="kb-related-card">
+          <h2>Related reading</h2>
+          <div class="kb-related-links">
+            <a href="./why-ai-coding-agents-need-enforced-boundaries.html">Why AI Coding Agents Need Enforced Boundaries</a>
+<a href="./why-passing-tests-is-not-software-acceptance.html">Why Passing Tests Isn&#x27;t Software Acceptance</a>
+<a href="./recovering-from-failed-ai-coding-tasks.html">Recovering From Failed AI Coding Tasks</a>
+
+            <a href="../../projects/driveline.html">TENSA Driveline</a>
+            <a href="../safe-tool-interaction/">Safe Tool Interaction</a>
+            <a href="../../knowledge-base/">Knowledge Base</a>
+          </div>
+          <p class="ao-series-related"><a href="./recovering-from-failed-ai-coding-tasks.html">Previous article</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="../../contact.html">Contact</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../knowledge-base/">Knowledge Base</a>
+      <a href="../../glossary/">Glossary</a>
+    </nav>
+  </footer>
+</body>
+</html>
