@@ -1064,6 +1064,45 @@ The current site is small, and search discovery may take time.
 
 ---
 
+## TENSA Website Visibility Plan — 2026-11-03
+
+Goal: attract relevant technical readers, collaborators, and potential clients through original, evidence-based engineering content.
+
+Current baseline: 568 Google impressions and zero clicks from September 1 through November 1, 2026. Search queries are primarily branded. The homepage accounts for most impressions. The four new Driveline articles have not yet been confirmed indexed.
+
+### Days 1–30: Discovery
+
+- Check the four new Driveline article URLs using Google Search Console URL Inspection.
+- Investigate existing indexing exclusions and crawl issues before changing anything.
+- Establish a rolling 30-day search-performance baseline.
+- Identify relevant non-branded search queries and their associated pages.
+
+### Days 15–60: Distribution
+
+- Promote useful engineering lessons through the existing TENSA X publishing workflow.
+- Start with AI coding-agent boundaries and software acceptance.
+- Participate in appropriate technical communities when our documented experience helps answer a real question.
+- Link to full articles naturally; avoid promotional spam.
+
+### Days 30–90: Evidence-Led Growth
+
+- Improve pages that attract relevant search impressions.
+- Prioritize AI coding supervision, project continuity, Linux diagnostics, and controlled AI architecture.
+- Expand content only when reader questions and supporting engineering evidence justify it.
+
+### Weekly Measurement
+
+- Review Google impressions, clicks, queries, landing pages, and sitemap status through Windsor.ai.
+- Check GitHub Pages deployment and public availability independently.
+- Compare rolling 30-day performance, not isolated daily changes.
+- Evaluate privacy-conscious visitor analytics separately; Search Console does not measure X referrals or total traffic.
+
+Initial directional target: establish consistent non-branded visibility and work toward 10–25 organic clicks monthly. This is a goal, not a forecast.
+
+All production changes remain subject to existing website approval, validation, and closeout rules. No automatic publishing is authorized.
+
+---
+
 ## Update Triggers
 
 Update this document when:

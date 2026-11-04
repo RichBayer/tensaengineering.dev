@@ -777,6 +777,20 @@ After the current public-page closeout deploys, confirm:
 
 ---
 
+## Verified Search Console connection — 2026-11-03
+
+- Google Search Console property: `sc-domain:tensaengineering.dev`.
+- Windsor.ai connected to ChatGPT with read-only permissions.
+- Google sitemap submission and download confirmed November 4, 2026 UTC.
+- Sitemap: 24 URLs, zero reported errors, zero warnings.
+- Search Analytics, September 1 through November 1, 2026: 568 impressions, zero clicks, average position approximately 12.1.
+- These are Google organic search metrics, not total website visits.
+- Individual indexing of the four new Driveline articles is not yet confirmed.
+- Windsor.ai provides search reporting, not URL Inspection or indexing-request authority.
+- No credentials, tokens, or private access information belong in this repository.
+
+---
+
 ## Final Rule
 
 Search engines should see the real public website clearly.
