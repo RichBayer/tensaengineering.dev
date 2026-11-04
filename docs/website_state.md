@@ -47,6 +47,7 @@ Blog images, none of which exist yet:
 ## Deployment and exposure
 
 - GitHub Pages builds from `main` at the repository root, deploy from a branch. Verified 2026-10-10.
+- 2026-11-03: Driveline four-article release `7a849d3` deployed through successful GitHub Pages run 47; Rich confirmed the live articles and layout. Search-engine indexing was not verified.
 - Custom domain `tensaengineering.dev` through the `CNAME` file. DNS is at Cloudflare. HTTPS is enabled.
 - The Pages settings page showed "DNS Check in Progress" for the custom domain on 2026-10-10 while the site was live. Not investigated.
 - `_config.yml` excludes `docs/` and `README.md` from the published site (commit `b5fe6b3`, Pages build 38). Verified 2026-10-10: the internal doc addresses return 404.

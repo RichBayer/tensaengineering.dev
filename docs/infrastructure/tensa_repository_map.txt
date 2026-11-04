@@ -5,7 +5,7 @@ What each top-level directory is for. This page holds no file tree, no file coun
 ## Published to the website
 
 - Repository root: `index.html` (homepage), `about.html`, `contact.html`, `styles.css` (the one stylesheet for the whole site), `favicon.ico`, `sitemap.xml`, `robots.txt` and `CNAME` (the custom domain).
-- `projects/`: the Projects overview and one page each for NeuroCore, Argus ACLI and Argus Lab.
+- `projects/`: the Projects overview and one page each for NeuroCore, Argus ACLI, Argus Lab and TENSA Driveline.
 - `knowledge-base/`: the Knowledge Base index and one folder per category. A category's `index.html` is its landing page; focused articles sit beside it as named `.html` files.
 - `glossary/`: the single Glossary page, which is also where inline glossary tooltips link to.
 - `story/`: the origin story page.
@@ -13,6 +13,7 @@ What each top-level directory is for. This page holds no file tree, no file coun
 - `assets/images/branding/`: logos, one folder per project (`tensa`, `neurocore`, `argus-acli`, `argus-lab`). Which logo goes where is in `docs/website_state.md`.
 - `assets/images/social/`: the social preview image.
 - `assets/images/blog/`: placeholder folders for future Blog images, one per category.
+- `assets/css/`: scoped page and article-series styles, including the Driveline Knowledge Base figures.
 - `assets/js/`: `glossary-tooltips.js`. Glossary links still work as plain links without it.
 
 ## Not published

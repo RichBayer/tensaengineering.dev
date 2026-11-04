@@ -102,7 +102,7 @@ Current footer navigation should use:
 
 ---
 
-## TENSA Driveline / Agent Operations engineering article series (local review)
+## TENSA Driveline / Agent Operations engineering article series (published)
 
 The TENSA Driveline project overview remains `/projects/driveline.html`. The Controlled AI Systems category is the primary discovery point for four focused Agent Operations engineering articles about boundaries, acceptance, recovery, and supervised multi-worker direction. The Knowledge Base homepage presents them as matching article cards. Cross-link individual articles by topic and link from the project page and Agent Operations glossary definition to the category collection. Do not publish or describe the older long-form draft as a public route.
 
@@ -624,14 +624,14 @@ This rule exists to catch:
 
 ## Current Verified Link Snapshot
 
-Last verified local internal-link validation:
+Latest Driveline publication validation (2026-11-03):
 
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
+    Sitemap public HTML routes: 24, no duplicates
+    Local references checked: 806
+    External references skipped: 26
+    Result: no broken internal references; site-wide SEO audit separately flagged nine pre-existing NeuroCore metadata issues (not part of Driveline release)
 
-Current verified public HTML files:
+Historical public HTML snapshot (before Driveline release):
 
     ./index.html
     ./about.html

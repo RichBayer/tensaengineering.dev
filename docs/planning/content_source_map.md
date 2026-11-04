@@ -63,9 +63,9 @@ If the source docs are missing, ask for them.
 
 ---
 
-## TENSA Driveline / Agent Operations engineering article series (local review)
+## TENSA Driveline / Agent Operations engineering article series (published)
 
-Four focused articles are being prepared under `/knowledge-base/controlled-ai-systems/`: enforced boundaries, software acceptance, interrupted-task recovery, and the move toward supervised engineering. The source `Agent_Operations_Expanded_Article_2026-11-02.md` remains unchanged in the Library. Current factual claims must be checked against the authoritative Agent Operations repository and its verified evidence. The public Driveline project page explains the combined Argus Ventures / Agent Operations direction. Do not imply managed workers, automatic recovery, or integrated Driveline are fully operational. The earlier single long-form webpage remains an unpublished draft, not a publishing target.
+Four focused articles were published at commit `7a849d3` under `/knowledge-base/controlled-ai-systems/`: enforced boundaries, software acceptance, interrupted-task recovery, and the move toward supervised engineering. The source `Agent_Operations_Expanded_Article_2026-11-02.md` remains unchanged in the Library. Current factual claims must be checked against the authoritative Agent Operations repository and its verified evidence. The public Driveline project page explains the combined Argus Ventures / Agent Operations direction. Do not imply managed workers, automatic recovery, or integrated Driveline are fully operational. The earlier single long-form webpage remains an unpublished draft, not a publishing target.
 
 ## Current Public Pages
 

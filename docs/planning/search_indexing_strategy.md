@@ -67,8 +67,8 @@ Current search-indexing status:
     sitemap.xml exists locally
     robots.txt exists locally
     canonical URLs are present on current public HTML pages
-    Open Graph metadata is present on current public HTML pages
-    Twitter large-image card metadata is present on current public HTML pages
+    Open Graph metadata is verified for the four new Driveline article pages; overall site-wide completion remains unverified
+    Twitter large-image card metadata is verified for the four new Driveline article pages; overall site-wide completion remains unverified
     dedicated 1200 x 630 social preview image exists
     JSON-LD structured data is present where currently implemented
     Google Search Console verified
@@ -81,14 +81,14 @@ Current search-indexing status:
     /contact.html is included in sitemap.xml locally
     the eight foundation Knowledge Base article URLs are included in sitemap.xml locally
     the project-context continuity guide URL is included in sitemap.xml locally
-    sitemap.xml currently contains 19 canonical public URLs
+    sitemap.xml contains 24 canonical public URLs at release `7a849d3` (2026-11-03)
 
-Latest local link validation:
+Driveline publication link validation (2026-11-03):
 
-    Public HTML files checked: 19
-    Internal links checked: 579
-    External/skipped links: 21
-    Result: all checked internal links and anchors resolved successfully
+    Public HTML routes in sitemap: 24
+    Local references checked: 806
+    External/skipped references: 26
+    Result: no broken links or anchors; nine separate NeuroCore metadata findings in site-wide SEO audit (outside Driveline release)
 
 ---
 
@@ -722,7 +722,7 @@ Open live checks:
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
-2. Confirm the live sitemap remains URL-only, contains 19 canonical public URLs, and includes the project-context continuity guide.
+2. Confirm the live sitemap remains URL-only, contains 24 canonical public URLs, and includes the four Driveline engineering articles and project-context continuity guide.
 
 3. Inspect the project-context article in Google Search Console if appropriate. Resubmit or refresh the sitemap only if the normal sitemap fetch does not discover it.
 
@@ -772,8 +772,8 @@ After the current public-page closeout deploys, confirm:
 - `https://tensaengineering.dev/glossary/` is reachable
 - `https://tensaengineering.dev/story/` is reachable
 - the live sitemap is URL-only
-- the live sitemap contains 19 canonical public URLs
-- the live sitemap includes Contact, About, Glossary, Story, all eight foundation Knowledge Base articles, and the focused project-context continuity guide
+- the live sitemap contains 24 canonical public URLs for release `7a849d3`
+- the live sitemap includes Contact, About, Glossary, Story, all eight foundation Knowledge Base articles, the focused project-context guide, and four Driveline engineering articles
 
 ---
 

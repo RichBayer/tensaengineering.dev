@@ -1,10 +1,13 @@
 # TENSA Website: Now
 
-Updated: 2026-11-02
+Updated: 2026-11-03
 
 Two lanes. Ask Rich which one before reading anything else.
 
 ## Website lane
+
+- Completed 2026-11-03: Four Driveline engineering articles published on `main` at `7a849d3`; GitHub Pages run 47 succeeded and Rich confirmed the live pages. The prior single long-form draft is not published.
+
 
 - Active next: Local LLM Model Recommender — "What local AI model can run on my PC?"
 - Branch: `docs/linux-calculator-toolkit-plan` (historical branch name retained).
