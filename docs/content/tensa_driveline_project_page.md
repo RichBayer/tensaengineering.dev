@@ -1,6 +1,6 @@
 # TENSA Driveline — approved project-page copy
 
-**Status:** Content approved in discussion, pending website layout, visual review, and publication approval.
+**Status:** Historical approved draft. The Driveline project page has since been published on `main` at `/projects/driveline.html`. The live HTML and current engineering evidence govern future updates. The original draft and handoff below are preserved for historical context, not as pending implementation instructions.
 **Intended URL:** `/projects/driveline.html`
 **Page type:** TENSA project detail page (card-rich site treatment, not the long-form Knowledge Base article template).
 **Do not publish automatically.** Do not rewrite the narrative wholesale; preserve tone, factual boundaries and order.
