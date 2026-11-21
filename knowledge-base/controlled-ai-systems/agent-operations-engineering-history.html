@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>TENSA Driveline: The Engineering History of Agent Operations | TENSA Engineering</title><meta content="The development history of Agent Operations, the supervised engineering foundation within TENSA Driveline: controlled coding, independent review, recovery, and verified progress." name="description"/><link href="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/agent-operations-engineering-history.html" rel="canonical"/><meta content="TENSA Engineering" property="og:site_name"/><meta content="article" property="og:type"/><meta content="TENSA Driveline: The Engineering History of Agent Operations" property="og:title"/><meta content="The development history of Agent Operations, the supervised engineering foundation within TENSA Driveline: controlled coding, independent review, recovery, and verified progress." property="og:description"/><meta content="https://tensaengineering.dev/knowledge-base/controlled-ai-systems/agent-operations-engineering-history.html" property="og:url"/><meta content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="TENSA Driveline: The Engineering History of Agent Operations" name="twitter:title"/><meta content="The development history of Agent Operations, the supervised engineering foundation within TENSA Driveline: controlled coding, independent review, recovery, and verified progress." name="twitter:description"/><meta content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "TENSA Driveline: The Engineering History of Agent Operations", "description": "The development history of Agent Operations, the supervised engineering foundation within TENSA Driveline: controlled coding, independent review, recovery, and verified progress.", "mainEntityOfPage": "https://tensaengineering.dev/knowledge-base/controlled-ai-systems/agent-operations-engineering-history.html", "publisher": {"@type": "Organization", "name": "TENSA Engineering", "url": "https://tensaengineering.dev/"}, "inLanguage": "en-US"}</script><link href="../../favicon.ico" rel="icon" sizes="any"/><link href="../../styles.css" rel="stylesheet"/><script defer="" src="../../assets/js/glossary-tooltips.js"></script></head><body><div class="site-bg"></div><header class="site-header"><a aria-label="TENSA Engineering home" class="brand" href="../../index.html"><img alt="TENSA Engineering" class="brand-logo" src="../../assets/images/branding/tensa/tensa-horizontal-header-transparent.png"/></a><nav aria-label="Primary navigation" class="site-nav"><a href="../../index.html">Home</a><a href="../../projects/">Projects</a><a class="active" href="../../knowledge-base/">Knowledge Base</a><a href="../../glossary/">Glossary</a><a href="../../story/">Story</a><a href="../../about.html">About</a></nav></header><main><div class="kb-article-shell"><header class="kb-article-header"><p class="eyebrow">Controlled AI Systems</p><h1>TENSA Driveline: The Engineering History of Agent Operations</h1><p class="kb-article-summary">The development history of Agent Operations, the supervised engineering foundation within TENSA Driveline: controlled coding, independent review, recovery, and verified progress.</p><div aria-label="Article context" class="kb-article-meta"><a href="./">Controlled AI Systems</a><span class="kb-meta-description">Engineering history behind TENSA Driveline · Evidence checkpoint November 2, 2026</span></div></header><article class="kb-article-body"><section class="kb-section">
+<p>TENSA Driveline is the public identity for bringing two complementary engineering efforts together under TENSA Engineering: <a class="glossary-term" data-definition="TENSA's project discovery and planning system for requirements, software assessment, and approved implementation work." data-term="Argus Ventures" href="../../glossary/#argus-ventures">Argus Ventures</a>, which focuses on discovery, assessment, and planning, and <a class="glossary-term" data-definition="TENSA's supervised AI-assisted software development system for approved tasks, validation, independent review, and human acceptance." data-term="Agent Operations" href="../../glossary/#agent-operations">Agent Operations</a>, which handles supervised execution and review of approved software work. Driveline is being developed to connect these responsibilities; the integrated process is not yet operational. This article follows the development of Agent Operations, the execution foundation behind that direction. The history began before the Driveline name was selected, so the original system names remain where they describe the actual engineering work. The <a href="../../projects/driveline.html" style="color: #39ff88; text-decoration: underline; text-underline-offset: 0.18em;">TENSA Driveline project page</a> explains the combined direction.</p>
+
+</section><section class="kb-section"><p>Agent Operations began with a practical problem: AI-assisted planning and software design were moving faster than I could reliably implement, review, and integrate the resulting work. I could already use coding agents to generate and modify software. What I could not do was trust an increasingly complex development process to run without constant supervision. The central question became how to turn useful coding-agent capability into an engineering process with clear authority, repeatable verification, and reliable records.</p>
+
+<p>A coding agent can write software. It can inspect repositories, fix bugs, run tests, and sometimes complete surprisingly complicated engineering work. But writing code and reliably delivering acceptable software are two different problems. What happens when the agent misunderstands the requirements? When it changes files it wasn't supposed to? When its tests pass but the implementation is wrong? When it runs out of context, loses a session, exceeds its budget, or confidently declares a task complete without evidence?</p>
+
+
+<p>What happens when five agents are working on three projects, one encounters a blocker, another needs a dependency that hasn't been built, and a third produces code that an independent reviewer rejects? Who decides what happens next? <strong>Those were the problems Agent Operations was developed to address.</strong> I built <strong>Agent Operations</strong> as a software-factory project under TENSA Engineering. It began as a way to manage AI-assisted coding work with less direct intervention and grew into a study of what execution control, independent review, failure recovery, and evidence-based acceptance actually require.</p>
+
+
+
+<p>Adding more coding agents was not the answer. The existing agents were already capable of generating substantial amounts of code. What was missing was a dependable process around that capability. The development history includes productive experiments, rejected implementations, a substantial reset, and a managed-worker upgrade that remains under development. Those outcomes explain the architecture more clearly than a list of planned features could.</p>
+
+</section><section class="kb-section">
+<h2>From Coding Assistance to a Production System</h2>
+<p>A useful way to think about a software factory is as a production system. A traditional factory doesn't rely on every machine independently deciding what to manufacture, which materials to use, when to inspect its output, or whether the finished product is acceptable. Those decisions belong to the production system. AI software development needs something similar. A coding model is one component. It is not the entire factory.</p>
+
+
+
+
+<p>The surrounding system needs to establish what work is authorized, which resources are available, where the work can happen, how results are verified, when failures require intervention, and who accepts the finished product. In Agent Operations, that surrounding system is being developed as a deterministic <a class="glossary-term" data-definition="The layer that determines which actions are authorized and how operations are governed before they run." data-term="Control plane" href="../../glossary/#control-plane">control plane</a>. Its intended production flow is straightforward:</p>
+
+
+
+<p>Every stage must have an identifiable result. A worker saying "I'm done" is not a production milestone. A passing test is evidence, but it isn't necessarily acceptance. A model requesting additional access isn't authorization. And a system capable of executing an action doesn't automatically have permission to do it. <strong>Technical access is not authority.</strong> That distinction becomes increasingly important as the number of workers and projects increases.</p>
+
+
+
+
+
+
+<figure aria-label="Planned supervised engineering lifecycle" class="kb-visual-diagram" style="padding:1.25rem;">
+<figcaption>Figure 1. A supervised engineering lifecycle. This is the intended managed flow, not a claim that every stage operates unattended today.</figcaption>
+<div style="display:flex; flex-wrap:wrap; gap:.65rem; margin-top:1rem; align-items:stretch;">
+<div style="flex:1 1 135px; min-width:135px; border:1px solid #45646e; border-radius:10px; padding:1rem;"><strong>01 · Authorized work</strong><p style="margin:.45rem 0 0;">An approved task sets scope and acceptance criteria.</p></div>
+<div style="flex:1 1 135px; min-width:135px; border:1px solid #45646e; border-radius:10px; padding:1rem;"><strong>02 · Bounded execution</strong><p style="margin:.45rem 0 0;">A worker operates within assigned permissions.</p></div>
+<div style="flex:1 1 135px; min-width:135px; border:1px solid #45646e; border-radius:10px; padding:1rem;"><strong>03 · Validation</strong><p style="margin:.45rem 0 0;">Recorded checks and artifacts establish evidence.</p></div>
+<div style="flex:1 1 135px; min-width:135px; border:1px solid #45646e; border-radius:10px; padding:1rem;"><strong>04 · Independent review</strong><p style="margin:.45rem 0 0;">A separate reviewer tests the acceptance case.</p></div>
+<div style="flex:1 1 135px; min-width:135px; border:1px solid #45646e; border-radius:10px; padding:1rem;"><strong>05 · Human acceptance</strong><p style="margin:.45rem 0 0;">An authorized decision permits the next stage.</p></div>
+</div>
+</figure></section><section class="kb-section">
+<h2>Turning Ideas Into Bounded Engineering Work</h2>
+<p>The quality of a software factory starts before a coding agent is launched. Someone has to translate a business requirement, feature request, or software defect into a task that can actually be completed and verified. This is harder than it sounds. Consider a request like: "Improve the authentication system." A human engineer recognizes that this could involve many decisions. A coding agent may interpret it as permission to redesign authentication, replace dependencies, modify database structures, or change adjacent services.</p>
+
+
+
+
+
+<p>The request isn't sufficiently bounded. A factory needs a formal task definition that identifies the desired outcome, the relevant codebase, the starting version, authorized changes, constraints, and observable completion criteria. This task definition acts as a contract between the human approving the work and the worker executing it. The important characteristic is that <strong>the worker cannot silently expand its own assignment</strong>.</p>
+
+
+
+<p>If it discovers that the requested repair depends on changing another system, it reports the dependency. It doesn't automatically assume authority over that system. If it encounters an unresolved product or architecture decision, that decision returns to the appropriate human authority. The objective is to keep ordinary implementation decisions moving while preventing an implementation task from quietly becoming a redesign.</p>
+
+
+<p>A factory also needs to distinguish between approved future work and work that is actually ready to execute. You might approve a larger software plan consisting of twenty dependent tasks. That doesn't mean all twenty should immediately start. Some tasks need completed predecessors. Others need verified interfaces, accepted code, or a specific software revision. A production system must know the difference. Otherwise, parallel workers spend time building against assumptions that later turn out to be wrong.</p>
+
+
+
+
+</section><section class="kb-section">
+<h2>Context Management Is an Engineering Problem</h2>
+<p>One of the most persistent problems in AI-assisted development is context drift. Long sessions accumulate old assumptions, abandoned plans, superseded requirements, debugging history, and previous model conclusions. Eventually, the agent may spend more effort reasoning about its accumulated history than solving the current problem. More context is not automatically better context. I encountered an extreme example during development when a proposed reviewer handoff grew to roughly 1.5 million characters.</p>
+
+
+
+
+<p>The reviewer didn't need most of it. The problem wasn't insufficient model capability. The surrounding workflow was supplying far more information than the task required. A software factory needs a deliberate context strategy. Coding workers should receive the current assignment, the relevant source material, applicable constraints, and the evidence necessary to complete their work. They shouldn't need an entire project's conversation history.</p>
+
+
+
+
+<p>The same principle applies when a session ends. The next session should recover from durable project state and verifiable evidence, not depend on the previous model remembering what happened. That means separating development continuity from execution authority. A separate AI-assisted development continuity workflow can help maintain planning history, decisions, and handoffs. In my work, that function is called <a class="glossary-term" data-definition="TENSA's internal continuity discipline for source-grounded context, handoffs, decisions, and repeatable AI-assisted development." data-term="AI Operations" href="../../glossary/#ai-operations">AI Operations</a>.</p>
+
+
+
+<p><strong>AI Operations is not the software factory. Agent Operations is.</strong> The distinction matters because good continuity practices help you develop and maintain a system, while a factory's execution controls determine what its coding workers can actually do. The ultimate goal is to make context reconstruction predictable, efficient, and limited to what matters. Token savings are one possible benefit, but they should be measured rather than assumed.</p>
+
+
+
+</section><section class="kb-section">
+<h2>Permissions Must Be More Than Instructions</h2>
+<p>One of the easiest mistakes to make is assuming that because you instructed an agent not to do something, it won't do it. Models are not deterministic permission systems. A prompt telling a model to avoid certain commands is useful guidance. It is not proof that those commands cannot execute. In early Agent Operations experiments, workers sometimes executed commands outside their authorized task instructions. Those violations were discovered during review.</p>
+
+
+
+
+<p>That experience reinforced an important engineering requirement: permission enforcement and permission evidence cannot depend solely on the model's interpretation of its instructions. The system needs to distinguish between actions that are authorized and actions that are merely technically available.</p>
+
+<p>For example, editing an approved source file should not automatically grant permission to publish code, change infrastructure, access credentials, or expand the assignment. Those are separate capabilities with separate consequences. Unattended operation makes this even more complicated. Different AI coding products handle permissions, tool calls, refusals, and non-interactive execution differently. A configuration that works in an interactive terminal might not behave the same way when no human is present to answer a prompt.</p>
+
+
+
+
+<p>An automated system therefore needs to test each provider's actual behavior rather than assume that all coding agents support the same interface. Can an unauthorized action be denied while the model continues useful work? Can the system observe what action was actually requested? Can it distinguish a real permission denial from the model merely describing one? Can it cancel a run reliably? Can it tell whether a worker actually started?</p>
+
+
+
+
+
+<p>These sound like small implementation details until the factory is expected to run without constant supervision. During Agent Operations provider testing, a model reported that an attempted file write had been denied. The recorded tool activity showed that no write attempt had actually occurred. This happened repeatedly in a bounded experiment. The model's explanation sounded plausible. The actual execution evidence told a different story.</p>
+
+
+
+
+<p><strong>A model's description of what happened is not evidence that it happened.</strong> That principle belongs at the center of any serious software factory.</p>
+
+</section><section class="kb-section">
+<h2>The Workspace Is Part of the Control System</h2>
+<p>Every coding worker needs somewhere to operate. For controlled development, isolated Git workspaces can separate tasks, preserve starting points, and make changes independently reviewable. This matters for reproducibility. A reviewer should be able to determine which software revision a worker started from and what changed afterward. Without that identity, test results and reviews can become detached from the code they're supposed to describe.</p>
+
+
+
+
+<p>But workspace separation and security isolation are not interchangeable. A Git worktree separates development state. It does not, by itself, contain an untrusted process. Likewise, a coding model's cooperative permission settings are not equivalent to an operating-system security boundary. This becomes particularly important for companies intending to process unfamiliar customer repositories. Customer code may contain build scripts, dependencies, executable tests, and other behavior that hasn't been independently verified.</p>
+
+
+
+
+<p>Such code deserves a different execution environment from trusted local development. Agent Operations therefore distinguishes ordinary supervised development from work involving unfamiliar client code. A separate disposable virtual-machine environment has been provisioned and subjected to initial isolation checks. That work is not being treated as fully validated production security.</p>
+
+
+<p>The broader lesson is that <strong>the execution environment should match the actual risk of the work</strong>. Not every coding task requires an elaborate distributed security architecture. But unfamiliar code shouldn't be granted access to valuable systems simply because an AI agent happens to be executing it. The engineering challenge is choosing controls proportionate to the risk, then proving those controls actually work.</p>
+
+
+
+</section><section class="kb-section">
+<h2>Validation Must Inspect the Result, Not Just the Model's Story</h2>
+<p>Suppose an agent reports that it changed three files and all tests passed. What exactly does that establish? Not enough. The worker might have created additional files that aren't tracked by Git. It might have generated artifacts outside the normal diff. It might have run a different test command than the one required. Or it might have tested an earlier version of the code and made another change afterward. These aren't hypothetical concerns. Development of Agent Operations exposed several variations of them.</p>
+
+
+
+
+
+
+
+<p>One early coding experiment produced an apparently empty ordinary Git diff despite multiple new implementation files existing in the workspace. Without a more complete inventory, a reviewer could have been handed misleading evidence. That's why a software factory needs to examine actual repository and filesystem state rather than rely exclusively on a conventional diff or a worker-generated summary. It also needs repeatable validation.</p>
+
+
+
+<p>The required tests should be established independently of the worker's desire to finish the assignment. The system should record which checks ran, their results, and the evidence connecting those checks to the actual software candidate. If the code changes after validation, the previous validation no longer proves the new candidate passed. That sounds obvious when stated plainly. It becomes much harder to guarantee when workers, reviewers, repair attempts, and automated tools are operating across multiple sessions.</p>
+
+
+
+
+<p>And even perfect execution of the specified test suite does not establish that the tests are sufficient. Which brings us to one of the biggest lessons from the project.</p>
+
+<figure aria-label="Evidence levels for coding-agent work" class="kb-visual-diagram" style="padding:1.25rem;">
+<figcaption>Figure 2. What an agent reports, what the tools recorded, and what an independent reviewer accepts are different kinds of evidence.</figcaption>
+<div style="display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1rem;">
+<div style="flex:1 1 185px; border-top:3px solid #6c9ea8; padding:.85rem; background:rgba(94,139,157,.09); border-radius:7px;"><strong>Model account</strong><p style="margin:.5rem 0 0;">What the worker says it did. Useful for orientation, not sufficient as proof.</p></div>
+<div style="flex:1 1 185px; border-top:3px solid #6c9ea8; padding:.85rem; background:rgba(94,139,157,.09); border-radius:7px;"><strong>Execution record</strong><p style="margin:.5rem 0 0;">What commands, changed files, and validations demonstrably show.</p></div>
+<div style="flex:1 1 185px; border-top:3px solid #6c9ea8; padding:.85rem; background:rgba(94,139,157,.09); border-radius:7px;"><strong>Acceptance review</strong><p style="margin:.5rem 0 0;">Whether the verified implementation satisfies the authorized requirement.</p></div>
+</div>
+</figure></section><section class="kb-section">
+<h2>Green Tests Do Not Mean Acceptable Software</h2>
+<p>This is probably the most important finding from my actual coding-agent experiments. I ran a paired calibration using Claude Code and Codex on comparable software-engineering assignments. Both workers completed their authorized implementation and repair attempts. Both reached passing repository test suites. One passed 123 tests. The other passed 182. Both still had blocking defects when their implementations were examined.</p>
+
+
+
+
+
+<p>Some defects involved process handling. Others concerned execution boundaries, environment behavior, and insufficient test coverage. The stronger-looking implementation was still not acceptable as delivered. A later Agent Operations component passed all 254 automated tests in its initial validation. Independent review identified additional acceptance-blocking defects that the tests hadn't covered. This was a valuable reminder that tests can prove specific behaviors without proving the implementation is generally correct.</p>
+
+
+
+
+<p>They can also be written incorrectly. A test might overlook an important edge case, accept an invalid result, or fail to exercise the failure condition it was designed to catch. This is why I don't treat successful validation as the final gate. A reliable software factory needs an independent review process. The reviewer should examine the actual changes, applicable requirements, validation evidence, and unresolved risks.</p>
+
+
+
+
+<p>It should not simply ask the builder whether the code looks good. In the planned managed version of Agent Operations, the default is a fresh read-only reviewer from a different model/provider family than the builder. The reviewer's purpose is to identify defects and explain the evidence, not to rewrite the software or approve its own findings. When blocking findings exist, a separately authorized repair stage can address them within a limited budget.</p>
+
+
+
+<p>The resulting software must be validated again and independently reviewed again where required. Eventually, the system must either produce an acceptance-ready candidate or stop and report what remains unresolved. There is no unlimited "keep trying until everything looks green" mode. For someone commissioning a software factory, this distinction is critical. You aren't buying a system that can produce a large quantity of code.</p>
+
+
+
+
+<p>You're trying to obtain a system that can produce <strong>software with enough trustworthy evidence to support an acceptance decision</strong>. Those are very different deliverables.</p>
+
+</section><section class="kb-section">
+<h2>Recovery Is Just as Important as Execution</h2>
+<p>A coding agent may run for minutes or hours. During that time, processes can fail, network connections can drop, remote sessions can end, providers can become unavailable, and budgets can be exhausted. A reliable factory needs to know what happened before deciding what happens next. There's an important distinction between a worker launch failing and a worker starting, modifying files, and then failing. The first may leave no implementation attempt to account for.</p>
+
+
+
+
+<p>The second may leave a partially completed candidate that must be examined before anything continues. That distinction became concrete in Agent Operations when a provider launch failed before the model began executing. Treating such a failure as an ordinary coding attempt would distort both budgets and performance measurements. Recovery also requires a reliable account of work already completed. A restarted model shouldn't automatically receive a fresh repair allowance simply because its previous session disappeared.</p>
+
+
+
+
+<p>Nor should the system pretend that a new conversation has recovered the original model's internal state. When genuine session resumption isn't available, recovery needs to begin from durable records: the authorized assignment, verified workspace, recorded actions, changes, and test evidence. The system must distinguish confirmed facts from missing information. When state is ambiguous, pausing is safer than guessing. A factory that cannot explain what happened before a restart is not yet ready to restart work automatically.</p>
+
+
+
+
+</section><section class="kb-section">
+<h2>Multiple Agents Introduce Scheduling Problems</h2>
+<p>Running one coding agent reliably is a useful milestone. Running several independent agents is a different problem. Imagine a software factory supporting three projects. Project A has an urgent defect. Project B has a planned feature whose dependencies aren't finished. Project C has several independent tasks ready for implementation. The factory must determine what is eligible to run, which tasks can safely execute concurrently, and which available workers should be assigned.</p>
+
+
+
+
+
+
+<p>Simply adding more agents doesn't solve those decisions. A real multi-project system needs dependency-aware queues, resource limits, scheduling priorities, conflict detection, and independently maintained project boundaries. A task should not start just because it is next on a list if its required predecessor hasn't been accepted. Two workers shouldn't silently overwrite the same work. A blocked project shouldn't unnecessarily prevent another ready project from progressing.</p>
+
+
+
+
+<p>And review and repair work must be considered part of the workload, not an afterthought. The number of workers you can launch is not necessarily the number of workers you can use productively. A project with one tightly coupled task doesn't become faster because you assign ten models to it. Concurrency is useful when the work is genuinely separable and the system can verify that separation. The planned multi-project architecture for Agent Operations uses independently governed project queues and a shared pool of workers.</p>
+
+
+
+
+<p>That scheduler is still design and upgrade work, not a proven production capability. The goal is not maximum simultaneous agent activity. It's maximum useful, accepted output within the available resources.</p>
+
+
+</section><section class="kb-section">
+<h2>The Dashboard Should Report Evidence, Not Confidence</h2>
+<p>An operational software factory needs a way for humans to understand what is happening. It's tempting to build a dashboard full of animated progress bars, worker avatars, activity streams, and completion percentages. Those can look impressive without communicating much of value. What does "87% complete" mean when a worker has written most of the code but independent review hasn't started? What does "idle" mean when the controller has lost contact with a worker?</p>
+
+
+
+
+<p>What does "successful" mean when tests passed but the final changes haven't been reviewed? Agent Operations has a planned control interface called <strong>AO Control</strong>, intended to provide terminal and browser views over the same durable state. The important design goal isn't visual complexity. It's operational clarity. The operator should be able to see what is running, what is ready, what is blocked, what requires a decision, and what evidence supports each reported result.</p>
+
+
+
+
+<p>Progress should correspond to verified stages of work. Unknown information should remain unknown. Estimated completion times should come from measured comparable work, not invented percentages or a model's confidence. The interface should also distinguish between observing the factory and authorizing it to perform an action. A button in a dashboard is not a substitute for the underlying permission system. A useful dashboard makes the factory understandable. It shouldn't become a second source of truth.</p>
+
+
+
+
+
+</section><section class="kb-section">
+<h2>Model Selection Is an Economic Decision</h2>
+<p>A functioning factory doesn't necessarily need the most capable model for every assignment. Different tasks have different requirements. Some are narrow, easy to verify, and suitable for smaller or local models. Others require more sophisticated reasoning, debugging, or architectural understanding. Review work may benefit from a different model than implementation work.</p>
+
+
+
+
+<p>But model choice can't be based on price per token alone. A cheaper model that needs repeated repairs, additional reviews, or substantial human intervention may be more expensive overall. The relevant cost includes initial implementation, validation, review, repair, failed attempts, and operator time. I've been evaluating cloud coding agents and local coding models for different roles in Agent Operations. The early local-model results are encouraging for some narrow tasks, but the experiments are too limited to justify broad claims about model quality or automatic routing.</p>
+
+
+
+
+<p>That's an important distinction. One successful benchmark isn't a production qualification. Before automatic model selection becomes sensible, the factory needs evidence about how each model performs on particular classes of work. It also needs to know when a provider is unavailable, when a fallback is authorized, and when changing models would require human approval. The cheapest possible model isn't the objective. <strong>The objective is the lowest practical cost of producing acceptable, verified software.</strong></p>
+
+
+
+
+
+</section><section class="kb-section">
+<h2>Why I Removed Weeks of My Own Work</h2>
+<p>One of the most expensive lessons in building Agent Operations had very little to do with coding-model capability. It was overengineering. As the project developed, I accumulated more process rules, reviews, and technical defenses. Each addition had a reason. Some responded to real observed problems.</p>
+
+
+
+<p>But the system gradually became too complicated for the work it was supposed to support. For several weeks I was developing defenses against a much more adversarial worker threat model than my normal supervised development environment required. The technical findings were meaningful within that threat model. The mistake was allowing those concerns to dominate an environment where the immediate goal was controlled, supervised software development.</p>
+
+
+
+<p>By late September, preparing and launching a reviewer could take an hour and a half to two hours of my time. One reviewer then identified a genuine blocking defect in roughly two minutes. Think about that. The system designed to make AI development more efficient had become the primary source of delay. I reset Agent Operations to an earlier validated implementation and preserved the discarded development history rather than continuing to build on unnecessary complexity.</p>
+
+
+
+
+<p>The restored baseline passed 336 automated tests. That decision changed how I approach the project. New complexity now needs a demonstrated purpose. Controls should match the actual execution environment. A failure should prompt consideration of what can be simplified or removed, not automatically generate another layer of process. Strong isolation is still appropriate where the risks justify it, particularly with unfamiliar code.</p>
+
+
+
+
+
+<p>But adding security theater, additional approval systems, and elaborate orchestration before the basic workflow is proven doesn't create reliability. It creates maintenance obligations. A factory that takes more human effort to operate than the work it saves is failing its economic purpose.</p>
+
+
+</section><section class="kb-section">
+<h2>The Next Challenge: Turning a Working Method Into a Managed System</h2>
+<p>The September reset was not the end of Agent Operations' development. It was the point at which I had a more honest foundation to build from. I could already supervise coding agents through defined assignments. I could check changes against the permitted scope, collect test results, preserve evidence of what had been produced, and ask a separate reviewer to examine the outcome. The process was real. It had worked on bounded engineering tasks, and it had exposed both successful fixes and genuine defects.</p>
+
+<p>But it still depended on me to keep the work moving. I was the one initiating the worker, managing handoffs, checking what came back, deciding when to start the reviewer, and working through the interruptions between those stages. Each individual action might be straightforward. In combination, they created a ceiling on how much software I could get finished. That difference matters. A manually supervised workflow can be reliable while still requiring so much attention that it does not scale. Automating it carelessly can make the situation worse: instead of one person shepherding a task through a known process, you now have several agents acting on partial information, with nobody certain which result is authoritative.</p>
+
+
+<p>By the middle of October 2026, the next engineering objective was clearer. Agent Operations did not need to become a larger collection of scripts, nor did it need a dramatic rewrite of the foundation that was already working. It needed to learn how to carry an approved assignment through more of its ordinary lifecycle without asking me to operate every step. This became the managed-worker upgrade. The important word is <em>managed</em>. I was not trying to give models broad independence to choose projects, approve their own work, or deploy software. I was trying to separate decisions that genuinely require a person from routine work that a controlled system should be able to perform after those decisions have been made.</p>
+
+
+<p>That sounds like a modest change. In practice, it raised a new set of questions that could not be answered by watching a coding agent produce a patch.</p>
+<h3>First, I Had to Decide What the Upgrade Was Actually Allowed to Change</h3>
+<p>One lesson from the September reset was that a promising new architecture is not evidence that an existing system should be replaced. The manually supervised workflow was useful. Its checks and evidence mechanisms had been exercised. It also contained known limitations that were visible rather than hidden. So the upgrade was treated as a separate effort, with the existing foundation preserved while the next capabilities were investigated.</p>
+
+<p>The first milestone was deliberately about decisions, not new automation. Over the second half of October, I worked through questions about who would be responsible for controlling workers, what information an approved task needed to carry, how a separate technical reviewer should participate, where unfamiliar code would be permitted to run, and how multiple projects could eventually share a limited pool of computing resources.</p>
+<p>By October 26, that planning milestone had been accepted after independent review. What had been accepted was a direction and a set of boundaries. It was not an operational multi-worker system, and it was not permission to begin every subsequent stage. That distinction is one of the more important parts of this history. A design can resolve uncertainty without implementing anything. A review can find a plan suitable to proceed without proving that its proposed machinery works. Treating those outcomes as interchangeable is how unfinished systems acquire impressive but misleading capability lists.</p>
+
+
+<p>The upgrade plan therefore became a sequence of questions to answer with evidence. Could a provider run without a person standing at the terminal? Could it continue after being denied an unauthorized action? Could its actual behavior be observed? Could one worker's result be examined independently? Could interrupted work be recognized without guessing? Only after those questions were answered would more ambitious coordination become meaningful.</p>
+<h3>The Reviewer Could Not Just Be Another Voice Saying the Work Looked Good</h3>
+<p>Independent review had already shown its value in earlier Agent Operations work. A model could create a plausible implementation, pass its own tests, and still miss a real defect. A separate perspective, given the actual changes and evidence, could find what the first worker had overlooked. The managed upgrade forced a harder question: what does <em>independent</em> mean when the reviewer is also an AI system? It is not enough to give the original coding session a new instruction to review itself. That session carries forward the assumptions, explanations, and blind spots that may have contributed to the result. Nor is it enough to ask a second model whether the first model's summary sounds reasonable. The summary may omit the very defect that matters.</p>
+
+
+<p>The accepted direction was to have a fresh reviewer examine the actual candidate independently, with no authority to change the implementation or approve its release. The reviewer can identify defects, challenge test coverage, and recommend whether the work is technically ready. A separately authorized coding stage addresses corrections. I retain the acceptance decision. There is also a less obvious problem. Software can change between the moment it is tested and the moment it is reviewed. If the reviewer sees one version, the tests describe another, and the eventual acceptance refers to a third, the collection of passing checks no longer establishes what was accepted.</p>
+
+<p>That is why the upgrade's review design pays attention to the identity of the <em>actual result</em>, including work that has not yet been committed. The principle is easy to explain without detailing the implementation: <strong>the code that was tested, the code that was reviewed, and the code that is accepted must be demonstrably the same candidate—or the relevant evidence must be refreshed.</strong> This has not yet been proved through an unattended, end-to-end managed run. It is an accepted design requirement awaiting implementation and validation. But identifying it before scaling is progress. It prevents the factory from counting a review as meaningful merely because a reviewer produced a convincing report.</p>
+
+<h3>The First Managed-Worker Experiment Was About the Interfaces, Not the Models' Intelligence</h3>
+<p>After the planning milestone, the work moved from architecture to observation. It would have been easy to assume that major coding agents expose roughly interchangeable controls. They all accept instructions. They all produce code. They all offer some combination of permissions, tool access, and command-line operation.</p>
+
+<p>But those similarities are superficial when an automated supervisor is expected to depend on them. A human using an interactive coding assistant can answer a permission question, notice an unexpected request, stop a run, or explain what went wrong. A managed system needs a reliable way to recognize and handle the same event. It cannot depend on a person noticing a prompt that was never meant to appear, or on the model describing a denial that the underlying tool never actually enforced.</p>
+
+<p>The first upgrade experiments therefore examined actual non-interactive behavior across Claude Code, OpenAI Codex, and Grok. The tests used deliberately small, disposable programming examples so that the questions remained about observable execution and control, not about the complexity of the application. The distinction between a model's narrative and a tool's recorded activity became especially important. In one set of Codex experiments, the agent described a blocked write operation. But the execution record did not show an actual attempt to write. The target file remained unchanged, which was good, but it did not prove the permission mechanism had blocked a real write request. Those are different conclusions.</p>
+
+
+<p>A separate Codex interface did produce an observable approval request, a declined decision, and continuation of the task. That was a more meaningful result, although it depended on an experimental combination of features and did not justify declaring a production-ready integration. Neither outcome made Codex useless. Both narrowed what could responsibly be claimed about it. A working read-only execution path is useful evidence. An unobserved denial is not.</p>
+
+<p>This is one reason I resist designing a complex compatibility layer before seeing how the actual providers behave. An abstraction can look elegant on paper while hiding important differences in what the underlying systems can prove.</p>
+<h3>A Small Claude Test Provided Something More Valuable Than a Big Demonstration</h3>
+<p>One of the clearest results came from a very modest programming defect. The example involved a calculation that mishandled a percentage. Claude was asked to work within a narrow, authorized scope. During the run, the recorded activity showed the permitted file reads, an actual denied command request, the continued work, a focused correction, and a successful test of the changed behavior.</p>
+
+<p>The result was not exciting software. It was a tiny fix in a controlled fixture. But the experiment answered several questions simultaneously. The provider could operate in the required non-interactive setting for this case. A real denied action could be seen in the evidence rather than inferred from the agent's explanation. The work could continue after that denial. The modification stayed narrowly focused. And an external test, not merely the model's own assertion, supported the reported correction.</p>
+
+<p>That is more valuable to a developing factory than a polished demonstration of an agent generating an entire application with every permission left open. It is also important to say exactly what this did <em>not</em> prove. It did not show that every possible unauthorized action would be stopped. It did not make the coding provider an operating-system security boundary. It did not demonstrate automatic recovery after a failed model session, or establish that a supervisor could now dispatch many workers safely.</p>
+
+<p>What it did establish was a narrow, evidence-backed candidate for a supervised coding role in the next stage of development. At this point in the project, I would rather have one small result whose boundaries are clear than a dozen impressive results whose controls are assumed.</p>
+
+<h3>Then a Different Model Reviewed the Actual Change</h3>
+<p>The next important test connected two parts of the story that had previously been easier to discuss separately: coding and independent review. After Claude produced the percentage correction, Grok was given a fresh, read-only review assignment. It inspected the changed file and its test rather than merely reading the coding agent's conclusion. Its recorded activity showed the intended reads, and the review completed without observed editing. It assessed the correction as appropriate for the demonstrated case while identifying limitations in the test coverage and possible rounding concerns.</p>
+
+<p>The reviewer did not execute the tests itself. That limitation matters, because reading a test and running it are different kinds of evidence. Still, this was a meaningful advance. The project now had a documented example of one AI coding system making a bounded change and a different AI system independently examining the actual result under a read-only role. It was not yet an automatic factory review. I still controlled how the experiment was prepared and launched. The candidate had not progressed through the entire planned managed lifecycle. Human acceptance, separate repair authority, and any future integration remained outside what that one test demonstrated.</p>
+
+
+<p>But it showed the value of separating responsibilities. The builder could concentrate on implementation. The reviewer could challenge the result without holding the power to rewrite it. The human could evaluate a report tied to observed work instead of accepting an agent's self-assessment. I did not need those agents to agree about everything. I needed their contributions to be distinguishable, their limitations to be visible, and their decisions to remain within their roles.</p>
+
+<h3>A Surviving Process Was Not the Same Thing as a Recoverable Assignment</h3>
+<p>Running coding agents without constant supervision introduces another deceptively difficult problem: what happens when the human terminal disappears? I often work remotely. That means a task may be initiated in one environment and observed later from another. A disconnected session should not create uncertainty about whether a model is still acting, whether it finished, or whether a later attempt would duplicate work.</p>
+
+<p>The upgrade experiments included an interruption-related test that initially left the cause of a stopped process unresolved. A later, controlled test showed that a deliberately detached process continued producing its expected records across a remote disconnect and reconnect. That was useful evidence about process survival under those particular conditions. It did not explain the earlier unexplained termination. More importantly, it did not prove application-level recovery.</p>
+
+<p>There is a large gap between <em>a process kept running</em> and <em>a software assignment can be safely resumed</em>. A robust managed system eventually needs to distinguish a completed operation from a partly completed one, recognize a lost or ambiguous run, preserve the evidence already produced, and avoid authorizing a duplicate attempt by accident. It needs to know when an interrupted task is safe to continue and when it must stop for a person.</p>
+
+<p>Those capabilities are part of the later upgrade work. They were not delivered by the remote-session test, and I am not counting them as complete. The lesson is that recovery must be measured at the level of trustworthy work, not at the level of a terminal that happened to stay open.</p>
+
+<h3>Local Models Raised a Different Question: What Role Can They Earn?</h3>
+<p>During the same period, I also evaluated smaller coding models running on hardware I control. The attraction is obvious. A local model may avoid some provider usage costs, offer predictable access, and perform narrow repetitive tasks without consuming a premium cloud model's capacity. But those advantages matter only if the output is good enough and the operational cost is reasonable. The early benchmark results were encouraging in specific cases. One local coding candidate completed every item in a small correctness evaluation after a repair, while other tested sizes completed most of the same narrow evaluation. Those figures are observations from a limited benchmark, not rankings of general programming ability or evidence of unattended factory readiness.</p>
+
+
+<p>The harder questions remained: Can the local model use the necessary tools under appropriate controls? Can its requests and refusals be observed? Can it produce a result that survives independent validation? Does it save money once retries, compute time, review, and my own involvement are counted? By November 1, I had approved a direction for evaluating local workers within the <em>same</em> Agent Operations system after the first managed cloud path has been established. I had not approved an independently operating local-model factory, automatic fallback between providers, or a write-capable local worker role.</p>
+
+<p>That may seem conservative. I see it as a way to avoid creating a second orchestration problem in the name of reducing model costs. A cloud model and a local model should eventually be judged by the same basic standard: how reliably they produce an accepted result for an authorized assignment, and what it costs to get there.</p>
+
+<h3>Execution Isolation Is a Separate Engineering Responsibility</h3>
+<p>Another thread of development was about where workers should run when the source material is not mine. There is a major difference between asking a coding assistant to modify a small known fixture and asking it to build, install, or test unfamiliar customer software. The second situation may involve executable dependencies, setup scripts, network behavior, and data whose trustworthiness I cannot assume. Agent Operations therefore has a separately developed direction for disposable, isolated worker environments rather than treating ordinary version-control workspaces as security sandboxes. Initial infrastructure and connectivity checks have been carried out, but those checks do not qualify the complete security boundary.</p>
+
+
+<p>In particular, a worker's isolation from the trusted development machine is not the same question as its isolation from another worker. Network separation that looks correct from a high-level diagram still requires testing of the actual traffic paths that matter. And a model cooperating with a permission policy does not replace enforcement by the underlying execution environment. These concerns are important, but the September experience also taught me not to let an abstract security project consume the entire engineering roadmap. Isolation should be designed for the real trust boundary and validated before unfamiliar code is allowed to cross it. It should not be used as an excuse to turn every supervised local coding experiment into a sprawling infrastructure program.</p>
+
+<p>As of this article's checkpoint, the isolated client-execution path is preparation and preliminary validation, not a demonstrated production service handling customer repositories end to end.</p>
+<h3>Scaling Means Managing Dependencies, Not Just Adding Workers</h3>
+<p>The long-term aim is to work on more than one approved project without multiplying my own coordination work at the same rate. That introduces a different kind of system design. If several coding workers run concurrently, the factory has to know which assignments are independent, which depend on accepted work from earlier tasks, which resources are actually available, and whether a reviewer or repair stage is holding up the next piece of work.</p>
+
+<p>A queue of coding assignments alone is not enough. Review can become the bottleneck. A critical correction can compete with newly approved work. One project can consume attention while another waits, even when neither requires more computing power. The upgrade plan addresses these issues through a future shared pool of supervised workers, per-project task dependencies, explicit review and repair capacity, and a single operational view of what is actually happening. The intended dashboard is supposed to show evidence-backed state and exceptions rather than a wall of confident model-generated status messages.</p>
+
+<p>That is the destination, not the present implementation. There is no demonstrated managed multi-project scheduler at this checkpoint. There is no accepted benchmark showing that two workers are economically better than one, much less that a large fleet is useful. The plan is to establish the single-task lifecycle and recovery first, then measure whether parallel execution increases accepted output without imposing an equally large review and operating burden.</p>
+
+<p>The important unit is not the number of agents online. It is the number of independently accepted results produced with a reasonable amount of human effort.</p>
+<h3>What the November 2026 Evidence Actually Establishes</h3>
+<p>By November 1, the provider-verification work had progressed from inconclusive early experiments into a more useful record. A real, bounded Claude coding run had demonstrated a denied action followed by continued work, a focused fix, and passing validation in the tested scenario. A separate Grok session had performed an observed read-only review of that actual change. Codex had demonstrated useful read-only execution and, through a separate experimental interface, an observable approval denial and continuation; its claimed write denials in other runs remained unproven. A controlled remote process had survived a session disconnect, without establishing durable task recovery. Narrow local-model benchmarks had produced encouraging correctness results, without validating those models as managed workers.</p>
+
+<p>Those are real accomplishments. They are also narrower than the words <em>autonomous software factory</em> might suggest. The project's documentation now distinguishes supported behavior, unsupported or unproven modes, and evidence limitations more explicitly. Raw experiment records have been preserved in the repository, although their collection does not by itself establish a complete independent audit of every sensitive detail. Several acceptance questions are still open, including how to treat known evidence and provenance exceptions.</p>
+
+<p><strong>As of November 2, 2026, the managed-worker upgrade's planning milestone is accepted, but the provider-verification milestone is not yet finally accepted.</strong> The next stage of automation has not been authorized merely because some of its prerequisites produced successful test results. The current evidence supports a modest but useful conclusion: there is a credible path from today's manual foundation toward managed coding and independent review, and the first real interface tests have reduced uncertainty about that path. It does not support claiming that the factory can currently launch, recover, schedule, review, and accept unattended work across multiple projects.</p>
+
+<p>That distinction also protects the business side of the larger TENSA effort. Argus Ventures is evolving to handle discovery, assessment, product planning, and customer-facing scope. Agent Operations is being developed to execute approved engineering work. Those responsibilities meet at an authorized project decision; neither system should quietly invent authority belonging to the other. A customer request still has to become a coherent, agreed product before more efficient implementation can help.</p>
+
+<p>I can see the appeal of skipping ahead to a demonstration of ten agents working on ten tasks. But the last several months have repeatedly shown the cost of mistaking activity for progress. A small permitted correction, a genuine independent review, and an honest unresolved gate are not glamorous milestones. They are the kind of milestones that make the next one worth attempting.</p>
+
+</section><section class="kb-section">
+<h2>What Is Actually Working Today?</h2>
+<p>I think it's important to distinguish a working foundation from a completed autonomous software factory. Agent Operations currently has a manually supervised execution workflow with tested components for task validation, workspace checking, authorized test execution, artifact inventories, launch records, and process supervision. Claude Code and Codex have completed controlled coding experiments within that workflow. The project has real test evidence, rejected implementations, successful repairs, independent reviews, and accepted components.</p>
+
+
+
+<p>The September reset established a validated baseline, and subsequent development has continued from that foundation. But <strong>Agent Operations is not yet an unattended, multi-project production factory</strong>. The managed-worker upgrade is being developed separately while the manual foundation remains usable. As of November 2, 2026, the upgrade's planning milestone has been accepted, while provider verification and its final acceptance remain open.</p>
+
+
+
+<p>Controlled experiments have demonstrated selected headless provider behavior, an observed denied action followed by continuation, a bounded implementation and cross-model read-only review, and detached-process survival across one remote disconnect. Other permission paths, durable recovery and full managed orchestration remain unresolved or unproven.</p>
+<p>The next intended progression is managed single-task execution, reliable recovery, controlled client-environment integration, an independently reviewed end-to-end coding run, measured concurrency, multi-project scheduling, and a usable operator interface. Each stage needs its own evidence before the next capability can be claimed. Separate client-execution infrastructure has preliminary validation but is not being represented as fully security-qualified, and no paid client software-delivery lifecycle has been demonstrated.</p>
+
+
+<p>That may sound less exciting than announcing that a fleet of autonomous agents can already build anything. It's also a more useful description of engineering reality. The difference between "demonstrated," "under development," and "planned" should be visible in every serious software-factory project.</p>
+
+
+<p>The <a href="../../projects/driveline.html" style="color: #39ff88; text-decoration: underline; text-underline-offset: 0.18em;">TENSA Driveline project page</a> explains how this execution foundation is intended to connect with Argus Ventures. That combined discovery-to-delivery process remains a development direction, not a capability demonstrated by the Agent Operations experiments alone.</p></section><section class="kb-section">
+<h2>What the Experiments Reveal About Software-Factory Claims</h2>
+<p>After working through implementation, validation, and provider-control experiments, I became more cautious about the evidence used to describe a software factory as operational. The distinction is not whether an AI model can produce a convincing demonstration. It is whether the surrounding system can explain what was authorized, what actually happened, what was verified, and what remains unresolved. Agent Operations exposed several questions worth testing directly. Could a worker stay inside an authorized assignment and report a dependency rather than quietly expanding scope? Could unauthorized actions be stopped by an enforceable boundary instead of an instruction in a prompt? Could a reviewer inspect the actual changed files and validation records without receiving permission to rewrite the result? Could a failed process be distinguished from a task that had already modified a workspace? Could the system identify exactly which revision was tested?</p>
+
+<p>These are not hypothetical concerns in the project's history. I encountered permission evidence that sounded convincing but did not prove an attempted write, passing tests that missed blocking defects, and interruption experiments that demonstrated process survival without demonstrating safe task recovery. Each case narrowed the scope of what I could reasonably claim.</p>
+<p>The results also clarified the role of human authority. A completed coding pass, a successful test run, an independent review, and an acceptance decision are separate events. Their boundaries cannot disappear simply because an AI model is capable of performing several of them. I now treat architectural plans, narrow experiments, working components, and accepted end-to-end capabilities as different kinds of evidence. That distinction makes progress easier to explain and future work easier to prioritize.</p>
+
+<p>A credible software-factory result is not an impressive amount of generated code. It is software whose changes, tests, independent findings, remaining risks, and acceptance decision can be reconstructed from trustworthy records.</p>
+</section><section class="kb-section">
+<h2>Measuring Whether the System Actually Helps</h2>
+<p>The wrong metrics can make an ineffective factory look successful. Lines of code generated are not a measure of software quality. Number of active agents is not a measure of productivity. Tokens consumed are not a measure of engineering progress. And completed tasks aren't particularly meaningful if those tasks were never independently accepted. The measurements that interest me are much more practical. How long does it take a human to prepare and authorize a task?</p>
+
+
+
+
+
+
+<p>How many interventions are required after launch? How many initial implementations are rejected? How much rework occurs? How much compute is consumed before acceptance? How often can a failure be recovered without losing trustworthy state? Most importantly, <strong>how much accepted software does the factory produce per hour of human involvement?</strong> That final measurement is particularly important for a solo developer or small business.</p>
+
+
+
+
+
+
+<p>The purpose of automation is to increase useful output without increasing operational burden at the same rate. I've set a target of reducing routine task preparation to less than fifteen minutes of my time, but that target is not yet a measured achievement of the future managed system. The planned upgrade will need fresh baseline measurements and real end-to-end comparisons before any efficiency claim is justified. If additional automation doesn't improve the economics, it shouldn't be considered successful simply because it is technically impressive.</p>
+
+
+
+</section><section class="kb-section">
+<h2>The Real Challenge Is Making the System Trustworthy and Useful</h2>
+<p>AI coding models are already capable enough to do meaningful software engineering. That capability is improving. But a software factory can't be built on the assumption that model capability alone will solve the surrounding engineering problems. Someone still has to design the control plane. Someone has to define task authority, isolate execution, establish validation, capture evidence, handle failures, account for resource usage, manage dependencies, coordinate independent review, and preserve human decision-making.</p>
+
+
+
+
+<p>Then those systems have to be tested against real behavior. And sometimes the right engineering decision is to remove something you spent weeks building. That's what working on Agent Operations has taught me. I'm not building it because I believe every coding task needs an elaborate bureaucracy. I'm building it because I want to increase the amount of software I can produce while decreasing the amount of time I personally spend supervising the mechanics of getting it built.</p>
+
+
+
+
+<p>The system should do the repetitive coordination. The models should do the coding and technical reasoning they're good at. Independent validation and review should reveal what actually happened. And the decisions that materially affect scope, cost, acceptance, and delivery should remain under deliberate human control. A software factory should be judged by how reliably it delivers acceptable software, not how convincingly it simulates a team of autonomous developers.</p>
+
+
+
+
+<p><strong>The development approach remains incremental: begin with one bounded task, make it repeatable, prove the result, prove recovery, measure the economics, and only then consider scaling.</strong> The same evidentiary standard should apply whenever a software factory is evaluated, whether developed internally or commissioned externally. Because the most important feature of a software factory isn't how much code its agents can generate.</p>
+
+
+<p><strong>It's whether the factory knows when the work is acceptable, when it isn't, and when to stop.</strong></p>
+<hr/>
+<p><em>Engineering-history checkpoint: November 2, 2026. Agent Operations is an independently developed software-factory project under TENSA Engineering. The experiments described here do not establish completed unattended orchestration, production-qualified client isolation, or commercial software delivery. Managed orchestration and multi-project operation remain under development.</em></p>
+</section><section aria-label="Article navigation" class="kb-reading-nav"><div class="kb-nav-card"><p>Category</p><a href="./">Controlled AI Systems</a></div><div class="kb-nav-card"><p>Project overview</p><a href="../../projects/driveline.html">TENSA Driveline</a></div></section><section class="kb-related-card"><h2>Related reading</h2><div class="kb-related-links"><a href="./">Controlled AI Systems</a><a href="../safe-tool-interaction/">Safe Tool Interaction</a><a href="../ai-operations/">AI Operations — development continuity</a><a href="../../projects/driveline.html">TENSA Driveline</a><a href="../../knowledge-base/">Knowledge Base</a></div></section></article></div></main><footer class="site-footer"><p>© 2026 TENSA Engineering. Built for controlled AI systems, real infrastructure, and operational continuity.</p><nav aria-label="Footer navigation" class="footer-nav"><a href="../../contact.html">Contact</a><a href="../../about.html">About</a><a href="../../projects/">Projects</a><a href="../../knowledge-base/">Knowledge Base</a><a href="../../glossary/">Glossary</a></nav></footer></body></html>

@@ -1761,3 +1761,115 @@ h1 {
 .footer-card a.button.secondary {
   color: #f5f7fa;
 }
+
+/* Knowledge Base category browser */
+
+.kb-browse-section {
+  margin-bottom: 72px;
+}
+
+.kb-browse-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kb-category-browser {
+  overflow: hidden;
+  border: 1px solid rgba(57, 255, 136, 0.18);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(57, 255, 136, 0.065),
+      rgba(255, 255, 255, 0.025)
+    ),
+    rgba(2, 8, 18, 0.76);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.kb-category-browser summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 24px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 900;
+  list-style: none;
+}
+
+.kb-category-browser summary::-webkit-details-marker {
+  display: none;
+}
+
+.kb-category-browser summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: #39ff88;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.kb-category-browser[open] summary {
+  border-bottom: 1px solid rgba(57, 255, 136, 0.14);
+}
+
+.kb-category-browser[open] summary::after {
+  content: "−";
+}
+
+.kb-category-count {
+  margin-left: auto;
+  color: #8fa0b4;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.kb-category-browser ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 20px 24px 24px 44px;
+}
+
+.kb-category-browser li {
+  color: #c7d2df;
+  line-height: 1.55;
+}
+
+.kb-category-browser a,
+.kb-category-browser a:link,
+.kb-category-browser a:visited {
+  color: #39ff88;
+  font-weight: 800;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.18em;
+}
+
+.kb-category-browser a:hover,
+.kb-category-browser a:focus-visible {
+  color: #7dffad;
+  text-decoration-thickness: 2px;
+}
+
+.kb-category-note {
+  color: #8fa0b4;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .kb-browse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kb-category-browser summary {
+    padding: 20px;
+  }
+
+  .kb-category-browser ul {
+    padding: 18px 20px 22px 38px;
+  }
+}
