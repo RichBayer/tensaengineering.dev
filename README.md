@@ -23,7 +23,7 @@ What keeps the site on course. The full version is owned by `docs/planning/websi
 
 ## Resume
 
-Read `docs/ai-operations/tensa_website_resume_prompt.md`. It names the two lanes, website work and Blog work, and each lane's next step. Then read `docs/ai-operations/operating_rules.md` and only the docs that lane names. Open nothing else unless the task needs it.
+Read `docs/ai-operations/tensa_website_resume_prompt.md`. It names the two lanes, website work and Blog work, and each lane's next step. Then read `docs/ai-operations/operating_rules.md` and the chosen V2 work log: `docs/logs/website_seo.md` or `docs/logs/blog.md`. The log lists the task-specific sources to load; follow its references and the content-routing rules, not a whole-repo crawl.
 
 ## Where things are tracked
 
@@ -32,11 +32,13 @@ Read `docs/ai-operations/tensa_website_resume_prompt.md`. It names the two lanes
 - What each planning doc owns: `docs/planning/documentation_strategy.md`
 - Branding, deployment facts and open decisions: `docs/website_state.md`
 - What each top-level directory is for: `docs/infrastructure/tensa_repository_map.txt`
+- V2 evidence, decisions and next steps: `docs/logs/website_seo.md` and `docs/logs/blog.md` (active menu controls which lane to load)
+- Local state / continuity check: `scripts/session_check.py`, used as instructed by the operating rules
 - The Claude prose-polish pass: `docs/ai-operations/claude/claude_website_polish_resume_prompt.md`, loaded only for a polish pass
 
 ## Keeping it small
 
-- **Caps are hard.** A file over its line cap gets cut before anything is added. Caps: this README 80 lines, the resume note 40, the operating rules 150, `website_state.md` 120, the repository map 60, the closeout pointer 5.
+- **Caps are hard.** A file over its line cap gets cut before anything is added. Caps: this README 80 lines, the resume note 40, the operating rules 150, each V2 work log 80, `website_state.md` 120, the repository map 60, the closeout pointer 5.
 - **One in, one out.** A new rule replaces or deletes an existing one and names the incident behind it.
 - **Rules come from incidents on real work.** No workflow rules for risks nobody has hit.
 - **No new planning doc** unless the topic needs ongoing tracking and no existing doc owns it.
