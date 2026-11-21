@@ -16,6 +16,18 @@ Two lanes. Ask Rich which one before reading anything else.
 - Read: `docs/linux-calculator-toolkit-plan.md` on the named branch, operating rules, and required website page-planning docs.
 - Queued afterward: AI Operations category/index restructuring on `feature/kb-ai-operations-index` (not yet created).
 
+## Repository reconciliation - IN PROGRESS (2026-11-20)
+
+- Current priority before further SEO work: consolidate the repository into one clean local `main` synchronized with GitHub. Preserve unique work before deleting any references or working directories.
+- GitHub `main` checkpoint: `5d10e0e` (Context Engineering publication `e9383cc`, SEO handoff `b98da74`, November 20 Search Console baseline `5d10e0e`).
+- Original worktree: `/mnt/g/ai/projects/tensaengineering.dev`, local `main` at `5d1f07c`, with six modified documentation files. Whitespace-insensitive comparison showed substantive changes only in the resume note and 58-line SEO baseline. Their required closeout and baseline information has been published on GitHub, but local reconciliation has NOT been completed.
+- Five worktrees at last inspection: original website; `tensa-seo-publish` (clean); `tensaengineering-driveline` (clean); `tensaengineering-driveline-kb` (dirty); `tensaengineering-driveline-publish` (clean).
+- Driveline KB worktree has unpublished `projects/neurocore.html` social-preview metadata (37 added lines) and untracked `knowledge-base/controlled-ai-systems/agent-operations-engineering-history.html` (450 lines). Compare with current published content and preserve any unique work before removing that worktree.
+- Protected `stash@{0}` contains earlier Knowledge Base reading-experience work in the glossary, project-context article, Knowledge Base index, and CSS. It has been inventoried but NOT compared fully against current published content. Do not apply, drop, or clear without separate owner approval.
+- Existing local and remote branches require classification; preserve unique Blog and utility planning. The remote reconciliation branch `docs/website-reconciliation-20261120` is an ancestor of `main` and does not require merging.
+- Exact next action: inspect the protected stash read-only against published content, preserve unpublished Driveline work, then reconcile original `main` and remove only confirmed redundant worktrees/branches. No resets, deletions, force-pushes, or stash mutations without explicit approval.
+- Completion criterion: one clean local worktree on `main`, synchronized with GitHub, with no unnecessary branches or stashes and no lost unique work. Resume Agent harness / harness engineering SEO terminology only afterward.
+
 ## Blog lane
 
 - Branch: `feature/blog-public-foundation`. Do not start another Blog implementation branch.
