@@ -3094,3 +3094,40 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Context guide continuity starter button */
+.context-guide #copy-continuity-prompt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 12px 24px 0;
+  padding: 12px 22px;
+  border: 1px solid #39ff88;
+  border-radius: 999px;
+  background: rgba(57, 255, 136, 0.10);
+  color: #39ff88;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.context-guide #copy-continuity-prompt:hover {
+  background: rgba(57, 255, 136, 0.20);
+  transform: translateY(-2px);
+}
+
+.context-guide #copy-continuity-prompt:focus-visible {
+  outline: 2px solid #39ff88;
+  outline-offset: 4px;
+}
+
+.context-guide #continuity-copy-status {
+  display: inline-block;
+  color: #39ff88;
+  font-size: 14px;
+  font-weight: 600;
+}

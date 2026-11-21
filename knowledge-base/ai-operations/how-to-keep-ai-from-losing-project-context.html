@@ -231,6 +231,16 @@
           </p>
         </section>
 
+        <aside class="kb-callout">
+          <p><strong>There's something useful waiting at the end of this guide.</strong></p>
+          <p>
+            This article was written to do more than explain project continuity.
+            At the end, you'll discover how to use the guide itself to help an
+            AI assistant design a continuity system for your own projects.
+          </p>
+          <p>No special software or complicated setup is required to get started.</p>
+        </aside>
+
         <nav class="kb-toc" aria-label="Article sections">
           <p class="eyebrow">In this guide</p>
           <h2>Jump to the part you need.</h2>
@@ -666,7 +676,7 @@
           <p>Depending on the platform, the feature may be called:</p>
 
                     <p>
-                      Repository access may be described as a connector, app, integration, repository tool, coding agent, project connection, or MCP-based tool. The label matters less than what the connection actually permits the model to read or change.
+                      Repository access may be described as a connector, app, integration, repository tool, coding agent, project connection, or <a href="../../glossary/#mcp-based-tool">MCP-based tool</a>. The label matters less than what the connection actually permits the model to read or change.
                     </p>
 
           <p>
@@ -1882,6 +1892,79 @@
             the important work is already over.
           </p>
         </section>
+
+        <section class="kb-section" id="build-your-continuity-system">
+          <h2>Let AI help you build your own continuity system</h2>
+
+          <p>
+            Here's something interesting about this article: its explanations,
+            principles, and examples provide enough structure for an AI assistant
+            to use them as a starting point for designing a project continuity
+            system. You don't have to translate everything into technical
+            requirements yourself.
+          </p>
+
+          <h3>Try it yourself</h3>
+          <p>
+            Open a new conversation with your preferred AI assistant. Copy
+            this article's URL from your browser's address bar and ask the
+            assistant to read and analyze it. If it cannot access webpages,
+            copy and paste the article's text instead.
+            Then give it this prompt:
+          </p>
+
+          <blockquote>
+            <p id="continuity-starter-prompt">
+              Using the article I've shared, help me design a simple,
+              reliable AI project continuity system for a new or existing
+              project. Use the article's principles, keep the approach
+              practical, and explain your proposed plan before making any
+              changes. Ask for my approval before modifying anything.
+            </p>
+          </blockquote>
+
+          <button type="button" id="copy-continuity-prompt"
+                  aria-describedby="continuity-copy-status">
+            Copy starter prompt
+          </button>
+          <span id="continuity-copy-status" role="status" aria-live="polite"></span>
+
+          <p>
+            <strong>A safety recommendation:</strong> Start with a new project
+            when possible. If you're applying this method to an existing
+            project, preserve your current work with a verified backup or an
+            isolated branch before making changes. Do not allow the assistant
+            to overwrite existing documentation or project files without
+            reviewing its proposal.
+          </p>
+
+          <p>
+            Once your system is established, try opening another fresh AI
+            conversation and see whether it can reconstruct your project's
+            current state using only the records you've created.
+          </p>
+        </section>
+
+        <script>
+          (() => {
+            const button = document.getElementById("copy-continuity-prompt");
+            const prompt = document.getElementById("continuity-starter-prompt");
+            const status = document.getElementById("continuity-copy-status");
+            button.addEventListener("click", async () => {
+              try {
+                if (!navigator.clipboard?.writeText) {
+                  throw new Error("Clipboard unavailable");
+                }
+                await navigator.clipboard.writeText(
+                  prompt.textContent.replace(/\s+/g, " ").trim()
+                );
+                status.textContent = " Prompt copied.";
+              } catch {
+                status.textContent = " Copy unavailable. Select the prompt above.";
+              }
+            });
+          })();
+        </script>
 
         <nav class="kb-endnav" aria-label="Continue reading and related topics">
           <p class="eyebrow">Continue reading</p>

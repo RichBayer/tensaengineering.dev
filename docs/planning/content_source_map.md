@@ -67,6 +67,8 @@ If the source docs are missing, ask for them.
 
 Four focused articles were published at commit `7a849d3` under `/knowledge-base/controlled-ai-systems/`: enforced boundaries, software acceptance, interrupted-task recovery, and the move toward supervised engineering. The source `Agent_Operations_Expanded_Article_2026-11-02.md` remains unchanged in the Library. Current factual claims must be checked against the authoritative Agent Operations repository and its verified evidence. The public Driveline project page explains the combined Argus Ventures / Agent Operations direction. Do not imply managed workers, automatic recovery, or integrated Driveline are fully operational. The earlier single long-form webpage remains an unpublished draft, not a publishing target.
 
+The separate Agent Operations engineering-history article is ready for publication review as of November 21, 2026. Its November 2 historical claims were checked against the original expanded article, the Agent Operations task records, and archived provider experiment evidence. The evidence review passed within the article's stated limitations. Publication and live verification remain separate steps; no unattended orchestration or production security qualification is claimed.
+
 ## Current Public Pages
 
 Current public pages:
