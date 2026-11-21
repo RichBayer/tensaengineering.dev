@@ -9,26 +9,26 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 1. Read the note, `docs/ai-operations/tensa_website_resume_prompt.md`.
 2. Read these rules, then choose website SEO or Blog as the menu names (ask only when unclear).
 3. Read the lane log on `main`: `docs/logs/website_seo.md` or `docs/logs/blog.md`, including its current gates, next action and source pointers.
-4. Read only the selected sources and page-specific documents actually required for that action. Branch-local approved Blog planning takes precedence over older copies on `main`.
+4. Read only the selected sources and page-specific documents actually required. For Blog, the three `blog_*` strategy/experience/engagement files are authoritative on `feature/blog-public-foundation` until reconciled; shared source, SEO, style, and inventory docs on `main` are newer. Do not let stale branch copies override them.
 5. Before any write or local-state-dependent action, request the session check below and inspect local unpushed changes; reconcile first if it is unsafe.
 
 - No `tree`, `find` or href grep at every start. When the task touches structure, use `git ls-files`. When it touches links, routes or navigation, run a real link check, not a grep.
 - When facts conflict, trust them in this order: local files and command output from Rich, his browser preview, validation output, GitHub, planning docs, chat memory.
 - Finish a required research or validation gate before drafting. Candidate titles, candidate paths and old next-step suggestions in planning docs are guidance, not assignments. (A historical article title nearly bypassed the Blog pain-point research; commit `2c625a2`.)
 - A branch or a stash existing is not a reason to resume it. Only what the note names is active.
-- Don't invent the next step. If the note doesn't say, ask one question.
+- Don't invent the next step. The active log's `Next` owns it; ask only when both menu and log lack a grounded direction.
 - During a resume, never propose new process or a new planning doc.
 
 ## V2 continuity and content routing
 
-- `main` owns the 40-line live menu and the two 80-line V2 logs. Logs use seven headings: Purpose, Gates (PASS/OPEN/FAIL with evidence), Last session, Decisions in force, Next (branch, last verified local state, uncommitted files, exact next action and required approval), Read before working (up to six starting paths), Closeout updates. Rewrite the active log whole on a meaningful save, never append endless checkpoints; preserve decisions in the appropriate existing planning source.
-- At resume, report what is done, next, and locally unverified; never treat a saved note as permission to build or publish. For a handoff, update the active log, then update the menu only if an open path or next priority changed. Fresh-thread closeout independently compares claims to commits and available validation; unverifiable evidence stays qualified.
+- `main` owns the 40-line menu and two 80-line V2 logs. The menu owns *open paths* only; logs own detailed next steps. Logs use seven headings: Purpose, Gates (PASS/OPEN/FAIL with evidence), Last session, Decisions in force, Next (branch, last verified local state, uncommitted files, precise next step/approval), Read before working (up to six starting paths), Closeout updates. Rewrite the active log as one bounded update; no endless checkpoints.
+- At resume, report done, next, and unverified; saved notes never authorize implementation or publishing. On `save(website_seo)` / `save(blog)` or `handoff(<lane>)`, update only the active `main` log with evidence, then check it. Change the menu only when a lane opens or closes, by Rich's approval. Fresh-thread closeout checks stated evidence against commits and validation; unverified items stay qualified.
 - The six initial read pointers are a starting point, **not a cap on necessary evidence**. Before public content work use the page inventory for status/URLs, content source map for source ownership, information architecture for page role, style guide for voice/claims, and the actual target HTML and existing page-specific CSS.
 - Focused Knowledge Base article: additionally use `docs/planning/knowledge_base_article_template.md` and reference article `knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html`; preserve article/category/index/related-reading routes and existing CSS classes.
-- Industry vocabulary / glossary: use `docs/planning/seo_topic_map.md`, `glossary_strategy.md`, `internal_linking_strategy.md`, public `glossary/index.html`, `assets/js/glossary-tooltips.js` and affected pages. Adjust page wording and definition/anchor together; preserve links and graceful fallback.
-- Blog: use **branch-local** `docs/planning/blog_strategy.md` source packet, `blog_reader_experience.md`, `blog_engagement_strategy.md`, `seo_topic_map.md`, style guide, and actual Blog-page files when created. Blog branch currently diverges from `main`; do not copy or overwrite its approved planning blindly.
+- Industry vocabulary / glossary: use `docs/planning/seo_topic_map.md`, `glossary_strategy.md`, `internal_linking_strategy.md`, public `glossary/index.html`, `assets/js/glossary-tooltips.js` and affected pages. Tooltip text is embedded separately in each page's `.glossary-term[data-definition]`; update every affected page's `data-definition` and `data-term` as needed when the linked definition changes. Preserve anchors, URLs and fallback links.
+- Blog: use three **Blog-branch** `docs/planning/blog_*` files (strategy, reader experience, engagement), including Article #1 approved draft; use **main** for shared `seo_topic_map.md`, `content_style_guide.md`, `page_inventory.md`, and other updated site standards until locally reconciled. To prepare the Blog branch for publication, merge current `main` into `feature/blog-public-foundation` locally, without rebase or force; review conflicts and preserve approved Blog source/draft. Ordinary main-only log saves do not require immediate Blog reconciliation.
 - For any public change, check page discovery (relevant category/index and related reading), nav, glossary, metadata/canonical/schema, reused styles/assets, responsive and interaction behavior, internal links/anchors and source-backed present/future claims. Update inventory/link map/sitemap only when their owned facts change; confirm Pages and live content before claiming deployment, and Search Console evidence before claiming indexing.
-- `scripts/session_check.py` checks local versus remote branch and V2 files. From the **TENSA website terminal**, run `(git fetch -q origin && git show origin/main:scripts/session_check.py > /tmp/tensa_website_session_check.py && python3 /tmp/tensa_website_session_check.py <branch> <website_seo|blog>) || echo "SESSION CHECK: FAIL (could not fetch or run)"`; replace placeholders, leave the terminal open. Only a final `SESSION CHECK: PASS` is a pass. An independent planning/read-only review needs no local check.
+- From the **TENSA website terminal**, run `(git fetch -q origin && git show origin/main:scripts/session_check.py > /tmp/tensa_website_session_check.py && python3 /tmp/tensa_website_session_check.py <main|feature/blog-public-foundation> <website_seo|blog>) || echo "SESSION CHECK: FAIL (could not fetch or run)"`. Before V2 is on `main`, test the staging script explicitly from its branch. Stop for any final `SESSION CHECK: FAIL`. PASS means continuity structure is valid, **not** write or publish authorization. Connector writes require `CONNECTOR WRITE TO THIS BRANCH: SAFE` on the actual target branch. Main-owned log saves require `LOG SAVE TO main: SAFE` from a separate clean, synced `main` worktree; a Blog worktree cannot certify it. Read-only reviews need no local check.
 
 ## Edits and commits
 
@@ -36,7 +36,7 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 - No local commit, push, tag or merge unless Rich asks. He reads the diff first. A separately approved GitHub connector edit commits automatically; no redundant commit approval is needed. Finishing a step is not finishing the task.
 - Only this repo is writable. Other repos are read-only reference.
 - Read the whole current file before editing it or quoting it as current state. Never edit from grep snippets.
-- A workflow change does not touch public pages, `sitemap.xml` or site state.
+- A workflow change does not touch public pages, `sitemap.xml` or site state. Public HTML must be previewed locally before release, not edited directly on live `main` through the connector.
 - Local edit scripts touch only the named files, fail loudly when the expected text is missing, and report what they changed. Verify each edit before the next.
 - Network and remote-access facts live in the `home-network` repo. Point to it; never copy them here.
 
@@ -56,7 +56,7 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 ## Editing through the GitHub connector
 
 - The connector is read-only until Rich approves a write. One approval can cover an agreed batch of files.
-- Stage approved V2 migration changes on a dedicated branch and have Rich check/reconcile local state before merging into `main`. For future connector edits, require clean synchronized local state for the target branch; no remote edit overwrites locally unpushed work.
+- For connector edits, require clean synchronized local state for the target branch and the correct SAFE verdict; never overwrite locally unpushed work. Test new continuity infrastructure on a review branch before integration.
 - The connector writes whole files only. Read the complete current file, change only the agreed lines, write the complete file back, then read it back and confirm nothing else changed and nothing was cut off.
 - Keep files edited through the connector under about 700 to 800 lines. Larger files get cut off; edit those locally.
 - One file per call is a tool limit, not a safety rule. Plan the agreed change set together, then write the files one after another.
@@ -82,7 +82,7 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 - GitHub Pages builds from `main` at the repository root. Any change to `main` rebuilds the live site within minutes, including a commit that only updates the note.
 - A push is not a deployment. Make no deployment or indexing claim without evidence: the Pages build result, the loaded page, or the webmaster tool.
 - Internal planning never becomes public content.
-- Internal docs are kept off the site by the root `_config.yml`, which excludes `docs/` and `README.md` (commit `b5fe6b3`). Verified 2026-10-10: the build passed, and `/docs/website_state.html`, `/docs/website_state.md`, `/docs/ai-operations/tensa_website_resume_prompt.html` and `/docs/infrastructure/tensa_repository_map.txt` all returned 404.
+- Internal docs are kept off the site by the root `_config.yml`, which excludes `docs/`, `scripts/` and `README.md` (commit `b5fe6b3`). Verified 2026-10-10: the build passed, and `/docs/website_state.html`, `/docs/website_state.md`, `/docs/ai-operations/tensa_website_resume_prompt.html` and `/docs/infrastructure/tensa_repository_map.txt` all returned 404.
 - The exclude hides files from the website only. They stay readable on GitHub while the repository is public.
 - Any internal file or folder added outside `docs/` joins the exclude list before it reaches `main`; `scripts/` is excluded for the V2 checker. Check both its raw address and its `.html` address afterward.
 
@@ -93,7 +93,7 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 3. `page_inventory.md`, if a page was added, removed or changed status.
 4. `sitemap.xml`, if a public URL was added and is ready to index.
 5. A planning doc only when its own subject changed: linking strategy for navigation, source map for a new page type, indexing strategy for sitemap or search-console state.
-6. The note: active, next step, date.
-7. Rich reads the diff. Commit, push and merge happen when he says.
+6. Update the active V2 work log (`main`) with evidence, next step, and local-state limits. Update the menu only if a lane opens or closes.
+7. Rich reads the diff and authorizes local commit/push/merge; a separately approved connector write includes its automatic commit.
 
 `docs/website_state.md` is touched only when a branding choice, a deployment fact or an open decision changes.
