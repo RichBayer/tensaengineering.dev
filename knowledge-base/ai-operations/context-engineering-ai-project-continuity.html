@@ -252,6 +252,7 @@
             <a href="#connectors-and-permissions">Connectors and permissions</a>
             <a href="#continuity-documents">Continuity documents</a>
             <a href="#operating-rules">Operating rules</a>
+            <a href="#agent-instruction-files">AGENTS.md and CLAUDE.md</a>
             <a href="#session-workflow">Session workflow</a>
             <a href="#frequently-asked-questions">FAQ</a>
           </div>
@@ -1369,6 +1370,42 @@
           <p>
             Operating rules are valuable because they stay stable even as the
             individual task changes.
+          </p>
+        </section>
+
+        <section class="kb-section">
+          <h2 id="agent-instruction-files">How AGENTS.md and CLAUDE.md help coding agents</h2>
+
+          <p>
+            Some AI coding tools can load project instructions from files kept with
+            the repository. For OpenAI Codex, <a class="glossary-term"
+            href="../../glossary/#agents-md" data-term="AGENTS.md"
+            data-definition="A repository instruction file used by Codex to guide how it works in a project."><code>AGENTS.md</code></a>
+            can describe the checks, conventions, and working boundaries for an
+            agent. Anthropic Claude Code uses <a class="glossary-term"
+            href="../../glossary/#claude-md" data-term="CLAUDE.md"
+            data-definition="A project instruction file used by Claude Code to guide work in a repository."><code>CLAUDE.md</code></a>
+            for standing project guidance. The tools do not have identical loading
+            behavior, so confirm the locations and precedence in each tool's
+            current documentation.
+          </p>
+
+          <p>
+            Keep these files concise. Tell the coding assistant where to find
+            the project's authoritative requirements, what directories are in
+            scope, which validation commands matter, and when human approval is
+            required. Do not copy an entire project history into an instruction
+            file; point instead to version-controlled source documents that can
+            be checked against the current branch and working tree.
+          </p>
+
+          <p>
+            Neither file grants tool permissions, proves that a command ran, or
+            replaces an approved task specification. A good startup still checks
+            the active branch, current files, outstanding decisions, and test
+            evidence before work begins. For tool-specific behavior, see the
+            <a href="https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide">Codex prompting guide</a>
+            and <a href="https://code.claude.com/docs/en/settings">Claude Code settings documentation</a>.
           </p>
         </section>
 

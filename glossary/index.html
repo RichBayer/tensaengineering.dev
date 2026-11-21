@@ -133,6 +133,8 @@
             <li><a href="#agent-operations">Agent Operations</a></li>
             <li><a href="#agent-harness">Agent harness</a></li>
             <li><a href="#harness-engineering">Harness engineering</a></li>
+            <li><a href="#agentic-coding">Agentic coding</a></li>
+            <li><a href="#vibe-coding">Vibe coding</a></li>
             <li><a href="#ai-operations">AI Operations</a></li>
             <li><a href="#operational-continuity">Operational continuity</a></li>
           </ul>
@@ -205,6 +207,9 @@
             <li><a href="#repository-connector">Repository connector</a></li>
             <li><a href="#resume-prompt">Resume prompt</a></li>
             <li><a href="#operating-rules">Operating rules</a></li>
+            <li><a href="#agents-md">AGENTS.md</a></li>
+            <li><a href="#claude-md">CLAUDE.md</a></li>
+            <li><a href="#spec-driven-development">Spec-driven development</a></li>
           </ul>
         </div>
       </div>
@@ -270,7 +275,42 @@
       <p><strong>Read more:</strong> <a href="../knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html">From Individual Coding Agents to Supervised Engineering</a>.</p>
       </div>
 
-<div class="glossary-definition" id="authority-boundary">
+<div class="glossary-definition" id="agentic-coding">
+      <h2>Agentic coding</h2>
+      <p><strong>Human definition:</strong> AI-assisted programming in which an agent uses tools to inspect, edit, and test code within a task.</p>
+      <p><strong>TENSA context:</strong> Agent Operations uses bounded coding assignments and human acceptance rather than granting coding agents independent authority to approve work.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html">From Individual Coding Agents to Supervised Engineering</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="vibe-coding">
+      <h2>Vibe coding</h2>
+      <p><strong>Human definition:</strong> An informal term for generating or changing software mainly through AI prompts with limited direct review of the resulting code.</p>
+      <p><strong>TENSA context:</strong> AI-assisted development is not automatically vibe coding. TENSA contrasts prompt-led experimentation with independently reviewed, human-accepted engineering work.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html">Supervised engineering</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="agents-md">
+      <h2>AGENTS.md</h2>
+      <p><strong>Human definition:</strong> A repository instruction file used by Codex to guide how it works in a project.</p>
+      <p><strong>TENSA context:</strong> A useful instruction file points to current requirements, permitted scope, and validation rules; it is not a substitute for checking actual files or gaining approval.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/ai-operations/context-engineering-ai-project-continuity.html#agent-instruction-files">Context Engineering guide</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="claude-md">
+      <h2>CLAUDE.md</h2>
+      <p><strong>Human definition:</strong> A project instruction file used by Claude Code to guide work in a repository.</p>
+      <p><strong>TENSA context:</strong> Instruction files can guide how sessions start and which project sources matter, but current branch and permission checks remain separate.</p>
+      <p><strong>Read more:</strong> <a href="../knowledge-base/ai-operations/context-engineering-ai-project-continuity.html#agent-instruction-files">Context Engineering guide</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="spec-driven-development">
+      <h2>Spec-driven development</h2>
+      <p><strong>Human definition:</strong> A workflow that defines requirements and acceptance criteria before implementation begins.</p>
+      <p><strong>TENSA context:</strong> Driveline's approved task packets specify scope, boundaries, and acceptance checks. This does not imply integration with an external spec framework.</p>
+      <p><strong>Read more:</strong> <a href="../projects/driveline.html">TENSA Driveline</a>.</p>
+      </div>
+
+      <div class="glossary-definition" id="authority-boundary">
       <h2>Authority boundary</h2>
       <p><strong>Human definition:</strong> The line between what an AI model may reason about and what it is allowed to control.</p>
       <p><strong>TENSA context:</strong> Authority boundaries keep model explanation separate from governed execution paths.</p>
