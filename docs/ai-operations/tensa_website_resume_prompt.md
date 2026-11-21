@@ -1,32 +1,16 @@
-# TENSA Website: Now
+# TENSA Website: Now — V2 menu
 
-Updated: 2026-11-21 (post-cleanup)
-Two lanes: website and Blog. Ask Rich which lane unless his request already selects one.
+Updated: 2026-11-21. This `main` file is the only active-path menu. Read `docs/ai-operations/operating_rules.md`; choose the lane Rich requests (ask only if unspecified).
 
-## Completed — do not repeat without a new concrete defect
+1. **Website SEO** — improve industry vocabulary and non-branded discoverability without breaking published routes. Branch `main` for approved publication; log `docs/logs/website_seo.md`.
+2. **Blog** — create approved AI Coding Article #1 using existing research. Branch `feature/blog-public-foundation`; log `docs/logs/blog.md`. This branch diverges from `main`; reconcile before implementation or connector writes, preserving its newer Blog documents.
 
-- **Repository cleanup CLOSED:** final handoff closeout `876581a` on GitHub `main` (2026-11-21). Knowledge Base editorial, teaching, and navigation guidance was consolidated into the existing `docs/planning/content_style_guide.md` and `docs/planning/knowledge_base_article_template.md` at `18a8ffe`; no duplicate standard, public article, CSS, sitemap, or unrelated file was changed.
-- **Historical branch preservation:** the two final KB branches were archived on GitHub and retired: `repair/kb-context-article-reading-pass` (`51fd594e` -> `archive/website-20261121-kb-context-article-reading`) and `docs/long-form-kb-style` (`cc4ed242` -> `archive/website-20261121-kb-long-form-style`). Prior archival/retirement, four obsolete worktrees, merged branches, and reconciled stash were already completed. Do not repeat branch archaeology or cleanup.
-- **Publication already validated:** the 11-file reconciliation was published at `5845e58`, GitHub Pages #55 passed, and Rich confirmed both live articles. Full patch, HTML/CSS/metadata, 283 links, 78 fragments, sitemap and AO evidence already reviewed. Prior closeout `7b19003`, handoff `d521245`. Do not restart publication or source audits.
-- **Confirmed final local state:** Legion `main` clean and synchronized at `876581a`; local branches listed were `main` and `feature/blog-public-foundation`. The Local LLM Recommender is approved future work; its planning branch need not be checked until resuming that task.
-- **Outside cleanup:** live copy-button behavior and search indexing remain unverified. Neither blocks the completed repository closeout.
+**Closed (do not repeat):** Nov 21 website repository cleanup `876581a`, KB style consolidation `18a8ffe`, publication `5845e58` / Pages #55 and owner live-page confirmation. Archive preservation and branch retirement passed. Context Engineering and four Driveline KB articles are already published. Do not reopen validation, stashes or branch archaeology without a concrete defect.
 
-## Website lane — next active priority
+**Website next:** capture Search Console baseline, read Nov 19 `tensa-marketing` Grok audit, then check engineering sources; update Agent Operations/agent-harness terms on Driveline and supervised-engineering pages alongside glossary definitions. Preserve URLs, anchors, TENSA naming and current-vs-planned distinctions. Unverified: new-page indexing and live copy-button behavior.
 
-- **NEXT:** Resume the approved **industry-vocabulary / non-branded SEO pass**. First capture a Google Search Console baseline; consult the November 19 TENSA Marketing audit in `RichBayer/tensa-marketing/docs/planning/grok_bot_pilot_20261119.md`, then verify current engineering source evidence. Work one subject/page and its matching glossary definitions together.
-- **Next subject:** Agent harness / harness engineering terminology on TENSA Driveline and supervised-engineering pages. Preserve URLs, existing glossary anchors, TENSA naming, and explicit current-versus-planned capability boundaries. Do not claim unverified functionality.
-- **Already done:** Context Engineering article and matching glossary terminology published and owner-confirmed November 20 (`e9383cc`); four Driveline engineering articles published November 3 (`7a849d3`). No need to redo these.
-- **Read for this pass:** `docs/planning/seo_topic_map.md`, `glossary_strategy.md`, `page_inventory.md`, `content_source_map.md`, `content_style_guide.md` and relevant authoritative project sources. Current KB article format is in `knowledge_base_article_template.md`.
-- **Visibility:** Windsor.ai is connected to Search Console for `sc-domain:tensaengineering.dev`; 24-URL sitemap fetched. Indexing for new articles is not confirmed; source of record: `docs/planning/search_indexing_strategy.md`. Keep the 90-day traffic plan and current website/Blog queues.
-- **Parked afterward:** Local LLM Model Recommender, “What local AI model can run on my PC?”, using `docs/linux-calculator-toolkit-plan` and its approved `docs/linux-calculator-toolkit-plan.md`; verify current model specs and memory-fit assumptions before build/test, without restarting planning. AI Operations category/index restructuring follows on `feature/kb-ai-operations-index` (not created).
+**Blog next:** use Oct 11 approved Source Packet in the Blog branch's `docs/planning/blog_strategy.md` for `/blog/ai-coding/why-ai-coding-uses-up-your-usage-limit.html`. Reverify current official provider sources and account-limit wording; no unsupported usage-savings claims. Build article, then validated category and Blog home. Do not expose Blog nav/sitemap links prematurely.
 
-## Blog lane — separate approved work
+**Parked, not active:** Local LLM Model Recommender (approved plan), then AI Operations category/index restructure. No new tasks or reopening completed work at resume.
 
-- Work on existing `feature/blog-public-foundation`, not a new Blog branch. No Blog implementation is active yet.
-- **NEXT:** Build approved Article #1 from the Source Packet in `docs/planning/blog_strategy.md`: `/blog/ai-coding/why-ai-coding-uses-up-your-usage-limit.html`. Text, outline and sources were approved October 11; do not restart research.
-- Before publishing, directly recheck official sources, four GitHub issues, ChatGPT plan limits and Grok Usage wording. Do not make a measured claim before the planned comparison. Remove the draft block from the Source Packet after the page exists.
-- Read `blog_strategy.md`, `blog_reader_experience.md`, `blog_engagement_strategy.md` and `seo_topic_map.md` from the **Blog branch**, whose copies are newer than `main`. Build article, validate, then category and Blog home. No Blog navigation/sitemap entries before validated public pages.
-
-## Resume
-
-Read `docs/ai-operations/operating_rules.md` and only the selected lane's named documents. Do not reopen the completed cleanup, legacy branches, stashes, worktrees, publication audits, or documentation-standard integration. For a GitHub connector commit, Rich's local repository must be fast-forwarded afterward.
+**How to work:** read only the chosen log and its `Read before working` paths, expanding into page-specific source documents as required by operating rules. The logs own detailed decisions, verification gates and next actions. `main` owns menu and logs; never use stale branch copies as authority. Check Rich's local state before remote edits. A GitHub connector commit must be followed by an approved local fast-forward/reconciliation.
