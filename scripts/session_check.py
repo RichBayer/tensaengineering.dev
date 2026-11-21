@@ -4,7 +4,7 @@
 Rich runs the command in docs/ai-operations/operating_rules.md (V2 continuity)
 from the project folder. It fetches GitHub's copy of this script and runs it:
 
-    python3 /tmp/session_check.py <branch> [<work log name>]
+    python3 /tmp/tensa_website_session_check.py <branch> [<work log name>]
 
 <branch> is the branch the work is on. <work log name> is the path name in
 docs/logs/<name>.md; leave it off for a path with no work log (the menu and
@@ -36,7 +36,7 @@ HEADINGS = ["Purpose", "Gates", "Last session", "Decisions in force", "Next",
             "Read before working", "Closeout updates"]
 STATUSES = {"PASS", "OPEN", "FAIL"}
 # Continuity files only. README and project files change on work branches.
-# V2 menu and logs live on main; a work branch can have old continuity files.
+# Branch-specific continuity edits are checked against the merge base.
 MAX_READ = 6
 
 COLOR = sys.stdout.isatty() and "NO_COLOR" not in os.environ
@@ -132,15 +132,19 @@ def main():
     note(f"ahead of GitHub: {ahead}, behind GitHub: {behind}")
     log_path = f"docs/logs/{name}.md" if name else None
     safe = here == branch and ahead == 0 and behind == 0 and not status
-    if branch != DEFAULT:
-        only_branch, only_main = (int(x) for x in
-            git("rev-list", "--left-right", "--count",
-                f"{remote}...{default_ref}").split())
-        safe = safe and not (only_branch and only_main)
     word = f"{GREEN}SAFE{RESET}" if safe else f"{RED}NOT SAFE{RESET}"
     print(f"  CONNECTOR WRITE TO THIS BRANCH: {word}")
     if status:
-        note("uncommitted files block overwriting or closing, not resuming")
+        note("uncommitted files block connector writes, not resuming")
+    if branch == DEFAULT:
+        log_safe = safe
+    else:
+        # A Blog worktree cannot certify the cleanliness of the main worktree.
+        # The owner must run a separate session check while on main to save logs.
+        log_safe = False
+        note("To save a main-owned log, run the check from the main worktree")
+    print("  LOG SAVE TO main: " +
+          (f"{GREEN}SAFE{RESET}" if log_safe else f"{RED}NOT SAFE{RESET}"))
 
     # 2. Caps, on GitHub's copy.
     print("\nCaps (GitHub's copy, lines below front matter)")
@@ -168,7 +172,11 @@ def main():
                  if (m := re.match(r"^\s*-\s+`([^`]+)`", l))]
         row(len(reads) <= MAX_READ, f"'Read before working' has {len(reads)} of at most {MAX_READ}")
         for p in reads:
-            exists = show(remote, p) is not None or show(default_ref, p) is not None
+            if name == "blog" and p.startswith("docs/planning/blog_"):
+                # These files contain newer approved research on the work branch.
+                exists = show(remote, p) is not None
+            else:
+                exists = show(default_ref, p) is not None or show(remote, p) is not None
             row(exists, f"exists in Git: {p}")
 
         # 4. Gates.
@@ -180,18 +188,34 @@ def main():
         row(not bad, "every gate status is PASS, OPEN or FAIL",
             f"(check: {', '.join(bad)})" if bad else "")
 
-    # 5. A content branch can predate the V2 install, but divergence from
-    # main must be reconciled before publication or connector writes.
+    # 5. Divergence is routine for a long-running content branch. It is
+    # an integration concern, not a session-resume failure.
     if branch != DEFAULT:
-        print("\\nBranch integration state")
+        print("\nBranch integration state")
         branch_only, main_only = (int(x) for x in
             git("rev-list", "--left-right", "--count",
                 f"{remote}...{default_ref}").split())
         note(f"branch-only commits: {branch_only}; main-only commits: {main_only}")
-        row(not (branch_only and main_only),
-            "branch has no unresolved two-sided divergence from main")
-        if branch_only and main_only:
-            note("reconcile the branch without overwriting its approved planning")
+        if main_only:
+            note("merge main into this branch before publication (not every save)")
+        # Guard against editing main-owned continuity records on work branches.
+        # The merge base excludes changes inherited from earlier main merges.
+        fork = git("merge-base", remote, default_ref).strip()
+        changed = git("diff", "--name-only", fork, remote, "--",
+                      "docs/ai-operations", "docs/logs",
+                      "scripts/session_check.py").splitlines()
+        row(not changed, "no branch-specific continuity-file changes",
+            (", ".join(changed)) if changed else "")
+        if changed:
+            note("restore main-owned continuity files before accepting this branch")
+            safe = False
+            print(f"  CONNECTOR WRITE TO THIS BRANCH: {RED}NOT SAFE{RESET}"
+                  " (continuity file changes)")
+        if name == "blog":
+            for p in ["docs/planning/blog_strategy.md",
+                      "docs/planning/blog_reader_experience.md",
+                      "docs/planning/blog_engagement_strategy.md"]:
+                row(show(remote, p) is not None, f"Blog research exists on branch: {p}")
 
     # 6. Context for a model that cannot read branches.
     if name:
@@ -201,9 +225,9 @@ def main():
     print(f"\nLast 10 commits on {remote}")
     for l in git("log", "--format=%h %ad %s", "--date=short", "-10", remote).splitlines():
         print(f"  {l}")
-    print("\nFiles changed by recent save/handoff/closeout commits")
+    print("\nMain-owned files changed by recent save/handoff/closeout commits")
     hits = 0
-    for l in git("log", "--format=%h %s", "-10", remote).splitlines():
+    for l in git("log", "--format=%h %s", "-10", default_ref).splitlines():
         sha, _, subject = l.partition(" ")
         if re.match(r"^(save|handoff|closeout)\(", subject):
             hits += 1
