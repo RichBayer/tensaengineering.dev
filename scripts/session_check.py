@@ -132,6 +132,11 @@ def main():
     note(f"ahead of GitHub: {ahead}, behind GitHub: {behind}")
     log_path = f"docs/logs/{name}.md" if name else None
     safe = here == branch and ahead == 0 and behind == 0 and not status
+    if branch != DEFAULT:
+        only_branch, only_main = (int(x) for x in
+            git("rev-list", "--left-right", "--count",
+                f"{remote}...{default_ref}").split())
+        safe = safe and not (only_branch and only_main)
     word = f"{GREEN}SAFE{RESET}" if safe else f"{RED}NOT SAFE{RESET}"
     print(f"  CONNECTOR WRITE TO THIS BRANCH: {word}")
     if status:
