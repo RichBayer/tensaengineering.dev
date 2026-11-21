@@ -22,7 +22,9 @@ Kept off the site by the exclude list in `_config.yml`.
 
 - `_config.yml`: the exclude list itself.
 - `README.md`: what the repo is, its direction, how to resume, and the keeping-it-small rules.
-- `docs/ai-operations/`: the resume note, the operating rules and the closeout pointer. `claude/` holds the prose-polish prompt.
+- `docs/ai-operations/`: the V2 lane menu, operating rules and closeout pointer. `claude/` holds the prose-polish prompt.
+- `docs/logs/`: V2 website SEO and Blog work logs, including gates, evidence and next actions (main is the menu/log authority).
+- `scripts/`: internal V2 session checker; excluded from Pages by `_config.yml`.
 - `docs/planning/`: the planning docs. What each one owns is in `docs/planning/documentation_strategy.md`.
 - `docs/infrastructure/`: this map.
 - `docs/website_state.md`: branding, deployment facts and open decisions.
@@ -30,4 +32,4 @@ Kept off the site by the exclude list in `_config.yml`.
 ## Planned, not created
 
 - `resources/` and `build-notes/`: future public sections.
-- `scripts/`, starting with `scripts/check_internal_links.py`. It is internal, so it joins the exclude list in `_config.yml` before it reaches `main`.
+- `scripts/check_internal_links.py`: a future internal-link validator; no such file exists yet. The `scripts/` directory is now reserved for internal tools and excluded from Pages.
