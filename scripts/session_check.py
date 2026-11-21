@@ -198,19 +198,23 @@ def main():
         note(f"branch-only commits: {branch_only}; main-only commits: {main_only}")
         if main_only:
             note("merge main into this branch before publication (not every save)")
-        # Guard against editing main-owned continuity records on work branches.
-        # The merge base excludes changes inherited from earlier main merges.
+        # Old Blog-branch ai-operations files predate V2 and may already
+        # differ historically. Protect the new main-owned V2 logs/checker,
+        # and flag legacy process differences for human reconciliation.
         fork = git("merge-base", remote, default_ref).strip()
         changed = git("diff", "--name-only", fork, remote, "--",
-                      "docs/ai-operations", "docs/logs",
-                      "scripts/session_check.py").splitlines()
-        row(not changed, "no branch-specific continuity-file changes",
+                      "docs/logs", "scripts/session_check.py").splitlines()
+        row(not changed, "no branch-specific V2 log/checker edits",
             (", ".join(changed)) if changed else "")
+        legacy = git("diff", "--name-only", fork, remote, "--",
+                     "docs/ai-operations").splitlines()
+        if legacy:
+            note("legacy branch-specific ai-operations files: " +
+                 ", ".join(legacy) + "; use main as authority")
         if changed:
-            note("restore main-owned continuity files before accepting this branch")
             safe = False
             print(f"  CONNECTOR WRITE TO THIS BRANCH: {RED}NOT SAFE{RESET}"
-                  " (continuity file changes)")
+                  " (branch-specific V2 edits)")
         if name == "blog":
             for p in ["docs/planning/blog_strategy.md",
                       "docs/planning/blog_reader_experience.md",
