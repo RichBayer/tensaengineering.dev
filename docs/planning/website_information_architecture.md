@@ -1622,7 +1622,7 @@ These should be resolved before deeper implementation.
 
 Do not build the full website randomly.
 
-The next step for each lane is in `docs/ai-operations/tensa_website_resume_prompt.md`. This document does not track it.
+The V2 menu in `docs/ai-operations/tensa_website_resume_prompt.md` names the open lanes; detailed next steps live in `docs/logs/website_seo.md` and `docs/logs/blog.md` on `main`. This document does not track them.
 
 ---
 
