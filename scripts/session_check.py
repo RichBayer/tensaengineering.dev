@@ -114,7 +114,7 @@ def main():
         print("SESSION CHECK: FAIL (wrong arguments)")
         return 0
     branch = sys.argv[1]
-    name = sys.argv[2].strip("/") if len(sys.argv) == 3 else None
+    name = sys.argv[2].strip("/") if len(sys.argv) >= 3 else None
     remote = f"origin/{branch}"
     default_ref = remote if review else f"origin/{DEFAULT}"
     print(f"Session check: branch {branch}" + (f", work log {name}" if name else "") +
