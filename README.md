@@ -23,7 +23,7 @@ What keeps the site on course. The full version is owned by `docs/planning/websi
 
 ## Resume
 
-Read `docs/ai-operations/tensa_website_resume_prompt.md`. It names the two lanes, website work and Blog work, and each lane's next step. Then read `docs/ai-operations/operating_rules.md` and the chosen V2 work log: `docs/logs/website_seo.md` or `docs/logs/blog.md`. The log lists the task-specific sources to load; follow its references and the content-routing rules, not a whole-repo crawl.
+Read `docs/ai-operations/tensa_website_resume_prompt.md`. It names four lanes: Website SEO, Blog, Knowledge Base Articles, and Local AI Model Recommender. Then read `docs/ai-operations/operating_rules.md` and the selected V2 work log in `docs/logs/` (`website_seo.md`, `blog.md`, `knowledge_base.md`, or `model_recommender.md`). The log lists the task-specific sources to load; follow its references and the content-routing rules, not a whole-repo crawl.
 
 ## Where things are tracked
 
@@ -32,7 +32,7 @@ Read `docs/ai-operations/tensa_website_resume_prompt.md`. It names the two lanes
 - What each planning doc owns: `docs/planning/documentation_strategy.md`
 - Branding, deployment facts and open decisions: `docs/website_state.md`
 - What each top-level directory is for: `docs/infrastructure/tensa_repository_map.txt`
-- V2 evidence, decisions and next steps: `docs/logs/website_seo.md` and `docs/logs/blog.md` (active menu controls which lane to load)
+- V2 evidence, decisions and next steps: the four lane logs in `docs/logs/` (active menu controls which lane to load)
 - Local state / continuity check: `scripts/session_check.py`, used as instructed by the operating rules
 - The Claude prose-polish pass: `docs/ai-operations/claude/claude_website_polish_resume_prompt.md`, loaded only for a polish pass
 
