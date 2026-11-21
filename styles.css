@@ -1555,6 +1555,19 @@ h1 {
   }
 }
 
+/* Knowledge Base section introduction links */
+.knowledge-section > .section-heading p a,
+.knowledge-section > .section-heading p a:visited {
+  color: #39ff88;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.knowledge-section > .section-heading p a:hover,
+.knowledge-section > .section-heading p a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
 /* Knowledge Base index article links */
 .topic-grid h3 a,
 .topic-grid h3 a:visited,
