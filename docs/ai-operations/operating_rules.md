@@ -7,10 +7,10 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 ## Resuming
 
 1. Read the note, `docs/ai-operations/tensa_website_resume_prompt.md`.
-2. Ask Rich which lane: website work or Blog work.
-3. Read these rules.
-4. Read only the docs the lane's next step names.
-5. Ask Rich for `git status --short`, the current branch and `git stash list`.
+2. Read these rules, then choose website SEO or Blog as the menu names (ask only when unclear).
+3. Read the lane log on `main`: `docs/logs/website_seo.md` or `docs/logs/blog.md`, including its current gates, next action and source pointers.
+4. Read only the selected sources and page-specific documents actually required for that action. Branch-local approved Blog planning takes precedence over older copies on `main`.
+5. Before any write or local-state-dependent action, request the session check below and inspect local unpushed changes; reconcile first if it is unsafe.
 
 - No `tree`, `find` or href grep at every start. When the task touches structure, use `git ls-files`. When it touches links, routes or navigation, run a real link check, not a grep.
 - When facts conflict, trust them in this order: local files and command output from Rich, his browser preview, validation output, GitHub, planning docs, chat memory.
@@ -19,10 +19,21 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 - Don't invent the next step. If the note doesn't say, ask one question.
 - During a resume, never propose new process or a new planning doc.
 
+## V2 continuity and content routing
+
+- `main` owns the 40-line live menu and the two 80-line V2 logs. Logs use seven headings: Purpose, Gates (PASS/OPEN/FAIL with evidence), Last session, Decisions in force, Next (branch, last verified local state, uncommitted files, exact next action and required approval), Read before working (up to six starting paths), Closeout updates. Rewrite the active log whole on a meaningful save, never append endless checkpoints; preserve decisions in the appropriate existing planning source.
+- At resume, report what is done, next, and locally unverified; never treat a saved note as permission to build or publish. For a handoff, update the active log, then update the menu only if an open path or next priority changed. Fresh-thread closeout independently compares claims to commits and available validation; unverifiable evidence stays qualified.
+- The six initial read pointers are a starting point, **not a cap on necessary evidence**. Before public content work use the page inventory for status/URLs, content source map for source ownership, information architecture for page role, style guide for voice/claims, and the actual target HTML and existing page-specific CSS.
+- Focused Knowledge Base article: additionally use `docs/planning/knowledge_base_article_template.md` and reference article `knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html`; preserve article/category/index/related-reading routes and existing CSS classes.
+- Industry vocabulary / glossary: use `docs/planning/seo_topic_map.md`, `glossary_strategy.md`, `internal_linking_strategy.md`, public `glossary/index.html`, `assets/js/glossary-tooltips.js` and affected pages. Adjust page wording and definition/anchor together; preserve links and graceful fallback.
+- Blog: use **branch-local** `docs/planning/blog_strategy.md` source packet, `blog_reader_experience.md`, `blog_engagement_strategy.md`, `seo_topic_map.md`, style guide, and actual Blog-page files when created. Blog branch currently diverges from `main`; do not copy or overwrite its approved planning blindly.
+- For any public change, check page discovery (relevant category/index and related reading), nav, glossary, metadata/canonical/schema, reused styles/assets, responsive and interaction behavior, internal links/anchors and source-backed present/future claims. Update inventory/link map/sitemap only when their owned facts change; confirm Pages and live content before claiming deployment, and Search Console evidence before claiming indexing.
+- `scripts/session_check.py` checks local versus remote branch and V2 files. From the **TENSA website terminal**, run `(git fetch -q origin && git show origin/main:scripts/session_check.py > /tmp/tensa_website_session_check.py && python3 /tmp/tensa_website_session_check.py <branch> <website_seo|blog>) || echo "SESSION CHECK: FAIL (could not fetch or run)"`; replace placeholders, leave the terminal open. Only a final `SESSION CHECK: PASS` is a pass. An independent planning/read-only review needs no local check.
+
 ## Edits and commits
 
 - Discuss every file edit with Rich before making it. Change only what was agreed, with no "while I'm in here" edits.
-- No commit, push, tag or merge unless Rich asks. He reads the diff first. Finishing a step is not finishing the task.
+- No local commit, push, tag or merge unless Rich asks. He reads the diff first. A separately approved GitHub connector edit commits automatically; no redundant commit approval is needed. Finishing a step is not finishing the task.
 - Only this repo is writable. Other repos are read-only reference.
 - Read the whole current file before editing it or quoting it as current state. Never edit from grep snippets.
 - A workflow change does not touch public pages, `sitemap.xml` or site state.
@@ -45,6 +56,7 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 ## Editing through the GitHub connector
 
 - The connector is read-only until Rich approves a write. One approval can cover an agreed batch of files.
+- Stage approved V2 migration changes on a dedicated branch and have Rich check/reconcile local state before merging into `main`. For future connector edits, require clean synchronized local state for the target branch; no remote edit overwrites locally unpushed work.
 - The connector writes whole files only. Read the complete current file, change only the agreed lines, write the complete file back, then read it back and confirm nothing else changed and nothing was cut off.
 - Keep files edited through the connector under about 700 to 800 lines. Larger files get cut off; edit those locally.
 - One file per call is a tool limit, not a safety rule. Plan the agreed change set together, then write the files one after another.
@@ -72,7 +84,7 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 - Internal planning never becomes public content.
 - Internal docs are kept off the site by the root `_config.yml`, which excludes `docs/` and `README.md` (commit `b5fe6b3`). Verified 2026-10-10: the build passed, and `/docs/website_state.html`, `/docs/website_state.md`, `/docs/ai-operations/tensa_website_resume_prompt.html` and `/docs/infrastructure/tensa_repository_map.txt` all returned 404.
 - The exclude hides files from the website only. They stay readable on GitHub while the repository is public.
-- Any internal file or folder added outside `docs/` joins the exclude list before it reaches `main`. Check both its raw address and its `.html` address afterward.
+- Any internal file or folder added outside `docs/` joins the exclude list before it reaches `main`; `scripts/` is excluded for the V2 checker. Check both its raw address and its `.html` address afterward.
 
 ## Closeout
 
