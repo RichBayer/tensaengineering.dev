@@ -270,7 +270,7 @@ Readers may be asking:
 | Priority | Working Title | Intended Path | Notes |
 |---|---|---|---|
 | High | Documentation as Operational Memory | `/knowledge-base/ai-operations/documentation-as-operational-memory.html` | Strong bridge from story to method. |
-| High | How to Keep AI From Losing Project Context | `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` | Practical and searchable. |
+| High | Context Engineering: How to Keep AI From Losing Project Context | `/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html` | Practical and searchable. |
 | High | What Is a Resume Prompt? | `/knowledge-base/ai-operations/what-is-a-resume-prompt.html` | Useful for broader audience. |
 | Medium | Context Loading for Long AI-Assisted Projects | `/knowledge-base/ai-operations/context-loading-for-ai-projects.html` | Explains structured startup workflows. |
 | Medium | Anti-Drift Workflows for AI-Assisted Builds | `/knowledge-base/ai-operations/anti-drift-workflows.html` | Connects to TENSA internal discipline. |

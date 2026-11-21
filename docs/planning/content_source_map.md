@@ -82,7 +82,7 @@ Current public pages:
     glossary/
     about.html
     knowledge-base/ai-operations/
-    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
     knowledge-base/persistent-ai-memory/
     knowledge-base/controlled-ai-systems/
     knowledge-base/local-first-ai/
@@ -904,7 +904,7 @@ Special notes:
 
 Path:
 
-    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
 
 Current status:
 

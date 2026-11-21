@@ -55,7 +55,7 @@ Current active public pages:
     /about.html
     /contact.html
     /knowledge-base/ai-operations/index.html
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
     /knowledge-base/persistent-ai-memory/index.html
     /knowledge-base/controlled-ai-systems/index.html
     /knowledge-base/local-first-ai/index.html
@@ -124,7 +124,7 @@ Use these preferred destinations when topics appear in public pages.
 | Contact / inquiries / site issues | `/contact.html` | Same unless a future support or resources flow is created | Contact page is a simple public route and should remain footer-only for now. |
 | Public technical artifacts | No public link yet | `/resources/` | Future Resources page may organize selected documentation, examples, release materials, downloads, videos, and any future public repository or open-component links. |
 | AI Operations | `/knowledge-base/ai-operations/` | Same, plus focused AI Operations guides as they are published | Foundation article and category entry for AI Operations. Use it as the preferred discovery route for focused AI Operations content. |
-| AI project continuity / keeping AI context | `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` | Same | Practical long-form guide for version control, source-of-truth documents, repository connectors, operating rules, verification, and closeout. |
+| AI project continuity / keeping AI context | `/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html` | Same | Practical long-form guide for version control, source-of-truth documents, repository connectors, operating rules, verification, and closeout. |
 | Persistent AI memory | `/knowledge-base/persistent-ai-memory/` | Same, plus deeper future subtopics if needed | Article 2 in the current recommended Knowledge Base path. |
 | Continuity | `/knowledge-base/persistent-ai-memory/` or `/story/` | Same, or future deeper continuity article if needed | Use Story for origin/philosophy; use Persistent AI Memory for concept explanation. |
 | Context | `/knowledge-base/persistent-ai-memory/` | Future deeper context-and-continuity article if needed | Current article explains memory vs continuity and source-grounded context. |
@@ -138,7 +138,7 @@ Use these preferred destinations when topics appear in public pages.
 | Tool execution | `/knowledge-base/safe-tool-interaction/` | Future controlled-tool-execution article if needed | Current article owns the public tool-boundary explanation. |
 | Observability | `/knowledge-base/neurocore-architecture/` | Future observability article if needed | Current NeuroCore Architecture article explains evidence, tool layers, and system awareness at a public level. |
 | Local-first AI | `/knowledge-base/local-first-ai/` | Same, plus deeper future subtopics if needed | Article 4 in the current recommended Knowledge Base path. |
-| Documentation as memory | `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` or `/story/` | Future documentation-as-operational-memory article if needed | Use the project-context guide for practical continuity workflow; use Story for origin narrative. |
+| Documentation as memory | `/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html` or `/story/` | Future documentation-as-operational-memory article if needed | Use the project-context guide for practical continuity workflow; use Story for origin narrative. |
 | Linux diagnostics | `/knowledge-base/linux-diagnostics/` | Same, plus deeper future subtopics if needed | Article 6 in the current recommended Knowledge Base path. |
 | Raw evidence | `/knowledge-base/linux-diagnostics/` or `/glossary/` | Future raw-evidence article if needed | Use Linux Diagnostics for concept explanation; use Glossary for compact definition support. |
 | Severity / findings / recommendations | `/knowledge-base/linux-diagnostics/` or `/projects/argus-acli.html` | Future structured-diagnostics article if needed | Use Argus ACLI for product behavior; use Linux Diagnostics for concept explanation. |
@@ -199,7 +199,7 @@ Help technical readers understand the architectural philosophy without requiring
     Home
     → Story
     → AI Operations
-    → How to Keep AI From Losing Project Context
+    → Context Engineering: How to Keep AI From Losing Project Context
     → Persistent AI Memory
     → NeuroCore
     → Build Notes after created
@@ -459,7 +459,7 @@ Each foundation article should:
 
 ### Focused AI Operations Article
 
-`/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` should be discovered through:
+`/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html` should be discovered through:
 
 - `/knowledge-base/ai-operations/` as its preferred category entry
 - the AI Operations page practical-guide link
@@ -554,7 +554,7 @@ When these pages are created, update links across the site.
 | Full `/projects/argus-lab.html` page | Completed. Keep related links current if homepage, Projects page, NeuroCore page, or Argus ACLI page copy changes later. |
 | `/story/index.html` | Completed. Header navigation now points to `/story/`. Keep story-related links current if deeper Story articles are added later. |
 | `/knowledge-base/ai-operations/` | Completed. Linked from Knowledge Base index and foundation-path navigation. Acts as the preferred discovery route for focused AI Operations guides. |
-| `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` | Completed. Linked from the AI Operations practical-guide and related-reading sections, included in `sitemap.xml`, and connected to relevant Knowledge Base, Story, and NeuroCore destinations. |
+| `/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html` | Completed. Linked from the AI Operations practical-guide and related-reading sections, included in `sitemap.xml`, and connected to relevant Knowledge Base, Story, and NeuroCore destinations. |
 | `/knowledge-base/persistent-ai-memory/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from Story/project pages later only after deliberate copy review. |
 | `/knowledge-base/controlled-ai-systems/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
 | `/knowledge-base/local-first-ai/` | Completed. Linked from Knowledge Base index and article-path navigation. Add contextual links from project pages later only after deliberate copy review. |
@@ -639,7 +639,7 @@ Historical public HTML snapshot (before Driveline release):
     ./glossary/index.html
     ./knowledge-base/index.html
     ./knowledge-base/ai-operations/index.html
-    ./knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    ./knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
     ./knowledge-base/persistent-ai-memory/index.html
     ./knowledge-base/controlled-ai-systems/index.html
     ./knowledge-base/local-first-ai/index.html

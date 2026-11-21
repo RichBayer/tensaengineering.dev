@@ -52,7 +52,7 @@ Current public pages:
     /about.html
     /contact.html
     /knowledge-base/ai-operations/
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
     /knowledge-base/persistent-ai-memory/
     /knowledge-base/controlled-ai-systems/
     /knowledge-base/local-first-ai/
@@ -148,7 +148,7 @@ The current sitemap should include only the current 19 real public pages:
     https://tensaengineering.dev/glossary/
     https://tensaengineering.dev/story/
     https://tensaengineering.dev/knowledge-base/ai-operations/
-    https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    https://tensaengineering.dev/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
     https://tensaengineering.dev/knowledge-base/persistent-ai-memory/
     https://tensaengineering.dev/knowledge-base/controlled-ai-systems/
     https://tensaengineering.dev/knowledge-base/local-first-ai/
@@ -194,7 +194,7 @@ Standalone HTML pages should use their actual paths:
     https://tensaengineering.dev/projects/neurocore.html
     https://tensaengineering.dev/projects/argus-acli.html
     https://tensaengineering.dev/projects/argus-lab.html
-    https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    https://tensaengineering.dev/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
 
 Avoid duplicate sitemap entries such as:
 
@@ -248,7 +248,7 @@ Current root-level `sitemap.xml` should use this structure:
         <loc>https://tensaengineering.dev/knowledge-base/ai-operations/</loc>
       </url>
       <url>
-        <loc>https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html</loc>
+        <loc>https://tensaengineering.dev/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html</loc>
       </url>
       <url>
         <loc>https://tensaengineering.dev/knowledge-base/persistent-ai-memory/</loc>
@@ -338,7 +338,7 @@ Google Search Console setup steps:
        https://tensaengineering.dev/contact.html
        https://tensaengineering.dev/knowledge-base/
        https://tensaengineering.dev/knowledge-base/ai-operations/
-       https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+       https://tensaengineering.dev/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
        https://tensaengineering.dev/knowledge-base/neurocore-architecture/
        https://tensaengineering.dev/story/
        https://tensaengineering.dev/glossary/
@@ -696,7 +696,7 @@ The verification should confirm the intended change actually landed and that old
 
 Examples:
 
-    grep -n "how-to-keep-ai-from-losing-project-context.html\|Internal links checked: 579\|19 canonical public URLs\|URL-only" docs/planning/search_indexing_strategy.md
+    grep -n "context-engineering-ai-project-continuity.html\|Internal links checked: 579\|19 canonical public URLs\|URL-only" docs/planning/search_indexing_strategy.md
     grep -n "https://tensaengineering.dev/knowledge-base/neurocore-architecture/" sitemap.xml
 
 This rule exists to catch:
@@ -718,7 +718,7 @@ Open live checks:
 1. Confirm these URLs load on the live site:
 
        https://tensaengineering.dev/knowledge-base/ai-operations/
-       https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+       https://tensaengineering.dev/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
        https://tensaengineering.dev/sitemap.xml
        https://tensaengineering.dev/robots.txt
 
@@ -766,7 +766,7 @@ After the current public-page closeout deploys, confirm:
 
 - `https://tensaengineering.dev/knowledge-base/` is reachable
 - all eight foundation Knowledge Base article URLs are reachable
-- `https://tensaengineering.dev/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` is reachable
+- `https://tensaengineering.dev/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html` is reachable
 - `https://tensaengineering.dev/about.html` is reachable
 - `https://tensaengineering.dev/contact.html` is reachable
 - `https://tensaengineering.dev/glossary/` is reachable

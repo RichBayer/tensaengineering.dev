@@ -8,7 +8,7 @@ Use it when creating or rewriting focused Knowledge Base articles that should re
 
 The reference implementation is:
 
-    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
 
 That page is the current proof page for the prose-first Knowledge Base article reading standard.
 
@@ -58,7 +58,7 @@ A focused article should answer one reader question clearly and deeply.
 
 Current reference article:
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
 
 Role of the reference article:
 
@@ -412,7 +412,7 @@ The next planned use of this template is likely the AI Operations category/index
     /knowledge-base/ai-operations/what-is-ai-operations.html
         likely future dedicated article for current long-form AI Operations content
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
         remains the focused continuity guide and reference implementation
 
 Final slug and structure should be approved before implementation.

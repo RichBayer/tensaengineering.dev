@@ -686,7 +686,7 @@ Current and near-term public-page direction:
     projects/argus-lab.html
     knowledge-base/index.html
     knowledge-base/ai-operations/index.html
-    knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
     glossary/index.html
     story/index.html
     about.html
@@ -834,7 +834,7 @@ Articles should be:
 - connected to project pages
 - connected to approved public artifacts when those exist and are useful
 
-Long-form Knowledge Base articles should use the prose-first article standard established by `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html`.
+Long-form Knowledge Base articles should use the prose-first article standard established by `/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html`.
 
 That standard favors fuller paragraphs, natural article flow, fewer bullets and numbered lists, and a small number of useful styled diagrams. It should feel like a polished technical article or short book chapter, not an internal checklist, dashboard, repository map, or code comment block.
 
@@ -882,7 +882,7 @@ Current structure:
     /knowledge-base/ai-operations/
         currently live as the AI Operations foundation article and category entry
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
         live focused long-form article and current prose-first article-format proof page
 
 Planned structure:
@@ -893,7 +893,7 @@ Planned structure:
     /knowledge-base/ai-operations/what-is-ai-operations.html
         likely future dedicated article for the current long-form AI Operations landing-page content, pending final slug approval
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
         focused continuity guide under the AI Operations category
 
 ---
@@ -1519,7 +1519,7 @@ Current foundation path:
 
 Current focused article and article-format proof page:
 
-    /knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html
+    /knowledge-base/ai-operations/context-engineering-ai-project-continuity.html
 
 Recommended next Knowledge Base structure work:
 
