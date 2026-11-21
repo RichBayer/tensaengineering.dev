@@ -132,6 +132,12 @@ def main():
     note(f"ahead of GitHub: {ahead}, behind GitHub: {behind}")
     log_path = f"docs/logs/{name}.md" if name else None
     safe = here == branch and ahead == 0 and behind == 0 and not status
+    # Single, final SAFE decision: include main-owned V2 file protection.
+    fork = git("merge-base", remote, default_ref).strip() if branch != DEFAULT else None
+    v2_changed = (git("diff", "--name-only", fork, remote, "--",
+                      "docs/logs", "scripts/session_check.py").splitlines()
+                  if fork else [])
+    safe = safe and not v2_changed
     word = f"{GREEN}SAFE{RESET}" if safe else f"{RED}NOT SAFE{RESET}"
     print(f"  CONNECTOR WRITE TO THIS BRANCH: {word}")
     if status:
@@ -201,20 +207,13 @@ def main():
         # Old Blog-branch ai-operations files predate V2 and may already
         # differ historically. Protect the new main-owned V2 logs/checker,
         # and flag legacy process differences for human reconciliation.
-        fork = git("merge-base", remote, default_ref).strip()
-        changed = git("diff", "--name-only", fork, remote, "--",
-                      "docs/logs", "scripts/session_check.py").splitlines()
-        row(not changed, "no branch-specific V2 log/checker edits",
-            (", ".join(changed)) if changed else "")
+        row(not v2_changed, "no branch-specific V2 log/checker edits",
+            (", ".join(v2_changed)) if v2_changed else "")
         legacy = git("diff", "--name-only", fork, remote, "--",
                      "docs/ai-operations").splitlines()
         if legacy:
             note("legacy branch-specific ai-operations files: " +
                  ", ".join(legacy) + "; use main as authority")
-        if changed:
-            safe = False
-            print(f"  CONNECTOR WRITE TO THIS BRANCH: {RED}NOT SAFE{RESET}"
-                  " (branch-specific V2 edits)")
         if name == "blog":
             for p in ["docs/planning/blog_strategy.md",
                       "docs/planning/blog_reader_experience.md",
