@@ -1155,3 +1155,61 @@ TENSA Engineering should grow as a useful public knowledge system:
     Prove the work.
     Build trust.
     Convert attention into adoption.
+
+---
+
+## November 20, 2026 - Pre-Terminology SEO Baseline
+
+Source: Google Search Console via Windsor.ai.
+Measurement period: October 21-November 17, 2026 (28 days).
+Captured: November 20, 2026, before the terminology improvements.
+
+### Search performance
+
+- Google Search impressions: 298
+- Organic clicks: 0
+- Click-through rate: 0%
+- Average search position: 10.87
+- Homepage impressions: 134
+- Project-context guide impressions: 49
+- NeuroCore page impressions: 29
+- TENSA Driveline page impressions: 7
+- Glossary impressions: 9
+
+### Search queries
+
+Google disclosed 15 queries representing 112 impressions.
+Examples: tensa (34), tensa ai (25), source context ai
+accuracy (16), and neurocore (8).
+
+None of the disclosed queries contained context engineering,
+agent harness, harness engineering, spec-driven development,
+or vibe coding. The undisclosed queries remain unknown.
+
+Windsor.ai's branded-query classification did not reliably
+identify TENSA-related searches. Do not use it as an
+authoritative branded/non-branded split.
+
+### Sitemap
+
+- Submitted URLs: 24
+- Sitemap errors: 0
+- Sitemap warnings: 0
+- Last Google fetch: November 14, 2026
+- Indexed-page coverage: not independently verified
+
+### Approved SEO terminology work
+
+First approved title:
+Context Engineering: How to Keep AI From Losing Project Context
+
+Preserve the existing public URL, glossary anchors, TENSA
+branding, and current-versus-planned capability boundaries.
+Update related article wording and glossary entries together.
+
+Reference: TENSA Marketing Grok Bot discoverability audit,
+docs/planning/grok_bot_pilot_20261119.md.
+
+Compare later 28-day Search Console results with this baseline.
+Changes in visibility cannot automatically be attributed to
+wording changes alone.
