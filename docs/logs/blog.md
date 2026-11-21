@@ -13,7 +13,7 @@ Prove TENSA's practical Blog with an approved, sourced AI Coding article, then a
 | B5: category/home, links/metadata and publication checked | OPEN | No Blog URLs should enter public nav or sitemap until approved real pages |
 
 ## Last session
-2026-11-21: V2 read-only audit inspected actual site and the newer Blog branch's approved Article #1 source packet. No Blog public pages or plan rewrites performed. Independent reviewers found gaps; a bounded V2 correction is staged on `docs/website-v2-continuity-20261121`, not yet merged.
+2026-11-21: V2 integrated on `main` at `ccbd4c1` after Grok and Claude final PASS reviews. Owner's Legion `main blog` check PASS with clean/synchronized state and log-save SAFE; `main website_seo` also PASS. GitHub Pages [run 44935871438](https://github.com/RichBayer/tensaengineering.dev/actions/runs/44935871438) succeeded; owner verified both `/scripts/session_check.py` and `/scripts/session_check.html` return HTTP 404. Blog feature branch was not reconciled and no Blog HTML was created.
 
 ## Decisions in force
 - Approved October 11 article: `/blog/ai-coding/why-ai-coding-uses-up-your-usage-limit.html`; do not choose a historical candidate title or restart finished reader research.
@@ -24,8 +24,8 @@ Prove TENSA's practical Blog with an approved, sourced AI Coding article, then a
 - Avoid: overwriting divergent branch work, unverified provider claims, publishing empty categories, early nav/sitemap additions, or launching RSS/comments/newsletter/affiliates.
 
 ## Next
-State: active content branch `feature/blog-public-foundation`; it diverges from `main`. Last local confirmation on 2026-11-21 listed this branch, but **its current working tree, ahead/behind and uncommitted files are unknown**. No local branch merge is assumed.
-After V2 merge and Rich's local status: merge current `main` **into** `feature/blog-public-foundation` locally, preserve its approved Blog-specific research/draft, validate shared standards and do not rebase, force-push or merge unfinished Blog into `main`. Then reread the approved draft, recheck official source pages, four GitHub issues and provider/account wording; build Article #1, then category and Blog home, subject to Rich's editing and publication approval.
+State: V2 logs now live on `main` at `ccbd4c1`; Blog implementation remains on `feature/blog-public-foundation`, divergent and unreconciled. Its current local working tree, ahead/behind and uncommitted files are **unverified**; last validated local state applies only to `main` before these log updates.
+After Rich supplies fresh local Blog-branch status: merge current `main` **into** `feature/blog-public-foundation` locally, preserve its approved Blog-specific research/draft, validate shared standards and do not rebase, force-push or merge unfinished Blog into `main`. Then reread the approved draft, recheck official source pages, four GitHub issues and provider/account wording; build Article #1, then category and Blog home, subject to Rich's editing and publication approval.
 
 ## Read before working
 - `docs/planning/blog_strategy.md` — **read on Blog branch**, approved source packet.
@@ -37,4 +37,4 @@ After V2 merge and Rich's local status: merge current `main` **into** `feature/b
 Follow to page inventory, indexing strategy, internal links, actual HTML and official sources when required.
 
 ## Closeout updates
-After verified branch reconciliation and approved Article #1 publication, record commit evidence and adjust next path. Do not close Blog lane while launch remains incomplete.
+V2 main integration checks passed on 2026-11-21; B2–B5 remain OPEN. After actual Blog reconciliation and approved Article #1 publication, record corresponding commit, content and validation evidence. Keep Blog lane open until launch is complete.
