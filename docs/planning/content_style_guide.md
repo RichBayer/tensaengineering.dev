@@ -834,6 +834,34 @@ Avoid:
 
 ---
 
+## Long-Form Knowledge Base Editorial Guidance
+
+These additional rules refine the general public-writing rules above for substantial teaching articles. The [Knowledge Base article template](knowledge_base_article_template.md) owns the page structure, navigation, and implementation details.
+
+### Teach toward understanding and a practical first step
+
+- Give a direct, plain-English answer to the article's main question near the beginning. Then explain the underlying problem, how the method works, common failure patterns, and what a reader can try first.
+- Assume readers are capable and technically curious, but may be unfamiliar with the workflow's prerequisites. Explain foundational distinctions before relying on them; do not compress a difficult idea merely to shorten the article.
+- Use concrete scenarios to show the question, the possible misunderstanding or failure, the relevant boundary, and the evidence that resolves it. Keep examples honest about TENSA's actual capabilities.
+- Connect sections with reasoning and consequences rather than announcing the next heading. Vary sentence rhythm naturally; avoid both disconnected one-line declarations and dense multi-concept paragraphs.
+- Add depth only when it develops a useful distinction, example, limitation, or mental model. Rephrasing the same claim to increase length is not useful depth.
+
+### Preserve technical meaning and human authority
+
+- Check technical simplifications carefully: a local working tree is not the remote repository; committing does not push; a connector can only see what its access and current remote state allow. Explain branch, merge, permission, and recovery boundaries accurately when they matter.
+- Distinguish what an AI or tool *can* do from what it is *authorized* to do. Read access is not write permission; discussion is not approval. Describe scoped, reviewable, reversible changes without implying that version control makes mistakes impossible.
+- Show AI as useful for research, comparison, drafting, and maintaining detailed records from current evidence. Keep human responsibility for scope, significant decisions, write authority, and acceptance explicit. Do not imply that people must maintain every document manually from memory.
+- Describe model behavior and failure modes without assigning unsupported human motives or guarantees.
+- Choose consistent names for key concepts, and explain meaningful differences instead of casually alternating near-synonyms.
+
+### Keep public teaching separate from editorial process
+
+- Remove passages that talk to the writer, negotiate free-versus-paid content, reveal internal drafting strategy, or discuss what a future article should contain. Replace them with reader-facing instruction or explanation.
+- General terms such as *repository map*, *operating rules*, or *session closeout* are valid in public education when they are clearly defined and necessary to teach the concept. Do not expose TENSA's private implementation records or editorial instructions.
+- An AI-assisted prose polish may improve flow, transitions, cadence, and repetition, but must not alter technical meaning, factual status, permissions, or safety boundaries; invent claims; or introduce hype. Compare the polished draft to its source and retain final human review.
+
+---
+
 ## Page Review Checklist
 
 Before publishing or replacing a public page, check:

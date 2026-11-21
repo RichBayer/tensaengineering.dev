@@ -342,6 +342,29 @@ Avoid creating one-off CSS unless the article needs a specific visual treatment 
 
 ---
 
+## Knowledge Base Discovery and Article Navigation
+
+Keep four distinct navigation jobs separate; do not build one oversized navigation component to serve them all.
+
+1. **Knowledge Base front page:** /knowledge-base/index.html introduces the main topic areas through clear category links or cards. Keep it concise; do not default to listing every article or showing empty future categories. A category link should lead to its landing page, not skip straight to the first article.
+2. **Category landing page:** Explain the subject, list the available articles, and identify a recommended reading path. Beginners should be able to follow an introductory-to-technical sequence; experienced and returning readers should be able to jump directly to a specific article without being forced through that sequence.
+3. **Recommended reading path:** Offer a clear next article and, when helpful, previous/next links. This is guidance, not a restriction on browsing. The path belongs primarily on category pages and may appear at the bottom of a focused article.
+4. **Optional in-article section navigation:** Use same-page section links only on sufficiently long reference-style articles where jumping between sections helps. Keep this visibly distinct from category, article, and full-directory navigation.
+
+The end of a focused article should offer a useful next reading choice, a route back to its category, and access to the Knowledge Base index. Preserve existing valid URLs and anchors when refining navigation; implement new routes only through the normal page-planning process.
+
+---
+
+## Reader Comprehension and Interaction Checks
+
+- **Practical outcome:** Beyond answering the question, help the reader recognize a likely failure or risk and take a reasonable first step. Do not require access to TENSA's internal implementation material.
+- **Figures:** Explain in the surrounding prose what each figure shows and why the relationship matters. Use a caption or clear title, readable labels, and mobile-friendly treatment. If a genuinely code-like diagram is necessary, style it deliberately; do not replace explanation with a visual alone.
+- **Expandable FAQ:** If answers use disclosure/details controls, make it obvious that each question can open and close, using a visible chevron or plus/minus affordance and readable answer area. Keep FAQs restrained and normally near the article end.
+- **Glossary links:** Prefer a first meaningful link when the glossary adds context. Do not link a term to an identical tooltip if the surrounding sentence already defines it. The article must remain understandable without opening glossary links.
+- **Final editorial check:** Verify the direct answer, teaching sequence, concrete examples, technical distinctions, human approval boundaries, readable figures, useful next step, and clear category/related-reading routes. The broader style guide remains authoritative for claims, public voice, and AI-assisted polishing.
+
+---
+
 ## Creation Workflow
 
 Recommended workflow for a new focused article:
