@@ -13,16 +13,17 @@ Improve non-branded discoverability and engineering vocabulary, one page/subject
 | W5: content, links and publish/index state independently verified | OPEN | Local link/fragment, page/desktop/mobile, Pages and GSC checks not run for new pass |
 
 ## Last session
-2026-11-21: V2 integrated to `main` at `ccbd4c1` (25-commit fast-forward); Grok and Claude final reviews PASS. Owner's Legion checks `main website_seo` and `main blog` both PASS with connector/log-save SAFE, no uncommitted files and ahead/behind 0/0. GitHub Pages deployment [run 44935871438](https://github.com/RichBayer/tensaengineering.dev/actions/runs/44935871438) succeeded for `ccbd4c1`. Owner confirmed `/scripts/session_check.py` and `/scripts/session_check.html` each return HTTP 404. No public page content changed; indexing is not confirmed.
+2026-11-21: V2 integration at `ccbd4c1` validated (Grok/Claude PASS, both local session checks PASS, Pages run `44935871438` success, script URLs 404). Context Engineering article retitled and moved at `0d887d9`: [Pages run 44937807731](https://github.com/RichBayer/tensaengineering.dev/actions/runs/44937807731) SUCCESS; owner confirmed new live article loads, updated Knowledge Base label and local old-URL browser redirect. Checked public HTML/sitemap with `git grep` for old slug: no references. Full production link/fragment and GSC indexing validation remain unverified.
 
 ## Decisions in force
 - 2026-11-21: use V2 source routing, not duplicate content standards or repeat completed audits.
 - Existing website lane is `main`; changed production HTML on `main` triggers GitHub Pages.
 - Next unit: agent harness / harness engineering on `projects/driveline.html`, `knowledge-base/controlled-ai-systems/from-coding-agents-to-supervised-engineering.html`, and matching `glossary/index.html`. Series-specific CSS is `assets/css/driveline-kb-series.css`. Update affected `data-definition` text in each public page when a glossary definition changes.
-- Avoid: broken glossary anchors, invented product capabilities, URL churn, unsupported SEO/indexing success claims.
+- Canonical Context Engineering article URL is `/knowledge-base/ai-operations/context-engineering-ai-project-continuity.html`; old `/knowledge-base/ai-operations/how-to-keep-ai-from-losing-project-context.html` remains as a browser-redirect fallback (not an HTTP 301). Updated metadata, JSON-LD, sitemap and public links in migration `0d887d9`.
+- Avoid: broken glossary anchors, invented product capabilities, unnecessary URL churn, unsupported SEO/indexing success claims.
 
 ## Next
-State: live website lane `main`, integrated at `ccbd4c1`. Owner's last reported Legion check: clean and synchronized with `origin/main` (ahead/behind 0/0) before this documentation closeout; local state after connector commits must be refreshed. No SEO content changes authorized by the integration.
+State: website SEO lane `main`; article URL migration published at `0d887d9`. Owner reported local `main` synced after publication, before this log update; current local status must be rechecked before future writes. Context Engineering migration is closed; W3–W5 refer to the next vocabulary pass, not retroactive validation of that publication.
 For the next approved SEO session, **reuse** the Nov 20 baseline from `docs/planning/seo_topic_map.md`; Windsor.ai reports Search Console metrics, and `docs/planning/search_indexing_strategy.md` owns indexing state. Read `RichBayer/tensa-marketing/docs/planning/grok_bot_pilot_20261119.md`, verify Agent Operations evidence, then propose one coherent set of page+glossary edits for Rich's approval. Later compare a matching 28-day GSC window without claiming causation. Do not repeat prior cleanup or SEO publication audits.
 
 ## Read before working
@@ -35,4 +36,4 @@ For the next approved SEO session, **reuse** the Nov 20 baseline from `docs/plan
 Follow these to the actual target HTML, glossary, scripts, article template and authoritative project evidence as needed.
 
 ## Closeout updates
-V2 integration validated on 2026-11-21: `ccbd4c1`, local PASS/PASS, successful Pages deployment and both script paths HTTP 404. Keep W3–W5 OPEN until new SEO work is actually verified; the menu lane remains open. Future closeouts update this log with evidence, not the menu unless lanes change.
+2026-11-21: Context Engineering migration closeout: `0d887d9`, Pages SUCCESS, owner live-page and navigation confirmation, browser redirect tested locally, old-slug grep clear. Not a verified HTTP 301 and not proof of indexing or ranking improvement. Keep W3–W5 OPEN for the next vocabulary pass; update menu only if open lanes change.
