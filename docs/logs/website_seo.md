@@ -13,7 +13,7 @@ Improve non-branded discoverability and engineering vocabulary, one page/subject
 | W5: content, links and publish/index state independently verified | OPEN | Local link/fragment, page/desktop/mobile, Pages and GSC checks not run for new pass |
 
 ## Last session
-2026-11-21: Read-only V2 migration review mapped public HTML, assets, metadata, glossary script and documentation ownership. No new public content changed. Cleanup closeout remains finished. Reviewer-informed V2 corrections are staged on `docs/website-v2-continuity-20261121`, not yet merged or locally validated.
+2026-11-21: V2 integrated to `main` at `ccbd4c1` (25-commit fast-forward); Grok and Claude final reviews PASS. Owner's Legion checks `main website_seo` and `main blog` both PASS with connector/log-save SAFE, no uncommitted files and ahead/behind 0/0. GitHub Pages deployment [run 44935871438](https://github.com/RichBayer/tensaengineering.dev/actions/runs/44935871438) succeeded for `ccbd4c1`. Owner confirmed `/scripts/session_check.py` and `/scripts/session_check.html` each return HTTP 404. No public page content changed; indexing is not confirmed.
 
 ## Decisions in force
 - 2026-11-21: use V2 source routing, not duplicate content standards or repeat completed audits.
@@ -22,8 +22,8 @@ Improve non-branded discoverability and engineering vocabulary, one page/subject
 - Avoid: broken glossary anchors, invented product capabilities, URL churn, unsupported SEO/indexing success claims.
 
 ## Next
-State: intended content branch `main` after migration; last owner-confirmed Legion `main` clean at `876581a`. **Current local state and uncommitted files not checked in this V2 session.** Remote migration branch is separate and has not been integrated.
-After V2 integration and local sync: **reuse** the Nov 20 baseline from `docs/planning/seo_topic_map.md`; Windsor.ai reports Search Console metrics, and `docs/planning/search_indexing_strategy.md` owns indexing state. Read `RichBayer/tensa-marketing/docs/planning/grok_bot_pilot_20261119.md`, verify Agent Operations evidence, then propose one coherent set of page+glossary edits for Rich's approval. Later compare a matching 28-day GSC window without claiming causation. Do not repeat prior cleanup or SEO publication audits.
+State: live website lane `main`, integrated at `ccbd4c1`. Owner's last reported Legion check: clean and synchronized with `origin/main` (ahead/behind 0/0) before this documentation closeout; local state after connector commits must be refreshed. No SEO content changes authorized by the integration.
+For the next approved SEO session, **reuse** the Nov 20 baseline from `docs/planning/seo_topic_map.md`; Windsor.ai reports Search Console metrics, and `docs/planning/search_indexing_strategy.md` owns indexing state. Read `RichBayer/tensa-marketing/docs/planning/grok_bot_pilot_20261119.md`, verify Agent Operations evidence, then propose one coherent set of page+glossary edits for Rich's approval. Later compare a matching 28-day GSC window without claiming causation. Do not repeat prior cleanup or SEO publication audits.
 
 ## Read before working
 - `docs/planning/seo_topic_map.md` — search intent and priority.
@@ -35,4 +35,4 @@ After V2 integration and local sync: **reuse** the Nov 20 baseline from `docs/pl
 Follow these to the actual target HTML, glossary, scripts, article template and authoritative project evidence as needed.
 
 ## Closeout updates
-On accepted V2 integration: remove migration staging note, capture validated branch and local synchronization, change gates only with evidence; menu path remains open.
+V2 integration validated on 2026-11-21: `ccbd4c1`, local PASS/PASS, successful Pages deployment and both script paths HTTP 404. Keep W3–W5 OPEN until new SEO work is actually verified; the menu lane remains open. Future closeouts update this log with evidence, not the menu unless lanes change.
