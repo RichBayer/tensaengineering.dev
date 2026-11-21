@@ -135,10 +135,11 @@ This is the first file a fresh session reads. It lives on `main`.
 It should include:
 
 - the date it was last updated
-- the two lanes, website work and Blog work
-- each lane's branch, active work and next step
-- the docs each lane's next step needs
-- parked items
+- the two open lanes (website SEO and Blog) and their work-log pointers
+- each lane's working branch
+- parked lanes and source pointers
+
+The lane logs in `docs/logs/` own detailed next steps, gates and source-reading lists. `scripts/session_check.py` verifies continuity structure and local write safety; it is internal and excluded from Pages.
 
 It should not become:
 
@@ -149,7 +150,7 @@ It should not become:
 
 Update when:
 
-- active work, a next step or a parked item changes
+- a lane opens or closes, or the parked-lane list changes
 
 Cap: 40 lines.
 
@@ -984,7 +985,7 @@ Use these boundaries:
 - Blog article reader experience, quick-answer boxes, article metadata, CTAs, RSS/newsletter planning, and future article layout belong in `blog_reader_experience.md`.
 - Blog contact CTAs, reader-question handling, guest-post rules, collaboration, attribution, outbound-link, and affiliate/sponsored-link boundaries belong in `blog_engagement_strategy.md`.
 - Claude prose-polish workflow belongs in `claude_website_polish_resume_prompt.md`.
-- Active work and the next step for each lane belong in `tensa_website_resume_prompt.md`, the note.
+- Open lanes and parked work belong in `tensa_website_resume_prompt.md`; detailed next actions and gates belong in the corresponding `docs/logs/` file on `main`.
 - Workflow, closeout, and connector or local source loading belong in `operating_rules.md`.
 - Documentation ownership belongs in `documentation_strategy.md`.
 - Glossary scope and tooltip behavior belongs in `glossary_strategy.md`.
