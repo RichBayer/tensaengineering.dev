@@ -7,8 +7,8 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 ## Resuming
 
 1. Read the note, `docs/ai-operations/tensa_website_resume_prompt.md`.
-2. Read these rules, then choose website SEO or Blog as the menu names (ask only when unclear).
-3. Read the lane log on `main`: `docs/logs/website_seo.md` or `docs/logs/blog.md`, including its current gates, next action and source pointers.
+2. Read these rules, then choose the named lane from the four-path menu (ask only when unclear).
+3. Read the selected lane log on `main`: `docs/logs/website_seo.md`, `docs/logs/blog.md`, `docs/logs/knowledge_base.md`, or `docs/logs/model_recommender.md`, including its gates, next action and sources.
 4. Read only the selected sources and page-specific documents actually required. For Blog, the three `blog_*` strategy/experience/engagement files are authoritative on `feature/blog-public-foundation` until reconciled; shared source, SEO, style, and inventory docs on `main` are newer. Do not let stale branch copies override them.
 5. Before any write or local-state-dependent action, request the session check below and inspect local unpushed changes; reconcile first if it is unsafe.
 
@@ -21,8 +21,8 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 
 ## V2 continuity and content routing
 
-- `main` owns the 40-line menu and two 80-line V2 logs. The menu owns *open paths* only; logs own detailed next steps. Logs use seven headings: Purpose, Gates (PASS/OPEN/FAIL with evidence), Last session, Decisions in force, Next (branch, last verified local state, uncommitted files, precise next step/approval), Read before working (up to six starting paths), Closeout updates. Rewrite the active log as one bounded update; no endless checkpoints.
-- At resume, report done, next, and unverified; saved notes never authorize implementation or publishing. On `save(website_seo)` / `save(blog)` or `handoff(<lane>)`, update only the active `main` log with evidence, then check it. Change the menu only when a lane opens or closes, by Rich's approval. Fresh-thread closeout checks stated evidence against commits and validation; unverified items stay qualified.
+- `main` owns the 40-line menu and four 80-line V2 logs. The menu owns *open paths* only; logs own detailed next steps. Logs use seven headings: Purpose, Gates (PASS/OPEN/FAIL with evidence), Last session, Decisions in force, Next (branch, last verified local state, uncommitted files, precise next step/approval), Read before working (up to six starting paths), Closeout updates. Rewrite the active log as one bounded update; no endless checkpoints.
+- At resume, report done, next, and unverified; saved notes never authorize implementation or publishing. On `save(<lane>)` or `handoff(<lane>)`, update only that lane's `main` log with evidence, then check it. Change the menu only when a lane opens or closes, by Rich's approval. Fresh-thread closeout checks stated evidence against commits and validation; unverified items stay qualified.
 - The six initial read pointers are a starting point, **not a cap on necessary evidence**. Before public content work use the page inventory for status/URLs, content source map for source ownership, information architecture for page role, style guide for voice/claims, and the actual target HTML and existing page-specific CSS.
 - Focused Knowledge Base article: additionally use `docs/planning/knowledge_base_article_template.md` and reference article `knowledge-base/ai-operations/context-engineering-ai-project-continuity.html`; preserve article/category/index/related-reading routes and existing CSS classes.
 - Industry vocabulary / glossary: use `docs/planning/seo_topic_map.md`, `glossary_strategy.md`, `internal_linking_strategy.md`, public `glossary/index.html`, `assets/js/glossary-tooltips.js` and affected pages. Tooltip text is embedded separately in each page's `.glossary-term[data-definition]`; update every affected page's `data-definition` and `data-term` as needed when the linked definition changes. Preserve anchors, URLs and fallback links.
