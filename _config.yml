@@ -4,3 +4,4 @@
 exclude:
   - docs/
   - README.md
+  - scripts/
