@@ -108,15 +108,17 @@ def log_gates(lines):
 
 
 def main():
-    if len(sys.argv) not in (2, 3):
-        print("usage: session_check.py <branch> [<work log name>]")
+    review = len(sys.argv) == 4 and sys.argv[3] == "--review"
+    if len(sys.argv) not in (2, 3, 4) or (len(sys.argv) == 4 and not review):
+        print("usage: session_check.py <branch> [<work log name>] [--review]")
         print("SESSION CHECK: FAIL (wrong arguments)")
         return 0
     branch = sys.argv[1]
     name = sys.argv[2].strip("/") if len(sys.argv) == 3 else None
     remote = f"origin/{branch}"
-    default_ref = f"origin/{DEFAULT}"
-    print(f"Session check: branch {branch}" + (f", work log {name}" if name else ""))
+    default_ref = remote if review else f"origin/{DEFAULT}"
+    print(f"Session check: branch {branch}" + (f", work log {name}" if name else "") +
+          (" (review-only candidate mode)" if review else ""))
 
     # 1. Location and local state.
     print("\nLocation and local state")
@@ -137,12 +139,12 @@ def main():
     v2_changed = (git("diff", "--name-only", fork, remote, "--",
                       "docs/logs", "scripts/session_check.py").splitlines()
                   if fork else [])
-    safe = safe and not v2_changed
+    safe = safe and not v2_changed and not review
     word = f"{GREEN}SAFE{RESET}" if safe else f"{RED}NOT SAFE{RESET}"
     print(f"  CONNECTOR WRITE TO THIS BRANCH: {word}")
     if status:
         note("uncommitted files block connector writes, not resuming")
-    if branch == DEFAULT:
+    if branch == DEFAULT and not review:
         log_safe = safe
     else:
         # A Blog worktree cannot certify the cleanliness of the main worktree.
@@ -196,7 +198,7 @@ def main():
 
     # 5. Divergence is routine for a long-running content branch. It is
     # an integration concern, not a session-resume failure.
-    if branch != DEFAULT:
+    if branch != DEFAULT and not review:
         print("\nBranch integration state")
         branch_only, main_only = (int(x) for x in
             git("rev-list", "--left-right", "--count",
