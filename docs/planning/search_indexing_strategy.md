@@ -711,7 +711,7 @@ This rule exists to catch:
 
 ## Current Recommended Next Steps
 
-The next step for each lane is in `docs/ai-operations/tensa_website_resume_prompt.md`. This document does not track it.
+The V2 menu at `docs/ai-operations/tensa_website_resume_prompt.md` identifies the active lane; its detailed next step is in `docs/logs/website_seo.md` or `docs/logs/blog.md` on `main`. This document owns indexing facts only.
 
 Open live checks:
 
