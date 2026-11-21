@@ -53,6 +53,8 @@ Planning docs own their subject. They do not set the workflow. Where a planning 
 - Copy and paste can turn LF into CRLF. Check line endings before treating a file as changed.
 - Never paste login URLs, tokens or auth codes into chat, and never type a password or token into a terminal prompt.
 
+- Downloaded scripts normally land in Windows Downloads at `/mnt/c/Users/richb/Downloads/`. Run them directly from WSL there when appropriate; do not assume they were moved to `/mnt/g/ai/working/`. Do not use `cmd.exe` username detection from WSL for this path.
+
 ## Editing through the GitHub connector
 
 - The connector is read-only until Rich approves a write. One approval can cover an agreed batch of files.

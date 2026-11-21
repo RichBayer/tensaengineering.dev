@@ -8,8 +8,8 @@ Improve non-branded discoverability and engineering vocabulary, one page/subject
 | --- | --- | --- |
 | W1: repository cleanup closed and prior publication preserved | PASS | `876581a`, `18a8ffe`, `5845e58`, Pages #55; owner confirmed live articles |
 | W2: pre-terminology GSC baseline located | PASS | `docs/planning/seo_topic_map.md` → `November 20, 2026 - Pre-Terminology SEO Baseline`; 28 days Oct 21–Nov 17, via Windsor.ai; 298 impressions, 0 clicks, 10.87 average position. Do not invent a new baseline |
-| W3: vocabulary and engineering facts verified | OPEN | Review Nov 19 marketing audit and source repos before new claims |
-| W4: target page and glossary edited together | OPEN | Preserve URLs/anchors, current/planned capabilities; no changes authorized by this log alone |
+| W3: vocabulary and engineering facts verified | PASS | Nov 19 marketing audit and Agent Operations task-packet/review evidence checked; manual versus planned capabilities preserved |
+| W4: target page and glossary edited together | PASS | Three local HTML files edited and diff reviewed; 156 internal links and anchors passed; not yet committed or deployed |
 | W5: content, links and publish/index state independently verified | OPEN | Local link/fragment, page/desktop/mobile, Pages and GSC checks not run for new pass |
 
 ## Last session
@@ -36,4 +36,5 @@ For the next approved SEO session, **reuse** the Nov 20 baseline from `docs/plan
 Follow these to the actual target HTML, glossary, scripts, article template and authoritative project evidence as needed.
 
 ## Closeout updates
+2026-11-21: Agent harness terminology pass completed locally. Updated Driveline project page, supervised engineering article, and glossary together. Four-file diff reviewed, including the permanent Windows Downloads workflow rule in operating_rules.md. Local validation PASS: 156 internal links and anchors. Owner supplied Driveline browser screenshot; comprehensive responsive preview remains unverified. No commit, push, or deployment yet. Next: commit/push after owner approval, verify GitHub Pages and live content, then compare later Search Console data against the existing baseline. W5 remains OPEN.
 2026-11-21: Context Engineering migration closeout: `0d887d9`, Pages SUCCESS, owner live-page and navigation confirmation, browser redirect tested locally, old-slug grep clear. Not a verified HTTP 301 and not proof of indexing or ranking improvement. Keep W3–W5 OPEN for the next vocabulary pass; update menu only if open lanes change.

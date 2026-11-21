@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TENSA Driveline connects project discovery and planning with supervised AI-assisted engineering. Manual execution exists; integrated and managed-worker capabilities remain in development." />
+  <meta name="description" content="Explore TENSA Driveline's supervised AI agent harness for scoped coding tasks, validation, and human review. Managed workers and scheduling remain in development." />
   <link rel="canonical" href="https://tensaengineering.dev/projects/driveline.html" />
   <meta property="og:site_name" content="TENSA Engineering" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="TENSA Driveline | AI-Assisted Software Engineering" />
-  <meta property="og:description" content="TENSA Driveline connects project discovery and planning with supervised AI-assisted engineering. Manual execution exists; integrated and managed-worker capabilities remain in development." />
+  <meta property="og:description" content="Explore TENSA Driveline's supervised AI agent harness for scoped coding tasks, validation, and human review. Managed workers and scheduling remain in development." />
   <meta property="og:url" content="https://tensaengineering.dev/projects/driveline.html" />
   <meta property="og:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
   <meta property="og:image:alt" content="TENSA Engineering logo on a dark technical background" />
@@ -16,7 +16,7 @@
   <meta name="twitter:image" content="https://tensaengineering.dev/assets/images/social/tensa-og-image.png" />
   <meta name="twitter:image:alt" content="TENSA Engineering logo on a dark technical background" />
   <meta name="twitter:title" content="TENSA Driveline | AI-Assisted Software Engineering" />
-  <meta name="twitter:description" content="TENSA Driveline connects project discovery and planning with supervised AI-assisted engineering. Manual execution exists; integrated and managed-worker capabilities remain in development." />
+  <meta name="twitter:description" content="Explore TENSA Driveline's supervised AI agent harness for scoped coding tasks, validation, and human review. Managed workers and scheduling remain in development." />
   <title>TENSA Driveline | AI-Assisted Software Engineering</title>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -24,7 +24,7 @@
   "@id": "https://tensaengineering.dev/projects/driveline.html#webpage",
   "url": "https://tensaengineering.dev/projects/driveline.html",
   "name": "TENSA Driveline | AI-Assisted Software Engineering",
-  "description": "TENSA Driveline connects project discovery and planning with supervised AI-assisted engineering. Manual execution exists; integrated and managed-worker capabilities remain in development.",
+  "description": "Explore TENSA Driveline's supervised AI agent harness for scoped coding tasks, validation, and human review. Managed workers and scheduling remain in development.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://tensaengineering.dev/#website",
@@ -161,7 +161,9 @@
 <p>A coding worker can then operate within that assignment using an approved tool such as Claude Code or Codex.</p>
 <p>The important distinction is that the coding agent is performing engineering work within an established process. It is not independently deciding the project's direction, expanding its own permissions, or declaring its output acceptable.</p>
 <p>The current manual Agent Operations workflow already includes structured task packets, workspace checks, controlled validation commands, artifact inventories, and review procedures.</p>
-<p>These capabilities provide a foundation for the managed execution system now being developed.</p>
+<h3>The supervised agent harness: what exists today</h3>
+<p>An <a class="glossary-term" href="../glossary/#agent-harness" data-term="Agent harness" data-definition="A set of instructions, tooling, permissions, and checks surrounding an AI agent to structure and verify its work.">agent harness</a> is the surrounding process and tooling that shapes what a coding agent can do and how its output is checked. In TENSA Driveline, the current manually supervised harness uses approved task packets, workspace checks, prescribed validation, artifact records, independent review, and human acceptance. A task packet is a bounded, approved specification: it identifies the work, authorized scope, and acceptance checks rather than leaving those decisions to the model.</p>
+<p>This is a practical example of <a class="glossary-term" href="../glossary/#harness-engineering" data-term="Harness engineering" data-definition="The practice of designing and improving an agent harness so AI-assisted work stays bounded, observable, and reviewable.">harness engineering</a>: improving the structure around AI coding tools so the work becomes more repeatable and reviewable. This manual foundation is usable today. Managed workers, automated task transitions, recovery, and coordinated scheduling remain under development.</p>
 <p>Driveline's intended end-to-end process follows five connected stages:</p>
 <div class="project-grid" aria-label="Five planned stages of the Driveline workflow">
 <article class="project-card"><span class="card-label">Stage 01</span><h3>Discovery and assessment.</h3><p>Understand the problem, the existing software when applicable, and the evidence needed to make informed decisions.</p></article>
